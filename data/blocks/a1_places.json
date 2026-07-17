@@ -1,0 +1,82 @@
+{
+  "id": "a1_places",
+  "title": "Places",
+  "level": "A1",
+  "tree_node": "leaf_places",
+  "note": "High-frequency A1 slice from Martin places model (85 → 48). Directions for production; pure grammar prepositions thinned. Ladder ends in Sentence = fruit on this leaf.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "places_town",
+      "title": "Places · town",
+      "items": [
+        { "en": "city", "cz": "město (velké)" },
+        { "en": "town", "cz": "město" },
+        { "en": "street", "cz": "ulice" },
+        { "en": "centre", "cz": "centrum" },
+        { "en": "park", "cz": "park" },
+        { "en": "square", "cz": "náměstí" },
+        { "en": "map", "cz": "mapa" },
+        { "en": "way", "cz": "cesta" },
+        { "en": "corner", "cz": "roh" },
+        { "en": "here", "cz": "tady" },
+        { "en": "there", "cz": "tam" },
+        { "en": "near", "cz": "blízko" }
+      ]
+    },
+    {
+      "id": "places_everyday",
+      "title": "Places · everyday",
+      "items": [
+        { "en": "shop", "cz": "obchod" },
+        { "en": "supermarket", "cz": "supermarket" },
+        { "en": "school", "cz": "škola" },
+        { "en": "station", "cz": "nádraží" },
+        { "en": "hospital", "cz": "nemocnice" },
+        { "en": "bank", "cz": "banka" },
+        { "en": "post office", "cz": "pošta" },
+        { "en": "restaurant", "cz": "restaurace" },
+        { "en": "café", "cz": "kavárna" },
+        { "en": "hotel", "cz": "hotel" },
+        { "en": "office", "cz": "kancelář" },
+        { "en": "pharmacy", "cz": "lékárna" }
+      ]
+    },
+    {
+      "id": "places_transport",
+      "title": "Places · transport",
+      "items": [
+        { "en": "bus", "cz": "autobus" },
+        { "en": "train", "cz": "vlak" },
+        { "en": "car", "cz": "auto" },
+        { "en": "taxi", "cz": "taxi" },
+        { "en": "metro", "cz": "metro" },
+        { "en": "tram", "cz": "tramvaj" },
+        { "en": "bike", "cz": "kolo" },
+        { "en": "plane", "cz": "letadlo" },
+        { "en": "airport", "cz": "letiště" },
+        { "en": "go", "cz": "jít / jet" },
+        { "en": "walk", "cz": "jít pěšky" },
+        { "en": "take (the bus)", "cz": "vzít si / jet (autobusem)" }
+      ]
+    },
+    {
+      "id": "places_directions",
+      "title": "Places · directions",
+      "items": [
+        { "en": "left", "cz": "vlevo" },
+        { "en": "right", "cz": "vpravo" },
+        { "en": "straight", "cz": "rovně" },
+        { "en": "next to", "cz": "vedle" },
+        { "en": "opposite", "cz": "naproti" },
+        { "en": "between", "cz": "mezi" },
+        { "en": "behind", "cz": "za" },
+        { "en": "in front of", "cz": "před" },
+        { "en": "come", "cz": "přijít" },
+        { "en": "leave", "cz": "odejít" },
+        { "en": "arrive", "cz": "přijet / dorazit" },
+        { "en": "stop (verb)", "cz": "zastavit" }
+      ]
+    }
+  ]
+}

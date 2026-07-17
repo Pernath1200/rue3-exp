@@ -1,0 +1,82 @@
+{
+  "id": "a1_time_numbers",
+  "title": "Time & numbers",
+  "level": "A1",
+  "tree_node": "leaf_time_a1",
+  "note": "Numbers, days, day-parts, months — thin productive set. Clock phrases mainly on There/time frames. Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "time_numbers",
+      "title": "Time · numbers",
+      "items": [
+        { "en": "one", "cz": "jedna" },
+        { "en": "two", "cz": "dva" },
+        { "en": "three", "cz": "tři" },
+        { "en": "four", "cz": "čtyři" },
+        { "en": "five", "cz": "pět" },
+        { "en": "six", "cz": "šest" },
+        { "en": "seven", "cz": "sedm" },
+        { "en": "eight", "cz": "osm" },
+        { "en": "nine", "cz": "devět" },
+        { "en": "ten", "cz": "deset" },
+        { "en": "twenty", "cz": "dvacet" },
+        { "en": "hundred", "cz": "sto" }
+      ]
+    },
+    {
+      "id": "time_days",
+      "title": "Time · days",
+      "items": [
+        { "en": "Monday", "cz": "pondělí" },
+        { "en": "Tuesday", "cz": "úterý" },
+        { "en": "Wednesday", "cz": "středa" },
+        { "en": "Thursday", "cz": "čtvrtek" },
+        { "en": "Friday", "cz": "pátek" },
+        { "en": "Saturday", "cz": "sobota" },
+        { "en": "Sunday", "cz": "neděle" },
+        { "en": "day", "cz": "den" },
+        { "en": "week", "cz": "týden" },
+        { "en": "weekend", "cz": "víkend" },
+        { "en": "today", "cz": "dnes" },
+        { "en": "tomorrow", "cz": "zítra" }
+      ]
+    },
+    {
+      "id": "time_parts",
+      "title": "Time · parts of the day",
+      "items": [
+        { "en": "yesterday", "cz": "včera" },
+        { "en": "morning", "cz": "ráno / dopoledne" },
+        { "en": "afternoon", "cz": "odpoledne" },
+        { "en": "evening", "cz": "večer" },
+        { "en": "night", "cz": "noc" },
+        { "en": "time", "cz": "čas" },
+        { "en": "hour", "cz": "hodina" },
+        { "en": "minute", "cz": "minuta" },
+        { "en": "early", "cz": "brzy / časně" },
+        { "en": "late", "cz": "pozdě" },
+        { "en": "now", "cz": "teď" },
+        { "en": "always", "cz": "vždy" }
+      ]
+    },
+    {
+      "id": "time_months",
+      "title": "Time · months",
+      "items": [
+        { "en": "January", "cz": "leden" },
+        { "en": "February", "cz": "únor" },
+        { "en": "March", "cz": "březen" },
+        { "en": "April", "cz": "duben" },
+        { "en": "May", "cz": "květen" },
+        { "en": "June", "cz": "červen" },
+        { "en": "July", "cz": "červenec" },
+        { "en": "August", "cz": "srpen" },
+        { "en": "September", "cz": "září" },
+        { "en": "October", "cz": "říjen" },
+        { "en": "November", "cz": "listopad" },
+        { "en": "December", "cz": "prosinec" }
+      ]
+    }
+  ]
+}

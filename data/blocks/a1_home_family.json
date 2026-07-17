@@ -1,0 +1,82 @@
+{
+  "id": "a1_home_family",
+  "title": "Home & Family",
+  "level": "A1",
+  "tree_node": "leaf_home_family",
+  "note": "First live set for smoke test. Words adapted from Martin A1 practice model — not a full dump. Cars/personal sets excluded. Function words deferred.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "family_people",
+      "title": "Family · people",
+      "items": [
+        { "en": "mother", "cz": "matka" },
+        { "en": "father", "cz": "otec" },
+        { "en": "parents", "cz": "rodiče" },
+        { "en": "brother", "cz": "bratr" },
+        { "en": "sister", "cz": "sestra" },
+        { "en": "son", "cz": "syn" },
+        { "en": "daughter", "cz": "dcera" },
+        { "en": "child", "cz": "dítě" },
+        { "en": "children", "cz": "děti" },
+        { "en": "baby", "cz": "miminko" },
+        { "en": "husband", "cz": "manžel" },
+        { "en": "wife", "cz": "manželka" }
+      ]
+    },
+    {
+      "id": "family_wider",
+      "title": "Family · wider circle",
+      "items": [
+        { "en": "family", "cz": "rodina" },
+        { "en": "friend", "cz": "přítel / kamarád" },
+        { "en": "neighbour", "cz": "soused" },
+        { "en": "man", "cz": "muž" },
+        { "en": "woman", "cz": "žena" },
+        { "en": "boy", "cz": "chlapec" },
+        { "en": "girl", "cz": "dívka" },
+        { "en": "people", "cz": "lidé" },
+        { "en": "name", "cz": "jméno" },
+        { "en": "age", "cz": "věk" },
+        { "en": "job", "cz": "práce / povolání" },
+        { "en": "teacher", "cz": "učitel" }
+      ]
+    },
+    {
+      "id": "home_rooms",
+      "title": "Home · rooms",
+      "items": [
+        { "en": "house", "cz": "dům" },
+        { "en": "flat", "cz": "byt" },
+        { "en": "home", "cz": "domov" },
+        { "en": "room", "cz": "místnost / pokoj" },
+        { "en": "kitchen", "cz": "kuchyně" },
+        { "en": "bathroom", "cz": "koupelna" },
+        { "en": "bedroom", "cz": "ložnice" },
+        { "en": "living room", "cz": "obývací pokoj" },
+        { "en": "door", "cz": "dveře" },
+        { "en": "window", "cz": "okno" },
+        { "en": "garden", "cz": "zahrada" },
+        { "en": "stairs", "cz": "schody" }
+      ]
+    },
+    {
+      "id": "home_things",
+      "title": "Home · things",
+      "items": [
+        { "en": "table", "cz": "stůl" },
+        { "en": "chair", "cz": "židle" },
+        { "en": "bed", "cz": "postel" },
+        { "en": "sofa", "cz": "pohovka" },
+        { "en": "lamp", "cz": "lampa" },
+        { "en": "fridge", "cz": "lednice" },
+        { "en": "key", "cz": "klíč" },
+        { "en": "phone", "cz": "telefon" },
+        { "en": "book", "cz": "kniha" },
+        { "en": "cup", "cz": "hrnek / šálek" },
+        { "en": "plate", "cz": "talíř" },
+        { "en": "bag", "cz": "taška" }
+      ]
+    }
+  ]
+}

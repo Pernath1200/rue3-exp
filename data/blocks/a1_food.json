@@ -1,0 +1,82 @@
+{
+  "id": "a1_food",
+  "title": "Food & drink",
+  "level": "A1",
+  "tree_node": "leaf_food_a1",
+  "note": "A1 productive food/drink slice from Martin Home & Food — thinned, no dump. Sentence = fruit on this leaf.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "food_meals",
+      "title": "Food · meals",
+      "items": [
+        { "en": "food", "cz": "jídlo" },
+        { "en": "meal", "cz": "pokrm / jídlo (chod)" },
+        { "en": "breakfast", "cz": "snídaně" },
+        { "en": "lunch", "cz": "oběd" },
+        { "en": "dinner", "cz": "večeře" },
+        { "en": "snack", "cz": "svačina" },
+        { "en": "hungry", "cz": "hladový (mít hlad)" },
+        { "en": "thirsty", "cz": "žíznivý (mít žízeň)" },
+        { "en": "menu", "cz": "jídelní lístek" },
+        { "en": "bill", "cz": "účet" },
+        { "en": "order (verb)", "cz": "objednat si" },
+        { "en": "eat", "cz": "jíst" }
+      ]
+    },
+    {
+      "id": "food_basics",
+      "title": "Food · basics",
+      "items": [
+        { "en": "bread", "cz": "chleba / chléb" },
+        { "en": "butter", "cz": "máslo" },
+        { "en": "cheese", "cz": "sýr" },
+        { "en": "egg", "cz": "vejce" },
+        { "en": "meat", "cz": "maso" },
+        { "en": "chicken", "cz": "kuře" },
+        { "en": "fish", "cz": "ryba" },
+        { "en": "rice", "cz": "rýže" },
+        { "en": "soup", "cz": "polévka" },
+        { "en": "salad", "cz": "salát" },
+        { "en": "salt", "cz": "sůl" },
+        { "en": "sugar", "cz": "cukr" }
+      ]
+    },
+    {
+      "id": "food_fruit_veg",
+      "title": "Food · fruit & veg",
+      "items": [
+        { "en": "fruit", "cz": "ovoce" },
+        { "en": "vegetable", "cz": "zelenina" },
+        { "en": "apple", "cz": "jablko" },
+        { "en": "banana", "cz": "banán" },
+        { "en": "orange", "cz": "pomeranč" },
+        { "en": "tomato", "cz": "rajče" },
+        { "en": "potato", "cz": "brambor" },
+        { "en": "onion", "cz": "cibule" },
+        { "en": "carrot", "cz": "mrkev" },
+        { "en": "cake", "cz": "dort / koláč" },
+        { "en": "ice cream", "cz": "zmrzlina" },
+        { "en": "chocolate", "cz": "čokoláda" }
+      ]
+    },
+    {
+      "id": "food_drinks",
+      "title": "Food · drinks",
+      "items": [
+        { "en": "water", "cz": "voda" },
+        { "en": "milk", "cz": "mléko" },
+        { "en": "coffee", "cz": "káva" },
+        { "en": "tea", "cz": "čaj" },
+        { "en": "juice", "cz": "džus" },
+        { "en": "beer", "cz": "pivo" },
+        { "en": "wine", "cz": "víno" },
+        { "en": "drink (verb)", "cz": "pít" },
+        { "en": "bottle", "cz": "láhev" },
+        { "en": "glass", "cz": "sklenice" },
+        { "en": "cup", "cz": "hrnek / šálek" },
+        { "en": "wine glass", "cz": "sklenice na víno" }
+      ]
+    }
+  ]
+}

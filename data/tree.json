@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "app": "rue3-grok-v0.1",
+  "levels": ["A1", "A2", "B1", "B2", "C1"],
+  "levels_locked": ["A2", "B1", "B2", "C1"],
+  "levels_locked_note": "Static default only. Runtime locks come from js/progress.js (A1 open; A2 after A1 check; C1 always not-yet). Author unlock opens A2–B2 for writing.",
+  "nodes": [
+    {
+      "id": "trunk",
+      "label": "Trunk",
+      "kind": "trunk",
+      "levels": ["A1", "A2", "B1", "B2"],
+      "parent": null,
+      "status": "planned",
+      "note": "Support for production — frames, high-freq glue. Seed kit lives inside Be/Have frames."
+    },
+    {
+      "id": "trunk_frames_a1",
+      "label": "Core frames",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_be_have.json",
+      "note": "Live · Be & Have · 12 seed frames"
+    },
+    {
+      "id": "trunk_prepositions_a1",
+      "label": "Prepositions",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_prepositions.json",
+      "note": "Live · place seed · ball/box diagrams · 10 frames"
+    },
+    {
+      "id": "trunk_adjectives_a1",
+      "label": "Adjectives",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_adjectives.json",
+      "note": "Live · be + adj seed · 12 frames"
+    },
+    {
+      "id": "trunk_can_like_want_a1",
+      "label": "Can · like · want",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_can_like_want.json",
+      "note": "Live · ability + preference + want · 12 frames"
+    },
+    {
+      "id": "trunk_there_time_a1",
+      "label": "There · time",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_there_time.json",
+      "note": "Live · there is/are + clock/routine · 12 frames"
+    },
+    {
+      "id": "leaf_home_family",
+      "label": "Home & Family",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_home_family.json",
+      "note": "Live · fruit = Sentence mode"
+    },
+    {
+      "id": "leaf_places",
+      "label": "Places",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_places.json",
+      "note": "Live · high-freq slice · Sentence = production"
+    },
+    {
+      "id": "leaf_food_a1",
+      "label": "Food & drink",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_food.json",
+      "note": "Live · meals · basics · fruit/veg · drinks · 4×12"
+    },
+    {
+      "id": "leaf_time_a1",
+      "label": "Time & numbers",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_time_numbers.json",
+      "note": "Live · numbers · days · day-parts · months · 4×12"
+    },
+    {
+      "id": "leaf_freetime_a1",
+      "label": "Free time",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_freetime.json",
+      "note": "Live · hobbies · verbs · feelings · 3×12"
+    },
+    {
+      "id": "leaf_work_a1",
+      "label": "Work",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_work.json",
+      "note": "Live · A1 jobs + workplace · 2×12"
+    },
+    {
+      "id": "craft",
+      "label": "Word-craft",
+      "kind": "craft",
+      "levels": ["B1", "B2"],
+      "parent": null,
+      "status": "parked",
+      "note": "Side door later · B1+"
+    }
+  ]
+}

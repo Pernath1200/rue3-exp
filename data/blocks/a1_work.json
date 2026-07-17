@@ -1,0 +1,46 @@
+{
+  "id": "a1_work",
+  "title": "Work",
+  "level": "A1",
+  "tree_node": "leaf_work_a1",
+  "note": "Small A1 work slice — jobs + workplace words. Not full professional lexis. Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "work_jobs",
+      "title": "Work · jobs",
+      "items": [
+        { "en": "job", "cz": "práce / povolání" },
+        { "en": "work (noun)", "cz": "práce" },
+        { "en": "teacher", "cz": "učitel" },
+        { "en": "doctor", "cz": "doktor / lékař" },
+        { "en": "student", "cz": "student" },
+        { "en": "nurse", "cz": "zdravotní sestra / ošetřovatel" },
+        { "en": "waiter", "cz": "číšník" },
+        { "en": "engineer", "cz": "inženýr" },
+        { "en": "driver", "cz": "řidič" },
+        { "en": "manager", "cz": "manažer / vedoucí" },
+        { "en": "boss", "cz": "šéf" },
+        { "en": "colleague", "cz": "kolega" }
+      ]
+    },
+    {
+      "id": "work_place",
+      "title": "Work · workplace",
+      "items": [
+        { "en": "office", "cz": "kancelář" },
+        { "en": "company", "cz": "firma / společnost" },
+        { "en": "meeting", "cz": "schůzka / porada" },
+        { "en": "email", "cz": "e-mail" },
+        { "en": "computer", "cz": "počítač" },
+        { "en": "phone", "cz": "telefon" },
+        { "en": "money", "cz": "peníze" },
+        { "en": "salary", "cz": "plat" },
+        { "en": "work (verb)", "cz": "pracovat" },
+        { "en": "start (work)", "cz": "začít (práci)" },
+        { "en": "finish (work)", "cz": "skončit (práci)" },
+        { "en": "break (rest)", "cz": "přestávka" }
+      ]
+    }
+  ]
+}

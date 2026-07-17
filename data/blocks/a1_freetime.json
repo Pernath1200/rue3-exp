@@ -1,0 +1,64 @@
+{
+  "id": "a1_freetime",
+  "title": "Free time & feelings",
+  "level": "A1",
+  "tree_node": "leaf_freetime_a1",
+  "note": "Hobbies, free-time verbs, basic feelings — thinned from Martin Free Time. Overlap with adj trunk (tired/cold) kept light. Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "freetime_hobbies",
+      "title": "Free time · hobbies",
+      "items": [
+        { "en": "sport", "cz": "sport" },
+        { "en": "football", "cz": "fotbal" },
+        { "en": "tennis", "cz": "tenis" },
+        { "en": "swimming", "cz": "plavání" },
+        { "en": "running", "cz": "běhání" },
+        { "en": "gym", "cz": "posilovna" },
+        { "en": "hobby", "cz": "koníček" },
+        { "en": "music", "cz": "hudba" },
+        { "en": "song", "cz": "píseň" },
+        { "en": "film", "cz": "film" },
+        { "en": "party", "cz": "oslava / party" },
+        { "en": "holiday", "cz": "dovolená / svátek" }
+      ]
+    },
+    {
+      "id": "freetime_verbs",
+      "title": "Free time · verbs",
+      "items": [
+        { "en": "play (sport/game)", "cz": "hrát" },
+        { "en": "watch", "cz": "dívat se" },
+        { "en": "listen (to)", "cz": "poslouchat" },
+        { "en": "read", "cz": "číst" },
+        { "en": "write", "cz": "psát" },
+        { "en": "cook", "cz": "vařit" },
+        { "en": "shop (verb)", "cz": "nakupovat" },
+        { "en": "travel", "cz": "cestovat" },
+        { "en": "visit", "cz": "navštívit" },
+        { "en": "relax", "cz": "odpočívat" },
+        { "en": "dance", "cz": "tančit" },
+        { "en": "sing", "cz": "zpívat" }
+      ]
+    },
+    {
+      "id": "freetime_feelings",
+      "title": "Free time · feelings",
+      "items": [
+        { "en": "happy", "cz": "šťastný" },
+        { "en": "sad", "cz": "smutný" },
+        { "en": "busy", "cz": "zaneprázdněný" },
+        { "en": "free (time)", "cz": "volný" },
+        { "en": "hot", "cz": "horký / teplý" },
+        { "en": "well", "cz": "dobře (zdravý)" },
+        { "en": "ill", "cz": "nemocný" },
+        { "en": "fine", "cz": "v pořádku" },
+        { "en": "angry", "cz": "naštvaný" },
+        { "en": "bored", "cz": "znuděný" },
+        { "en": "worried", "cz": "ustaraný" },
+        { "en": "excited", "cz": "natěšený / nadšený" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "a1_core_frames_be_have",
+  "title": "Core frames · Be & Have",
+  "level": "A1",
+  "tree_node": "trunk_frames_a1",
+  "practice": "frames",
+  "note": "Seed kit + Be/Have. Preferred model in en/gap; accepts[] = natural variants. Match/Quiz use preferred form only.",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "I", "you", "he", "she", "my", "a", "student", "friend", "brother", "bag",
+    "doctor", "teacher", "name", "Anna", "car", "house", "phone", "table", "chairs", "mine"
+  ],
+  "blocks": [
+    {
+      "id": "be_have_seed",
+      "title": "Be & Have · seed frames",
+      "items": [
+        {
+          "en": "I am a student.",
+          "cz": "Já jsem student.",
+          "gap": "I am a ____.",
+          "gap_answer": "student",
+          "accepts": ["I'm a student.", "I am a student"]
+        },
+        {
+          "en": "You are my friend.",
+          "cz": "Ty jsi můj kamarád. / Jsi moje kamarádka.",
+          "gap": "You are my ____.",
+          "gap_answer": "friend",
+          "accepts": ["You're my friend."]
+        },
+        {
+          "en": "This is my brother.",
+          "cz": "Tohle je můj bratr.",
+          "gap": "This is my ____.",
+          "gap_answer": "brother",
+          "accepts": ["That's my brother.", "That is my brother."]
+        },
+        {
+          "en": "This is my bag.",
+          "cz": "Tohle je moje taška.",
+          "gap": "This is my ____.",
+          "gap_answer": "bag",
+          "accepts": ["That's my bag.", "That is my bag."]
+        },
+        {
+          "en": "He is a doctor.",
+          "cz": "On je doktor.",
+          "gap": "He is a ____.",
+          "gap_answer": "doctor",
+          "accepts": ["He's a doctor."]
+        },
+        {
+          "en": "She is a teacher.",
+          "cz": "Ona je učitelka.",
+          "gap": "She is a ____.",
+          "gap_answer": "teacher",
+          "accepts": ["She's a teacher."]
+        },
+        {
+          "en": "My name is Anna.",
+          "cz": "Jmenuji se Anna. / Mé jméno je Anna.",
+          "gap": "My name is ____.",
+          "gap_answer": "Anna",
+          "accepts": ["I'm Anna.", "I am Anna."]
+        },
+        {
+          "en": "I have a car.",
+          "cz": "Mám auto.",
+          "gap": "I have a ____.",
+          "gap_answer": "car",
+          "accepts": ["I've got a car.", "I have got a car."]
+        },
+        {
+          "en": "I have a house.",
+          "cz": "Mám dům.",
+          "gap": "I have a ____.",
+          "gap_answer": "house",
+          "accepts": ["I've got a house.", "I have got a house."]
+        },
+        {
+          "en": "Have you got a phone?",
+          "cz": "Máš telefon?",
+          "gap": "Have you got a ____?",
+          "gap_answer": "phone",
+          "accepts": [
+            "Do you have a phone?",
+            "Have you got a mobile?",
+            "Do you have a mobile?",
+            "Have you got a telephone?",
+            "Do you have a telephone?"
+          ]
+        },
+        {
+          "en": "There is a table.",
+          "cz": "Je tu stůl. / Tam je stůl.",
+          "gap": "There is a ____.",
+          "gap_answer": "table",
+          "accepts": ["There's a table."]
+        },
+        {
+          "en": "It's mine.",
+          "cz": "Je to moje.",
+          "gap": "It's ____.",
+          "gap_answer": "mine",
+          "accepts": ["It is mine."]
+        }
+      ]
+    }
+  ]
+}

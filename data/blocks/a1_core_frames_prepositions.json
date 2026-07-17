@@ -1,0 +1,127 @@
+{
+  "id": "a1_core_frames_prepositions",
+  "title": "Core frames · Prepositions of place",
+  "level": "A1",
+  "tree_node": "trunk_prepositions_a1",
+  "practice": "frames",
+  "note": "Seed trunk from Teaching Material basic-prepositions.html. Ball-and-box diagrams (diagram key). Preferred model in en/gap; accepts = full-sentence variants; gap_accepts = bare prep synonyms for Word only.",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "ball", "box", "boxes", "the", "is", "are",
+    "in", "on", "under", "above", "behind", "between",
+    "next to", "in front of", "opposite", "near"
+  ],
+  "blocks": [
+    {
+      "id": "prep_place_seed",
+      "title": "Prepositions · place (seed)",
+      "items": [
+        {
+          "en": "The ball is in the box.",
+          "cz": "Míč je v krabici.",
+          "gap": "The ball is ____ the box.",
+          "gap_answer": "in",
+          "diagram": "in",
+          "accepts": ["The ball's in the box.", "The ball is in the box"]
+        },
+        {
+          "en": "The ball is on the box.",
+          "cz": "Míč je na krabici.",
+          "gap": "The ball is ____ the box.",
+          "gap_answer": "on",
+          "diagram": "on",
+          "accepts": ["The ball's on the box.", "The ball is on the box"]
+        },
+        {
+          "en": "The ball is under the box.",
+          "cz": "Míč je pod krabicí.",
+          "gap": "The ball is ____ the box.",
+          "gap_answer": "under",
+          "gap_accepts": ["underneath"],
+          "diagram": "under",
+          "accepts": [
+            "The ball's under the box.",
+            "The ball is underneath the box.",
+            "The ball's underneath the box."
+          ]
+        },
+        {
+          "en": "The ball is above the box.",
+          "cz": "Míč je nad krabicí.",
+          "gap": "The ball is ____ the box.",
+          "gap_answer": "above",
+          "gap_accepts": ["over"],
+          "diagram": "above",
+          "accepts": [
+            "The ball's above the box.",
+            "The ball is over the box.",
+            "The ball's over the box."
+          ]
+        },
+        {
+          "en": "The ball is in front of the box.",
+          "cz": "Míč je před krabicí.",
+          "gap": "The ball is ____ the box.",
+          "gap_answer": "in front of",
+          "diagram": "in front of",
+          "accepts": ["The ball's in front of the box."]
+        },
+        {
+          "en": "The ball is behind the box.",
+          "cz": "Míč je za krabicí.",
+          "gap": "The ball is ____ the box.",
+          "gap_answer": "behind",
+          "diagram": "behind",
+          "accepts": ["The ball's behind the box."]
+        },
+        {
+          "en": "The ball is next to the box.",
+          "cz": "Míč je vedle krabice.",
+          "gap": "The ball is ____ the box.",
+          "gap_answer": "next to",
+          "gap_accepts": ["beside"],
+          "diagram": "next to",
+          "accepts": [
+            "The ball's next to the box.",
+            "The ball is beside the box.",
+            "The ball's beside the box."
+          ]
+        },
+        {
+          "en": "The ball is between the boxes.",
+          "cz": "Míč je mezi krabicemi.",
+          "gap": "The ball is ____ the boxes.",
+          "gap_answer": "between",
+          "diagram": "between",
+          "accepts": ["The ball's between the boxes."]
+        },
+        {
+          "en": "The ball is opposite the box.",
+          "cz": "Míč je naproti krabici.",
+          "gap": "The ball is ____ the box.",
+          "gap_answer": "opposite",
+          "gap_accepts": ["across from"],
+          "diagram": "opposite",
+          "accepts": [
+            "The ball's opposite the box.",
+            "The ball is across from the box.",
+            "The ball's across from the box."
+          ]
+        },
+        {
+          "en": "The ball is near the box.",
+          "cz": "Míč je blízko krabice.",
+          "gap": "The ball is ____ the box.",
+          "gap_answer": "near",
+          "gap_accepts": ["close to"],
+          "diagram": "near",
+          "accepts": [
+            "The ball's near the box.",
+            "The ball is close to the box.",
+            "The ball's close to the box."
+          ]
+        }
+      ]
+    }
+  ]
+}

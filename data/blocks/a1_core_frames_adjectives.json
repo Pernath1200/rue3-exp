@@ -1,0 +1,107 @@
+{
+  "id": "a1_core_frames_adjectives",
+  "title": "Core frames · Adjectives",
+  "level": "A1",
+  "tree_node": "trunk_adjectives_a1",
+  "practice": "frames",
+  "note": "Be + adjective seed. Gap on the adjective. Preferred model in en; accepts = contractions and close full-sentence variants. No personality dump — Free time leaf later for more feelings.",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "I", "he", "she", "it", "they", "am", "is", "are",
+    "big", "small", "young", "old", "good", "bad", "nice",
+    "kind", "friendly", "tired", "hungry", "cold"
+  ],
+  "blocks": [
+    {
+      "id": "adj_be_seed",
+      "title": "Adjectives · be + adj (seed)",
+      "items": [
+        {
+          "en": "It is big.",
+          "cz": "Je to velké. / Je velký.",
+          "gap": "It is ____.",
+          "gap_answer": "big",
+          "accepts": ["It's big.", "It is big"]
+        },
+        {
+          "en": "It is small.",
+          "cz": "Je to malé. / Je malý.",
+          "gap": "It is ____.",
+          "gap_answer": "small",
+          "gap_accepts": ["little"],
+          "accepts": ["It's small.", "It is small", "It is little.", "It's little."]
+        },
+        {
+          "en": "She is young.",
+          "cz": "Je mladá.",
+          "gap": "She is ____.",
+          "gap_answer": "young",
+          "accepts": ["She's young.", "She is young"]
+        },
+        {
+          "en": "He is old.",
+          "cz": "Je starý.",
+          "gap": "He is ____.",
+          "gap_answer": "old",
+          "accepts": ["He's old.", "He is old"]
+        },
+        {
+          "en": "It is good.",
+          "cz": "Je to dobré.",
+          "gap": "It is ____.",
+          "gap_answer": "good",
+          "accepts": ["It's good.", "It is good"]
+        },
+        {
+          "en": "It is bad.",
+          "cz": "Je to špatné.",
+          "gap": "It is ____.",
+          "gap_answer": "bad",
+          "accepts": ["It's bad.", "It is bad"]
+        },
+        {
+          "en": "She is nice.",
+          "cz": "Je milá. / Je příjemná.",
+          "gap": "She is ____.",
+          "gap_answer": "nice",
+          "accepts": ["She's nice.", "She is nice"]
+        },
+        {
+          "en": "He is kind.",
+          "cz": "Je laskavý. / Je hodný.",
+          "gap": "He is ____.",
+          "gap_answer": "kind",
+          "accepts": ["He's kind.", "He is kind"]
+        },
+        {
+          "en": "They are friendly.",
+          "cz": "Jsou přátelští.",
+          "gap": "They are ____.",
+          "gap_answer": "friendly",
+          "accepts": ["They're friendly.", "They are friendly"]
+        },
+        {
+          "en": "I am tired.",
+          "cz": "Jsem unavený. / Jsem unavená.",
+          "gap": "I am ____.",
+          "gap_answer": "tired",
+          "accepts": ["I'm tired.", "I am tired"]
+        },
+        {
+          "en": "I am hungry.",
+          "cz": "Mám hlad.",
+          "gap": "I am ____.",
+          "gap_answer": "hungry",
+          "accepts": ["I'm hungry.", "I am hungry"]
+        },
+        {
+          "en": "It is cold.",
+          "cz": "Je zima. / Je to studené.",
+          "gap": "It is ____.",
+          "gap_answer": "cold",
+          "accepts": ["It's cold.", "It is cold"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vocab · RUE3 v0.1</title>
+  <link rel="stylesheet" href="./css/app.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="util-bar">
+      <span class="brand">RUE3</span>
+      <span class="sep">·</span>
+      <span>Vocab · Tree · v0.1</span>
+      <span class="sep">·</span>
+      <span>local shell</span>
+      <span class="sep">·</span>
+      <button type="button" class="util-btn" id="btn-author-unlock" aria-pressed="false" title="Unlock A2–B2 for authoring (local only). Also ?unlock=all">Author unlock</button>
+    </div>
+
+    <h1>Vocabulary · Practice map</h1>
+    <p class="sub">
+      Sibling of
+      <a href="https://pernath1200.github.io/rue2-grok/" target="_blank" rel="noopener">RUE2 Grok</a>
+      (grammar). A1 map: full trunk seeds + Home, Places, Food, Time, Free time, Work.
+      A2 unlocks after the A1 level check (not built yet) — use <strong>Author unlock</strong> while writing content.
+    </p>
+    <p id="author-hint" class="author-hint" hidden></p>
+
+    <div id="boot-error" class="card" hidden style="border-color: var(--wrong); color: var(--wrong)"></div>
+
+    <div id="view-map">
+      <div class="rail-label">Level</div>
+      <div id="level-rail" class="level-rail" role="toolbar" aria-label="CEFR level"></div>
+
+      <div class="card">
+        <h2>Sapling · <span id="tree-caption">…</span></h2>
+        <p class="tree-legend">Trunk = frames (glue) · Canopy = leaves (produce) · Green = fruit (Sentence done)</p>
+        <div class="tree-wrap">
+          <svg id="tree-svg" class="tree-svg" role="img" aria-label="Vocabulary tree for selected level"></svg>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Node</h2>
+        <div id="node-detail"></div>
+      </div>
+    </div>
+
+    <div id="view-practice" class="card" hidden>
+      <div id="practice-root"></div>
+    </div>
+
+    <p class="foot">
+      Smoke path: open a block → Match → Quiz → Word → Sentence.
+      Server: <code>py -m http.server 8090</code> → <code>http://localhost:8090</code>
+    </p>
+  </div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
