@@ -6,7 +6,7 @@
 **Done:** Stage **A1-T1** adjectives seed · 12 frames · `trunk_adjectives_a1` (2026-07-17)  
 **Done:** A1 content map filled — all planned trunk + leaves live (2026-07-17).  
 **Dropped:** spiral “Today’s mix” — not needed; variety later via SRS.  
-**Still open:** A1 thin gate → unlock A2.  
+**Done:** A1 thin gate → unlock A2 (P8 · 2026-07-17). Grammar residue + low-freq content parked for A2.  
 **Scope of this doc:** thorough A1 completion + A2 scaffold-to-full + unlock gates.  
 **Out of band here:** full B1/B2 content maps (only unlock + word-craft *hooks*).  
 **Folder law:** greenfield `rue3-grok-v0.1` only. Legacy RUE3 = archive.

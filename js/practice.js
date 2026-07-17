@@ -14,12 +14,60 @@ function shuffle(a) {
   return arr;
 }
 
+/** Expand common contractions so I'm / I am grade the same. */
+function expandContractions(s) {
+  let t = String(s).toLowerCase();
+  const pairs = [
+    [/\bwon't\b/g, "will not"],
+    [/\bcan't\b/g, "cannot"],
+    [/\bcannot\b/g, "cannot"],
+    [/\bdon't\b/g, "do not"],
+    [/\bdoesn't\b/g, "does not"],
+    [/\bdidn't\b/g, "did not"],
+    [/\bisn't\b/g, "is not"],
+    [/\baren't\b/g, "are not"],
+    [/\bwasn't\b/g, "was not"],
+    [/\bweren't\b/g, "were not"],
+    [/\bhaven't\b/g, "have not"],
+    [/\bhasn't\b/g, "has not"],
+    [/\bi'm\b/g, "i am"],
+    [/\byou're\b/g, "you are"],
+    [/\bhe's\b/g, "he is"],
+    [/\bshe's\b/g, "she is"],
+    [/\bit's\b/g, "it is"],
+    [/\bwe're\b/g, "we are"],
+    [/\bthey're\b/g, "they are"],
+    [/\bi've\b/g, "i have"],
+    [/\byou've\b/g, "you have"],
+    [/\bwe've\b/g, "we have"],
+    [/\bthey've\b/g, "they have"],
+    [/\bi'll\b/g, "i will"],
+    [/\byou'll\b/g, "you will"],
+    [/\bhe'll\b/g, "he will"],
+    [/\bshe'll\b/g, "she will"],
+    [/\bwe'll\b/g, "we will"],
+    [/\bthey'll\b/g, "they will"],
+    [/\bi'd\b/g, "i would"],
+    [/\byou'd\b/g, "you would"],
+    [/\bhe'd\b/g, "he would"],
+    [/\bshe'd\b/g, "she would"],
+    [/\bwe'd\b/g, "we would"],
+    [/\bthey'd\b/g, "they would"],
+    [/\bthere's\b/g, "there is"],
+    [/\bthat's\b/g, "that is"],
+    [/\bwhat's\b/g, "what is"],
+    [/\bwhere's\b/g, "where is"],
+    [/\bwho's\b/g, "who is"],
+  ];
+  for (const [re, rep] of pairs) t = t.replace(re, rep);
+  return t;
+}
+
 function norm(s) {
-  return String(s)
-    .toLowerCase()
+  return expandContractions(String(s))
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[''`]/g, "")
+    .replace(/[''`´]/g, "")
     .replace(/[.,!?;:"()\-–—]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
@@ -41,6 +89,56 @@ function accepts(answer) {
 }
 
 /**
+ * Soft full-sentence match — near-enough English, not a free-for-all.
+ * Person must stay the same: "I am from Brno" ≈ "I come from Brno",
+ * but not "He is/comes from Brno" when the model is "I …".
+ */
+function softSentenceMatch(userNorm, primaryNorm) {
+  if (!userNorm || !primaryNorm) return false;
+  if (userNorm === primaryNorm) return true;
+
+  const subjectOf = (t) => {
+    const m = t.match(/^(i|you|he|she|it|we|they)\b/);
+    return m ? m[1] : null;
+  };
+  const dropSubj = (t) =>
+    t.replace(/^(i|you|he|she|it|we|they)\s+/, "").trim();
+
+  const su = subjectOf(userNorm);
+  const sp = subjectOf(primaryNorm);
+
+  // Same predicate after stripping subject (I'm tired ≈ I am tired already via norm)
+  if (su && sp && su === sp && dropSubj(userNorm) === dropSubj(primaryNorm)) {
+    return true;
+  }
+
+  // Origin: same person + same place — come from ≈ be/am/is/are from
+  // e.g. I come from Brno ≈ I am from Brno; NOT He is from Brno
+  const fromOf = (t) => {
+    const m = t.match(/\bfrom\s+(.+)$/);
+    return m ? m[1].trim() : null;
+  };
+  const originVerb = (t) => {
+    // after optional subject
+    const rest = dropSubj(t);
+    if (/^(come|comes|coming)\b/.test(rest)) return "come";
+    if (/^(am|is|are|be|been)\b/.test(rest)) return "be";
+    return null;
+  };
+  const fu = fromOf(userNorm);
+  const fp = fromOf(primaryNorm);
+  if (fu && fp && fu === fp && su && sp && su === sp) {
+    const vu = originVerb(userNorm);
+    const vp = originVerb(primaryNorm);
+    if (vu && vp && (vu === vp || (vu === "come" && vp === "be") || (vu === "be" && vp === "come"))) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+/**
  * Preferred model + optional item.accepts / item.gap_accepts.
  * Show answer stays the preferred model; grading allows listed variants.
  * gap_accepts only apply when forGap (Word mode) — bare synonyms must not pass Sentence.
@@ -55,12 +153,30 @@ function itemAccepts(item, primary, { forGap = false } = {}) {
   for (const a of extras) {
     for (const n of accepts(a)) out.add(n);
   }
+  // Auto contraction-style twins already via expandContractions in norm
   return [...out];
 }
 
-function isCorrectAnswer(userInput, item, primary, opts) {
-  return itemAccepts(item, primary, opts).includes(norm(userInput));
+function isCorrectAnswer(userInput, item, primary, opts = {}) {
+  const { forGap = false } = opts;
+  const userN = norm(userInput);
+  if (!userN) return false;
+  if (itemAccepts(item, primary, opts).includes(userN)) return true;
+  // Soft match only for full sentences / non-gap (gate Sentence, frame Sentence)
+  if (!forGap && primary && String(primary).trim().includes(" ")) {
+    const primaryN = norm(primary);
+    if (softSentenceMatch(userN, primaryN)) return true;
+    // also soft-match against listed accepts
+    if (item && Array.isArray(item.accepts)) {
+      for (const a of item.accepts) {
+        if (softSentenceMatch(userN, norm(a))) return true;
+      }
+    }
+  }
+  return false;
 }
+
+export { norm, isCorrectAnswer, itemAccepts, softSentenceMatch, expandContractions };
 
 /** Ball-and-box SVG diagrams (from Teaching Material basic-prepositions.html), RUE3 dark tokens. */
 function diagramSvg(key) {

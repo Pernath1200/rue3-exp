@@ -1,0 +1,46 @@
+{
+  "id": "a1_clothes",
+  "title": "Clothes",
+  "level": "A1",
+  "tree_node": "leaf_clothes_a1",
+  "note": "P2 Oxford A1 clothes + wear. British trousers/t-shirt. Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "clothes_basic",
+      "title": "Clothes · basic",
+      "items": [
+        { "en": "clothes", "cz": "oblečení" },
+        { "en": "shirt", "cz": "košile" },
+        { "en": "T-shirt", "cz": "tričko" },
+        { "en": "sweater", "cz": "svetr" },
+        { "en": "jacket", "cz": "bunda / sako" },
+        { "en": "coat", "cz": "kabát" },
+        { "en": "dress", "cz": "šaty" },
+        { "en": "skirt", "cz": "sukně" },
+        { "en": "trousers", "cz": "kalhoty" },
+        { "en": "jeans", "cz": "džíny" },
+        { "en": "hat", "cz": "klobouk / čepice" },
+        { "en": "wear", "cz": "nosit (oblečení)" }
+      ]
+    },
+    {
+      "id": "clothes_more",
+      "title": "Clothes · more",
+      "items": [
+        { "en": "shoe", "cz": "bota (polobotka)" },
+        { "en": "boot", "cz": "bota (vyšší)" },
+        { "en": "sock", "cz": "ponožka" },
+        { "en": "watch (wrist)", "cz": "hodinky" },
+        { "en": "bag", "cz": "taška" },
+        { "en": "glasses", "cz": "brýle" },
+        { "en": "suit", "cz": "oblek" },
+        { "en": "tie", "cz": "kravata" },
+        { "en": "scarf", "cz": "šála" },
+        { "en": "glove", "cz": "rukavice" },
+        { "en": "umbrella", "cz": "deštník" },
+        { "en": "pocket", "cz": "kapsa" }
+      ]
+    }
+  ]
+}

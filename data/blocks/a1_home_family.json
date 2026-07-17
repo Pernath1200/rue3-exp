@@ -3,7 +3,7 @@
   "title": "Home & Family",
   "level": "A1",
   "tree_node": "leaf_home_family",
-  "note": "First live set for smoke test. Words adapted from Martin A1 practice model — not a full dump. Cars/personal sets excluded. Function words deferred.",
+  "note": "Home & family leaf. P1 Oxford fill: relatives + home extras. Cars/personal sets excluded.",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -76,6 +76,42 @@
         { "en": "cup", "cz": "hrnek / šálek" },
         { "en": "plate", "cz": "talíř" },
         { "en": "bag", "cz": "taška" }
+      ]
+    },
+    {
+      "id": "family_relatives",
+      "title": "Family · relatives",
+      "items": [
+        { "en": "mum", "cz": "máma" },
+        { "en": "dad", "cz": "táta" },
+        { "en": "parent", "cz": "rodič" },
+        { "en": "aunt", "cz": "teta" },
+        { "en": "uncle", "cz": "strýc" },
+        { "en": "cousin", "cz": "bratranec / sestřenice" },
+        { "en": "grandfather", "cz": "dědeček" },
+        { "en": "grandmother", "cz": "babička" },
+        { "en": "grandparent", "cz": "prarodič" },
+        { "en": "boyfriend", "cz": "přítel (kluk)" },
+        { "en": "girlfriend", "cz": "přítelkyně" },
+        { "en": "adult", "cz": "dospělý" }
+      ]
+    },
+    {
+      "id": "home_more",
+      "title": "Home · more",
+      "items": [
+        { "en": "apartment", "cz": "byt (americky)" },
+        { "en": "floor", "cz": "podlaha / patro" },
+        { "en": "wall", "cz": "zeď" },
+        { "en": "bath", "cz": "vana" },
+        { "en": "shower", "cz": "sprcha" },
+        { "en": "toilet", "cz": "záchod" },
+        { "en": "desk", "cz": "psací stůl" },
+        { "en": "clock", "cz": "hodiny (na zdi)" },
+        { "en": "address", "cz": "adresa" },
+        { "en": "birthday", "cz": "narozeniny" },
+        { "en": "upstairs", "cz": "nahoře / do patra" },
+        { "en": "downstairs", "cz": "dole / dolů" }
       ]
     }
   ]

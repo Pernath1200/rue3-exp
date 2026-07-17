@@ -1,0 +1,83 @@
+{
+  "id": "a1_school",
+  "title": "School & study",
+  "level": "A1",
+  "tree_node": "leaf_school_a1",
+  "note": "P3 Oxford A1 school/study. Overlap with Work (teacher/student) kept light. Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "school_place",
+      "title": "School · place",
+      "items": [
+        { "en": "class", "cz": "třída / hodina" },
+        { "en": "classroom", "cz": "učebna" },
+        { "en": "lesson", "cz": "hodina / lekce" },
+        { "en": "course", "cz": "kurz" },
+        { "en": "college", "cz": "vysoká škola / kolej" },
+        { "en": "subject", "cz": "předmět" },
+        { "en": "homework", "cz": "domácí úkol" },
+        { "en": "exam", "cz": "zkouška / test" },
+        { "en": "test", "cz": "test" },
+        { "en": "dictionary", "cz": "slovník" },
+        { "en": "language", "cz": "jazyk" },
+        { "en": "learn", "cz": "učit se" }
+      ]
+    },
+    {
+      "id": "school_tools",
+      "title": "School · tools & text",
+      "items": [
+        { "en": "pen", "cz": "pero" },
+        { "en": "pencil", "cz": "tužka" },
+        { "en": "paper", "cz": "papír" },
+        { "en": "page", "cz": "stránka" },
+        { "en": "word", "cz": "slovo" },
+        { "en": "sentence", "cz": "věta" },
+        { "en": "story", "cz": "příběh" },
+        { "en": "question", "cz": "otázka" },
+        { "en": "answer", "cz": "odpověď" },
+        { "en": "example", "cz": "příklad" },
+        { "en": "spelling", "cz": "pravopis" },
+        { "en": "study", "cz": "studovat" }
+      ]
+    },
+    {
+      "id": "school_subjects",
+      "title": "School · subjects & ideas",
+      "items": [
+        { "en": "history", "cz": "dějepis / historie" },
+        { "en": "geography", "cz": "zeměpis" },
+        { "en": "science", "cz": "přírodní vědy" },
+        { "en": "scientist", "cz": "vědec" },
+        { "en": "art", "cz": "umění / výtvarka" },
+        { "en": "artist", "cz": "umělec" },
+        { "en": "music", "cz": "hudba" },
+        { "en": "idea", "cz": "nápad / myšlenka" },
+        { "en": "problem", "cz": "problém" },
+        { "en": "information", "cz": "informace" },
+        { "en": "opinion", "cz": "názor" },
+        { "en": "meaning", "cz": "význam / smysl" }
+      ]
+    },
+    {
+      "id": "school_more",
+      "title": "School · more text",
+      "items": [
+        { "en": "letter", "cz": "dopis" },
+        { "en": "note", "cz": "poznámka" },
+        { "en": "list", "cz": "seznam" },
+        { "en": "text", "cz": "text" },
+        { "en": "title", "cz": "název / titul" },
+        { "en": "article", "cz": "článek" },
+        { "en": "paragraph", "cz": "odstavec" },
+        { "en": "phrase", "cz": "fráze / sousloví" },
+        { "en": "reading", "cz": "čtení" },
+        { "en": "writing", "cz": "psaní" },
+        { "en": "practice", "cz": "praxe / procvičování" },
+        { "en": "activity", "cz": "činnost / aktivita" }
+      ]
+    }
+  ]
+}
+

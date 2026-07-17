@@ -3,7 +3,7 @@
   "title": "Places",
   "level": "A1",
   "tree_node": "leaf_places",
-  "note": "High-frequency A1 slice from Martin places model (85 → 48). Directions for production; pure grammar prepositions thinned. Ladder ends in Sentence = fruit on this leaf.",
+  "note": "Places leaf. P1 Oxford fill: travel + town culture. Directions thinned of pure grammar. Sentence = fruit.",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -76,6 +76,42 @@
         { "en": "leave", "cz": "odejít" },
         { "en": "arrive", "cz": "přijet / dorazit" },
         { "en": "stop (verb)", "cz": "zastavit" }
+      ]
+    },
+    {
+      "id": "places_travel",
+      "title": "Places · travel",
+      "items": [
+        { "en": "village", "cz": "vesnice" },
+        { "en": "country", "cz": "země / venkov" },
+        { "en": "road", "cz": "silnice / cesta" },
+        { "en": "boat", "cz": "loď" },
+        { "en": "flight", "cz": "let" },
+        { "en": "journey", "cz": "cesta (delší)" },
+        { "en": "trip", "cz": "výlet / cesta" },
+        { "en": "tourist", "cz": "turista" },
+        { "en": "traffic", "cz": "doprava / provoz" },
+        { "en": "passport", "cz": "pas" },
+        { "en": "vacation", "cz": "dovolená (hl. am.)" },
+        { "en": "bicycle", "cz": "kolo (jízdní)" }
+      ]
+    },
+    {
+      "id": "places_out",
+      "title": "Places · out and about",
+      "items": [
+        { "en": "museum", "cz": "muzeum" },
+        { "en": "cinema", "cz": "kino" },
+        { "en": "theatre", "cz": "divadlo" },
+        { "en": "library", "cz": "knihovna" },
+        { "en": "market", "cz": "trh" },
+        { "en": "farm", "cz": "farma" },
+        { "en": "beach", "cz": "pláž" },
+        { "en": "building", "cz": "budova" },
+        { "en": "pool", "cz": "bazén" },
+        { "en": "police", "cz": "policie" },
+        { "en": "policeman", "cz": "policista" },
+        { "en": "university", "cz": "univerzita" }
       ]
     }
   ]

@@ -1,0 +1,46 @@
+{
+  "id": "a1_animals",
+  "title": "Animals",
+  "level": "A1",
+  "tree_node": "leaf_animals_a1",
+  "note": "P2 Oxford A1 animals (+ a few high-freq fillers to make 2×12). Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "animals_basic",
+      "title": "Animals · basic",
+      "items": [
+        { "en": "animal", "cz": "zvíře" },
+        { "en": "dog", "cz": "pes" },
+        { "en": "cat", "cz": "kočka" },
+        { "en": "bird", "cz": "pták" },
+        { "en": "fish", "cz": "ryba" },
+        { "en": "horse", "cz": "kůň" },
+        { "en": "cow", "cz": "kráva" },
+        { "en": "pig", "cz": "prase" },
+        { "en": "sheep", "cz": "ovce" },
+        { "en": "mouse", "cz": "myš" },
+        { "en": "lion", "cz": "lev" },
+        { "en": "elephant", "cz": "slon" }
+      ]
+    },
+    {
+      "id": "animals_more",
+      "title": "Animals · more",
+      "items": [
+        { "en": "snake", "cz": "had" },
+        { "en": "monkey", "cz": "opice" },
+        { "en": "bear", "cz": "medvěd" },
+        { "en": "rabbit", "cz": "králík" },
+        { "en": "chicken", "cz": "kuře / slepice" },
+        { "en": "duck", "cz": "kachna" },
+        { "en": "frog", "cz": "žába" },
+        { "en": "insect", "cz": "hmyz" },
+        { "en": "pet", "cz": "domácí zvíře" },
+        { "en": "wild", "cz": "divoký" },
+        { "en": "farm", "cz": "farma" },
+        { "en": "zoo", "cz": "zoo" }
+      ]
+    }
+  ]
+}

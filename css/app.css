@@ -188,6 +188,12 @@ h1 {
   color: var(--muted);
 }
 
+.gate-status {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+
 /* Tree SVG — A1 sapling (attempt 1) */
 .tree-wrap {
   width: 100%;
@@ -203,16 +209,24 @@ h1 {
 }
 
 .tree-svg .tree-canopy-wash {
-  fill: rgba(77, 182, 199, 0.06);
+  fill: rgba(77, 182, 199, 0.55);
+  stroke: none;
+  pointer-events: none;
+  /* opacity set inline from growth */
+}
+
+.tree-svg .tree-growth-leaf {
+  fill: #4db6c7;
   stroke: none;
   pointer-events: none;
 }
 
 .tree-svg .tree-trunk-wood {
-  fill: rgba(77, 182, 199, 0.14);
-  stroke: rgba(77, 182, 199, 0.45);
+  fill: rgba(77, 182, 199, 0.55);
+  stroke: rgba(77, 182, 199, 0.55);
   stroke-width: 1.5;
   pointer-events: none;
+  /* opacity set inline from growth */
 }
 
 .tree-svg .tree-ground {

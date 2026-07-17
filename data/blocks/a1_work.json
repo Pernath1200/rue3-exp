@@ -41,6 +41,25 @@
         { "en": "finish (work)", "cz": "skončit (práci)" },
         { "en": "break (rest)", "cz": "přestávka" }
       ]
+    },
+    {
+      "id": "work_people",
+      "title": "Work · people & roles",
+      "items": [
+        { "en": "actor", "cz": "herec" },
+        { "en": "actress", "cz": "herečka" },
+        { "en": "dancer", "cz": "tanečník / tanečnice" },
+        { "en": "singer", "cz": "zpěvák / zpěvačka" },
+        { "en": "player", "cz": "hráč" },
+        { "en": "farmer", "cz": "farmář" },
+        { "en": "worker", "cz": "dělník / pracovník" },
+        { "en": "writer", "cz": "spisovatel / autor" },
+        { "en": "partner", "cz": "partner" },
+        { "en": "career", "cz": "kariéra" },
+        { "en": "business", "cz": "byznys / podnikání" },
+        { "en": "interview", "cz": "pohovor / rozhovor" }
+      ]
     }
   ]
 }
+

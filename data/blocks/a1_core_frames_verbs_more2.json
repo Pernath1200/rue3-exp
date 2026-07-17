@@ -1,0 +1,101 @@
+{
+  "id": "a1_core_frames_verbs_more2",
+  "title": "Core frames · Verbs · more 2",
+  "level": "A1",
+  "tree_node": "trunk_verbs_more2_a1",
+  "practice": "frames",
+  "note": "P7 more high-freq verbs (B). Gap on the verb.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "verbs_more2_seed",
+      "title": "Verbs · more (B)",
+      "items": [
+        {
+          "en": "I stay at home.",
+          "cz": "Zůstávám doma.",
+          "gap": "I ____ at home.",
+          "gap_answer": "stay",
+          "accepts": ["I stay at home", "I stay home."]
+        },
+        {
+          "en": "I talk to her.",
+          "cz": "Mluvím s ní.",
+          "gap": "I ____ to her.",
+          "gap_answer": "talk",
+          "accepts": ["I talk to her", "I talk to her."]
+        },
+        {
+          "en": "I teach English.",
+          "cz": "Učím angličtinu.",
+          "gap": "I ____ English.",
+          "gap_answer": "teach",
+          "accepts": ["I teach English", "I teach English."]
+        },
+        {
+          "en": "I run every day.",
+          "cz": "Běhám každý den.",
+          "gap": "I ____ every day.",
+          "gap_answer": "run",
+          "accepts": ["I run every day", "I run every day."]
+        },
+        {
+          "en": "I drive a car.",
+          "cz": "Řídím auto.",
+          "gap": "I ____ a car.",
+          "gap_answer": "drive",
+          "accepts": ["I drive a car", "I drive a car."]
+        },
+        {
+          "en": "I sit down.",
+          "cz": "Sedám si.",
+          "gap": "I ____ down.",
+          "gap_answer": "sit",
+          "accepts": ["I sit down", "I sit down."]
+        },
+        {
+          "en": "I stand up.",
+          "cz": "Vstávám (ze sedu).",
+          "gap": "I ____ up.",
+          "gap_answer": "stand",
+          "accepts": ["I stand up", "I stand up."]
+        },
+        {
+          "en": "I wake up at seven.",
+          "cz": "Budím se v sedm.",
+          "gap": "I ____ up at seven.",
+          "gap_answer": "wake",
+          "accepts": ["I wake up at seven", "I wake up at 7."]
+        },
+        {
+          "en": "I wash my hands.",
+          "cz": "Myju si ruce.",
+          "gap": "I ____ my hands.",
+          "gap_answer": "wash",
+          "accepts": ["I wash my hands", "I wash my hands."]
+        },
+        {
+          "en": "I win the game.",
+          "cz": "Vyhrávám hru / zápas.",
+          "gap": "I ____ the game.",
+          "gap_answer": "win",
+          "accepts": ["I win the game", "I win the game."]
+        },
+        {
+          "en": "I keep the key.",
+          "cz": "Nechávám si klíč. / Schovávám klíč.",
+          "gap": "I ____ the key.",
+          "gap_answer": "keep",
+          "accepts": ["I keep the key", "I keep the key."]
+        },
+        {
+          "en": "I lose my phone.",
+          "cz": "Ztrácím telefon. / Ztratil jsem telefon.",
+          "gap": "I ____ my phone.",
+          "gap_answer": "lose",
+          "accepts": ["I lose my phone", "I lose my phone."]
+        }
+      ]
+    }
+  ]
+}

@@ -207,3 +207,14 @@ export function resetProgress() {
 export function getUnlockedList() {
   return LEVELS.filter((lv) => isLevelUnlocked(lv));
 }
+
+/** Gate record for a level, or null. */
+export function getGate(level) {
+  const g = loadProgress().gates[level];
+  return g || null;
+}
+
+export function hasPassedGate(level) {
+  const g = getGate(level);
+  return Boolean(g && g.passed);
+}

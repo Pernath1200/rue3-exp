@@ -3,7 +3,7 @@
   "title": "Free time & feelings",
   "level": "A1",
   "tree_node": "leaf_freetime_a1",
-  "note": "Hobbies, free-time verbs, basic feelings — thinned from Martin Free Time. Overlap with adj trunk (tired/cold) kept light. Sentence = fruit.",
+  "note": "Free time leaf. P5: more feelings + hobbies/media. Overlap with adj trunk kept light. Sentence = fruit.",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -59,6 +59,62 @@
         { "en": "worried", "cz": "ustaraný" },
         { "en": "excited", "cz": "natěšený / nadšený" }
       ]
+    },
+    {
+      "id": "freetime_feelings_more",
+      "title": "Free time · feelings more",
+      "items": [
+        { "en": "afraid", "cz": "vystrašený / bát se" },
+        { "en": "boring", "cz": "nudný" },
+        { "en": "interesting", "cz": "zajímavý" },
+        { "en": "interested", "cz": "zaujatý / mít zájem" },
+        { "en": "favourite", "cz": "oblíbený" },
+        { "en": "funny", "cz": "vtipný" },
+        { "en": "great", "cz": "skvělý" },
+        { "en": "amazing", "cz": "úžasný" },
+        { "en": "wonderful", "cz": "nádherný / úžasný" },
+        { "en": "sick", "cz": "nemocný (nevolno)" },
+        { "en": "sorry", "cz": "líto / promiň" },
+        { "en": "sure", "cz": "jistý" }
+      ]
+    },
+    {
+      "id": "freetime_more",
+      "title": "Free time · more",
+      "items": [
+        { "en": "game", "cz": "hra" },
+        { "en": "fun", "cz": "zábava / zábavný" },
+        { "en": "guitar", "cz": "kytara" },
+        { "en": "band", "cz": "kapela" },
+        { "en": "concert", "cz": "koncert" },
+        { "en": "movie", "cz": "film (hl. am.)" },
+        { "en": "dancing", "cz": "tanec / tancování" },
+        { "en": "exercise", "cz": "cvičení" },
+        { "en": "team", "cz": "tým" },
+        { "en": "match", "cz": "zápas" },
+        { "en": "draw", "cz": "kreslit" },
+        { "en": "paint", "cz": "malovat" }
+      ]
+    },
+    {
+      "id": "freetime_describe",
+      "title": "Free time · describe",
+      "items": [
+        { "en": "dangerous", "cz": "nebezpečný" },
+        { "en": "fantastic", "cz": "fantastický" },
+        { "en": "modern", "cz": "moderní" },
+        { "en": "perfect", "cz": "dokonalý" },
+        { "en": "popular", "cz": "oblíbený / populární" },
+        { "en": "pretty", "cz": "hezký / pěkný" },
+        { "en": "quick", "cz": "rychlý" },
+        { "en": "quiet", "cz": "tichý" },
+        { "en": "common", "cz": "běžný / společný" },
+        { "en": "complete", "cz": "úplný / hotový" },
+        { "en": "correct", "cz": "správný" },
+        { "en": "similar", "cz": "podobný" }
+      ]
     }
   ]
 }
+
+

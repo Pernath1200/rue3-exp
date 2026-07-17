@@ -1,0 +1,111 @@
+{
+  "id": "a1_core_frames_glue_quantity",
+  "title": "Core frames · Some · any · every",
+  "level": "A1",
+  "tree_node": "trunk_glue_quantity_a1",
+  "practice": "frames",
+  "note": "P6 function glue — some/any/no/every/something… Gap on the quantifier word.",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "some", "any", "no", "every", "everybody", "everything", "something",
+    "someone", "another", "both", "all", "many"
+  ],
+  "blocks": [
+    {
+      "id": "glue_quantity_seed",
+      "title": "Glue · some any every",
+      "items": [
+        {
+          "en": "I have some water.",
+          "cz": "Mám trochu vody. / Mám vodu.",
+          "gap": "I have ____ water.",
+          "gap_answer": "some",
+          "accepts": ["I have some water", "I have some water."]
+        },
+        {
+          "en": "I don't have any money.",
+          "cz": "Nemám žádné peníze.",
+          "gap": "I don't have ____ money.",
+          "gap_answer": "any",
+          "accepts": [
+            "I don't have any money",
+            "I do not have any money.",
+            "I haven't got any money."
+          ]
+        },
+        {
+          "en": "There is no milk.",
+          "cz": "Není tu žádné mléko.",
+          "gap": "There is ____ milk.",
+          "gap_answer": "no",
+          "accepts": ["There is no milk", "There's no milk."]
+        },
+        {
+          "en": "Everybody is here.",
+          "cz": "Všichni jsou tady.",
+          "gap": "____ is here.",
+          "gap_answer": "Everybody",
+          "gap_accepts": ["Everyone", "everybody", "everyone"],
+          "accepts": ["Everybody is here", "Everyone is here."]
+        },
+        {
+          "en": "Everything is OK.",
+          "cz": "Všechno je v pořádku.",
+          "gap": "____ is OK.",
+          "gap_answer": "Everything",
+          "accepts": ["Everything is OK", "Everything is okay.", "Everything is fine."]
+        },
+        {
+          "en": "Something is wrong.",
+          "cz": "Něco je špatně.",
+          "gap": "____ is wrong.",
+          "gap_answer": "Something",
+          "accepts": ["Something is wrong", "Something is wrong."]
+        },
+        {
+          "en": "Someone is at the door.",
+          "cz": "Někdo je u dveří.",
+          "gap": "____ is at the door.",
+          "gap_answer": "Someone",
+          "gap_accepts": ["Somebody", "someone", "somebody"],
+          "accepts": ["Someone is at the door", "Somebody is at the door."]
+        },
+        {
+          "en": "I want another coffee.",
+          "cz": "Chci ještě jednu kávu.",
+          "gap": "I want ____ coffee.",
+          "gap_answer": "another",
+          "accepts": ["I want another coffee", "I want another coffee."]
+        },
+        {
+          "en": "Both answers are correct.",
+          "cz": "Obě odpovědi jsou správné.",
+          "gap": "____ answers are correct.",
+          "gap_answer": "Both",
+          "accepts": ["Both answers are correct", "Both answers are correct."]
+        },
+        {
+          "en": "All students are here.",
+          "cz": "Všichni studenti jsou tady.",
+          "gap": "____ students are here.",
+          "gap_answer": "All",
+          "accepts": ["All students are here", "All the students are here."]
+        },
+        {
+          "en": "Many people live here.",
+          "cz": "Tady bydlí hodně lidí.",
+          "gap": "____ people live here.",
+          "gap_answer": "Many",
+          "accepts": ["Many people live here", "A lot of people live here."]
+        },
+        {
+          "en": "I have a lot of work.",
+          "cz": "Mám spoustu práce.",
+          "gap": "I have a ____ of work.",
+          "gap_answer": "lot",
+          "accepts": ["I have a lot of work", "I've got a lot of work."]
+        }
+      ]
+    }
+  ]
+}

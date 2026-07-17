@@ -1,0 +1,105 @@
+{
+  "id": "a1_core_frames_verbs_action",
+  "title": "Core frames · Verbs · action",
+  "level": "A1",
+  "tree_node": "trunk_verbs_action_a1",
+  "practice": "frames",
+  "note": "P4 core verbs — action, give/take, move. Gap on the verb.",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "find", "give", "take", "put", "use", "try", "buy", "call",
+    "meet", "open", "wait", "walk", "read", "write", "play", "watch"
+  ],
+  "blocks": [
+    {
+      "id": "verbs_action_seed",
+      "title": "Verbs · action",
+      "items": [
+        {
+          "en": "I find my bag.",
+          "cz": "Najdu tašku. / Nacházím tašku.",
+          "gap": "I ____ my bag.",
+          "gap_answer": "find",
+          "accepts": ["I find my bag", "I find my bag."]
+        },
+        {
+          "en": "I give you a book.",
+          "cz": "Dávám ti knihu.",
+          "gap": "I ____ you a book.",
+          "gap_answer": "give",
+          "accepts": ["I give you a book", "I give you a book."]
+        },
+        {
+          "en": "I take the bus.",
+          "cz": "Jedu autobusem. / Beru si autobus.",
+          "gap": "I ____ the bus.",
+          "gap_answer": "take",
+          "accepts": ["I take the bus", "I take the bus."]
+        },
+        {
+          "en": "I put it on the table.",
+          "cz": "Pokládám to na stůl.",
+          "gap": "I ____ it on the table.",
+          "gap_answer": "put",
+          "accepts": ["I put it on the table", "I put it on the table."]
+        },
+        {
+          "en": "I use a phone.",
+          "cz": "Používám telefon.",
+          "gap": "I ____ a phone.",
+          "gap_answer": "use",
+          "accepts": ["I use a phone", "I use a phone."]
+        },
+        {
+          "en": "I try again.",
+          "cz": "Zkouším to znovu.",
+          "gap": "I ____ again.",
+          "gap_answer": "try",
+          "accepts": ["I try again", "I try again."]
+        },
+        {
+          "en": "I buy bread.",
+          "cz": "Kupuji chleba.",
+          "gap": "I ____ bread.",
+          "gap_answer": "buy",
+          "accepts": ["I buy bread", "I buy bread."]
+        },
+        {
+          "en": "I call my friend.",
+          "cz": "Volám kamarádovi. / Volám příteli.",
+          "gap": "I ____ my friend.",
+          "gap_answer": "call",
+          "accepts": ["I call my friend", "I call my friend."]
+        },
+        {
+          "en": "I meet him at the station.",
+          "cz": "Potkávám ho na nádraží. / Sejdu se s ním na nádraží.",
+          "gap": "I ____ him at the station.",
+          "gap_answer": "meet",
+          "accepts": ["I meet him at the station", "I meet him at the station."]
+        },
+        {
+          "en": "I open the door.",
+          "cz": "Otevírám dveře.",
+          "gap": "I ____ the door.",
+          "gap_answer": "open",
+          "accepts": ["I open the door", "I open the door."]
+        },
+        {
+          "en": "I wait for the train.",
+          "cz": "Čekám na vlak.",
+          "gap": "I ____ for the train.",
+          "gap_answer": "wait",
+          "accepts": ["I wait for the train", "I wait for the train."]
+        },
+        {
+          "en": "I walk to work.",
+          "cz": "Jdu pěšky do práce.",
+          "gap": "I ____ to work.",
+          "gap_answer": "walk",
+          "accepts": ["I walk to work", "I walk to work."]
+        }
+      ]
+    }
+  ]
+}

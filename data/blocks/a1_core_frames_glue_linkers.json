@@ -1,0 +1,113 @@
+{
+  "id": "a1_core_frames_glue_linkers",
+  "title": "Core frames · And · but · because",
+  "level": "A1",
+  "tree_node": "trunk_glue_linkers_a1",
+  "practice": "frames",
+  "note": "P6 function glue — linkers + high-freq prepositions of movement/purpose. Gap on the glue word.",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "and", "but", "or", "because", "to", "from", "for", "with", "into", "after", "before", "so"
+  ],
+  "blocks": [
+    {
+      "id": "glue_linkers_seed",
+      "title": "Glue · linkers & preps",
+      "items": [
+        {
+          "en": "I like tea and coffee.",
+          "cz": "Mám rád čaj a kávu.",
+          "gap": "I like tea ____ coffee.",
+          "gap_answer": "and",
+          "accepts": ["I like tea and coffee", "I like tea and coffee."]
+        },
+        {
+          "en": "I like tea but not coffee.",
+          "cz": "Mám rád čaj, ale ne kávu.",
+          "gap": "I like tea ____ not coffee.",
+          "gap_answer": "but",
+          "accepts": ["I like tea but not coffee", "I like tea but not coffee."]
+        },
+        {
+          "en": "Do you want tea or coffee?",
+          "cz": "Chceš čaj, nebo kávu?",
+          "gap": "Do you want tea ____ coffee?",
+          "gap_answer": "or",
+          "accepts": ["Do you want tea or coffee", "Do you want tea or coffee?"]
+        },
+        {
+          "en": "I stay home because I am tired.",
+          "cz": "Zůstávám doma, protože jsem unavený.",
+          "gap": "I stay home ____ I am tired.",
+          "gap_answer": "because",
+          "accepts": [
+            "I stay home because I am tired",
+            "I stay home because I'm tired."
+          ]
+        },
+        {
+          "en": "I am tired so I go to bed.",
+          "cz": "Jsem unavený, tak jdu spát.",
+          "gap": "I am tired ____ I go to bed.",
+          "gap_answer": "so",
+          "accepts": ["I am tired so I go to bed", "I'm tired so I go to bed."]
+        },
+        {
+          "en": "I go to school.",
+          "cz": "Chodím do školy.",
+          "gap": "I go ____ school.",
+          "gap_answer": "to",
+          "accepts": ["I go to school", "I go to school."]
+        },
+        {
+          "en": "I come from Brno.",
+          "cz": "Jsem z Brna. / Přicházím z Brna.",
+          "gap": "I come ____ Brno.",
+          "gap_answer": "from",
+          "accepts": [
+            "I come from Brno",
+            "I come from Brno.",
+            "I am from Brno.",
+            "I'm from Brno."
+          ]
+        },
+        {
+          "en": "This is for you.",
+          "cz": "Tohle je pro tebe.",
+          "gap": "This is ____ you.",
+          "gap_answer": "for",
+          "accepts": ["This is for you", "This is for you."]
+        },
+        {
+          "en": "Sit with me.",
+          "cz": "Sedni si se mnou.",
+          "gap": "Sit ____ me.",
+          "gap_answer": "with",
+          "accepts": ["Sit with me", "Sit with me."]
+        },
+        {
+          "en": "Put it into the bag.",
+          "cz": "Dej to do tašky.",
+          "gap": "Put it ____ the bag.",
+          "gap_answer": "into",
+          "gap_accepts": ["in"],
+          "accepts": ["Put it into the bag", "Put it in the bag."]
+        },
+        {
+          "en": "After lunch I rest.",
+          "cz": "Po obědě odpočívám.",
+          "gap": "____ lunch I rest.",
+          "gap_answer": "After",
+          "accepts": ["After lunch I rest", "After lunch I rest."]
+        },
+        {
+          "en": "Before work I have coffee.",
+          "cz": "Před prací si dám kávu.",
+          "gap": "____ work I have coffee.",
+          "gap_answer": "Before",
+          "accepts": ["Before work I have coffee", "Before work I have coffee."]
+        }
+      ]
+    }
+  ]
+}

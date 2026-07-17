@@ -1,0 +1,112 @@
+{
+  "id": "a1_core_frames_social",
+  "title": "Core frames · Social chunks",
+  "level": "A1",
+  "tree_node": "trunk_social_a1",
+  "practice": "frames",
+  "note": "P6 social formulae. Gap on the key word/chunk. Whole-line practice in Match/Quiz/Sentence.",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "hello", "hi", "goodbye", "bye", "thanks", "please", "yes", "sorry",
+    "excuse", "meet", "welcome"
+  ],
+  "blocks": [
+    {
+      "id": "social_seed",
+      "title": "Social · hello & thanks",
+      "items": [
+        {
+          "en": "Hello.",
+          "cz": "Ahoj. / Dobrý den.",
+          "gap": "____.",
+          "gap_answer": "Hello",
+          "gap_accepts": ["Hi", "hello", "hi"],
+          "accepts": ["Hello", "Hi.", "Hi", "Hello!"]
+        },
+        {
+          "en": "Hi.",
+          "cz": "Ahoj. (neformálně)",
+          "gap": "____.",
+          "gap_answer": "Hi",
+          "gap_accepts": ["Hello", "hi", "hello"],
+          "accepts": ["Hi", "Hello.", "Hello"]
+        },
+        {
+          "en": "Goodbye.",
+          "cz": "Nashledanou. / Sbohem.",
+          "gap": "____.",
+          "gap_answer": "Goodbye",
+          "gap_accepts": ["Bye", "goodbye", "bye"],
+          "accepts": ["Goodbye", "Bye.", "Bye", "Good bye."]
+        },
+        {
+          "en": "Bye.",
+          "cz": "Ahoj. (na rozloučenou)",
+          "gap": "____.",
+          "gap_answer": "Bye",
+          "gap_accepts": ["Goodbye", "bye", "goodbye"],
+          "accepts": ["Bye", "Goodbye.", "Goodbye"]
+        },
+        {
+          "en": "Thank you.",
+          "cz": "Děkuji.",
+          "gap": "____ you.",
+          "gap_answer": "Thank",
+          "gap_accepts": ["thanks"],
+          "accepts": ["Thank you", "Thanks.", "Thanks", "Thank you!"]
+        },
+        {
+          "en": "Thanks.",
+          "cz": "Díky.",
+          "gap": "____.",
+          "gap_answer": "Thanks",
+          "gap_accepts": ["Thank you", "thanks"],
+          "accepts": ["Thanks", "Thank you.", "Thank you"]
+        },
+        {
+          "en": "Please help me.",
+          "cz": "Prosím, pomoz mi.",
+          "gap": "____ help me.",
+          "gap_answer": "Please",
+          "accepts": ["Please help me", "Please help me."]
+        },
+        {
+          "en": "Yes.",
+          "cz": "Ano.",
+          "gap": "____.",
+          "gap_answer": "Yes",
+          "gap_accepts": ["Yeah", "yes", "yeah"],
+          "accepts": ["Yes", "Yeah.", "Yeah", "Yes!"]
+        },
+        {
+          "en": "No.",
+          "cz": "Ne.",
+          "gap": "____.",
+          "gap_answer": "No",
+          "accepts": ["No", "No."]
+        },
+        {
+          "en": "Sorry.",
+          "cz": "Promiň. / Promiňte.",
+          "gap": "____.",
+          "gap_answer": "Sorry",
+          "accepts": ["Sorry", "I'm sorry.", "I am sorry."]
+        },
+        {
+          "en": "Excuse me.",
+          "cz": "Promiňte. (upoutání pozornosti)",
+          "gap": "____ me.",
+          "gap_answer": "Excuse",
+          "accepts": ["Excuse me", "Excuse me."]
+        },
+        {
+          "en": "Nice to meet you.",
+          "cz": "Těší mě.",
+          "gap": "Nice to ____ you.",
+          "gap_answer": "meet",
+          "accepts": ["Nice to meet you", "Nice to meet you."]
+        }
+      ]
+    }
+  ]
+}

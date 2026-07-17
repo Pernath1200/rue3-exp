@@ -1,0 +1,46 @@
+{
+  "id": "a1_tech",
+  "title": "Tech & media",
+  "level": "A1",
+  "tree_node": "leaf_tech_a1",
+  "note": "P3 Oxford A1 tech/media. Phone/computer also appear in Work/Home — OK for domain practice. Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "tech_devices",
+      "title": "Tech · devices",
+      "items": [
+        { "en": "computer", "cz": "počítač" },
+        { "en": "phone", "cz": "telefon" },
+        { "en": "telephone", "cz": "telefon (formálnější)" },
+        { "en": "mobile", "cz": "mobil" },
+        { "en": "camera", "cz": "fotoaparát / kamera" },
+        { "en": "television", "cz": "televize" },
+        { "en": "TV", "cz": "televize (TV)" },
+        { "en": "radio", "cz": "rádio" },
+        { "en": "video", "cz": "video" },
+        { "en": "DVD", "cz": "DVD" },
+        { "en": "CD", "cz": "CD" },
+        { "en": "screen", "cz": "obrazovka / displej" }
+      ]
+    },
+    {
+      "id": "tech_online",
+      "title": "Tech · online & media",
+      "items": [
+        { "en": "internet", "cz": "internet" },
+        { "en": "online", "cz": "online / na internetu" },
+        { "en": "website", "cz": "webová stránka" },
+        { "en": "email", "cz": "e-mail" },
+        { "en": "blog", "cz": "blog" },
+        { "en": "photo", "cz": "fotka" },
+        { "en": "photograph", "cz": "fotografie" },
+        { "en": "picture", "cz": "obrázek / obraz" },
+        { "en": "message", "cz": "zpráva" },
+        { "en": "news", "cz": "zprávy" },
+        { "en": "newspaper", "cz": "noviny" },
+        { "en": "magazine", "cz": "časopis" }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,7 @@
  */
 
 import { startPractice } from "./practice.js";
+import { startA1Gate } from "./gate.js";
 import {
   loadProgress,
   touchBlock,
@@ -15,6 +16,8 @@ import {
   isAuthorUnlock,
   setAuthorUnlock,
   getUnlockedList,
+  getGate,
+  hasPassedGate,
 } from "./progress.js";
 
 const STATE = {
@@ -91,6 +94,39 @@ function renderRail() {
   }
 
   renderAuthorHint();
+  renderGateCard();
+}
+
+function renderGateCard() {
+  const el = document.getElementById("gate-card");
+  if (!el) return;
+  // Gate is for unlocking the next band from A1
+  if (STATE.level !== "A1") {
+    el.hidden = true;
+    return;
+  }
+  el.hidden = false;
+  const g = getGate("A1");
+  const passed = hasPassedGate("A1") || isLevelUnlocked("A2");
+  const status = passed
+    ? g && g.score != null
+      ? `Passed · last score ${g.score}/${g.total}`
+      : "A2 unlocked"
+    : g
+      ? `Not passed yet · last ${g.score}/${g.total} · tries ${g.attempts || 0}`
+      : "Not attempted yet · pass unlocks A2";
+
+  el.innerHTML = `
+    <h2>A1 level check</h2>
+    <p class="tree-legend">Thin gate: 12 Quiz · 12 Word · 6 frame sentences · 80% to pass · unlimited retries</p>
+    <p class="gate-status">${escapeXml(status)}</p>
+    <button type="button" class="block-btn" id="btn-a1-gate">
+      <span class="block-btn-title">${passed ? "Retake A1 check" : "Start A1 check →"}</span>
+      <span class="block-btn-n">${passed ? "optional" : "unlock A2"}</span>
+    </button>
+  `;
+  const btn = el.querySelector("#btn-a1-gate");
+  if (btn) btn.addEventListener("click", openA1Gate);
 }
 
 function renderAuthorHint() {
@@ -114,8 +150,8 @@ function renderAuthorHint() {
  * Returns { positions, W, H, meta }
  */
 function layoutNodes(nodes) {
-  const W = 560;
-  const H = 460;
+  const W = 680;
+  const H = 560;
   const cx = W / 2;
   const positions = new Map();
 
@@ -127,23 +163,25 @@ function layoutNodes(nodes) {
   const leafKids = nodes.filter((n) => n.parent === "trunk" && n.kind === "leaf");
   const craft = nodes.filter((n) => n.kind === "craft");
 
-  // Frames along the shaft — slight zigzag so labels stay readable
-  const shaftTop = 175;
-  const shaftBot = 355;
+  // Frames along the shaft — zigzag; tighter when many P4+ packs
+  const shaftTop = 145;
+  const shaftBot = 400;
   trunkKids.forEach((n, i) => {
     const nT = trunkKids.length;
     const t = nT <= 1 ? 0.5 : i / (nT - 1);
     const y = shaftBot - t * (shaftBot - shaftTop);
-    const x = cx + (i % 2 === 0 ? -28 : 28);
+    const xOff = nT > 6 ? 34 : 28;
+    const x = cx + (i % 2 === 0 ? -xOff : xOff);
     positions.set(n.id, { x, y, role: "shaft" });
   });
 
-  // Canopy: dome — higher in the middle, wider left/right
+  // Canopy: dome — wider span when many leaves (P2+)
   leafKids.forEach((n, i) => {
     const nL = leafKids.length;
     const t = nL <= 1 ? 0.5 : i / (nL - 1);
-    const x = cx + (t - 0.5) * 420;
-    const y = 48 + Math.pow(t - 0.5, 2) * 100;
+    const span = Math.min(480, 280 + nL * 18);
+    const x = cx + (t - 0.5) * span;
+    const y = 42 + Math.pow(t - 0.5, 2) * (90 + nL * 2);
     positions.set(n.id, { x, y, role: "canopy" });
   });
 
@@ -183,12 +221,32 @@ function treeLabel(node) {
     trunk_adjectives_a1: "Adjectives",
     trunk_can_like_want_a1: "Can · like",
     trunk_there_time_a1: "There · time",
+    trunk_verbs_daily_a1: "V · daily",
+    trunk_verbs_say_a1: "V · say",
+    trunk_verbs_action_a1: "V · action",
+    trunk_social_a1: "Social",
+    trunk_glue_questions_a1: "Wh- Q",
+    trunk_glue_quantity_a1: "Some/any",
+    trunk_glue_linkers_a1: "And/but",
+    trunk_glue_modals_a1: "Will/must",
+    trunk_verbs_more_a1: "V · more",
+    trunk_verbs_more2_a1: "V · more2",
+    trunk_glue_pronouns_a1: "Pronouns",
     leaf_home_family: "Home",
     leaf_places: "Places",
     leaf_food_a1: "Food",
     leaf_time_a1: "Time",
     leaf_freetime_a1: "Free time",
     leaf_work_a1: "Work",
+    leaf_colours_a1: "Colours",
+    leaf_clothes_a1: "Clothes",
+    leaf_body_a1: "Body",
+    leaf_animals_a1: "Animals",
+    leaf_school_a1: "School",
+    leaf_tech_a1: "Tech",
+    leaf_nature_a1: "Nature",
+    leaf_shopping_a1: "Shopping",
+    leaf_ideas_a1: "Ideas",
   };
   return short[node.id] || node.label;
 }
@@ -215,22 +273,51 @@ function renderTree() {
   const unlocked = getUnlockedList().join(" · ");
   const stage =
     STATE.level === "A1" ? "sapling" : STATE.level === "A2" ? "young tree" : "tree";
-  caption.textContent = `${STATE.level} ${stage} · ${live} live · unlock: ${unlocked}`;
+  caption.textContent = `${STATE.level} ${stage} · ${live} live · unlock: ${unlocked} · fills as you practise`;
 
   const { positions, W, H, meta } = layoutNodes(nodes);
   const { cx, groundY, trunkTopY, trunkBotY, hub } = meta;
 
-  // Background layers — wood + ground + soft canopy wash
+  // Growth fill: tree densifies as nodes move untouched → touched → fruit
+  const liveNodes = nodes.filter((n) => n.status === "live" && n.id !== "trunk");
+  let fruitN = 0;
+  let partialN = 0;
+  for (const n of liveNodes) {
+    const st = nodeProgressState(n.id, { isLive: true });
+    if (st === "fruit") fruitN++;
+    else if (st === "partial") partialN++;
+  }
+  const liveCount = Math.max(1, liveNodes.length);
+  const growth = (fruitN + partialN * 0.45) / liveCount; // 0..1
+  const canopyRx = 120 + growth * 120;
+  const canopyRy = 48 + growth * 48;
+  const canopyOp = 0.04 + growth * 0.14;
+  const woodOp = 0.1 + growth * 0.22;
+  const growthPct = Math.round(growth * 100);
+
+  // Background layers — wood + ground + canopy that fills with growth
   let scenery = "";
-  scenery += `<ellipse class="tree-canopy-wash" cx="${cx}" cy="95" rx="210" ry="78" />`;
+  scenery += `<ellipse class="tree-canopy-wash" cx="${cx}" cy="95" rx="${canopyRx.toFixed(1)}" ry="${canopyRy.toFixed(1)}" style="opacity:${canopyOp.toFixed(3)}" />`;
+  // Soft “leaf mass” dots in canopy — count scales with fruit
+  const leafDots = Math.round(4 + fruitN * 1.2 + partialN * 0.4);
+  for (let i = 0; i < leafDots; i++) {
+    const t = leafDots <= 1 ? 0.5 : i / (leafDots - 1);
+    const ang = Math.PI * (0.15 + 0.7 * t);
+    const rad = 40 + (i % 5) * 14 + growth * 30;
+    const lx = cx + Math.cos(ang) * rad * (0.7 + (i % 3) * 0.15);
+    const ly = 55 + Math.sin(ang) * rad * 0.35 + (i % 4) * 6;
+    const lr = 3 + (i % 3);
+    const lop = 0.15 + growth * 0.45;
+    scenery += `<circle class="tree-growth-leaf" cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="${lr}" style="opacity:${lop.toFixed(3)}" />`;
+  }
   scenery += `<path class="tree-trunk-wood" d="
     M ${cx - 14} ${trunkBotY}
     Q ${cx - 10} ${(trunkBotY + trunkTopY) / 2} ${cx - 7} ${trunkTopY}
     L ${cx + 7} ${trunkTopY}
     Q ${cx + 10} ${(trunkBotY + trunkTopY) / 2} ${cx + 14} ${trunkBotY}
-    Z" />`;
+    Z" style="opacity:${woodOp.toFixed(3)}" />`;
   scenery += `<ellipse class="tree-ground" cx="${cx}" cy="${groundY + 8}" rx="120" ry="16" />`;
-  scenery += `<text class="tree-ground-label" x="${cx}" y="${groundY + 28}" text-anchor="middle">A1 · roots of use</text>`;
+  scenery += `<text class="tree-ground-label" x="${cx}" y="${groundY + 28}" text-anchor="middle">A1 · growth ${growthPct}% · fruit ${fruitN}/${liveNodes.length}</text>`;
 
   // Branches: canopy = curved; shaft frames = short sticks into the wood
   let edges = "";
@@ -408,6 +495,37 @@ function openPractice(block, pack) {
       renderTree();
       const node = STATE.tree.nodes.find((n) => n.id === STATE.selectedId);
       renderDetail(node || null);
+    },
+  });
+}
+
+function openA1Gate() {
+  showPractice();
+  const root = document.getElementById("practice-root");
+  const a1Live = STATE.tree.nodes.filter(
+    (n) => n.status === "live" && n.content && n.levels.includes("A1"),
+  );
+  startA1Gate(root, {
+    loadJson,
+    a1LiveNodes: a1Live,
+    onExit: () => {
+      showMap();
+      renderRail();
+      renderTree();
+      renderGateCard();
+      const node = STATE.tree.nodes.find((n) => n.id === STATE.selectedId);
+      renderDetail(node || null);
+    },
+    onDone: (opts) => {
+      showMap();
+      if (opts && opts.goLevel === "A2" && isLevelUnlocked("A2")) {
+        STATE.level = "A2";
+        STATE.selectedId = null;
+      }
+      renderRail();
+      renderTree();
+      renderGateCard();
+      renderDetail(null);
     },
   });
 }

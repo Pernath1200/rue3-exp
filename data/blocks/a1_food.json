@@ -3,7 +3,7 @@
   "title": "Food & drink",
   "level": "A1",
   "tree_node": "leaf_food_a1",
-  "note": "A1 productive food/drink slice from Martin Home & Food — thinned, no dump. Sentence = fruit on this leaf.",
+  "note": "Food & drink leaf. P1 Oxford fill: café extras + kitchen table words. Sentence = fruit.",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -76,6 +76,24 @@
         { "en": "glass", "cz": "sklenice" },
         { "en": "cup", "cz": "hrnek / šálek" },
         { "en": "wine glass", "cz": "sklenice na víno" }
+      ]
+    },
+    {
+      "id": "food_more",
+      "title": "Food · more",
+      "items": [
+        { "en": "sandwich", "cz": "sendvič" },
+        { "en": "pepper", "cz": "pepř / paprika" },
+        { "en": "dish", "cz": "pokrm / jídlo (na talíři)" },
+        { "en": "delicious", "cz": "výborný / lahodný" },
+        { "en": "cooking", "cz": "vaření" },
+        { "en": "diet", "cz": "dieta / strava" },
+        { "en": "bowl", "cz": "miska" },
+        { "en": "fork", "cz": "vidlička" },
+        { "en": "knife", "cz": "nůž" },
+        { "en": "spoon", "cz": "lžíce" },
+        { "en": "cooker", "cz": "sporák" },
+        { "en": "oven", "cz": "trouba" }
       ]
     }
   ]

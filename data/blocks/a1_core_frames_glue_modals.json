@@ -1,0 +1,108 @@
+{
+  "id": "a1_core_frames_glue_modals",
+  "title": "Core frames · Will · must · do",
+  "level": "A1",
+  "tree_node": "trunk_glue_modals_a1",
+  "practice": "frames",
+  "note": "P6 function glue — will/would/must/should/can't + light do/does. Gap on the modal/aux head.",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "will", "would", "must", "should", "can", "cannot", "do", "does", "don't", "not"
+  ],
+  "blocks": [
+    {
+      "id": "glue_modals_seed",
+      "title": "Glue · modals & do",
+      "items": [
+        {
+          "en": "I will help you.",
+          "cz": "Pomůžu ti.",
+          "gap": "I ____ help you.",
+          "gap_answer": "will",
+          "accepts": ["I will help you", "I'll help you."]
+        },
+        {
+          "en": "I would like a coffee.",
+          "cz": "Dal bych si kávu.",
+          "gap": "I ____ like a coffee.",
+          "gap_answer": "would",
+          "accepts": ["I would like a coffee", "I'd like a coffee."]
+        },
+        {
+          "en": "I must go now.",
+          "cz": "Musím teď jít.",
+          "gap": "I ____ go now.",
+          "gap_answer": "must",
+          "accepts": ["I must go now", "I must go now."]
+        },
+        {
+          "en": "You should call her.",
+          "cz": "Měl bys jí zavolat.",
+          "gap": "You ____ call her.",
+          "gap_answer": "should",
+          "accepts": ["You should call her", "You should call her."]
+        },
+        {
+          "en": "I cannot swim.",
+          "cz": "Neumím plavat.",
+          "gap": "I ____ swim.",
+          "gap_answer": "cannot",
+          "gap_accepts": ["can't", "cannot"],
+          "accepts": ["I cannot swim", "I can't swim."]
+        },
+        {
+          "en": "Do you live here?",
+          "cz": "Bydlíš tady?",
+          "gap": "____ you live here?",
+          "gap_answer": "Do",
+          "accepts": ["Do you live here", "Do you live here?"]
+        },
+        {
+          "en": "Does he work here?",
+          "cz": "Pracuje tady?",
+          "gap": "____ he work here?",
+          "gap_answer": "Does",
+          "accepts": ["Does he work here", "Does he work here?"]
+        },
+        {
+          "en": "I do not smoke.",
+          "cz": "Nekouřím.",
+          "gap": "I ____ not smoke.",
+          "gap_answer": "do",
+          "accepts": ["I do not smoke", "I don't smoke."]
+        },
+        {
+          "en": "She does not drink coffee.",
+          "cz": "Nepije kávu.",
+          "gap": "She ____ not drink coffee.",
+          "gap_answer": "does",
+          "accepts": ["She does not drink coffee", "She doesn't drink coffee."]
+        },
+        {
+          "en": "I am not a teacher.",
+          "cz": "Nejsem učitel.",
+          "gap": "I am ____ a teacher.",
+          "gap_answer": "not",
+          "accepts": ["I am not a teacher", "I'm not a teacher."]
+        },
+        {
+          "en": "It is not difficult.",
+          "cz": "Není to těžké.",
+          "gap": "It is ____ difficult.",
+          "gap_answer": "not",
+          "accepts": ["It is not difficult", "It's not difficult.", "It isn't difficult."]
+        },
+        {
+          "en": "Please do not open the door.",
+          "cz": "Prosím, neotevírejte dveře.",
+          "gap": "Please ____ not open the door.",
+          "gap_answer": "do",
+          "accepts": [
+            "Please do not open the door",
+            "Please don't open the door."
+          ]
+        }
+      ]
+    }
+  ]
+}

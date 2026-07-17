@@ -1,0 +1,105 @@
+{
+  "id": "a1_core_frames_verbs_daily",
+  "title": "Core frames · Verbs · daily",
+  "level": "A1",
+  "tree_node": "trunk_verbs_daily_a1",
+  "practice": "frames",
+  "note": "P4 core verbs — daily life. Gap on the verb. Preferred model in en; accepts = contractions and close variants.",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "live", "work", "need", "make", "do", "go", "come", "eat", "drink", "sleep",
+    "get", "start", "stop", "help"
+  ],
+  "blocks": [
+    {
+      "id": "verbs_daily_seed",
+      "title": "Verbs · daily life",
+      "items": [
+        {
+          "en": "I live in Prague.",
+          "cz": "Bydlím v Praze.",
+          "gap": "I ____ in Prague.",
+          "gap_answer": "live",
+          "accepts": ["I live in Prague", "I live in Prague."]
+        },
+        {
+          "en": "I work in an office.",
+          "cz": "Pracuji v kanceláři.",
+          "gap": "I ____ in an office.",
+          "gap_answer": "work",
+          "accepts": ["I work in an office", "I work in an office."]
+        },
+        {
+          "en": "I need a ticket.",
+          "cz": "Potřebuji lístek.",
+          "gap": "I ____ a ticket.",
+          "gap_answer": "need",
+          "accepts": ["I need a ticket", "I need a ticket."]
+        },
+        {
+          "en": "I make breakfast.",
+          "cz": "Připravuji snídani. / Dělám snídani.",
+          "gap": "I ____ breakfast.",
+          "gap_answer": "make",
+          "accepts": ["I make breakfast", "I make breakfast."]
+        },
+        {
+          "en": "I do my homework.",
+          "cz": "Dělám domácí úkol.",
+          "gap": "I ____ my homework.",
+          "gap_answer": "do",
+          "accepts": ["I do my homework", "I do my homework."]
+        },
+        {
+          "en": "I go to school.",
+          "cz": "Chodím do školy. / Jdu do školy.",
+          "gap": "I ____ to school.",
+          "gap_answer": "go",
+          "accepts": ["I go to school", "I go to school."]
+        },
+        {
+          "en": "I come home at six.",
+          "cz": "Přicházím domů v šest.",
+          "gap": "I ____ home at six.",
+          "gap_answer": "come",
+          "accepts": ["I come home at six", "I come home at 6."]
+        },
+        {
+          "en": "I eat bread.",
+          "cz": "Jím chleba.",
+          "gap": "I ____ bread.",
+          "gap_answer": "eat",
+          "accepts": ["I eat bread", "I eat bread."]
+        },
+        {
+          "en": "I drink water.",
+          "cz": "Piju vodu.",
+          "gap": "I ____ water.",
+          "gap_answer": "drink",
+          "accepts": ["I drink water", "I drink water."]
+        },
+        {
+          "en": "I sleep well.",
+          "cz": "Spím dobře.",
+          "gap": "I ____ well.",
+          "gap_answer": "sleep",
+          "accepts": ["I sleep well", "I sleep well."]
+        },
+        {
+          "en": "I get up early.",
+          "cz": "Vstávám brzy.",
+          "gap": "I ____ up early.",
+          "gap_answer": "get",
+          "accepts": ["I get up early", "I get up early."]
+        },
+        {
+          "en": "Can you help me?",
+          "cz": "Můžeš mi pomoct?",
+          "gap": "Can you ____ me?",
+          "gap_answer": "help",
+          "accepts": ["Can you help me", "Can you help me?", "Could you help me?"]
+        }
+      ]
+    }
+  ]
+}

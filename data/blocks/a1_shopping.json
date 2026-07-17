@@ -1,0 +1,46 @@
+{
+  "id": "a1_shopping",
+  "title": "Shopping & money",
+  "level": "A1",
+  "tree_node": "leaf_shopping_a1",
+  "note": "P3 Oxford A1 shopping/money. Buy/sell/price + currencies. Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "shop_money",
+      "title": "Shopping · money",
+      "items": [
+        { "en": "money", "cz": "peníze" },
+        { "en": "price", "cz": "cena" },
+        { "en": "cost", "cz": "stát (o ceně) / cena" },
+        { "en": "cheap", "cz": "levný" },
+        { "en": "expensive", "cz": "drahý" },
+        { "en": "buy", "cz": "koupit" },
+        { "en": "sell", "cz": "prodat" },
+        { "en": "pay", "cz": "platit" },
+        { "en": "pound", "cz": "libra (měna)" },
+        { "en": "euro", "cz": "euro" },
+        { "en": "dollar", "cz": "dolar" },
+        { "en": "cent", "cz": "cent" }
+      ]
+    },
+    {
+      "id": "shop_doing",
+      "title": "Shopping · doing it",
+      "items": [
+        { "en": "shopping", "cz": "nakupování" },
+        { "en": "shop (verb)", "cz": "nakupovat" },
+        { "en": "customer", "cz": "zákazník" },
+        { "en": "card", "cz": "karta" },
+        { "en": "cash", "cz": "hotovost" },
+        { "en": "change (money)", "cz": "drobné / zpátky" },
+        { "en": "receipt", "cz": "účtenka" },
+        { "en": "bag", "cz": "taška" },
+        { "en": "size", "cz": "velikost" },
+        { "en": "open", "cz": "otevřený / otevřít" },
+        { "en": "closed", "cz": "zavřeno" },
+        { "en": "free (no cost)", "cz": "zdarma" }
+      ]
+    }
+  ]
+}

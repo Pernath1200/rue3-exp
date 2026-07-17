@@ -1,0 +1,104 @@
+{
+  "id": "a1_core_frames_glue_questions",
+  "title": "Core frames · Wh- questions",
+  "level": "A1",
+  "tree_node": "trunk_glue_questions_a1",
+  "practice": "frames",
+  "note": "P6 function glue — question words. Gap on the wh- word (or how much/many head).",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "what", "where", "when", "who", "why", "how", "which", "much", "many", "time"
+  ],
+  "blocks": [
+    {
+      "id": "glue_questions_seed",
+      "title": "Glue · wh- questions",
+      "items": [
+        {
+          "en": "What is your name?",
+          "cz": "Jak se jmenuješ?",
+          "gap": "____ is your name?",
+          "gap_answer": "What",
+          "accepts": ["What is your name", "What's your name?"]
+        },
+        {
+          "en": "Where are you from?",
+          "cz": "Odkud jsi?",
+          "gap": "____ are you from?",
+          "gap_answer": "Where",
+          "accepts": ["Where are you from", "Where are you from?"]
+        },
+        {
+          "en": "When is the meeting?",
+          "cz": "Kdy je schůzka?",
+          "gap": "____ is the meeting?",
+          "gap_answer": "When",
+          "accepts": ["When is the meeting", "When is the meeting?"]
+        },
+        {
+          "en": "Who is that man?",
+          "cz": "Kdo je ten muž?",
+          "gap": "____ is that man?",
+          "gap_answer": "Who",
+          "accepts": ["Who is that man", "Who is that man?"]
+        },
+        {
+          "en": "Why are you late?",
+          "cz": "Proč jdeš pozdě? / Proč jsi pozdě?",
+          "gap": "____ are you late?",
+          "gap_answer": "Why",
+          "accepts": ["Why are you late", "Why are you late?"]
+        },
+        {
+          "en": "How are you?",
+          "cz": "Jak se máš?",
+          "gap": "____ are you?",
+          "gap_answer": "How",
+          "accepts": ["How are you", "How are you?"]
+        },
+        {
+          "en": "How old are you?",
+          "cz": "Kolik ti je let?",
+          "gap": "How ____ are you?",
+          "gap_answer": "old",
+          "accepts": ["How old are you", "How old are you?"]
+        },
+        {
+          "en": "How much is this?",
+          "cz": "Kolik to stojí?",
+          "gap": "How ____ is this?",
+          "gap_answer": "much",
+          "accepts": ["How much is this", "How much is this?"]
+        },
+        {
+          "en": "How many children do you have?",
+          "cz": "Kolik máš dětí?",
+          "gap": "How ____ children do you have?",
+          "gap_answer": "many",
+          "accepts": ["How many children do you have", "How many children do you have?"]
+        },
+        {
+          "en": "Which one do you want?",
+          "cz": "Který chceš?",
+          "gap": "____ one do you want?",
+          "gap_answer": "Which",
+          "accepts": ["Which one do you want", "Which one do you want?"]
+        },
+        {
+          "en": "What time is it?",
+          "cz": "Kolik je hodin?",
+          "gap": "What ____ is it?",
+          "gap_answer": "time",
+          "accepts": ["What time is it", "What time is it?"]
+        },
+        {
+          "en": "Where is the station?",
+          "cz": "Kde je nádraží?",
+          "gap": "____ is the station?",
+          "gap_answer": "Where",
+          "accepts": ["Where is the station", "Where is the station?"]
+        }
+      ]
+    }
+  ]
+}

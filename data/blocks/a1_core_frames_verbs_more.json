@@ -1,0 +1,102 @@
+{
+  "id": "a1_core_frames_verbs_more",
+  "title": "Core frames · Verbs · more",
+  "level": "A1",
+  "tree_node": "trunk_verbs_more_a1",
+  "practice": "frames",
+  "note": "P7 more high-freq verbs. Gap on the verb.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "verbs_more_seed",
+      "title": "Verbs · more (A)",
+      "items": [
+        {
+          "en": "I begin work at nine.",
+          "cz": "Začínám pracovat v devět.",
+          "gap": "I ____ work at nine.",
+          "gap_answer": "begin",
+          "gap_accepts": ["start"],
+          "accepts": ["I begin work at nine", "I start work at nine."]
+        },
+        {
+          "en": "I become a teacher.",
+          "cz": "Stávám se učitelem.",
+          "gap": "I ____ a teacher.",
+          "gap_answer": "become",
+          "accepts": ["I become a teacher", "I become a teacher."]
+        },
+        {
+          "en": "I bring my bag.",
+          "cz": "Nosím / beru s sebou tašku.",
+          "gap": "I ____ my bag.",
+          "gap_answer": "bring",
+          "accepts": ["I bring my bag", "I bring my bag."]
+        },
+        {
+          "en": "I build a house.",
+          "cz": "Stavím dům.",
+          "gap": "I ____ a house.",
+          "gap_answer": "build",
+          "accepts": ["I build a house", "I build a house."]
+        },
+        {
+          "en": "I choose a book.",
+          "cz": "Vybírám knihu.",
+          "gap": "I ____ a book.",
+          "gap_answer": "choose",
+          "accepts": ["I choose a book", "I choose a book."]
+        },
+        {
+          "en": "I decide later.",
+          "cz": "Rozhodnu se později.",
+          "gap": "I ____ later.",
+          "gap_answer": "decide",
+          "accepts": ["I decide later", "I decide later."]
+        },
+        {
+          "en": "I enjoy the film.",
+          "cz": "Baví mě ten film. / Užívám si film.",
+          "gap": "I ____ the film.",
+          "gap_answer": "enjoy",
+          "accepts": ["I enjoy the film", "I enjoy the movie."]
+        },
+        {
+          "en": "I feel happy.",
+          "cz": "Cítím se šťastný.",
+          "gap": "I ____ happy.",
+          "gap_answer": "feel",
+          "accepts": ["I feel happy", "I feel happy."]
+        },
+        {
+          "en": "I love music.",
+          "cz": "Miluji hudbu.",
+          "gap": "I ____ music.",
+          "gap_answer": "love",
+          "accepts": ["I love music", "I love music."]
+        },
+        {
+          "en": "I prefer tea.",
+          "cz": "Mám radši čaj. / Preferuji čaj.",
+          "gap": "I ____ tea.",
+          "gap_answer": "prefer",
+          "accepts": ["I prefer tea", "I prefer tea."]
+        },
+        {
+          "en": "I send an email.",
+          "cz": "Posílám e-mail.",
+          "gap": "I ____ an email.",
+          "gap_answer": "send",
+          "accepts": ["I send an email", "I send an e-mail."]
+        },
+        {
+          "en": "I show you the map.",
+          "cz": "Ukážu ti mapu.",
+          "gap": "I ____ you the map.",
+          "gap_answer": "show",
+          "accepts": ["I show you the map", "I show you the map."]
+        }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "title": "Time & numbers",
   "level": "A1",
   "tree_node": "leaf_time_a1",
-  "note": "Numbers, days, day-parts, months — thin productive set. Clock phrases mainly on There/time frames. Sentence = fruit.",
+  "note": "Time & numbers leaf. P1 Oxford fill: teens/tens, ordinals, frequency. Clock phrases also on There/time frames. Sentence = fruit.",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -76,6 +76,60 @@
         { "en": "October", "cz": "říjen" },
         { "en": "November", "cz": "listopad" },
         { "en": "December", "cz": "prosinec" }
+      ]
+    },
+    {
+      "id": "time_numbers_teens",
+      "title": "Time · teens & big numbers",
+      "items": [
+        { "en": "eleven", "cz": "jedenáct" },
+        { "en": "twelve", "cz": "dvanáct" },
+        { "en": "thirteen", "cz": "třináct" },
+        { "en": "fourteen", "cz": "čtrnáct" },
+        { "en": "fifteen", "cz": "patnáct" },
+        { "en": "sixteen", "cz": "šestnáct" },
+        { "en": "seventeen", "cz": "sedmnáct" },
+        { "en": "eighteen", "cz": "osmnáct" },
+        { "en": "nineteen", "cz": "devatenáct" },
+        { "en": "thirty", "cz": "třicet" },
+        { "en": "thousand", "cz": "tisíc" },
+        { "en": "million", "cz": "milion" }
+      ]
+    },
+    {
+      "id": "time_numbers_tens",
+      "title": "Time · tens & ordinals",
+      "items": [
+        { "en": "forty", "cz": "čtyřicet" },
+        { "en": "fifty", "cz": "padesát" },
+        { "en": "sixty", "cz": "šedesát" },
+        { "en": "seventy", "cz": "sedmdesát" },
+        { "en": "eighty", "cz": "osmdesát" },
+        { "en": "ninety", "cz": "devadesát" },
+        { "en": "first", "cz": "první" },
+        { "en": "second (ordinal)", "cz": "druhý" },
+        { "en": "third", "cz": "třetí" },
+        { "en": "fourth", "cz": "čtvrtý" },
+        { "en": "fifth", "cz": "pátý" },
+        { "en": "number", "cz": "číslo" }
+      ]
+    },
+    {
+      "id": "time_frequency",
+      "title": "Time · frequency & more",
+      "items": [
+        { "en": "never", "cz": "nikdy" },
+        { "en": "often", "cz": "často" },
+        { "en": "sometimes", "cz": "někdy" },
+        { "en": "soon", "cz": "brzy" },
+        { "en": "ago", "cz": "před (časem)" },
+        { "en": "tonight", "cz": "dnes večer" },
+        { "en": "month", "cz": "měsíc" },
+        { "en": "year", "cz": "rok" },
+        { "en": "once", "cz": "jednou" },
+        { "en": "twice", "cz": "dvakrát" },
+        { "en": "half", "cz": "půl / polovina" },
+        { "en": "quarter", "cz": "čtvrt / čtvrtina" }
       ]
     }
   ]

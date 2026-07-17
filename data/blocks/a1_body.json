@@ -1,0 +1,46 @@
+{
+  "id": "a1_body",
+  "title": "Body",
+  "level": "A1",
+  "tree_node": "leaf_body_a1",
+  "note": "P2 Oxford A1 body parts. Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "body_parts",
+      "title": "Body · parts",
+      "items": [
+        { "en": "body", "cz": "tělo" },
+        { "en": "head", "cz": "hlava" },
+        { "en": "face", "cz": "obličej" },
+        { "en": "hair", "cz": "vlasy" },
+        { "en": "eye", "cz": "oko" },
+        { "en": "ear", "cz": "ucho" },
+        { "en": "nose", "cz": "nos" },
+        { "en": "mouth", "cz": "ústa" },
+        { "en": "tooth", "cz": "zub" },
+        { "en": "hand", "cz": "ruka (dlaň)" },
+        { "en": "arm", "cz": "paže / ruka" },
+        { "en": "leg", "cz": "noha" }
+      ]
+    },
+    {
+      "id": "body_more",
+      "title": "Body · more",
+      "items": [
+        { "en": "foot", "cz": "noha (chodidlo)" },
+        { "en": "back", "cz": "záda" },
+        { "en": "finger", "cz": "prst (na ruce)" },
+        { "en": "neck", "cz": "krk" },
+        { "en": "shoulder", "cz": "rameno" },
+        { "en": "knee", "cz": "koleno" },
+        { "en": "heart", "cz": "srdce" },
+        { "en": "blood", "cz": "krev" },
+        { "en": "skin", "cz": "kůže" },
+        { "en": "tall", "cz": "vysoký" },
+        { "en": "short (height)", "cz": "malý / nízký" },
+        { "en": "blonde", "cz": "blond" }
+      ]
+    }
+  ]
+}

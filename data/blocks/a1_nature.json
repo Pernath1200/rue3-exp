@@ -1,0 +1,64 @@
+{
+  "id": "a1_nature",
+  "title": "Nature & weather",
+  "level": "A1",
+  "tree_node": "leaf_nature_a1",
+  "note": "P3 Oxford A1 nature, weather, seasons. Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "nature_world",
+      "title": "Nature · world",
+      "items": [
+        { "en": "nature", "cz": "příroda" },
+        { "en": "weather", "cz": "počasí" },
+        { "en": "sun", "cz": "slunce" },
+        { "en": "rain", "cz": "déšť" },
+        { "en": "snow", "cz": "sníh" },
+        { "en": "wind", "cz": "vítr" },
+        { "en": "cloud", "cz": "mrak" },
+        { "en": "sky", "cz": "obloha" },
+        { "en": "air", "cz": "vzduch" },
+        { "en": "tree", "cz": "strom" },
+        { "en": "flower", "cz": "květina" },
+        { "en": "plant", "cz": "rostlina" }
+      ]
+    },
+    {
+      "id": "nature_land",
+      "title": "Nature · land & water",
+      "items": [
+        { "en": "mountain", "cz": "hora" },
+        { "en": "hill", "cz": "kopec" },
+        { "en": "river", "cz": "řeka" },
+        { "en": "sea", "cz": "moře" },
+        { "en": "lake", "cz": "jezero" },
+        { "en": "island", "cz": "ostrov" },
+        { "en": "forest", "cz": "les" },
+        { "en": "field", "cz": "pole" },
+        { "en": "land", "cz": "země / pevnina" },
+        { "en": "world", "cz": "svět" },
+        { "en": "earth", "cz": "Země / země" },
+        { "en": "space", "cz": "vesmír / prostor" }
+      ]
+    },
+    {
+      "id": "nature_seasons",
+      "title": "Nature · seasons & feel",
+      "items": [
+        { "en": "spring", "cz": "jaro" },
+        { "en": "summer", "cz": "léto" },
+        { "en": "autumn", "cz": "podzim" },
+        { "en": "winter", "cz": "zima" },
+        { "en": "warm", "cz": "teplý" },
+        { "en": "cool", "cz": "chladný / v pohodě" },
+        { "en": "dry", "cz": "suchý" },
+        { "en": "wet", "cz": "mokrý" },
+        { "en": "dark", "cz": "tmavý" },
+        { "en": "light", "cz": "světlo / světlý" },
+        { "en": "fire", "cz": "oheň" },
+        { "en": "star", "cz": "hvězda" }
+      ]
+    }
+  ]
+}

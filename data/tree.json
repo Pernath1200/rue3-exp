@@ -42,7 +42,7 @@
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_adjectives.json",
-      "note": "Live · be + adj seed · 12 frames"
+      "note": "Live · be + adj · 3 blocks · 36 frames · P5+P7"
     },
     {
       "id": "trunk_can_like_want_a1",
@@ -65,6 +65,116 @@
       "note": "Live · there is/are + clock/routine · 12 frames"
     },
     {
+      "id": "trunk_verbs_daily_a1",
+      "label": "Verbs · daily",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_verbs_daily.json",
+      "note": "Live · P4 · daily life verbs · 12 frames · gap on verb"
+    },
+    {
+      "id": "trunk_verbs_say_a1",
+      "label": "Verbs · say",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_verbs_say.json",
+      "note": "Live · P4 · say/think/see · 12 frames · gap on verb"
+    },
+    {
+      "id": "trunk_verbs_action_a1",
+      "label": "Verbs · action",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_verbs_action.json",
+      "note": "Live · P4 · action verbs · 12 frames · gap on verb"
+    },
+    {
+      "id": "trunk_social_a1",
+      "label": "Social",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_social.json",
+      "note": "Live · P6 · hello/thanks chunks · 12 frames"
+    },
+    {
+      "id": "trunk_glue_questions_a1",
+      "label": "Wh- questions",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_glue_questions.json",
+      "note": "Live · P6 · what/where/when… · 12 frames"
+    },
+    {
+      "id": "trunk_glue_quantity_a1",
+      "label": "Some · any",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_glue_quantity.json",
+      "note": "Live · P6 · quantity glue · 12 frames"
+    },
+    {
+      "id": "trunk_glue_linkers_a1",
+      "label": "And · but",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_glue_linkers.json",
+      "note": "Live · P6 · linkers + to/from/for · 12 frames"
+    },
+    {
+      "id": "trunk_glue_modals_a1",
+      "label": "Will · must",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_glue_modals.json",
+      "note": "Live · P6 · modals + do/does · 12 frames"
+    },
+    {
+      "id": "trunk_verbs_more_a1",
+      "label": "Verbs · more",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_verbs_more.json",
+      "note": "Live · P7 · more verbs A · 12 frames"
+    },
+    {
+      "id": "trunk_verbs_more2_a1",
+      "label": "Verbs · more 2",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_verbs_more2.json",
+      "note": "Live · P7 · more verbs B · 12 frames"
+    },
+    {
+      "id": "trunk_glue_pronouns_a1",
+      "label": "Pronouns",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_glue_pronouns.json",
+      "note": "Live · P7 · me/him/this/that · 12 frames"
+    },
+    {
       "id": "leaf_home_family",
       "label": "Home & Family",
       "kind": "leaf",
@@ -72,7 +182,7 @@
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_home_family.json",
-      "note": "Live · fruit = Sentence mode"
+      "note": "Live · 6 blocks · P1 relatives + home extras · fruit = Sentence"
     },
     {
       "id": "leaf_places",
@@ -82,7 +192,7 @@
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_places.json",
-      "note": "Live · high-freq slice · Sentence = production"
+      "note": "Live · 6 blocks · P1 travel + out and about · Sentence = production"
     },
     {
       "id": "leaf_food_a1",
@@ -92,7 +202,7 @@
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_food.json",
-      "note": "Live · meals · basics · fruit/veg · drinks · 4×12"
+      "note": "Live · 5 blocks · P1 food more · Sentence = fruit"
     },
     {
       "id": "leaf_time_a1",
@@ -102,7 +212,7 @@
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_time_numbers.json",
-      "note": "Live · numbers · days · day-parts · months · 4×12"
+      "note": "Live · 7 blocks · P1 teens/tens/frequency · Sentence = fruit"
     },
     {
       "id": "leaf_freetime_a1",
@@ -112,7 +222,7 @@
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_freetime.json",
-      "note": "Live · hobbies · verbs · feelings · 3×12"
+      "note": "Live · free time · P5+P7 describe · 6×12"
     },
     {
       "id": "leaf_work_a1",
@@ -122,7 +232,97 @@
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_work.json",
-      "note": "Live · A1 jobs + workplace · 2×12"
+      "note": "Live · jobs + workplace + people · 3×12 · P7"
+    },
+    {
+      "id": "leaf_colours_a1",
+      "label": "Colours",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_colours.json",
+      "note": "Live · P2 · 1×12"
+    },
+    {
+      "id": "leaf_clothes_a1",
+      "label": "Clothes",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_clothes.json",
+      "note": "Live · P2 · 2×12"
+    },
+    {
+      "id": "leaf_body_a1",
+      "label": "Body",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_body.json",
+      "note": "Live · P2 · body parts · 2×12"
+    },
+    {
+      "id": "leaf_animals_a1",
+      "label": "Animals",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_animals.json",
+      "note": "Live · P2 · 2×12"
+    },
+    {
+      "id": "leaf_school_a1",
+      "label": "School",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_school.json",
+      "note": "Live · school & study · 4×12 · P3+P7"
+    },
+    {
+      "id": "leaf_tech_a1",
+      "label": "Tech & media",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_tech.json",
+      "note": "Live · P3 · devices + online · 2×12"
+    },
+    {
+      "id": "leaf_nature_a1",
+      "label": "Nature",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_nature.json",
+      "note": "Live · P3 · weather · land · seasons · 3×12"
+    },
+    {
+      "id": "leaf_shopping_a1",
+      "label": "Shopping",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_shopping.json",
+      "note": "Live · P3 · money + shopping · 2×12"
+    },
+    {
+      "id": "leaf_ideas_a1",
+      "label": "Ideas",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_ideas.json",
+      "note": "Live · P7 · general core / abstract · 4×12"
     },
     {
       "id": "craft",

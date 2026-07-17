@@ -1,0 +1,102 @@
+{
+  "id": "a1_core_frames_glue_pronouns",
+  "title": "Core frames · Pronouns · this that",
+  "level": "A1",
+  "tree_node": "trunk_glue_pronouns_a1",
+  "practice": "frames",
+  "note": "P7 glue — object pronouns, possessives, this/that. Gap on the glue word.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "glue_pronouns_seed",
+      "title": "Glue · pronouns & this/that",
+      "items": [
+        {
+          "en": "Give it to me.",
+          "cz": "Dej mi to.",
+          "gap": "Give it to ____.",
+          "gap_answer": "me",
+          "accepts": ["Give it to me", "Give it to me."]
+        },
+        {
+          "en": "I see him.",
+          "cz": "Vidím ho.",
+          "gap": "I see ____.",
+          "gap_answer": "him",
+          "accepts": ["I see him", "I see him."]
+        },
+        {
+          "en": "I see her.",
+          "cz": "Vidím ji.",
+          "gap": "I see ____.",
+          "gap_answer": "her",
+          "accepts": ["I see her", "I see her."]
+        },
+        {
+          "en": "Come with us.",
+          "cz": "Pojď s námi.",
+          "gap": "Come with ____.",
+          "gap_answer": "us",
+          "accepts": ["Come with us", "Come with us."]
+        },
+        {
+          "en": "I know them.",
+          "cz": "Znám je.",
+          "gap": "I know ____.",
+          "gap_answer": "them",
+          "accepts": ["I know them", "I know them."]
+        },
+        {
+          "en": "This is my bag.",
+          "cz": "Tohle je moje taška.",
+          "gap": "____ is my bag.",
+          "gap_answer": "This",
+          "accepts": ["This is my bag", "This is my bag."]
+        },
+        {
+          "en": "That is your car.",
+          "cz": "To je tvoje auto.",
+          "gap": "____ is your car.",
+          "gap_answer": "That",
+          "accepts": ["That is your car", "That's your car."]
+        },
+        {
+          "en": "Our house is big.",
+          "cz": "Náš dům je velký.",
+          "gap": "____ house is big.",
+          "gap_answer": "Our",
+          "accepts": ["Our house is big", "Our house is big."]
+        },
+        {
+          "en": "Their dog is friendly.",
+          "cz": "Jejich pes je přátelský.",
+          "gap": "____ dog is friendly.",
+          "gap_answer": "Their",
+          "accepts": ["Their dog is friendly", "Their dog is friendly."]
+        },
+        {
+          "en": "It is about love.",
+          "cz": "Je to o lásce.",
+          "gap": "It is ____ love.",
+          "gap_answer": "about",
+          "accepts": ["It is about love", "It's about love."]
+        },
+        {
+          "en": "The cat is under the table.",
+          "cz": "Kočka je pod stolem.",
+          "gap": "The cat is ____ the table.",
+          "gap_answer": "under",
+          "accepts": ["The cat is under the table", "The cat is under the table."]
+        },
+        {
+          "en": "We live by the river.",
+          "cz": "Bydlíme u řeky.",
+          "gap": "We live ____ the river.",
+          "gap_answer": "by",
+          "gap_accepts": ["near", "beside"],
+          "accepts": ["We live by the river", "We live near the river."]
+        }
+      ]
+    }
+  ]
+}

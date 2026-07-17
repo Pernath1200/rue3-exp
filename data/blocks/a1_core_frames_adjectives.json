@@ -4,12 +4,14 @@
   "level": "A1",
   "tree_node": "trunk_adjectives_a1",
   "practice": "frames",
-  "note": "Be + adjective seed. Gap on the adjective. Preferred model in en; accepts = contractions and close full-sentence variants. No personality dump — Free time leaf later for more feelings.",
+  "note": "Be + adjective. P5 adds block 2 (easy/hard, new, beautiful…). Gap on the adjective. Feelings also on Free time leaf.",
   "default_direction": "cz_to_en",
   "seed_vocab": [
     "I", "he", "she", "it", "they", "am", "is", "are",
     "big", "small", "young", "old", "good", "bad", "nice",
-    "kind", "friendly", "tired", "hungry", "cold"
+    "kind", "friendly", "tired", "hungry", "cold",
+    "easy", "difficult", "new", "beautiful", "important", "famous",
+    "long", "short", "clean", "dirty", "full", "wrong"
   ],
   "blocks": [
     {
@@ -102,6 +104,191 @@
           "accepts": ["It's cold.", "It is cold"]
         }
       ]
+    },
+    {
+      "id": "adj_be_more",
+      "title": "Adjectives · be + adj (more)",
+      "items": [
+        {
+          "en": "It is easy.",
+          "cz": "Je to snadné. / Je to jednoduché.",
+          "gap": "It is ____.",
+          "gap_answer": "easy",
+          "accepts": ["It's easy.", "It is easy"]
+        },
+        {
+          "en": "It is difficult.",
+          "cz": "Je to těžké. / Je to obtížné.",
+          "gap": "It is ____.",
+          "gap_answer": "difficult",
+          "gap_accepts": ["hard"],
+          "accepts": ["It's difficult.", "It is hard.", "It's hard."]
+        },
+        {
+          "en": "It is new.",
+          "cz": "Je to nové.",
+          "gap": "It is ____.",
+          "gap_answer": "new",
+          "accepts": ["It's new.", "It is new"]
+        },
+        {
+          "en": "She is beautiful.",
+          "cz": "Je krásná.",
+          "gap": "She is ____.",
+          "gap_answer": "beautiful",
+          "accepts": ["She's beautiful.", "She is beautiful"]
+        },
+        {
+          "en": "It is important.",
+          "cz": "Je to důležité.",
+          "gap": "It is ____.",
+          "gap_answer": "important",
+          "accepts": ["It's important.", "It is important"]
+        },
+        {
+          "en": "He is famous.",
+          "cz": "Je slavný.",
+          "gap": "He is ____.",
+          "gap_answer": "famous",
+          "accepts": ["He's famous.", "He is famous"]
+        },
+        {
+          "en": "It is long.",
+          "cz": "Je to dlouhé.",
+          "gap": "It is ____.",
+          "gap_answer": "long",
+          "accepts": ["It's long.", "It is long"]
+        },
+        {
+          "en": "It is short.",
+          "cz": "Je to krátké.",
+          "gap": "It is ____.",
+          "gap_answer": "short",
+          "accepts": ["It's short.", "It is short"]
+        },
+        {
+          "en": "It is clean.",
+          "cz": "Je to čisté.",
+          "gap": "It is ____.",
+          "gap_answer": "clean",
+          "accepts": ["It's clean.", "It is clean"]
+        },
+        {
+          "en": "It is dirty.",
+          "cz": "Je to špinavé.",
+          "gap": "It is ____.",
+          "gap_answer": "dirty",
+          "accepts": ["It's dirty.", "It is dirty"]
+        },
+        {
+          "en": "It is full.",
+          "cz": "Je to plné.",
+          "gap": "It is ____.",
+          "gap_answer": "full",
+          "accepts": ["It's full.", "It is full"]
+        },
+        {
+          "en": "It is wrong.",
+          "cz": "Je to špatně. / Je to nesprávné.",
+          "gap": "It is ____.",
+          "gap_answer": "wrong",
+          "accepts": ["It's wrong.", "It is wrong"]
+        }
+      ]
+    },
+    {
+      "id": "adj_be_more2",
+      "title": "Adjectives · be + adj (more 2)",
+      "items": [
+        {
+          "en": "This is the best.",
+          "cz": "Tohle je nejlepší.",
+          "gap": "This is the ____.",
+          "gap_answer": "best",
+          "accepts": ["This is the best", "This is the best."]
+        },
+        {
+          "en": "This is better.",
+          "cz": "Tohle je lepší.",
+          "gap": "This is ____.",
+          "gap_answer": "better",
+          "accepts": ["This is better", "This is better."]
+        },
+        {
+          "en": "It is different.",
+          "cz": "Je to jiné. / Je to odlišné.",
+          "gap": "It is ____.",
+          "gap_answer": "different",
+          "accepts": ["It's different.", "It is different"]
+        },
+        {
+          "en": "It is exciting.",
+          "cz": "Je to vzrušující.",
+          "gap": "It is ____.",
+          "gap_answer": "exciting",
+          "accepts": ["It's exciting.", "It is exciting"]
+        },
+        {
+          "en": "It is fast.",
+          "cz": "Je to rychlé.",
+          "gap": "It is ____.",
+          "gap_answer": "fast",
+          "gap_accepts": ["quick"],
+          "accepts": ["It's fast.", "It is quick.", "It's quick."]
+        },
+        {
+          "en": "It is hard.",
+          "cz": "Je to tvrdé. / Je to těžké.",
+          "gap": "It is ____.",
+          "gap_answer": "hard",
+          "accepts": ["It's hard.", "It is hard"]
+        },
+        {
+          "en": "I am healthy.",
+          "cz": "Jsem zdravý.",
+          "gap": "I am ____.",
+          "gap_answer": "healthy",
+          "accepts": ["I'm healthy.", "I am healthy"]
+        },
+        {
+          "en": "It is large.",
+          "cz": "Je to velké (rozsáhlé).",
+          "gap": "It is ____.",
+          "gap_answer": "large",
+          "gap_accepts": ["big"],
+          "accepts": ["It's large.", "It is big.", "It's big."]
+        },
+        {
+          "en": "I am ready.",
+          "cz": "Jsem připravený.",
+          "gap": "I am ____.",
+          "gap_answer": "ready",
+          "accepts": ["I'm ready.", "I am ready"]
+        },
+        {
+          "en": "It is real.",
+          "cz": "Je to skutečné.",
+          "gap": "It is ____.",
+          "gap_answer": "real",
+          "accepts": ["It's real.", "It is real"]
+        },
+        {
+          "en": "He is strong.",
+          "cz": "Je silný.",
+          "gap": "He is ____.",
+          "gap_answer": "strong",
+          "accepts": ["He's strong.", "He is strong"]
+        },
+        {
+          "en": "It is useful.",
+          "cz": "Je to užitečné.",
+          "gap": "It is ____.",
+          "gap_answer": "useful",
+          "accepts": ["It's useful.", "It is useful"]
+        }
+      ]
     }
   ]
 }
+
+

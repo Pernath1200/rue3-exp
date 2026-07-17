@@ -1,0 +1,105 @@
+{
+  "id": "a1_core_frames_verbs_say",
+  "title": "Core frames · Verbs · say & think",
+  "level": "A1",
+  "tree_node": "trunk_verbs_say_a1",
+  "practice": "frames",
+  "note": "P4 core verbs — communication and mind. Gap on the verb.",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "say", "tell", "ask", "speak", "know", "think", "understand",
+    "remember", "forget", "see", "look", "hear"
+  ],
+  "blocks": [
+    {
+      "id": "verbs_say_seed",
+      "title": "Verbs · say & think",
+      "items": [
+        {
+          "en": "I say hello.",
+          "cz": "Říkám ahoj. / Zdravím.",
+          "gap": "I ____ hello.",
+          "gap_answer": "say",
+          "accepts": ["I say hello", "I say hello."]
+        },
+        {
+          "en": "I tell a story.",
+          "cz": "Vyprávím příběh.",
+          "gap": "I ____ a story.",
+          "gap_answer": "tell",
+          "accepts": ["I tell a story", "I tell a story."]
+        },
+        {
+          "en": "I ask a question.",
+          "cz": "Ptám se na otázku. / Položím otázku.",
+          "gap": "I ____ a question.",
+          "gap_answer": "ask",
+          "accepts": ["I ask a question", "I ask a question."]
+        },
+        {
+          "en": "I speak English.",
+          "cz": "Mluvím anglicky.",
+          "gap": "I ____ English.",
+          "gap_answer": "speak",
+          "accepts": ["I speak English", "I speak English."]
+        },
+        {
+          "en": "I know the answer.",
+          "cz": "Znám odpověď. / Vím odpověď.",
+          "gap": "I ____ the answer.",
+          "gap_answer": "know",
+          "accepts": ["I know the answer", "I know the answer."]
+        },
+        {
+          "en": "I think it is good.",
+          "cz": "Myslím, že je to dobré.",
+          "gap": "I ____ it is good.",
+          "gap_answer": "think",
+          "accepts": ["I think it is good", "I think it's good.", "I think it is good."]
+        },
+        {
+          "en": "I understand you.",
+          "cz": "Rozumím ti.",
+          "gap": "I ____ you.",
+          "gap_answer": "understand",
+          "accepts": ["I understand you", "I understand you."]
+        },
+        {
+          "en": "I remember her name.",
+          "cz": "Pamatuji si její jméno.",
+          "gap": "I ____ her name.",
+          "gap_answer": "remember",
+          "accepts": ["I remember her name", "I remember her name."]
+        },
+        {
+          "en": "I forget my keys.",
+          "cz": "Zapomínám klíče. / Zapomněl jsem klíče.",
+          "gap": "I ____ my keys.",
+          "gap_answer": "forget",
+          "accepts": ["I forget my keys", "I forget my keys."]
+        },
+        {
+          "en": "I see a bird.",
+          "cz": "Vidím ptáka.",
+          "gap": "I ____ a bird.",
+          "gap_answer": "see",
+          "accepts": ["I see a bird", "I see a bird."]
+        },
+        {
+          "en": "I look at the map.",
+          "cz": "Dívám se na mapu.",
+          "gap": "I ____ at the map.",
+          "gap_answer": "look",
+          "accepts": ["I look at the map", "I look at the map."]
+        },
+        {
+          "en": "I hear music.",
+          "cz": "Slyším hudbu.",
+          "gap": "I ____ music.",
+          "gap_answer": "hear",
+          "accepts": ["I hear music", "I hear music."]
+        }
+      ]
+    }
+  ]
+}

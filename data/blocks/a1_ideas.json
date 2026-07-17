@@ -1,0 +1,82 @@
+{
+  "id": "a1_ideas",
+  "title": "Ideas & things",
+  "level": "A1",
+  "tree_node": "leaf_ideas_a1",
+  "note": "P7 Oxford leftovers — abstract / general core nouns that do not fit a domain leaf cleanly. Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "ideas_basic",
+      "title": "Ideas · basic",
+      "items": [
+        { "en": "thing", "cz": "věc" },
+        { "en": "part", "cz": "část" },
+        { "en": "place", "cz": "místo" },
+        { "en": "person", "cz": "osoba" },
+        { "en": "life", "cz": "život" },
+        { "en": "group", "cz": "skupina" },
+        { "en": "member", "cz": "člen" },
+        { "en": "plan", "cz": "plán" },
+        { "en": "point", "cz": "bod / pointa" },
+        { "en": "fact", "cz": "fakt" },
+        { "en": "reason", "cz": "důvod" },
+        { "en": "result", "cz": "výsledek" }
+      ]
+    },
+    {
+      "id": "ideas_more",
+      "title": "Ideas · more",
+      "items": [
+        { "en": "action", "cz": "čin / akce" },
+        { "en": "advice", "cz": "rada" },
+        { "en": "area", "cz": "oblast" },
+        { "en": "beginning", "cz": "začátek" },
+        { "en": "end", "cz": "konec" },
+        { "en": "event", "cz": "událost" },
+        { "en": "form", "cz": "formulář / forma" },
+        { "en": "line", "cz": "linka / řádek" },
+        { "en": "piece", "cz": "kousek / díl" },
+        { "en": "pair", "cz": "pár" },
+        { "en": "object", "cz": "předmět" },
+        { "en": "machine", "cz": "stroj" }
+      ]
+    },
+    {
+      "id": "ideas_workish",
+      "title": "Ideas · projects & style",
+      "items": [
+        { "en": "product", "cz": "produkt / výrobek" },
+        { "en": "programme", "cz": "program" },
+        { "en": "project", "cz": "projekt" },
+        { "en": "routine", "cz": "rutina" },
+        { "en": "rule", "cz": "pravidlo" },
+        { "en": "section", "cz": "část / sekce" },
+        { "en": "situation", "cz": "situace" },
+        { "en": "skill", "cz": "dovednost" },
+        { "en": "sound", "cz": "zvuk" },
+        { "en": "style", "cz": "styl" },
+        { "en": "success", "cz": "úspěch" },
+        { "en": "topic", "cz": "téma" }
+      ]
+    },
+    {
+      "id": "ideas_time_space",
+      "title": "Ideas · time & world",
+      "items": [
+        { "en": "moment", "cz": "okamžik" },
+        { "en": "period", "cz": "období" },
+        { "en": "past", "cz": "minulost" },
+        { "en": "future", "cz": "budoucnost" },
+        { "en": "century", "cz": "století" },
+        { "en": "date", "cz": "datum" },
+        { "en": "midnight", "cz": "půlnoc" },
+        { "en": "culture", "cz": "kultura" },
+        { "en": "health", "cz": "zdraví" },
+        { "en": "interest", "cz": "zájem" },
+        { "en": "capital", "cz": "hlavní město" },
+        { "en": "visitor", "cz": "návštěvník" }
+      ]
+    }
+  ]
+}
