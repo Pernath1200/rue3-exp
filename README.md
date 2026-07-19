@@ -15,9 +15,10 @@ Open **http://localhost:8090** · hard-refresh **Ctrl+F5** after code changes.
 
 ## GitHub / Pages
 
-Repo: [Pernath1200/rue3-grok](https://github.com/Pernath1200/rue3-grok) (static shell — `index.html` at root).  
+Repo: [Pernath1200/rue3-grok-v0.1](https://github.com/Pernath1200/rue3-grok-v0.1) (static shell — `index.html` at root).  
+Legacy experiment (pre-tree): [Pernath1200/rue3-grok](https://github.com/Pernath1200/rue3-grok).  
 Enable **Settings → Pages → Deploy from branch `main` / root** for  
-`https://pernath1200.github.io/rue3-grok/` (once Pages is on).
+`https://pernath1200.github.io/rue3-grok-v0.1/` (once Pages is on).
 
 ## What exists now
 

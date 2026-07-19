@@ -194,7 +194,7 @@ h1 {
   margin: 0 0 0.75rem;
 }
 
-/* Tree SVG — A1 sapling (attempt 1) */
+/* Tree SVG — attempt 2: region fill, quiet labels, tree is primary */
 .tree-wrap {
   width: 100%;
   overflow: auto;
@@ -202,36 +202,31 @@ h1 {
 
 .tree-svg {
   width: 100%;
-  max-width: 580px;
+  max-width: 720px;
   height: auto;
   display: block;
   margin: 0 auto;
 }
 
-.tree-svg .tree-canopy-wash {
-  fill: rgba(77, 182, 199, 0.55);
-  stroke: none;
-  pointer-events: none;
-  /* opacity set inline from growth */
-}
-
-.tree-svg .tree-growth-leaf {
-  fill: #4db6c7;
-  stroke: none;
+/* Fixed skeleton — always there, never “progress colour” */
+.tree-svg .tree-skeleton-crown {
+  fill: none;
+  stroke: rgba(160, 160, 160, 0.22);
+  stroke-width: 1.25;
+  stroke-dasharray: 4 5;
   pointer-events: none;
 }
 
-.tree-svg .tree-trunk-wood {
-  fill: rgba(77, 182, 199, 0.55);
-  stroke: rgba(77, 182, 199, 0.55);
-  stroke-width: 1.5;
+.tree-svg .tree-skeleton-trunk {
+  fill: rgba(160, 160, 160, 0.06);
+  stroke: rgba(160, 160, 160, 0.28);
+  stroke-width: 1.25;
   pointer-events: none;
-  /* opacity set inline from growth */
 }
 
 .tree-svg .tree-ground {
-  fill: rgba(160, 160, 160, 0.12);
-  stroke: rgba(160, 160, 160, 0.25);
+  fill: rgba(160, 160, 160, 0.1);
+  stroke: rgba(160, 160, 160, 0.22);
   stroke-width: 1;
   pointer-events: none;
 }
@@ -240,110 +235,92 @@ h1 {
   fill: var(--muted);
   font-family: var(--font);
   font-size: 10px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   pointer-events: none;
 }
 
-.tree-svg .edge {
-  stroke: rgba(77, 182, 199, 0.35);
+/* Quiet labels — never status-coloured */
+.tree-svg .tree-label-quiet {
+  fill: var(--muted);
+  font-family: var(--font);
+  font-size: 10px;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+/* Branches */
+.tree-svg .tree-branch {
+  fill: none;
+  stroke: #4db6c7;
   stroke-width: 2;
-  fill: none;
+  stroke-linecap: round;
+  pointer-events: none;
 }
 
-.tree-svg .edge-branch {
-  stroke: rgba(77, 182, 199, 0.4);
-  stroke-width: 1.75;
-  fill: none;
-}
-
-.tree-svg .edge-shaft {
-  stroke: rgba(77, 182, 199, 0.5);
-  stroke-width: 1.5;
-  fill: none;
-}
-
-.tree-svg .node-circle {
-  stroke: var(--accent);
-  stroke-width: 1.5;
-  fill: var(--bg);
+/* Trunk bands — fill opacity set inline from progress */
+.tree-svg .tree-band {
+  fill: #4db6c7;
+  stroke: none;
   cursor: pointer;
 }
 
-.tree-svg .node-circle.kind-trunk {
-  fill: rgba(77, 182, 199, 0.28);
-  /* shaft frames = wood knots */
+.tree-svg .tree-band-stroke {
+  fill: none;
+  stroke: #4db6c7;
+  stroke-width: 1.25;
+  pointer-events: none;
 }
 
-.tree-svg .node-circle.kind-leaf {
-  fill: rgba(77, 182, 199, 0.1);
-  /* canopy leaves */
+/* Leaf shapes */
+.tree-svg .tree-leaf {
+  fill: #4db6c7;
+  stroke: none;
+  cursor: pointer;
 }
 
-.tree-svg .node-circle.kind-craft {
-  stroke: var(--muted);
+.tree-svg .tree-leaf-stroke {
+  fill: none;
+  stroke: #4db6c7;
+  stroke-width: 1.25;
+  pointer-events: none;
+}
+
+/* Selected: soft outline only — not a neon fill disc */
+.tree-svg .tree-band.is-selected,
+.tree-svg .tree-leaf.is-selected {
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.35));
+}
+
+.tree-svg .tree-band-stroke.is-selected,
+.tree-svg .tree-leaf-stroke.is-selected {
+  stroke: #ffffff;
+  stroke-width: 1.75;
+  opacity: 0.9 !important;
+}
+
+.tree-svg .tree-branch.is-selected {
+  stroke: #ffffff;
+  stroke-width: 2.25;
+}
+
+.tree-svg .tree-craft {
   fill: transparent;
+  stroke: var(--muted);
+  stroke-width: 1.25;
+  cursor: pointer;
 }
 
-.tree-svg .node-circle.status-next {
-  stroke-width: 2.5;
-  filter: drop-shadow(0 0 4px rgba(77, 182, 199, 0.5));
-}
-
-.tree-svg .node-circle.is-live {
-  stroke-width: 2.5;
-  filter: drop-shadow(0 0 5px rgba(77, 182, 199, 0.55));
-}
-
-/* Honest progress — no fake mastery glow */
-.tree-svg .node-circle.prog-untouched.is-live {
-  filter: none;
-  stroke-width: 1.5;
-  opacity: 0.85;
-}
-
-.tree-svg .node-circle.prog-partial {
-  stroke-width: 2.5;
-  filter: drop-shadow(0 0 4px rgba(77, 182, 199, 0.45));
-}
-
-.tree-svg .node-circle.prog-fruit {
-  stroke: var(--correct);
-  stroke-width: 2.5;
-  filter: drop-shadow(0 0 5px rgba(34, 197, 94, 0.45));
-}
-
-.tree-svg .node-circle.is-selected {
-  fill: var(--accent);
-}
-
-.tree-svg .node-circle.is-selected.prog-fruit {
-  fill: rgba(34, 197, 94, 0.45);
+.tree-svg .tree-craft.is-selected {
+  stroke: #ffffff;
 }
 
 .tree-svg .node-hit {
   cursor: pointer;
 }
 
-.tree-svg .node-label {
-  fill: var(--text);
-  font-family: var(--font);
-  font-size: 11px;
-  pointer-events: none;
-}
-
-.tree-svg .node-label.kind-trunk {
-  font-size: 10px;
-  fill: var(--muted);
-}
-
-.tree-svg .node-label.kind-leaf {
-  font-size: 11px;
-  font-weight: 600;
-}
-
-.tree-svg .node-label.muted {
-  fill: var(--muted);
-  font-size: 10px;
+.tree-svg .node-hit:hover .tree-band,
+.tree-svg .node-hit:hover .tree-leaf {
+  filter: brightness(1.15);
 }
 
 /* Node detail */

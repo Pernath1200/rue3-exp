@@ -143,58 +143,73 @@ function renderAuthorHint() {
 }
 
 /**
- * A1 sapling layout (attempt 1 — load-bearing metaphor, not org chart).
- * - Ground + vertical trunk wood (drawn in renderTree)
- * - Frame packs sit on the shaft (bottom → top = foundation → newer glue)
- * - Domain leaves fan in a canopy dome above
- * Returns { positions, W, H, meta }
+ * Sapling layout — attempt 2: fixed silhouette regions.
+ * Trunk packs = stacked wood bands · Leaves = canopy leaf shapes · Labels quiet.
  */
 function layoutNodes(nodes) {
-  const W = 680;
-  const H = 560;
+  const W = 720;
+  const H = 600;
   const cx = W / 2;
   const positions = new Map();
 
-  // Hub on the trunk (parent for edges)
-  const hub = { x: cx, y: 300 };
+  const groundY = 520;
+  const trunkBotY = 500;
+  const trunkTopY = 200;
+  const hub = { x: cx, y: (trunkBotY + trunkTopY) / 2 };
   positions.set("trunk", hub);
 
   const trunkKids = nodes.filter((n) => n.parent === "trunk" && n.kind === "trunk");
   const leafKids = nodes.filter((n) => n.parent === "trunk" && n.kind === "leaf");
   const craft = nodes.filter((n) => n.kind === "craft");
 
-  // Frames along the shaft — zigzag; tighter when many P4+ packs
-  const shaftTop = 145;
-  const shaftBot = 400;
+  // Trunk bands: bottom → top (foundation first), centred on shaft
+  const nT = Math.max(1, trunkKids.length);
+  const bandH = Math.min(22, (trunkBotY - trunkTopY - 8) / nT);
   trunkKids.forEach((n, i) => {
-    const nT = trunkKids.length;
-    const t = nT <= 1 ? 0.5 : i / (nT - 1);
-    const y = shaftBot - t * (shaftBot - shaftTop);
-    const xOff = nT > 6 ? 34 : 28;
-    const x = cx + (i % 2 === 0 ? -xOff : xOff);
-    positions.set(n.id, { x, y, role: "shaft" });
+    const yBot = trunkBotY - i * bandH;
+    const yTop = yBot - bandH + 1;
+    const yMid = (yTop + yBot) / 2;
+    const side = i % 2 === 0 ? -1 : 1;
+    positions.set(n.id, {
+      x: cx,
+      y: yMid,
+      yTop,
+      yBot,
+      role: "shaft",
+      labelSide: side,
+      bandH,
+    });
   });
 
-  // Canopy: dome — wider span when many leaves (P2+)
+  // Canopy leaf slots — dome fan above trunk top
+  const nL = Math.max(1, leafKids.length);
   leafKids.forEach((n, i) => {
-    const nL = leafKids.length;
     const t = nL <= 1 ? 0.5 : i / (nL - 1);
-    const span = Math.min(480, 280 + nL * 18);
+    const span = Math.min(520, 300 + nL * 14);
     const x = cx + (t - 0.5) * span;
-    const y = 42 + Math.pow(t - 0.5, 2) * (90 + nL * 2);
-    positions.set(n.id, { x, y, role: "canopy" });
+    const y = 70 + Math.pow(t - 0.5, 2) * 95;
+    // angle for leaf tip: point outward from crown
+    const ang = Math.atan2(y - (trunkTopY - 10), x - cx);
+    positions.set(n.id, {
+      x,
+      y,
+      role: "canopy",
+      ang,
+      size: 26,
+    });
   });
 
   craft.forEach((n, i) => {
-    positions.set(n.id, { x: cx + 200, y: 400 + i * 28, role: "craft" });
+    positions.set(n.id, { x: cx + 220, y: groundY - 20 + i * 28, role: "craft", size: 14 });
   });
 
   nodes.forEach((n, i) => {
     if (!positions.has(n.id)) {
       positions.set(n.id, {
-        x: 60 + (i % 4) * 90,
-        y: 400 + Math.floor(i / 4) * 28,
+        x: 80 + (i % 4) * 90,
+        y: groundY - 40 + Math.floor(i / 4) * 24,
         role: "other",
+        size: 14,
       });
     }
   });
@@ -203,17 +218,11 @@ function layoutNodes(nodes) {
     positions,
     W,
     H,
-    meta: {
-      cx,
-      groundY: 400,
-      trunkTopY: 130,
-      trunkBotY: 400,
-      hub,
-    },
+    meta: { cx, groundY, trunkTopY, trunkBotY, hub, bandH },
   };
 }
 
-/** Short labels for dense sapling (full name stays in detail panel). */
+/** Short labels (muted in SVG; full name in detail panel). */
 function treeLabel(node) {
   const short = {
     trunk_frames_a1: "Be / Have",
@@ -221,16 +230,16 @@ function treeLabel(node) {
     trunk_adjectives_a1: "Adjectives",
     trunk_can_like_want_a1: "Can · like",
     trunk_there_time_a1: "There · time",
-    trunk_verbs_daily_a1: "V · daily",
-    trunk_verbs_say_a1: "V · say",
-    trunk_verbs_action_a1: "V · action",
+    trunk_verbs_daily_a1: "Verbs · daily",
+    trunk_verbs_say_a1: "Verbs · say",
+    trunk_verbs_action_a1: "Verbs · action",
     trunk_social_a1: "Social",
-    trunk_glue_questions_a1: "Wh- Q",
-    trunk_glue_quantity_a1: "Some/any",
-    trunk_glue_linkers_a1: "And/but",
-    trunk_glue_modals_a1: "Will/must",
-    trunk_verbs_more_a1: "V · more",
-    trunk_verbs_more2_a1: "V · more2",
+    trunk_glue_questions_a1: "Wh- questions",
+    trunk_glue_quantity_a1: "Some · any",
+    trunk_glue_linkers_a1: "And · but",
+    trunk_glue_modals_a1: "Will · must",
+    trunk_verbs_more_a1: "Verbs · more",
+    trunk_verbs_more2_a1: "Verbs · more 2",
     trunk_glue_pronouns_a1: "Pronouns",
     leaf_home_family: "Home",
     leaf_places: "Places",
@@ -253,8 +262,45 @@ function treeLabel(node) {
 
 function branchPath(from, to, sway = 0) {
   const mx = (from.x + to.x) / 2 + sway;
-  const my = Math.min(from.y, to.y) - 18 - Math.abs(to.x - from.x) * 0.08;
+  const my = Math.min(from.y, to.y) - 12 - Math.abs(to.x - from.x) * 0.06;
   return `M ${from.x.toFixed(1)} ${from.y.toFixed(1)} Q ${mx.toFixed(1)} ${my.toFixed(1)} ${to.x.toFixed(1)} ${to.y.toFixed(1)}`;
+}
+
+/** Leaf silhouette path centred at (x,y), rotated toward ang (radians). */
+function leafShapePath(x, y, size, ang) {
+  const s = size;
+  // local leaf: tip at +y, base at -y
+  const pts = [
+    [0, -s * 0.55],
+    [s * 0.38, -s * 0.1],
+    [s * 0.42, s * 0.35],
+    [0, s * 0.6],
+    [-s * 0.42, s * 0.35],
+    [-s * 0.38, -s * 0.1],
+  ];
+  const cos = Math.cos(ang);
+  const sin = Math.sin(ang);
+  const map = ([px, py]) => {
+    const rx = px * cos - py * sin;
+    const ry = px * sin + py * cos;
+    return `${(x + rx).toFixed(1)},${(y + ry).toFixed(1)}`;
+  };
+  return `M ${map(pts[0])} L ${pts.slice(1).map(map).join(" L ")} Z`;
+}
+
+/** Progress → fill strength for region paint (tree body, not badge colour). */
+function regionPaint(prog, isLive) {
+  if (!isLive) {
+    return { fillOp: 0.03, strokeOp: 0.2, branchOp: 0.12, state: "empty" };
+  }
+  if (prog === "fruit") {
+    return { fillOp: 0.78, strokeOp: 0.85, branchOp: 0.75, state: "fruit" };
+  }
+  if (prog === "partial") {
+    return { fillOp: 0.38, strokeOp: 0.55, branchOp: 0.45, state: "partial" };
+  }
+  // live but untouched — ghost slot
+  return { fillOp: 0.06, strokeOp: 0.28, branchOp: 0.18, state: "slot" };
 }
 
 function escapeXml(s) {
@@ -273,12 +319,10 @@ function renderTree() {
   const unlocked = getUnlockedList().join(" · ");
   const stage =
     STATE.level === "A1" ? "sapling" : STATE.level === "A2" ? "young tree" : "tree";
-  caption.textContent = `${STATE.level} ${stage} · ${live} live · unlock: ${unlocked} · fills as you practise`;
 
   const { positions, W, H, meta } = layoutNodes(nodes);
-  const { cx, groundY, trunkTopY, trunkBotY, hub } = meta;
+  const { cx, groundY, trunkTopY, trunkBotY } = meta;
 
-  // Growth fill: tree densifies as nodes move untouched → touched → fruit
   const liveNodes = nodes.filter((n) => n.status === "live" && n.id !== "trunk");
   let fruitN = 0;
   let partialN = 0;
@@ -287,96 +331,100 @@ function renderTree() {
     if (st === "fruit") fruitN++;
     else if (st === "partial") partialN++;
   }
-  const liveCount = Math.max(1, liveNodes.length);
-  const growth = (fruitN + partialN * 0.45) / liveCount; // 0..1
-  const canopyRx = 120 + growth * 120;
-  const canopyRy = 48 + growth * 48;
-  const canopyOp = 0.04 + growth * 0.14;
-  const woodOp = 0.1 + growth * 0.22;
-  const growthPct = Math.round(growth * 100);
+  caption.textContent = `${STATE.level} ${stage} · fruit ${fruitN}/${liveNodes.length} · unlock: ${unlocked}`;
 
-  // Background layers — wood + ground + canopy that fills with growth
+  // --- Fixed skeleton (always visible, quiet) ---
   let scenery = "";
-  scenery += `<ellipse class="tree-canopy-wash" cx="${cx}" cy="95" rx="${canopyRx.toFixed(1)}" ry="${canopyRy.toFixed(1)}" style="opacity:${canopyOp.toFixed(3)}" />`;
-  // Soft “leaf mass” dots in canopy — count scales with fruit
-  const leafDots = Math.round(4 + fruitN * 1.2 + partialN * 0.4);
-  for (let i = 0; i < leafDots; i++) {
-    const t = leafDots <= 1 ? 0.5 : i / (leafDots - 1);
-    const ang = Math.PI * (0.15 + 0.7 * t);
-    const rad = 40 + (i % 5) * 14 + growth * 30;
-    const lx = cx + Math.cos(ang) * rad * (0.7 + (i % 3) * 0.15);
-    const ly = 55 + Math.sin(ang) * rad * 0.35 + (i % 4) * 6;
-    const lr = 3 + (i % 3);
-    const lop = 0.15 + growth * 0.45;
-    scenery += `<circle class="tree-growth-leaf" cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="${lr}" style="opacity:${lop.toFixed(3)}" />`;
-  }
-  scenery += `<path class="tree-trunk-wood" d="
-    M ${cx - 14} ${trunkBotY}
-    Q ${cx - 10} ${(trunkBotY + trunkTopY) / 2} ${cx - 7} ${trunkTopY}
-    L ${cx + 7} ${trunkTopY}
-    Q ${cx + 10} ${(trunkBotY + trunkTopY) / 2} ${cx + 14} ${trunkBotY}
-    Z" style="opacity:${woodOp.toFixed(3)}" />`;
-  scenery += `<ellipse class="tree-ground" cx="${cx}" cy="${groundY + 8}" rx="120" ry="16" />`;
-  scenery += `<text class="tree-ground-label" x="${cx}" y="${groundY + 28}" text-anchor="middle">A1 · growth ${growthPct}% · fruit ${fruitN}/${liveNodes.length}</text>`;
+  // Soft crown guide (empty canopy outline)
+  scenery += `<ellipse class="tree-skeleton-crown" cx="${cx}" cy="95" rx="240" ry="88" />`;
+  // Ghost trunk shaft
+  scenery += `<path class="tree-skeleton-trunk" d="
+    M ${cx - 16} ${trunkBotY}
+    Q ${cx - 11} ${(trunkBotY + trunkTopY) / 2} ${cx - 9} ${trunkTopY}
+    L ${cx + 9} ${trunkTopY}
+    Q ${cx + 11} ${(trunkBotY + trunkTopY) / 2} ${cx + 16} ${trunkBotY}
+    Z" />`;
+  scenery += `<ellipse class="tree-ground" cx="${cx}" cy="${groundY}" rx="130" ry="18" />`;
+  scenery += `<text class="tree-ground-label" x="${cx}" y="${groundY + 28}" text-anchor="middle">Tree fills as you complete units</text>`;
 
-  // Branches: canopy = curved; shaft frames = short sticks into the wood
-  let edges = "";
-  for (const n of nodes) {
-    if (!n.parent) continue;
-    const to = positions.get(n.id);
-    if (!to) continue;
-    if (n.kind === "leaf") {
-      const from = { x: cx, y: trunkTopY + 20 };
-      const sway = (to.x - cx) * 0.15;
-      edges += `<path class="edge edge-branch" d="${branchPath(from, to, sway)}" />`;
-    } else if (n.kind === "trunk" && n.id !== "trunk") {
-      edges += `<line class="edge edge-shaft" x1="${cx}" y1="${to.y}" x2="${to.x}" y2="${to.y}" />`;
-    } else {
-      const from = positions.get(n.parent) || hub;
-      edges += `<line class="edge" x1="${from.x}" y1="${from.y}" x2="${to.x}" y2="${to.y}" />`;
-    }
-  }
+  // --- Branches (leaf units): strength from progress ---
+  let regions = "";
+  const leafKids = nodes.filter((n) => n.parent === "trunk" && n.kind === "leaf");
+  const trunkKids = nodes.filter((n) => n.parent === "trunk" && n.kind === "trunk");
 
-  let circles = "";
-  for (const n of nodes) {
-    if (n.id === "trunk") continue; // wood is the trunk — no extra hub disc
+  for (const n of leafKids) {
     const p = positions.get(n.id);
     if (!p) continue;
-    const r = n.kind === "trunk" ? 13 : n.kind === "craft" ? 10 : 15;
-    const sel = STATE.selectedId === n.id ? " is-selected" : "";
-    const liveCls = n.status === "live" ? " is-live" : "";
     const prog = nodeProgressState(n.id, { isLive: n.status === "live" });
-    const progCls =
-      prog === "fruit"
-        ? " prog-fruit"
-        : prog === "partial"
-          ? " prog-partial"
-          : prog === "untouched"
-            ? " prog-untouched"
-            : "";
-    const label = treeLabel(n);
-    // Leaf labels above canopy nodes; shaft labels outside
-    const labelY = n.kind === "leaf" ? p.y - r - 8 : p.y + r + 13;
-    const labelX =
-      n.kind === "trunk" && n.id !== "trunk"
-        ? p.x + (p.x < cx ? -10 : 10)
-        : p.x;
-    const anchor =
-      n.kind === "trunk" && n.id !== "trunk"
-        ? p.x < cx
-          ? "end"
-          : "start"
-        : "middle";
-    circles += `
+    const paint = regionPaint(prog, n.status === "live");
+    const from = { x: cx, y: trunkTopY + 4 };
+    const sway = (p.x - cx) * 0.12;
+    const sel = STATE.selectedId === n.id ? " is-selected" : "";
+    regions += `<path class="tree-branch fill-${paint.state}${sel}" d="${branchPath(from, p, sway)}" style="opacity:${paint.branchOp}" />`;
+  }
+
+  // --- Trunk bands (frame units) ---
+  for (const n of trunkKids) {
+    const p = positions.get(n.id);
+    if (!p) continue;
+    const prog = nodeProgressState(n.id, { isLive: n.status === "live" });
+    const paint = regionPaint(prog, n.status === "live");
+    const sel = STATE.selectedId === n.id ? " is-selected" : "";
+    const halfW = 15;
+    const y1 = p.yTop;
+    const y2 = p.yBot;
+    // Slight taper: wider at bottom of whole tree
+    const taper = 1 + ((p.y - trunkTopY) / (trunkBotY - trunkTopY)) * 0.15;
+    const w = halfW * taper;
+    regions += `
       <g class="node-hit" data-id="${n.id}">
-        <circle class="node-circle kind-${n.kind} status-${n.status || "planned"}${sel}${liveCls}${progCls}"
-          cx="${p.x}" cy="${p.y}" r="${r}" />
-        <text class="node-label kind-${n.kind}" x="${labelX}" y="${labelY}" text-anchor="${anchor}">${escapeXml(label)}</text>
+        <rect class="tree-band fill-${paint.state}${sel}"
+          x="${(cx - w).toFixed(1)}" y="${y1.toFixed(1)}"
+          width="${(w * 2).toFixed(1)}" height="${Math.max(2, y2 - y1).toFixed(1)}"
+          rx="3" style="opacity:${paint.fillOp}" />
+        <rect class="tree-band-stroke fill-${paint.state}${sel}"
+          x="${(cx - w).toFixed(1)}" y="${y1.toFixed(1)}"
+          width="${(w * 2).toFixed(1)}" height="${Math.max(2, y2 - y1).toFixed(1)}"
+          rx="3" style="opacity:${paint.strokeOp}" />
+        <text class="tree-label-quiet" x="${(cx + p.labelSide * (w + 8)).toFixed(1)}" y="${(p.y + 3).toFixed(1)}"
+          text-anchor="${p.labelSide < 0 ? "end" : "start"}">${escapeXml(treeLabel(n))}</text>
+      </g>`;
+  }
+
+  // --- Canopy leaf shapes ---
+  for (const n of leafKids) {
+    const p = positions.get(n.id);
+    if (!p) continue;
+    const prog = nodeProgressState(n.id, { isLive: n.status === "live" });
+    const paint = regionPaint(prog, n.status === "live");
+    const sel = STATE.selectedId === n.id ? " is-selected" : "";
+    // Leaf points outward from crown centre
+    const ang = Math.atan2(p.y - 90, p.x - cx) + Math.PI / 2;
+    const d = leafShapePath(p.x, p.y, p.size || 26, ang);
+    const labelY = p.y + (p.size || 26) * 0.75 + 10;
+    regions += `
+      <g class="node-hit" data-id="${n.id}">
+        <path class="tree-leaf fill-${paint.state}${sel}" d="${d}" style="opacity:${paint.fillOp}" />
+        <path class="tree-leaf-stroke fill-${paint.state}${sel}" d="${d}" style="opacity:${paint.strokeOp}" />
+        <text class="tree-label-quiet" x="${p.x.toFixed(1)}" y="${labelY.toFixed(1)}" text-anchor="middle">${escapeXml(treeLabel(n))}</text>
+      </g>`;
+  }
+
+  // Craft — quiet side mark only
+  const craft = nodes.filter((n) => n.kind === "craft");
+  for (const n of craft) {
+    const p = positions.get(n.id);
+    if (!p) continue;
+    const sel = STATE.selectedId === n.id ? " is-selected" : "";
+    regions += `
+      <g class="node-hit" data-id="${n.id}">
+        <circle class="tree-craft${sel}" cx="${p.x}" cy="${p.y}" r="8" />
+        <text class="tree-label-quiet" x="${p.x}" y="${p.y + 20}" text-anchor="middle">${escapeXml(treeLabel(n))}</text>
       </g>`;
   }
 
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-  svg.innerHTML = scenery + edges + circles;
+  svg.innerHTML = scenery + regions;
 
   svg.querySelectorAll(".node-hit").forEach((g) => {
     g.addEventListener("click", () => {
@@ -392,7 +440,7 @@ function renderTree() {
 function renderDetail(node) {
   const el = document.getElementById("node-detail");
   if (!node) {
-    el.innerHTML = `<p class="detail-empty">Select a node on the <strong>sapling</strong>: frames on the <strong>trunk</strong>, domains in the <strong>canopy</strong> (leaves).</p>`;
+    el.innerHTML = `<p class="detail-empty">Click a <strong>trunk band</strong> or <strong>canopy leaf</strong> on the tree. Filled regions = progress; labels are names only.</p>`;
     return;
   }
 
