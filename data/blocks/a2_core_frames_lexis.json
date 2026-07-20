@@ -1,0 +1,168 @@
+{
+  "id": "a2_core_frames_lexis",
+  "title": "Core · high-freq A2 lexis",
+  "level": "A2",
+  "tree_node": "trunk_lexis_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "practice": "frames",
+  "note": "A2 trunk thickening — high-freq A2 WORDS in simple present frames. Gap on the lemma (vocab), never on tense/aspect. Grammar of past/perfect/future lives in RUE2.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "lexis_verbs_a",
+      "title": "Lexis · verbs A",
+      "items": [
+        {
+          "en": "I accept the offer.",
+          "cz": "Přijímám nabídku.",
+          "gap": "I ____ the offer.",
+          "gap_answer": "accept"
+        },
+        {
+          "en": "We achieve good results.",
+          "cz": "Dosahujeme dobrých výsledků.",
+          "gap": "We ____ good results.",
+          "gap_answer": "achieve"
+        },
+        {
+          "en": "They allow phones here.",
+          "cz": "Tady dovolují telefony.",
+          "gap": "They ____ phones here.",
+          "gap_answer": "allow"
+        },
+        {
+          "en": "I avoid fast food.",
+          "cz": "Vyhýbám se rychlému jídlu.",
+          "gap": "I ____ fast food.",
+          "gap_answer": "avoid"
+        },
+        {
+          "en": "We belong to a club.",
+          "cz": "Patříme do klubu.",
+          "gap": "We ____ to a club.",
+          "gap_answer": "belong"
+        },
+        {
+          "en": "I borrow books from the library.",
+          "cz": "Půjčuju si knihy z knihovny.",
+          "gap": "I ____ books from the library.",
+          "gap_answer": "borrow"
+        },
+        {
+          "en": "She complains about the noise.",
+          "cz": "Stěžuje si na hluk.",
+          "gap": "She ____ about the noise.",
+          "gap_answer": "complains"
+        },
+        {
+          "en": "I expect an email today.",
+          "cz": "Dnes čekám e-mail.",
+          "gap": "I ____ an email today.",
+          "gap_answer": "expect"
+        },
+        {
+          "en": "We manage a small team.",
+          "cz": "Vedeme malý tým.",
+          "gap": "We ____ a small team.",
+          "gap_answer": "manage"
+        },
+        {
+          "en": "I prefer tea to coffee.",
+          "cz": "Mám radši čaj než kávu.",
+          "gap": "I ____ tea to coffee.",
+          "gap_answer": "prefer"
+        },
+        {
+          "en": "They provide free Wi‑Fi.",
+          "cz": "Poskytují Wi‑Fi zdarma.",
+          "gap": "They ____ free Wi‑Fi.",
+          "gap_answer": "provide"
+        },
+        {
+          "en": "I recommend this restaurant.",
+          "cz": "Doporučuju tuhle restauraci.",
+          "gap": "I ____ this restaurant.",
+          "gap_answer": "recommend"
+        }
+      ]
+    },
+    {
+      "id": "lexis_adj_adv",
+      "title": "Lexis · adjectives & adverbs",
+      "items": [
+        {
+          "en": "The room is available.",
+          "cz": "Pokoj je volný / k dispozici.",
+          "gap": "The room is ____.",
+          "gap_answer": "available"
+        },
+        {
+          "en": "She is very confident.",
+          "cz": "Je velmi sebevědomá.",
+          "gap": "She is very ____.",
+          "gap_answer": "confident"
+        },
+        {
+          "en": "This is a common problem.",
+          "cz": "Tohle je běžný problém.",
+          "gap": "This is a ____ problem.",
+          "gap_answer": "common"
+        },
+        {
+          "en": "The bag is quite heavy.",
+          "cz": "Ta taška je dost těžká.",
+          "gap": "The bag is quite ____.",
+          "gap_answer": "heavy"
+        },
+        {
+          "en": "It is a modern building.",
+          "cz": "Je to moderní budova.",
+          "gap": "It is a ____ building.",
+          "gap_answer": "modern"
+        },
+        {
+          "en": "We need a practical solution.",
+          "cz": "Potřebujeme praktické řešení.",
+          "gap": "We need a ____ solution.",
+          "gap_answer": "practical"
+        },
+        {
+          "en": "He is a reliable worker.",
+          "cz": "Je spolehlivý pracovník.",
+          "gap": "He is a ____ worker.",
+          "gap_answer": "reliable"
+        },
+        {
+          "en": "This is a typical day.",
+          "cz": "Tohle je typický den.",
+          "gap": "This is a ____ day.",
+          "gap_answer": "typical"
+        },
+        {
+          "en": "I usually walk to work.",
+          "cz": "Obvykle chodím do práce pěšky.",
+          "gap": "I ____ walk to work.",
+          "gap_answer": "usually"
+        },
+        {
+          "en": "She almost missed the bus.",
+          "cz": "Málem zmeškala autobus.",
+          "gap": "She ____ missed the bus.",
+          "gap_answer": "almost"
+        },
+        {
+          "en": "I definitely need a break.",
+          "cz": "Rozhodně potřebuju pauzu.",
+          "gap": "I ____ need a break.",
+          "gap_answer": "definitely"
+        },
+        {
+          "en": "They recently moved house.",
+          "cz": "Nedávno se stěhovali.",
+          "gap": "They ____ moved house.",
+          "gap_answer": "recently"
+        }
+      ]
+    }
+  ]
+}

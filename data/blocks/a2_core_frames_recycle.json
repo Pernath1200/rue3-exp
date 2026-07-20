@@ -1,0 +1,195 @@
+{
+  "id": "a2_core_frames_recycle",
+  "title": "Core · recycle (A1)",
+  "level": "A2",
+  "tree_node": "trunk_recycle_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "practice": "frames",
+  "note": "A2 trunk thickening — re-practise A1 high-freq frames with denser slots. Gap on CONTENT word, not grammar form. Not a tense syllabus.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "recycle_identity_have",
+      "title": "Recycle · identity & have",
+      "items": [
+        {
+          "en": "I am a manager.",
+          "cz": "Jsem manažer. / Jsem manažerka.",
+          "gap": "I am a ____.",
+          "gap_answer": "manager",
+          "accepts": ["I'm a manager.", "I am a manager"]
+        },
+        {
+          "en": "She is my neighbour.",
+          "cz": "Je moje sousedka. / Je můj soused.",
+          "gap": "She is my ____.",
+          "gap_answer": "neighbour",
+          "gap_accepts": ["neighbor"],
+          "accepts": ["She's my neighbour.", "She's my neighbor."]
+        },
+        {
+          "en": "They are students.",
+          "cz": "Jsou studenti.",
+          "gap": "They are ____.",
+          "gap_answer": "students",
+          "accepts": ["They're students."]
+        },
+        {
+          "en": "I have a laptop.",
+          "cz": "Mám notebook.",
+          "gap": "I have a ____.",
+          "gap_answer": "laptop",
+          "accepts": ["I've got a laptop.", "I have a laptop"]
+        },
+        {
+          "en": "We have two children.",
+          "cz": "Máme dvě děti.",
+          "gap": "We have two ____.",
+          "gap_answer": "children",
+          "accepts": ["We've got two children.", "We have two kids."]
+        },
+        {
+          "en": "He has a new job.",
+          "cz": "Má novou práci.",
+          "gap": "He has a new ____.",
+          "gap_answer": "job",
+          "accepts": ["He's got a new job.", "He has a new job"]
+        },
+        {
+          "en": "This is my passport.",
+          "cz": "Tohle je můj pas.",
+          "gap": "This is my ____.",
+          "gap_answer": "passport",
+          "accepts": ["That's my passport."]
+        },
+        {
+          "en": "There is a pharmacy nearby.",
+          "cz": "Je tu blízko lékárna.",
+          "gap": "There is a ____ nearby.",
+          "gap_answer": "pharmacy",
+          "accepts": ["There's a pharmacy nearby."]
+        },
+        {
+          "en": "There are many tourists here.",
+          "cz": "Je tu spousta turistů.",
+          "gap": "There are many ____ here.",
+          "gap_answer": "tourists",
+          "accepts": ["There are a lot of tourists here."]
+        },
+        {
+          "en": "I can speak English.",
+          "cz": "Umím anglicky. / Mluvím anglicky.",
+          "gap": "I can speak ____.",
+          "gap_answer": "English",
+          "accepts": ["I can speak English"]
+        },
+        {
+          "en": "I like classical music.",
+          "cz": "Mám rád klasickou hudbu. / Mám ráda klasickou hudbu.",
+          "gap": "I like classical ____.",
+          "gap_answer": "music",
+          "accepts": ["I like classical music"]
+        },
+        {
+          "en": "I want a return ticket.",
+          "cz": "Chci zpáteční jízdenku.",
+          "gap": "I want a return ____.",
+          "gap_answer": "ticket",
+          "accepts": ["I want a return ticket"]
+        }
+      ]
+    },
+    {
+      "id": "recycle_daily_place",
+      "title": "Recycle · daily & place",
+      "items": [
+        {
+          "en": "I work in an office.",
+          "cz": "Pracuju v kanceláři.",
+          "gap": "I work in an ____.",
+          "gap_answer": "office",
+          "accepts": ["I work in an office"]
+        },
+        {
+          "en": "I live in a flat.",
+          "cz": "Bydlím v bytě.",
+          "gap": "I live in a ____.",
+          "gap_answer": "flat",
+          "gap_accepts": ["apartment"],
+          "accepts": ["I live in a flat", "I live in an apartment."]
+        },
+        {
+          "en": "The keys are on the table.",
+          "cz": "Klíče jsou na stole.",
+          "gap": "The keys are on the ____.",
+          "gap_answer": "table",
+          "accepts": ["The keys are on the table"]
+        },
+        {
+          "en": "The shop is next to the bank.",
+          "cz": "Obchod je vedle banky.",
+          "gap": "The shop is next to the ____.",
+          "gap_answer": "bank",
+          "accepts": ["The shop is next to the bank"]
+        },
+        {
+          "en": "I go to the gym every week.",
+          "cz": "Chodím každej týden do posilovny.",
+          "gap": "I go to the ____ every week.",
+          "gap_answer": "gym",
+          "accepts": ["I go to the gym every week"]
+        },
+        {
+          "en": "She needs help.",
+          "cz": "Potřebuje pomoc.",
+          "gap": "She needs ____.",
+          "gap_answer": "help",
+          "accepts": ["She needs help"]
+        },
+        {
+          "en": "We meet at the station.",
+          "cz": "Scházíme se na nádraží.",
+          "gap": "We meet at the ____.",
+          "gap_answer": "station",
+          "accepts": ["We meet at the station"]
+        },
+        {
+          "en": "I feel tired today.",
+          "cz": "Dnes se cítím unavený. / unavená.",
+          "gap": "I feel ____ today.",
+          "gap_answer": "tired",
+          "accepts": ["I feel tired today"]
+        },
+        {
+          "en": "It is cold outside.",
+          "cz": "Venku je zima.",
+          "gap": "It is ____ outside.",
+          "gap_answer": "cold",
+          "accepts": ["It's cold outside.", "It is cold outside"]
+        },
+        {
+          "en": "Thank you very much.",
+          "cz": "Mockrát děkuju.",
+          "gap": "Thank you very ____.",
+          "gap_answer": "much",
+          "accepts": ["Thank you very much", "Thanks very much."]
+        },
+        {
+          "en": "How much is the bill?",
+          "cz": "Kolik je účet?",
+          "gap": "How much is the ____?",
+          "gap_answer": "bill",
+          "accepts": ["How much is the bill?"]
+        },
+        {
+          "en": "Where is the bathroom?",
+          "cz": "Kde je koupelna? / WC?",
+          "gap": "Where is the ____?",
+          "gap_answer": "bathroom",
+          "gap_accepts": ["toilet", "loo"],
+          "accepts": ["Where is the bathroom?", "Where's the bathroom?"]
+        }
+      ]
+    }
+  ]
+}

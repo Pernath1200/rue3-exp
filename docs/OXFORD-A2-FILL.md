@@ -1,79 +1,46 @@
-# Oxford A2 → RUE3 exp fill
+# Oxford A2 → RUE3 exp fill (post redesign)
 
-**Status:** bulk fill shipped 2026-07-20 · experiment quality · refine later  
-**Source:** `vocab_profiler/data/oxford_5000.json` · `level == A2`  
-**Repo:** `rue3-grok-exp` only · branch `exp/autonomous`  
-**Coverage target:** every unique A2 lemma has productive exposure (leaf card and/or frame)
-
----
-
-## Coverage (post-fill)
-
-| Metric | Value |
-|--------|------:|
-| Unique Oxford A2 lemmas | **867** |
-| Covered in any live pack | **867** |
-| Missing | **0** |
-| Live A2 tree nodes | ~30+ |
-| Total app items (all levels) | ~2200+ |
-
-Scripts:
-
-- `scripts/oxford_a2_export.py` → `docs/oxford_a2_lemmas.csv`
-- `scripts/oxford_a2_gap_map.py` → bucket report + `docs/oxford_a2_gap_buckets.csv`
-- `scripts/generate_a2_oxford_fill.py` → bulk packs + tree wiring
-- `scripts/qa_a1_packs.py` → structure QA
+**Status:** canopy bulk remains · **grammar trunk removed** 2026-07-20  
+**Source:** Oxford 3000 A2 band via `vocab_profiler`  
+**Law:** `docs/A2-VOCAB-NOT-GRAMMAR.md`
 
 ---
 
-## Placement rules (Codex)
+## Product intent
 
-| Kind | Home | Codex |
-|------|------|-------|
-| Domain themes | A2 leaves | `V_THM-A1B1-01`…`09` |
-| Abstract / general / tech / society | leaves | `V_COR-A1B1-01` |
-| Past / perfect / future / compare / quantity | trunk frames | `V_COR-A1B1-01` |
-| Chunks + function glue | trunk frames | `V_PHR-A1B1-01` |
-| Adjectives / adverbs / verb lists | leaves | `V_COR-A1B1-01` |
+| Layer | Role |
+|-------|------|
+| **Trunk (≤3)** | Recycle A1 words/phrases · A2 high-freq **lexis** frames · **chunks** |
+| **Leaves** | Topic domains — main home for Oxford A2 **domain** words |
+| **Not here** | Past/perfect/future/compare as teaching units → **RUE2** |
 
-Function words are **not** only Match dumps — many also appear in glue frames. Verb **lemmas** live on `leaf_verbs_a2`; key patterns live in frame packs.
+Coverage goal is still “every A2 lemma has a home,” but:
 
----
-
-## A2 tree inventory
-
-### Trunk (frames)
-
-- Past · was/were (seed)
-- Past · irregulars
-- Present perfect
-- Future · going to / will
-- Comparatives
-- Quantity
-- Time preps
-- Chunks & formulae
-- Function glue
-
-### Leaves (words)
-
-Travel · Health · Home · Work · Family · Food · Shopping · Routine · Free time · Sport · Nature · Tech · School · Clothes · Feelings · Ideas · Society · Media · Describing · Adverbs · Verbs · General core
+- Domain → theme leaf  
+- Core verb/adj → lexis frames or temporary mega leaves (reshape later)  
+- Pure grammar function → RUE2 / A1 recycle, **not** new A2 grammar floors  
 
 ---
 
-## Honesty notes
+## Live A2 trunk (correct)
 
-- **CZ is draft** — polish in later passes.
-- **Overlap** with A1 packs is intentional for some high-freq items; coverage counts either.
-- **Describing** leaf is large (~300 adj) — experiment dump; later may split or convert hard adj to frames.
-- **Not** student-facing polish; `author_open` keeps A2 clickable on exp.
-- Gate / A2 level check **not** part of this fill.
+1. `a2_core_frames_recycle.json` — Core · recycle  
+2. `a2_core_frames_lexis.json` — Core · A2 lexis  
+3. `a2_core_frames_chunks.json` — Everyday chunks  
+
+Parked (grammar mistake): `data/blocks/_parked_grammar/`
 
 ---
 
-## Later improvements
+## Scripts
 
-1. CZ proofread  
-2. Split mega Describing / Verbs into themed sub-blocks with better titles  
-3. More verb **frames** (not only lemma list)  
-4. A2 level check → unlock B1  
-5. Codex mapping status → `app-integrated` when ready  
+- `oxford_a2_export.py` / `oxford_a2_gap_map.py` — still useful for leaf/lexis gaps  
+- Do **not** reintroduce parked grammar packs to chase coverage %  
+
+---
+
+## Later
+
+- Re-home mega Describing / Verbs / Adverbs into themes  
+- Live sampler for recycle (pull random A1 frames)  
+- Proto-branch SVG for canopy  

@@ -18,20 +18,6 @@
   "author_open": true,
   "nodes": [
     {
-      "id": "trunk",
-      "label": "Trunk",
-      "kind": "trunk",
-      "levels": [
-        "A1",
-        "A2",
-        "B1",
-        "B2"
-      ],
-      "parent": null,
-      "status": "planned",
-      "note": "Support for production — frames, high-freq glue. Seed kit lives inside Be/Have frames."
-    },
-    {
       "id": "trunk_frames_a1",
       "label": "Core frames",
       "kind": "trunk",
@@ -431,30 +417,43 @@
       "note": "Live · P7 · general core / abstract · 4×12"
     },
     {
-      "id": "trunk_past_a2",
-      "label": "Past · was/were",
+      "id": "trunk_recycle_a2",
+      "label": "Core · recycle",
       "kind": "trunk",
       "levels": [
         "A2"
       ],
       "parent": "trunk",
       "status": "live",
-      "content": "blocks/a2_core_frames_past.json",
+      "content": "blocks/a2_core_frames_recycle.json",
       "codex_unit": "V_COR-A1B1-01",
-      "note": "Live · A2 past glue · was/were + regular past · 12 frames · V_COR-A1B1-01"
+      "note": "A2 thickening · re-practise A1 frames · denser slots · not grammar"
     },
     {
-      "id": "trunk_time_preps_a2",
-      "label": "Time preps",
+      "id": "trunk_lexis_a2",
+      "label": "Core · A2 lexis",
       "kind": "trunk",
       "levels": [
         "A2"
       ],
       "parent": "trunk",
       "status": "live",
-      "content": "blocks/a2_core_frames_time_preps.json",
+      "content": "blocks/a2_core_frames_lexis.json",
       "codex_unit": "V_COR-A1B1-01",
-      "note": "Live · A2 in/on/at time · 12 frames · V_COR-A1B1-01"
+      "note": "A2 high-freq words in simple frames · gap on lemma"
+    },
+    {
+      "id": "trunk_chunks_a2",
+      "label": "Everyday chunks",
+      "kind": "trunk",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_core_frames_chunks.json",
+      "codex_unit": "V_PHR-A1B1-01",
+      "note": "Lexical phrases only · V_PHR · not tense syllabus"
     },
     {
       "id": "leaf_travel_a2",
@@ -743,97 +742,6 @@
       "note": "Live · A2 · V_COR-A1B1-01 · 5×12ish · Oxford fill"
     },
     {
-      "id": "trunk_past_irreg_a2",
-      "label": "Past",
-      "kind": "trunk",
-      "levels": [
-        "A2"
-      ],
-      "parent": "trunk",
-      "status": "live",
-      "content": "blocks/a2_core_frames_past_irreg.json",
-      "codex_unit": "V_COR-A1B1-01",
-      "note": "Live · A2 frames · V_COR-A1B1-01 · 24 items"
-    },
-    {
-      "id": "trunk_perfect_a2",
-      "label": "Present perfect",
-      "kind": "trunk",
-      "levels": [
-        "A2"
-      ],
-      "parent": "trunk",
-      "status": "live",
-      "content": "blocks/a2_core_frames_perfect.json",
-      "codex_unit": "V_COR-A1B1-01",
-      "note": "Live · A2 frames · V_COR-A1B1-01 · 12 items"
-    },
-    {
-      "id": "trunk_future_a2",
-      "label": "Future",
-      "kind": "trunk",
-      "levels": [
-        "A2"
-      ],
-      "parent": "trunk",
-      "status": "live",
-      "content": "blocks/a2_core_frames_future.json",
-      "codex_unit": "V_COR-A1B1-01",
-      "note": "Live · A2 frames · V_COR-A1B1-01 · 12 items"
-    },
-    {
-      "id": "trunk_compare_a2",
-      "label": "Comparatives",
-      "kind": "trunk",
-      "levels": [
-        "A2"
-      ],
-      "parent": "trunk",
-      "status": "live",
-      "content": "blocks/a2_core_frames_compare.json",
-      "codex_unit": "V_COR-A1B1-01",
-      "note": "Live · A2 frames · V_COR-A1B1-01 · 12 items"
-    },
-    {
-      "id": "trunk_quantity_a2",
-      "label": "Quantity",
-      "kind": "trunk",
-      "levels": [
-        "A2"
-      ],
-      "parent": "trunk",
-      "status": "live",
-      "content": "blocks/a2_core_frames_quantity.json",
-      "codex_unit": "V_COR-A1B1-01",
-      "note": "Live · A2 frames · V_COR-A1B1-01 · 12 items"
-    },
-    {
-      "id": "trunk_chunks_a2",
-      "label": "Chunks & formulae",
-      "kind": "trunk",
-      "levels": [
-        "A2"
-      ],
-      "parent": "trunk",
-      "status": "live",
-      "content": "blocks/a2_core_frames_chunks.json",
-      "codex_unit": "V_PHR-A1B1-01",
-      "note": "Live · A2 frames · V_PHR-A1B1-01 · 12 items"
-    },
-    {
-      "id": "trunk_glue_a2",
-      "label": "Function glue",
-      "kind": "trunk",
-      "levels": [
-        "A2"
-      ],
-      "parent": "trunk",
-      "status": "live",
-      "content": "blocks/a2_core_frames_glue.json",
-      "codex_unit": "V_PHR-A1B1-01",
-      "note": "Live · A2 frames · V_PHR-A1B1-01 · 12 items"
-    },
-    {
       "id": "craft",
       "label": "Word-craft",
       "kind": "craft",
@@ -845,5 +753,7 @@
       "status": "parked",
       "note": "Side door later · B1+"
     }
-  ]
+  ],
+  "a2_model": "vocab_thicken_canopy",
+  "a2_model_note": "A2 trunk = recycle A1 lexis + high-freq A2 words + chunks. Grammar (tense/aspect/compare) is RUE2. Canopy = topic leaves."
 }

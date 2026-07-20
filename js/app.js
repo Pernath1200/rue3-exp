@@ -417,15 +417,9 @@ function treeLabel(node) {
     leaf_nature_a1: "Nature",
     leaf_shopping_a1: "Shopping",
     leaf_ideas_a1: "Ideas",
-    trunk_past_a2: "Past",
-    trunk_past_irreg_a2: "Past irreg",
-    trunk_perfect_a2: "Perfect",
-    trunk_future_a2: "Future",
-    trunk_compare_a2: "Compare",
-    trunk_quantity_a2: "Quantity",
-    trunk_time_preps_a2: "Time preps",
+    trunk_recycle_a2: "Recycle",
+    trunk_lexis_a2: "A2 lexis",
     trunk_chunks_a2: "Chunks",
-    trunk_glue_a2: "Glue",
     leaf_travel_a2: "Travel",
     leaf_health_a2: "Health",
     leaf_home_a2: "Home",
@@ -547,7 +541,11 @@ function renderTree() {
   const live = nodes.filter((n) => n.status === "live").length;
   const unlocked = getUnlockedList().join(" · ");
   const stage =
-    STATE.level === "A1" ? "sapling" : STATE.level === "A2" ? "young tree" : "tree";
+    STATE.level === "A1"
+      ? "sapling"
+      : STATE.level === "A2"
+        ? "thickening trunk · growing canopy"
+        : "tree";
 
   const { positions, W, H, meta } = layoutNodes(nodes);
   const { cx, groundY, trunkTopY, trunkBotY } = meta;
@@ -561,7 +559,11 @@ function renderTree() {
     else if (st === "partial") partialN++;
   }
   const dueN = getDueUnits(STATE.tree?.nodes || [], { level: STATE.level }).length;
-  caption.textContent = `${STATE.level} ${stage} · fruit ${fruitN}/${liveNodes.length}${dueN ? ` · due ${dueN}` : ""} · unlock: ${unlocked}`;
+  const trunkN = liveNodes.filter((n) => n.kind === "trunk").length;
+  const leafN = liveNodes.filter((n) => n.kind === "leaf").length;
+  const shapeBit =
+    STATE.level === "A2" ? ` · trunk ${trunkN} · leaves ${leafN}` : "";
+  caption.textContent = `${STATE.level} ${stage}${shapeBit} · fruit ${fruitN}/${liveNodes.length}${dueN ? ` · due ${dueN}` : ""} · unlock: ${unlocked}`;
   renderLevelMeters(STATE.level, nodes);
 
   // --- Fixed skeleton (always visible, quiet) ---

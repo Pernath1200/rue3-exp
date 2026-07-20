@@ -196,28 +196,31 @@ META (not tree fruit)
 | A1 leaf lemmas (rough) | ~200–280 | Productive core, not Oxford dump |
 | A1 trunk frames | ~50–60 lines | Glue only |
 
-### 3.2 A2 tree (target end-state)
+### 3.2 A2 tree (target end-state) — **vocab redesign 2026-07-20**
+
+> **Grammar (tense, aspect, comparison-as-structure) = RUE2 roots, not RUE3.**  
+> See `docs/A2-VOCAB-NOT-GRAMMAR.md`.
 
 ```
-TRUNK (A2)
-  ├─ Past frames · was/were / regular past glue   [frames]
-  ├─ Comparatives & quantity (some/any/much/many) [frames]
-  └─ A2 prepositions / chunks (time: in/on/at)    [frames · extend A1 place]
+TRUNK (A2) — few bands, thickening only
+  ├─ Core · recycle (A1 frames, denser slots)     [lexis frames]
+  ├─ Core · high-freq A2 lexis                     [gap on lemma]
+  └─ Everyday chunks (phrases)                     [V_PHR · not tenses]
 
-LEAVES (A2)
-  ├─ Travel & holidays
-  ├─ Health & body
-  ├─ Shopping & money
-  ├─ Work & study (extend A1 Work)
-  ├─ Home life (extend — chores, furniture mid-band)
-  └─ Nature & weather
+CANOPY (A2) — main mass · themed leaves
+  ├─ Travel · Health · Home · Work · Family · Food · Shopping
+  ├─ Routine · Free time · Nature · Tech · School · …
+  └─ (optional later: split mega describing/verbs into themes)
+
+NOT ON RUE3 A2
+  ✗ Past / Perfect / Future / Compare / Quantity-grammar / Time-prep units
 
 META
-  ├─ Today’s mix (A1+A2)
-  └─ A2 Level check → unlock B1
+  ├─ Today / SRS (thickens A1 automation in background)
+  └─ A2 Level check → unlock B1 (later)
 ```
 
-A2 leaves may **re-parent** or **level-tag** extensions; prefer new files `a2_*.json` even when theme continues.
+A2 leaves use files `a2_*.json`. Prefer domain lexis over grammar frames.
 
 ---
 

@@ -1,88 +1,103 @@
 {
   "id": "a2_core_frames_chunks",
-  "title": "Chunks & formulae",
+  "title": "Everyday chunks",
   "level": "A2",
   "tree_node": "trunk_chunks_a2",
   "codex_unit": "V_PHR-A1B1-01",
   "practice": "frames",
-  "note": "A2 frames · V_PHR-A1B1-01",
+  "note": "Lexical phrases / formulae only (V_PHR). Not a grammar syllabus — gap targets the chunk, present-time models.",
   "default_direction": "cz_to_en",
   "blocks": [
     {
-      "id": "a2_core_frames_chunks_1",
-      "title": "Chunks & formulae · 1",
+      "id": "chunks_everyday",
+      "title": "Chunks · everyday",
       "items": [
-        {
-          "en": "According to the news, it's true.",
-          "cz": "Podle zpráv je to pravda.",
-          "gap": "____ to the news, it's true.",
-          "gap_answer": "According"
-        },
         {
           "en": "Are you all right?",
           "cz": "Jsi v pořádku?",
-          "gap": "Are you ____ right?",
-          "gap_answer": "all"
-        },
-        {
-          "en": "I don't live here any more.",
-          "cz": "Už tu nebydlím.",
-          "gap": "I don't live here ____ more.",
-          "gap_answer": "any"
-        },
-        {
-          "en": "Ten per cent of people agree.",
-          "cz": "Deset procent lidí souhlasí.",
-          "gap": "Ten ____ cent of people agree.",
-          "gap_answer": "per"
-        },
-        {
-          "en": "I used to play football.",
-          "cz": "Dřív jsem hrál fotbal.",
-          "gap": "I ____ to play football.",
-          "gap_answer": "used"
-        },
-        {
-          "en": "What about you?",
-          "cz": "A co ty?",
-          "gap": "What ____ you?",
-          "gap_answer": "about"
+          "gap": "Are you ____?",
+          "gap_answer": "all right",
+          "gap_accepts": ["alright"],
+          "accepts": ["Are you all right?", "Are you alright?"]
         },
         {
           "en": "Of course I can help.",
           "cz": "Samozřejmě můžu pomoct.",
-          "gap": "Of ____ I can help.",
-          "gap_answer": "course"
+          "gap": "____ I can help.",
+          "gap_answer": "Of course",
+          "accepts": ["Of course I can help."]
+        },
+        {
+          "en": "What about you?",
+          "cz": "A co ty?",
+          "gap": "____ you?",
+          "gap_answer": "What about",
+          "accepts": ["What about you?"]
+        },
+        {
+          "en": "I'd like a coffee, please.",
+          "cz": "Dal bych si kávu, prosím. / Dala bych si kávu, prosím.",
+          "gap": "____ a coffee, please.",
+          "gap_answer": "I'd like",
+          "gap_accepts": ["I would like"],
+          "accepts": ["I'd like a coffee, please.", "I would like a coffee, please."]
         },
         {
           "en": "I'm not sure.",
-          "cz": "Nejsem si jistý.",
+          "cz": "Nejsem si jistý. / Nejsem si jistá.",
           "gap": "I'm not ____.",
-          "gap_answer": "sure"
+          "gap_answer": "sure",
+          "accepts": ["I'm not sure.", "I am not sure."]
         },
         {
           "en": "It depends on the weather.",
           "cz": "Záleží na počasí.",
-          "gap": "It depends ____ the weather.",
-          "gap_answer": "on"
+          "gap": "It ____ on the weather.",
+          "gap_answer": "depends",
+          "accepts": ["It depends on the weather."]
         },
         {
-          "en": "I'd like a coffee, please.",
-          "cz": "Dal bych si kávu, prosím.",
-          "gap": "I'd ____ a coffee, please.",
-          "gap_answer": "like"
+          "en": "According to the map, we are here.",
+          "cz": "Podle mapy jsme tady.",
+          "gap": "____ the map, we are here.",
+          "gap_answer": "According to",
+          "accepts": ["According to the map, we are here."]
         },
         {
-          "en": "Could you help me?",
-          "cz": "Mohl bys mi pomoct?",
-          "gap": "____ you help me?",
-          "gap_answer": "Could"
+          "en": "I don't live here any more.",
+          "cz": "Už tu nebydlím.",
+          "gap": "I don't live here ____.",
+          "gap_answer": "any more",
+          "gap_accepts": ["anymore"],
+          "accepts": ["I don't live here any more.", "I don't live here anymore."]
         },
         {
-          "en": "Do you mind waiting?",
-          "cz": "Vadí ti počkat?",
-          "gap": "Do you ____ waiting?",
-          "gap_answer": "mind"
+          "en": "See you later.",
+          "cz": "Uvidíme se později.",
+          "gap": "See you ____.",
+          "gap_answer": "later",
+          "accepts": ["See you later."]
+        },
+        {
+          "en": "Have a nice day.",
+          "cz": "Hezký den.",
+          "gap": "Have a ____ day.",
+          "gap_answer": "nice",
+          "accepts": ["Have a nice day."]
+        },
+        {
+          "en": "No problem.",
+          "cz": "Žádný problém. / Není zač.",
+          "gap": "No ____.",
+          "gap_answer": "problem",
+          "accepts": ["No problem."]
+        },
+        {
+          "en": "Take a seat, please.",
+          "cz": "Posaďte se, prosím.",
+          "gap": "Take a ____, please.",
+          "gap_answer": "seat",
+          "accepts": ["Take a seat, please."]
         }
       ]
     }

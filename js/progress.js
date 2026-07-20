@@ -315,10 +315,17 @@ export function getDueUnits(nodes, opts = {}) {
   const limit = opts.limit != null ? opts.limit : REVIEW_DAILY_CAP;
   const now = opts.now != null ? opts.now : Date.now();
   const level = opts.level;
+  // A2 thickening: also surface due A1 units (re-practise A1 words) without listing them on the A2 map.
+  const levelOk = (nodeLevels) => {
+    if (!level || !Array.isArray(nodeLevels)) return true;
+    if (nodeLevels.includes(level)) return true;
+    if (level === "A2" && nodeLevels.includes("A1")) return true;
+    return false;
+  };
   const due = [];
   for (const node of nodes || []) {
     if (!node || !node.id || node.id === "trunk" || node.status !== "live") continue;
-    if (level && Array.isArray(node.levels) && !node.levels.includes(level)) continue;
+    if (!levelOk(node.levels)) continue;
     if (nodeProgressState(node.id, { isLive: true }) !== "fruit") continue;
     const rev = getNodeReview(node.id);
     if (!rev.nextDueAt) continue;
