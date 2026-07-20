@@ -334,7 +334,8 @@
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_shopping.json",
-      "note": "Live · P3 · money + shopping · 2×12"
+      "codex_unit": "V_THM-A1B1-06",
+      "note": "Live · V_THM-A1B1-06 · money + shopping · 3×12"
     },
     {
       "id": "leaf_ideas_a1",

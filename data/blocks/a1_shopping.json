@@ -3,7 +3,8 @@
   "title": "Shopping & money",
   "level": "A1",
   "tree_node": "leaf_shopping_a1",
-  "note": "P3 Oxford A1 shopping/money. Buy/sell/price + currencies. Sentence = fruit.",
+  "codex_unit": "V_THM-A1B1-06",
+  "note": "P3 Oxford A1 shopping/money + exp fill (discount/queue/wallet). Sentence = fruit. Codex V_THM-A1B1-06.",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -41,6 +42,25 @@
         { "en": "closed", "cz": "zavřeno" },
         { "en": "free (no cost)", "cz": "zdarma" }
       ]
+    },
+    {
+      "id": "shop_extra",
+      "title": "Shopping · more",
+      "items": [
+        { "en": "discount", "cz": "sleva" },
+        { "en": "sale", "cz": "výprodej" },
+        { "en": "offer", "cz": "nabídka" },
+        { "en": "refund", "cz": "vrácení peněz" },
+        { "en": "queue", "cz": "fronta" },
+        { "en": "counter", "cz": "pult (v obchodě)" },
+        { "en": "checkout", "cz": "pokladna" },
+        { "en": "wallet", "cz": "peněženka" },
+        { "en": "purse", "cz": "peněženka (dámská)" },
+        { "en": "try on", "cz": "vyzkoušet si (oblečení)" },
+        { "en": "market", "cz": "trh / tržiště" },
+        { "en": "department store", "cz": "obchodní dům" }
+      ]
     }
   ]
 }
+
