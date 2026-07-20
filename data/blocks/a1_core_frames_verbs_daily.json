@@ -48,7 +48,14 @@
           "cz": "Dělám domácí úkol.",
           "gap": "I ____ my homework.",
           "gap_answer": "do",
-          "accepts": ["I do my homework", "I do my homework."]
+          "accepts": [
+            "I do my homework",
+            "I do my homework.",
+            "I do homework",
+            "I do homework.",
+            "I do the homework",
+            "I do the homework."
+          ]
         },
         {
           "en": "I go to school.",
@@ -62,7 +69,13 @@
           "cz": "Přicházím domů v šest.",
           "gap": "I ____ home at six.",
           "gap_answer": "come",
-          "accepts": ["I come home at six", "I come home at 6."]
+          "gap_accepts": ["get"],
+          "accepts": [
+            "I come home at six",
+            "I come home at 6.",
+            "I get home at six.",
+            "I get home at 6."
+          ]
         },
         {
           "en": "I eat bread.",

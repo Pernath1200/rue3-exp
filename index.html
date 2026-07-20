@@ -33,10 +33,13 @@
       <div class="rail-label">Level</div>
       <div id="level-rail" class="level-rail" role="toolbar" aria-label="CEFR level"></div>
 
+      <div class="card" id="today-card" aria-live="polite"></div>
+
       <div class="card" id="gate-card"></div>
 
       <div class="card">
         <h2>Sapling · <span id="tree-caption">…</span></h2>
+        <div id="level-meters" class="level-meters" aria-live="polite"></div>
         <p class="tree-legend">The tree fills as you complete units · trunk bands = frames · canopy leaves = domains · labels stay quiet</p>
         <div class="tree-wrap">
           <svg id="tree-svg" class="tree-svg" role="img" aria-label="Vocabulary tree for selected level"></svg>

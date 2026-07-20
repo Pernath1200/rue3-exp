@@ -68,6 +68,8 @@ function norm(s) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[''`´]/g, "")
+    // o'clock / oclock / o clock → same form (apostrophe optional)
+    .replace(/\bo\s*clock\b/g, "oclock")
     .replace(/[.,!?;:"()\-–—]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
@@ -188,6 +190,10 @@ function diagramSvg(key) {
     `<circle cx="${cx}" cy="${cy}" r="16" fill="#e88a3c" stroke="#c56f27" stroke-width="2"/>`;
   const dash = (x1, y1, x2, y2) =>
     `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#4db6c7" stroke-width="2" stroke-dasharray="5 5"/>`;
+  // Vertical “street / table middle” — opposite = across from
+  const divider = () =>
+    `<line x1="110" y1="48" x2="110" y2="128" stroke="#4db6c7" stroke-width="2" stroke-dasharray="4 4" opacity="0.85"/>` +
+    `<line x1="95" y1="130" x2="125" y2="130" stroke="#4db6c7" stroke-width="2" opacity="0.5"/>`;
   const svg = (inner) =>
     `<svg viewBox="0 0 220 150" class="scene" aria-hidden="true">${inner}</svg>`;
   const scenes = {
@@ -199,8 +205,15 @@ function diagramSvg(key) {
     between: () => svg(box(22, 70, 46, 45) + box(152, 70, 46, 45) + ball(110, 92)),
     "in front of": () => svg(box(80, 56, 78, 40) + ball(102, 104)),
     behind: () => svg(ball(112, 64) + box(72, 74, 80, 44)),
-    opposite: () => svg(box(22, 70, 46, 45) + box(152, 70, 46, 45) + dash(72, 92, 148, 92)),
-    near: () => svg(box(40, 70, 54, 45) + ball(170, 92) + dash(98, 92, 150, 92)),
+    // Wide gap + middle line = across from (not “close”)
+    opposite: () => svg(divider() + ball(42, 90) + box(148, 68, 54, 45)),
+    // Small gap, same side of the scene, short tick — close but not touching
+    near: () =>
+      svg(
+        box(55, 70, 60, 45) +
+          ball(148, 92) +
+          dash(120, 92, 130, 92),
+      ),
   };
   const fn = scenes[key];
   return fn ? fn() : "";
@@ -475,43 +488,79 @@ export function startPractice(root, block, opts) {
     return `Matched ${doneCount} of ${m.total}`;
   }
 
-  function newQuiz() {
+  /** @param {number[] | null} onlyIndices item indices to practice (retry wrong) */
+  function newQuiz(onlyIndices) {
     const list = block.items;
+    const order =
+      onlyIndices && onlyIndices.length
+        ? shuffle(onlyIndices.slice())
+        : shuffle(list.map((_, i) => i));
     state.quiz = {
-      order: shuffle(list.map((_, i) => i)),
+      order,
       pos: 0,
       score: 0,
       answered: false,
+      wrong: [], // item indices missed this pass
+      retryPass: Boolean(onlyIndices && onlyIndices.length),
     };
   }
 
   function renderQuiz(stage) {
     const list = block.items;
-    if (!state.quiz || state.quiz.order.length !== list.length) newQuiz();
+    if (!state.quiz) newQuiz();
     const q = state.quiz;
+    const passLen = q.order.length;
 
     if (q.pos >= q.order.length) {
-      reportMode("quiz", { score: q.score, total: list.length });
+      const wrongN = q.wrong.length;
+      reportMode("quiz", { score: q.score, total: passLen });
+      const sub =
+        wrongN > 0
+          ? `${wrongN} to retry · or continue to Word`
+          : "All correct · next: Word";
       stage.innerHTML = `
         <div class="q">
           <div class="prompt">Quiz done</div>
-          <div class="scoreline">${q.score} / ${list.length}</div>
-          <div class="sub">Enter continues</div>
+          <div class="scoreline">${q.score} / ${passLen}</div>
+          <div class="sub">${sub}${q.retryPass ? " (retry pass)" : ""}</div>
           <div class="nav">
-            <button type="button" class="btn" id="q-again">Try again</button>
-            <button type="button" class="btn primary" id="q-type">3 · Word →</button>
+            ${
+              wrongN > 0
+                ? `<button type="button" class="btn primary" id="q-retry">Retry wrong (${wrongN})</button>
+                   <button type="button" class="btn" id="q-type">3 · Word →</button>`
+                : `<button type="button" class="btn" id="q-again">Try full set</button>
+                   <button type="button" class="btn primary" id="q-type">3 · Word →</button>`
+            }
           </div>
+          ${
+            wrongN > 0
+              ? `<button type="button" class="link" id="q-again">Try full set</button>`
+              : ""
+          }
         </div>`;
-      stage.querySelector("#q-again").onclick = () => {
-        newQuiz();
-        render();
-      };
+      const retryBtn = stage.querySelector("#q-retry");
+      if (retryBtn) {
+        retryBtn.onclick = () => {
+          newQuiz(q.wrong.slice());
+          render();
+        };
+      }
       stage.querySelector("#q-type").onclick = () => setMode("type");
+      const again = stage.querySelector("#q-again");
+      if (again) {
+        again.onclick = () => {
+          newQuiz();
+          render();
+        };
+      }
       bindEnterPrimary(stage);
-      return "Finished";
+      return wrongN > 0
+        ? `Finished · ${wrongN} wrong`
+        : `Finished · ${q.score}/${passLen}`;
     }
 
-    const it = list[q.order[q.pos]];
+    const itemIndex = q.order[q.pos];
+    const it = list[itemIndex];
     const correct = answerOf(it, state.czToEn);
     const others = shuffle(
       list.filter((x) => answerOf(x, state.czToEn) !== correct),
@@ -556,6 +605,7 @@ export function startPractice(root, block, opts) {
         buttons[i].classList.add("wrong");
         const ci = opts.indexOf(correct);
         if (ci >= 0) buttons[ci].classList.add("correct");
+        if (!q.wrong.includes(itemIndex)) q.wrong.push(itemIndex);
       }
       // Auto-advance; Enter skips the wait
       state.advanceTimer = setTimeout(goNextQuestion, 750);
@@ -585,7 +635,8 @@ export function startPractice(root, block, opts) {
     };
     document.addEventListener("keydown", state.keyHandler);
 
-    return `Question ${q.pos + 1} of ${list.length} · Score ${q.score}`;
+    const passLabel = q.retryPass ? "retry" : "set";
+    return `Question ${q.pos + 1} of ${passLen} (${passLabel}) · Score ${q.score}`;
   }
 
   /** @param {number[] | null} onlyIndices item indices to practice (retry wrong) */

@@ -70,8 +70,13 @@
           "cz": "Jsou tři hodiny. / Je třetí hodina.",
           "gap": "It's three ____.",
           "gap_answer": "o'clock",
-          "gap_accepts": ["oclock"],
-          "accepts": ["It is three o'clock.", "It's 3 o'clock.", "It's three oclock."]
+          "gap_accepts": ["oclock", "o clock"],
+          "accepts": [
+            "It is three o'clock.",
+            "It's 3 o'clock.",
+            "It's three oclock.",
+            "It's three o clock."
+          ]
         },
         {
           "en": "I get up at six.",

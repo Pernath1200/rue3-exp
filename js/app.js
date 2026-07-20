@@ -5,6 +5,7 @@
 
 import { startPractice } from "./practice.js";
 import { startA1Gate } from "./gate.js";
+import { startReviewQueue } from "./review.js";
 import {
   loadProgress,
   touchBlock,
@@ -12,6 +13,16 @@ import {
   getBlockProgress,
   nodeProgressState,
   progressLabel,
+  levelUnitStats,
+  MASTERY_REPS,
+  migrateLearnedNodes,
+  getDueUnits,
+  getRecentActivity,
+  suggestNextUnit,
+  getNodeReview,
+  formatRelativeTime,
+  formatDueLabel,
+  forceAllDue,
   isLevelUnlocked,
   isAuthorUnlock,
   setAuthorUnlock,
@@ -87,6 +98,7 @@ function renderRail() {
         STATE.selectedId = null;
         renderRail();
         renderTree();
+        renderTodayCard();
         renderDetail(null);
       });
     }
@@ -95,6 +107,136 @@ function renderRail() {
 
   renderAuthorHint();
   renderGateCard();
+}
+
+function liveUnitsForLevel(level) {
+  return (STATE.tree?.nodes || []).filter(
+    (n) =>
+      n.id !== "trunk" &&
+      n.status === "live" &&
+      Array.isArray(n.levels) &&
+      n.levels.includes(level),
+  );
+}
+
+function renderTodayCard() {
+  const el = document.getElementById("today-card");
+  if (!el || !STATE.tree) return;
+  el.hidden = false;
+  const level = STATE.level;
+  const live = liveUnitsForLevel(level);
+  const due = getDueUnits(STATE.tree.nodes, { level, limit: 8 });
+  const recent = getRecentActivity(STATE.tree.nodes, { limit: 3 });
+  const next = suggestNextUnit(STATE.tree.nodes, level);
+
+  const dueList =
+    due.length === 0
+      ? `<p class="today-empty">Nothing due — nice. Learn something new on the tree, or finish Sentence on a unit to schedule reviews.</p>`
+      : `<ul class="today-list">
+          ${due
+            .slice(0, 5)
+            .map(
+              (u) =>
+                `<li><button type="button" class="today-link" data-select="${escapeXml(u.nodeId)}">${escapeXml(u.label)}</button></li>`,
+            )
+            .join("")}
+          ${due.length > 5 ? `<li class="today-more">+${due.length - 5} more in queue</li>` : ""}
+        </ul>`;
+
+  const recentList =
+    recent.length === 0
+      ? `<p class="today-empty">No recent activity yet.</p>`
+      : `<ul class="today-list">
+          ${recent
+            .map((e) => {
+              const verb =
+                e.kind === "reviewed"
+                  ? e.meta?.result === "fail"
+                    ? "Reviewed (retry soon)"
+                    : "Reviewed"
+                  : "Learned";
+              return `<li><strong>${escapeXml(verb)}</strong> ${escapeXml(e.label)} · ${escapeXml(formatRelativeTime(e.at))}</li>`;
+            })
+            .join("")}
+        </ul>`;
+
+  const coverHtml = next
+    ? `<p class="today-cover"><strong>Cover next:</strong>
+         <button type="button" class="today-link" data-select="${escapeXml(next.nodeId)}">${escapeXml(next.label)}</button>
+         <span class="today-muted">(${next.state === "partial" ? "started" : "not started"})</span>
+       </p>`
+    : `<p class="today-empty">All live units on ${escapeXml(level)} are started — keep reviewing.</p>`;
+
+  const primary =
+    due.length > 0
+      ? `<button type="button" class="btn primary" id="btn-start-reviews">Start reviews (${due.length})</button>`
+      : next
+        ? `<button type="button" class="btn primary" id="btn-cover-next">Open ${escapeXml(next.label)} →</button>`
+        : `<button type="button" class="btn primary" id="btn-browse-tree">Browse tree</button>`;
+
+  el.innerHTML = `
+    <h2>Today · ${escapeXml(level)}</h2>
+    <p class="tree-legend">Topics to cover · what needs repeating · what you did recently. Reviews are whole units (words live inside).</p>
+    <div class="today-grid">
+      <div class="today-block">
+        <div class="today-label">Due now <span class="today-badge">${due.length}</span></div>
+        ${dueList}
+      </div>
+      <div class="today-block">
+        <div class="today-label">Recently</div>
+        ${recentList}
+      </div>
+    </div>
+    ${coverHtml}
+    <div class="today-actions">
+      ${primary}
+      ${due.length > 0 && next ? `<button type="button" class="btn" id="btn-cover-next">Learn new instead</button>` : ""}
+      ${isAuthorUnlock() ? `<button type="button" class="btn" id="btn-force-due" title="Author: mark all scheduled units due now">Force due (test)</button>` : ""}
+    </div>
+  `;
+
+  el.querySelectorAll("[data-select]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-select");
+      const node = STATE.tree.nodes.find((n) => n.id === id);
+      if (!node) return;
+      STATE.selectedId = id;
+      renderTree();
+      renderDetail(node);
+      document.getElementById("node-detail")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  });
+
+  const startBtn = el.querySelector("#btn-start-reviews");
+  if (startBtn) startBtn.addEventListener("click", () => openReviewQueue(due));
+
+  const coverBtn = el.querySelector("#btn-cover-next");
+  if (coverBtn && next) {
+    coverBtn.addEventListener("click", () => {
+      const node = STATE.tree.nodes.find((n) => n.id === next.nodeId);
+      if (!node) return;
+      STATE.selectedId = next.nodeId;
+      renderTree();
+      renderDetail(node);
+      document.getElementById("node-detail")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  }
+
+  const browse = el.querySelector("#btn-browse-tree");
+  if (browse) {
+    browse.addEventListener("click", () => {
+      document.getElementById("tree-svg")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  }
+
+  const force = el.querySelector("#btn-force-due");
+  if (force) {
+    force.addEventListener("click", () => {
+      forceAllDue();
+      renderTodayCard();
+      renderTree();
+    });
+  }
 }
 
 function renderGateCard() {
@@ -311,6 +453,43 @@ function escapeXml(s) {
     .replace(/"/g, "&quot;");
 }
 
+/**
+ * Three honest meters: learned (fruit) · remembered (≥1 review) · mastered (≥4 reviews).
+ * Review meters stay at 0 until Phase 2 SRS writes node successfulReps.
+ */
+function renderLevelMeters(level, nodes) {
+  const el = document.getElementById("level-meters");
+  if (!el) return;
+  const s = levelUnitStats(level, nodes);
+  const t = s.total || 0;
+  const pct = (n) => (t ? Math.round((100 * n) / t) : 0);
+  const bar = (n, kind) => {
+    const p = pct(n);
+    return `
+      <div class="meter-row meter-${kind}">
+        <div class="meter-label">${kind === "learned" ? "Learned" : kind === "remembered" ? "Remembered" : "Mastered"}</div>
+        <div class="meter-track" role="progressbar" aria-valuemin="0" aria-valuemax="${t}" aria-valuenow="${n}" aria-label="${kind} ${n} of ${t}">
+          <div class="meter-fill" style="width:${p}%"></div>
+        </div>
+        <div class="meter-count">${n}/${t}</div>
+      </div>`;
+  };
+  el.innerHTML = `
+    <div class="meters-head">
+      <span class="meters-title">${level} progress</span>
+      <span class="meters-sub">${s.partial ? `+${s.partial} started · ` : ""}${t} units</span>
+    </div>
+    ${bar(s.learned, "learned")}
+    ${bar(s.remembered, "remembered")}
+    ${bar(s.mastered, "mastered")}
+    <p class="meters-hint">
+      <strong>Learned</strong> = finished Sentence on that unit.
+      <strong>Remembered</strong> = at least one spaced review.
+      <strong>Mastered</strong> = ${MASTERY_REPS} successful reviews.
+      Use <strong>Today</strong> above for due topics.
+    </p>`;
+}
+
 function renderTree() {
   const nodes = nodesForLevel(STATE.level);
   const svg = document.getElementById("tree-svg");
@@ -331,7 +510,9 @@ function renderTree() {
     if (st === "fruit") fruitN++;
     else if (st === "partial") partialN++;
   }
-  caption.textContent = `${STATE.level} ${stage} · fruit ${fruitN}/${liveNodes.length} · unlock: ${unlocked}`;
+  const dueN = getDueUnits(STATE.tree?.nodes || [], { level: STATE.level }).length;
+  caption.textContent = `${STATE.level} ${stage} · fruit ${fruitN}/${liveNodes.length}${dueN ? ` · due ${dueN}` : ""} · unlock: ${unlocked}`;
+  renderLevelMeters(STATE.level, nodes);
 
   // --- Fixed skeleton (always visible, quiet) ---
   let scenery = "";
@@ -450,6 +631,16 @@ function renderDetail(node) {
   const progBadge = progText
     ? `<span class="badge prog-${prog}" style="margin-left:0.35rem">${escapeXml(progText)}</span>`
     : "";
+  const rev = getNodeReview(node.id);
+  let scheduleLine = "";
+  if (prog === "fruit" || rev.nextDueAt) {
+    const bits = [];
+    if (rev.successfulReps >= MASTERY_REPS) bits.push("Mastered");
+    else if (rev.successfulReps >= 1) bits.push(`Remembered · ${rev.successfulReps}×`);
+    else bits.push("Learned · not reviewed yet");
+    if (rev.nextDueAt) bits.push(formatDueLabel(rev.nextDueAt));
+    scheduleLine = `<p class="detail-schedule">${escapeXml(bits.join(" · "))}</p>`;
+  }
 
   let actions = "";
   if (node.status === "live" && node.content) {
@@ -465,6 +656,7 @@ function renderDetail(node) {
       <span class="badge ${badge}" style="margin-left:0.5rem">${escapeXml(badge)}</span>
       ${progBadge}
     </div>
+    ${scheduleLine}
     <dl class="detail">
       <dt>id</dt><dd><code>${escapeXml(node.id)}</code></dd>
       <dt>kind</dt><dd>${escapeXml(node.kind)}</dd>
@@ -520,6 +712,16 @@ async function loadAndShowBlocks(node) {
   }
 }
 
+function refreshMap() {
+  showMap();
+  renderRail();
+  renderTodayCard();
+  renderTree();
+  renderGateCard();
+  const node = STATE.tree.nodes.find((n) => n.id === STATE.selectedId);
+  renderDetail(node || null);
+}
+
 function openPractice(block, pack) {
   showPractice();
   const root = document.getElementById("practice-root");
@@ -537,13 +739,25 @@ function openPractice(block, pack) {
         total: meta.total,
       });
     },
-    onExit: () => {
-      showMap();
-      renderRail();
-      renderTree();
-      const node = STATE.tree.nodes.find((n) => n.id === STATE.selectedId);
-      renderDetail(node || null);
+    onExit: () => refreshMap(),
+  });
+}
+
+async function openReviewQueue(dueList) {
+  const units =
+    dueList ||
+    getDueUnits(STATE.tree.nodes, { level: STATE.level, limit: 8 });
+  showPractice();
+  const root = document.getElementById("practice-root");
+  startReviewQueue(root, {
+    units: units.map((u) => ({ nodeId: u.nodeId, label: u.label })),
+    loadPack: async (nodeId) => {
+      const node = STATE.tree.nodes.find((n) => n.id === nodeId);
+      if (!node || !node.content) return null;
+      return loadJson(`./data/${node.content}`);
     },
+    onExit: () => refreshMap(),
+    onDone: () => refreshMap(),
   });
 }
 
@@ -556,24 +770,13 @@ function openA1Gate() {
   startA1Gate(root, {
     loadJson,
     a1LiveNodes: a1Live,
-    onExit: () => {
-      showMap();
-      renderRail();
-      renderTree();
-      renderGateCard();
-      const node = STATE.tree.nodes.find((n) => n.id === STATE.selectedId);
-      renderDetail(node || null);
-    },
+    onExit: () => refreshMap(),
     onDone: (opts) => {
-      showMap();
       if (opts && opts.goLevel === "A2" && isLevelUnlocked("A2")) {
         STATE.level = "A2";
         STATE.selectedId = null;
       }
-      renderRail();
-      renderTree();
-      renderGateCard();
-      renderDetail(null);
+      refreshMap();
     },
   });
 }
@@ -585,6 +788,7 @@ function wireUtilBar() {
     const next = !isAuthorUnlock();
     setAuthorUnlock(next);
     renderRail();
+    renderTodayCard();
     renderTree();
     btn.textContent = next ? "Author unlock: on" : "Author unlock";
     btn.setAttribute("aria-pressed", next ? "true" : "false");
@@ -602,8 +806,18 @@ async function init() {
     // Sticky author unlock from ?unlock=all
     isAuthorUnlock();
     STATE.tree = await loadJson("./data/tree.json");
+    // Fruit units from older sessions get staggered first-review dates
+    migrateLearnedNodes(STATE.tree.nodes);
+    // Author smoke: ?review=due marks all scheduled units due now
+    try {
+      const q = new URLSearchParams(location.search);
+      if (q.get("review") === "due") forceAllDue();
+    } catch {
+      /* ignore */
+    }
     wireUtilBar();
     renderRail();
+    renderTodayCard();
     renderTree();
     const live = STATE.tree.nodes.find((n) => n.status === "live");
     if (live) {

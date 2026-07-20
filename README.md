@@ -24,9 +24,12 @@ Enable **Settings → Pages → Deploy from branch `main` / root** for
 
 - Level rail: **A1 open** · **A2 unlocks** after A1 level check (80%) · B1/B2 locked · C1 not yet
 - **Author unlock** (util bar or `?unlock=all`) opens A2–B2 for content writing (local only)
+- **Today** card: due units · recent activity · cover-next suggestion · **Start reviews**
+- Unit-level SRS: finish Sentence → schedule review; pass reviews → Remembered / Mastered meters
 - Tree board + honest progress (untouched / touched / fruit) via `localStorage`
 - Practice ladder: Match → Quiz → Word · Sentence · thin **A1 level check**
 - Full A1 sapling content (trunk frames + canopy leaves); A2 content next
+- Author smoke: `?review=due` or **Force due (test)** when author unlock is on
 
 ## Progress
 
