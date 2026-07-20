@@ -382,6 +382,7 @@ function treeLabel(node) {
     trunk_glue_modals_a1: "Will · must",
     trunk_verbs_more_a1: "Verbs · more",
     trunk_verbs_more2_a1: "Verbs · more 2",
+    trunk_verbs_more3_a1: "Verbs · more 3",
     trunk_glue_pronouns_a1: "Pronouns",
     leaf_home_family: "Home",
     leaf_places: "Places",

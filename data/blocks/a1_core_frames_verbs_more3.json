@@ -1,0 +1,102 @@
+{
+  "id": "a1_core_frames_verbs_more3",
+  "title": "Core frames · Verbs · more 3",
+  "level": "A1",
+  "tree_node": "trunk_verbs_more3_a1",
+  "codex_unit": "V_COR-A1B1-01",
+  "practice": "frames",
+  "note": "Oxford A1 residual high-freq verbs · V_COR-A1B1-01 · gap on the verb.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "verbs_more3_seed",
+      "title": "Verbs · more (C)",
+      "items": [
+        {
+          "en": "I believe you.",
+          "cz": "Věřím ti.",
+          "gap": "I ____ you.",
+          "gap_answer": "believe",
+          "accepts": ["I believe you", "I believe you."]
+        },
+        {
+          "en": "I hope so.",
+          "cz": "Doufám, že ano.",
+          "gap": "I ____ so.",
+          "gap_answer": "hope",
+          "accepts": ["I hope so", "I hope so."]
+        },
+        {
+          "en": "What does this mean?",
+          "cz": "Co to znamená?",
+          "gap": "What does this ____?",
+          "gap_answer": "mean",
+          "accepts": ["What does this mean?", "What does this mean"]
+        },
+        {
+          "en": "I miss my family.",
+          "cz": "Chybí mi rodina.",
+          "gap": "I ____ my family.",
+          "gap_answer": "miss",
+          "accepts": ["I miss my family", "I miss my family."]
+        },
+        {
+          "en": "I prepare dinner.",
+          "cz": "Připravuju večeři.",
+          "gap": "I ____ dinner.",
+          "gap_answer": "prepare",
+          "accepts": ["I prepare dinner", "I prepare dinner."]
+        },
+        {
+          "en": "We share a flat.",
+          "cz": "Sdílíme byt.",
+          "gap": "We ____ a flat.",
+          "gap_answer": "share",
+          "accepts": ["We share a flat", "We share a flat."]
+        },
+        {
+          "en": "I spend money on food.",
+          "cz": "Utrácím peníze za jídlo.",
+          "gap": "I ____ money on food.",
+          "gap_answer": "spend",
+          "accepts": ["I spend money on food", "I spend money on food."]
+        },
+        {
+          "en": "I agree with you.",
+          "cz": "Souhlasím s tebou.",
+          "gap": "I ____ with you.",
+          "gap_answer": "agree",
+          "accepts": ["I agree with you", "I agree with you."]
+        },
+        {
+          "en": "Can you explain it?",
+          "cz": "Můžeš to vysvětlit?",
+          "gap": "Can you ____ it?",
+          "gap_answer": "explain",
+          "accepts": ["Can you explain it?", "Can you explain it"]
+        },
+        {
+          "en": "Please follow me.",
+          "cz": "Prosím, pojď za mnou. / Následuj mě.",
+          "gap": "Please ____ me.",
+          "gap_answer": "follow",
+          "accepts": ["Please follow me", "Please follow me."]
+        },
+        {
+          "en": "I want to join the club.",
+          "cz": "Chci vstoupit do klubu.",
+          "gap": "I want to ____ the club.",
+          "gap_answer": "join",
+          "accepts": ["I want to join the club", "I want to join the club."]
+        },
+        {
+          "en": "What happens next?",
+          "cz": "Co se stane dál?",
+          "gap": "What ____ next?",
+          "gap_answer": "happens",
+          "accepts": ["What happens next?", "What happens next"]
+        }
+      ]
+    }
+  ]
+}

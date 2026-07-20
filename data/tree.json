@@ -165,6 +165,17 @@
       "note": "Live · P7 · more verbs B · 12 frames"
     },
     {
+      "id": "trunk_verbs_more3_a1",
+      "label": "Verbs · more 3",
+      "kind": "trunk",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_core_frames_verbs_more3.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · V_COR-A1B1-01 · residual high-freq verbs C · 12 frames · gap on verb"
+    },
+    {
       "id": "trunk_glue_pronouns_a1",
       "label": "Pronouns",
       "kind": "trunk",
