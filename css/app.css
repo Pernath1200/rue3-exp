@@ -154,8 +154,18 @@ h1 {
 .level-btn.is-locked {
   border-color: var(--locked);
   color: var(--locked);
-  cursor: not-allowed;
   opacity: 0.85;
+}
+.level-btn:disabled {
+  cursor: not-allowed;
+}
+/* Locked but clickable (A2–B2 → author unlock) */
+.level-btn.is-locked:not(:disabled) {
+  cursor: pointer;
+}
+.level-btn.is-locked:not(:disabled):hover {
+  border-color: var(--accent);
+  color: var(--text-muted);
 }
 
 .level-btn .tag {

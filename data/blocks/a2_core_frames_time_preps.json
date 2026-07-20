@@ -1,0 +1,103 @@
+{
+  "id": "a2_core_frames_time_preps",
+  "title": "Core frames · Time prepositions",
+  "level": "A2",
+  "tree_node": "trunk_time_preps_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "practice": "frames",
+  "note": "A2 in / on / at for time (contrast with place preps on A1 trunk). Gap on the preposition.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "time_preps_seed",
+      "title": "Time · in / on / at",
+      "items": [
+        {
+          "en": "I get up at seven.",
+          "cz": "Vstávám v sedm.",
+          "gap": "I get up ____ seven.",
+          "gap_answer": "at",
+          "accepts": ["I get up at seven", "I get up at 7."]
+        },
+        {
+          "en": "The meeting is at three o'clock.",
+          "cz": "Schůzka je ve tři hodiny.",
+          "gap": "The meeting is ____ three o'clock.",
+          "gap_answer": "at",
+          "accepts": ["The meeting is at three o'clock", "The meeting is at 3 o'clock."]
+        },
+        {
+          "en": "I work on Monday.",
+          "cz": "V pondělí pracuju.",
+          "gap": "I work ____ Monday.",
+          "gap_answer": "on",
+          "accepts": ["I work on Monday", "I work on Mondays."]
+        },
+        {
+          "en": "We go shopping on Saturday.",
+          "cz": "V sobotu jdeme nakupovat.",
+          "gap": "We go shopping ____ Saturday.",
+          "gap_answer": "on",
+          "accepts": ["We go shopping on Saturday", "We go shopping on Saturdays."]
+        },
+        {
+          "en": "My birthday is on 5 May.",
+          "cz": "Mám narozeniny 5. května.",
+          "gap": "My birthday is ____ 5 May.",
+          "gap_answer": "on",
+          "accepts": ["My birthday is on 5 May", "My birthday is on May 5."]
+        },
+        {
+          "en": "I was born in 1990.",
+          "cz": "Narodil jsem se v roce 1990. / Narodila jsem se v roce 1990.",
+          "gap": "I was born ____ 1990.",
+          "gap_answer": "in",
+          "accepts": ["I was born in 1990", "I was born in 1990."]
+        },
+        {
+          "en": "We go on holiday in summer.",
+          "cz": "V létě jezdíme na dovolenou.",
+          "gap": "We go on holiday ____ summer.",
+          "gap_answer": "in",
+          "accepts": ["We go on holiday in summer", "We go on vacation in summer."]
+        },
+        {
+          "en": "It rains a lot in April.",
+          "cz": "V dubnu hodně prší.",
+          "gap": "It rains a lot ____ April.",
+          "gap_answer": "in",
+          "accepts": ["It rains a lot in April", "It rains a lot in April."]
+        },
+        {
+          "en": "See you at the weekend.",
+          "cz": "Uvidíme se o víkendu.",
+          "gap": "See you ____ the weekend.",
+          "gap_answer": "at",
+          "gap_accepts": ["on"],
+          "accepts": ["See you at the weekend", "See you on the weekend."]
+        },
+        {
+          "en": "I study at night.",
+          "cz": "Učím se v noci.",
+          "gap": "I study ____ night.",
+          "gap_answer": "at",
+          "accepts": ["I study at night", "I study at night."]
+        },
+        {
+          "en": "The shop closes at six.",
+          "cz": "Obchod zavírá v šest.",
+          "gap": "The shop closes ____ six.",
+          "gap_answer": "at",
+          "accepts": ["The shop closes at six", "The shop closes at 6."]
+        },
+        {
+          "en": "We met on Friday evening.",
+          "cz": "Potkali jsme se v pátek večer.",
+          "gap": "We met ____ Friday evening.",
+          "gap_answer": "on",
+          "accepts": ["We met on Friday evening", "We met on Friday evening."]
+        }
+      ]
+    }
+  ]
+}

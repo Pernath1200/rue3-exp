@@ -1,0 +1,102 @@
+{
+  "id": "a2_core_frames_past",
+  "title": "Core frames · Past · was/were",
+  "level": "A2",
+  "tree_node": "trunk_past_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "practice": "frames",
+  "note": "A2 past glue — was/were + high-freq regular past in frames (not a conjugation table). Gap on past form or key content word.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "past_was_were_seed",
+      "title": "Past · was / were · seed",
+      "items": [
+        {
+          "en": "I was at home.",
+          "cz": "Byl jsem doma. / Byla jsem doma.",
+          "gap": "I ____ at home.",
+          "gap_answer": "was",
+          "accepts": ["I was at home", "I was home."]
+        },
+        {
+          "en": "She was tired.",
+          "cz": "Byla unavená.",
+          "gap": "She ____ tired.",
+          "gap_answer": "was",
+          "accepts": ["She was tired", "She was tired."]
+        },
+        {
+          "en": "They were happy.",
+          "cz": "Byli šťastní. / Byly šťastné.",
+          "gap": "They ____ happy.",
+          "gap_answer": "were",
+          "accepts": ["They were happy", "They were happy."]
+        },
+        {
+          "en": "It was cold yesterday.",
+          "cz": "Včera byla zima. / Bylo chladno.",
+          "gap": "It ____ cold yesterday.",
+          "gap_answer": "was",
+          "accepts": ["It was cold yesterday", "It was cold yesterday."]
+        },
+        {
+          "en": "We were in Prague.",
+          "cz": "Byli jsme v Praze.",
+          "gap": "We ____ in Prague.",
+          "gap_answer": "were",
+          "accepts": ["We were in Prague", "We were in Prague."]
+        },
+        {
+          "en": "I worked yesterday.",
+          "cz": "Včera jsem pracoval. / Včera jsem pracovala.",
+          "gap": "I ____ yesterday.",
+          "gap_answer": "worked",
+          "accepts": ["I worked yesterday", "I worked yesterday."]
+        },
+        {
+          "en": "I lived in Brno.",
+          "cz": "Bydlel jsem v Brně. / Bydlela jsem v Brně.",
+          "gap": "I ____ in Brno.",
+          "gap_answer": "lived",
+          "accepts": ["I lived in Brno", "I lived in Brno."]
+        },
+        {
+          "en": "She called me.",
+          "cz": "Zavolala mi.",
+          "gap": "She ____ me.",
+          "gap_answer": "called",
+          "accepts": ["She called me", "She called me."]
+        },
+        {
+          "en": "We played football.",
+          "cz": "Hráli jsme fotbal.",
+          "gap": "We ____ football.",
+          "gap_answer": "played",
+          "accepts": ["We played football", "We played soccer."]
+        },
+        {
+          "en": "I watched a film.",
+          "cz": "Díval jsem se na film. / Dívala jsem se na film.",
+          "gap": "I ____ a film.",
+          "gap_answer": "watched",
+          "accepts": ["I watched a film", "I watched a movie."]
+        },
+        {
+          "en": "He started work at nine.",
+          "cz": "Začal pracovat v devět.",
+          "gap": "He ____ work at nine.",
+          "gap_answer": "started",
+          "accepts": ["He started work at nine", "He started work at 9."]
+        },
+        {
+          "en": "I needed help.",
+          "cz": "Potřeboval jsem pomoc. / Potřebovala jsem pomoc.",
+          "gap": "I ____ help.",
+          "gap_answer": "needed",
+          "accepts": ["I needed help", "I needed help."]
+        }
+      ]
+    }
+  ]
+}

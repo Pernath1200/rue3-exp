@@ -84,12 +84,29 @@ function renderRail() {
     const locked = !isLevelUnlocked(lv);
     if (locked) {
       btn.classList.add("is-locked");
-      btn.disabled = true;
+      // Keep clickable for C1 message / author-unlock path (disabled buttons swallow clicks)
       btn.innerHTML = `${lv}<span class="tag">${lockTag(lv)}</span>`;
-      btn.title =
-        lv === "C1"
-          ? "Not yet"
-          : "Pass the previous level check to unlock (or author unlock)";
+      if (lv === "C1") {
+        btn.disabled = true;
+        btn.title = "Not yet";
+      } else {
+        btn.disabled = false;
+        btn.title = "Click to open author unlock (or pass the previous level check)";
+        btn.addEventListener("click", () => {
+          setAuthorUnlock(true);
+          const au = document.getElementById("btn-author-unlock");
+          if (au) {
+            au.textContent = "Author unlock: on";
+            au.setAttribute("aria-pressed", "true");
+          }
+          STATE.level = lv;
+          STATE.selectedId = null;
+          renderRail();
+          renderTree();
+          renderTodayCard();
+          renderDetail(null);
+        });
+      }
     } else {
       btn.setAttribute("aria-pressed", lv === STATE.level ? "true" : "false");
       btn.textContent = lv;
@@ -400,6 +417,10 @@ function treeLabel(node) {
     leaf_nature_a1: "Nature",
     leaf_shopping_a1: "Shopping",
     leaf_ideas_a1: "Ideas",
+    trunk_past_a2: "Past",
+    trunk_time_preps_a2: "Time preps",
+    leaf_travel_a2: "Travel",
+    leaf_health_a2: "Health",
   };
   return short[node.id] || node.label;
 }
@@ -808,6 +829,10 @@ async function init() {
     // Sticky author unlock from ?unlock=all
     isAuthorUnlock();
     STATE.tree = await loadJson("./data/tree.json");
+    // Exp / content-writing trees open A2–B2 without gate (student story still uses gate on stable)
+    if (STATE.tree.author_open && !isAuthorUnlock()) {
+      setAuthorUnlock(true);
+    }
     // Fruit units from older sessions get staggered first-review dates
     migrateLearnedNodes(STATE.tree.nodes);
     // Author smoke: ?review=due marks all scheduled units due now

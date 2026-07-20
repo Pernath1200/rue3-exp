@@ -1,9 +1,10 @@
 {
   "version": 1,
-  "app": "rue3-grok-v0.1",
+  "app": "rue3-grok-exp",
   "levels": ["A1", "A2", "B1", "B2", "C1"],
   "levels_locked": ["A2", "B1", "B2", "C1"],
-  "levels_locked_note": "Static default only. Runtime locks come from js/progress.js (A1 open; A2 after A1 check; C1 always not-yet). Author unlock opens A2–B2 for writing.",
+  "levels_locked_note": "Static default only. Runtime: A1 open; A2 after A1 check or author unlock. C1 always not-yet. Exp sets author_open so A2–B2 are clickable for writing without a gate pass.",
+  "author_open": true,
   "nodes": [
     {
       "id": "trunk",
@@ -347,6 +348,52 @@
       "content": "blocks/a1_ideas.json",
       "note": "Live · P7 · general core / abstract · 4×12"
     },
+
+    {
+      "id": "trunk_past_a2",
+      "label": "Past · was/were",
+      "kind": "trunk",
+      "levels": ["A2"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_core_frames_past.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 past glue · was/were + regular past · 12 frames · V_COR-A1B1-01"
+    },
+    {
+      "id": "trunk_time_preps_a2",
+      "label": "Time preps",
+      "kind": "trunk",
+      "levels": ["A2"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_core_frames_time_preps.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 in/on/at time · 12 frames · V_COR-A1B1-01"
+    },
+    {
+      "id": "leaf_travel_a2",
+      "label": "Travel & holidays",
+      "kind": "leaf",
+      "levels": ["A2"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_travel.json",
+      "codex_unit": "V_THM-A1B1-03",
+      "note": "Live · A2 · V_THM-A1B1-03 · travel + holidays · 3×12 · Sentence = fruit"
+    },
+    {
+      "id": "leaf_health_a2",
+      "label": "Health",
+      "kind": "leaf",
+      "levels": ["A2"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_health.json",
+      "codex_unit": "V_THM-A1B1-07",
+      "note": "Live · A2 · V_THM-A1B1-07 · symptoms + care extend · 2×12"
+    },
+
     {
       "id": "craft",
       "label": "Word-craft",

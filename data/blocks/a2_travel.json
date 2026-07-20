@@ -1,0 +1,65 @@
+{
+  "id": "a2_travel",
+  "title": "Travel & holidays",
+  "level": "A2",
+  "tree_node": "leaf_travel_a2",
+  "codex_unit": "V_THM-A1B1-03",
+  "note": "A2 Travel & holidays · V_THM-A1B1-03. Extends A1 Places travel slice. Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "travel_trip",
+      "title": "Travel · the trip",
+      "items": [
+        { "en": "holiday", "cz": "dovolená" },
+        { "en": "trip", "cz": "výlet / cesta" },
+        { "en": "journey", "cz": "cesta (delší)" },
+        { "en": "tourist", "cz": "turista" },
+        { "en": "sightseeing", "cz": "prohlídka památek" },
+        { "en": "luggage", "cz": "zavazadla" },
+        { "en": "suitcase", "cz": "kufr" },
+        { "en": "passport", "cz": "pas" },
+        { "en": "ticket", "cz": "lístek / jízdenka" },
+        { "en": "booking", "cz": "rezervace" },
+        { "en": "guide", "cz": "průvodce" },
+        { "en": "map", "cz": "mapa" }
+      ]
+    },
+    {
+      "id": "travel_places",
+      "title": "Travel · places",
+      "items": [
+        { "en": "airport", "cz": "letiště" },
+        { "en": "station", "cz": "nádraží" },
+        { "en": "platform", "cz": "nástupiště" },
+        { "en": "hotel", "cz": "hotel" },
+        { "en": "hostel", "cz": "hostel" },
+        { "en": "beach", "cz": "pláž" },
+        { "en": "resort", "cz": "letovisko" },
+        { "en": "border", "cz": "hranice" },
+        { "en": "countryside", "cz": "venkov" },
+        { "en": "capital", "cz": "hlavní město" },
+        { "en": "abroad", "cz": "v zahraničí" },
+        { "en": "flight", "cz": "let (letadlem)" }
+      ]
+    },
+    {
+      "id": "travel_doing",
+      "title": "Travel · doing it",
+      "items": [
+        { "en": "travel (verb)", "cz": "cestovat" },
+        { "en": "fly", "cz": "letět" },
+        { "en": "arrive", "cz": "přijet / dorazit" },
+        { "en": "leave (depart)", "cz": "odjet / odletět" },
+        { "en": "book (verb)", "cz": "rezervovat" },
+        { "en": "pack", "cz": "zabalit (si)" },
+        { "en": "check in", "cz": "odbavit se / zaregistrovat se" },
+        { "en": "delay", "cz": "zpoždění" },
+        { "en": "delayed", "cz": "zpožděný" },
+        { "en": "return ticket", "cz": "zpáteční jízdenka" },
+        { "en": "single ticket", "cz": "jednosměrná jízdenka" },
+        { "en": "souvenir", "cz": "suvenýr" }
+      ]
+    }
+  ]
+}
