@@ -1,0 +1,90 @@
+{
+  "id": "a2_core_frames_perfect",
+  "title": "Present perfect",
+  "level": "A2",
+  "tree_node": "trunk_perfect_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "practice": "frames",
+  "note": "A2 frames · V_COR-A1B1-01",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_core_frames_perfect_1",
+      "title": "Present perfect · 1",
+      "items": [
+        {
+          "en": "I've been to London.",
+          "cz": "Byl jsem v Londýně. / Byla jsem v Londýně.",
+          "gap": "I've ____ to London.",
+          "gap_answer": "been"
+        },
+        {
+          "en": "Have you ever seen this film?",
+          "cz": "Už jsi někdy viděl tenhle film?",
+          "gap": "Have you ever ____ this film?",
+          "gap_answer": "seen"
+        },
+        {
+          "en": "I've never eaten sushi.",
+          "cz": "Nikdy jsem nejedl suši.",
+          "gap": "I've never ____ sushi.",
+          "gap_answer": "eaten"
+        },
+        {
+          "en": "She's just arrived.",
+          "cz": "Právě dorazila.",
+          "gap": "She's just ____.",
+          "gap_answer": "arrived"
+        },
+        {
+          "en": "We've finished the work.",
+          "cz": "Dokončili jsme práci.",
+          "gap": "We've ____ the work.",
+          "gap_answer": "finished"
+        },
+        {
+          "en": "I've lost my keys.",
+          "cz": "Ztratil jsem klíče.",
+          "gap": "I've ____ my keys.",
+          "gap_answer": "lost"
+        },
+        {
+          "en": "He hasn't called yet.",
+          "cz": "Ještě nezavolal.",
+          "gap": "He hasn't ____ yet.",
+          "gap_answer": "called"
+        },
+        {
+          "en": "Have you done your homework?",
+          "cz": "Už jsi udělal úkoly?",
+          "gap": "Have you ____ your homework?",
+          "gap_answer": "done"
+        },
+        {
+          "en": "I've lived here for two years.",
+          "cz": "Bydlím tady dva roky.",
+          "gap": "I've ____ here for two years.",
+          "gap_answer": "lived"
+        },
+        {
+          "en": "They've known each other since school.",
+          "cz": "Znají se od školy.",
+          "gap": "They've ____ each other since school.",
+          "gap_answer": "known"
+        },
+        {
+          "en": "I've already paid.",
+          "cz": "Už jsem zaplatil.",
+          "gap": "I've already ____.",
+          "gap_answer": "paid"
+        },
+        {
+          "en": "We haven't decided yet.",
+          "cz": "Ještě jsme se nerozhodli.",
+          "gap": "We haven't ____ yet.",
+          "gap_answer": "decided"
+        }
+      ]
+    }
+  ]
+}

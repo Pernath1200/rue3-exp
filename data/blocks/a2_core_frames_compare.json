@@ -1,0 +1,90 @@
+{
+  "id": "a2_core_frames_compare",
+  "title": "Comparatives",
+  "level": "A2",
+  "tree_node": "trunk_compare_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "practice": "frames",
+  "note": "A2 frames · V_COR-A1B1-01",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_core_frames_compare_1",
+      "title": "Comparatives · 1",
+      "items": [
+        {
+          "en": "This book is better than that one.",
+          "cz": "Tahle kniha je lepší než ta.",
+          "gap": "This book is ____ than that one.",
+          "gap_answer": "better"
+        },
+        {
+          "en": "She is taller than me.",
+          "cz": "Je vyšší než já.",
+          "gap": "She is ____ than me.",
+          "gap_answer": "taller"
+        },
+        {
+          "en": "Today is colder than yesterday.",
+          "cz": "Dnes je chladněji než včera.",
+          "gap": "Today is ____ than yesterday.",
+          "gap_answer": "colder"
+        },
+        {
+          "en": "This is more expensive.",
+          "cz": "Tohle je dražší.",
+          "gap": "This is ____ expensive.",
+          "gap_answer": "more"
+        },
+        {
+          "en": "English is easier than Chinese.",
+          "cz": "Angličtina je snazší než čínština.",
+          "gap": "English is ____ than Chinese.",
+          "gap_answer": "easier"
+        },
+        {
+          "en": "He is the best student.",
+          "cz": "Je nejlepší student.",
+          "gap": "He is the ____ student.",
+          "gap_answer": "best"
+        },
+        {
+          "en": "This is the biggest room.",
+          "cz": "Tohle je největší pokoj.",
+          "gap": "This is the ____ room.",
+          "gap_answer": "biggest"
+        },
+        {
+          "en": "She's the most interesting person.",
+          "cz": "Je nejzajímavější člověk.",
+          "gap": "She's the ____ interesting person.",
+          "gap_answer": "most"
+        },
+        {
+          "en": "My car is faster than yours.",
+          "cz": "Moje auto je rychlejší než tvoje.",
+          "gap": "My car is ____ than yours.",
+          "gap_answer": "faster"
+        },
+        {
+          "en": "Life is harder now.",
+          "cz": "Život je teď těžší.",
+          "gap": "Life is ____ now.",
+          "gap_answer": "harder"
+        },
+        {
+          "en": "This film is worse than the book.",
+          "cz": "Ten film je horší než kniha.",
+          "gap": "This film is ____ than the book.",
+          "gap_answer": "worse"
+        },
+        {
+          "en": "He's as tall as his brother.",
+          "cz": "Je stejně vysoký jako jeho bratr.",
+          "gap": "He's ____ tall as his brother.",
+          "gap_answer": "as"
+        }
+      ]
+    }
+  ]
+}

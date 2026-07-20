@@ -1,0 +1,185 @@
+{
+  "id": "a2_home",
+  "title": "Home life",
+  "level": "A2",
+  "tree_node": "leaf_home_a2",
+  "codex_unit": "V_THM-A1B1-01",
+  "note": "V_THM-A1B1-01 home / housing A2",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_home_1",
+      "title": "Home life · 1",
+      "items": [
+        {
+          "en": "apartment",
+          "cz": "byt (amer.)"
+        },
+        {
+          "en": "balcony",
+          "cz": "balkon"
+        },
+        {
+          "en": "basement",
+          "cz": "suterén / sklep"
+        },
+        {
+          "en": "carpet",
+          "cz": "koberec"
+        },
+        {
+          "en": "ceiling",
+          "cz": "strop"
+        },
+        {
+          "en": "central heating",
+          "cz": "ústřední topení"
+        },
+        {
+          "en": "cupboard",
+          "cz": "skříň / kredenc"
+        },
+        {
+          "en": "curtain",
+          "cz": "závěs / záclona"
+        },
+        {
+          "en": "dishwasher",
+          "cz": "myčka nádobí"
+        },
+        {
+          "en": "downstairs",
+          "cz": "dole / dolejší patro"
+        },
+        {
+          "en": "furniture",
+          "cz": "nábytek"
+        },
+        {
+          "en": "garage",
+          "cz": "garáž"
+        }
+      ]
+    },
+    {
+      "id": "a2_home_2",
+      "title": "Home life · 2",
+      "items": [
+        {
+          "en": "gate",
+          "cz": "brána / vrata"
+        },
+        {
+          "en": "heating",
+          "cz": "topení"
+        },
+        {
+          "en": "housework",
+          "cz": "domácí práce"
+        },
+        {
+          "en": "landlord",
+          "cz": "majitel bytu / domácí"
+        },
+        {
+          "en": "lift",
+          "cz": "výtah"
+        },
+        {
+          "en": "neighbour",
+          "cz": "soused"
+        },
+        {
+          "en": "pillow",
+          "cz": "polštář"
+        },
+        {
+          "en": "rent",
+          "cz": "nájem"
+        },
+        {
+          "en": "roof",
+          "cz": "střecha"
+        },
+        {
+          "en": "shelf",
+          "cz": "police"
+        },
+        {
+          "en": "sink",
+          "cz": "dřez / umyvadlo"
+        },
+        {
+          "en": "sofa",
+          "cz": "pohovka"
+        }
+      ]
+    },
+    {
+      "id": "a2_home_3",
+      "title": "Home life · 3",
+      "items": [
+        {
+          "en": "stairs",
+          "cz": "schody"
+        },
+        {
+          "en": "upstairs",
+          "cz": "nahoře / horní patro"
+        },
+        {
+          "en": "washing machine",
+          "cz": "pračka"
+        },
+        {
+          "en": "mirror",
+          "cz": "zrcadlo"
+        },
+        {
+          "en": "towel",
+          "cz": "ručník"
+        },
+        {
+          "en": "brush",
+          "cz": "kartáč"
+        },
+        {
+          "en": "lock",
+          "cz": "zámek / zamknout"
+        },
+        {
+          "en": "board",
+          "cz": "prkno / tabule"
+        },
+        {
+          "en": "hall",
+          "cz": "hala / předsíň"
+        },
+        {
+          "en": "sheet",
+          "cz": "prostěradlo / list papíru"
+        },
+        {
+          "en": "rubbish",
+          "cz": "odpadky"
+        },
+        {
+          "en": "bin",
+          "cz": "koš (na odpad)"
+        },
+        {
+          "en": "heat",
+          "cz": "teplo / vytápět"
+        },
+        {
+          "en": "stair",
+          "cz": "schod"
+        },
+        {
+          "en": "washing",
+          "cz": "praní / prádlo"
+        }
+      ]
+    }
+  ]
+}

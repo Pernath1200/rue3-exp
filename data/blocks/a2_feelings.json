@@ -1,0 +1,123 @@
+{
+  "id": "a2_feelings",
+  "title": "Feelings",
+  "level": "A2",
+  "tree_node": "leaf_feelings_a2",
+  "codex_unit": "V_THM-A1B1-09",
+  "note": "Feelings A2",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_feelings_1",
+      "title": "Feelings · 1",
+      "items": [
+        {
+          "en": "nervous",
+          "cz": "nervózní"
+        },
+        {
+          "en": "surprised",
+          "cz": "překvapený"
+        },
+        {
+          "en": "surprise",
+          "cz": "překvapení"
+        },
+        {
+          "en": "unhappy",
+          "cz": "nešťastný"
+        },
+        {
+          "en": "afraid",
+          "cz": "vyděšený / bát se"
+        },
+        {
+          "en": "angry",
+          "cz": "naštvaný"
+        },
+        {
+          "en": "bored",
+          "cz": "znuděný"
+        },
+        {
+          "en": "calm",
+          "cz": "klidný"
+        },
+        {
+          "en": "confident",
+          "cz": "sebevědomý"
+        },
+        {
+          "en": "embarrassed",
+          "cz": "v rozpacích"
+        },
+        {
+          "en": "excited",
+          "cz": "nadšený"
+        },
+        {
+          "en": "jealous",
+          "cz": "žárlivý"
+        }
+      ]
+    },
+    {
+      "id": "a2_feelings_2",
+      "title": "Feelings · 2",
+      "items": [
+        {
+          "en": "proud",
+          "cz": "pyšný"
+        },
+        {
+          "en": "relaxed",
+          "cz": "uvolněný"
+        },
+        {
+          "en": "worried",
+          "cz": "ustaraný"
+        },
+        {
+          "en": "lonely",
+          "cz": "osamělý"
+        },
+        {
+          "en": "confused",
+          "cz": "zmatený"
+        },
+        {
+          "en": "cheerful",
+          "cz": "veselý"
+        },
+        {
+          "en": "serious",
+          "cz": "vážný"
+        },
+        {
+          "en": "friendly",
+          "cz": "přátelský"
+        },
+        {
+          "en": "kind",
+          "cz": "laskavý"
+        },
+        {
+          "en": "polite",
+          "cz": "zdvořilý"
+        },
+        {
+          "en": "rude",
+          "cz": "nezdvořilý"
+        },
+        {
+          "en": "honest",
+          "cz": "upřímný"
+        },
+        {
+          "en": "fear",
+          "cz": "strach"
+        }
+      ]
+    }
+  ]
+}

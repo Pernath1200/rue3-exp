@@ -1,0 +1,169 @@
+{
+  "id": "a2_tech",
+  "title": "Tech & media",
+  "level": "A2",
+  "tree_node": "leaf_tech_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "note": "Tech A2 · COR",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_tech_1",
+      "title": "Tech & media · 1",
+      "items": [
+        {
+          "en": "app",
+          "cz": "aplikace"
+        },
+        {
+          "en": "digital",
+          "cz": "digitální"
+        },
+        {
+          "en": "download",
+          "cz": "stáhnout"
+        },
+        {
+          "en": "upload",
+          "cz": "nahrát (online)"
+        },
+        {
+          "en": "laptop",
+          "cz": "notebook"
+        },
+        {
+          "en": "smartphone",
+          "cz": "smartphon"
+        },
+        {
+          "en": "tablet",
+          "cz": "tablet"
+        },
+        {
+          "en": "password",
+          "cz": "heslo"
+        },
+        {
+          "en": "website",
+          "cz": "webová stránka"
+        },
+        {
+          "en": "site",
+          "cz": "stránka / místo"
+        },
+        {
+          "en": "network",
+          "cz": "síť"
+        },
+        {
+          "en": "data",
+          "cz": "data"
+        }
+      ]
+    },
+    {
+      "id": "a2_tech_2",
+      "title": "Tech & media · 2",
+      "items": [
+        {
+          "en": "device",
+          "cz": "zařízení"
+        },
+        {
+          "en": "screen",
+          "cz": "obrazovka"
+        },
+        {
+          "en": "keyboard",
+          "cz": "klávesnice"
+        },
+        {
+          "en": "mouse",
+          "cz": "myš (počítač)"
+        },
+        {
+          "en": "printer",
+          "cz": "tiskárna"
+        },
+        {
+          "en": "program",
+          "cz": "program"
+        },
+        {
+          "en": "software",
+          "cz": "software"
+        },
+        {
+          "en": "technology",
+          "cz": "technologie"
+        },
+        {
+          "en": "code",
+          "cz": "kód"
+        },
+        {
+          "en": "link",
+          "cz": "odkaz / spojení"
+        },
+        {
+          "en": "profile",
+          "cz": "profil"
+        },
+        {
+          "en": "media",
+          "cz": "média"
+        }
+      ]
+    },
+    {
+      "id": "a2_tech_3",
+      "title": "Tech & media · 3",
+      "items": [
+        {
+          "en": "document",
+          "cz": "dokument"
+        },
+        {
+          "en": "file",
+          "cz": "soubor"
+        },
+        {
+          "en": "copy",
+          "cz": "kopie / kopírovat"
+        },
+        {
+          "en": "print",
+          "cz": "tisknout"
+        },
+        {
+          "en": "text",
+          "cz": "psát SMS / text"
+        },
+        {
+          "en": "mail",
+          "cz": "pošta / e-mail"
+        },
+        {
+          "en": "blog",
+          "cz": "blog"
+        },
+        {
+          "en": "image",
+          "cz": "obrázek / snímek"
+        },
+        {
+          "en": "recording",
+          "cz": "nahrávka"
+        },
+        {
+          "en": "record",
+          "cz": "nahrávka / rekord"
+        },
+        {
+          "en": "web",
+          "cz": "web"
+        }
+      ]
+    }
+  ]
+}

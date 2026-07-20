@@ -1,0 +1,427 @@
+{
+  "id": "a2_ideas",
+  "title": "Ideas & abstract",
+  "level": "A2",
+  "tree_node": "leaf_ideas_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "note": "Abstract A2 · COR",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_ideas_1",
+      "title": "Ideas & abstract · 1",
+      "items": [
+        {
+          "en": "ability",
+          "cz": "schopnost"
+        },
+        {
+          "en": "advantage",
+          "cz": "výhoda"
+        },
+        {
+          "en": "disadvantage",
+          "cz": "nevýhoda"
+        },
+        {
+          "en": "argument",
+          "cz": "hádka / argument"
+        },
+        {
+          "en": "decision",
+          "cz": "rozhodnutí"
+        },
+        {
+          "en": "opportunity",
+          "cz": "příležitost"
+        },
+        {
+          "en": "solution",
+          "cz": "řešení"
+        },
+        {
+          "en": "problem",
+          "cz": "problém"
+        },
+        {
+          "en": "reason",
+          "cz": "důvod"
+        },
+        {
+          "en": "result",
+          "cz": "výsledek"
+        },
+        {
+          "en": "effect",
+          "cz": "účinek / následek"
+        },
+        {
+          "en": "cause",
+          "cz": "příčina"
+        }
+      ]
+    },
+    {
+      "id": "a2_ideas_2",
+      "title": "Ideas & abstract · 2",
+      "items": [
+        {
+          "en": "choice",
+          "cz": "volba"
+        },
+        {
+          "en": "option",
+          "cz": "možnost"
+        },
+        {
+          "en": "possibility",
+          "cz": "možnost"
+        },
+        {
+          "en": "chance",
+          "cz": "šance"
+        },
+        {
+          "en": "purpose",
+          "cz": "účel"
+        },
+        {
+          "en": "method",
+          "cz": "metoda"
+        },
+        {
+          "en": "process",
+          "cz": "proces"
+        },
+        {
+          "en": "system",
+          "cz": "systém"
+        },
+        {
+          "en": "strategy",
+          "cz": "strategie"
+        },
+        {
+          "en": "structure",
+          "cz": "struktura"
+        },
+        {
+          "en": "feature",
+          "cz": "rys / funkce"
+        },
+        {
+          "en": "factor",
+          "cz": "faktor"
+        }
+      ]
+    },
+    {
+      "id": "a2_ideas_3",
+      "title": "Ideas & abstract · 3",
+      "items": [
+        {
+          "en": "condition",
+          "cz": "stav / podmínka"
+        },
+        {
+          "en": "situation",
+          "cz": "situace"
+        },
+        {
+          "en": "context",
+          "cz": "kontext"
+        },
+        {
+          "en": "evidence",
+          "cz": "důkaz"
+        },
+        {
+          "en": "fact",
+          "cz": "fakt"
+        },
+        {
+          "en": "detail",
+          "cz": "detail"
+        },
+        {
+          "en": "example",
+          "cz": "příklad"
+        },
+        {
+          "en": "difference",
+          "cz": "rozdíl"
+        },
+        {
+          "en": "similarity",
+          "cz": "podobnost"
+        },
+        {
+          "en": "benefit",
+          "cz": "přínos / dávka"
+        },
+        {
+          "en": "progress",
+          "cz": "pokrok"
+        },
+        {
+          "en": "success",
+          "cz": "úspěch"
+        }
+      ]
+    },
+    {
+      "id": "a2_ideas_4",
+      "title": "Ideas & abstract · 4",
+      "items": [
+        {
+          "en": "failure",
+          "cz": "neúspěch"
+        },
+        {
+          "en": "error",
+          "cz": "chyba"
+        },
+        {
+          "en": "mistake",
+          "cz": "chyba"
+        },
+        {
+          "en": "suggestion",
+          "cz": "návrh"
+        },
+        {
+          "en": "advice",
+          "cz": "rada"
+        },
+        {
+          "en": "opinion",
+          "cz": "názor"
+        },
+        {
+          "en": "attention",
+          "cz": "pozornost"
+        },
+        {
+          "en": "interest",
+          "cz": "zájem"
+        },
+        {
+          "en": "focus",
+          "cz": "soustředit se / ohnisko"
+        },
+        {
+          "en": "sense",
+          "cz": "smysl / cit"
+        },
+        {
+          "en": "manner",
+          "cz": "způsob / chování"
+        },
+        {
+          "en": "permission",
+          "cz": "povolení"
+        }
+      ]
+    },
+    {
+      "id": "a2_ideas_5",
+      "title": "Ideas & abstract · 5",
+      "items": [
+        {
+          "en": "promise",
+          "cz": "slib"
+        },
+        {
+          "en": "request",
+          "cz": "žádost"
+        },
+        {
+          "en": "reply",
+          "cz": "odpověď"
+        },
+        {
+          "en": "response",
+          "cz": "reakce / odpověď"
+        },
+        {
+          "en": "comment",
+          "cz": "komentář"
+        },
+        {
+          "en": "discussion",
+          "cz": "diskuse"
+        },
+        {
+          "en": "speech",
+          "cz": "projev / řeč"
+        },
+        {
+          "en": "expression",
+          "cz": "výraz"
+        },
+        {
+          "en": "message",
+          "cz": "zpráva"
+        },
+        {
+          "en": "notice",
+          "cz": "oznámení / všimnout si"
+        },
+        {
+          "en": "sign",
+          "cz": "značka / znamení"
+        },
+        {
+          "en": "symbol",
+          "cz": "symbol"
+        }
+      ]
+    },
+    {
+      "id": "a2_ideas_6",
+      "title": "Ideas & abstract · 6",
+      "items": [
+        {
+          "en": "pattern",
+          "cz": "vzor"
+        },
+        {
+          "en": "shape",
+          "cz": "tvar"
+        },
+        {
+          "en": "level",
+          "cz": "úroveň"
+        },
+        {
+          "en": "rate",
+          "cz": "míra / sazba"
+        },
+        {
+          "en": "amount",
+          "cz": "množství"
+        },
+        {
+          "en": "number",
+          "cz": "číslo / počet"
+        },
+        {
+          "en": "figure",
+          "cz": "číslo / postava"
+        },
+        {
+          "en": "value",
+          "cz": "hodnota"
+        },
+        {
+          "en": "power",
+          "cz": "síla / moc"
+        },
+        {
+          "en": "control",
+          "cz": "kontrola / ovládat"
+        },
+        {
+          "en": "support",
+          "cz": "podpora"
+        },
+        {
+          "en": "service",
+          "cz": "služba"
+        }
+      ]
+    },
+    {
+      "id": "a2_ideas_7",
+      "title": "Ideas & abstract · 7",
+      "items": [
+        {
+          "en": "role",
+          "cz": "role"
+        },
+        {
+          "en": "position",
+          "cz": "pozice"
+        },
+        {
+          "en": "possession",
+          "cz": "majetek / vlastnictví"
+        },
+        {
+          "en": "arrangement",
+          "cz": "domluva / uspořádání"
+        },
+        {
+          "en": "alternative",
+          "cz": "alternativa"
+        },
+        {
+          "en": "variety",
+          "cz": "rozmanitost"
+        },
+        {
+          "en": "source",
+          "cz": "zdroj"
+        },
+        {
+          "en": "target",
+          "cz": "cíl"
+        },
+        {
+          "en": "tip",
+          "cz": "tip / spropitné"
+        },
+        {
+          "en": "tool",
+          "cz": "nástroj"
+        },
+        {
+          "en": "equipment",
+          "cz": "vybavení"
+        },
+        {
+          "en": "machine",
+          "cz": "stroj"
+        }
+      ]
+    },
+    {
+      "id": "a2_ideas_8",
+      "title": "Ideas & abstract · 8",
+      "items": [
+        {
+          "en": "engine",
+          "cz": "motor"
+        },
+        {
+          "en": "electricity",
+          "cz": "elektřina"
+        },
+        {
+          "en": "gas",
+          "cz": "plyn / benzín (amer.)"
+        },
+        {
+          "en": "metal",
+          "cz": "kov"
+        },
+        {
+          "en": "plastic",
+          "cz": "plast"
+        },
+        {
+          "en": "invention",
+          "cz": "vynález"
+        },
+        {
+          "en": "discovery",
+          "cz": "objev"
+        },
+        {
+          "en": "experiment",
+          "cz": "experiment"
+        }
+      ]
+    }
+  ]
+}

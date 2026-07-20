@@ -1,0 +1,103 @@
+{
+  "id": "a2_family",
+  "title": "Family & people",
+  "level": "A2",
+  "tree_node": "leaf_family_a2",
+  "codex_unit": "V_THM-A1B1-04",
+  "note": "V_THM-A1B1-04 family A2",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_family_1",
+      "title": "Family & people · 1",
+      "items": [
+        {
+          "en": "adult",
+          "cz": "dospělý"
+        },
+        {
+          "en": "single",
+          "cz": "svobodný"
+        },
+        {
+          "en": "couple",
+          "cz": "pár"
+        },
+        {
+          "en": "kid",
+          "cz": "dítě (hovor.)"
+        },
+        {
+          "en": "guy",
+          "cz": "chlápek / kluk"
+        },
+        {
+          "en": "lady",
+          "cz": "dáma"
+        },
+        {
+          "en": "sir",
+          "cz": "pane"
+        },
+        {
+          "en": "relationship",
+          "cz": "vztah"
+        },
+        {
+          "en": "wedding",
+          "cz": "svatba"
+        },
+        {
+          "en": "birth",
+          "cz": "narození"
+        },
+        {
+          "en": "guest",
+          "cz": "host"
+        },
+        {
+          "en": "owner",
+          "cz": "majitel"
+        }
+      ]
+    },
+    {
+      "id": "a2_family_2",
+      "title": "Family & people · 2",
+      "items": [
+        {
+          "en": "behaviour",
+          "cz": "chování"
+        },
+        {
+          "en": "character",
+          "cz": "povaha / postava"
+        },
+        {
+          "en": "personality",
+          "cz": "osobnost"
+        },
+        {
+          "en": "background",
+          "cz": "původ / pozadí"
+        },
+        {
+          "en": "community",
+          "cz": "komunita / obec"
+        },
+        {
+          "en": "society",
+          "cz": "společnost"
+        },
+        {
+          "en": "crowd",
+          "cz": "dav"
+        },
+        {
+          "en": "audience",
+          "cz": "publikum"
+        }
+      ]
+    }
+  ]
+}

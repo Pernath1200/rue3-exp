@@ -1,0 +1,90 @@
+{
+  "id": "a2_core_frames_quantity",
+  "title": "Quantity",
+  "level": "A2",
+  "tree_node": "trunk_quantity_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "practice": "frames",
+  "note": "A2 frames · V_COR-A1B1-01",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_core_frames_quantity_1",
+      "title": "Quantity · 1",
+      "items": [
+        {
+          "en": "I need some milk.",
+          "cz": "Potřebuju nějaké mléko.",
+          "gap": "I need ____ milk.",
+          "gap_answer": "some"
+        },
+        {
+          "en": "Have you got any bread?",
+          "cz": "Máš nějaký chleba?",
+          "gap": "Have you got ____ bread?",
+          "gap_answer": "any"
+        },
+        {
+          "en": "There isn't much time.",
+          "cz": "Není moc času.",
+          "gap": "There isn't ____ time.",
+          "gap_answer": "much"
+        },
+        {
+          "en": "There are many people.",
+          "cz": "Je tam hodně lidí.",
+          "gap": "There are ____ people.",
+          "gap_answer": "many"
+        },
+        {
+          "en": "I have a lot of work.",
+          "cz": "Mám spoustu práce.",
+          "gap": "I have a ____ of work.",
+          "gap_answer": "lot"
+        },
+        {
+          "en": "How much does it cost?",
+          "cz": "Kolik to stojí?",
+          "gap": "How ____ does it cost?",
+          "gap_answer": "much"
+        },
+        {
+          "en": "How many apples?",
+          "cz": "Kolik jablek?",
+          "gap": "How ____ apples?",
+          "gap_answer": "many"
+        },
+        {
+          "en": "I don't have enough money.",
+          "cz": "Nemám dost peněz.",
+          "gap": "I don't have ____ money.",
+          "gap_answer": "enough"
+        },
+        {
+          "en": "Too much sugar is bad.",
+          "cz": "Příliš cukru je špatně.",
+          "gap": "Too ____ sugar is bad.",
+          "gap_answer": "much"
+        },
+        {
+          "en": "There are a few chairs.",
+          "cz": "Je tu pár židlí.",
+          "gap": "There are a ____ chairs.",
+          "gap_answer": "few"
+        },
+        {
+          "en": "I need a little help.",
+          "cz": "Potřebuju trochu pomoci.",
+          "gap": "I need a ____ help.",
+          "gap_answer": "little"
+        },
+        {
+          "en": "All of the students came.",
+          "cz": "Přišli všichni studenti.",
+          "gap": "____ of the students came.",
+          "gap_answer": "All"
+        }
+      ]
+    }
+  ]
+}

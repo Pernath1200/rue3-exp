@@ -1,0 +1,397 @@
+{
+  "id": "a2_misc",
+  "title": "General core",
+  "level": "A2",
+  "tree_node": "leaf_misc_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "note": "Overflow A2 · COR",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_misc_1",
+      "title": "General core · 1",
+      "items": [
+        {
+          "en": "appearance",
+          "cz": "vzhled"
+        },
+        {
+          "en": "architect",
+          "cz": "architekt"
+        },
+        {
+          "en": "architecture",
+          "cz": "architektura"
+        },
+        {
+          "en": "cigarette",
+          "cz": "cigareta"
+        },
+        {
+          "en": "smoking",
+          "cz": "kouření"
+        },
+        {
+          "en": "circle",
+          "cz": "kruh"
+        },
+        {
+          "en": "column",
+          "cz": "sloupec / sloupek"
+        },
+        {
+          "en": "cross",
+          "cz": "kříž / přejít"
+        },
+        {
+          "en": "fall",
+          "cz": "podzim / pád"
+        },
+        {
+          "en": "farming",
+          "cz": "zemědělství"
+        },
+        {
+          "en": "gap",
+          "cz": "mezera"
+        },
+        {
+          "en": "hit",
+          "cz": "zásah / hit"
+        }
+      ]
+    },
+    {
+      "id": "a2_misc_2",
+      "title": "General core · 2",
+      "items": [
+        {
+          "en": "hole",
+          "cz": "díra"
+        },
+        {
+          "en": "invitation",
+          "cz": "pozvánka"
+        },
+        {
+          "en": "matter",
+          "cz": "záležitost / záležet"
+        },
+        {
+          "en": "movement",
+          "cz": "pohyb / hnutí"
+        },
+        {
+          "en": "parking",
+          "cz": "parkování"
+        },
+        {
+          "en": "reception",
+          "cz": "recepce / příjem"
+        },
+        {
+          "en": "seat",
+          "cz": "sedadlo"
+        },
+        {
+          "en": "singing",
+          "cz": "zpěv"
+        },
+        {
+          "en": "speed",
+          "cz": "rychlost"
+        },
+        {
+          "en": "step",
+          "cz": "krok"
+        },
+        {
+          "en": "survey",
+          "cz": "průzkum"
+        },
+        {
+          "en": "trouble",
+          "cz": "potíž"
+        }
+      ]
+    },
+    {
+      "id": "a2_misc_3",
+      "title": "General core · 3",
+      "items": [
+        {
+          "en": "unit",
+          "cz": "jednotka"
+        },
+        {
+          "en": "user",
+          "cz": "uživatel"
+        },
+        {
+          "en": "van",
+          "cz": "dodávka"
+        },
+        {
+          "en": "wheel",
+          "cz": "kolo (vozidla)"
+        },
+        {
+          "en": "wish",
+          "cz": "přání"
+        },
+        {
+          "en": "stamp",
+          "cz": "známka / razítko"
+        },
+        {
+          "en": "toy",
+          "cz": "hračka"
+        },
+        {
+          "en": "model",
+          "cz": "model"
+        },
+        {
+          "en": "pair",
+          "cz": "pár"
+        },
+        {
+          "en": "piece",
+          "cz": "kousek"
+        },
+        {
+          "en": "set",
+          "cz": "sada / soubor"
+        },
+        {
+          "en": "sort",
+          "cz": "druh / třídit"
+        }
+      ]
+    },
+    {
+      "id": "a2_misc_4",
+      "title": "General core · 4",
+      "items": [
+        {
+          "en": "type",
+          "cz": "typ"
+        },
+        {
+          "en": "way",
+          "cz": "způsob / cesta"
+        },
+        {
+          "en": "end",
+          "cz": "konec"
+        },
+        {
+          "en": "start",
+          "cz": "začátek"
+        },
+        {
+          "en": "middle",
+          "cz": "prostředek"
+        },
+        {
+          "en": "side",
+          "cz": "strana"
+        },
+        {
+          "en": "edge",
+          "cz": "okraj"
+        },
+        {
+          "en": "point",
+          "cz": "bod / pointa"
+        },
+        {
+          "en": "line",
+          "cz": "řada / linka"
+        },
+        {
+          "en": "list",
+          "cz": "seznam"
+        },
+        {
+          "en": "page",
+          "cz": "stránka"
+        },
+        {
+          "en": "chapter",
+          "cz": "kapitola"
+        }
+      ]
+    },
+    {
+      "id": "a2_misc_5",
+      "title": "General core · 5",
+      "items": [
+        {
+          "en": "letter",
+          "cz": "dopis / písmeno"
+        },
+        {
+          "en": "note",
+          "cz": "poznámka"
+        },
+        {
+          "en": "card",
+          "cz": "karta"
+        },
+        {
+          "en": "ticket",
+          "cz": "lístek"
+        },
+        {
+          "en": "key",
+          "cz": "klíč"
+        },
+        {
+          "en": "bag",
+          "cz": "taška"
+        },
+        {
+          "en": "box",
+          "cz": "krabice"
+        },
+        {
+          "en": "bottle",
+          "cz": "láhev"
+        },
+        {
+          "en": "cup",
+          "cz": "hrnek"
+        },
+        {
+          "en": "glass",
+          "cz": "sklenice"
+        },
+        {
+          "en": "plate",
+          "cz": "talíř"
+        },
+        {
+          "en": "bowl",
+          "cz": "miska"
+        }
+      ]
+    },
+    {
+      "id": "a2_misc_6",
+      "title": "General core · 6",
+      "items": [
+        {
+          "en": "according to",
+          "cz": "podle"
+        },
+        {
+          "en": "all right",
+          "cz": "v pořádku"
+        },
+        {
+          "en": "any more",
+          "cz": "už ne"
+        },
+        {
+          "en": "per cent",
+          "cz": "procento"
+        },
+        {
+          "en": "used to",
+          "cz": "býval(a) / dřív"
+        },
+        {
+          "en": "ah",
+          "cz": "ach"
+        },
+        {
+          "en": "billion",
+          "cz": "miliarda"
+        },
+        {
+          "en": "dear",
+          "cz": "drahý / milý"
+        },
+        {
+          "en": "herself",
+          "cz": "sebe (ona)"
+        },
+        {
+          "en": "himself",
+          "cz": "sebe (on)"
+        },
+        {
+          "en": "including",
+          "cz": "včetně"
+        },
+        {
+          "en": "itself",
+          "cz": "sám / samo"
+        }
+      ]
+    },
+    {
+      "id": "a2_misc_7",
+      "title": "General core · 7",
+      "items": [
+        {
+          "en": "might",
+          "cz": "možná (modal)"
+        },
+        {
+          "en": "myself",
+          "cz": "sebe (já)"
+        },
+        {
+          "en": "neither",
+          "cz": "ani jeden"
+        },
+        {
+          "en": "none",
+          "cz": "žádný"
+        },
+        {
+          "en": "ourselves",
+          "cz": "sebe (my)"
+        },
+        {
+          "en": "several",
+          "cz": "několik"
+        },
+        {
+          "en": "shall",
+          "cz": "budu / mám (modal)"
+        },
+        {
+          "en": "such",
+          "cz": "takový"
+        },
+        {
+          "en": "themselves",
+          "cz": "sebe (oni)"
+        },
+        {
+          "en": "while",
+          "cz": "zatímco"
+        },
+        {
+          "en": "whose",
+          "cz": "čí"
+        },
+        {
+          "en": "wow",
+          "cz": "páni"
+        },
+        {
+          "en": "zero",
+          "cz": "nula"
+        },
+        {
+          "en": "view",
+          "cz": "výhled / názor"
+        }
+      ]
+    }
+  ]
+}

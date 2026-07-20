@@ -1,0 +1,513 @@
+{
+  "id": "a2_verbs",
+  "title": "Verbs · A2 list",
+  "level": "A2",
+  "tree_node": "leaf_verbs_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "note": "A2 verbs bare lemmas · COR (frames elsewhere)",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_verbs_1",
+      "title": "Verbs · A2 list · 1",
+      "items": [
+        {
+          "en": "accept",
+          "cz": "přijmout"
+        },
+        {
+          "en": "achieve",
+          "cz": "dosáhnout"
+        },
+        {
+          "en": "act",
+          "cz": "jednat / hrát"
+        },
+        {
+          "en": "affect",
+          "cz": "ovlivnit"
+        },
+        {
+          "en": "allow",
+          "cz": "dovolit"
+        },
+        {
+          "en": "appear",
+          "cz": "objevit se / zdát se"
+        },
+        {
+          "en": "argue",
+          "cz": "hádat se / argumentovat"
+        },
+        {
+          "en": "arrange",
+          "cz": "zařídit / uspořádat"
+        },
+        {
+          "en": "attend",
+          "cz": "zúčastnit se"
+        },
+        {
+          "en": "avoid",
+          "cz": "vyhnout se"
+        },
+        {
+          "en": "beat",
+          "cz": "porazit / bít"
+        },
+        {
+          "en": "behave",
+          "cz": "chovat se"
+        }
+      ]
+    },
+    {
+      "id": "a2_verbs_2",
+      "title": "Verbs · A2 list · 2",
+      "items": [
+        {
+          "en": "belong",
+          "cz": "patřit"
+        },
+        {
+          "en": "blow",
+          "cz": "foukat"
+        },
+        {
+          "en": "borrow",
+          "cz": "půjčit si"
+        },
+        {
+          "en": "burn",
+          "cz": "hořet / spálit"
+        },
+        {
+          "en": "catch",
+          "cz": "chytit"
+        },
+        {
+          "en": "celebrate",
+          "cz": "slavit"
+        },
+        {
+          "en": "collect",
+          "cz": "sbírat"
+        },
+        {
+          "en": "communicate",
+          "cz": "komunikovat"
+        },
+        {
+          "en": "compete",
+          "cz": "soutěžit"
+        },
+        {
+          "en": "complain",
+          "cz": "stěžovat si"
+        },
+        {
+          "en": "connect",
+          "cz": "připojit"
+        },
+        {
+          "en": "consider",
+          "cz": "zvážit"
+        }
+      ]
+    },
+    {
+      "id": "a2_verbs_3",
+      "title": "Verbs · A2 list · 3",
+      "items": [
+        {
+          "en": "contain",
+          "cz": "obsahovat"
+        },
+        {
+          "en": "continue",
+          "cz": "pokračovat"
+        },
+        {
+          "en": "count",
+          "cz": "počítat"
+        },
+        {
+          "en": "cover",
+          "cz": "pokrýt / krýt"
+        },
+        {
+          "en": "cry",
+          "cz": "plakat / křičet"
+        },
+        {
+          "en": "deal",
+          "cz": "jednat / vypořádat se"
+        },
+        {
+          "en": "depend",
+          "cz": "záviset"
+        },
+        {
+          "en": "destroy",
+          "cz": "zničit"
+        },
+        {
+          "en": "develop",
+          "cz": "rozvíjet"
+        },
+        {
+          "en": "disagree",
+          "cz": "nesouhlasit"
+        },
+        {
+          "en": "disappear",
+          "cz": "zmizet"
+        },
+        {
+          "en": "discover",
+          "cz": "objevit"
+        }
+      ]
+    },
+    {
+      "id": "a2_verbs_4",
+      "title": "Verbs · A2 list · 4",
+      "items": [
+        {
+          "en": "drop",
+          "cz": "upustit / klesnout"
+        },
+        {
+          "en": "enter",
+          "cz": "vstoupit"
+        },
+        {
+          "en": "exist",
+          "cz": "existovat"
+        },
+        {
+          "en": "expect",
+          "cz": "očekávat"
+        },
+        {
+          "en": "express",
+          "cz": "vyjádřit"
+        },
+        {
+          "en": "fail",
+          "cz": "neuspět"
+        },
+        {
+          "en": "feed",
+          "cz": "krmit"
+        },
+        {
+          "en": "fix",
+          "cz": "tvořit / formulář"
+        },
+        {
+          "en": "greet",
+          "cz": "pozdravit"
+        },
+        {
+          "en": "hide",
+          "cz": "schovat se"
+        },
+        {
+          "en": "hold",
+          "cz": "držet"
+        },
+        {
+          "en": "identify",
+          "cz": "identifikovat"
+        }
+      ]
+    },
+    {
+      "id": "a2_verbs_5",
+      "title": "Verbs · A2 list · 5",
+      "items": [
+        {
+          "en": "invent",
+          "cz": "vynalézt"
+        },
+        {
+          "en": "invite",
+          "cz": "pozvat"
+        },
+        {
+          "en": "involve",
+          "cz": "zahrnovat"
+        },
+        {
+          "en": "kill",
+          "cz": "zabít"
+        },
+        {
+          "en": "knock",
+          "cz": "zaklepat"
+        },
+        {
+          "en": "land",
+          "cz": "přistát"
+        },
+        {
+          "en": "lead",
+          "cz": "vést"
+        },
+        {
+          "en": "lend",
+          "cz": "půjčit (někomu)"
+        },
+        {
+          "en": "manage",
+          "cz": "zvládnout / řídit"
+        },
+        {
+          "en": "marry",
+          "cz": "oženit se / vdát se"
+        },
+        {
+          "en": "mention",
+          "cz": "zmínit"
+        },
+        {
+          "en": "organize",
+          "cz": "zorganizovat"
+        }
+      ]
+    },
+    {
+      "id": "a2_verbs_6",
+      "title": "Verbs · A2 list · 6",
+      "items": [
+        {
+          "en": "own",
+          "cz": "vlastnit"
+        },
+        {
+          "en": "pack",
+          "cz": "zabalit"
+        },
+        {
+          "en": "pass",
+          "cz": "projít / podat"
+        },
+        {
+          "en": "perform",
+          "cz": "vystoupit / provést"
+        },
+        {
+          "en": "pick",
+          "cz": "vybrat / trhat"
+        },
+        {
+          "en": "plant",
+          "cz": "zasadit / rostlina"
+        },
+        {
+          "en": "please",
+          "cz": "potěšit / prosím"
+        },
+        {
+          "en": "predict",
+          "cz": "předpovědět"
+        },
+        {
+          "en": "prevent",
+          "cz": "zabránit"
+        },
+        {
+          "en": "produce",
+          "cz": "vyrobit / produkovat"
+        },
+        {
+          "en": "pronounce",
+          "cz": "vyslovit"
+        },
+        {
+          "en": "protect",
+          "cz": "chránit"
+        }
+      ]
+    },
+    {
+      "id": "a2_verbs_7",
+      "title": "Verbs · A2 list · 7",
+      "items": [
+        {
+          "en": "provide",
+          "cz": "poskytnout"
+        },
+        {
+          "en": "publish",
+          "cz": "vydávat / publikovat"
+        },
+        {
+          "en": "pull",
+          "cz": "táhnout"
+        },
+        {
+          "en": "push",
+          "cz": "tlačit"
+        },
+        {
+          "en": "raise",
+          "cz": "zvednout / vychovat"
+        },
+        {
+          "en": "reach",
+          "cz": "dosáhnout / dojet"
+        },
+        {
+          "en": "react",
+          "cz": "reagovat"
+        },
+        {
+          "en": "realize",
+          "cz": "uvědomit si"
+        },
+        {
+          "en": "receive",
+          "cz": "obdržet"
+        },
+        {
+          "en": "recognize",
+          "cz": "poznat / uznat"
+        },
+        {
+          "en": "recommend",
+          "cz": "doporučit"
+        },
+        {
+          "en": "recycle",
+          "cz": "recyklovat"
+        }
+      ]
+    },
+    {
+      "id": "a2_verbs_8",
+      "title": "Verbs · A2 list · 8",
+      "items": [
+        {
+          "en": "reduce",
+          "cz": "snížit"
+        },
+        {
+          "en": "refer",
+          "cz": "odkazovat"
+        },
+        {
+          "en": "refuse",
+          "cz": "odmítnout"
+        },
+        {
+          "en": "remove",
+          "cz": "odstranit"
+        },
+        {
+          "en": "repair",
+          "cz": "opravit"
+        },
+        {
+          "en": "replace",
+          "cz": "nahradit"
+        },
+        {
+          "en": "report",
+          "cz": "nahlásit / reportáž"
+        },
+        {
+          "en": "respond",
+          "cz": "odpovědět"
+        },
+        {
+          "en": "rise",
+          "cz": "stoupat"
+        },
+        {
+          "en": "sail",
+          "cz": "plout"
+        },
+        {
+          "en": "save",
+          "cz": "ušetřit / zachránit"
+        },
+        {
+          "en": "serve",
+          "cz": "podávat / sloužit"
+        }
+      ]
+    },
+    {
+      "id": "a2_verbs_9",
+      "title": "Verbs · A2 list · 9",
+      "items": [
+        {
+          "en": "shake",
+          "cz": "třást / potřást"
+        },
+        {
+          "en": "solve",
+          "cz": "vyřešit"
+        },
+        {
+          "en": "steal",
+          "cz": "krást"
+        },
+        {
+          "en": "succeed",
+          "cz": "uspět"
+        },
+        {
+          "en": "suggest",
+          "cz": "navrhnout"
+        },
+        {
+          "en": "suppose",
+          "cz": "předpokládat"
+        },
+        {
+          "en": "throw",
+          "cz": "házet"
+        },
+        {
+          "en": "touch",
+          "cz": "dotknout se"
+        },
+        {
+          "en": "train",
+          "cz": "trénovat"
+        },
+        {
+          "en": "worry",
+          "cz": "dělat si starosti"
+        },
+        {
+          "en": "wish",
+          "cz": "přát si"
+        },
+        {
+          "en": "search",
+          "cz": "hledat"
+        },
+        {
+          "en": "check",
+          "cz": "zkontrolovat"
+        },
+        {
+          "en": "increase",
+          "cz": "zvýšit se"
+        },
+        {
+          "en": "improve",
+          "cz": "zlepšit"
+        },
+        {
+          "en": "seem",
+          "cz": "zdát se"
+        }
+      ]
+    }
+  ]
+}

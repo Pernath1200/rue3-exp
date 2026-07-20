@@ -1,0 +1,90 @@
+{
+  "id": "a2_core_frames_glue",
+  "title": "Function glue",
+  "level": "A2",
+  "tree_node": "trunk_glue_a2",
+  "codex_unit": "V_PHR-A1B1-01",
+  "practice": "frames",
+  "note": "A2 frames · V_PHR-A1B1-01",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_core_frames_glue_1",
+      "title": "Function glue · 1",
+      "items": [
+        {
+          "en": "I stayed although it rained.",
+          "cz": "Zůstal jsem, i když pršelo.",
+          "gap": "I stayed ____ it rained.",
+          "gap_answer": "although"
+        },
+        {
+          "en": "The shop is against the wall.",
+          "cz": "Obchod je u zdi. / proti zdi.",
+          "gap": "The shop is ____ the wall.",
+          "gap_answer": "against"
+        },
+        {
+          "en": "She sat among her friends.",
+          "cz": "Seděla mezi přáteli.",
+          "gap": "She sat ____ her friends.",
+          "gap_answer": "among"
+        },
+        {
+          "en": "Everybody came except Tom.",
+          "cz": "Přišli všichni kromě Toma.",
+          "gap": "Everybody came ____ Tom.",
+          "gap_answer": "except"
+        },
+        {
+          "en": "Is anybody at home?",
+          "cz": "Je doma někdo?",
+          "gap": "Is ____ at home?",
+          "gap_answer": "anybody"
+        },
+        {
+          "en": "This book is hers.",
+          "cz": "Tahle kniha je její.",
+          "gap": "This book is ____.",
+          "gap_answer": "hers"
+        },
+        {
+          "en": "The bag is mine.",
+          "cz": "Ta taška je moje.",
+          "gap": "The bag is ____.",
+          "gap_answer": "mine"
+        },
+        {
+          "en": "Is this yours?",
+          "cz": "Je tohle tvoje?",
+          "gap": "Is this ____?",
+          "gap_answer": "yours"
+        },
+        {
+          "en": "We walked towards the station.",
+          "cz": "Šli jsme směrem k nádraží.",
+          "gap": "We walked ____ the station.",
+          "gap_answer": "towards"
+        },
+        {
+          "en": "The cat jumped onto the table.",
+          "cz": "Kočka skočila na stůl.",
+          "gap": "The cat jumped ____ the table.",
+          "gap_answer": "onto"
+        },
+        {
+          "en": "He ran into the room.",
+          "cz": "Vběhl do pokoje.",
+          "gap": "He ran ____ the room.",
+          "gap_answer": "into"
+        },
+        {
+          "en": "Take the keys with you.",
+          "cz": "Vezmi si klíče s sebou.",
+          "gap": "Take the keys ____ you.",
+          "gap_answer": "with"
+        }
+      ]
+    }
+  ]
+}

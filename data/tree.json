@@ -1,8 +1,19 @@
 {
   "version": 1,
   "app": "rue3-grok-exp",
-  "levels": ["A1", "A2", "B1", "B2", "C1"],
-  "levels_locked": ["A2", "B1", "B2", "C1"],
+  "levels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1"
+  ],
+  "levels_locked": [
+    "A2",
+    "B1",
+    "B2",
+    "C1"
+  ],
   "levels_locked_note": "Static default only. Runtime: A1 open; A2 after A1 check or author unlock. C1 always not-yet. Exp sets author_open so A2–B2 are clickable for writing without a gate pass.",
   "author_open": true,
   "nodes": [
@@ -10,7 +21,12 @@
       "id": "trunk",
       "label": "Trunk",
       "kind": "trunk",
-      "levels": ["A1", "A2", "B1", "B2"],
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2"
+      ],
       "parent": null,
       "status": "planned",
       "note": "Support for production — frames, high-freq glue. Seed kit lives inside Be/Have frames."
@@ -19,7 +35,9 @@
       "id": "trunk_frames_a1",
       "label": "Core frames",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_be_have.json",
@@ -29,7 +47,9 @@
       "id": "trunk_prepositions_a1",
       "label": "Prepositions",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_prepositions.json",
@@ -39,7 +59,9 @@
       "id": "trunk_adjectives_a1",
       "label": "Adjectives",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_adjectives.json",
@@ -49,7 +71,9 @@
       "id": "trunk_can_like_want_a1",
       "label": "Can · like · want",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_can_like_want.json",
@@ -59,7 +83,9 @@
       "id": "trunk_there_time_a1",
       "label": "There · time",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_there_time.json",
@@ -69,7 +95,9 @@
       "id": "trunk_verbs_daily_a1",
       "label": "Verbs · daily",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_verbs_daily.json",
@@ -79,7 +107,9 @@
       "id": "trunk_verbs_say_a1",
       "label": "Verbs · say",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_verbs_say.json",
@@ -89,7 +119,9 @@
       "id": "trunk_verbs_action_a1",
       "label": "Verbs · action",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_verbs_action.json",
@@ -99,7 +131,9 @@
       "id": "trunk_social_a1",
       "label": "Social",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_social.json",
@@ -109,7 +143,9 @@
       "id": "trunk_glue_questions_a1",
       "label": "Wh- questions",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_glue_questions.json",
@@ -119,7 +155,9 @@
       "id": "trunk_glue_quantity_a1",
       "label": "Some · any",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_glue_quantity.json",
@@ -129,7 +167,9 @@
       "id": "trunk_glue_linkers_a1",
       "label": "And · but",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_glue_linkers.json",
@@ -139,7 +179,9 @@
       "id": "trunk_glue_modals_a1",
       "label": "Will · must",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_glue_modals.json",
@@ -149,7 +191,9 @@
       "id": "trunk_verbs_more_a1",
       "label": "Verbs · more",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_verbs_more.json",
@@ -159,7 +203,9 @@
       "id": "trunk_verbs_more2_a1",
       "label": "Verbs · more 2",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_verbs_more2.json",
@@ -169,7 +215,9 @@
       "id": "trunk_verbs_more3_a1",
       "label": "Verbs · more 3",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_verbs_more3.json",
@@ -180,7 +228,9 @@
       "id": "trunk_glue_pronouns_a1",
       "label": "Pronouns",
       "kind": "trunk",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_core_frames_glue_pronouns.json",
@@ -190,7 +240,9 @@
       "id": "leaf_home_family",
       "label": "Home & Family",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_home_family.json",
@@ -200,7 +252,9 @@
       "id": "leaf_places",
       "label": "Places",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_places.json",
@@ -210,7 +264,9 @@
       "id": "leaf_food_a1",
       "label": "Food & drink",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_food.json",
@@ -220,7 +276,9 @@
       "id": "leaf_time_a1",
       "label": "Time & numbers",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_time_numbers.json",
@@ -230,7 +288,9 @@
       "id": "leaf_freetime_a1",
       "label": "Free time",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_freetime.json",
@@ -240,7 +300,9 @@
       "id": "leaf_work_a1",
       "label": "Work",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_work.json",
@@ -250,7 +312,9 @@
       "id": "leaf_colours_a1",
       "label": "Colours",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_colours.json",
@@ -260,7 +324,9 @@
       "id": "leaf_clothes_a1",
       "label": "Clothes",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_clothes.json",
@@ -270,7 +336,9 @@
       "id": "leaf_body_a1",
       "label": "Body",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_body.json",
@@ -280,7 +348,9 @@
       "id": "leaf_health_a1",
       "label": "Health",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_health.json",
@@ -291,7 +361,9 @@
       "id": "leaf_animals_a1",
       "label": "Animals",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_animals.json",
@@ -301,7 +373,9 @@
       "id": "leaf_school_a1",
       "label": "School",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_school.json",
@@ -311,7 +385,9 @@
       "id": "leaf_tech_a1",
       "label": "Tech & media",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_tech.json",
@@ -321,7 +397,9 @@
       "id": "leaf_nature_a1",
       "label": "Nature",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_nature.json",
@@ -331,7 +409,9 @@
       "id": "leaf_shopping_a1",
       "label": "Shopping",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_shopping.json",
@@ -342,18 +422,21 @@
       "id": "leaf_ideas_a1",
       "label": "Ideas",
       "kind": "leaf",
-      "levels": ["A1"],
+      "levels": [
+        "A1"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a1_ideas.json",
       "note": "Live · P7 · general core / abstract · 4×12"
     },
-
     {
       "id": "trunk_past_a2",
       "label": "Past · was/were",
       "kind": "trunk",
-      "levels": ["A2"],
+      "levels": [
+        "A2"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a2_core_frames_past.json",
@@ -364,7 +447,9 @@
       "id": "trunk_time_preps_a2",
       "label": "Time preps",
       "kind": "trunk",
-      "levels": ["A2"],
+      "levels": [
+        "A2"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a2_core_frames_time_preps.json",
@@ -375,30 +460,387 @@
       "id": "leaf_travel_a2",
       "label": "Travel & holidays",
       "kind": "leaf",
-      "levels": ["A2"],
+      "levels": [
+        "A2"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a2_travel.json",
       "codex_unit": "V_THM-A1B1-03",
-      "note": "Live · A2 · V_THM-A1B1-03 · travel + holidays · 3×12 · Sentence = fruit"
+      "note": "Live · A2 · V_THM-A1B1-03 · 6×12ish · Oxford fill"
     },
     {
       "id": "leaf_health_a2",
       "label": "Health",
       "kind": "leaf",
-      "levels": ["A2"],
+      "levels": [
+        "A2"
+      ],
       "parent": "trunk",
       "status": "live",
       "content": "blocks/a2_health.json",
       "codex_unit": "V_THM-A1B1-07",
-      "note": "Live · A2 · V_THM-A1B1-07 · symptoms + care extend · 2×12"
+      "note": "Live · A2 · V_THM-A1B1-07 · 3×12ish · Oxford fill"
     },
-
+    {
+      "id": "leaf_home_a2",
+      "label": "Home life",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_home.json",
+      "codex_unit": "V_THM-A1B1-01",
+      "note": "Live · A2 · V_THM-A1B1-01 · 3×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_work_a2",
+      "label": "Work",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_work.json",
+      "codex_unit": "V_THM-A1B1-02",
+      "note": "Live · A2 · V_THM-A1B1-02 · 3×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_family_a2",
+      "label": "Family & people",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_family.json",
+      "codex_unit": "V_THM-A1B1-04",
+      "note": "Live · A2 · V_THM-A1B1-04 · 2×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_food_a2",
+      "label": "Food & drink",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_food.json",
+      "codex_unit": "V_THM-A1B1-05",
+      "note": "Live · A2 · V_THM-A1B1-05 · 2×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_shopping_a2",
+      "label": "Shopping & money",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_shopping.json",
+      "codex_unit": "V_THM-A1B1-06",
+      "note": "Live · A2 · V_THM-A1B1-06 · 2×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_routine_a2",
+      "label": "Routine & habits",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_routine.json",
+      "codex_unit": "V_THM-A1B1-08",
+      "note": "Live · A2 · V_THM-A1B1-08 · 1×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_freetime_a2",
+      "label": "Free time",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_freetime.json",
+      "codex_unit": "V_THM-A1B1-09",
+      "note": "Live · A2 · V_THM-A1B1-09 · 3×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_sports_a2",
+      "label": "Sport",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_sports.json",
+      "codex_unit": "V_THM-A1B1-09",
+      "note": "Live · A2 · V_THM-A1B1-09 · 2×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_nature_a2",
+      "label": "Nature & weather",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_nature.json",
+      "codex_unit": "V_THM-A1B1-09",
+      "note": "Live · A2 · V_THM-A1B1-09 · 1×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_tech_a2",
+      "label": "Tech & media",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_tech.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 · V_COR-A1B1-01 · 3×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_school_a2",
+      "label": "School & learning",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_school.json",
+      "codex_unit": "V_THM-A1B1-02",
+      "note": "Live · A2 · V_THM-A1B1-02 · 3×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_clothes_a2",
+      "label": "Clothes",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_clothes.json",
+      "codex_unit": "V_THM-A1B1-01",
+      "note": "Live · A2 · V_THM-A1B1-01 · 1×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_feelings_a2",
+      "label": "Feelings",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_feelings.json",
+      "codex_unit": "V_THM-A1B1-09",
+      "note": "Live · A2 · V_THM-A1B1-09 · 2×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_ideas_a2",
+      "label": "Ideas & abstract",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_ideas.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 · V_COR-A1B1-01 · 8×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_society_a2",
+      "label": "Society",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_society.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 · V_COR-A1B1-01 · 2×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_media_a2",
+      "label": "Media & arts",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_media.json",
+      "codex_unit": "V_THM-A1B1-09",
+      "note": "Live · A2 · V_THM-A1B1-09 · 2×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_describing_a2",
+      "label": "Describing words",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_describing.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 · V_COR-A1B1-01 · 23×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_adverbs_a2",
+      "label": "Adverbs",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_adverbs.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 · V_COR-A1B1-01 · 4×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_verbs_a2",
+      "label": "Verbs · A2 list",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_verbs.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 · V_COR-A1B1-01 · 9×12ish · Oxford fill"
+    },
+    {
+      "id": "leaf_misc_a2",
+      "label": "General core",
+      "kind": "leaf",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_misc.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 · V_COR-A1B1-01 · 5×12ish · Oxford fill"
+    },
+    {
+      "id": "trunk_past_irreg_a2",
+      "label": "Past",
+      "kind": "trunk",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_core_frames_past_irreg.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 frames · V_COR-A1B1-01 · 24 items"
+    },
+    {
+      "id": "trunk_perfect_a2",
+      "label": "Present perfect",
+      "kind": "trunk",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_core_frames_perfect.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 frames · V_COR-A1B1-01 · 12 items"
+    },
+    {
+      "id": "trunk_future_a2",
+      "label": "Future",
+      "kind": "trunk",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_core_frames_future.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 frames · V_COR-A1B1-01 · 12 items"
+    },
+    {
+      "id": "trunk_compare_a2",
+      "label": "Comparatives",
+      "kind": "trunk",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_core_frames_compare.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 frames · V_COR-A1B1-01 · 12 items"
+    },
+    {
+      "id": "trunk_quantity_a2",
+      "label": "Quantity",
+      "kind": "trunk",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_core_frames_quantity.json",
+      "codex_unit": "V_COR-A1B1-01",
+      "note": "Live · A2 frames · V_COR-A1B1-01 · 12 items"
+    },
+    {
+      "id": "trunk_chunks_a2",
+      "label": "Chunks & formulae",
+      "kind": "trunk",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_core_frames_chunks.json",
+      "codex_unit": "V_PHR-A1B1-01",
+      "note": "Live · A2 frames · V_PHR-A1B1-01 · 12 items"
+    },
+    {
+      "id": "trunk_glue_a2",
+      "label": "Function glue",
+      "kind": "trunk",
+      "levels": [
+        "A2"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a2_core_frames_glue.json",
+      "codex_unit": "V_PHR-A1B1-01",
+      "note": "Live · A2 frames · V_PHR-A1B1-01 · 12 items"
+    },
     {
       "id": "craft",
       "label": "Word-craft",
       "kind": "craft",
-      "levels": ["B1", "B2"],
+      "levels": [
+        "B1",
+        "B2"
+      ],
       "parent": null,
       "status": "parked",
       "note": "Side door later · B1+"

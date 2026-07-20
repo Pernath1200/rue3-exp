@@ -1,0 +1,73 @@
+{
+  "id": "a2_routine",
+  "title": "Routine & habits",
+  "level": "A2",
+  "tree_node": "leaf_routine_a2",
+  "codex_unit": "V_THM-A1B1-08",
+  "note": "V_THM-A1B1-08 routine A2",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_routine_1",
+      "title": "Routine & habits · 1",
+      "items": [
+        {
+          "en": "habit",
+          "cz": "zvyk"
+        },
+        {
+          "en": "lifestyle",
+          "cz": "životní styl"
+        },
+        {
+          "en": "schedule",
+          "cz": "rozvrh / plán"
+        },
+        {
+          "en": "timetable",
+          "cz": "jízdní řád / rozvrh"
+        },
+        {
+          "en": "daily",
+          "cz": "denní / denně"
+        },
+        {
+          "en": "everyday",
+          "cz": "každodenní"
+        },
+        {
+          "en": "regular",
+          "cz": "pravidelný"
+        },
+        {
+          "en": "usual",
+          "cz": "obvyklý"
+        },
+        {
+          "en": "already",
+          "cz": "už / již"
+        },
+        {
+          "en": "yet",
+          "cz": "ještě / už"
+        },
+        {
+          "en": "still",
+          "cz": "stále"
+        },
+        {
+          "en": "bit",
+          "cz": "trochu / kousek"
+        },
+        {
+          "en": "alarm",
+          "cz": "budík / alarm"
+        },
+        {
+          "en": "diary",
+          "cz": "deník"
+        }
+      ]
+    }
+  ]
+}

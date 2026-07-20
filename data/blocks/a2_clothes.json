@@ -1,0 +1,65 @@
+{
+  "id": "a2_clothes",
+  "title": "Clothes",
+  "level": "A2",
+  "tree_node": "leaf_clothes_a2",
+  "codex_unit": "V_THM-A1B1-01",
+  "note": "Clothes A2",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_clothes_1",
+      "title": "Clothes · 1",
+      "items": [
+        {
+          "en": "fashion",
+          "cz": "móda"
+        },
+        {
+          "en": "clothing",
+          "cz": "oblečení"
+        },
+        {
+          "en": "uniform",
+          "cz": "uniforma"
+        },
+        {
+          "en": "pants",
+          "cz": "kalhoty (amer.)"
+        },
+        {
+          "en": "jumper",
+          "cz": "svetr"
+        },
+        {
+          "en": "glove",
+          "cz": "rukavice"
+        },
+        {
+          "en": "ring",
+          "cz": "prsten"
+        },
+        {
+          "en": "jewellery",
+          "cz": "šperky"
+        },
+        {
+          "en": "smart",
+          "cz": "elegantní / chytrý"
+        },
+        {
+          "en": "casual",
+          "cz": "neformální"
+        },
+        {
+          "en": "belt",
+          "cz": "pásek"
+        },
+        {
+          "en": "button",
+          "cz": "knoflík"
+        }
+      ]
+    }
+  ]
+}

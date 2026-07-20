@@ -1,46 +1,192 @@
 {
   "id": "a2_health",
-  "title": "Health (A2)",
+  "title": "Health",
   "level": "A2",
   "tree_node": "leaf_health_a2",
   "codex_unit": "V_THM-A1B1-07",
-  "note": "A2 Health extend · V_THM-A1B1-07. Beyond A1 illness basics — symptoms, advice, pharmacy talk.",
+  "note": "V_THM-A1B1-07 health A2 full",
   "default_direction": "cz_to_en",
   "blocks": [
     {
-      "id": "a2_health_symptoms",
-      "title": "Health · symptoms",
+      "id": "a2_health_1",
+      "title": "Health · 1",
       "items": [
-        { "en": "symptom", "cz": "příznak" },
-        { "en": "sore throat", "cz": "bolest v krku" },
-        { "en": "toothache", "cz": "bolest zubu" },
-        { "en": "backache", "cz": "bolest zad" },
-        { "en": "allergy", "cz": "alergie" },
-        { "en": "allergic", "cz": "alergický" },
-        { "en": "broken (bone)", "cz": "zlomený" },
-        { "en": "injury", "cz": "zranění" },
-        { "en": "bandage", "cz": "obvaz" },
-        { "en": "prescription", "cz": "recept (na léky)" },
-        { "en": "chemist", "cz": "lékárna / lékárník" },
-        { "en": "emergency", "cz": "nouze / pohotovost" }
+        {
+          "en": "symptom",
+          "cz": "příznak"
+        },
+        {
+          "en": "sore throat",
+          "cz": "bolest v krku"
+        },
+        {
+          "en": "toothache",
+          "cz": "bolest zubu"
+        },
+        {
+          "en": "backache",
+          "cz": "bolest zad"
+        },
+        {
+          "en": "allergy",
+          "cz": "alergie"
+        },
+        {
+          "en": "allergic",
+          "cz": "alergický"
+        },
+        {
+          "en": "broken (bone)",
+          "cz": "zlomený"
+        },
+        {
+          "en": "injury",
+          "cz": "zranění"
+        },
+        {
+          "en": "bandage",
+          "cz": "obvaz"
+        },
+        {
+          "en": "prescription",
+          "cz": "recept (na léky)"
+        },
+        {
+          "en": "chemist",
+          "cz": "lékárna / lékárník"
+        },
+        {
+          "en": "emergency",
+          "cz": "nouze / pohotovost"
+        }
       ]
     },
     {
-      "id": "a2_health_advice",
-      "title": "Health · advice & care",
+      "id": "a2_health_2",
+      "title": "Health · 2",
       "items": [
-        { "en": "recover", "cz": "zotavit se / uzdravit se" },
-        { "en": "rest", "cz": "odpočinek / odpočívat" },
-        { "en": "exercise", "cz": "cvičení / cvičit" },
-        { "en": "stress", "cz": "stres" },
-        { "en": "diet", "cz": "strava / dieta" },
-        { "en": "fit", "cz": "fit / v kondici" },
-        { "en": "unfit", "cz": "nefit / ne v kondici" },
-        { "en": "get better", "cz": "uzdravit se / být líp" },
-        { "en": "feel better", "cz": "cítit se líp" },
-        { "en": "see a doctor", "cz": "zajít k lékaři" },
-        { "en": "take medicine", "cz": "užívat léky" },
-        { "en": "look after", "cz": "starat se o" }
+        {
+          "en": "recover",
+          "cz": "zotavit se / uzdravit se"
+        },
+        {
+          "en": "rest",
+          "cz": "odpočinek / odpočívat"
+        },
+        {
+          "en": "exercise",
+          "cz": "cvičení / cvičit"
+        },
+        {
+          "en": "stress",
+          "cz": "stres"
+        },
+        {
+          "en": "diet",
+          "cz": "strava / dieta"
+        },
+        {
+          "en": "fit",
+          "cz": "fit / v kondici"
+        },
+        {
+          "en": "unfit",
+          "cz": "nefit / ne v kondici"
+        },
+        {
+          "en": "get better",
+          "cz": "uzdravit se / být líp"
+        },
+        {
+          "en": "feel better",
+          "cz": "cítit se líp"
+        },
+        {
+          "en": "see a doctor",
+          "cz": "zajít k lékaři"
+        },
+        {
+          "en": "take medicine",
+          "cz": "užívat léky"
+        },
+        {
+          "en": "look after",
+          "cz": "starat se o"
+        }
+      ]
+    },
+    {
+      "id": "a2_health_3",
+      "title": "Health · 3",
+      "items": [
+        {
+          "en": "accident",
+          "cz": "nehoda"
+        },
+        {
+          "en": "ankle",
+          "cz": "kotník"
+        },
+        {
+          "en": "bone",
+          "cz": "kost"
+        },
+        {
+          "en": "brain",
+          "cz": "mozek"
+        },
+        {
+          "en": "disease",
+          "cz": "nemoc (choroba)"
+        },
+        {
+          "en": "illness",
+          "cz": "nemoc"
+        },
+        {
+          "en": "virus",
+          "cz": "virus"
+        },
+        {
+          "en": "blood",
+          "cz": "krev"
+        },
+        {
+          "en": "breathe",
+          "cz": "dýchat"
+        },
+        {
+          "en": "cancer",
+          "cz": "rakovina"
+        },
+        {
+          "en": "drug",
+          "cz": "lék / droga"
+        },
+        {
+          "en": "treatment",
+          "cz": "léčba"
+        },
+        {
+          "en": "danger",
+          "cz": "nebezpečí"
+        },
+        {
+          "en": "death",
+          "cz": "smrt"
+        },
+        {
+          "en": "energy",
+          "cz": "energie"
+        },
+        {
+          "en": "height",
+          "cz": "výška"
+        },
+        {
+          "en": "weight",
+          "cz": "váha"
+        }
       ]
     }
   ]

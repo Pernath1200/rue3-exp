@@ -1,0 +1,165 @@
+{
+  "id": "a2_school",
+  "title": "School & learning",
+  "level": "A2",
+  "tree_node": "leaf_school_a2",
+  "codex_unit": "V_THM-A1B1-02",
+  "note": "Study A2 · THM work/study",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_school_1",
+      "title": "School & learning · 1",
+      "items": [
+        {
+          "en": "degree",
+          "cz": "titul / stupeň"
+        },
+        {
+          "en": "education",
+          "cz": "vzdělání"
+        },
+        {
+          "en": "learning",
+          "cz": "učení"
+        },
+        {
+          "en": "mark",
+          "cz": "známka"
+        },
+        {
+          "en": "essay",
+          "cz": "esej / sloh"
+        },
+        {
+          "en": "lecture",
+          "cz": "přednáška"
+        },
+        {
+          "en": "professor",
+          "cz": "profesor"
+        },
+        {
+          "en": "student",
+          "cz": "student"
+        },
+        {
+          "en": "subject",
+          "cz": "předmět"
+        },
+        {
+          "en": "term",
+          "cz": "semestr / pojem"
+        },
+        {
+          "en": "project",
+          "cz": "projekt"
+        },
+        {
+          "en": "research",
+          "cz": "výzkum"
+        }
+      ]
+    },
+    {
+      "id": "a2_school_2",
+      "title": "School & learning · 2",
+      "items": [
+        {
+          "en": "researcher",
+          "cz": "výzkumník"
+        },
+        {
+          "en": "experiment",
+          "cz": "experiment"
+        },
+        {
+          "en": "lab",
+          "cz": "laboratoř"
+        },
+        {
+          "en": "biology",
+          "cz": "biologie"
+        },
+        {
+          "en": "chemistry",
+          "cz": "chemie"
+        },
+        {
+          "en": "physics",
+          "cz": "fyzika"
+        },
+        {
+          "en": "mathematics",
+          "cz": "matematika"
+        },
+        {
+          "en": "maths",
+          "cz": "matika"
+        },
+        {
+          "en": "history",
+          "cz": "dějepis / historie"
+        },
+        {
+          "en": "geography",
+          "cz": "zeměpis"
+        },
+        {
+          "en": "library",
+          "cz": "knihovna"
+        },
+        {
+          "en": "dictionary",
+          "cz": "slovník"
+        }
+      ]
+    },
+    {
+      "id": "a2_school_3",
+      "title": "School & learning · 3",
+      "items": [
+        {
+          "en": "instruction",
+          "cz": "instrukce / návod"
+        },
+        {
+          "en": "introduction",
+          "cz": "úvod / představení"
+        },
+        {
+          "en": "explanation",
+          "cz": "vysvětlení"
+        },
+        {
+          "en": "understanding",
+          "cz": "porozumění"
+        },
+        {
+          "en": "memory",
+          "cz": "paměť"
+        },
+        {
+          "en": "mind",
+          "cz": "mysl"
+        },
+        {
+          "en": "thought",
+          "cz": "myšlenka"
+        },
+        {
+          "en": "thinking",
+          "cz": "přemýšlení"
+        },
+        {
+          "en": "knowledge",
+          "cz": "znalosti"
+        },
+        {
+          "en": "teaching",
+          "cz": "výuka"
+        }
+      ]
+    }
+  ]
+}

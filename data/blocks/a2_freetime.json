@@ -1,0 +1,157 @@
+{
+  "id": "a2_freetime",
+  "title": "Free time",
+  "level": "A2",
+  "tree_node": "leaf_freetime_a2",
+  "codex_unit": "V_THM-A1B1-09",
+  "note": "V_THM-A1B1-09 free time A2",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_freetime_1",
+      "title": "Free time · 1",
+      "items": [
+        {
+          "en": "adventure",
+          "cz": "dobrodružství"
+        },
+        {
+          "en": "series",
+          "cz": "seriál / série"
+        },
+        {
+          "en": "comedy",
+          "cz": "komedie"
+        },
+        {
+          "en": "drama",
+          "cz": "drama"
+        },
+        {
+          "en": "fiction",
+          "cz": "beletrie / fikce"
+        },
+        {
+          "en": "novel",
+          "cz": "román"
+        },
+        {
+          "en": "cartoon",
+          "cz": "kreslený film / komiks"
+        },
+        {
+          "en": "celebrity",
+          "cz": "celebrita"
+        },
+        {
+          "en": "fan",
+          "cz": "fanoušek"
+        },
+        {
+          "en": "hero",
+          "cz": "hrdina"
+        },
+        {
+          "en": "stage",
+          "cz": "jeviště / etapa"
+        },
+        {
+          "en": "instrument",
+          "cz": "nástroj"
+        }
+      ]
+    },
+    {
+      "id": "a2_freetime_2",
+      "title": "Free time · 2",
+      "items": [
+        {
+          "en": "jazz",
+          "cz": "jazz"
+        },
+        {
+          "en": "musical",
+          "cz": "muzikál / hudební"
+        },
+        {
+          "en": "musician",
+          "cz": "hudebník"
+        },
+        {
+          "en": "painter",
+          "cz": "malíř"
+        },
+        {
+          "en": "drawing",
+          "cz": "kresba"
+        },
+        {
+          "en": "gallery",
+          "cz": "galerie"
+        },
+        {
+          "en": "entertainment",
+          "cz": "zábava"
+        },
+        {
+          "en": "festival",
+          "cz": "festival"
+        },
+        {
+          "en": "party",
+          "cz": "večírek / párty"
+        },
+        {
+          "en": "joke",
+          "cz": "vtip"
+        },
+        {
+          "en": "laughter",
+          "cz": "smích"
+        },
+        {
+          "en": "dream",
+          "cz": "sen / snít"
+        }
+      ]
+    },
+    {
+      "id": "a2_freetime_3",
+      "title": "Free time · 3",
+      "items": [
+        {
+          "en": "luck",
+          "cz": "štěstí (náhoda)"
+        },
+        {
+          "en": "prize",
+          "cz": "cena (odměna)"
+        },
+        {
+          "en": "award",
+          "cz": "ocenění / cena"
+        },
+        {
+          "en": "competition",
+          "cz": "soutěž"
+        },
+        {
+          "en": "race",
+          "cz": "závod"
+        },
+        {
+          "en": "goal",
+          "cz": "gól / cíl"
+        },
+        {
+          "en": "score",
+          "cz": "skóre / skórovat"
+        },
+        {
+          "en": "winner",
+          "cz": "vítěz"
+        }
+      ]
+    }
+  ]
+}

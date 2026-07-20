@@ -1,0 +1,193 @@
+{
+  "id": "a2_work",
+  "title": "Work",
+  "level": "A2",
+  "tree_node": "leaf_work_a2",
+  "codex_unit": "V_THM-A1B1-02",
+  "note": "V_THM-A1B1-02 work A2",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_work_1",
+      "title": "Work · 1",
+      "items": [
+        {
+          "en": "apply",
+          "cz": "požádat (o práci) / přihlásit se"
+        },
+        {
+          "en": "application",
+          "cz": "žádost / přihláška"
+        },
+        {
+          "en": "boss",
+          "cz": "šéf"
+        },
+        {
+          "en": "businessman",
+          "cz": "obchodník / podnikatel"
+        },
+        {
+          "en": "career",
+          "cz": "kariéra"
+        },
+        {
+          "en": "colleague",
+          "cz": "kolega"
+        },
+        {
+          "en": "company",
+          "cz": "firma / společnost"
+        },
+        {
+          "en": "contract",
+          "cz": "smlouva"
+        },
+        {
+          "en": "department",
+          "cz": "oddělení"
+        },
+        {
+          "en": "employee",
+          "cz": "zaměstnanec"
+        },
+        {
+          "en": "employer",
+          "cz": "zaměstnavatel"
+        },
+        {
+          "en": "interview",
+          "cz": "pohovor"
+        }
+      ]
+    },
+    {
+      "id": "a2_work_2",
+      "title": "Work · 2",
+      "items": [
+        {
+          "en": "manager",
+          "cz": "manažer / vedoucí"
+        },
+        {
+          "en": "meeting",
+          "cz": "schůzka / porada"
+        },
+        {
+          "en": "profession",
+          "cz": "povolání / profese"
+        },
+        {
+          "en": "professional",
+          "cz": "profesionál / odborný"
+        },
+        {
+          "en": "salary",
+          "cz": "plat"
+        },
+        {
+          "en": "skill",
+          "cz": "dovednost"
+        },
+        {
+          "en": "staff",
+          "cz": "personál / zaměstnanci"
+        },
+        {
+          "en": "team",
+          "cz": "tým"
+        },
+        {
+          "en": "training",
+          "cz": "školení / výcvik"
+        },
+        {
+          "en": "unemployed",
+          "cz": "nezaměstnaný"
+        },
+        {
+          "en": "unemployment",
+          "cz": "nezaměstnanost"
+        },
+        {
+          "en": "wage",
+          "cz": "mzda"
+        }
+      ]
+    },
+    {
+      "id": "a2_work_3",
+      "title": "Work · 3",
+      "items": [
+        {
+          "en": "workplace",
+          "cz": "pracoviště"
+        },
+        {
+          "en": "earn",
+          "cz": "vydělávat"
+        },
+        {
+          "en": "employ",
+          "cz": "zaměstnávat"
+        },
+        {
+          "en": "factory",
+          "cz": "továrna"
+        },
+        {
+          "en": "industry",
+          "cz": "průmysl / odvětví"
+        },
+        {
+          "en": "secretary",
+          "cz": "sekretářka / tajemník"
+        },
+        {
+          "en": "officer",
+          "cz": "úředník / důstojník"
+        },
+        {
+          "en": "leader",
+          "cz": "vůdce / vedoucí"
+        },
+        {
+          "en": "conference",
+          "cz": "konference"
+        },
+        {
+          "en": "task",
+          "cz": "úkol"
+        },
+        {
+          "en": "organization",
+          "cz": "organizace"
+        },
+        {
+          "en": "assistant",
+          "cz": "asistent"
+        },
+        {
+          "en": "designer",
+          "cz": "designér / návrhář"
+        },
+        {
+          "en": "director",
+          "cz": "ředitel / režisér"
+        },
+        {
+          "en": "instructor",
+          "cz": "instruktor"
+        },
+        {
+          "en": "care",
+          "cz": "péče / starat se"
+        },
+        {
+          "en": "experience",
+          "cz": "zkušenost"
+        }
+      ]
+    }
+  ]
+}

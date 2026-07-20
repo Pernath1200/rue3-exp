@@ -4,61 +4,331 @@
   "level": "A2",
   "tree_node": "leaf_travel_a2",
   "codex_unit": "V_THM-A1B1-03",
-  "note": "A2 Travel & holidays · V_THM-A1B1-03. Extends A1 Places travel slice. Sentence = fruit.",
+  "note": "V_THM-A1B1-03 travel A2 full",
   "default_direction": "cz_to_en",
   "blocks": [
     {
-      "id": "travel_trip",
-      "title": "Travel · the trip",
+      "id": "a2_travel_1",
+      "title": "Travel & holidays · 1",
       "items": [
-        { "en": "holiday", "cz": "dovolená" },
-        { "en": "trip", "cz": "výlet / cesta" },
-        { "en": "journey", "cz": "cesta (delší)" },
-        { "en": "tourist", "cz": "turista" },
-        { "en": "sightseeing", "cz": "prohlídka památek" },
-        { "en": "luggage", "cz": "zavazadla" },
-        { "en": "suitcase", "cz": "kufr" },
-        { "en": "passport", "cz": "pas" },
-        { "en": "ticket", "cz": "lístek / jízdenka" },
-        { "en": "booking", "cz": "rezervace" },
-        { "en": "guide", "cz": "průvodce" },
-        { "en": "map", "cz": "mapa" }
+        {
+          "en": "holiday",
+          "cz": "dovolená"
+        },
+        {
+          "en": "trip",
+          "cz": "výlet / cesta"
+        },
+        {
+          "en": "journey",
+          "cz": "cesta (delší)"
+        },
+        {
+          "en": "tourist",
+          "cz": "turista"
+        },
+        {
+          "en": "sightseeing",
+          "cz": "prohlídka památek"
+        },
+        {
+          "en": "luggage",
+          "cz": "zavazadla"
+        },
+        {
+          "en": "suitcase",
+          "cz": "kufr"
+        },
+        {
+          "en": "passport",
+          "cz": "pas"
+        },
+        {
+          "en": "ticket",
+          "cz": "lístek / jízdenka"
+        },
+        {
+          "en": "booking",
+          "cz": "rezervace"
+        },
+        {
+          "en": "guide",
+          "cz": "průvodce"
+        },
+        {
+          "en": "map",
+          "cz": "mapa"
+        }
       ]
     },
     {
-      "id": "travel_places",
-      "title": "Travel · places",
+      "id": "a2_travel_2",
+      "title": "Travel & holidays · 2",
       "items": [
-        { "en": "airport", "cz": "letiště" },
-        { "en": "station", "cz": "nádraží" },
-        { "en": "platform", "cz": "nástupiště" },
-        { "en": "hotel", "cz": "hotel" },
-        { "en": "hostel", "cz": "hostel" },
-        { "en": "beach", "cz": "pláž" },
-        { "en": "resort", "cz": "letovisko" },
-        { "en": "border", "cz": "hranice" },
-        { "en": "countryside", "cz": "venkov" },
-        { "en": "capital", "cz": "hlavní město" },
-        { "en": "abroad", "cz": "v zahraničí" },
-        { "en": "flight", "cz": "let (letadlem)" }
+        {
+          "en": "airport",
+          "cz": "letiště"
+        },
+        {
+          "en": "station",
+          "cz": "nádraží"
+        },
+        {
+          "en": "platform",
+          "cz": "nástupiště"
+        },
+        {
+          "en": "hotel",
+          "cz": "hotel"
+        },
+        {
+          "en": "hostel",
+          "cz": "hostel"
+        },
+        {
+          "en": "beach",
+          "cz": "pláž"
+        },
+        {
+          "en": "resort",
+          "cz": "letovisko"
+        },
+        {
+          "en": "border",
+          "cz": "hranice"
+        },
+        {
+          "en": "countryside",
+          "cz": "venkov"
+        },
+        {
+          "en": "capital",
+          "cz": "hlavní město"
+        },
+        {
+          "en": "abroad",
+          "cz": "v zahraničí"
+        },
+        {
+          "en": "flight",
+          "cz": "let (letadlem)"
+        }
       ]
     },
     {
-      "id": "travel_doing",
-      "title": "Travel · doing it",
+      "id": "a2_travel_3",
+      "title": "Travel & holidays · 3",
       "items": [
-        { "en": "travel (verb)", "cz": "cestovat" },
-        { "en": "fly", "cz": "letět" },
-        { "en": "arrive", "cz": "přijet / dorazit" },
-        { "en": "leave (depart)", "cz": "odjet / odletět" },
-        { "en": "book (verb)", "cz": "rezervovat" },
-        { "en": "pack", "cz": "zabalit (si)" },
-        { "en": "check in", "cz": "odbavit se / zaregistrovat se" },
-        { "en": "delay", "cz": "zpoždění" },
-        { "en": "delayed", "cz": "zpožděný" },
-        { "en": "return ticket", "cz": "zpáteční jízdenka" },
-        { "en": "single ticket", "cz": "jednosměrná jízdenka" },
-        { "en": "souvenir", "cz": "suvenýr" }
+        {
+          "en": "travel (verb)",
+          "cz": "cestovat"
+        },
+        {
+          "en": "fly",
+          "cz": "letět"
+        },
+        {
+          "en": "arrive",
+          "cz": "přijet / dorazit"
+        },
+        {
+          "en": "leave (depart)",
+          "cz": "odjet / odletět"
+        },
+        {
+          "en": "book (verb)",
+          "cz": "rezervovat"
+        },
+        {
+          "en": "pack",
+          "cz": "zabalit (si)"
+        },
+        {
+          "en": "check in",
+          "cz": "odbavit se / zaregistrovat se"
+        },
+        {
+          "en": "delay",
+          "cz": "zpoždění"
+        },
+        {
+          "en": "delayed",
+          "cz": "zpožděný"
+        },
+        {
+          "en": "return ticket",
+          "cz": "zpáteční jízdenka"
+        },
+        {
+          "en": "single ticket",
+          "cz": "jednosměrná jízdenka"
+        },
+        {
+          "en": "souvenir",
+          "cz": "suvenýr"
+        }
+      ]
+    },
+    {
+      "id": "a2_travel_4",
+      "title": "Travel & holidays · 4",
+      "items": [
+        {
+          "en": "airline",
+          "cz": "letecká společnost"
+        },
+        {
+          "en": "backpack",
+          "cz": "batoh"
+        },
+        {
+          "en": "cabin",
+          "cz": "kabina"
+        },
+        {
+          "en": "camp",
+          "cz": "tábor / kempovat"
+        },
+        {
+          "en": "camping",
+          "cz": "kempování"
+        },
+        {
+          "en": "coach",
+          "cz": "autobus (dálkový) / trenér"
+        },
+        {
+          "en": "destination",
+          "cz": "cíl cesty"
+        },
+        {
+          "en": "ferry",
+          "cz": "trajekt"
+        },
+        {
+          "en": "foreign",
+          "cz": "zahraniční / cizí"
+        },
+        {
+          "en": "passenger",
+          "cz": "cestující"
+        },
+        {
+          "en": "voyage",
+          "cz": "plavba / cesta (loď)"
+        },
+        {
+          "en": "railway",
+          "cz": "železnice"
+        }
+      ]
+    },
+    {
+      "id": "a2_travel_5",
+      "title": "Travel & holidays · 5",
+      "items": [
+        {
+          "en": "route",
+          "cz": "trasa"
+        },
+        {
+          "en": "ship",
+          "cz": "loď"
+        },
+        {
+          "en": "tourism",
+          "cz": "cestovní ruch"
+        },
+        {
+          "en": "traveller",
+          "cz": "cestovatel"
+        },
+        {
+          "en": "vehicle",
+          "cz": "vozidlo"
+        },
+        {
+          "en": "lorry",
+          "cz": "nákladní auto"
+        },
+        {
+          "en": "truck",
+          "cz": "náklaďák"
+        },
+        {
+          "en": "motorcycle",
+          "cz": "motocykl"
+        },
+        {
+          "en": "parking",
+          "cz": "parkování"
+        },
+        {
+          "en": "petrol",
+          "cz": "benzín"
+        },
+        {
+          "en": "pilot",
+          "cz": "pilot"
+        },
+        {
+          "en": "coast",
+          "cz": "pobřeží"
+        }
+      ]
+    },
+    {
+      "id": "a2_travel_6",
+      "title": "Travel & holidays · 6",
+      "items": [
+        {
+          "en": "bridge",
+          "cz": "most"
+        },
+        {
+          "en": "tower",
+          "cz": "věž"
+        },
+        {
+          "en": "castle",
+          "cz": "hrad / zámek"
+        },
+        {
+          "en": "palace",
+          "cz": "palác"
+        },
+        {
+          "en": "region",
+          "cz": "region / oblast"
+        },
+        {
+          "en": "continent",
+          "cz": "kontinent"
+        },
+        {
+          "en": "distance",
+          "cz": "vzdálenost"
+        },
+        {
+          "en": "direction",
+          "cz": "směr"
+        },
+        {
+          "en": "case",
+          "cz": "kufr / případ"
+        },
+        {
+          "en": "transport",
+          "cz": "doprava"
+        },
+        {
+          "en": "driving",
+          "cz": "řízení"
+        },
+        {
+          "en": "tour",
+          "cz": "prohlídka / turné"
+        }
       ]
     }
   ]

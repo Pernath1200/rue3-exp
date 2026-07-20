@@ -1,0 +1,102 @@
+{
+  "id": "a2_core_frames_future",
+  "title": "Future · going to / will",
+  "level": "A2",
+  "tree_node": "trunk_future_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "practice": "frames",
+  "note": "A2 frames · V_COR-A1B1-01",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_core_frames_future_1",
+      "title": "Future · going to / will · 1",
+      "items": [
+        {
+          "en": "I'm going to travel next year.",
+          "cz": "Příští rok budu cestovat.",
+          "gap": "I'm ____ to travel next year.",
+          "gap_answer": "going"
+        },
+        {
+          "en": "She's going to study medicine.",
+          "cz": "Bude studovat medicínu.",
+          "gap": "She's ____ to study medicine.",
+          "gap_answer": "going"
+        },
+        {
+          "en": "We'll call you tomorrow.",
+          "cz": "Zavoláme ti zítra.",
+          "gap": "We ____ call you tomorrow.",
+          "gap_answer": "will",
+          "accepts": [
+            "We'll call you tomorrow."
+          ]
+        },
+        {
+          "en": "I think it will rain.",
+          "cz": "Myslím, že bude pršet.",
+          "gap": "I think it ____ rain.",
+          "gap_answer": "will"
+        },
+        {
+          "en": "I'm meeting her on Friday.",
+          "cz": "V pátek se s ní sejdu.",
+          "gap": "I'm ____ her on Friday.",
+          "gap_answer": "meeting"
+        },
+        {
+          "en": "They're flying to Rome.",
+          "cz": "Letí do Říma.",
+          "gap": "They're ____ to Rome.",
+          "gap_answer": "flying"
+        },
+        {
+          "en": "What are you going to do?",
+          "cz": "Co budeš dělat?",
+          "gap": "What are you ____ to do?",
+          "gap_answer": "going"
+        },
+        {
+          "en": "I'll help you.",
+          "cz": "Pomůžu ti.",
+          "gap": "I ____ help you.",
+          "gap_answer": "will",
+          "accepts": [
+            "I'll help you."
+          ]
+        },
+        {
+          "en": "He won't come.",
+          "cz": "Nepřijde.",
+          "gap": "He ____ come.",
+          "gap_answer": "won't",
+          "accepts": [
+            "He will not come."
+          ]
+        },
+        {
+          "en": "Are you going to buy it?",
+          "cz": "Koupíš to?",
+          "gap": "Are you ____ to buy it?",
+          "gap_answer": "going"
+        },
+        {
+          "en": "We're going to move house.",
+          "cz": "Budeme se stěhovat.",
+          "gap": "We're ____ to move house.",
+          "gap_answer": "going"
+        },
+        {
+          "en": "I'll see you later.",
+          "cz": "Uvidíme se později.",
+          "gap": "I ____ see you later.",
+          "gap_answer": "will",
+          "accepts": [
+            "I'll see you later."
+          ]
+        }
+      ]
+    }
+  ]
+}

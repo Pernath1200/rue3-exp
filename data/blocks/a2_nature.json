@@ -1,0 +1,89 @@
+{
+  "id": "a2_nature",
+  "title": "Nature & weather",
+  "level": "A2",
+  "tree_node": "leaf_nature_a2",
+  "codex_unit": "V_THM-A1B1-09",
+  "note": "Nature/weather A2",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_nature_1",
+      "title": "Nature & weather · 1",
+      "items": [
+        {
+          "en": "climate",
+          "cz": "klima"
+        },
+        {
+          "en": "environment",
+          "cz": "životní prostředí"
+        },
+        {
+          "en": "ocean",
+          "cz": "oceán"
+        },
+        {
+          "en": "planet",
+          "cz": "planeta"
+        },
+        {
+          "en": "pollution",
+          "cz": "znečištění"
+        },
+        {
+          "en": "storm",
+          "cz": "bouře"
+        },
+        {
+          "en": "valley",
+          "cz": "údolí"
+        },
+        {
+          "en": "wood",
+          "cz": "les / dřevo"
+        },
+        {
+          "en": "desert",
+          "cz": "poušť"
+        },
+        {
+          "en": "grass",
+          "cz": "tráva"
+        },
+        {
+          "en": "ground",
+          "cz": "zem / půda"
+        },
+        {
+          "en": "stone",
+          "cz": "kámen"
+        },
+        {
+          "en": "disaster",
+          "cz": "katastrofa"
+        },
+        {
+          "en": "moon",
+          "cz": "měsíc"
+        },
+        {
+          "en": "rock",
+          "cz": "skála / rock"
+        },
+        {
+          "en": "season",
+          "cz": "sezóna / roční období"
+        },
+        {
+          "en": "spider",
+          "cz": "pavouk"
+        },
+        {
+          "en": "wave",
+          "cz": "vlna"
+        }
+      ]
+    }
+  ]
+}

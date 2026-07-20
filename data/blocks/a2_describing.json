@@ -1,0 +1,1423 @@
+{
+  "id": "a2_describing",
+  "title": "Describing words",
+  "level": "A2",
+  "tree_node": "leaf_describing_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "note": "A2 adjectives · COR",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_describing_1",
+      "title": "Describing words · 1",
+      "items": [
+        {
+          "en": "able",
+          "cz": "schopný"
+        },
+        {
+          "en": "active",
+          "cz": "aktivní"
+        },
+        {
+          "en": "alive",
+          "cz": "živý"
+        },
+        {
+          "en": "alone",
+          "cz": "sám"
+        },
+        {
+          "en": "ancient",
+          "cz": "starověký / prastarý"
+        },
+        {
+          "en": "asleep",
+          "cz": "spící"
+        },
+        {
+          "en": "attractive",
+          "cz": "přitažlivý"
+        },
+        {
+          "en": "available",
+          "cz": "dostupný"
+        },
+        {
+          "en": "average",
+          "cz": "průměrný"
+        },
+        {
+          "en": "awful",
+          "cz": "příšerný"
+        },
+        {
+          "en": "basic",
+          "cz": "základní"
+        },
+        {
+          "en": "beautiful",
+          "cz": "krásný"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_2",
+      "title": "Describing words · 2",
+      "items": [
+        {
+          "en": "blind",
+          "cz": "slepý"
+        },
+        {
+          "en": "bright",
+          "cz": "jasný / bystrý"
+        },
+        {
+          "en": "brilliant",
+          "cz": "skvělý / geniální"
+        },
+        {
+          "en": "broad",
+          "cz": "široký"
+        },
+        {
+          "en": "busy",
+          "cz": "zaneprázdněný"
+        },
+        {
+          "en": "careful",
+          "cz": "opatrný"
+        },
+        {
+          "en": "certain",
+          "cz": "jistý"
+        },
+        {
+          "en": "clear",
+          "cz": "jasný / zřejmý"
+        },
+        {
+          "en": "clever",
+          "cz": "chytrý"
+        },
+        {
+          "en": "common",
+          "cz": "běžný / společný"
+        },
+        {
+          "en": "complete",
+          "cz": "úplný"
+        },
+        {
+          "en": "complex",
+          "cz": "složitý"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_3",
+      "title": "Describing words · 3",
+      "items": [
+        {
+          "en": "cool",
+          "cz": "chladný / super"
+        },
+        {
+          "en": "correct",
+          "cz": "správný"
+        },
+        {
+          "en": "crazy",
+          "cz": "bláznivý"
+        },
+        {
+          "en": "curious",
+          "cz": "zvědavý"
+        },
+        {
+          "en": "dangerous",
+          "cz": "nebezpečný"
+        },
+        {
+          "en": "dark",
+          "cz": "tmavý"
+        },
+        {
+          "en": "dead",
+          "cz": "mrtvý"
+        },
+        {
+          "en": "deep",
+          "cz": "hluboký"
+        },
+        {
+          "en": "difficult",
+          "cz": "obtížný"
+        },
+        {
+          "en": "dirty",
+          "cz": "špinavý"
+        },
+        {
+          "en": "double",
+          "cz": "dvojitý"
+        },
+        {
+          "en": "dry",
+          "cz": "suchý"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_4",
+      "title": "Describing words · 4",
+      "items": [
+        {
+          "en": "early",
+          "cz": "brzký / brzy"
+        },
+        {
+          "en": "eastern",
+          "cz": "východní"
+        },
+        {
+          "en": "economic",
+          "cz": "ekonomický"
+        },
+        {
+          "en": "educational",
+          "cz": "vzdělávací"
+        },
+        {
+          "en": "efficient",
+          "cz": "efektivní"
+        },
+        {
+          "en": "electric",
+          "cz": "elektrický"
+        },
+        {
+          "en": "empty",
+          "cz": "prázdný"
+        },
+        {
+          "en": "enormous",
+          "cz": "obrovský"
+        },
+        {
+          "en": "entire",
+          "cz": "celý"
+        },
+        {
+          "en": "environmental",
+          "cz": "environmentální"
+        },
+        {
+          "en": "equal",
+          "cz": "rovný / stejný"
+        },
+        {
+          "en": "exact",
+          "cz": "přesný"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_5",
+      "title": "Describing words · 5",
+      "items": [
+        {
+          "en": "excellent",
+          "cz": "výborný"
+        },
+        {
+          "en": "existing",
+          "cz": "existující"
+        },
+        {
+          "en": "expected",
+          "cz": "očekávaný"
+        },
+        {
+          "en": "expert",
+          "cz": "odborný / expert"
+        },
+        {
+          "en": "extreme",
+          "cz": "extrémní"
+        },
+        {
+          "en": "fair",
+          "cz": "spravedlivý / světlý"
+        },
+        {
+          "en": "familiar",
+          "cz": "známý / povědomý"
+        },
+        {
+          "en": "famous",
+          "cz": "slavný"
+        },
+        {
+          "en": "far",
+          "cz": "daleký / daleko"
+        },
+        {
+          "en": "fast",
+          "cz": "rychlý"
+        },
+        {
+          "en": "female",
+          "cz": "ženský"
+        },
+        {
+          "en": "final",
+          "cz": "konečný / finále"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_6",
+      "title": "Describing words · 6",
+      "items": [
+        {
+          "en": "financial",
+          "cz": "finanční"
+        },
+        {
+          "en": "flat",
+          "cz": "byt / plochý"
+        },
+        {
+          "en": "foreign",
+          "cz": "zahraniční"
+        },
+        {
+          "en": "formal",
+          "cz": "formální"
+        },
+        {
+          "en": "former",
+          "cz": "bývalý"
+        },
+        {
+          "en": "free",
+          "cz": "volný / zdarma"
+        },
+        {
+          "en": "frequent",
+          "cz": "častý"
+        },
+        {
+          "en": "fresh",
+          "cz": "čerstvý"
+        },
+        {
+          "en": "friendly",
+          "cz": "přátelský"
+        },
+        {
+          "en": "full",
+          "cz": "plný"
+        },
+        {
+          "en": "general",
+          "cz": "obecný"
+        },
+        {
+          "en": "glad",
+          "cz": "rád"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_7",
+      "title": "Describing words · 7",
+      "items": [
+        {
+          "en": "global",
+          "cz": "globální"
+        },
+        {
+          "en": "good",
+          "cz": "dobrý"
+        },
+        {
+          "en": "great",
+          "cz": "skvělý / velký"
+        },
+        {
+          "en": "growing",
+          "cz": "rostoucí"
+        },
+        {
+          "en": "healthy",
+          "cz": "zdravý"
+        },
+        {
+          "en": "heavy",
+          "cz": "těžký"
+        },
+        {
+          "en": "helpful",
+          "cz": "nápomocný"
+        },
+        {
+          "en": "hidden",
+          "cz": "skrytý"
+        },
+        {
+          "en": "high",
+          "cz": "vysoký"
+        },
+        {
+          "en": "historical",
+          "cz": "historický"
+        },
+        {
+          "en": "horrible",
+          "cz": "hrozný"
+        },
+        {
+          "en": "huge",
+          "cz": "obrovský"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_8",
+      "title": "Describing words · 8",
+      "items": [
+        {
+          "en": "human",
+          "cz": "lidský"
+        },
+        {
+          "en": "hungry",
+          "cz": "hladový"
+        },
+        {
+          "en": "ideal",
+          "cz": "ideální"
+        },
+        {
+          "en": "ill",
+          "cz": "nemocný"
+        },
+        {
+          "en": "immediate",
+          "cz": "okamžitý"
+        },
+        {
+          "en": "important",
+          "cz": "důležitý"
+        },
+        {
+          "en": "impossible",
+          "cz": "nemožný"
+        },
+        {
+          "en": "impressive",
+          "cz": "působivý"
+        },
+        {
+          "en": "independent",
+          "cz": "nezávislý"
+        },
+        {
+          "en": "individual",
+          "cz": "individuální / jedinec"
+        },
+        {
+          "en": "indoor",
+          "cz": "vnitřní"
+        },
+        {
+          "en": "industrial",
+          "cz": "průmyslový"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_9",
+      "title": "Describing words · 9",
+      "items": [
+        {
+          "en": "informal",
+          "cz": "neformální"
+        },
+        {
+          "en": "injured",
+          "cz": "zraněný"
+        },
+        {
+          "en": "inner",
+          "cz": "vnitřní"
+        },
+        {
+          "en": "innocent",
+          "cz": "nevinný"
+        },
+        {
+          "en": "intelligent",
+          "cz": "inteligentní"
+        },
+        {
+          "en": "international",
+          "cz": "mezinárodní"
+        },
+        {
+          "en": "junior",
+          "cz": "mladší / juniorský"
+        },
+        {
+          "en": "latest",
+          "cz": "nejnovější"
+        },
+        {
+          "en": "lazy",
+          "cz": "líný"
+        },
+        {
+          "en": "legal",
+          "cz": "legální / právní"
+        },
+        {
+          "en": "light",
+          "cz": "lehký / světlo"
+        },
+        {
+          "en": "likely",
+          "cz": "pravděpodobný"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_10",
+      "title": "Describing words · 10",
+      "items": [
+        {
+          "en": "limited",
+          "cz": "omezený"
+        },
+        {
+          "en": "local",
+          "cz": "místní"
+        },
+        {
+          "en": "lonely",
+          "cz": "osamělý"
+        },
+        {
+          "en": "long",
+          "cz": "dlouhý"
+        },
+        {
+          "en": "loose",
+          "cz": "volný (ne těsný)"
+        },
+        {
+          "en": "loud",
+          "cz": "hlasitý"
+        },
+        {
+          "en": "lovely",
+          "cz": "krásný / milý"
+        },
+        {
+          "en": "low",
+          "cz": "nízký"
+        },
+        {
+          "en": "lucky",
+          "cz": "šťastný (náhoda)"
+        },
+        {
+          "en": "mad",
+          "cz": "šílený / naštvaný"
+        },
+        {
+          "en": "magic",
+          "cz": "kouzelný / kouzlo"
+        },
+        {
+          "en": "male",
+          "cz": "mužský"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_11",
+      "title": "Describing words · 11",
+      "items": [
+        {
+          "en": "married",
+          "cz": "ženatý / vdaná"
+        },
+        {
+          "en": "medical",
+          "cz": "lékařský"
+        },
+        {
+          "en": "mental",
+          "cz": "duševní"
+        },
+        {
+          "en": "messy",
+          "cz": "nepořádný"
+        },
+        {
+          "en": "military",
+          "cz": "vojenský"
+        },
+        {
+          "en": "modern",
+          "cz": "moderní"
+        },
+        {
+          "en": "musical",
+          "cz": "hudební"
+        },
+        {
+          "en": "narrow",
+          "cz": "úzký"
+        },
+        {
+          "en": "national",
+          "cz": "národní"
+        },
+        {
+          "en": "natural",
+          "cz": "přírodní / přirozený"
+        },
+        {
+          "en": "necessary",
+          "cz": "nutný"
+        },
+        {
+          "en": "negative",
+          "cz": "záporný / negativní"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_12",
+      "title": "Describing words · 12",
+      "items": [
+        {
+          "en": "northern",
+          "cz": "severní"
+        },
+        {
+          "en": "obvious",
+          "cz": "zřejmý"
+        },
+        {
+          "en": "odd",
+          "cz": "zvláštní / lichý"
+        },
+        {
+          "en": "official",
+          "cz": "oficiální"
+        },
+        {
+          "en": "old-fashioned",
+          "cz": "staromódní"
+        },
+        {
+          "en": "only",
+          "cz": "jediný / jen"
+        },
+        {
+          "en": "open",
+          "cz": "otevřený"
+        },
+        {
+          "en": "opposite",
+          "cz": "opačný / naproti"
+        },
+        {
+          "en": "ordinary",
+          "cz": "obyčejný"
+        },
+        {
+          "en": "original",
+          "cz": "původní / originální"
+        },
+        {
+          "en": "outdoor",
+          "cz": "venkovní"
+        },
+        {
+          "en": "outer",
+          "cz": "vnější"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_13",
+      "title": "Describing words · 13",
+      "items": [
+        {
+          "en": "particular",
+          "cz": "konkrétní / zvláštní"
+        },
+        {
+          "en": "past",
+          "cz": "minulý / minulost"
+        },
+        {
+          "en": "patient",
+          "cz": "trpělivý / pacient"
+        },
+        {
+          "en": "perfect",
+          "cz": "dokonalý"
+        },
+        {
+          "en": "personal",
+          "cz": "osobní"
+        },
+        {
+          "en": "physical",
+          "cz": "fyzický"
+        },
+        {
+          "en": "pleasant",
+          "cz": "příjemný"
+        },
+        {
+          "en": "political",
+          "cz": "politický"
+        },
+        {
+          "en": "poor",
+          "cz": "chudý / špatný"
+        },
+        {
+          "en": "popular",
+          "cz": "oblíbený"
+        },
+        {
+          "en": "positive",
+          "cz": "kladný / pozitivní"
+        },
+        {
+          "en": "possible",
+          "cz": "možný"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_14",
+      "title": "Describing words · 14",
+      "items": [
+        {
+          "en": "powerful",
+          "cz": "mocný / silný"
+        },
+        {
+          "en": "practical",
+          "cz": "praktický"
+        },
+        {
+          "en": "present",
+          "cz": "přítomný / dárek"
+        },
+        {
+          "en": "previous",
+          "cz": "předchozí"
+        },
+        {
+          "en": "private",
+          "cz": "soukromý"
+        },
+        {
+          "en": "probable",
+          "cz": "pravděpodobný"
+        },
+        {
+          "en": "public",
+          "cz": "veřejný"
+        },
+        {
+          "en": "pure",
+          "cz": "čistý"
+        },
+        {
+          "en": "quick",
+          "cz": "rychlý"
+        },
+        {
+          "en": "quiet",
+          "cz": "tichý"
+        },
+        {
+          "en": "rare",
+          "cz": "vzácný"
+        },
+        {
+          "en": "raw",
+          "cz": "syrový"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_15",
+      "title": "Describing words · 15",
+      "items": [
+        {
+          "en": "ready",
+          "cz": "připravený"
+        },
+        {
+          "en": "real",
+          "cz": "skutečný"
+        },
+        {
+          "en": "realistic",
+          "cz": "realistický"
+        },
+        {
+          "en": "reasonable",
+          "cz": "rozumný"
+        },
+        {
+          "en": "recent",
+          "cz": "nedávný"
+        },
+        {
+          "en": "regular",
+          "cz": "pravidelný"
+        },
+        {
+          "en": "related",
+          "cz": "související"
+        },
+        {
+          "en": "relative",
+          "cz": "příbuzný / relativní"
+        },
+        {
+          "en": "relevant",
+          "cz": "relevantní"
+        },
+        {
+          "en": "reliable",
+          "cz": "spolehlivý"
+        },
+        {
+          "en": "religious",
+          "cz": "náboženský"
+        },
+        {
+          "en": "responsible",
+          "cz": "zodpovědný"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_16",
+      "title": "Describing words · 16",
+      "items": [
+        {
+          "en": "rich",
+          "cz": "bohatý"
+        },
+        {
+          "en": "right",
+          "cz": "správný / pravý"
+        },
+        {
+          "en": "rough",
+          "cz": "hrubý / přibližný"
+        },
+        {
+          "en": "round",
+          "cz": "kulatý"
+        },
+        {
+          "en": "safe",
+          "cz": "bezpečný"
+        },
+        {
+          "en": "same",
+          "cz": "stejný"
+        },
+        {
+          "en": "satisfied",
+          "cz": "spokojený"
+        },
+        {
+          "en": "scared",
+          "cz": "vyděšený"
+        },
+        {
+          "en": "scientific",
+          "cz": "vědecký"
+        },
+        {
+          "en": "secondary",
+          "cz": "sekundární / střední"
+        },
+        {
+          "en": "secret",
+          "cz": "tajný / tajemství"
+        },
+        {
+          "en": "senior",
+          "cz": "starší"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_17",
+      "title": "Describing words · 17",
+      "items": [
+        {
+          "en": "separate",
+          "cz": "oddělený"
+        },
+        {
+          "en": "serious",
+          "cz": "vážný"
+        },
+        {
+          "en": "sharp",
+          "cz": "ostrý"
+        },
+        {
+          "en": "shiny",
+          "cz": "lesklý"
+        },
+        {
+          "en": "shocked",
+          "cz": "šokovaný"
+        },
+        {
+          "en": "short",
+          "cz": "krátký / malý"
+        },
+        {
+          "en": "shy",
+          "cz": "stydlivý"
+        },
+        {
+          "en": "sick",
+          "cz": "nemocný"
+        },
+        {
+          "en": "silent",
+          "cz": "tichý / mlčenlivý"
+        },
+        {
+          "en": "silly",
+          "cz": "hloupý / směšný"
+        },
+        {
+          "en": "similar",
+          "cz": "podobný"
+        },
+        {
+          "en": "simple",
+          "cz": "jednoduchý"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_18",
+      "title": "Describing words · 18",
+      "items": [
+        {
+          "en": "single",
+          "cz": "svobodný / jednotlivý"
+        },
+        {
+          "en": "skilled",
+          "cz": "zručný"
+        },
+        {
+          "en": "slim",
+          "cz": "štíhlý"
+        },
+        {
+          "en": "slow",
+          "cz": "pomalý"
+        },
+        {
+          "en": "small",
+          "cz": "malý"
+        },
+        {
+          "en": "smart",
+          "cz": "chytrý / elegantní"
+        },
+        {
+          "en": "smooth",
+          "cz": "hladký"
+        },
+        {
+          "en": "social",
+          "cz": "společenský"
+        },
+        {
+          "en": "soft",
+          "cz": "měkký"
+        },
+        {
+          "en": "solid",
+          "cz": "pevný"
+        },
+        {
+          "en": "sorry",
+          "cz": "líto / promiň"
+        },
+        {
+          "en": "southern",
+          "cz": "jižní"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_19",
+      "title": "Describing words · 19",
+      "items": [
+        {
+          "en": "special",
+          "cz": "zvláštní"
+        },
+        {
+          "en": "specific",
+          "cz": "konkrétní"
+        },
+        {
+          "en": "spicy",
+          "cz": "pálivý"
+        },
+        {
+          "en": "spiritual",
+          "cz": "duchovní"
+        },
+        {
+          "en": "square",
+          "cz": "čtvercový / náměstí"
+        },
+        {
+          "en": "standard",
+          "cz": "standardní / norma"
+        },
+        {
+          "en": "strange",
+          "cz": "divný"
+        },
+        {
+          "en": "strict",
+          "cz": "přísný"
+        },
+        {
+          "en": "strong",
+          "cz": "silný"
+        },
+        {
+          "en": "stupid",
+          "cz": "hloupý"
+        },
+        {
+          "en": "successful",
+          "cz": "úspěšný"
+        },
+        {
+          "en": "sudden",
+          "cz": "náhlý"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_20",
+      "title": "Describing words · 20",
+      "items": [
+        {
+          "en": "suitable",
+          "cz": "vhodný"
+        },
+        {
+          "en": "super",
+          "cz": "super"
+        },
+        {
+          "en": "sure",
+          "cz": "jistý"
+        },
+        {
+          "en": "surprised",
+          "cz": "překvapený"
+        },
+        {
+          "en": "sweet",
+          "cz": "sladký / milý"
+        },
+        {
+          "en": "tall",
+          "cz": "vysoký"
+        },
+        {
+          "en": "technical",
+          "cz": "technický"
+        },
+        {
+          "en": "terrible",
+          "cz": "strašný"
+        },
+        {
+          "en": "thin",
+          "cz": "tenký / hubený"
+        },
+        {
+          "en": "thirsty",
+          "cz": "žíznivý"
+        },
+        {
+          "en": "tight",
+          "cz": "těsný"
+        },
+        {
+          "en": "tiny",
+          "cz": "malinký"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_21",
+      "title": "Describing words · 21",
+      "items": [
+        {
+          "en": "tired",
+          "cz": "unavený"
+        },
+        {
+          "en": "top",
+          "cz": "horní / nejlepší"
+        },
+        {
+          "en": "total",
+          "cz": "celkový"
+        },
+        {
+          "en": "traditional",
+          "cz": "tradiční"
+        },
+        {
+          "en": "true",
+          "cz": "pravdivý"
+        },
+        {
+          "en": "typical",
+          "cz": "typický"
+        },
+        {
+          "en": "ugly",
+          "cz": "ošklivý"
+        },
+        {
+          "en": "unable",
+          "cz": "neschopný"
+        },
+        {
+          "en": "unfair",
+          "cz": "nespravedlivý"
+        },
+        {
+          "en": "unhappy",
+          "cz": "nešťastný"
+        },
+        {
+          "en": "unique",
+          "cz": "jedinečný"
+        },
+        {
+          "en": "united",
+          "cz": "spojený"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_22",
+      "title": "Describing words · 22",
+      "items": [
+        {
+          "en": "unlikely",
+          "cz": "nepravděpodobný"
+        },
+        {
+          "en": "unusual",
+          "cz": "neobvyklý"
+        },
+        {
+          "en": "upper",
+          "cz": "horní"
+        },
+        {
+          "en": "upset",
+          "cz": "rozrušený"
+        },
+        {
+          "en": "useful",
+          "cz": "užitečný"
+        },
+        {
+          "en": "usual",
+          "cz": "obvyklý"
+        },
+        {
+          "en": "valuable",
+          "cz": "cenný"
+        },
+        {
+          "en": "various",
+          "cz": "různý"
+        },
+        {
+          "en": "vast",
+          "cz": "rozsáhlý"
+        },
+        {
+          "en": "violent",
+          "cz": "násilný"
+        },
+        {
+          "en": "visible",
+          "cz": "viditelný"
+        },
+        {
+          "en": "visual",
+          "cz": "vizuální"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_23",
+      "title": "Describing words · 23",
+      "items": [
+        {
+          "en": "warm",
+          "cz": "teplý"
+        },
+        {
+          "en": "weak",
+          "cz": "slabý"
+        },
+        {
+          "en": "wealthy",
+          "cz": "bohatý"
+        },
+        {
+          "en": "weekly",
+          "cz": "týdenní"
+        },
+        {
+          "en": "welcome",
+          "cz": "vítaný / vítejte"
+        },
+        {
+          "en": "western",
+          "cz": "západní"
+        },
+        {
+          "en": "wet",
+          "cz": "mokrý"
+        },
+        {
+          "en": "whole",
+          "cz": "celý"
+        },
+        {
+          "en": "wide",
+          "cz": "široký"
+        },
+        {
+          "en": "wild",
+          "cz": "divoký"
+        },
+        {
+          "en": "willing",
+          "cz": "ochotný"
+        },
+        {
+          "en": "wise",
+          "cz": "moudrý"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_24",
+      "title": "Describing words · 24",
+      "items": [
+        {
+          "en": "based",
+          "cz": "založený (na)"
+        },
+        {
+          "en": "blank",
+          "cz": "prázdný (formulář)"
+        },
+        {
+          "en": "bottom",
+          "cz": "spodní / dno"
+        },
+        {
+          "en": "classical",
+          "cz": "klasický"
+        },
+        {
+          "en": "close",
+          "cz": "blízko / zavřít"
+        },
+        {
+          "en": "comfortable",
+          "cz": "pohodlný"
+        },
+        {
+          "en": "connected",
+          "cz": "propojený"
+        },
+        {
+          "en": "creative",
+          "cz": "kreativní"
+        },
+        {
+          "en": "crowded",
+          "cz": "přeplněný"
+        },
+        {
+          "en": "curly",
+          "cz": "kudrnatý"
+        },
+        {
+          "en": "direct",
+          "cz": "přímý"
+        },
+        {
+          "en": "divorced",
+          "cz": "rozvedený"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_25",
+      "title": "Describing words · 25",
+      "items": [
+        {
+          "en": "electrical",
+          "cz": "elektrický"
+        },
+        {
+          "en": "electronic",
+          "cz": "elektronický"
+        },
+        {
+          "en": "following",
+          "cz": "následující"
+        },
+        {
+          "en": "further",
+          "cz": "další / dál"
+        },
+        {
+          "en": "gold",
+          "cz": "zlatý / zlato"
+        },
+        {
+          "en": "included",
+          "cz": "zahrnutý"
+        },
+        {
+          "en": "incredible",
+          "cz": "neuvěřitelný"
+        },
+        {
+          "en": "major",
+          "cz": "hlavní / velký"
+        },
+        {
+          "en": "missing",
+          "cz": "chybějící"
+        },
+        {
+          "en": "noisy",
+          "cz": "hlučný"
+        },
+        {
+          "en": "normal",
+          "cz": "normální"
+        },
+        {
+          "en": "pleased",
+          "cz": "potěšený"
+        }
+      ]
+    },
+    {
+      "id": "a2_describing_26",
+      "title": "Describing words · 26",
+      "items": [
+        {
+          "en": "pop",
+          "cz": "pop (hudba)"
+        },
+        {
+          "en": "scary",
+          "cz": "strašidelný"
+        },
+        {
+          "en": "shut",
+          "cz": "zavřený / zavřít"
+        },
+        {
+          "en": "silver",
+          "cz": "stříbrný / stříbro"
+        },
+        {
+          "en": "surprising",
+          "cz": "překvapivý"
+        },
+        {
+          "en": "teenage",
+          "cz": "teenagerský"
+        },
+        {
+          "en": "thick",
+          "cz": "tlustý / hustý"
+        },
+        {
+          "en": "tidy",
+          "cz": "uklizený"
+        },
+        {
+          "en": "twin",
+          "cz": "dvojče / dvojitý"
+        },
+        {
+          "en": "underground",
+          "cz": "podzemní / metro"
+        },
+        {
+          "en": "worst",
+          "cz": "nejhorší"
+        },
+        {
+          "en": "fat",
+          "cz": "tlustý / tuk"
+        },
+        {
+          "en": "wooden",
+          "cz": "dřevěný"
+        },
+        {
+          "en": "working",
+          "cz": "pracující / fungující"
+        }
+      ]
+    }
+  ]
+}

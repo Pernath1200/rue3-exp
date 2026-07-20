@@ -1,0 +1,111 @@
+{
+  "id": "a2_food",
+  "title": "Food & drink",
+  "level": "A2",
+  "tree_node": "leaf_food_a2",
+  "codex_unit": "V_THM-A1B1-05",
+  "note": "V_THM-A1B1-05 food A2",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_food_1",
+      "title": "Food & drink · 1",
+      "items": [
+        {
+          "en": "recipe",
+          "cz": "recept (kuchařský)"
+        },
+        {
+          "en": "sauce",
+          "cz": "omáčka"
+        },
+        {
+          "en": "oil",
+          "cz": "olej"
+        },
+        {
+          "en": "beef",
+          "cz": "hovězí"
+        },
+        {
+          "en": "bean",
+          "cz": "fazole"
+        },
+        {
+          "en": "biscuit",
+          "cz": "sušenka / piškot"
+        },
+        {
+          "en": "chip",
+          "cz": "hranolka / čips"
+        },
+        {
+          "en": "lemon",
+          "cz": "citron"
+        },
+        {
+          "en": "nut",
+          "cz": "ořech"
+        },
+        {
+          "en": "jam",
+          "cz": "džem"
+        },
+        {
+          "en": "cream",
+          "cz": "smetana / krém"
+        },
+        {
+          "en": "grill",
+          "cz": "gril / grilovat"
+        }
+      ]
+    },
+    {
+      "id": "a2_food_2",
+      "title": "Food & drink · 2",
+      "items": [
+        {
+          "en": "boil",
+          "cz": "vařit (ve vodě)"
+        },
+        {
+          "en": "bake",
+          "cz": "péct"
+        },
+        {
+          "en": "fry",
+          "cz": "smažit"
+        },
+        {
+          "en": "chef",
+          "cz": "šéfkuchař"
+        },
+        {
+          "en": "taste",
+          "cz": "chuť / chutnat"
+        },
+        {
+          "en": "sweet",
+          "cz": "sladký / bonbon"
+        },
+        {
+          "en": "spicy",
+          "cz": "pálivý / kořeněný"
+        },
+        {
+          "en": "vegetarian",
+          "cz": "vegetarián / vegetariánský"
+        },
+        {
+          "en": "pub",
+          "cz": "hospoda"
+        },
+        {
+          "en": "soap",
+          "cz": "mýdlo"
+        }
+      ]
+    }
+  ]
+}

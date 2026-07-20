@@ -1,0 +1,115 @@
+{
+  "id": "a2_shopping",
+  "title": "Shopping & money",
+  "level": "A2",
+  "tree_node": "leaf_shopping_a2",
+  "codex_unit": "V_THM-A1B1-06",
+  "note": "V_THM-A1B1-06 shopping A2",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_shopping_1",
+      "title": "Shopping & money · 1",
+      "items": [
+        {
+          "en": "advertisement",
+          "cz": "reklama"
+        },
+        {
+          "en": "advertising",
+          "cz": "reklama (obor)"
+        },
+        {
+          "en": "advertise",
+          "cz": "inzerovat / reklamovat"
+        },
+        {
+          "en": "brand",
+          "cz": "značka"
+        },
+        {
+          "en": "product",
+          "cz": "výrobek / produkt"
+        },
+        {
+          "en": "store",
+          "cz": "obchod (amer.)"
+        },
+        {
+          "en": "bargain",
+          "cz": "výhodná koupě"
+        },
+        {
+          "en": "credit card",
+          "cz": "kreditní karta"
+        },
+        {
+          "en": "cash",
+          "cz": "hotovost"
+        },
+        {
+          "en": "purchase",
+          "cz": "nákup / koupit"
+        },
+        {
+          "en": "penny",
+          "cz": "penny (mince)"
+        },
+        {
+          "en": "quality",
+          "cz": "kvalita"
+        }
+      ]
+    },
+    {
+      "id": "a2_shopping_2",
+      "title": "Shopping & money · 2",
+      "items": [
+        {
+          "en": "quantity",
+          "cz": "množství"
+        },
+        {
+          "en": "item",
+          "cz": "položka / věc"
+        },
+        {
+          "en": "gift",
+          "cz": "dárek"
+        },
+        {
+          "en": "jewellery",
+          "cz": "šperky"
+        },
+        {
+          "en": "belt",
+          "cz": "pásek"
+        },
+        {
+          "en": "button",
+          "cz": "knoflík / tlačítko"
+        },
+        {
+          "en": "material",
+          "cz": "materiál / látka"
+        },
+        {
+          "en": "size",
+          "cz": "velikost"
+        },
+        {
+          "en": "fashion",
+          "cz": "móda"
+        },
+        {
+          "en": "bar",
+          "cz": "bar / tyčinka"
+        },
+        {
+          "en": "credit",
+          "cz": "kredit / úvěr"
+        }
+      ]
+    }
+  ]
+}

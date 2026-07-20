@@ -1,0 +1,119 @@
+{
+  "id": "a2_media",
+  "title": "Media & arts",
+  "level": "A2",
+  "tree_node": "leaf_media_a2",
+  "codex_unit": "V_THM-A1B1-09",
+  "note": "Media A2",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_media_1",
+      "title": "Media & arts · 1",
+      "items": [
+        {
+          "en": "author",
+          "cz": "autor"
+        },
+        {
+          "en": "journalist",
+          "cz": "novinář"
+        },
+        {
+          "en": "reporter",
+          "cz": "reportér"
+        },
+        {
+          "en": "article",
+          "cz": "článek"
+        },
+        {
+          "en": "magazine",
+          "cz": "časopis"
+        },
+        {
+          "en": "newspaper",
+          "cz": "noviny"
+        },
+        {
+          "en": "poster",
+          "cz": "plakát"
+        },
+        {
+          "en": "review",
+          "cz": "recenze"
+        },
+        {
+          "en": "scene",
+          "cz": "scéna"
+        },
+        {
+          "en": "ending",
+          "cz": "konec (příběhu)"
+        },
+        {
+          "en": "comedy",
+          "cz": "komedie"
+        },
+        {
+          "en": "drama",
+          "cz": "drama"
+        }
+      ]
+    },
+    {
+      "id": "a2_media_2",
+      "title": "Media & arts · 2",
+      "items": [
+        {
+          "en": "film",
+          "cz": "film / natáčet"
+        },
+        {
+          "en": "photograph",
+          "cz": "fotografie / fotit"
+        },
+        {
+          "en": "camera",
+          "cz": "fotoaparát"
+        },
+        {
+          "en": "speaker",
+          "cz": "mluvčí / reproduktor"
+        },
+        {
+          "en": "listener",
+          "cz": "posluchač"
+        },
+        {
+          "en": "voice",
+          "cz": "hlas"
+        },
+        {
+          "en": "noise",
+          "cz": "hluk"
+        },
+        {
+          "en": "smell",
+          "cz": "zápach / čichat"
+        },
+        {
+          "en": "smile",
+          "cz": "úsměv / usmívat se"
+        },
+        {
+          "en": "shout",
+          "cz": "křičet / výkřik"
+        },
+        {
+          "en": "chat",
+          "cz": "pokec / chatovat"
+        },
+        {
+          "en": "conversation",
+          "cz": "rozhovor"
+        }
+      ]
+    }
+  ]
+}

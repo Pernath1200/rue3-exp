@@ -1,0 +1,111 @@
+{
+  "id": "a2_sports",
+  "title": "Sport",
+  "level": "A2",
+  "tree_node": "leaf_sports_a2",
+  "codex_unit": "V_THM-A1B1-09",
+  "note": "V_THM-A1B1-09 sport slice",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_sports_1",
+      "title": "Sport · 1",
+      "items": [
+        {
+          "en": "athlete",
+          "cz": "atlet / sportovec"
+        },
+        {
+          "en": "baseball",
+          "cz": "baseball"
+        },
+        {
+          "en": "basketball",
+          "cz": "basketbal"
+        },
+        {
+          "en": "football",
+          "cz": "fotbal"
+        },
+        {
+          "en": "soccer",
+          "cz": "fotbal (amer.)"
+        },
+        {
+          "en": "golf",
+          "cz": "golf"
+        },
+        {
+          "en": "hockey",
+          "cz": "hokej"
+        },
+        {
+          "en": "skiing",
+          "cz": "lyžování"
+        },
+        {
+          "en": "sailing",
+          "cz": "plachtění"
+        },
+        {
+          "en": "fishing",
+          "cz": "rybaření"
+        },
+        {
+          "en": "cycling",
+          "cz": "cyklistika"
+        },
+        {
+          "en": "cycle",
+          "cz": "kolo / jet na kole"
+        }
+      ]
+    },
+    {
+      "id": "a2_sports_2",
+      "title": "Sport · 2",
+      "items": [
+        {
+          "en": "runner",
+          "cz": "běžec"
+        },
+        {
+          "en": "trainer",
+          "cz": "trenér / tenisky"
+        },
+        {
+          "en": "stadium",
+          "cz": "stadion"
+        },
+        {
+          "en": "match",
+          "cz": "zápas"
+        },
+        {
+          "en": "team",
+          "cz": "tým"
+        },
+        {
+          "en": "swim",
+          "cz": "plavat"
+        },
+        {
+          "en": "ride",
+          "cz": "jet (na) / jízda"
+        },
+        {
+          "en": "track",
+          "cz": "dráha / stopa"
+        },
+        {
+          "en": "jump",
+          "cz": "skok / skákat"
+        },
+        {
+          "en": "ski",
+          "cz": "lyže / lyžovat"
+        }
+      ]
+    }
+  ]
+}

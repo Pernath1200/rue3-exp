@@ -1,0 +1,171 @@
+{
+  "id": "a2_core_frames_past_irreg",
+  "title": "Past · irregulars",
+  "level": "A2",
+  "tree_node": "trunk_past_irreg_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "practice": "frames",
+  "note": "A2 frames · V_COR-A1B1-01",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_core_frames_past_irreg_1",
+      "title": "Past · irregulars · 1",
+      "items": [
+        {
+          "en": "I went to school.",
+          "cz": "Šel jsem do školy. / Šla jsem do školy.",
+          "gap": "I ____ to school.",
+          "gap_answer": "went"
+        },
+        {
+          "en": "She saw a film.",
+          "cz": "Viděla film.",
+          "gap": "She ____ a film.",
+          "gap_answer": "saw",
+          "accepts": [
+            "She saw a movie."
+          ]
+        },
+        {
+          "en": "We took the bus.",
+          "cz": "Jeli jsme autobusem.",
+          "gap": "We ____ the bus.",
+          "gap_answer": "took"
+        },
+        {
+          "en": "He made a cake.",
+          "cz": "Upekl dort.",
+          "gap": "He ____ a cake.",
+          "gap_answer": "made"
+        },
+        {
+          "en": "I had lunch.",
+          "cz": "Obědval jsem. / Obědvala jsem.",
+          "gap": "I ____ lunch.",
+          "gap_answer": "had"
+        },
+        {
+          "en": "They came home late.",
+          "cz": "Přišli domů pozdě.",
+          "gap": "They ____ home late.",
+          "gap_answer": "came"
+        },
+        {
+          "en": "I got a new phone.",
+          "cz": "Dostal jsem nový telefon.",
+          "gap": "I ____ a new phone.",
+          "gap_answer": "got"
+        },
+        {
+          "en": "She gave me a gift.",
+          "cz": "Dal mi dárek. / Dala mi dárek.",
+          "gap": "She ____ me a gift.",
+          "gap_answer": "gave"
+        },
+        {
+          "en": "We found the keys.",
+          "cz": "Našli jsme klíče.",
+          "gap": "We ____ the keys.",
+          "gap_answer": "found"
+        },
+        {
+          "en": "He said hello.",
+          "cz": "Řekl ahoj.",
+          "gap": "He ____ hello.",
+          "gap_answer": "said"
+        },
+        {
+          "en": "I told her the truth.",
+          "cz": "Řekl jsem jí pravdu.",
+          "gap": "I ____ her the truth.",
+          "gap_answer": "told"
+        },
+        {
+          "en": "She left at six.",
+          "cz": "Odešla v šest.",
+          "gap": "She ____ at six.",
+          "gap_answer": "left"
+        }
+      ]
+    },
+    {
+      "id": "a2_core_frames_past_irreg_2",
+      "title": "Past · irregulars · 2",
+      "items": [
+        {
+          "en": "I knew the answer.",
+          "cz": "Znal jsem odpověď.",
+          "gap": "I ____ the answer.",
+          "gap_answer": "knew"
+        },
+        {
+          "en": "He felt tired.",
+          "cz": "Cítil se unavený.",
+          "gap": "He ____ tired.",
+          "gap_answer": "felt"
+        },
+        {
+          "en": "We bought bread.",
+          "cz": "Koupili jsme chleba.",
+          "gap": "We ____ bread.",
+          "gap_answer": "bought"
+        },
+        {
+          "en": "She brought a friend.",
+          "cz": "Přivedla kamaráda.",
+          "gap": "She ____ a friend.",
+          "gap_answer": "brought"
+        },
+        {
+          "en": "I thought about it.",
+          "cz": "Přemýšlel jsem o tom.",
+          "gap": "I ____ about it.",
+          "gap_answer": "thought"
+        },
+        {
+          "en": "They became friends.",
+          "cz": "Stali se přáteli.",
+          "gap": "They ____ friends.",
+          "gap_answer": "became"
+        },
+        {
+          "en": "I began work at nine.",
+          "cz": "Začal jsem pracovat v devět.",
+          "gap": "I ____ work at nine.",
+          "gap_answer": "began"
+        },
+        {
+          "en": "He drove to work.",
+          "cz": "Jel do práce autem.",
+          "gap": "He ____ to work.",
+          "gap_answer": "drove"
+        },
+        {
+          "en": "She wrote an email.",
+          "cz": "Napsala e-mail.",
+          "gap": "She ____ an email.",
+          "gap_answer": "wrote"
+        },
+        {
+          "en": "We read the book.",
+          "cz": "Přečetli jsme knihu.",
+          "gap": "We ____ the book.",
+          "gap_answer": "read"
+        },
+        {
+          "en": "I swam in the sea.",
+          "cz": "Plaval jsem v moři.",
+          "gap": "I ____ in the sea.",
+          "gap_answer": "swam"
+        },
+        {
+          "en": "He ran fast.",
+          "cz": "Běžel rychle.",
+          "gap": "He ____ fast.",
+          "gap_answer": "ran"
+        }
+      ]
+    }
+  ]
+}

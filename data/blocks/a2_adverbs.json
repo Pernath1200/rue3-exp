@@ -1,0 +1,305 @@
+{
+  "id": "a2_adverbs",
+  "title": "Adverbs",
+  "level": "A2",
+  "tree_node": "leaf_adverbs_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "note": "A2 adverbs · COR",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_adverbs_1",
+      "title": "Adverbs · 1",
+      "items": [
+        {
+          "en": "actually",
+          "cz": "vlastně / ve skutečnosti"
+        },
+        {
+          "en": "almost",
+          "cz": "skoro"
+        },
+        {
+          "en": "along",
+          "cz": "podél / dál"
+        },
+        {
+          "en": "anyway",
+          "cz": "stejně / každopádně"
+        },
+        {
+          "en": "anywhere",
+          "cz": "kdekoli"
+        },
+        {
+          "en": "badly",
+          "cz": "špatně"
+        },
+        {
+          "en": "carefully",
+          "cz": "opatrně"
+        },
+        {
+          "en": "certainly",
+          "cz": "rozhodně"
+        },
+        {
+          "en": "clearly",
+          "cz": "jasně"
+        },
+        {
+          "en": "completely",
+          "cz": "úplně"
+        },
+        {
+          "en": "constantly",
+          "cz": "neustále"
+        },
+        {
+          "en": "correctly",
+          "cz": "správně"
+        }
+      ]
+    },
+    {
+      "id": "a2_adverbs_2",
+      "title": "Adverbs · 2",
+      "items": [
+        {
+          "en": "definitely",
+          "cz": "rozhodně"
+        },
+        {
+          "en": "directly",
+          "cz": "přímo"
+        },
+        {
+          "en": "easily",
+          "cz": "snadno"
+        },
+        {
+          "en": "especially",
+          "cz": "zejména"
+        },
+        {
+          "en": "eventually",
+          "cz": "nakonec"
+        },
+        {
+          "en": "exactly",
+          "cz": "přesně"
+        },
+        {
+          "en": "extremely",
+          "cz": "extrémně"
+        },
+        {
+          "en": "fairly",
+          "cz": "poměrně"
+        },
+        {
+          "en": "finally",
+          "cz": "nakonec"
+        },
+        {
+          "en": "fortunately",
+          "cz": "naštěstí"
+        },
+        {
+          "en": "generally",
+          "cz": "obecně"
+        },
+        {
+          "en": "hardly",
+          "cz": "stěží"
+        }
+      ]
+    },
+    {
+      "id": "a2_adverbs_3",
+      "title": "Adverbs · 3",
+      "items": [
+        {
+          "en": "immediately",
+          "cz": "okamžitě"
+        },
+        {
+          "en": "increasingly",
+          "cz": "stále více"
+        },
+        {
+          "en": "inside",
+          "cz": "uvnitř"
+        },
+        {
+          "en": "instead",
+          "cz": "místo toho"
+        },
+        {
+          "en": "nearly",
+          "cz": "téměř"
+        },
+        {
+          "en": "normally",
+          "cz": "normálně"
+        },
+        {
+          "en": "obviously",
+          "cz": "očividně"
+        },
+        {
+          "en": "outside",
+          "cz": "venku"
+        },
+        {
+          "en": "particularly",
+          "cz": "zejména"
+        },
+        {
+          "en": "perfectly",
+          "cz": "perfektně"
+        },
+        {
+          "en": "perhaps",
+          "cz": "možná"
+        },
+        {
+          "en": "probably",
+          "cz": "pravděpodobně"
+        }
+      ]
+    },
+    {
+      "id": "a2_adverbs_4",
+      "title": "Adverbs · 4",
+      "items": [
+        {
+          "en": "quickly",
+          "cz": "rychle"
+        },
+        {
+          "en": "quietly",
+          "cz": "tiše"
+        },
+        {
+          "en": "rarely",
+          "cz": "zřídka"
+        },
+        {
+          "en": "recently",
+          "cz": "nedávno"
+        },
+        {
+          "en": "seriously",
+          "cz": "vážně"
+        },
+        {
+          "en": "simply",
+          "cz": "jednoduše"
+        },
+        {
+          "en": "slightly",
+          "cz": "mírně"
+        },
+        {
+          "en": "slowly",
+          "cz": "pomalu"
+        },
+        {
+          "en": "somewhere",
+          "cz": "někde"
+        },
+        {
+          "en": "suddenly",
+          "cz": "najednou"
+        },
+        {
+          "en": "together",
+          "cz": "spolu"
+        },
+        {
+          "en": "totally",
+          "cz": "totálně"
+        }
+      ]
+    },
+    {
+      "id": "a2_adverbs_5",
+      "title": "Adverbs · 5",
+      "items": [
+        {
+          "en": "unfortunately",
+          "cz": "bohužel"
+        },
+        {
+          "en": "usually",
+          "cz": "obvykle"
+        },
+        {
+          "en": "well",
+          "cz": "dobře"
+        },
+        {
+          "en": "differently",
+          "cz": "jinak / odlišně"
+        },
+        {
+          "en": "either",
+          "cz": "buď / taky (zápor)"
+        },
+        {
+          "en": "everywhere",
+          "cz": "všude"
+        },
+        {
+          "en": "firstly",
+          "cz": "za prvé"
+        },
+        {
+          "en": "forward",
+          "cz": "vpřed"
+        },
+        {
+          "en": "happily",
+          "cz": "šťastně"
+        },
+        {
+          "en": "last",
+          "cz": "naposledy / minulý"
+        },
+        {
+          "en": "least",
+          "cz": "nejméně"
+        },
+        {
+          "en": "loudly",
+          "cz": "hlasitě"
+        },
+        {
+          "en": "mostly",
+          "cz": "většinou"
+        },
+        {
+          "en": "nowhere",
+          "cz": "nikde"
+        },
+        {
+          "en": "rather",
+          "cz": "spíš / raději"
+        },
+        {
+          "en": "sadly",
+          "cz": "bohužel / smutně"
+        },
+        {
+          "en": "secondly",
+          "cz": "za druhé"
+        },
+        {
+          "en": "less",
+          "cz": "méně"
+        }
+      ]
+    }
+  ]
+}

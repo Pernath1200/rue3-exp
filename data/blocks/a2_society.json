@@ -1,0 +1,131 @@
+{
+  "id": "a2_society",
+  "title": "Society",
+  "level": "A2",
+  "tree_node": "leaf_society_a2",
+  "codex_unit": "V_COR-A1B1-01",
+  "note": "Public life seed A2 · COR",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "a2_society_1",
+      "title": "Society · 1",
+      "items": [
+        {
+          "en": "government",
+          "cz": "vláda"
+        },
+        {
+          "en": "president",
+          "cz": "prezident"
+        },
+        {
+          "en": "law",
+          "cz": "zákon"
+        },
+        {
+          "en": "lawyer",
+          "cz": "právník"
+        },
+        {
+          "en": "crime",
+          "cz": "zločin"
+        },
+        {
+          "en": "criminal",
+          "cz": "zločinec"
+        },
+        {
+          "en": "prison",
+          "cz": "vězení"
+        },
+        {
+          "en": "thief",
+          "cz": "zloděj"
+        },
+        {
+          "en": "police",
+          "cz": "policie"
+        },
+        {
+          "en": "soldier",
+          "cz": "voják"
+        },
+        {
+          "en": "army",
+          "cz": "armáda"
+        },
+        {
+          "en": "war",
+          "cz": "válka"
+        }
+      ]
+    },
+    {
+      "id": "a2_society_2",
+      "title": "Society · 2",
+      "items": [
+        {
+          "en": "peace",
+          "cz": "mír"
+        },
+        {
+          "en": "gun",
+          "cz": "zbraň / pistole"
+        },
+        {
+          "en": "attack",
+          "cz": "útok"
+        },
+        {
+          "en": "fight",
+          "cz": "rvačka / bojovat"
+        },
+        {
+          "en": "king",
+          "cz": "král"
+        },
+        {
+          "en": "queen",
+          "cz": "královna"
+        },
+        {
+          "en": "church",
+          "cz": "kostel"
+        },
+        {
+          "en": "god",
+          "cz": "bůh"
+        },
+        {
+          "en": "religion",
+          "cz": "náboženství"
+        },
+        {
+          "en": "tradition",
+          "cz": "tradice"
+        },
+        {
+          "en": "culture",
+          "cz": "kultura"
+        },
+        {
+          "en": "population",
+          "cz": "obyvatelstvo"
+        },
+        {
+          "en": "charity",
+          "cz": "charita"
+        },
+        {
+          "en": "detective",
+          "cz": "detektiv"
+        },
+        {
+          "en": "state",
+          "cz": "stát / stav"
+        }
+      ]
+    }
+  ]
+}
