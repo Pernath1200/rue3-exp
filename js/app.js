@@ -392,6 +392,7 @@ function treeLabel(node) {
     leaf_colours_a1: "Colours",
     leaf_clothes_a1: "Clothes",
     leaf_body_a1: "Body",
+    leaf_health_a1: "Health",
     leaf_animals_a1: "Animals",
     leaf_school_a1: "School",
     leaf_tech_a1: "Tech",

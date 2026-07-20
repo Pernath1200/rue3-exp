@@ -1,0 +1,47 @@
+{
+  "id": "a1_health",
+  "title": "Health",
+  "level": "A1",
+  "tree_node": "leaf_health_a1",
+  "codex_unit": "V_THM-A1B1-07",
+  "note": "A1 Health theme · V_THM-A1B1-07 · illness + care (Body stays parts-only). Sentence = fruit.",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "health_feeling",
+      "title": "Health · how I feel",
+      "items": [
+        { "en": "health", "cz": "zdraví" },
+        { "en": "healthy", "cz": "zdravý" },
+        { "en": "ill", "cz": "nemocný" },
+        { "en": "sick", "cz": "nemocný / špatně (mi je)" },
+        { "en": "pain", "cz": "bolest" },
+        { "en": "hurt", "cz": "bolet / bolet se" },
+        { "en": "headache", "cz": "bolest hlavy" },
+        { "en": "stomach", "cz": "žaludek / břicho" },
+        { "en": "fever", "cz": "horečka" },
+        { "en": "cough", "cz": "kašel / kašlat" },
+        { "en": "cold (illness)", "cz": "nachlazení" },
+        { "en": "flu", "cz": "chřipka" }
+      ]
+    },
+    {
+      "id": "health_care",
+      "title": "Health · care",
+      "items": [
+        { "en": "doctor", "cz": "doktor / lékař" },
+        { "en": "nurse", "cz": "sestra (zdravotní)" },
+        { "en": "patient", "cz": "pacient" },
+        { "en": "hospital", "cz": "nemocnice" },
+        { "en": "pharmacy", "cz": "lékárna" },
+        { "en": "medicine", "cz": "lék / léky" },
+        { "en": "pill", "cz": "tableta / prášek" },
+        { "en": "appointment", "cz": "termín (u lékaře)" },
+        { "en": "ambulance", "cz": "sanitka" },
+        { "en": "temperature", "cz": "teplota (tělesná)" },
+        { "en": "rest (verb)", "cz": "odpočívat" },
+        { "en": "dentist", "cz": "zubař" }
+      ]
+    }
+  ]
+}

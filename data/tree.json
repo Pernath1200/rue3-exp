@@ -265,6 +265,17 @@
       "note": "Live · P2 · body parts · 2×12"
     },
     {
+      "id": "leaf_health_a1",
+      "label": "Health",
+      "kind": "leaf",
+      "levels": ["A1"],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/a1_health.json",
+      "codex_unit": "V_THM-A1B1-07",
+      "note": "Live · V_THM-A1B1-07 · illness + care · 2×12 · Sentence = fruit"
+    },
+    {
       "id": "leaf_animals_a1",
       "label": "Animals",
       "kind": "leaf",
