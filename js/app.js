@@ -34,6 +34,9 @@ import {
   getLastView,
   getStorageStatus,
   countTouchedBlocks,
+  getFlags,
+  clearFlags,
+  flagCount,
 } from "./progress.js";
 import {
   deriveStudentTreeState,
@@ -881,6 +884,7 @@ function refreshMap() {
   renderTree();
   renderGateCard();
   renderSelectionDetail();
+  refreshFlagsButtonLabel();
 }
 
 function openPractice(block, pack) {
@@ -993,8 +997,101 @@ function wireUtilBar() {
       btn.setAttribute("aria-pressed", "true");
     }
   }
+  wireFlagsButton();
   wireInsightsToggles();
   syncInsightsToggleVisibility();
+}
+
+function refreshFlagsButtonLabel() {
+  const btn = document.getElementById("btn-flags");
+  if (!btn) return;
+  const n = flagCount();
+  btn.textContent = n ? `⚑ Flags (${n})` : "⚑ Flags";
+  btn.setAttribute("aria-pressed", n ? "true" : "false");
+}
+
+/** Plain-text export of all flags — paste to the fixing AI / FIX map. */
+function flagsAsText(flags) {
+  return flags
+    .map((f, i) => {
+      const bits = [
+        `${i + 1}. [${f.blockTitle || f.block || "?"}${f.mode ? " · " + f.mode : ""}]`,
+        f.prompt ? `prompt: ${f.prompt}` : null,
+        f.answer ? `answer: ${f.answer}` : null,
+        f.note ? `note: ${f.note}` : null,
+        f.block ? `(block ${f.block})` : null,
+      ].filter(Boolean);
+      return bits.join(" · ");
+    })
+    .join("\n");
+}
+
+function wireFlagsButton() {
+  const btn = document.getElementById("btn-flags");
+  if (!btn || btn.dataset.wired) {
+    refreshFlagsButtonLabel();
+    return;
+  }
+  btn.dataset.wired = "1";
+  refreshFlagsButtonLabel();
+  btn.addEventListener("click", () => openFlagsViewer());
+}
+
+function openFlagsViewer() {
+  const flags = getFlags();
+  let overlay = document.getElementById("flags-overlay");
+  if (overlay) overlay.remove();
+  overlay = document.createElement("div");
+  overlay.id = "flags-overlay";
+  overlay.className = "flags-overlay";
+  const body = flags.length
+    ? `<pre class="flags-list">${escapeXml(flagsAsText(flags))}</pre>`
+    : `<p class="flags-empty">No flags yet. During practice, hit <strong>⚑ Flag</strong> (or press <strong>F</strong>) on any dud.</p>`;
+  overlay.innerHTML = `
+    <div class="flags-panel">
+      <div class="flags-head">
+        <strong>⚑ Flagged duds (${flags.length})</strong>
+        <button type="button" class="util-btn" id="flags-close">Close</button>
+      </div>
+      ${body}
+      <div class="flags-actions">
+        <button type="button" class="btn" id="flags-copy" ${flags.length ? "" : "disabled"}>Copy all</button>
+        <button type="button" class="btn" id="flags-clear" ${flags.length ? "" : "disabled"}>Clear all</button>
+      </div>
+      <div class="flags-msg" id="flags-msg"></div>
+    </div>`;
+  document.body.appendChild(overlay);
+
+  const close = () => overlay.remove();
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) close();
+  });
+  overlay.querySelector("#flags-close").addEventListener("click", close);
+
+  const copyBtn = overlay.querySelector("#flags-copy");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", () => {
+      const text = flagsAsText(flags);
+      const msg = overlay.querySelector("#flags-msg");
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => (msg.textContent = "Copied — paste to the fixing AI."))
+          .catch(() => (msg.textContent = "Copy blocked — select the text above."));
+      } else {
+        msg.textContent = "Copy blocked — select the text above.";
+      }
+    });
+  }
+
+  const clearBtn = overlay.querySelector("#flags-clear");
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      clearFlags();
+      refreshFlagsButtonLabel();
+      close();
+    });
+  }
 }
 
 function wireInsightsToggles() {

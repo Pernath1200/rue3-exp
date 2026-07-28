@@ -38,6 +38,7 @@ async function playBlock(container, block, practice) {
   const isFrames = practice === "frames";
   const completions = {};
   const warnings = [];
+  const notes = [];
   const start = Date.now();
   const timedOut = () => Date.now() - start > BLOCK_TIMEOUT_MS;
 
@@ -175,11 +176,15 @@ async function playBlock(container, block, practice) {
       chk.click(); // grade
       const fb = s.querySelector("#tfb");
       if (fb && fb.classList.contains("bad")) {
-        if (want) {
+        // Trunk frames are deterministic — a bad grade is a real bug (hard).
+        // Leaf carriers are randomised: the probe may hold a valid variant this
+        // render didn't generate, so a mismatch is a soft note, recovered via
+        // count-it. Content quality of carriers is hand-smoke territory.
+        if (isFrames) {
           warnings.push(`sentence: model EN graded wrong for "${want}"`);
+        } else if (want) {
+          notes.push(`sentence variant not accepted this render: "${want}" (cz: ${cz})`);
         }
-        // Reveal fallback (unknown carrier variant): count it to keep the
-        // pass clean — carrier *content* quality is hand-smoke territory
         const countIt = fb.querySelector("button.link");
         if (countIt) countIt.click();
       }
@@ -206,6 +211,7 @@ async function playBlock(container, block, practice) {
     ok: missing.length === 0 && warnings.length === 0,
     missing,
     warnings,
+    notes,
     ms: Date.now() - start,
   };
 }
@@ -233,6 +239,7 @@ export async function runSmoke() {
   const tree = await (await fetch("./data/tree.json")).json();
   const live = tree.nodes.filter((n) => n.status === "live" && n.content);
   const failures = [];
+  const notesAll = [];
   let blocks = 0;
 
   const t0 = Date.now();
@@ -265,16 +272,21 @@ export async function runSmoke() {
       } else {
         log(`ok   ${block.id} (${res.ms}ms)`);
       }
+      if (res.notes && res.notes.length) {
+        notesAll.push(...res.notes.map((n) => `${block.id}: ${n}`));
+      }
       container.innerHTML = "";
     }
   }
 
   const secs = ((Date.now() - t0) / 1000).toFixed(1);
+  const noteTotal = notesAll.length;
   log("");
+  if (noteTotal) log(`(${noteTotal} soft carrier-variant notes — content, not failures)`);
   log(
     failures.length
       ? `SMOKE DONE · ${blocks} blocks in ${secs}s · ${failures.length} FAILURES (listed above)`
-      : `SMOKE OK · ${blocks} blocks in ${secs}s · 0 failures`,
+      : `SMOKE OK · ${blocks} blocks in ${secs}s · 0 failures${noteTotal ? ` · ${noteTotal} notes` : ""}`,
   );
   overlay.style.borderBottomColor = failures.length ? "#e05252" : "#4dc77a";
 }

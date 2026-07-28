@@ -10,6 +10,7 @@
  */
 
 import { buildLeafSentenceItems } from "./carriers.js";
+import { flagItem, flagCount } from "./progress.js";
 
 function shuffle(a) {
   const arr = a.slice();
@@ -401,6 +402,7 @@ export function startPractice(root, block, opts) {
       </div>
       <div class="bar">
         <span id="p-status">${escapeHtml(statusText || "")}</span>
+        <button type="button" class="flag-btn" id="p-flag" title="Flag this item as a dud (F) — logs prompt + answer for later fixing">⚑ Flag</button>
         ${
           showDir
             ? `<button type="button" class="dir" id="p-dir">${state.czToEn ? "CZ → EN" : "EN → CZ"}</button>`
@@ -433,6 +435,52 @@ export function startPractice(root, block, opts) {
       clearKey();
       opts.onExit();
     });
+    const flagBtn = root.querySelector("#p-flag");
+    if (flagBtn) flagBtn.addEventListener("click", () => doFlag(flagBtn));
+  }
+
+  /** Capture whatever is on screen right now — mode-agnostic dud logging. */
+  function captureFlagContext() {
+    const stage = root.querySelector("#p-stage");
+    const text = (sel) => {
+      const el = stage && stage.querySelector(sel);
+      return el ? el.textContent.trim() : null;
+    };
+    // Prompt: quiz/word/sentence use .prompt; match shows pairs (grab the board)
+    let prompt = text(".prompt");
+    if (!prompt && stage) {
+      const first = stage.querySelector(".m");
+      prompt = first ? `match set (e.g. ${first.textContent.trim()})` : null;
+    }
+    // Answer if revealed (word/sentence feedback), else the correct quiz option
+    let answer = null;
+    const reveal = stage && stage.querySelector(".reveal");
+    if (reveal) answer = reveal.textContent.trim();
+    if (!answer) {
+      const correct = stage && stage.querySelector(".opt.correct");
+      if (correct) answer = correct.textContent.replace(/^\d+/, "").trim();
+    }
+    return {
+      block: block.id,
+      blockTitle: block.title,
+      mode: state.mode,
+      prompt,
+      answer,
+    };
+  }
+
+  function doFlag(btn) {
+    const n = flagItem(captureFlagContext());
+    if (n == null) {
+      btn.textContent = "⚑ storage blocked";
+      return;
+    }
+    btn.textContent = `⚑ flagged (${n})`;
+    btn.classList.add("flagged");
+    setTimeout(() => {
+      btn.textContent = "⚑ Flag";
+      btn.classList.remove("flagged");
+    }, 1400);
   }
 
   function newMatch() {
@@ -1089,6 +1137,22 @@ export function startPractice(root, block, opts) {
     const st = root.querySelector("#p-status");
     if (st) st.textContent = status || "";
   }
+
+  // Persistent 'F' shortcut for flagging — ignores typing fields; torn down on exit
+  const flagKeyHandler = (e) => {
+    if (e.key !== "f" && e.key !== "F") return;
+    if (e.target.closest("input, textarea")) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    e.preventDefault();
+    const btn = root.querySelector("#p-flag");
+    if (btn) doFlag(btn);
+  };
+  document.addEventListener("keydown", flagKeyHandler);
+  const origExit = opts.onExit;
+  opts.onExit = () => {
+    document.removeEventListener("keydown", flagKeyHandler);
+    if (typeof origExit === "function") origExit();
+  };
 
   render();
 }

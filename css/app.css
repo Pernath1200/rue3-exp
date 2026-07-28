@@ -1,6 +1,102 @@
 /* RUE3 v0.1 — sibling of RUE2 Grok (https://pernath1200.github.io/rue2-grok/)
    Same dark underground base; accent one shade off RUE2 cyan #569cd6 → #4db6c7 */
 
+/* --- Smoke flag button (practice bar) + flags viewer --- */
+.flag-btn {
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  background: transparent;
+  color: #ef8a8a;
+  cursor: pointer;
+}
+.flag-btn:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+.flag-btn.flagged {
+  background: rgba(239, 68, 68, 0.18);
+  border-color: #ef4444;
+  color: #fff;
+}
+
+.flags-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1rem;
+  overflow: auto;
+}
+.flags-panel {
+  background: #141414;
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  max-width: 40rem;
+  width: 100%;
+}
+.flags-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+.flags-list {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(160, 160, 160, 0.15);
+  border-radius: 6px;
+  padding: 0.75rem;
+  max-height: 55vh;
+  overflow: auto;
+  margin: 0 0 0.75rem;
+}
+.flags-empty {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+.flags-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.flags-actions .btn {
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent-border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+.flags-actions .btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.flags-actions .btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.flags-msg {
+  font-size: 0.78rem;
+  color: var(--accent);
+  margin-top: 0.5rem;
+  min-height: 1rem;
+}
+
 :root {
   --bg: #0d0d0d;
   --surface: #141414;

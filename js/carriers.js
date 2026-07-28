@@ -2286,38 +2286,23 @@ export function buildLeafSentenceItems(items, blockMeta = {}) {
     }
   }
 
-  // Czech-twin accepts: when two lemmas share a cleaned Czech (city/town =
-  // město, job/work = práce), the carrier prompt cannot disambiguate — so the
-  // model must also accept the twin lemma's sentence in the same frame.
-  const byCz = new Map();
-  for (const item of items || []) {
-    const cz = cleanCzLemma(item);
-    if (!cz) continue;
-    if (!byCz.has(cz)) byCz.set(cz, []);
-    byCz.get(cz).push(item);
-  }
+  // Czech-prompt collisions: any two models sharing the exact Czech prompt
+  // (město = city/town via any carrier, práce = "I need a job" / "I have work")
+  // cannot be disambiguated by the learner — so each must accept the other's
+  // English. Group the finished set by cz and cross-merge accepts. This covers
+  // cross-lemma, cross-carrier, and same-lemma collisions in one pass.
+  const czGroups = new Map();
   for (const model of out) {
-    if (!model._lemma || model.carrier === "authored") continue;
-    const src = (items || []).find((it) => cleanEnLemma(it) === model._lemma);
-    if (!src) continue;
-    const extra = [];
-    // Cross-lemma twins: same cz, different en — accept the twin's sentence
-    const twins = (byCz.get(cleanCzLemma(src)) || []).filter(
-      (it) => cleanEnLemma(it) && cleanEnLemma(it) !== model._lemma,
-    );
-    for (const twin of twins) {
-      const alt = buildCarrierModel(twin, model.carrier);
-      if (alt) extra.push(alt.en, ...(alt.accepts || []));
-    }
-    // Same-lemma carrier collisions: another carrier yielding the identical
-    // Czech prompt must also be an accepted answer
-    for (const id of filterSafeCarrierIds(src, resolveCarrierIds(src))) {
-      if (id === model.carrier) continue;
-      const alt = buildCarrierModel(src, id);
-      if (alt && alt.cz === model.cz) extra.push(alt.en, ...(alt.accepts || []));
-    }
-    if (extra.length) {
-      model.accepts = [...new Set([...(model.accepts || []), ...extra])];
+    const cz = (model.cz || "").trim().toLowerCase();
+    if (!cz) continue;
+    if (!czGroups.has(cz)) czGroups.set(cz, []);
+    czGroups.get(cz).push(model);
+  }
+  for (const group of czGroups.values()) {
+    if (group.length < 2) continue;
+    const allEn = [...new Set(group.flatMap((m) => [m.en, ...(m.accepts || [])]))];
+    for (const model of group) {
+      model.accepts = [...new Set([...(model.accepts || []), ...allEn])];
     }
   }
 
