@@ -652,7 +652,7 @@
     },
     {
       "id": "leaf_ideas_a2",
-      "label": "Ideas & abstract",
+      "label": "A2 word list · abstract",
       "kind": "leaf",
       "levels": [
         "A2"
@@ -661,7 +661,8 @@
       "status": "live",
       "content": "blocks/a2_ideas.json",
       "codex_unit": "V_COR-A1B1-01",
-      "note": "Live · A2 · V_COR-A1B1-01 · 8×12ish · Oxford fill"
+      "note": "Live · A2 · word list (not a themed leaf; excluded from gate pool) · V_COR-A1B1-01 · 8×12ish · Oxford fill",
+      "list": true
     },
     {
       "id": "leaf_society_a2",
@@ -691,7 +692,7 @@
     },
     {
       "id": "leaf_describing_a2",
-      "label": "Describing words",
+      "label": "A2 word list · adjectives",
       "kind": "leaf",
       "levels": [
         "A2"
@@ -700,7 +701,8 @@
       "status": "live",
       "content": "blocks/a2_describing.json",
       "codex_unit": "V_COR-A1B1-01",
-      "note": "Live · A2 · V_COR-A1B1-01 · 23×12ish · Oxford fill"
+      "note": "Live · A2 · word list (not a themed leaf; excluded from gate pool) · V_COR-A1B1-01 · 23×12ish · Oxford fill",
+      "list": true
     },
     {
       "id": "leaf_adverbs_a2",
@@ -717,7 +719,7 @@
     },
     {
       "id": "leaf_verbs_a2",
-      "label": "Verbs · A2 list",
+      "label": "A2 word list · verbs",
       "kind": "leaf",
       "levels": [
         "A2"
@@ -726,11 +728,12 @@
       "status": "live",
       "content": "blocks/a2_verbs.json",
       "codex_unit": "V_COR-A1B1-01",
-      "note": "Live · A2 · V_COR-A1B1-01 · 9×12ish · Oxford fill"
+      "note": "Live · A2 · word list (not a themed leaf; excluded from gate pool) · V_COR-A1B1-01 · 9×12ish · Oxford fill",
+      "list": true
     },
     {
       "id": "leaf_misc_a2",
-      "label": "General core",
+      "label": "A2 word list · general",
       "kind": "leaf",
       "levels": [
         "A2"
@@ -739,7 +742,8 @@
       "status": "live",
       "content": "blocks/a2_misc.json",
       "codex_unit": "V_COR-A1B1-01",
-      "note": "Live · A2 · V_COR-A1B1-01 · 5×12ish · Oxford fill"
+      "note": "Live · A2 · word list (not a themed leaf; excluded from gate pool) · V_COR-A1B1-01 · 5×12ish · Oxford fill",
+      "list": true
     },
     {
       "id": "craft",

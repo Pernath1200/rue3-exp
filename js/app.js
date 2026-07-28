@@ -435,13 +435,13 @@ function treeLabel(node) {
     leaf_school_a2: "School",
     leaf_clothes_a2: "Clothes",
     leaf_feelings_a2: "Feelings",
-    leaf_ideas_a2: "Ideas",
+    leaf_ideas_a2: "List · abstract",
     leaf_society_a2: "Society",
     leaf_media_a2: "Media",
-    leaf_describing_a2: "Describe",
+    leaf_describing_a2: "List · adj",
     leaf_adverbs_a2: "Adverbs",
-    leaf_verbs_a2: "Verbs",
-    leaf_misc_a2: "General",
+    leaf_verbs_a2: "List · verbs",
+    leaf_misc_a2: "List · general",
   };
   return short[node.id] || node.label;
 }
@@ -631,14 +631,16 @@ function renderTree() {
     const prog = nodeProgressState(n.id, { isLive: n.status === "live" });
     const paint = regionPaint(prog, n.status === "live");
     const sel = STATE.selectedId === n.id ? " is-selected" : "";
+    // Word-list nodes (bulk fill, not themed leaves) render dashed/quieter
+    const listCls = n.list ? " is-list" : "";
     // Leaf points outward from crown centre
     const ang = Math.atan2(p.y - 90, p.x - cx) + Math.PI / 2;
     const d = leafShapePath(p.x, p.y, p.size || 26, ang);
     const labelY = p.y + (p.size || 26) * 0.75 + 10;
     regions += `
       <g class="node-hit" data-id="${n.id}">
-        <path class="tree-leaf fill-${paint.state}${sel}" d="${d}" style="opacity:${paint.fillOp}" />
-        <path class="tree-leaf-stroke fill-${paint.state}${sel}" d="${d}" style="opacity:${paint.strokeOp}" />
+        <path class="tree-leaf fill-${paint.state}${sel}${listCls}" d="${d}" style="opacity:${paint.fillOp}" />
+        <path class="tree-leaf-stroke fill-${paint.state}${sel}${listCls}" d="${d}" style="opacity:${paint.strokeOp}" />
         <text class="tree-label-quiet" x="${p.x.toFixed(1)}" y="${labelY.toFixed(1)}" text-anchor="middle">${escapeXml(treeLabel(n))}</text>
       </g>`;
   }
@@ -678,6 +680,9 @@ function renderDetail(node) {
   }
 
   const badge = node.status || "planned";
+  const listBadge = node.list
+    ? `<span class="badge list" style="margin-left:0.35rem">word list</span>`
+    : "";
   const prog = nodeProgressState(node.id, { isLive: node.status === "live" });
   const progText = progressLabel(prog);
   const progBadge = progText
@@ -706,6 +711,7 @@ function renderDetail(node) {
     <div style="margin-bottom:0.65rem">
       <strong style="font-size:1.05rem">${escapeXml(node.label)}</strong>
       <span class="badge ${badge}" style="margin-left:0.5rem">${escapeXml(badge)}</span>
+      ${listBadge}
       ${progBadge}
     </div>
     ${scheduleLine}
@@ -816,8 +822,10 @@ async function openReviewQueue(dueList) {
 function openA1Gate() {
   showPractice();
   const root = document.getElementById("practice-root");
+  // Word-list nodes are excluded from gate pools — the level check samples
+  // only themed leaves + trunk frames (matters from A2 up; A1 has none)
   const a1Live = STATE.tree.nodes.filter(
-    (n) => n.status === "live" && n.content && n.levels.includes("A1"),
+    (n) => n.status === "live" && n.content && n.levels.includes("A1") && !n.list,
   );
   startA1Gate(root, {
     loadJson,

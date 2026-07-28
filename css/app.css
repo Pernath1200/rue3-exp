@@ -517,6 +517,16 @@ h1 {
   pointer-events: none;
 }
 
+/* Word-list nodes: bulk vocabulary, not themed leaves — dashed + desaturated */
+.tree-svg .tree-leaf.is-list {
+  fill: #7a9aa0;
+}
+
+.tree-svg .tree-leaf-stroke.is-list {
+  stroke: #7a9aa0;
+  stroke-dasharray: 4 3;
+}
+
 /* Selected: soft outline only — not a neon fill disc */
 .tree-svg .tree-band.is-selected,
 .tree-svg .tree-leaf.is-selected {
@@ -602,6 +612,12 @@ h1 {
   color: var(--bg);
   background: var(--accent);
   border-color: var(--accent);
+}
+
+.badge.list {
+  color: #7a9aa0;
+  border-color: rgba(122, 154, 160, 0.5);
+  border-style: dashed;
 }
 
 .badge.prog-untouched {
