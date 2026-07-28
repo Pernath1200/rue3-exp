@@ -6,6 +6,7 @@ Checks:
   - gap contains ____ and gap.replace(____, gap_answer) == en (frames)
   - cz == en (untranslated bulk-fill leftovers; known cognates whitelisted)
   - duplicate en within a level (WARNING — cross-theme overlap can be deliberate)
+  - duplicate cz within a block (ERROR — quiz shows two right-looking options)
   - any block under 4 items (breaks the 4-option quiz)
   - word blocks under 8 items (existing rule)
   - diagram keys actually defined in js/practice.js
@@ -68,6 +69,16 @@ for n in live:
 
     for b in pack["blocks"]:
         loc = f"{pack['id']}/{b['id']}"
+        cz_in_block = {}
+        for it in b["items"]:
+            czk = (it.get("cz") or "").strip().lower()
+            if czk and czk in cz_in_block:
+                errors.append(
+                    f"dup cz in block {loc}: '{it['cz']}' "
+                    f"({cz_in_block[czk]} + {it.get('en')})"
+                )
+            elif czk:
+                cz_in_block[czk] = it.get("en")
         if len(b["items"]) < 4:
             errors.append(f"block<4 {loc} n={len(b['items'])} (breaks 4-option quiz)")
         elif kind == "words" and len(b["items"]) < 8:

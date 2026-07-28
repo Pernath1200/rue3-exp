@@ -58,6 +58,10 @@
         {
           "en": "correctly",
           "cz": "správně"
+        },
+        {
+          "en": "finally",
+          "cz": "nakonec"
         }
       ]
     },
@@ -96,10 +100,6 @@
         {
           "en": "fairly",
           "cz": "poměrně"
-        },
-        {
-          "en": "finally",
-          "cz": "nakonec"
         },
         {
           "en": "fortunately",

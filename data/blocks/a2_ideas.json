@@ -58,6 +58,14 @@
         {
           "en": "cause",
           "cz": "příčina"
+        },
+        {
+          "en": "possibility",
+          "cz": "možnost"
+        },
+        {
+          "en": "mistake",
+          "cz": "chyba"
         }
       ]
     },
@@ -71,10 +79,6 @@
         },
         {
           "en": "option",
-          "cz": "možnost"
-        },
-        {
-          "en": "possibility",
           "cz": "možnost"
         },
         {
@@ -179,10 +183,6 @@
         },
         {
           "en": "error",
-          "cz": "chyba"
-        },
-        {
-          "en": "mistake",
           "cz": "chyba"
         },
         {

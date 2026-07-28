@@ -854,6 +854,12 @@ function wireUtilBar() {
 async function init() {
   const err = document.getElementById("boot-error");
   try {
+    // Author smoke sweep: ?smoke=all auto-plays every live block (no progress writes)
+    if (new URLSearchParams(location.search).has("smoke")) {
+      const { runSmoke } = await import("./smoke.js");
+      await runSmoke();
+      return;
+    }
     loadProgress();
     // Sticky author unlock from ?unlock=all
     isAuthorUnlock();
