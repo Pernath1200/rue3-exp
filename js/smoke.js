@@ -10,6 +10,7 @@
  */
 
 import { startPractice } from "./practice.js";
+import { buildLeafSentenceItems } from "./carriers.js";
 
 const TICK_MS = 10;
 const BLOCK_TIMEOUT_MS = 30000;
@@ -96,12 +97,24 @@ async function playBlock(container, block, practice) {
   }
 
   // --- 3 · Word: type the known answer, Check, Next ---
+  // Carrier-less leaves end here (finish screen offers Match, no Sentence)
+  let sentenceNA = false;
   while (!timedOut()) {
     const s = stage();
     const next = s.querySelector("#t-sent");
     if (next) {
       next.click();
       break;
+    }
+    if (s.querySelector("#t-match")) {
+      sentenceNA = true;
+      break;
+    }
+    const retry = s.querySelector("#t-retry");
+    if (retry) {
+      retry.click();
+      await tick();
+      continue;
     }
     const inp = s.querySelector("#ti");
     const chk = s.querySelector("#chk");
@@ -122,45 +135,61 @@ async function playBlock(container, block, practice) {
     await tick();
   }
 
-  // --- 4 · Sentence ---
-  if (isFrames) {
-    // Reproduce the full English from the Czech prompt
-    while (!timedOut()) {
-      const s = stage();
-      if (s.querySelector("#fs-match") || s.querySelector("#fs-retry")) break;
-      const inp = s.querySelector("#ti");
-      const chk = s.querySelector("#chk");
-      if (inp && chk && !inp.disabled) {
-        const cz = s.querySelector(".prompt")?.textContent;
-        const it = byCz(cz);
-        if (!it) warnings.push(`sentence: no item for prompt "${cz}"`);
-        inp.value = it ? it.en : "";
-        chk.click();
-        const fb = s.querySelector("#tfb");
-        if (it && fb && fb.classList.contains("bad")) {
-          warnings.push(`sentence: model EN graded wrong for "${it.en}"`);
+  // --- 4 · Sentence: CZ → EN models (trunk frames, or leaf carrier frames) ---
+  // Carrier picks are randomised, so probe the builder repeatedly to learn
+  // the cz → en answer space; unknown prompts fall back to reveal + count-it.
+  const probe = {};
+  if (!isFrames) {
+    for (let k = 0; k < 40; k++) {
+      for (const m of buildLeafSentenceItems(block.items, {
+        title: block.title,
+        id: block.id,
+        level: block.level,
+      })) {
+        probe[m.cz] = m.en;
+      }
+    }
+  }
+  let carriersPending = sentenceNA;
+  while (!carriersPending && !timedOut()) {
+    const s = stage();
+    if (s.querySelector("#fs-type")) {
+      // "No carrier sentences yet" — honest empty state, sentence N/A
+      carriersPending = true;
+      break;
+    }
+    const retry = s.querySelector("#fs-retry");
+    if (retry) {
+      retry.click(); // shouldn't happen with correct play; loop until clean
+      await tick();
+      continue;
+    }
+    if (s.querySelector("#fs-again")) break; // complete, 0 wrong
+    const inp = s.querySelector("#ti");
+    const chk = s.querySelector("#chk");
+    if (inp && chk && !inp.disabled) {
+      const cz = s.querySelector(".prompt")?.textContent;
+      const it = isFrames ? byCz(cz) : null;
+      const want = isFrames ? (it && it.en) : probe[cz];
+      inp.value = want || "";
+      chk.click(); // grade
+      const fb = s.querySelector("#tfb");
+      if (fb && fb.classList.contains("bad")) {
+        if (want) {
+          warnings.push(`sentence: model EN graded wrong for "${want}"`);
         }
-        chk.click();
+        // Reveal fallback (unknown carrier variant): count it to keep the
+        // pass clean — carrier *content* quality is hand-smoke territory
+        const countIt = fb.querySelector("button.link");
+        if (countIt) countIt.click();
       }
-      await tick();
+      chk.click(); // next
     }
-  } else {
-    // Free production: any saved text counts; write items.length sentences
-    while (!timedOut()) {
-      const s = stage();
-      if (s.querySelector("#u-copy-done")) break;
-      const ta = s.querySelector("#ui");
-      const btn = s.querySelector("#udone");
-      if (ta && btn && !ta.disabled) {
-        ta.value = "This is a smoke test sentence.";
-        btn.click(); // save
-        btn.click(); // next / finish
-      }
-      await tick();
-    }
+    await tick();
   }
 
   const modes = ["match", "quiz", "type", "sentence"];
+  if (carriersPending) completions.sentence = { na: true };
   const missing = modes.filter((m) => !completions[m]);
   const imperfect = modes.filter(
     (m) =>

@@ -2286,6 +2286,41 @@ export function buildLeafSentenceItems(items, blockMeta = {}) {
     }
   }
 
+  // Czech-twin accepts: when two lemmas share a cleaned Czech (city/town =
+  // město, job/work = práce), the carrier prompt cannot disambiguate — so the
+  // model must also accept the twin lemma's sentence in the same frame.
+  const byCz = new Map();
+  for (const item of items || []) {
+    const cz = cleanCzLemma(item);
+    if (!cz) continue;
+    if (!byCz.has(cz)) byCz.set(cz, []);
+    byCz.get(cz).push(item);
+  }
+  for (const model of out) {
+    if (!model._lemma || model.carrier === "authored") continue;
+    const src = (items || []).find((it) => cleanEnLemma(it) === model._lemma);
+    if (!src) continue;
+    const extra = [];
+    // Cross-lemma twins: same cz, different en — accept the twin's sentence
+    const twins = (byCz.get(cleanCzLemma(src)) || []).filter(
+      (it) => cleanEnLemma(it) && cleanEnLemma(it) !== model._lemma,
+    );
+    for (const twin of twins) {
+      const alt = buildCarrierModel(twin, model.carrier);
+      if (alt) extra.push(alt.en, ...(alt.accepts || []));
+    }
+    // Same-lemma carrier collisions: another carrier yielding the identical
+    // Czech prompt must also be an accepted answer
+    for (const id of filterSafeCarrierIds(src, resolveCarrierIds(src))) {
+      if (id === model.carrier) continue;
+      const alt = buildCarrierModel(src, id);
+      if (alt && alt.cz === model.cz) extra.push(alt.en, ...(alt.accepts || []));
+    }
+    if (extra.length) {
+      model.accepts = [...new Set([...(model.accepts || []), ...extra])];
+    }
+  }
+
   // Light shuffle only when multi-model; keep stable-ish for 1× lemma
   if (perLemma > 1) shuffleInPlace(out);
 

@@ -7,8 +7,8 @@ Checks:
   - cz == en (untranslated bulk-fill leftovers; known cognates whitelisted)
   - duplicate en within a level (WARNING — cross-theme overlap can be deliberate)
   - duplicate cz within a block (ERROR — quiz shows two right-looking options)
-  - any block under 4 items (breaks the 4-option quiz)
-  - word blocks under 8 items (existing rule)
+  - any block under 4 items (ERROR — breaks the 4-option quiz)
+  - word blocks under 8 items (WARNING — small but functional)
   - diagram keys actually defined in js/practice.js
   - block id uniqueness across all packs
 
@@ -82,7 +82,7 @@ for n in live:
         if len(b["items"]) < 4:
             errors.append(f"block<4 {loc} n={len(b['items'])} (breaks 4-option quiz)")
         elif kind == "words" and len(b["items"]) < 8:
-            errors.append(f"small word block {loc} n={len(b['items'])}")
+            warnings.append(f"small word block {loc} n={len(b['items'])}")
         for it in b["items"]:
             en, cz = it.get("en"), it.get("cz")
             label = (en or "?")[:40]
