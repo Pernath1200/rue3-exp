@@ -49,9 +49,9 @@
           "gap_answer": "borrow"
         },
         {
-          "en": "She complains about the noise.",
+          "en": "He complains about the noise.",
           "cz": "Stěžuje si na hluk.",
-          "gap": "She ____ about the noise.",
+          "gap": "He ____ about the noise.",
           "gap_answer": "complains"
         },
         {
@@ -73,10 +73,15 @@
           "gap_answer": "prefer"
         },
         {
-          "en": "They provide free Wi‑Fi.",
-          "cz": "Poskytují Wi‑Fi zdarma.",
-          "gap": "They ____ free Wi‑Fi.",
-          "gap_answer": "provide"
+          "en": "They provide free Wi-Fi.",
+          "cz": "Poskytují Wi-Fi zdarma.",
+          "gap": "They ____ free Wi-Fi.",
+          "gap_answer": "provide",
+          "accepts": [
+            "They provide free WiFi.",
+            "They provide free wifi.",
+            "They provide free Wi Fi."
+          ]
         },
         {
           "en": "I recommend this restaurant.",
@@ -97,9 +102,9 @@
           "gap_answer": "available"
         },
         {
-          "en": "She is very confident.",
-          "cz": "Je velmi sebevědomá.",
-          "gap": "She is very ____.",
+          "en": "He is very confident.",
+          "cz": "Je velmi sebevědomý.",
+          "gap": "He is very ____.",
           "gap_answer": "confident"
         },
         {
@@ -145,9 +150,9 @@
           "gap_answer": "usually"
         },
         {
-          "en": "She almost missed the bus.",
-          "cz": "Málem zmeškala autobus.",
-          "gap": "She ____ missed the bus.",
+          "en": "He almost missed the bus.",
+          "cz": "Málem zmeškal autobus.",
+          "gap": "He ____ missed the bus.",
           "gap_answer": "almost"
         },
         {

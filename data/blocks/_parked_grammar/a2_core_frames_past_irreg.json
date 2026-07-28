@@ -19,12 +19,12 @@
           "gap_answer": "went"
         },
         {
-          "en": "She saw a film.",
-          "cz": "Viděla film.",
-          "gap": "She ____ a film.",
+          "en": "He saw a film.",
+          "cz": "Viděl film.",
+          "gap": "He ____ a film.",
           "gap_answer": "saw",
           "accepts": [
-            "She saw a movie."
+            "He saw a movie."
           ]
         },
         {
@@ -58,9 +58,9 @@
           "gap_answer": "got"
         },
         {
-          "en": "She gave me a gift.",
-          "cz": "Dal mi dárek. / Dala mi dárek.",
-          "gap": "She ____ me a gift.",
+          "en": "He gave me a gift.",
+          "cz": "Dal mi dárek.",
+          "gap": "He ____ me a gift.",
           "gap_answer": "gave"
         },
         {
@@ -82,9 +82,9 @@
           "gap_answer": "told"
         },
         {
-          "en": "She left at six.",
-          "cz": "Odešla v šest.",
-          "gap": "She ____ at six.",
+          "en": "He left at six.",
+          "cz": "Odešel v šest.",
+          "gap": "He ____ at six.",
           "gap_answer": "left"
         }
       ]
@@ -112,9 +112,9 @@
           "gap_answer": "bought"
         },
         {
-          "en": "She brought a friend.",
-          "cz": "Přivedla kamaráda.",
-          "gap": "She ____ a friend.",
+          "en": "He brought a friend.",
+          "cz": "Přivedl kamaráda.",
+          "gap": "He ____ a friend.",
           "gap_answer": "brought"
         },
         {
@@ -142,9 +142,9 @@
           "gap_answer": "drove"
         },
         {
-          "en": "She wrote an email.",
-          "cz": "Napsala e-mail.",
-          "gap": "She ____ an email.",
+          "en": "He wrote an email.",
+          "cz": "Napsal e-mail.",
+          "gap": "He ____ an email.",
           "gap_answer": "wrote"
         },
         {

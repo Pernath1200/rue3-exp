@@ -1,16 +1,57 @@
 /**
- * A1 thin level check — Quiz + Word + frame Sentence.
- * Pass (≥80%) unlocks A2 via progress.recordGate.
+ * Level checks — thin gate: Quiz + Word + frame Sentence.
+ * A1 (≥80%) unlocks A2 · A2 (≥90%, themed pool) unlocks B1.
  * Same grading rules as practice ladder; no free leaf writing.
  */
 
-import { isCorrectAnswer } from "./practice.js";
+import { isCorrectAnswer, gapFillInstruction } from "./practice.js";
 import { recordGate, getGate, hasPassedGate, isLevelUnlocked } from "./progress.js";
 
 const QUIZ_N = 12;
 const WORD_N = 12; // half leaf, half frame gap
 const SENT_N = 6;
-const PASS_RATIO = 0.8;
+
+/** Mega bulk / dump leaves — practice OK, not in A2 level-check pool. */
+export const A2_GATE_EXCLUDE_NODE_IDS = new Set([
+  "leaf_describing_a2",
+  "leaf_adverbs_a2",
+  "leaf_verbs_a2",
+  "leaf_misc_a2",
+  "leaf_ideas_a2", // abstract bulk · still practiceable · not gate-weighted
+]);
+
+/**
+ * @typedef {object} GateSpec
+ * @property {"A1"|"A2"} level
+ * @property {number} passRatio
+ * @property {string} nextLevel
+ * @property {string} title
+ * @property {string} unlockPhrase
+ * @property {(n: object) => boolean} [nodeFilter]
+ */
+
+/** @type {Record<string, GateSpec>} */
+export const GATE_SPECS = {
+  A1: {
+    level: "A1",
+    passRatio: 0.8,
+    nextLevel: "A2",
+    title: "A1 level check",
+    unlockPhrase: "Unlock A2",
+  },
+  A2: {
+    level: "A2",
+    passRatio: 0.9,
+    nextLevel: "B1",
+    title: "A2 level check",
+    unlockPhrase: "Unlock B1",
+    nodeFilter: (n) => {
+      if (!n.codex_unit) return false;
+      if (A2_GATE_EXCLUDE_NODE_IDS.has(n.id)) return false;
+      return true;
+    },
+  },
+};
 
 function shuffle(a) {
   const arr = a.slice();
@@ -33,7 +74,6 @@ function pick(arr, n) {
   if (!arr.length) return [];
   const s = shuffle(arr);
   if (s.length >= n) return s.slice(0, n);
-  // top up with repeats if pool too small
   const out = s.slice();
   while (out.length < n) out.push(s[out.length % s.length]);
   return out;
@@ -41,19 +81,21 @@ function pick(arr, n) {
 
 /**
  * @param {(path: string) => Promise<object>} loadJson
- * @param {object[]} a1LiveNodes tree nodes live on A1 with content
+ * @param {object[]} liveNodes
+ * @param {(n: object) => boolean} [nodeFilter]
  */
-export async function loadA1Pools(loadJson, a1LiveNodes) {
+export async function loadLevelPools(loadJson, liveNodes, nodeFilter) {
   const words = [];
   const frames = [];
-  for (const n of a1LiveNodes) {
+  for (const n of liveNodes) {
     if (!n.content) continue;
+    if (nodeFilter && !nodeFilter(n)) continue;
     try {
       const pack = await loadJson(`./data/${n.content}`);
       const isFrames = pack.practice === "frames";
       for (const b of pack.blocks || []) {
         for (const it of b.items || []) {
-          const row = { ...it, _node: n.id, _block: b.id };
+          const row = { ...it, _node: n.id, _block: b.id, _codex: n.codex_unit };
           if (isFrames || (it.gap && it.gap_answer)) frames.push(row);
           else words.push(row);
         }
@@ -65,9 +107,13 @@ export async function loadA1Pools(loadJson, a1LiveNodes) {
   return { words, frames };
 }
 
+/** @deprecated use loadLevelPools */
+export async function loadA1Pools(loadJson, a1LiveNodes) {
+  return loadLevelPools(loadJson, a1LiveNodes);
+}
+
 function buildPaper(pools) {
   const quizWords = pick(pools.words, Math.min(QUIZ_N, Math.max(4, pools.words.length)));
-  // pad quiz from frames as CZ→EN full line if few words
   let quizItems = quizWords.map((it) => ({ kind: "word", item: it }));
   if (quizItems.length < QUIZ_N) {
     const extra = pick(pools.frames, QUIZ_N - quizItems.length);
@@ -101,17 +147,14 @@ function buildPaper(pools) {
 }
 
 function quizOptions(item, kind, poolWords, poolFrames) {
-  const correct = kind === "frame" ? item.en : item.en;
+  const correct = item.en;
   const pool = kind === "frame" ? poolFrames : poolWords;
-  const others = shuffle(
-    pool.filter((x) => (kind === "frame" ? x.en : x.en) !== correct),
-  )
+  const others = shuffle(pool.filter((x) => x.en !== correct))
     .slice(0, 3)
-    .map((x) => (kind === "frame" ? x.en : x.en));
+    .map((x) => x.en);
   while (others.length < 3 && pool.length > 1) {
     const x = pool[Math.floor(Math.random() * pool.length)];
-    const t = kind === "frame" ? x.en : x.en;
-    if (t !== correct && !others.includes(t)) others.push(t);
+    if (x.en !== correct && !others.includes(x.en)) others.push(x.en);
     else break;
   }
   return shuffle([correct, ...others.slice(0, 3)]);
@@ -119,18 +162,33 @@ function quizOptions(item, kind, poolWords, poolFrames) {
 
 /**
  * @param {HTMLElement} root
- * @param {{ loadJson: Function, a1LiveNodes: object[], onExit: () => void, onDone: () => void }} opts
+ * @param {{
+ *   loadJson: Function,
+ *   liveNodes: object[],
+ *   level: "A1"|"A2",
+ *   onExit: () => void,
+ *   onDone: (opts?: { goLevel?: string }) => void,
+ * }} opts
  */
-export async function startA1Gate(root, opts) {
-  const pools = await loadA1Pools(opts.loadJson, opts.a1LiveNodes);
+export async function startLevelGate(root, opts) {
+  const spec = GATE_SPECS[opts.level];
+  if (!spec) {
+    root.innerHTML = `<div class="q"><div class="sub">Unknown gate level.</div></div>`;
+    return;
+  }
+
+  const PASS_RATIO = spec.passRatio;
+  const next = spec.nextLevel;
+  const pools = await loadLevelPools(opts.loadJson, opts.liveNodes, spec.nodeFilter);
+
   if (pools.words.length < 4 && pools.frames.length < 4) {
     root.innerHTML = `
       <div class="practice-head">
-        <div class="practice-title">A1 level check</div>
+        <div class="practice-title">${escapeHtml(spec.title)}</div>
         <div class="practice-meta">Not enough live content</div>
       </div>
       <div class="q">
-        <div class="sub">Add A1 packs first, then try again.</div>
+        <div class="sub">Add ${escapeHtml(spec.level)} packs first, then try again.</div>
         <div class="nav"><button type="button" class="btn primary" id="g-exit">← Back</button></div>
       </div>`;
     root.querySelector("#g-exit").onclick = () => opts.onExit();
@@ -143,7 +201,7 @@ export async function startA1Gate(root, opts) {
   const passNeed = Math.ceil(total * PASS_RATIO);
 
   const state = {
-    phase: "intro", // intro | quiz | type | sentence | done
+    phase: "intro",
     qi: 0,
     ti: 0,
     si: 0,
@@ -163,11 +221,11 @@ export async function startA1Gate(root, opts) {
   function chrome(meta) {
     return `
       <div class="practice-head">
-        <div class="practice-title">A1 level check</div>
+        <div class="practice-title">${escapeHtml(spec.title)}</div>
         <div class="practice-meta">${escapeHtml(meta)}</div>
       </div>
       <div class="bar">
-        <span id="g-status">Score ${state.score} · need ${passNeed} / ${total} to unlock A2</span>
+        <span id="g-status">Score ${state.score} · need ${passNeed} / ${total} to unlock ${next}</span>
         <span class="dir-static">CZ → EN · scored</span>
       </div>
       <div id="g-stage" class="stage"></div>
@@ -186,22 +244,27 @@ export async function startA1Gate(root, opts) {
   function setStatus() {
     const st = root.querySelector("#g-status");
     if (st) {
-      st.textContent = `Score ${state.score} · need ${passNeed} / ${total} to unlock A2`;
+      st.textContent = `Score ${state.score} · need ${passNeed} / ${total} to unlock ${next}`;
     }
   }
 
   function renderIntro() {
     clearKey();
-    const prev = getGate("A1");
-    const already = hasPassedGate("A1") || isLevelUnlocked("A2");
+    const prev = getGate(spec.level);
+    const already = hasPassedGate(spec.level) || isLevelUnlocked(next);
+    const poolNote =
+      spec.level === "A2"
+        ? "Pool: themed A2 leaves + 3 trunk · Codex-tagged · bulk dumps excluded"
+        : "Pool: all live A1 packs";
     root.innerHTML = chrome("thin gate · not an exam");
     const stage = root.querySelector("#g-stage");
     stage.innerHTML = `
       <div class="q">
-        <div class="prompt" style="font-size:1.2rem">Unlock A2</div>
+        <div class="prompt" style="font-size:1.2rem">${escapeHtml(spec.unlockPhrase)}</div>
         <div class="sub" style="text-align:left;max-width:28rem;margin:0.75rem auto 1rem">
           <strong>${QUIZ_N}</strong> Quiz · <strong>${WORD_N}</strong> Word · <strong>${SENT_N}</strong> frame sentences<br>
           Pass: <strong>${passNeed}</strong> / ${total} (${Math.round(PASS_RATIO * 100)}%) · unlimited retries<br>
+          ${escapeHtml(poolNote)}<br>
           Flexible grading (near-enough English counts) · <em>I was right</em> if still marked wrong
         </div>
         ${
@@ -211,7 +274,7 @@ export async function startA1Gate(root, opts) {
         }
         ${
           already
-            ? `<div class="sub" style="color:var(--correct)">A2 is already unlocked on this browser.</div>`
+            ? `<div class="sub" style="color:var(--correct)">${escapeHtml(next)} is already unlocked on this browser.</div>`
             : ""
         }
         <div class="nav">
@@ -241,7 +304,6 @@ export async function startA1Gate(root, opts) {
     }
     const row = paper.quizItems[state.qi];
     const it = row.item;
-    const prompt = it.cz;
     const optsList = quizOptions(it, row.kind, pools.words, pools.frames);
     root.innerHTML = chrome(
       `1 · Quiz · ${state.qi + 1} / ${paper.quizItems.length}`,
@@ -249,7 +311,7 @@ export async function startA1Gate(root, opts) {
     const stage = root.querySelector("#g-stage");
     stage.innerHTML = `
       <div class="q">
-        <div class="prompt">${escapeHtml(prompt)}</div>
+        <div class="prompt">${escapeHtml(it.cz)}</div>
         <div class="sub">Choose the English · 1–4</div>
         <div class="opts">
           ${optsList
@@ -263,8 +325,8 @@ export async function startA1Gate(root, opts) {
     wireExit();
     setStatus();
 
-    const correct = row.kind === "frame" ? it.en : it.en;
-    const pick = (i) => {
+    const correct = it.en;
+    const pickOpt = (i) => {
       if (state.answered) return;
       state.answered = true;
       const buttons = [...stage.querySelectorAll(".opt")];
@@ -285,7 +347,7 @@ export async function startA1Gate(root, opts) {
     };
 
     stage.querySelectorAll(".opt").forEach((el) => {
-      el.addEventListener("click", () => pick(+el.dataset.i));
+      el.addEventListener("click", () => pickOpt(+el.dataset.i));
     });
     state.keyHandler = (e) => {
       if (state.answered) return;
@@ -293,7 +355,7 @@ export async function startA1Gate(root, opts) {
       const n = parseInt(e.key, 10);
       if (n >= 1 && n <= optsList.length) {
         e.preventDefault();
-        pick(n - 1);
+        pickOpt(n - 1);
       }
     };
     document.addEventListener("keydown", state.keyHandler);
@@ -321,7 +383,7 @@ export async function startA1Gate(root, opts) {
       <div class="q">
         ${isGap ? `<div class="sub" style="margin-bottom:0.35rem">${escapeHtml(it.cz)}</div>` : ""}
         <div class="prompt prompt-gap">${escapeHtml(prompt)}</div>
-        <div class="sub">${isGap ? "Type the missing word" : "Type the English"} · Enter = check / next</div>
+        <div class="sub">${isGap ? gapFillInstruction(answer) : "Type the English"} · Enter = check / next</div>
         <input class="type-in" id="g-ti" autocomplete="off" autocapitalize="off" spellcheck="false" />
         <div class="fb" id="g-fb"></div>
         <div class="nav"><button type="button" class="btn primary" id="g-chk">Check</button></div>
@@ -472,10 +534,10 @@ export async function startA1Gate(root, opts) {
     clearKey();
     state.phase = "done";
     const passed = state.score >= passNeed;
-    let rec = getGate("A1");
+    let rec = getGate(spec.level);
     if (!state.recorded) {
       state.recorded = true;
-      rec = recordGate("A1", {
+      rec = recordGate(spec.level, {
         passed,
         score: state.score,
         total,
@@ -485,19 +547,19 @@ export async function startA1Gate(root, opts) {
     const stage = root.querySelector("#g-stage");
     stage.innerHTML = `
       <div class="q">
-        <div class="prompt">${passed ? "A2 unlocked" : "Not yet"}</div>
+        <div class="prompt">${passed ? `${escapeHtml(next)} unlocked` : "Not yet"}</div>
         <div class="scoreline">${state.score} / ${total}</div>
         <div class="sub">
           ${
             passed
-              ? "You passed the A1 level check. A2 is open on the level rail."
-              : `Need ${passNeed} correct. Attempt ${(rec && rec.attempts) || 1} · try again anytime.`
+              ? `You passed the ${escapeHtml(spec.title)}. ${escapeHtml(next)} is open on the level rail.`
+              : `Need ${passNeed} correct (${Math.round(PASS_RATIO * 100)}%). Attempt ${(rec && rec.attempts) || 1} · try again anytime.`
           }
         </div>
         <div class="nav">
           ${
             passed
-              ? `<button type="button" class="btn primary" id="g-a2">Go to A2 →</button>
+              ? `<button type="button" class="btn primary" id="g-next">Go to ${escapeHtml(next)} →</button>
                  <button type="button" class="btn" id="g-map">Back to map</button>`
               : `<button type="button" class="btn primary" id="g-retry">Try again</button>
                  <button type="button" class="btn" id="g-map">Back to map</button>`
@@ -512,11 +574,11 @@ export async function startA1Gate(root, opts) {
         opts.onDone();
       };
     }
-    const a2 = stage.querySelector("#g-a2");
-    if (a2) {
-      a2.onclick = () => {
+    const goNext = stage.querySelector("#g-next");
+    if (goNext) {
+      goNext.onclick = () => {
         clearKey();
-        opts.onDone({ goLevel: "A2" });
+        opts.onDone({ goLevel: next });
       };
     }
     const retry = stage.querySelector("#g-retry");
@@ -545,4 +607,32 @@ export async function startA1Gate(root, opts) {
 
   state.phase = "intro";
   render();
+}
+
+/**
+ * @param {HTMLElement} root
+ * @param {{ loadJson: Function, a1LiveNodes: object[], onExit: () => void, onDone: (opts?: object) => void }} opts
+ */
+export async function startA1Gate(root, opts) {
+  return startLevelGate(root, {
+    loadJson: opts.loadJson,
+    liveNodes: opts.a1LiveNodes || opts.liveNodes,
+    level: "A1",
+    onExit: opts.onExit,
+    onDone: opts.onDone,
+  });
+}
+
+/**
+ * @param {HTMLElement} root
+ * @param {{ loadJson: Function, a2LiveNodes?: object[], liveNodes?: object[], onExit: () => void, onDone: (opts?: object) => void }} opts
+ */
+export async function startA2Gate(root, opts) {
+  return startLevelGate(root, {
+    loadJson: opts.loadJson,
+    liveNodes: opts.a2LiveNodes || opts.liveNodes,
+    level: "A2",
+    onExit: opts.onExit,
+    onDone: opts.onDone,
+  });
 }

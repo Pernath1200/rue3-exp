@@ -3,115 +3,661 @@
   "title": "Home & Family",
   "level": "A1",
   "tree_node": "leaf_home_family",
-  "note": "Home & family leaf. P1 Oxford fill: relatives + home extras. Cars/personal sets excluded.",
+  "note": "Home & family leaf. P1 Oxford fill: relatives + home extras. Cars/personal sets excluded. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "family_people",
       "title": "Family · people",
       "items": [
-        { "en": "mother", "cz": "matka" },
-        { "en": "father", "cz": "otec" },
-        { "en": "parents", "cz": "rodiče" },
-        { "en": "brother", "cz": "bratr" },
-        { "en": "sister", "cz": "sestra" },
-        { "en": "son", "cz": "syn" },
-        { "en": "daughter", "cz": "dcera" },
-        { "en": "child", "cz": "dítě" },
-        { "en": "children", "cz": "děti" },
-        { "en": "baby", "cz": "miminko" },
-        { "en": "husband", "cz": "manžel" },
-        { "en": "wife", "cz": "manželka" }
+        {
+          "en": "mother",
+          "cz": "matka",
+          "use": [
+            "he_is_my",
+            "this_is_a",
+            "i_am_a"
+          ]
+        },
+        {
+          "en": "father",
+          "cz": "otec",
+          "use": [
+            "he_is_my",
+            "this_is_a",
+            "i_am_a"
+          ]
+        },
+        {
+          "en": "parents",
+          "cz": "rodiče",
+          "use": [
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "brother",
+          "cz": "bratr",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "sister",
+          "cz": "sestra",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "son",
+          "cz": "syn",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "daughter",
+          "cz": "dcera",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "child",
+          "cz": "dítě",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "children",
+          "cz": "děti",
+          "use": [
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "baby",
+          "cz": "miminko",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "husband",
+          "cz": "manžel",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "wife",
+          "cz": "manželka",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        }
       ]
     },
     {
       "id": "family_wider",
       "title": "Family · wider circle",
       "items": [
-        { "en": "family", "cz": "rodina" },
-        { "en": "friend", "cz": "přítel / kamarád" },
-        { "en": "neighbour", "cz": "soused" },
-        { "en": "man", "cz": "muž" },
-        { "en": "woman", "cz": "žena" },
-        { "en": "boy", "cz": "chlapec" },
-        { "en": "girl", "cz": "dívka" },
-        { "en": "people", "cz": "lidé" },
-        { "en": "name", "cz": "jméno" },
-        { "en": "age", "cz": "věk" },
-        { "en": "job", "cz": "práce / povolání" },
-        { "en": "teacher", "cz": "učitel" }
+        {
+          "en": "family",
+          "cz": "rodina",
+          "use": []
+        },
+        {
+          "en": "friend",
+          "cz": "přítel / kamarád",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a",
+            "he_is_my"
+          ]
+        },
+        {
+          "en": "neighbour",
+          "cz": "soused",
+          "use": [
+            "he_is_my",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "man",
+          "cz": "muž",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "woman",
+          "cz": "žena",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "boy",
+          "cz": "chlapec",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "girl",
+          "cz": "dívka",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "people",
+          "cz": "lidé",
+          "use": []
+        },
+        {
+          "en": "name",
+          "cz": "jméno",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "age",
+          "cz": "věk",
+          "use": []
+        },
+        {
+          "en": "job",
+          "cz": "práce / povolání",
+          "use": [
+            "i_look_for",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "teacher",
+          "cz": "učitel",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a",
+            "he_is_my"
+          ]
+        }
       ]
     },
     {
       "id": "home_rooms",
       "title": "Home · rooms",
       "items": [
-        { "en": "house", "cz": "dům" },
-        { "en": "flat", "cz": "byt" },
-        { "en": "home", "cz": "domov" },
-        { "en": "room", "cz": "místnost / pokoj" },
-        { "en": "kitchen", "cz": "kuchyně" },
-        { "en": "bathroom", "cz": "koupelna" },
-        { "en": "bedroom", "cz": "ložnice" },
-        { "en": "living room", "cz": "obývací pokoj" },
-        { "en": "door", "cz": "dveře" },
-        { "en": "window", "cz": "okno" },
-        { "en": "garden", "cz": "zahrada" },
-        { "en": "stairs", "cz": "schody" }
+        {
+          "en": "house",
+          "cz": "dům",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "flat",
+          "cz": "byt",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "home",
+          "cz": "domov",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "room",
+          "cz": "místnost / pokoj",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "kitchen",
+          "cz": "kuchyně",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "bathroom",
+          "cz": "koupelna",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "bedroom",
+          "cz": "ložnice",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "living room",
+          "cz": "obývací pokoj",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "door",
+          "cz": "dveře",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "window",
+          "cz": "okno",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "garden",
+          "cz": "zahrada",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "stairs",
+          "cz": "schody",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
+        }
       ]
     },
     {
       "id": "home_things",
       "title": "Home · things",
       "items": [
-        { "en": "table", "cz": "stůl" },
-        { "en": "chair", "cz": "židle" },
-        { "en": "bed", "cz": "postel" },
-        { "en": "sofa", "cz": "pohovka" },
-        { "en": "lamp", "cz": "lampa" },
-        { "en": "fridge", "cz": "lednice" },
-        { "en": "key", "cz": "klíč" },
-        { "en": "phone", "cz": "telefon" },
-        { "en": "book", "cz": "kniha" },
-        { "en": "cup", "cz": "hrnek / šálek" },
-        { "en": "plate", "cz": "talíř" },
-        { "en": "bag", "cz": "taška" }
+        {
+          "en": "table",
+          "cz": "stůl",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "chair",
+          "cz": "židle",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "bed",
+          "cz": "postel",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "sofa",
+          "cz": "pohovka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "lamp",
+          "cz": "lampa",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "fridge",
+          "cz": "lednice",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "key",
+          "cz": "klíč",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "phone",
+          "cz": "telefon",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "book",
+          "cz": "kniha",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_want_to"
+          ]
+        },
+        {
+          "en": "cup",
+          "cz": "hrnek / šálek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "plate",
+          "cz": "talíř",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "bag",
+          "cz": "taška",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        }
       ]
     },
     {
       "id": "family_relatives",
       "title": "Family · relatives",
       "items": [
-        { "en": "mum", "cz": "máma" },
-        { "en": "dad", "cz": "táta" },
-        { "en": "parent", "cz": "rodič" },
-        { "en": "aunt", "cz": "teta" },
-        { "en": "uncle", "cz": "strýc" },
-        { "en": "cousin", "cz": "bratranec / sestřenice" },
-        { "en": "grandfather", "cz": "dědeček" },
-        { "en": "grandmother", "cz": "babička" },
-        { "en": "grandparent", "cz": "prarodič" },
-        { "en": "boyfriend", "cz": "přítel (kluk)" },
-        { "en": "girlfriend", "cz": "přítelkyně" },
-        { "en": "adult", "cz": "dospělý" }
+        {
+          "en": "mum",
+          "cz": "máma",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "dad",
+          "cz": "táta",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "parent",
+          "cz": "rodič",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "aunt",
+          "cz": "teta",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "uncle",
+          "cz": "strýc",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "cousin",
+          "cz": "bratranec / sestřenice",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "grandfather",
+          "cz": "dědeček",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "grandmother",
+          "cz": "babička",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "grandparent",
+          "cz": "prarodič",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "boyfriend",
+          "cz": "přítel (kluk)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "girlfriend",
+          "cz": "přítelkyně",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "adult",
+          "cz": "dospělý",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        }
       ]
     },
     {
       "id": "home_more",
       "title": "Home · more",
       "items": [
-        { "en": "apartment", "cz": "byt (americky)" },
-        { "en": "floor", "cz": "podlaha / patro" },
-        { "en": "wall", "cz": "zeď" },
-        { "en": "bath", "cz": "vana" },
-        { "en": "shower", "cz": "sprcha" },
-        { "en": "toilet", "cz": "záchod" },
-        { "en": "desk", "cz": "psací stůl" },
-        { "en": "clock", "cz": "hodiny (na zdi)" },
-        { "en": "address", "cz": "adresa" },
-        { "en": "birthday", "cz": "narozeniny" },
-        { "en": "upstairs", "cz": "nahoře / do patra" },
-        { "en": "downstairs", "cz": "dole / dolů" }
+        {
+          "en": "apartment",
+          "cz": "byt (americky)",
+          "use": [
+            "this_is_a",
+            "where_is_the",
+            "i_have_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "floor",
+          "cz": "podlaha / patro",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "wall",
+          "cz": "zeď",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "bath",
+          "cz": "vana",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "shower",
+          "cz": "sprcha",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "toilet",
+          "cz": "záchod",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "desk",
+          "cz": "psací stůl",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "clock",
+          "cz": "hodiny (na zdi)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "address",
+          "cz": "adresa",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "birthday",
+          "cz": "narozeniny",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "upstairs",
+          "cz": "nahoře / do patra",
+          "use": []
+        },
+        {
+          "en": "downstairs",
+          "cz": "dole / dolů",
+          "use": []
+        }
       ]
     }
   ]

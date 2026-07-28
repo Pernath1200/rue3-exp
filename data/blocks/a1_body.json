@@ -3,43 +3,207 @@
   "title": "Body",
   "level": "A1",
   "tree_node": "leaf_body_a1",
-  "note": "P2 Oxford A1 body parts. Sentence = fruit.",
+  "note": "P2 Oxford A1 body parts. Sentence = fruit. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "body_parts",
       "title": "Body · parts",
       "items": [
-        { "en": "body", "cz": "tělo" },
-        { "en": "head", "cz": "hlava" },
-        { "en": "face", "cz": "obličej" },
-        { "en": "hair", "cz": "vlasy" },
-        { "en": "eye", "cz": "oko" },
-        { "en": "ear", "cz": "ucho" },
-        { "en": "nose", "cz": "nos" },
-        { "en": "mouth", "cz": "ústa" },
-        { "en": "tooth", "cz": "zub" },
-        { "en": "hand", "cz": "ruka (dlaň)" },
-        { "en": "arm", "cz": "paže / ruka" },
-        { "en": "leg", "cz": "noha" }
+        {
+          "en": "body",
+          "cz": "tělo",
+          "use": [
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "head",
+          "cz": "hlava",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "face",
+          "cz": "obličej",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "hair",
+          "cz": "vlasy",
+          "use": [
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "eye",
+          "cz": "oko",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "ear",
+          "cz": "ucho",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "nose",
+          "cz": "nos",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "mouth",
+          "cz": "ústa",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "tooth",
+          "cz": "zub",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "hand",
+          "cz": "ruka (dlaň)",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "arm",
+          "cz": "paže / ruka",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "leg",
+          "cz": "noha",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        }
       ]
     },
     {
       "id": "body_more",
       "title": "Body · more",
       "items": [
-        { "en": "foot", "cz": "noha (chodidlo)" },
-        { "en": "back", "cz": "záda" },
-        { "en": "finger", "cz": "prst (na ruce)" },
-        { "en": "neck", "cz": "krk" },
-        { "en": "shoulder", "cz": "rameno" },
-        { "en": "knee", "cz": "koleno" },
-        { "en": "heart", "cz": "srdce" },
-        { "en": "blood", "cz": "krev" },
-        { "en": "skin", "cz": "kůže" },
-        { "en": "tall", "cz": "vysoký" },
-        { "en": "short (height)", "cz": "malý / nízký" },
-        { "en": "blonde", "cz": "blond" }
+        {
+          "en": "foot",
+          "cz": "noha (chodidlo)",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "back",
+          "cz": "záda",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "finger",
+          "cz": "prst (na ruce)",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "neck",
+          "cz": "krk",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "shoulder",
+          "cz": "rameno",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "knee",
+          "cz": "koleno",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "heart",
+          "cz": "srdce",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "blood",
+          "cz": "krev",
+          "use": [
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "skin",
+          "cz": "kůže",
+          "use": [
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "tall",
+          "cz": "vysoký",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "short (height)",
+          "cz": "malý / nízký",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "blonde",
+          "cz": "blond",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        }
       ]
     }
   ]

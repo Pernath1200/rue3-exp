@@ -6,8 +6,9 @@
 
 const KEY = "rue3-v0.1-progress";
 const AUTHOR_KEY = "rue3-v0.1-author-unlock";
-const FOREVER_LOCKED = new Set(["C1"]);
-const LEVELS = ["A1", "A2", "B1", "B2", "C1"];
+/** C1/C2 stay locked for students; author unlock can open them for tree-size comparison. */
+const FOREVER_LOCKED = new Set(["C1", "C2"]);
+const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 /** Successful spaced reviews needed for "mastered" on a unit. */
@@ -29,6 +30,10 @@ function defaultData() {
     gates: {},
     /** Per tree-node review state (Phase 2 SRS). Optional on older saves. */
     nodes: {},
+    /** Last map position so refresh does not dump you on A1 empty meters. */
+    lastLevel: null,
+    lastNodeId: null,
+    updatedAt: null,
   };
 }
 
@@ -42,6 +47,8 @@ function safeParse(raw) {
     if (!d.gates || typeof d.gates !== "object") d.gates = {};
     if (!d.nodes || typeof d.nodes !== "object") d.nodes = {};
     if (!d.unlocked.includes("A1")) d.unlocked = ["A1", ...d.unlocked];
+    if (d.lastLevel != null && typeof d.lastLevel !== "string") d.lastLevel = null;
+    if (d.lastNodeId != null && typeof d.lastNodeId !== "string") d.lastNodeId = null;
     return d;
   } catch {
     return defaultData();
@@ -49,25 +56,77 @@ function safeParse(raw) {
 }
 
 let cache = null;
+/** False only when localStorage is missing or writes fail (private mode / blocked). */
+let storageOk = true;
+let storageError = null;
+
+export function getStorageStatus() {
+  return { ok: storageOk, error: storageError, key: KEY };
+}
 
 export function loadProgress() {
   if (cache) return cache;
   try {
     const raw = localStorage.getItem(KEY);
     cache = raw ? safeParse(raw) : defaultData();
-  } catch {
+    storageOk = true;
+    storageError = null;
+  } catch (e) {
     cache = defaultData();
+    storageOk = false;
+    storageError = e && e.message ? e.message : String(e);
   }
   return cache;
 }
 
 function save() {
   const data = loadProgress();
+  data.updatedAt = new Date().toISOString();
   try {
-    localStorage.setItem(KEY, JSON.stringify(data));
-  } catch {
-    /* quota / private mode — progress is session-only in memory */
+    const payload = JSON.stringify(data);
+    localStorage.setItem(KEY, payload);
+    // Verify round-trip — catch silent quota / blocked storage early
+    const check = localStorage.getItem(KEY);
+    if (check !== payload) {
+      storageOk = false;
+      storageError = "localStorage write did not stick";
+      console.warn("[rue3 progress]", storageError);
+      return false;
+    }
+    storageOk = true;
+    storageError = null;
+    return true;
+  } catch (e) {
+    storageOk = false;
+    storageError = e && e.message ? e.message : String(e);
+    console.warn("[rue3 progress] localStorage unavailable — progress is session-only", e);
+    return false;
   }
+}
+
+/** Remember map level + selected unit across refresh. */
+export function setLastView(level, nodeId) {
+  const data = loadProgress();
+  if (level) data.lastLevel = level;
+  if (nodeId !== undefined) data.lastNodeId = nodeId || null;
+  save();
+}
+
+export function getLastView() {
+  const data = loadProgress();
+  return {
+    level: data.lastLevel || null,
+    nodeId: data.lastNodeId || null,
+    updatedAt: data.updatedAt || null,
+  };
+}
+
+/** How many blocks have any practice recorded (for UI smoke checks). */
+export function countTouchedBlocks() {
+  const data = loadProgress();
+  return Object.values(data.blocks || {}).filter(
+    (b) => b && (b.touchedAt || Object.values(b.modes || {}).some(Boolean) || b.sentenceDone),
+  ).length;
 }
 
 /** URL ?unlock=all or sticky local author flag (local shell only). */
@@ -96,9 +155,10 @@ export function setAuthorUnlock(on) {
 }
 
 export function isLevelUnlocked(level) {
+  // Author may open C1/C2 to preview growth silhouettes (no student content yet).
+  if (isAuthorUnlock()) return true;
   if (FOREVER_LOCKED.has(level)) return false;
   if (level === "A1") return true;
-  if (isAuthorUnlock()) return true;
   const data = loadProgress();
   return data.unlocked.includes(level);
 }
@@ -178,9 +238,20 @@ export function completeMode(blockId, mode, meta = {}) {
   if (mode === "type" && typeof meta.score === "number" && typeof meta.total === "number") {
     b.lastType = [meta.score, meta.total];
   }
-  if (mode === "sentence") {
+  // Leaf fruit: perfect Word pass (awardFruit from practice.js).
+  // Trunk fruit: perfect Sentence. sentenceDone is the shared "learned/fruit" flag.
+  if (mode === "type" && meta.awardFruit) {
     b.sentenceDone = true;
     if (meta.nodeId) onUnitLearned(meta.nodeId, { stagger: false });
+  }
+  if (mode === "sentence") {
+    // perfect + awardFruit !== false → fruit.
+    // Leaves pass awardFruit:false (optional carrier practice); trunk defaults true.
+    const perfect = meta.perfect !== false;
+    if (perfect && meta.awardFruit !== false) {
+      b.sentenceDone = true;
+      if (meta.nodeId) onUnitLearned(meta.nodeId, { stagger: false });
+    }
   }
   save();
 }
@@ -200,7 +271,8 @@ export function nodeProgressState(nodeId, { isLive } = {}) {
   const data = loadProgress();
   const blocks = Object.values(data.blocks).filter((b) => b.nodeId === nodeId);
   if (!blocks.length) return "untouched";
-  if (blocks.some((b) => b.sentenceDone || b.modes.sentence)) return "fruit";
+  // Fruit = sentenceDone flag (trunk: perfect Sentence; leaf: perfect Word)
+  if (blocks.some((b) => b.sentenceDone)) return "fruit";
   if (blocks.some((b) => b.touchedAt || Object.values(b.modes).some(Boolean))) {
     return "partial";
   }
@@ -263,7 +335,7 @@ export function getNodeReview(nodeId) {
 }
 
 /**
- * First time a unit becomes Learned (Sentence fruit): schedule first review.
+ * First time a unit becomes Learned (fruit): schedule first review.
  * @param {string} nodeId
  * @param {{ stagger?: boolean, now?: number }} [opts]
  *   stagger: spread first due over ~2 weeks (migration). Default false = +1 day.
@@ -509,7 +581,7 @@ export function formatDueLabel(iso) {
 /**
  * Three-meter stats for a CEFR level.
  * Topic grain = live tree units (nodes with status live, not the root "trunk" shell).
- * Learned = fruit (Sentence done). Remembered = ≥1 successful review. Mastered = ≥ MASTERY_REPS.
+ * Learned = fruit (leaf: perfect Word · trunk: perfect Sentence). Remembered = ≥1 successful review. Mastered = ≥ MASTERY_REPS.
  *
  * @param {string} level
  * @param {Array<{ id: string, status?: string, levels?: string[] }>} nodes all tree nodes (filtered here)

@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_clothes_a2",
   "codex_unit": "V_THM-A1B1-01",
-  "note": "Clothes A2",
+  "note": "Clothes A2 · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,119 @@
       "items": [
         {
           "en": "fashion",
-          "cz": "móda"
+          "cz": "móda",
+          "use": [
+            "lets_talk_about",
+            "is_important",
+            "i_like_bare"
+          ]
         },
         {
           "en": "clothing",
-          "cz": "oblečení"
+          "cz": "oblečení",
+          "use": [
+            "i_wear",
+            "this_is_a",
+            "i_have_a"
+          ]
         },
         {
           "en": "uniform",
-          "cz": "uniforma"
+          "cz": "uniforma",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
         },
         {
           "en": "pants",
-          "cz": "kalhoty (amer.)"
+          "cz": "kalhoty (amer.)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
         },
         {
           "en": "jumper",
-          "cz": "svetr"
+          "cz": "svetr",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
         },
         {
           "en": "glove",
-          "cz": "rukavice"
+          "cz": "rukavice",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
         },
         {
           "en": "ring",
-          "cz": "prsten"
+          "cz": "prsten",
+          "use": [
+            "i_wear",
+            "this_is_a",
+            "i_have_a"
+          ]
         },
         {
           "en": "jewellery",
-          "cz": "šperky"
+          "cz": "šperky",
+          "use": [
+            "i_have_bare",
+            "i_like_bare",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "smart",
-          "cz": "elegantní / chytrý"
+          "cz": "elegantní / chytrý",
+          "use": [
+            "i_wear",
+            "this_is_a",
+            "i_have_a",
+            "i_am_adj"
+          ]
         },
         {
           "en": "casual",
-          "cz": "neformální"
+          "cz": "neformální",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
         },
         {
           "en": "belt",
-          "cz": "pásek"
+          "cz": "pásek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
         },
         {
           "en": "button",
-          "cz": "knoflík"
+          "cz": "knoflík",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
         }
       ]
     }

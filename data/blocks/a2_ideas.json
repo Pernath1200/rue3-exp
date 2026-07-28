@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_ideas_a2",
   "codex_unit": "V_COR-A1B1-01",
-  "note": "Abstract A2 · COR",
+  "note": "Abstract A2 · COR · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,90 @@
       "items": [
         {
           "en": "ability",
-          "cz": "schopnost"
+          "cz": "schopnost",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "advantage",
-          "cz": "výhoda"
+          "cz": "výhoda",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "disadvantage",
-          "cz": "nevýhoda"
+          "cz": "nevýhoda",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "argument",
-          "cz": "hádka / argument"
+          "cz": "hádka / argument",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "decision",
-          "cz": "rozhodnutí"
+          "cz": "rozhodnutí",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "opportunity",
-          "cz": "příležitost"
+          "cz": "příležitost",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
         },
         {
           "en": "solution",
-          "cz": "řešení"
+          "cz": "řešení",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "problem",
-          "cz": "problém"
+          "cz": "problém",
+          "use": [
+            "i_have_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "reason",
-          "cz": "důvod"
+          "cz": "důvod",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "result",
-          "cz": "výsledek"
+          "cz": "výsledek",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "effect",
-          "cz": "účinek / následek"
+          "cz": "účinek / následek",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "cause",
-          "cz": "příčina"
+          "cz": "příčina",
+          "use": [
+            "is_important"
+          ]
         }
       ]
     },
@@ -67,51 +106,87 @@
       "items": [
         {
           "en": "choice",
-          "cz": "volba"
+          "cz": "volba",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "option",
-          "cz": "možnost"
+          "cz": "možnost",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "possibility",
-          "cz": "možnost"
+          "cz": "možnost",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "chance",
-          "cz": "šance"
+          "cz": "šance",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "purpose",
-          "cz": "účel"
+          "cz": "účel",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "method",
-          "cz": "metoda"
+          "cz": "metoda",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "process",
-          "cz": "proces"
+          "cz": "proces",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "system",
-          "cz": "systém"
+          "cz": "systém",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "strategy",
-          "cz": "strategie"
+          "cz": "strategie",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "structure",
-          "cz": "struktura"
+          "cz": "struktura",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "feature",
-          "cz": "rys / funkce"
+          "cz": "rys / funkce",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "factor",
-          "cz": "faktor"
+          "cz": "faktor",
+          "use": [
+            "is_important"
+          ]
         }
       ]
     },
@@ -121,51 +196,87 @@
       "items": [
         {
           "en": "condition",
-          "cz": "stav / podmínka"
+          "cz": "stav / podmínka",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "situation",
-          "cz": "situace"
+          "cz": "situace",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "context",
-          "cz": "kontext"
+          "cz": "kontext",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "evidence",
-          "cz": "důkaz"
+          "cz": "důkaz",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "fact",
-          "cz": "fakt"
+          "cz": "fakt",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "detail",
-          "cz": "detail"
+          "cz": "detail",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "example",
-          "cz": "příklad"
+          "cz": "příklad",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "difference",
-          "cz": "rozdíl"
+          "cz": "rozdíl",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "similarity",
-          "cz": "podobnost"
+          "cz": "podobnost",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "benefit",
-          "cz": "přínos / dávka"
+          "cz": "přínos / dávka",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "progress",
-          "cz": "pokrok"
+          "cz": "pokrok",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "success",
-          "cz": "úspěch"
+          "cz": "úspěch",
+          "use": [
+            "is_important"
+          ]
         }
       ]
     },
@@ -175,51 +286,89 @@
       "items": [
         {
           "en": "failure",
-          "cz": "neúspěch"
+          "cz": "neúspěch",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "error",
-          "cz": "chyba"
+          "cz": "chyba",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "mistake",
-          "cz": "chyba"
+          "cz": "chyba",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "suggestion",
-          "cz": "návrh"
+          "cz": "návrh",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "advice",
-          "cz": "rada"
+          "cz": "rada",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
           "en": "opinion",
-          "cz": "názor"
+          "cz": "názor",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "attention",
-          "cz": "pozornost"
+          "cz": "pozornost",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "interest",
-          "cz": "zájem"
+          "cz": "zájem",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "focus",
-          "cz": "soustředit se / ohnisko"
+          "cz": "soustředit se / ohnisko",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "sense",
-          "cz": "smysl / cit"
+          "cz": "smysl / cit",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "manner",
-          "cz": "způsob / chování"
+          "cz": "způsob / chování",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "permission",
-          "cz": "povolení"
+          "cz": "povolení",
+          "use": [
+            "is_important"
+          ]
         }
       ]
     },
@@ -229,51 +378,88 @@
       "items": [
         {
           "en": "promise",
-          "cz": "slib"
+          "cz": "slib",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "request",
-          "cz": "žádost"
+          "cz": "žádost",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "reply",
-          "cz": "odpověď"
+          "cz": "odpověď",
+          "use": []
         },
         {
           "en": "response",
-          "cz": "reakce / odpověď"
+          "cz": "reakce / odpověď",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "comment",
-          "cz": "komentář"
+          "cz": "komentář",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "discussion",
-          "cz": "diskuse"
+          "cz": "diskuse",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "speech",
-          "cz": "projev / řeč"
+          "cz": "projev / řeč",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "expression",
-          "cz": "výraz"
+          "cz": "výraz",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "message",
-          "cz": "zpráva"
+          "cz": "zpráva",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "notice",
-          "cz": "oznámení / všimnout si"
+          "cz": "oznámení / všimnout si",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "sign",
-          "cz": "značka / znamení"
+          "cz": "značka / znamení",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "symbol",
-          "cz": "symbol"
+          "cz": "symbol",
+          "use": [
+            "is_important"
+          ]
         }
       ]
     },
@@ -283,51 +469,87 @@
       "items": [
         {
           "en": "pattern",
-          "cz": "vzor"
+          "cz": "vzor",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "shape",
-          "cz": "tvar"
+          "cz": "tvar",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "level",
-          "cz": "úroveň"
+          "cz": "úroveň",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "rate",
-          "cz": "míra / sazba"
+          "cz": "míra / sazba",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "amount",
-          "cz": "množství"
+          "cz": "množství",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "number",
-          "cz": "číslo / počet"
+          "cz": "číslo / počet",
+          "use": [
+            "this_is_a"
+          ]
         },
         {
           "en": "figure",
-          "cz": "číslo / postava"
+          "cz": "číslo / postava",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "value",
-          "cz": "hodnota"
+          "cz": "hodnota",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "power",
-          "cz": "síla / moc"
+          "cz": "síla / moc",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "control",
-          "cz": "kontrola / ovládat"
+          "cz": "kontrola / ovládat",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "support",
-          "cz": "podpora"
+          "cz": "podpora",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "service",
-          "cz": "služba"
+          "cz": "služba",
+          "use": [
+            "is_important"
+          ]
         }
       ]
     },
@@ -337,51 +559,89 @@
       "items": [
         {
           "en": "role",
-          "cz": "role"
+          "cz": "role",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "position",
-          "cz": "pozice"
+          "cz": "pozice",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "possession",
-          "cz": "majetek / vlastnictví"
+          "cz": "majetek / vlastnictví",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "arrangement",
-          "cz": "domluva / uspořádání"
+          "cz": "domluva / uspořádání",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "alternative",
-          "cz": "alternativa"
+          "cz": "alternativa",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "variety",
-          "cz": "rozmanitost"
+          "cz": "rozmanitost",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "source",
-          "cz": "zdroj"
+          "cz": "zdroj",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "target",
-          "cz": "cíl"
+          "cz": "cíl",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "tip",
-          "cz": "tip / spropitné"
+          "cz": "tip / spropitné",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "tool",
-          "cz": "nástroj"
+          "cz": "nástroj",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "equipment",
-          "cz": "vybavení"
+          "cz": "vybavení",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
           "en": "machine",
-          "cz": "stroj"
+          "cz": "stroj",
+          "use": [
+            "is_important"
+          ]
         }
       ]
     },
@@ -391,35 +651,63 @@
       "items": [
         {
           "en": "engine",
-          "cz": "motor"
+          "cz": "motor",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "electricity",
-          "cz": "elektřina"
+          "cz": "elektřina",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "gas",
-          "cz": "plyn / benzín (amer.)"
+          "cz": "plyn / benzín (amer.)",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "metal",
-          "cz": "kov"
+          "cz": "kov",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
           "en": "plastic",
-          "cz": "plast"
+          "cz": "plast",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
           "en": "invention",
-          "cz": "vynález"
+          "cz": "vynález",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "discovery",
-          "cz": "objev"
+          "cz": "objev",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "experiment",
-          "cz": "experiment"
+          "cz": "experiment",
+          "use": [
+            "is_important"
+          ]
         }
       ]
     }

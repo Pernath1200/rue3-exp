@@ -6,15 +6,17 @@
     "A2",
     "B1",
     "B2",
-    "C1"
+    "C1",
+    "C2"
   ],
   "levels_locked": [
     "A2",
     "B1",
     "B2",
-    "C1"
+    "C1",
+    "C2"
   ],
-  "levels_locked_note": "Static default only. Runtime: A1 open; A2 after A1 check or author unlock. C1 always not-yet. Exp sets author_open so A2–B2 are clickable for writing without a gate pass.",
+  "levels_locked_note": "Static default only. Runtime: A1 open; A2 after A1 check or author unlock. C1/C2 preview via author unlock for tree-size comparison. Exp sets author_open so A2–B2 are clickable for writing without a gate pass.",
   "author_open": true,
   "nodes": [
     {
@@ -742,6 +744,117 @@
       "note": "Live · A2 · V_COR-A1B1-01 · 5×12ish · Oxford fill"
     },
     {
+      "id": "trunk_core_b1",
+      "label": "Core · B1 frames",
+      "kind": "trunk",
+      "levels": [
+        "B1"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/b1_core_frames.json",
+      "codex_unit": "V_COR-B1B2-01",
+      "note": "Live · V_COR-B1B2-01 · 2×12 frames · gap on lexis · perfect as carrier only"
+    },
+    {
+      "id": "trunk_chunks_b1",
+      "label": "Collocations & chunks",
+      "kind": "trunk",
+      "levels": [
+        "B1"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/b1_collocations.json",
+      "codex_unit": "V_PHR-B1B2-01",
+      "note": "Live · V_PHR-B1B2-01 · 2×12 frames · make/do/take/have + adj–noun"
+    },
+    {
+      "id": "trunk_abstract_b1",
+      "label": "Abstraction starters",
+      "kind": "trunk",
+      "levels": [
+        "B1"
+      ],
+      "parent": "trunk",
+      "status": "live",
+      "content": "blocks/b1_abstract.json",
+      "codex_unit": "V_THM-A1B1-10",
+      "note": "Live · V_THM-A1B1-10 · 2×12 abstract lexis · Sentence = fruit"
+    },
+    {
+      "id": "leaf_work_b1",
+      "label": "Work & routine",
+      "kind": "leaf",
+      "levels": [
+        "B1"
+      ],
+      "parent": "trunk",
+      "status": "planned",
+      "codex_unit": "V_WRK-B1B2-01",
+      "note": "Planned · V_WRK-B1B2-01 · grows from THM-02/08"
+    },
+    {
+      "id": "leaf_money_b1",
+      "label": "Money & possessions",
+      "kind": "leaf",
+      "levels": [
+        "B1"
+      ],
+      "parent": "trunk",
+      "status": "planned",
+      "codex_unit": "V_MON-B1B2-01",
+      "note": "Planned · V_MON-B1B2-01 · grows from THM-06"
+    },
+    {
+      "id": "leaf_communication_b1",
+      "label": "Communication",
+      "kind": "leaf",
+      "levels": [
+        "B1"
+      ],
+      "parent": "trunk",
+      "status": "planned",
+      "codex_unit": "V_COM-B1B2-01",
+      "note": "Planned · V_COM-B1B2-01 · register + cognate hooks later"
+    },
+    {
+      "id": "leaf_knowledge_b1",
+      "label": "Knowledge & travel",
+      "kind": "leaf",
+      "levels": [
+        "B1"
+      ],
+      "parent": "trunk",
+      "status": "planned",
+      "codex_unit": "V_KNO-B1B2-01",
+      "note": "Planned · V_KNO-B1B2-01 · grows from THM-03"
+    },
+    {
+      "id": "leaf_self_b1",
+      "label": "Self & body",
+      "kind": "leaf",
+      "levels": [
+        "B1"
+      ],
+      "parent": "trunk",
+      "status": "planned",
+      "codex_unit": "V_SEL-B1B2-01",
+      "note": "Planned · V_SEL-B1B2-01 · grows from THM-07 + feelings"
+    },
+    {
+      "id": "leaf_home_b1",
+      "label": "Home & family",
+      "kind": "leaf",
+      "levels": [
+        "B1"
+      ],
+      "parent": "trunk",
+      "status": "planned",
+      "codex_unit": "V_HOM-B1B2-01",
+      "note": "Planned · V_HOM-B1B2-01 · grows from THM-01/04"
+    },
+    {
       "id": "craft",
       "label": "Word-craft",
       "kind": "craft",
@@ -755,5 +868,7 @@
     }
   ],
   "a2_model": "vocab_thicken_canopy",
-  "a2_model_note": "A2 trunk = recycle A1 lexis + high-freq A2 words + chunks. Grammar (tense/aspect/compare) is RUE2. Canopy = topic leaves."
+  "a2_model_note": "A2 trunk = recycle A1 lexis + high-freq A2 words + chunks. Grammar (tense/aspect/compare) is RUE2. Canopy = topic leaves.",
+  "b1_model": "codex_branch_scaffold",
+  "b1_model_note": "B1 scaffold: 3 trunk (COR + PHR + THM-10 abstraction) + 6 Codex active branches (WRK MON COM KNO SEL HOM). Word-craft parked. Content packs land later (planned → live)."
 }

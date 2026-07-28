@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_freetime_a2",
   "codex_unit": "V_THM-A1B1-09",
-  "note": "V_THM-A1B1-09 free time A2",
+  "note": "V_THM-A1B1-09 free time A2 · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,111 @@
       "items": [
         {
           "en": "adventure",
-          "cz": "dobrodružství"
+          "cz": "dobrodružství",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
         },
         {
           "en": "series",
-          "cz": "seriál / série"
+          "cz": "seriál / série",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "comedy",
-          "cz": "komedie"
+          "cz": "komedie",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "drama",
-          "cz": "drama"
+          "cz": "drama",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "fiction",
-          "cz": "beletrie / fikce"
+          "cz": "beletrie / fikce",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "novel",
-          "cz": "román"
+          "cz": "román",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "cartoon",
-          "cz": "kreslený film / komiks"
+          "cz": "kreslený film / komiks",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "celebrity",
-          "cz": "celebrita"
+          "cz": "celebrita",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "fan",
-          "cz": "fanoušek"
+          "cz": "fanoušek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "hero",
-          "cz": "hrdina"
+          "cz": "hrdina",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "stage",
-          "cz": "jeviště / etapa"
+          "cz": "jeviště / etapa",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "instrument",
-          "cz": "nástroj"
+          "cz": "nástroj",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     },
@@ -67,51 +127,107 @@
       "items": [
         {
           "en": "jazz",
-          "cz": "jazz"
+          "cz": "jazz",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "musical",
-          "cz": "muzikál / hudební"
+          "cz": "muzikál / hudební",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "musician",
-          "cz": "hudebník"
+          "cz": "hudebník",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "painter",
-          "cz": "malíř"
+          "cz": "malíř",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "drawing",
-          "cz": "kresba"
+          "cz": "kresba",
+          "use": []
         },
         {
           "en": "gallery",
-          "cz": "galerie"
+          "cz": "galerie",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "entertainment",
-          "cz": "zábava"
+          "cz": "zábava",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "festival",
-          "cz": "festival"
+          "cz": "festival",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
         },
         {
           "en": "party",
-          "cz": "večírek / párty"
+          "cz": "večírek / párty",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
         },
         {
           "en": "joke",
-          "cz": "vtip"
+          "cz": "vtip",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
         },
         {
           "en": "laughter",
-          "cz": "smích"
+          "cz": "smích",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "dream",
-          "cz": "sen / snít"
+          "cz": "sen / snít",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
         }
       ]
     },
@@ -121,35 +237,75 @@
       "items": [
         {
           "en": "luck",
-          "cz": "štěstí (náhoda)"
+          "cz": "štěstí (náhoda)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "prize",
-          "cz": "cena (odměna)"
+          "cz": "cena (odměna)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "award",
-          "cz": "ocenění / cena"
+          "cz": "ocenění / cena",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "competition",
-          "cz": "soutěž"
+          "cz": "soutěž",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "race",
-          "cz": "závod"
+          "cz": "závod",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
         },
         {
           "en": "goal",
-          "cz": "gól / cíl"
+          "cz": "gól / cíl",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "score",
-          "cz": "skóre / skórovat"
+          "cz": "skóre / skórovat",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "winner",
-          "cz": "vítěz"
+          "cz": "vítěz",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     }

@@ -58,6 +58,26 @@ Selecting a level filters what the tree shows. C1 is visible but not enterable.
 - **Speaking / writing real sentences** with the domain words = fruit on that leaf.
 - In the app: Match → Quiz → Word builds recognition; **Sentence mode is where the leaf becomes fruit.**
 - **Trunk** feeds that production (frames, patterns, glue) — it is not a second dumping ground for word lists.
+- **Fruit bar (locked 2026-07-20):** unit fruit only when Sentence is **all correct** (frame: including retry-wrong until clear). Leaf free-write: wrote full block target.
+
+### Carrier tenses in RUE3 frames (locked 2026-07-20 · Codex `V_COR-A1B1-01`)
+
+RUE3 **hosts** tense shapes so lexis can be practised in real sentences. **Systems** stay on RUE2 grammar roots.
+
+| Band | Allowed frame EN shapes | Not yet |
+|------|-------------------------|---------|
+| **A1** | Present simple only | Past, continuous, perfect |
+| **A2** | Present simple · past simple · past continuous | Present perfect and later |
+| **B1+** | Present perfect enters (and more as band needs) | — |
+
+Grammar unit links: `G_VP-A1B1-01` · `G_VP-B1B2-01`. All content tags a Vocab Codex `unit_id`.
+
+### Level checks (locked 2026-07-20)
+
+| Gate | Pass bar | Unlocks | Pool |
+|------|----------|---------|------|
+| A1 → A2 | **80%** | A2 rail | All live A1 |
+| A2 → B1 | **90%** | B1 rail only (Word-craft still parked) | Themed A2 leaves + 3 trunk · Codex-tagged · mega dumps excluded |
 
 ### Seed kit + Be/Have (locked)
 

@@ -3,115 +3,630 @@
   "title": "Places",
   "level": "A1",
   "tree_node": "leaf_places",
-  "note": "Places leaf. P1 Oxford fill: travel + town culture. Directions thinned of pure grammar. Sentence = fruit.",
+  "note": "Places leaf. P1 Oxford fill: travel + town culture. Directions thinned of pure grammar. Sentence = fruit. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "places_town",
       "title": "Places · town",
       "items": [
-        { "en": "city", "cz": "město (velké)" },
-        { "en": "town", "cz": "město" },
-        { "en": "street", "cz": "ulice" },
-        { "en": "centre", "cz": "centrum" },
-        { "en": "park", "cz": "park" },
-        { "en": "square", "cz": "náměstí" },
-        { "en": "map", "cz": "mapa" },
-        { "en": "way", "cz": "cesta" },
-        { "en": "corner", "cz": "roh" },
-        { "en": "here", "cz": "tady" },
-        { "en": "there", "cz": "tam" },
-        { "en": "near", "cz": "blízko" }
+        {
+          "en": "city",
+          "cz": "město (velké)",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "town",
+          "cz": "město",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "street",
+          "cz": "ulice",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "centre",
+          "cz": "centrum",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "park",
+          "cz": "park",
+          "use": [
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "square",
+          "cz": "náměstí",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "map",
+          "cz": "mapa",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "way",
+          "cz": "cesta",
+          "use": [
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "corner",
+          "cz": "roh",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "here",
+          "cz": "tady",
+          "use": []
+        },
+        {
+          "en": "there",
+          "cz": "tam",
+          "use": []
+        },
+        {
+          "en": "near",
+          "cz": "blízko",
+          "use": []
+        }
       ]
     },
     {
       "id": "places_everyday",
       "title": "Places · everyday",
       "items": [
-        { "en": "shop", "cz": "obchod" },
-        { "en": "supermarket", "cz": "supermarket" },
-        { "en": "school", "cz": "škola" },
-        { "en": "station", "cz": "nádraží" },
-        { "en": "hospital", "cz": "nemocnice" },
-        { "en": "bank", "cz": "banka" },
-        { "en": "post office", "cz": "pošta" },
-        { "en": "restaurant", "cz": "restaurace" },
-        { "en": "café", "cz": "kavárna" },
-        { "en": "hotel", "cz": "hotel" },
-        { "en": "office", "cz": "kancelář" },
-        { "en": "pharmacy", "cz": "lékárna" }
+        {
+          "en": "shop",
+          "cz": "obchod",
+          "use": [
+            "i_go_to",
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "supermarket",
+          "cz": "supermarket",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_need_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "school",
+          "cz": "škola",
+          "use": [
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "station",
+          "cz": "nádraží",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "hospital",
+          "cz": "nemocnice",
+          "use": [
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "bank",
+          "cz": "banka",
+          "use": [
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "post office",
+          "cz": "pošta",
+          "use": [
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "restaurant",
+          "cz": "restaurace",
+          "use": [
+            "i_go_to",
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "café",
+          "cz": "kavárna",
+          "use": [
+            "i_go_to",
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "hotel",
+          "cz": "hotel",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "office",
+          "cz": "kancelář",
+          "use": [
+            "i_work_in",
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "pharmacy",
+          "cz": "lékárna",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        }
       ]
     },
     {
       "id": "places_transport",
       "title": "Places · transport",
       "items": [
-        { "en": "bus", "cz": "autobus" },
-        { "en": "train", "cz": "vlak" },
-        { "en": "car", "cz": "auto" },
-        { "en": "taxi", "cz": "taxi" },
-        { "en": "metro", "cz": "metro" },
-        { "en": "tram", "cz": "tramvaj" },
-        { "en": "bike", "cz": "kolo" },
-        { "en": "plane", "cz": "letadlo" },
-        { "en": "airport", "cz": "letiště" },
-        { "en": "go", "cz": "jít / jet" },
-        { "en": "walk", "cz": "jít pěšky" },
-        { "en": "take (the bus)", "cz": "vzít si / jet (autobusem)" }
+        {
+          "en": "bus",
+          "cz": "autobus",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "train",
+          "cz": "vlak",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "car",
+          "cz": "auto",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "taxi",
+          "cz": "taxi",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "metro",
+          "cz": "metro",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "tram",
+          "cz": "tramvaj",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "bike",
+          "cz": "kolo",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "plane",
+          "cz": "letadlo",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "airport",
+          "cz": "letiště",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "go",
+          "cz": "jít / jet",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "walk",
+          "cz": "jít pěšky",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "take (the bus)",
+          "cz": "vzít si / jet (autobusem)",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        }
       ]
     },
     {
       "id": "places_directions",
       "title": "Places · directions",
       "items": [
-        { "en": "left", "cz": "vlevo" },
-        { "en": "right", "cz": "vpravo" },
-        { "en": "straight", "cz": "rovně" },
-        { "en": "next to", "cz": "vedle" },
-        { "en": "opposite", "cz": "naproti" },
-        { "en": "between", "cz": "mezi" },
-        { "en": "behind", "cz": "za" },
-        { "en": "in front of", "cz": "před" },
-        { "en": "come", "cz": "přijít" },
-        { "en": "leave", "cz": "odejít" },
-        { "en": "arrive", "cz": "přijet / dorazit" },
-        { "en": "stop (verb)", "cz": "zastavit" }
+        {
+          "en": "left",
+          "cz": "vlevo",
+          "use": []
+        },
+        {
+          "en": "right",
+          "cz": "vpravo",
+          "use": []
+        },
+        {
+          "en": "straight",
+          "cz": "rovně",
+          "use": []
+        },
+        {
+          "en": "next to",
+          "cz": "vedle",
+          "use": []
+        },
+        {
+          "en": "opposite",
+          "cz": "naproti",
+          "use": []
+        },
+        {
+          "en": "between",
+          "cz": "mezi",
+          "use": []
+        },
+        {
+          "en": "behind",
+          "cz": "za",
+          "use": []
+        },
+        {
+          "en": "in front of",
+          "cz": "před",
+          "use": []
+        },
+        {
+          "en": "come",
+          "cz": "přijít",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "leave",
+          "cz": "odejít",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "arrive",
+          "cz": "přijet / dorazit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "stop (verb)",
+          "cz": "zastavit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        }
       ]
     },
     {
       "id": "places_travel",
       "title": "Places · travel",
       "items": [
-        { "en": "village", "cz": "vesnice" },
-        { "en": "country", "cz": "země / venkov" },
-        { "en": "road", "cz": "silnice / cesta" },
-        { "en": "boat", "cz": "loď" },
-        { "en": "flight", "cz": "let" },
-        { "en": "journey", "cz": "cesta (delší)" },
-        { "en": "trip", "cz": "výlet / cesta" },
-        { "en": "tourist", "cz": "turista" },
-        { "en": "traffic", "cz": "doprava / provoz" },
-        { "en": "passport", "cz": "pas" },
-        { "en": "vacation", "cz": "dovolená (hl. am.)" },
-        { "en": "bicycle", "cz": "kolo (jízdní)" }
+        {
+          "en": "village",
+          "cz": "vesnice",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "country",
+          "cz": "země / venkov",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "road",
+          "cz": "silnice / cesta",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "boat",
+          "cz": "loď",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "flight",
+          "cz": "let",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "journey",
+          "cz": "cesta (delší)",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "trip",
+          "cz": "výlet / cesta",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "tourist",
+          "cz": "turista",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "traffic",
+          "cz": "doprava / provoz",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "passport",
+          "cz": "pas",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "vacation",
+          "cz": "dovolená (hl. am.)",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "bicycle",
+          "cz": "kolo (jízdní)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        }
       ]
     },
     {
       "id": "places_out",
       "title": "Places · out and about",
       "items": [
-        { "en": "museum", "cz": "muzeum" },
-        { "en": "cinema", "cz": "kino" },
-        { "en": "theatre", "cz": "divadlo" },
-        { "en": "library", "cz": "knihovna" },
-        { "en": "market", "cz": "trh" },
-        { "en": "farm", "cz": "farma" },
-        { "en": "beach", "cz": "pláž" },
-        { "en": "building", "cz": "budova" },
-        { "en": "pool", "cz": "bazén" },
-        { "en": "police", "cz": "policie" },
-        { "en": "policeman", "cz": "policista" },
-        { "en": "university", "cz": "univerzita" }
+        {
+          "en": "museum",
+          "cz": "muzeum",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "cinema",
+          "cz": "kino",
+          "use": [
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "theatre",
+          "cz": "divadlo",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "library",
+          "cz": "knihovna",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "market",
+          "cz": "trh",
+          "use": [
+            "i_go_to",
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "farm",
+          "cz": "farma",
+          "use": [
+            "i_go_to",
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "beach",
+          "cz": "pláž",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_need_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "building",
+          "cz": "budova",
+          "use": []
+        },
+        {
+          "en": "pool",
+          "cz": "bazén",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "police",
+          "cz": "policie",
+          "use": [
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "policeman",
+          "cz": "policista",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "university",
+          "cz": "univerzita",
+          "use": [
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
+        }
       ]
     }
   ]

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vocab · RUE3 v0.1</title>
-  <link rel="stylesheet" href="./css/app.css" />
+  <link rel="stylesheet" href="./css/app.css?v=20260727a" />
 </head>
 <body>
   <div class="container">
@@ -16,6 +16,7 @@
       <span>local shell</span>
       <span class="sep">·</span>
       <button type="button" class="util-btn" id="btn-author-unlock" aria-pressed="false" title="Unlock A2–B2 for authoring (local only). Also ?unlock=all. Exp auto-opens author mode.">Author unlock</button>
+      <button type="button" class="util-btn" id="btn-word-roots" aria-pressed="false" hidden title="Author experiment: word roots / etymology (Germanic·Latin·PIE + Czech cognates). Off by default.">Word roots</button>
     </div>
 
     <h1>Vocabulary · Practice map</h1>
@@ -38,16 +39,16 @@
       <div class="card" id="gate-card"></div>
 
       <div class="card">
-        <h2>Sapling · <span id="tree-caption">…</span></h2>
+        <h2>Tree · <span id="tree-caption">…</span></h2>
         <div id="level-meters" class="level-meters" aria-live="polite"></div>
-        <p class="tree-legend">The tree fills as you complete units · trunk bands = frames · canopy leaves = domains · labels stay quiet</p>
+        <p class="tree-legend">Trunk = core frames · branches = topic houses (click for all units in that house) · line-art growth · fruit = Sentence complete</p>
         <div class="tree-wrap">
           <svg id="tree-svg" class="tree-svg" role="img" aria-label="Vocabulary tree for selected level"></svg>
         </div>
       </div>
 
       <div class="card">
-        <h2>Node</h2>
+        <h2>Practice</h2>
         <div id="node-detail"></div>
       </div>
     </div>
@@ -61,6 +62,6 @@
       Server: <code>py -m http.server 8090</code> → <code>http://localhost:8090</code>
     </p>
   </div>
-  <script type="module" src="./js/app.js"></script>
+  <script type="module" src="./js/app.js?v=20260725b"></script>
 </body>
 </html>

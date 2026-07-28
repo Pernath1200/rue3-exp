@@ -3,118 +3,626 @@
   "title": "Free time & feelings",
   "level": "A1",
   "tree_node": "leaf_freetime_a1",
-  "note": "Free time leaf. P5: more feelings + hobbies/media. Overlap with adj trunk kept light. Sentence = fruit.",
+  "note": "Free time leaf. P5: more feelings + hobbies/media. Overlap with adj trunk kept light. Sentence = fruit. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "freetime_hobbies",
       "title": "Free time · hobbies",
       "items": [
-        { "en": "sport", "cz": "sport" },
-        { "en": "football", "cz": "fotbal" },
-        { "en": "tennis", "cz": "tenis" },
-        { "en": "swimming", "cz": "plavání" },
-        { "en": "running", "cz": "běhání" },
-        { "en": "gym", "cz": "posilovna" },
-        { "en": "hobby", "cz": "koníček" },
-        { "en": "music", "cz": "hudba" },
-        { "en": "song", "cz": "píseň" },
-        { "en": "film", "cz": "film" },
-        { "en": "party", "cz": "oslava / party" },
-        { "en": "holiday", "cz": "dovolená / svátek" }
+        {
+          "en": "sport",
+          "cz": "sport",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
+        },
+        {
+          "en": "football",
+          "cz": "fotbal",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
+        },
+        {
+          "en": "tennis",
+          "cz": "tenis",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
+        },
+        {
+          "en": "swimming",
+          "cz": "plavání",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
+        },
+        {
+          "en": "running",
+          "cz": "běhání",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
+        },
+        {
+          "en": "gym",
+          "cz": "posilovna",
+          "use": [
+            "i_go_to",
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "hobby",
+          "cz": "koníček",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "music",
+          "cz": "hudba",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "song",
+          "cz": "píseň",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "film",
+          "cz": "film",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "party",
+          "cz": "oslava / party",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "holiday",
+          "cz": "dovolená / svátek",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        }
       ]
     },
     {
       "id": "freetime_verbs",
       "title": "Free time · verbs",
       "items": [
-        { "en": "play (sport/game)", "cz": "hrát" },
-        { "en": "watch", "cz": "dívat se" },
-        { "en": "listen (to)", "cz": "poslouchat" },
-        { "en": "read", "cz": "číst" },
-        { "en": "write", "cz": "psát" },
-        { "en": "cook", "cz": "vařit" },
-        { "en": "shop (verb)", "cz": "nakupovat" },
-        { "en": "travel", "cz": "cestovat" },
-        { "en": "visit", "cz": "navštívit" },
-        { "en": "relax", "cz": "odpočívat" },
-        { "en": "dance", "cz": "tančit" },
-        { "en": "sing", "cz": "zpívat" }
+        {
+          "en": "play (sport/game)",
+          "cz": "hrát",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "watch",
+          "cz": "dívat se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "listen (to)",
+          "cz": "poslouchat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "read",
+          "cz": "číst",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "write",
+          "cz": "psát",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "cook",
+          "cz": "vařit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "shop (verb)",
+          "cz": "nakupovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "travel",
+          "cz": "cestovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "visit",
+          "cz": "navštívit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "relax",
+          "cz": "odpočívat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "dance",
+          "cz": "tančit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "sing",
+          "cz": "zpívat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        }
       ]
     },
     {
       "id": "freetime_feelings",
       "title": "Free time · feelings",
       "items": [
-        { "en": "happy", "cz": "šťastný" },
-        { "en": "sad", "cz": "smutný" },
-        { "en": "busy", "cz": "zaneprázdněný" },
-        { "en": "free (time)", "cz": "volný" },
-        { "en": "hot", "cz": "horký / teplý" },
-        { "en": "well", "cz": "dobře (zdravý)" },
-        { "en": "ill", "cz": "nemocný" },
-        { "en": "fine", "cz": "v pořádku" },
-        { "en": "angry", "cz": "naštvaný" },
-        { "en": "bored", "cz": "znuděný" },
-        { "en": "worried", "cz": "ustaraný" },
-        { "en": "excited", "cz": "natěšený / nadšený" }
+        {
+          "en": "happy",
+          "cz": "šťastný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "sad",
+          "cz": "smutný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "busy",
+          "cz": "zaneprázdněný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "free (time)",
+          "cz": "volný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "hot",
+          "cz": "horký / teplý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "well",
+          "cz": "dobře (zdravý)",
+          "use": []
+        },
+        {
+          "en": "ill",
+          "cz": "nemocný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "fine",
+          "cz": "v pořádku",
+          "use": [
+            "it_is",
+            "i_am_adj"
+          ]
+        },
+        {
+          "en": "angry",
+          "cz": "naštvaný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "bored",
+          "cz": "znuděný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "worried",
+          "cz": "ustaraný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "excited",
+          "cz": "natěšený / nadšený",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        }
       ]
     },
     {
       "id": "freetime_feelings_more",
       "title": "Free time · feelings more",
       "items": [
-        { "en": "afraid", "cz": "vystrašený / bát se" },
-        { "en": "boring", "cz": "nudný" },
-        { "en": "interesting", "cz": "zajímavý" },
-        { "en": "interested", "cz": "zaujatý / mít zájem" },
-        { "en": "favourite", "cz": "oblíbený" },
-        { "en": "funny", "cz": "vtipný" },
-        { "en": "great", "cz": "skvělý" },
-        { "en": "amazing", "cz": "úžasný" },
-        { "en": "wonderful", "cz": "nádherný / úžasný" },
-        { "en": "sick", "cz": "nemocný (nevolno)" },
-        { "en": "sorry", "cz": "líto / promiň" },
-        { "en": "sure", "cz": "jistý" }
+        {
+          "en": "afraid",
+          "cz": "vystrašený / bát se",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "boring",
+          "cz": "nudný",
+          "use": [
+            "it_is"
+          ]
+        },
+        {
+          "en": "interesting",
+          "cz": "zajímavý",
+          "use": [
+            "it_is"
+          ]
+        },
+        {
+          "en": "interested",
+          "cz": "zaujatý / mít zájem",
+          "use": []
+        },
+        {
+          "en": "favourite",
+          "cz": "oblíbený",
+          "use": [
+            "it_is"
+          ]
+        },
+        {
+          "en": "funny",
+          "cz": "vtipný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "great",
+          "cz": "skvělý",
+          "use": [
+            "it_is",
+            "i_am_adj"
+          ]
+        },
+        {
+          "en": "amazing",
+          "cz": "úžasný",
+          "use": [
+            "it_is"
+          ]
+        },
+        {
+          "en": "wonderful",
+          "cz": "nádherný / úžasný",
+          "use": [
+            "it_is",
+            "i_am_adj"
+          ]
+        },
+        {
+          "en": "sick",
+          "cz": "nemocný (nevolno)",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "sorry",
+          "cz": "líto / promiň",
+          "use": [
+            "i_am_adj"
+          ]
+        },
+        {
+          "en": "sure",
+          "cz": "jistý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        }
       ]
     },
     {
       "id": "freetime_more",
       "title": "Free time · more",
       "items": [
-        { "en": "game", "cz": "hra" },
-        { "en": "fun", "cz": "zábava / zábavný" },
-        { "en": "guitar", "cz": "kytara" },
-        { "en": "band", "cz": "kapela" },
-        { "en": "concert", "cz": "koncert" },
-        { "en": "movie", "cz": "film (hl. am.)" },
-        { "en": "dancing", "cz": "tanec / tancování" },
-        { "en": "exercise", "cz": "cvičení" },
-        { "en": "team", "cz": "tým" },
-        { "en": "match", "cz": "zápas" },
-        { "en": "draw", "cz": "kreslit" },
-        { "en": "paint", "cz": "malovat" }
+        {
+          "en": "game",
+          "cz": "hra",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "fun",
+          "cz": "zábava / zábavný",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "guitar",
+          "cz": "kytara",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "band",
+          "cz": "kapela",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "concert",
+          "cz": "koncert",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "movie",
+          "cz": "film (hl. am.)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "dancing",
+          "cz": "tanec / tancování",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
+        },
+        {
+          "en": "exercise",
+          "cz": "cvičení",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
+        },
+        {
+          "en": "team",
+          "cz": "tým",
+          "use": [
+            "i_work_in",
+            "i_have_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "match",
+          "cz": "zápas",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "draw",
+          "cz": "kreslit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "paint",
+          "cz": "malovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        }
       ]
     },
     {
       "id": "freetime_describe",
       "title": "Free time · describe",
       "items": [
-        { "en": "dangerous", "cz": "nebezpečný" },
-        { "en": "fantastic", "cz": "fantastický" },
-        { "en": "modern", "cz": "moderní" },
-        { "en": "perfect", "cz": "dokonalý" },
-        { "en": "popular", "cz": "oblíbený / populární" },
-        { "en": "pretty", "cz": "hezký / pěkný" },
-        { "en": "quick", "cz": "rychlý" },
-        { "en": "quiet", "cz": "tichý" },
-        { "en": "common", "cz": "běžný / společný" },
-        { "en": "complete", "cz": "úplný / hotový" },
-        { "en": "correct", "cz": "správný" },
-        { "en": "similar", "cz": "podobný" }
+        {
+          "en": "dangerous",
+          "cz": "nebezpečný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "fantastic",
+          "cz": "fantastický",
+          "use": [
+            "it_is",
+            "i_am_adj"
+          ]
+        },
+        {
+          "en": "modern",
+          "cz": "moderní",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "perfect",
+          "cz": "dokonalý",
+          "use": [
+            "it_is",
+            "i_am_adj"
+          ]
+        },
+        {
+          "en": "popular",
+          "cz": "oblíbený / populární",
+          "use": [
+            "it_is"
+          ]
+        },
+        {
+          "en": "pretty",
+          "cz": "hezký / pěkný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "quick",
+          "cz": "rychlý",
+          "use": [
+            "it_is",
+            "i_am_adj"
+          ]
+        },
+        {
+          "en": "quiet",
+          "cz": "tichý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "common",
+          "cz": "běžný / společný",
+          "use": [
+            "it_is"
+          ]
+        },
+        {
+          "en": "complete",
+          "cz": "úplný / hotový",
+          "use": [
+            "it_is"
+          ]
+        },
+        {
+          "en": "correct",
+          "cz": "správný",
+          "use": [
+            "it_is"
+          ]
+        },
+        {
+          "en": "similar",
+          "cz": "podobný",
+          "use": [
+            "it_is"
+          ]
+        }
       ]
     }
   ]
 }
-
-

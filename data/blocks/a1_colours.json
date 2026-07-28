@@ -3,25 +3,106 @@
   "title": "Colours",
   "level": "A1",
   "tree_node": "leaf_colours_a1",
-  "note": "P2 Oxford A1 colours. British grey/colour spelling in related packs; these are colour names. Sentence = fruit.",
+  "note": "P2 Oxford A1 colours. British grey/colour spelling in related packs; these are colour names. Sentence = fruit. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "colours_basic",
       "title": "Colours · basic",
       "items": [
-        { "en": "colour", "cz": "barva" },
-        { "en": "red", "cz": "červený / červená" },
-        { "en": "blue", "cz": "modrý / modrá" },
-        { "en": "green", "cz": "zelený / zelená" },
-        { "en": "yellow", "cz": "žlutý / žlutá" },
-        { "en": "black", "cz": "černý / černá" },
-        { "en": "white", "cz": "bílý / bílá" },
-        { "en": "brown", "cz": "hnědý / hnědá" },
-        { "en": "grey", "cz": "šedý / šedá" },
-        { "en": "pink", "cz": "růžový / růžová" },
-        { "en": "purple", "cz": "fialový / fialová" },
-        { "en": "orange", "cz": "oranžový / oranžová" }
+        {
+          "en": "colour",
+          "cz": "barva",
+          "use": []
+        },
+        {
+          "en": "red",
+          "cz": "červený / červená",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "blue",
+          "cz": "modrý / modrá",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "green",
+          "cz": "zelený / zelená",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "yellow",
+          "cz": "žlutý / žlutá",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "black",
+          "cz": "černý / černá",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "white",
+          "cz": "bílý / bílá",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "brown",
+          "cz": "hnědý / hnědá",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "grey",
+          "cz": "šedý / šedá",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "pink",
+          "cz": "růžový / růžová",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "purple",
+          "cz": "fialový / fialová",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "orange",
+          "cz": "oranžový / oranžová",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        }
       ]
     }
   ]

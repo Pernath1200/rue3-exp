@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_adverbs_a2",
   "codex_unit": "V_COR-A1B1-01",
-  "note": "A2 adverbs · COR",
+  "note": "A2 adverbs · COR · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,63 @@
       "items": [
         {
           "en": "actually",
-          "cz": "vlastně / ve skutečnosti"
+          "cz": "vlastně / ve skutečnosti",
+          "use": []
         },
         {
           "en": "almost",
-          "cz": "skoro"
+          "cz": "skoro",
+          "use": []
         },
         {
           "en": "along",
-          "cz": "podél / dál"
+          "cz": "podél / dál",
+          "use": []
         },
         {
           "en": "anyway",
-          "cz": "stejně / každopádně"
+          "cz": "stejně / každopádně",
+          "use": []
         },
         {
           "en": "anywhere",
-          "cz": "kdekoli"
+          "cz": "kdekoli",
+          "use": []
         },
         {
           "en": "badly",
-          "cz": "špatně"
+          "cz": "špatně",
+          "use": []
         },
         {
           "en": "carefully",
-          "cz": "opatrně"
+          "cz": "opatrně",
+          "use": []
         },
         {
           "en": "certainly",
-          "cz": "rozhodně"
+          "cz": "rozhodně",
+          "use": []
         },
         {
           "en": "clearly",
-          "cz": "jasně"
+          "cz": "jasně",
+          "use": []
         },
         {
           "en": "completely",
-          "cz": "úplně"
+          "cz": "úplně",
+          "use": []
         },
         {
           "en": "constantly",
-          "cz": "neustále"
+          "cz": "neustále",
+          "use": []
         },
         {
           "en": "correctly",
-          "cz": "správně"
+          "cz": "správně",
+          "use": []
         }
       ]
     },
@@ -67,51 +79,63 @@
       "items": [
         {
           "en": "definitely",
-          "cz": "rozhodně"
+          "cz": "rozhodně",
+          "use": []
         },
         {
           "en": "directly",
-          "cz": "přímo"
+          "cz": "přímo",
+          "use": []
         },
         {
           "en": "easily",
-          "cz": "snadno"
+          "cz": "snadno",
+          "use": []
         },
         {
           "en": "especially",
-          "cz": "zejména"
+          "cz": "zejména",
+          "use": []
         },
         {
           "en": "eventually",
-          "cz": "nakonec"
+          "cz": "nakonec",
+          "use": []
         },
         {
           "en": "exactly",
-          "cz": "přesně"
+          "cz": "přesně",
+          "use": []
         },
         {
           "en": "extremely",
-          "cz": "extrémně"
+          "cz": "extrémně",
+          "use": []
         },
         {
           "en": "fairly",
-          "cz": "poměrně"
+          "cz": "poměrně",
+          "use": []
         },
         {
           "en": "finally",
-          "cz": "nakonec"
+          "cz": "nakonec",
+          "use": []
         },
         {
           "en": "fortunately",
-          "cz": "naštěstí"
+          "cz": "naštěstí",
+          "use": []
         },
         {
           "en": "generally",
-          "cz": "obecně"
+          "cz": "obecně",
+          "use": []
         },
         {
           "en": "hardly",
-          "cz": "stěží"
+          "cz": "stěží",
+          "use": []
         }
       ]
     },
@@ -121,51 +145,63 @@
       "items": [
         {
           "en": "immediately",
-          "cz": "okamžitě"
+          "cz": "okamžitě",
+          "use": []
         },
         {
           "en": "increasingly",
-          "cz": "stále více"
+          "cz": "stále více",
+          "use": []
         },
         {
           "en": "inside",
-          "cz": "uvnitř"
+          "cz": "uvnitř",
+          "use": []
         },
         {
           "en": "instead",
-          "cz": "místo toho"
+          "cz": "místo toho",
+          "use": []
         },
         {
           "en": "nearly",
-          "cz": "téměř"
+          "cz": "téměř",
+          "use": []
         },
         {
           "en": "normally",
-          "cz": "normálně"
+          "cz": "normálně",
+          "use": []
         },
         {
           "en": "obviously",
-          "cz": "očividně"
+          "cz": "očividně",
+          "use": []
         },
         {
           "en": "outside",
-          "cz": "venku"
+          "cz": "venku",
+          "use": []
         },
         {
           "en": "particularly",
-          "cz": "zejména"
+          "cz": "zejména",
+          "use": []
         },
         {
           "en": "perfectly",
-          "cz": "perfektně"
+          "cz": "perfektně",
+          "use": []
         },
         {
           "en": "perhaps",
-          "cz": "možná"
+          "cz": "možná",
+          "use": []
         },
         {
           "en": "probably",
-          "cz": "pravděpodobně"
+          "cz": "pravděpodobně",
+          "use": []
         }
       ]
     },
@@ -175,51 +211,63 @@
       "items": [
         {
           "en": "quickly",
-          "cz": "rychle"
+          "cz": "rychle",
+          "use": []
         },
         {
           "en": "quietly",
-          "cz": "tiše"
+          "cz": "tiše",
+          "use": []
         },
         {
           "en": "rarely",
-          "cz": "zřídka"
+          "cz": "zřídka",
+          "use": []
         },
         {
           "en": "recently",
-          "cz": "nedávno"
+          "cz": "nedávno",
+          "use": []
         },
         {
           "en": "seriously",
-          "cz": "vážně"
+          "cz": "vážně",
+          "use": []
         },
         {
           "en": "simply",
-          "cz": "jednoduše"
+          "cz": "jednoduše",
+          "use": []
         },
         {
           "en": "slightly",
-          "cz": "mírně"
+          "cz": "mírně",
+          "use": []
         },
         {
           "en": "slowly",
-          "cz": "pomalu"
+          "cz": "pomalu",
+          "use": []
         },
         {
           "en": "somewhere",
-          "cz": "někde"
+          "cz": "někde",
+          "use": []
         },
         {
           "en": "suddenly",
-          "cz": "najednou"
+          "cz": "najednou",
+          "use": []
         },
         {
           "en": "together",
-          "cz": "spolu"
+          "cz": "spolu",
+          "use": []
         },
         {
           "en": "totally",
-          "cz": "totálně"
+          "cz": "totálně",
+          "use": []
         }
       ]
     },
@@ -229,75 +277,93 @@
       "items": [
         {
           "en": "unfortunately",
-          "cz": "bohužel"
+          "cz": "bohužel",
+          "use": []
         },
         {
           "en": "usually",
-          "cz": "obvykle"
+          "cz": "obvykle",
+          "use": []
         },
         {
           "en": "well",
-          "cz": "dobře"
+          "cz": "dobře",
+          "use": []
         },
         {
           "en": "differently",
-          "cz": "jinak / odlišně"
+          "cz": "jinak / odlišně",
+          "use": []
         },
         {
           "en": "either",
-          "cz": "buď / taky (zápor)"
+          "cz": "buď / taky (zápor)",
+          "use": []
         },
         {
           "en": "everywhere",
-          "cz": "všude"
+          "cz": "všude",
+          "use": []
         },
         {
           "en": "firstly",
-          "cz": "za prvé"
+          "cz": "za prvé",
+          "use": []
         },
         {
           "en": "forward",
-          "cz": "vpřed"
+          "cz": "vpřed",
+          "use": []
         },
         {
           "en": "happily",
-          "cz": "šťastně"
+          "cz": "šťastně",
+          "use": []
         },
         {
           "en": "last",
-          "cz": "naposledy / minulý"
+          "cz": "naposledy / minulý",
+          "use": []
         },
         {
           "en": "least",
-          "cz": "nejméně"
+          "cz": "nejméně",
+          "use": []
         },
         {
           "en": "loudly",
-          "cz": "hlasitě"
+          "cz": "hlasitě",
+          "use": []
         },
         {
           "en": "mostly",
-          "cz": "většinou"
+          "cz": "většinou",
+          "use": []
         },
         {
           "en": "nowhere",
-          "cz": "nikde"
+          "cz": "nikde",
+          "use": []
         },
         {
           "en": "rather",
-          "cz": "spíš / raději"
+          "cz": "spíš / raději",
+          "use": []
         },
         {
           "en": "sadly",
-          "cz": "bohužel / smutně"
+          "cz": "bohužel / smutně",
+          "use": []
         },
         {
           "en": "secondly",
-          "cz": "za druhé"
+          "cz": "za druhé",
+          "use": []
         },
         {
           "en": "less",
-          "cz": "méně"
+          "cz": "méně",
+          "use": []
         }
       ]
     }

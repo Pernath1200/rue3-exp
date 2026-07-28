@@ -147,16 +147,18 @@ These are already working and **locked** by practice + charter. New work extends
 
 **A2 is complete when:**
 
-1. A2 tree has its own **trunk frames** (past glue, comparatives/basic quantity, more function chunks) + **leaves** that extend A1 domains and add Travel/holidays, Health, Shopping/money, Routines past, Weather.  
-2. A2 Level check unlocks B1.  
-3. Same ladder + progress model; no new practice genre.  
+1. A2 tree has **vocab trunk** (recycle · A2 lexis · chunks) + **themed canopy** leaves (not grammar floors). Carrier tenses in frames: PS + past simple + past continuous (see CHARTER / `V_COR-A1B1-01`).  
+2. **A2 Level check** unlocks B1 (**90%** · themed + 3 trunk pool).  
+3. Same ladder + progress model; no new practice genre. Fruit = Sentence **100%** (retries until clear).  
 4. Spiral can mix A1+A2 when on A2 (optional flag).
+
+**Done (2026-07-20 exp):** A2 level check → B1 unlock (rail only). Word-craft structure = **next session**.
 
 ### 2.3 B1 / B2 (hooks only — next week / week after)
 
 | When | Unlock | Content note |
 |------|--------|--------------|
-| After A2 gate | B1 rail open | **Word-craft** node unparks; morphology / word families / collocations as craft, not leaf dumps. |
+| After A2 gate | B1 rail open | Unlock only first. **Word-craft** structure + fill = later session. |
 | After B1 gate (later) | B2 | Full B2 section 1–2 weeks after B1 solid — not planned in detail here. |
 
 ---
@@ -217,10 +219,11 @@ NOT ON RUE3 A2
 
 META
   ├─ Today / SRS (thickens A1 automation in background)
-  └─ A2 Level check → unlock B1 (later)
+  └─ A2 Level check → unlock B1 (live · 90% · themed pool)
 ```
 
-A2 leaves use files `a2_*.json`. Prefer domain lexis over grammar frames.
+A2 leaves use files `a2_*.json`. Prefer domain lexis over grammar frames.  
+**Gate pool excludes** mega dumps: Describing · Verbs · Adverbs · Misc · Ideas (`A2_GATE_EXCLUDE_NODE_IDS` in `js/gate.js`).
 
 ---
 
@@ -259,8 +262,8 @@ Do **not** build a second app. Add one small module, e.g. `js/progress.js`, used
 | Level | Default | Unlock condition |
 |-------|---------|------------------|
 | A1 | open | always |
-| A2 | locked (grey like C1, tag “locked”) | A1 Level check **pass** |
-| B1 | locked | A2 Level check **pass** |
+| A2 | locked (grey like C1, tag “locked”) | A1 Level check **pass** (≥80%) |
+| B1 | locked | A2 Level check **pass** (≥90% · themed pool) |
 | B2 | locked | B1 gate later |
 | C1 | locked forever (for now) | charter |
 
@@ -584,6 +587,40 @@ L3/L4 free time + work can slip to next morning without killing “fairly comple
 - Audio / speech recognition  
 - Gamification (streaks, XP, leaderboards)  
 - Full 12-house leaf system  
+- **Picture labelling / domain visuals** (house, body, …) — parked; see §12b  
+
+---
+
+## 12b. Later enhancements (not this weekend · note 2026-07-24)
+
+**Near path (product order, not dates):**
+
+| Window | Focus |
+|--------|--------|
+| **This weekend (exp)** | A1 → B1 content + smoke **done enough** in exp |
+| **Week after** | **B1 stable** (harden, not expand) |
+| **Next exp stage** | Either **B2 climb** *or* **A1–B1 enhancements** (choose then) |
+
+### Parked: domain visuals / picture labelling
+
+**Why it matters (pedagogy):** Match → Quiz → Word → Sentence alone is mostly **lemma memorisation**. After a while it bores users and **does not stick**. RUE needs richer encoding (image, location, gesture) especially for:
+
+- **House / home** (rooms, furniture)  
+- **Body** (parts)  
+- Prep-style **diagrams** already prove the pattern (trunk preps)  
+
+**What it is *not* this weekend:** no asset pipeline, no image mode, no blocking B1 stable.
+
+**When to open:** after A1–B1 exp is solid *and* B1 stable ships — as a candidate for the **next exp stage** (alongside or instead of B2 content flood).
+
+**Sketch (for later design, not build now):**
+
+- Optional `image` / `diagram` on leaf items or pack-level “label the picture” mode  
+- Units that benefit most first: body, home, places, clothes, food  
+- Same grading honesty: preferred model + accepts; pictures support recall, not decoration spam  
+- Trunk preps stay the quality bar for diagrams  
+
+*Logged so weekend focus stays A1–B1 done, not a visual side-quest.*
 
 ---
 

@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_school_a2",
   "codex_unit": "V_THM-A1B1-02",
-  "note": "Study A2 · THM work/study",
+  "note": "Study A2 · THM work/study · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,112 @@
       "items": [
         {
           "en": "degree",
-          "cz": "titul / stupeň"
+          "cz": "titul / stupeň",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "education",
-          "cz": "vzdělání"
+          "cz": "vzdělání",
+          "use": [
+            "lets_talk_about",
+            "is_important",
+            "i_need_bare"
+          ]
         },
         {
           "en": "learning",
-          "cz": "učení"
+          "cz": "učení",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "mark",
-          "cz": "známka"
+          "cz": "známka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "essay",
-          "cz": "esej / sloh"
+          "cz": "esej / sloh",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "lecture",
-          "cz": "přednáška"
+          "cz": "přednáška",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "professor",
-          "cz": "profesor"
+          "cz": "profesor",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "student",
-          "cz": "student"
+          "cz": "student",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a",
+            "he_is_my"
+          ]
         },
         {
           "en": "subject",
-          "cz": "předmět"
+          "cz": "předmět",
+          "use": [
+            "i_have_a",
+            "lets_talk_about",
+            "this_is_a"
+          ]
         },
         {
           "en": "term",
-          "cz": "semestr / pojem"
+          "cz": "semestr / pojem",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "project",
-          "cz": "projekt"
+          "cz": "projekt",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
         },
         {
           "en": "research",
-          "cz": "výzkum"
+          "cz": "výzkum",
+          "use": [
+            "lets_talk_about",
+            "is_important",
+            "i_need_bare"
+          ]
         }
       ]
     },
@@ -67,51 +128,111 @@
       "items": [
         {
           "en": "researcher",
-          "cz": "výzkumník"
+          "cz": "výzkumník",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "experiment",
-          "cz": "experiment"
+          "cz": "experiment",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "lab",
-          "cz": "laboratoř"
+          "cz": "laboratoř",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "biology",
-          "cz": "biologie"
+          "cz": "biologie",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "chemistry",
-          "cz": "chemie"
+          "cz": "chemie",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "physics",
-          "cz": "fyzika"
+          "cz": "fyzika",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "mathematics",
-          "cz": "matematika"
+          "cz": "matematika",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "maths",
-          "cz": "matika"
+          "cz": "matika",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "history",
-          "cz": "dějepis / historie"
+          "cz": "dějepis / historie",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "geography",
-          "cz": "zeměpis"
+          "cz": "zeměpis",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "library",
-          "cz": "knihovna"
+          "cz": "knihovna",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
         },
         {
           "en": "dictionary",
-          "cz": "slovník"
+          "cz": "slovník",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     },
@@ -121,43 +242,89 @@
       "items": [
         {
           "en": "instruction",
-          "cz": "instrukce / návod"
+          "cz": "instrukce / návod",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "introduction",
-          "cz": "úvod / představení"
+          "cz": "úvod / představení",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "explanation",
-          "cz": "vysvětlení"
+          "cz": "vysvětlení",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "understanding",
-          "cz": "porozumění"
+          "cz": "porozumění",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "memory",
-          "cz": "paměť"
+          "cz": "paměť",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "mind",
-          "cz": "mysl"
+          "cz": "mysl",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "thought",
-          "cz": "myšlenka"
+          "cz": "myšlenka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "thinking",
-          "cz": "přemýšlení"
+          "cz": "přemýšlení",
+          "use": []
         },
         {
           "en": "knowledge",
-          "cz": "znalosti"
+          "cz": "znalosti",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "teaching",
-          "cz": "výuka"
+          "cz": "výuka",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         }
       ]
     }

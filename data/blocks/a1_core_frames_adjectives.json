@@ -4,13 +4,13 @@
   "level": "A1",
   "tree_node": "trunk_adjectives_a1",
   "practice": "frames",
-  "note": "Be + adjective. P5 adds block 2 (easy/hard, new, beautiful…). Gap on the adjective. Feelings also on Free time leaf.",
+  "note": "Be + adjective. P5 adds block 2 (easy/hard, new, handsome…). Gap on the adjective. Feelings also on Free time leaf. Default 3sg person = he.",
   "default_direction": "cz_to_en",
   "seed_vocab": [
     "I", "he", "she", "it", "they", "am", "is", "are",
     "big", "small", "young", "old", "good", "bad", "nice",
     "kind", "friendly", "tired", "hungry", "cold",
-    "easy", "difficult", "new", "beautiful", "important", "famous",
+    "easy", "difficult", "new", "handsome", "important", "famous",
     "long", "short", "clean", "dirty", "full", "wrong"
   ],
   "blocks": [
@@ -34,11 +34,11 @@
           "accepts": ["It's small.", "It is small", "It is little.", "It's little."]
         },
         {
-          "en": "She is young.",
-          "cz": "Je mladá.",
-          "gap": "She is ____.",
+          "en": "He is young.",
+          "cz": "Je mladý.",
+          "gap": "He is ____.",
           "gap_answer": "young",
-          "accepts": ["She's young.", "She is young"]
+          "accepts": ["He's young.", "He is young"]
         },
         {
           "en": "He is old.",
@@ -62,11 +62,11 @@
           "accepts": ["It's bad.", "It is bad"]
         },
         {
-          "en": "She is nice.",
-          "cz": "Je milá. / Je příjemná.",
-          "gap": "She is ____.",
+          "en": "He is nice.",
+          "cz": "Je milý. / Je příjemný.",
+          "gap": "He is ____.",
           "gap_answer": "nice",
-          "accepts": ["She's nice.", "She is nice"]
+          "accepts": ["He's nice.", "He is nice"]
         },
         {
           "en": "He is kind.",
@@ -132,11 +132,11 @@
           "accepts": ["It's new.", "It is new"]
         },
         {
-          "en": "She is beautiful.",
-          "cz": "Je krásná.",
-          "gap": "She is ____.",
-          "gap_answer": "beautiful",
-          "accepts": ["She's beautiful.", "She is beautiful"]
+          "en": "He is handsome.",
+          "cz": "Je hezký. / Je pohledný.",
+          "gap": "He is ____.",
+          "gap_answer": "handsome",
+          "accepts": ["He's handsome.", "He is handsome", "He is good-looking."]
         },
         {
           "en": "It is important.",

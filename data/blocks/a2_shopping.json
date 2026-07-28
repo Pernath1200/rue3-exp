@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_shopping_a2",
   "codex_unit": "V_THM-A1B1-06",
-  "note": "V_THM-A1B1-06 shopping A2",
+  "note": "V_THM-A1B1-06 shopping A2 · carriers via use[] · retagged 2026-07-25 after smoke duds",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,63 @@
       "items": [
         {
           "en": "advertisement",
-          "cz": "reklama"
+          "cz": "reklama",
+          "use": ["this_is_a", "i_see_a", "there_is_a"]
         },
         {
           "en": "advertising",
-          "cz": "reklama (obor)"
+          "cz": "reklama (obor)",
+          "use": ["i_like_bare", "lets_talk_about", "is_important"]
         },
         {
           "en": "advertise",
-          "cz": "inzerovat / reklamovat"
+          "cz": "inzerovat / reklamovat",
+          "use": ["i_want_to", "we_need_to", "i_like_to"]
         },
         {
           "en": "brand",
-          "cz": "značka"
+          "cz": "značka",
+          "use": ["this_is_a", "i_have_a", "i_like_pl"]
         },
         {
           "en": "product",
-          "cz": "výrobek / produkt"
+          "cz": "výrobek / produkt",
+          "use": ["this_is_a", "i_have_a", "i_need_a", "i_buy_a"]
         },
         {
           "en": "store",
-          "cz": "obchod (amer.)"
+          "cz": "obchod (amer.)",
+          "use": ["i_go_to", "this_is_a", "where_is_the"]
         },
         {
           "en": "bargain",
-          "cz": "výhodná koupě"
+          "cz": "výhodná koupě",
+          "use": ["this_is_a", "i_have_a", "i_need_a"]
         },
         {
           "en": "credit card",
-          "cz": "kreditní karta"
+          "cz": "kreditní karta",
+          "use": ["this_is_a", "i_have_a", "i_need_a"]
         },
         {
           "en": "cash",
-          "cz": "hotovost"
+          "cz": "hotovost",
+          "use": ["i_have_bare", "i_need_bare", "i_want_bare", "i_like_bare"]
         },
         {
           "en": "purchase",
-          "cz": "nákup / koupit"
+          "cz": "nákup / koupit",
+          "use": ["this_is_a", "i_have_a", "i_need_a"]
         },
         {
           "en": "penny",
-          "cz": "penny (mince)"
+          "cz": "penny (mince)",
+          "use": ["this_is_a", "i_have_a"]
         },
         {
           "en": "quality",
-          "cz": "kvalita"
+          "cz": "kvalita",
+          "use": ["is_important", "lets_talk_about"]
         }
       ]
     },
@@ -67,47 +79,58 @@
       "items": [
         {
           "en": "quantity",
-          "cz": "množství"
+          "cz": "množství",
+          "use": ["is_important", "lets_talk_about"]
         },
         {
           "en": "item",
-          "cz": "položka / věc"
+          "cz": "položka / věc",
+          "use": ["this_is_a", "i_have_a", "i_need_a"]
         },
         {
           "en": "gift",
-          "cz": "dárek"
+          "cz": "dárek",
+          "use": ["this_is_a", "i_have_a", "i_need_a", "i_buy_a"]
         },
         {
           "en": "jewellery",
-          "cz": "šperky"
+          "cz": "šperky",
+          "use": ["i_like_bare", "i_have_bare", "i_need_bare"]
         },
         {
           "en": "belt",
-          "cz": "pásek"
+          "cz": "pásek",
+          "use": ["this_is_a", "i_have_a", "i_need_a", "i_wear"]
         },
         {
           "en": "button",
-          "cz": "knoflík / tlačítko"
+          "cz": "knoflík / tlačítko",
+          "use": ["this_is_a", "i_have_a", "i_need_a"]
         },
         {
           "en": "material",
-          "cz": "materiál / látka"
+          "cz": "materiál / látka",
+          "use": ["i_like_bare", "i_need_bare", "i_have_bare"]
         },
         {
           "en": "size",
-          "cz": "velikost"
+          "cz": "velikost",
+          "use": ["i_need_a", "this_is_a"]
         },
         {
           "en": "fashion",
-          "cz": "móda"
+          "cz": "móda",
+          "use": ["i_like_bare", "lets_talk_about", "is_important"]
         },
         {
           "en": "bar",
-          "cz": "bar / tyčinka"
+          "cz": "bar / tyčinka",
+          "use": ["this_is_a", "i_have_a", "where_is_the"]
         },
         {
           "en": "credit",
-          "cz": "kredit / úvěr"
+          "cz": "kredit / úvěr",
+          "use": ["i_have_bare", "i_need_bare", "lets_talk_about"]
         }
       ]
     }

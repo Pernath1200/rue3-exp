@@ -426,10 +426,12 @@ h1 {
   margin: 0 0 0.75rem;
 }
 
-/* Tree SVG — attempt 2: region fill, quiet labels, tree is primary */
+/* Tree SVG — poster line art (Poster_Tree-Growth-Stages_RUE3_2026-07-20) */
 .tree-wrap {
   width: 100%;
   overflow: auto;
+  background: #0a0a0a;
+  border-radius: var(--radius);
 }
 
 .tree-svg {
@@ -438,6 +440,171 @@ h1 {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+.tree-svg .tv-ground-line {
+  stroke: var(--accent);
+  stroke-width: 1.25;
+  opacity: 0.55;
+  fill: none;
+  pointer-events: none;
+}
+
+.tree-svg .tv-trunk-meter {
+  fill: var(--muted);
+  font-family: var(--font);
+  font-size: 9px;
+  letter-spacing: 0.03em;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.tree-svg .tv-branch {
+  fill: none;
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+/* Invisible fat stroke under the visible branch — real click target */
+.tree-svg .tv-branch-hit {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.001);
+  stroke-width: 22;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: stroke;
+}
+
+.tree-svg .tv-branch-live {
+  stroke: var(--accent);
+}
+
+.tree-svg .tv-branch-dim {
+  stroke: rgba(77, 182, 199, 0.28);
+}
+
+.tree-svg .tv-hit {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* Transparent fill does NOT receive clicks under SVG visiblePainted — force all */
+.tree-svg .tv-hit-dot {
+  fill: rgba(0, 0, 0, 0.001);
+  stroke: none;
+  pointer-events: all;
+}
+
+.tree-svg .tv-label-hit {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+/* Pointed leaves — outline fill light teal */
+.tree-svg .tv-leaf {
+  fill: var(--accent);
+  stroke: var(--accent);
+  stroke-width: 0.6;
+  pointer-events: none;
+}
+
+.tree-svg .tv-flower {
+  fill: rgba(255, 255, 255, 0.75);
+  stroke: var(--accent);
+  stroke-width: 0.8;
+  pointer-events: none;
+}
+
+.tree-svg .tv-leader {
+  stroke: rgba(180, 200, 205, 0.5);
+  stroke-width: 1;
+  fill: none;
+  pointer-events: none;
+}
+
+.tree-svg .tv-leader-dim {
+  stroke: rgba(160, 160, 160, 0.28);
+}
+
+.tree-svg .tv-label {
+  font-family: var(--font);
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.tree-svg .tv-label-live {
+  fill: rgba(240, 248, 250, 0.95);
+}
+
+.tree-svg .tv-label-dim {
+  fill: rgba(160, 160, 160, 0.38);
+}
+
+.tree-svg .tv-sublabel {
+  fill: rgba(200, 220, 224, 0.7);
+  pointer-events: none;
+}
+
+/* Trunk body — gradual colouring via JS opacity + gradient (blank → full) */
+.tree-svg .tv-trunk-fill {
+  stroke: none;
+  pointer-events: none;
+}
+
+/* Trunk outline — blank structure always; opacity set inline by progress */
+.tree-svg .tv-trunk-edge {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.85;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.tree-svg .tv-trunk-label {
+  fill: rgba(77, 182, 199, 0.7);
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.tree-svg .tv-leaf-dim {
+  fill: rgba(77, 182, 199, 0.35);
+  stroke: rgba(77, 182, 199, 0.35);
+}
+
+/* Selection: brighter teal glow — not pure white */
+.tree-svg .tv-house.is-selected .tv-branch {
+  stroke: #7ed4e0;
+  filter: drop-shadow(0 0 4px rgba(77, 182, 199, 0.65));
+}
+
+.tree-svg .tv-house.is-selected .tv-label {
+  fill: #c5eef4;
+}
+
+.tree-svg .tv-house.is-selected .tv-leaf {
+  fill: #7ed4e0;
+  stroke: #7ed4e0;
+}
+
+.tree-svg .tv-trunk.is-selected .tv-trunk-edge {
+  stroke: #7ed4e0;
+  stroke-width: 2.35;
+  filter: drop-shadow(0 0 5px rgba(77, 182, 199, 0.55));
+}
+
+.tree-svg .tv-trunk.is-selected .tv-trunk-fill {
+  filter: drop-shadow(0 0 8px rgba(77, 182, 199, 0.35));
+}
+
+.tree-svg .tv-trunk.is-selected .tv-trunk-label {
+  fill: #9adfe8;
 }
 
 /* Fixed skeleton — always there, never “progress colour” */
@@ -1044,4 +1211,133 @@ h1 {
   margin-top: 1rem;
   padding-top: 0.75rem;
   border-top: 1px solid var(--accent-border);
+}
+
+/* Insights · Word roots (author experiment) */
+.util-btn#btn-word-roots {
+  margin-left: 0;
+}
+.insights-panel {
+  margin-top: 1rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius);
+  background: rgba(77, 182, 199, 0.06);
+}
+.insights-panel + .insights-panel {
+  margin-top: 0.75rem;
+}
+.insights-head {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.55rem;
+}
+.insights-sub {
+  font-weight: 500;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+.insights-row {
+  padding: 0.45rem 0;
+  border-top: 1px solid rgba(160, 160, 160, 0.15);
+}
+.insights-row:first-of-type {
+  border-top: none;
+}
+.insights-lemma {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.15rem;
+}
+.insights-bridge {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 0.15rem;
+}
+.bridge-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  border: 1px solid rgba(160, 160, 160, 0.4);
+  color: var(--muted);
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+.insights-cognate {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 0.2rem;
+}
+.cognate-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  border: 1px solid var(--accent-border);
+  background: rgba(77, 182, 199, 0.16);
+  color: var(--accent);
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+.insights-cognate-note {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-style: italic;
+}
+.insights-path-line {
+  font-size: 0.82rem;
+  color: var(--text);
+  line-height: 1.4;
+  margin-top: 0.15rem;
+}
+.path-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  border: 1px solid rgba(160, 160, 160, 0.35);
+  color: var(--muted);
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+.insights-path-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.insights-pie {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+.insights-pie-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-right: 0.2rem;
+}
+.insights-notes {
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-style: italic;
+}
+.insights-empty {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
 }

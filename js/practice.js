@@ -3,7 +3,13 @@
  * Match → Quiz → Type word → Type sentence (Use it)
  * Default for word modes: CZ → EN
  * Sentence mode: always produce English (CZ gloss under words)
+ *
+ * Leaf Sentence = carrier frames only (js/carriers.js), not free invented sentences.
+ * Layer 2 bank-expand is OFF by default (dud risk); 1 model per lemma + emit gate.
+ * Leaf fruit = Word complete (perfect type pass). Trunk fruit = Sentence complete.
  */
+
+import { buildLeafSentenceItems } from "./carriers.js";
 
 function shuffle(a) {
   const arr = a.slice();
@@ -64,16 +70,28 @@ function expandContractions(s) {
 }
 
 function norm(s) {
-  return expandContractions(String(s))
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[''`´]/g, "")
-    // o'clock / oclock / o clock → same form (apostrophe optional)
-    .replace(/\bo\s*clock\b/g, "oclock")
-    .replace(/[.,!?;:"()\-–—]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim()
-    .replace(/^(a |an |the )/, "");
+  return (
+    expandContractions(String(s))
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      // BOM / zero-width / soft hyphen — invisible junk that can poison “exact” answers
+      .replace(/[\u200B-\u200D\uFEFF\u00AD]/g, "")
+      .replace(/[''`´]/g, "")
+      // o'clock / oclock / o clock → same form (apostrophe optional)
+      .replace(/\bo\s*clock\b/g, "oclock")
+      // Every Unicode dash/hyphen → drop (Wi-Fi = WiFi = Wi‑Fi; not a spelling error)
+      // \p{Pd} = punctuation dash; plus ASCII minus if engine misses it
+      .replace(/\p{Pd}/gu, "")
+      .replace(/-/g, "")
+      // NBSP and other space separators → normal space
+      .replace(/\p{Zs}/gu, " ")
+      .replace(/[.,!?;:"()]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      // wi fi (typed with a space) = wifi
+      .replace(/\bwi\s+fi\b/g, "wifi")
+      .replace(/^(a |an |the )/, "")
+  );
 }
 
 /** Expand one answer string into normalised acceptable forms (slashes, notes). */
@@ -178,6 +196,21 @@ function isCorrectAnswer(userInput, item, primary, opts = {}) {
   return false;
 }
 
+/**
+ * Gap-fill prompt: single token → "word", multi-token (e.g. according to) → "words".
+ * @param {string} answer
+ * @param {{ lead?: string }} [opts]
+ */
+export function gapFillInstruction(answer, opts = {}) {
+  const lead = opts.lead || "Type the";
+  const n = String(answer || "")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length;
+  const target = n > 1 ? "missing English words" : "missing English word";
+  return `${lead} ${target}`;
+}
+
 export { norm, isCorrectAnswer, itemAccepts, softSentenceMatch, expandContractions };
 
 /** Ball-and-box SVG diagrams (from Teaching Material basic-prepositions.html), RUE3 dark tokens. */
@@ -246,16 +279,19 @@ function escapeHtml(s) {
     .replace(/"/g, "&quot;");
 }
 
-const SENTENCE_FRAMES = [
-  "Write one true sentence about you, using these words.",
-  "Write one sentence about your home or family, using these words.",
-  "Ask a question using one (or both) of the words.",
-  "Make a negative sentence using one of the words.",
-  "Write about yesterday using one of the words.",
-];
-
 function isFrameItem(item) {
   return Boolean(item && item.gap && item.gap_answer);
+}
+
+/** Sentence-mode item list: trunk frames as-is; leaves → multi core-frame carriers. */
+function sentenceItemsFor(block, isFrames) {
+  const items = block.items || [];
+  if (isFrames) return items;
+  return buildLeafSentenceItems(items, {
+    title: block.title,
+    id: block.id,
+    level: block.level,
+  });
 }
 
 /**
@@ -272,6 +308,7 @@ export function startPractice(root, block, opts) {
     quiz: null,
     typ: null,
     use: null,
+    sentenceList: null,
     keyHandler: null,
     advanceTimer: null,
   };
@@ -327,10 +364,18 @@ export function startPractice(root, block, opts) {
     state.match = null;
     state.quiz = null;
     state.typ = null;
-    // Keep saved sentences when re-entering sentence mode from the mode bar
-    if (m !== "sentence") state.use = null;
-    else if (!state.use) newUse();
+    state.use = null;
+    // Fresh sentence pass when entering Sentence (CZ→EN models for trunk + leaves)
+    if (m === "sentence") state.sentenceList = null;
     render();
+  }
+
+  /** Items for mode 4: frames or leaf-generated sentence models. */
+  function sentenceList() {
+    if (!state.sentenceList) {
+      state.sentenceList = sentenceItemsFor(block, isFrames);
+    }
+    return state.sentenceList;
   }
 
   function renderChrome(statusText) {
@@ -344,7 +389,7 @@ export function startPractice(root, block, opts) {
     return `
       <div class="practice-head">
         <div class="practice-title">${escapeHtml(block.title)}</div>
-        <div class="practice-meta">${block.items.length} ${isFrames ? "frames" : "words"} · A1${isFrames ? " · trunk seed" : ""}</div>
+        <div class="practice-meta">${block.items.length} ${isFrames ? "frames" : "words"}${block.level ? ` · ${escapeHtml(block.level)}` : ""}${isFrames ? " · trunk seed" : ""}</div>
       </div>
       <div class="modes">
         ${modes
@@ -665,25 +710,45 @@ export function startPractice(root, block, opts) {
 
     if (t.pos >= t.order.length) {
       const wrongN = t.wrong.length;
-      reportMode("type", { score: t.score, total: passLen });
-      const sub =
-        wrongN > 0
+      const perfect = wrongN === 0;
+      // Leaf fruit = perfect Word pass (carrier Sentence is optional).
+      reportMode("type", {
+        score: t.score,
+        total: passLen,
+        perfect,
+        awardFruit: !isFrames && perfect,
+      });
+      const hasSent = isFrames || sentenceList().length > 0;
+      let sub;
+      if (wrongN > 0) {
+        sub = hasSent
           ? `${wrongN} to retry · or continue to Sentence`
-          : "All correct · next: Sentence";
+          : `${wrongN} to retry for fruit`;
+      } else if (isFrames) {
+        sub = "All correct · next: Sentence";
+      } else if (hasSent) {
+        sub = "All correct · fruit on the leaf · optional Sentence →";
+      } else {
+        sub = "All correct · fruit on the leaf · Sentence needs carriers for this unit";
+      }
+      const sentBtn = hasSent
+        ? `<button type="button" class="${perfect && !isFrames ? "btn" : "btn primary"}" id="t-sent">4 · Sentence →</button>`
+        : "";
+      const primaryAfter =
+        wrongN > 0
+          ? `<button type="button" class="btn primary" id="t-retry">Retry wrong (${wrongN})</button>
+             ${sentBtn}`
+          : hasSent
+            ? `<button type="button" class="btn" id="t-again">Try full set</button>
+               <button type="button" class="btn primary" id="t-sent">4 · Sentence →</button>`
+            : `<button type="button" class="btn primary" id="t-again">Try full set</button>
+               <button type="button" class="btn" id="t-match">1 · Match</button>`;
       stage.innerHTML = `
         <div class="q">
           <div class="prompt">Type-in done</div>
           <div class="scoreline">${t.score} / ${passLen}</div>
           <div class="sub">${sub}${t.retryPass ? " (retry pass)" : ""}</div>
-          <div class="nav">
-            ${
-              wrongN > 0
-                ? `<button type="button" class="btn primary" id="t-retry">Retry wrong (${wrongN})</button>
-                   <button type="button" class="btn" id="t-sent">4 · Sentence →</button>`
-                : `<button type="button" class="btn" id="t-again">Try full set</button>
-                   <button type="button" class="btn primary" id="t-sent">4 · Sentence →</button>`
-            }
-          </div>
+          <div class="nav">${primaryAfter}</div>
           ${
             wrongN > 0
               ? `<button type="button" class="link" id="t-again">Try full set</button>`
@@ -697,7 +762,10 @@ export function startPractice(root, block, opts) {
           render();
         };
       }
-      stage.querySelector("#t-sent").onclick = () => setMode("sentence");
+      const sent = stage.querySelector("#t-sent");
+      if (sent) sent.onclick = () => setMode("sentence");
+      const matchBtn = stage.querySelector("#t-match");
+      if (matchBtn) matchBtn.onclick = () => setMode("match");
       const again = stage.querySelector("#t-again");
       if (again) {
         again.onclick = () => {
@@ -719,7 +787,7 @@ export function startPractice(root, block, opts) {
       : promptOf(it, state.czToEn);
     const answer = frame ? it.gap_answer : answerOf(it, state.czToEn);
     const sub = frame
-      ? "Type the missing English word · Enter = check / next"
+      ? `${gapFillInstruction(answer)} · Enter = check / next`
       : `Type the ${state.czToEn ? "English" : "Czech"} · Enter = check / next`;
     const passLabel = t.retryPass ? "retry" : "set";
     stage.innerHTML = `
@@ -807,126 +875,9 @@ export function startPractice(root, block, opts) {
     return `${passLabel} ${t.pos + 1} / ${passLen} · score ${t.score}`;
   }
 
-  // ---- 4 · Type sentence (Use it) ----
-  function deal() {
-    const words = shuffle(block.items);
-    const n = words.length >= 2 && Math.random() > 0.35 ? 2 : 1;
-    return {
-      words: words.slice(0, n),
-      frame: SENTENCE_FRAMES[Math.floor(Math.random() * SENTENCE_FRAMES.length)],
-    };
-  }
-
-  function sentenceTarget() {
-    return block.items.length;
-  }
-
-  function newUse() {
-    state.use = {
-      n: 1,
-      sentences: [],
-      cur: deal(),
-      answered: false,
-      review: false,
-      complete: false,
-    };
-  }
-
-  function copySentences(sentences, msgEl) {
-    const text = sentences.map((s) => "• " + s).join("\n");
-    const ok = () => {
-      if (msgEl) msgEl.textContent = "Copied — paste to notes / teacher.";
-    };
-    const fail = () => {
-      if (msgEl) msgEl.textContent = "Copy blocked — select the list and copy.";
-    };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(ok).catch(fail);
-    } else fail();
-  }
-
-  function renderSentenceComplete(stage) {
-    const u = state.use;
-    const target = sentenceTarget();
-    reportMode("sentence", { score: u.sentences.length, total: target });
-    stage.innerHTML = `
-      <div class="q sent-review">
-        <div class="prompt">Section complete</div>
-        <div class="scoreline">${u.sentences.length} / ${target}</div>
-        <div class="sub">You wrote ${target} sentences for this block — fruit on the leaf.</div>
-        <div class="sent-list-mini">
-          ${u.sentences.map((s) => `<div class="sent">${escapeHtml(s)}</div>`).join("")}
-        </div>
-        <div class="nav">
-          <button type="button" class="btn" id="u-again">Try again</button>
-          <button type="button" class="btn primary" id="u-copy-done">Copy all</button>
-        </div>
-        <div class="sub" id="cmsg" style="margin-top:0.5rem"></div>
-        <button type="button" class="link" id="u-more">Write more (optional)</button>
-      </div>`;
-
-    stage.querySelector("#u-again").onclick = () => {
-      newUse();
-      render();
-    };
-    stage.querySelector("#u-copy-done").onclick = () => {
-      copySentences(u.sentences, stage.querySelector("#cmsg"));
-    };
-    stage.querySelector("#u-more").onclick = () => {
-      // Optional extra practice beyond target
-      u.complete = false;
-      u.answered = false;
-      u.cur = deal();
-      u.n = u.sentences.length + 1;
-      render();
-    };
-    bindEnterPrimary(stage);
-    return `Complete · ${u.sentences.length} / ${target}`;
-  }
-
-  function renderSentenceReview(stage) {
-    const u = state.use;
-    const target = sentenceTarget();
-    stage.innerHTML = `
-      <div class="q sent-review">
-        <div class="prompt" style="font-size:1.15rem">My sentences</div>
-        <div class="sub">${u.sentences.length} / ${target} toward complete · Enter goes back</div>
-        ${
-          u.sentences.length
-            ? u.sentences
-                .map((s) => `<div class="sent">${escapeHtml(s)}</div>`)
-                .join("")
-            : `<div class="sub">Nothing saved yet.</div>`
-        }
-        <div class="nav">
-          <button type="button" class="btn primary" id="u-back">◀ Back</button>
-          ${
-            u.sentences.length
-              ? `<button type="button" class="btn" id="u-copy">Copy all</button>`
-              : ""
-          }
-        </div>
-        <div class="sub" id="cmsg" style="margin-top:0.5rem"></div>
-      </div>`;
-
-    stage.querySelector("#u-back").onclick = () => {
-      u.review = false;
-      if (!u.answered) u.cur = deal();
-      u.answered = false;
-      render();
-    };
-    const cp = stage.querySelector("#u-copy");
-    if (cp) {
-      cp.onclick = () =>
-        copySentences(u.sentences, stage.querySelector("#cmsg"));
-    }
-    bindEnterPrimary(stage);
-    return `${u.sentences.length} / ${target} sentences`;
-  }
-
-  /** Trunk frames: reproduce full English from Czech (supports retry wrong) */
+  // ---- 4 · Sentence: CZ → EN (trunk frames + leaf models from unit words) ----
   function newFrameSentence(onlyIndices) {
-    const list = block.items;
+    const list = sentenceList();
     const order =
       onlyIndices && onlyIndices.length
         ? shuffle(onlyIndices.slice())
@@ -943,22 +894,54 @@ export function startPractice(root, block, opts) {
   }
 
   function renderFrameSentence(stage) {
-    const list = block.items;
+    const list = sentenceList();
+    // Leaf with no carriers: honest empty (fruit already from Word).
+    if (!isFrames && !list.length) {
+      stage.innerHTML = `
+        <div class="q">
+          <div class="prompt">No carrier sentences yet</div>
+          <div class="sub">
+            Leaf Sentence recycles fixed core frames (e.g. <em>I'd like a ticket</em>, <em>There is a…</em>), not free invented lines.
+            This unit has no tagged / allowlisted carriers — fruit comes from <strong>Word</strong> (mode 3).
+          </div>
+          <div class="nav">
+            <button type="button" class="btn primary" id="fs-type">3 · Word →</button>
+            <button type="button" class="btn" id="fs-match">1 · Match</button>
+          </div>
+        </div>`;
+      stage.querySelector("#fs-type").onclick = () => setMode("type");
+      stage.querySelector("#fs-match").onclick = () => setMode("match");
+      bindEnterPrimary(stage);
+      return "Sentence · carriers pending";
+    }
     if (!state.typ) newFrameSentence();
     const t = state.typ;
     const passLen = t.order.length;
+    const leafHint = isFrames
+      ? "Reproduce the English frame"
+      : "Unit word in a fixed carrier frame";
 
     if (t.pos >= t.order.length) {
       const wrongN = t.wrong.length;
-      reportMode("sentence", { score: t.score, total: passLen });
+      // Trunk fruit = perfect Sentence. Leaf fruit already from Word; Sentence still reports.
+      if (wrongN === 0) {
+        reportMode("sentence", {
+          score: t.score,
+          total: passLen,
+          perfect: true,
+          awardFruit: isFrames,
+        });
+      }
       stage.innerHTML = `
         <div class="q">
-          <div class="prompt">Section complete</div>
+          <div class="prompt">${wrongN > 0 ? "Not complete yet" : "Section complete"}</div>
           <div class="scoreline">${t.score} / ${passLen}</div>
           <div class="sub">${
             wrongN > 0
-              ? `${wrongN} to retry · seed frames`
-              : "Full sentences from Czech — seed frames locked in."
+              ? `${wrongN} wrong · retry until all correct${isFrames ? " for fruit" : ""}`
+              : isFrames
+                ? "Full sentences from Czech — all correct · fruit on the trunk."
+                : "Carrier sentences complete · fruit already from Word on leaves."
           }${t.retryPass ? " (retry pass)" : ""}</div>
           <div class="nav">
             ${
@@ -992,7 +975,7 @@ export function startPractice(root, block, opts) {
       }
       bindEnterPrimary(stage);
       return wrongN > 0
-        ? `Complete · ${wrongN} wrong`
+        ? `Retry · ${wrongN} wrong`
         : `Complete · ${t.score}/${passLen}`;
     }
 
@@ -1002,7 +985,7 @@ export function startPractice(root, block, opts) {
         <div class="sub">Sentence <strong>${t.pos + 1}</strong> of <strong>${passLen}</strong>${t.retryPass ? " (retry)" : ""} · type the English</div>
         ${diagramBlock(it)}
         <div class="prompt" style="font-size:1.2rem">${escapeHtml(it.cz)}</div>
-        <div class="sub">Reproduce the English frame · Enter = check / next</div>
+        <div class="sub">${escapeHtml(leafHint)} · Enter = check / next</div>
         <textarea class="type-in type-area" id="ti" rows="2" autocomplete="off" spellcheck="false" placeholder="type the English sentence…"></textarea>
         <div class="fb" id="tfb"></div>
         <div class="nav"><button type="button" class="btn primary" id="chk">Check</button></div>
@@ -1090,119 +1073,7 @@ export function startPractice(root, block, opts) {
   }
 
   function renderSentence(stage) {
-    // Trunk seed frames: reproduce model sentences (not free leaf production)
-    if (isFrames) return renderFrameSentence(stage);
-
-    if (!state.use) newUse();
-    const u = state.use;
-    const target = sentenceTarget();
-
-    if (u.complete) return renderSentenceComplete(stage);
-    if (u.review) return renderSentenceReview(stage);
-
-    // Progress index: next sentence to write is sentences.length + 1 (unless mid-feedback)
-    const progressNum = Math.min(u.sentences.length + (u.answered ? 0 : 1), target);
-    const c = u.cur;
-    stage.innerHTML = `
-      <div class="q">
-        <div class="words">
-          ${c.words
-            .map(
-              (w) =>
-                `<span class="pill">${escapeHtml(w.en)}<small>${escapeHtml(w.cz)}</small></span>`,
-            )
-            .join("")}
-        </div>
-        <div class="frame-prompt">${escapeHtml(c.frame)}</div>
-        <div class="sub" style="margin-bottom:0.5rem">
-          Sentence <strong>${progressNum}</strong> of <strong>${target}</strong>
-          · Enter = save / next · Shift+Enter = new line
-        </div>
-        <textarea class="type-in type-area" id="ui" rows="3" autocomplete="off" spellcheck="false" placeholder="type your sentence in English…"></textarea>
-        <div class="fb" id="ufb"></div>
-        <div class="nav"><button type="button" class="btn primary" id="udone">Done</button></div>
-        <button type="button" class="link" id="usaved">My sentences (${u.sentences.length} / ${target})</button>
-      </div>`;
-
-    const ta = stage.querySelector("#ui");
-    const fb = stage.querySelector("#ufb");
-    const btn = stage.querySelector("#udone");
-    ta.focus();
-
-    function advanceOrSave() {
-      if (!u.answered) {
-        const text = ta.value.trim();
-        if (!text) {
-          fb.textContent = "Type a sentence first.";
-          fb.className = "fb";
-          fb.style.color = "var(--muted)";
-          return;
-        }
-        u.answered = true;
-        ta.disabled = true;
-        u.sentences.push(text);
-        const lower = text.toLowerCase();
-        const used = c.words.filter((w) =>
-          lower.includes(keyWord(w).toLowerCase()),
-        );
-        if (used.length === c.words.length) {
-          fb.textContent =
-            "✓ Saved — you used: " + used.map(keyWord).join(", ");
-          fb.className = "fb good";
-        } else {
-          const missing = c.words
-            .filter((w) => !used.includes(w))
-            .map(keyWord)
-            .join(", ");
-          fb.textContent = "Saved. Tip: it didn’t contain: " + missing;
-          fb.className = "fb";
-          fb.style.color = "var(--muted)";
-        }
-        const hitTarget = u.sentences.length >= target;
-        btn.textContent = hitTarget ? "Finish ✓" : "Next";
-        btn.focus();
-      } else {
-        if (u.sentences.length >= target) {
-          u.complete = true;
-          render();
-          return;
-        }
-        u.n++;
-        u.cur = deal();
-        u.answered = false;
-        render();
-      }
-    }
-
-    btn.onclick = advanceOrSave;
-
-    ta.addEventListener("keydown", (e) => {
-      if (e.key !== "Enter") return;
-      if (e.shiftKey) return;
-      e.preventDefault();
-      e.stopPropagation();
-      advanceOrSave();
-    });
-
-    btn.addEventListener("keydown", (e) => {
-      if (e.key !== "Enter" && e.key !== " ") return;
-      e.preventDefault();
-      e.stopPropagation();
-      advanceOrSave();
-    });
-
-    bindEnter((e) => {
-      if (e.target.closest("textarea")) return;
-      e.preventDefault();
-      advanceOrSave();
-    });
-
-    stage.querySelector("#usaved").onclick = () => {
-      u.review = true;
-      render();
-    };
-
-    return `Sentence ${progressNum} of ${target} · saved ${u.sentences.length}`;
+    return renderFrameSentence(stage);
   }
 
   function render() {

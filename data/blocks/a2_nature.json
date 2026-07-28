@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_nature_a2",
   "codex_unit": "V_THM-A1B1-09",
-  "note": "Nature/weather A2",
+  "note": "Nature/weather A2 · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,75 +13,172 @@
       "items": [
         {
           "en": "climate",
-          "cz": "klima"
+          "cz": "klima",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "environment",
-          "cz": "životní prostředí"
+          "cz": "životní prostředí",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "ocean",
-          "cz": "oceán"
+          "cz": "oceán",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "planet",
-          "cz": "planeta"
+          "cz": "planeta",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "pollution",
-          "cz": "znečištění"
+          "cz": "znečištění",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "storm",
-          "cz": "bouře"
+          "cz": "bouře",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "valley",
-          "cz": "údolí"
+          "cz": "údolí",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "wood",
-          "cz": "les / dřevo"
+          "cz": "les / dřevo",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
           "en": "desert",
-          "cz": "poušť"
-        },
+          "cz": "poušť",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_nature_2",
+      "title": "Nature & weather · 2",
+      "items": [
         {
           "en": "grass",
-          "cz": "tráva"
+          "cz": "tráva",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "ground",
-          "cz": "zem / půda"
+          "cz": "zem / půda",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "stone",
-          "cz": "kámen"
+          "cz": "kámen",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "disaster",
-          "cz": "katastrofa"
+          "cz": "katastrofa",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "moon",
-          "cz": "měsíc"
+          "cz": "měsíc",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "rock",
-          "cz": "skála / rock"
+          "cz": "skála / rock",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "season",
-          "cz": "sezóna / roční období"
+          "cz": "sezóna / roční období",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "spider",
-          "cz": "pavouk"
+          "cz": "pavouk",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
         },
         {
           "en": "wave",
-          "cz": "vlna"
+          "cz": "vlna",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     }

@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_verbs_a2",
   "codex_unit": "V_COR-A1B1-01",
-  "note": "A2 verbs bare lemmas · COR (frames elsewhere)",
+  "note": "A2 verbs bare lemmas · COR (frames elsewhere) · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,99 @@
       "items": [
         {
           "en": "accept",
-          "cz": "přijmout"
+          "cz": "přijmout",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "achieve",
-          "cz": "dosáhnout"
+          "cz": "dosáhnout",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "act",
-          "cz": "jednat / hrát"
+          "cz": "jednat / hrát",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "affect",
-          "cz": "ovlivnit"
+          "cz": "ovlivnit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "allow",
-          "cz": "dovolit"
+          "cz": "dovolit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "appear",
-          "cz": "objevit se / zdát se"
+          "cz": "objevit se / zdát se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "argue",
-          "cz": "hádat se / argumentovat"
+          "cz": "hádat se / argumentovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "arrange",
-          "cz": "zařídit / uspořádat"
+          "cz": "zařídit / uspořádat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "attend",
-          "cz": "zúčastnit se"
+          "cz": "zúčastnit se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "avoid",
-          "cz": "vyhnout se"
+          "cz": "vyhnout se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "beat",
-          "cz": "porazit / bít"
+          "cz": "porazit / bít",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "behave",
-          "cz": "chovat se"
+          "cz": "chovat se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         }
       ]
     },
@@ -67,51 +115,99 @@
       "items": [
         {
           "en": "belong",
-          "cz": "patřit"
+          "cz": "patřit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "blow",
-          "cz": "foukat"
+          "cz": "foukat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "borrow",
-          "cz": "půjčit si"
+          "cz": "půjčit si",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "burn",
-          "cz": "hořet / spálit"
+          "cz": "hořet / spálit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "catch",
-          "cz": "chytit"
+          "cz": "chytit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "celebrate",
-          "cz": "slavit"
+          "cz": "slavit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "collect",
-          "cz": "sbírat"
+          "cz": "sbírat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "communicate",
-          "cz": "komunikovat"
+          "cz": "komunikovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "compete",
-          "cz": "soutěžit"
+          "cz": "soutěžit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "complain",
-          "cz": "stěžovat si"
+          "cz": "stěžovat si",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "connect",
-          "cz": "připojit"
+          "cz": "připojit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "consider",
-          "cz": "zvážit"
+          "cz": "zvážit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         }
       ]
     },
@@ -121,51 +217,99 @@
       "items": [
         {
           "en": "contain",
-          "cz": "obsahovat"
+          "cz": "obsahovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "continue",
-          "cz": "pokračovat"
+          "cz": "pokračovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "count",
-          "cz": "počítat"
+          "cz": "počítat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "cover",
-          "cz": "pokrýt / krýt"
+          "cz": "pokrýt / krýt",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "cry",
-          "cz": "plakat / křičet"
+          "cz": "plakat / křičet",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "deal",
-          "cz": "jednat / vypořádat se"
+          "cz": "jednat / vypořádat se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "depend",
-          "cz": "záviset"
+          "cz": "záviset",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "destroy",
-          "cz": "zničit"
+          "cz": "zničit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "develop",
-          "cz": "rozvíjet"
+          "cz": "rozvíjet",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "disagree",
-          "cz": "nesouhlasit"
+          "cz": "nesouhlasit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "disappear",
-          "cz": "zmizet"
+          "cz": "zmizet",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "discover",
-          "cz": "objevit"
+          "cz": "objevit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         }
       ]
     },
@@ -175,51 +319,99 @@
       "items": [
         {
           "en": "drop",
-          "cz": "upustit / klesnout"
+          "cz": "upustit / klesnout",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "enter",
-          "cz": "vstoupit"
+          "cz": "vstoupit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "exist",
-          "cz": "existovat"
+          "cz": "existovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "expect",
-          "cz": "očekávat"
+          "cz": "očekávat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "express",
-          "cz": "vyjádřit"
+          "cz": "vyjádřit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "fail",
-          "cz": "neuspět"
+          "cz": "neuspět",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "feed",
-          "cz": "krmit"
+          "cz": "krmit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "fix",
-          "cz": "tvořit / formulář"
+          "cz": "tvořit / formulář",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "greet",
-          "cz": "pozdravit"
+          "cz": "pozdravit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "hide",
-          "cz": "schovat se"
+          "cz": "schovat se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "hold",
-          "cz": "držet"
+          "cz": "držet",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "identify",
-          "cz": "identifikovat"
+          "cz": "identifikovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         }
       ]
     },
@@ -229,51 +421,99 @@
       "items": [
         {
           "en": "invent",
-          "cz": "vynalézt"
+          "cz": "vynalézt",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "invite",
-          "cz": "pozvat"
+          "cz": "pozvat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "involve",
-          "cz": "zahrnovat"
+          "cz": "zahrnovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "kill",
-          "cz": "zabít"
+          "cz": "zabít",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "knock",
-          "cz": "zaklepat"
+          "cz": "zaklepat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "land",
-          "cz": "přistát"
+          "cz": "přistát",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "lead",
-          "cz": "vést"
+          "cz": "vést",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "lend",
-          "cz": "půjčit (někomu)"
+          "cz": "půjčit (někomu)",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "manage",
-          "cz": "zvládnout / řídit"
+          "cz": "zvládnout / řídit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "marry",
-          "cz": "oženit se / vdát se"
+          "cz": "oženit se / vdát se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "mention",
-          "cz": "zmínit"
+          "cz": "zmínit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "organize",
-          "cz": "zorganizovat"
+          "cz": "zorganizovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         }
       ]
     },
@@ -283,51 +523,99 @@
       "items": [
         {
           "en": "own",
-          "cz": "vlastnit"
+          "cz": "vlastnit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "pack",
-          "cz": "zabalit"
+          "cz": "zabalit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "pass",
-          "cz": "projít / podat"
+          "cz": "projít / podat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "perform",
-          "cz": "vystoupit / provést"
+          "cz": "vystoupit / provést",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "pick",
-          "cz": "vybrat / trhat"
+          "cz": "vybrat / trhat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "plant",
-          "cz": "zasadit / rostlina"
+          "cz": "zasadit / rostlina",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "please",
-          "cz": "potěšit / prosím"
+          "cz": "potěšit / prosím",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "predict",
-          "cz": "předpovědět"
+          "cz": "předpovědět",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "prevent",
-          "cz": "zabránit"
+          "cz": "zabránit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "produce",
-          "cz": "vyrobit / produkovat"
+          "cz": "vyrobit / produkovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "pronounce",
-          "cz": "vyslovit"
+          "cz": "vyslovit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "protect",
-          "cz": "chránit"
+          "cz": "chránit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         }
       ]
     },
@@ -337,51 +625,99 @@
       "items": [
         {
           "en": "provide",
-          "cz": "poskytnout"
+          "cz": "poskytnout",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "publish",
-          "cz": "vydávat / publikovat"
+          "cz": "vydávat / publikovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "pull",
-          "cz": "táhnout"
+          "cz": "táhnout",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "push",
-          "cz": "tlačit"
+          "cz": "tlačit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "raise",
-          "cz": "zvednout / vychovat"
+          "cz": "zvednout / vychovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "reach",
-          "cz": "dosáhnout / dojet"
+          "cz": "dosáhnout / dojet",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "react",
-          "cz": "reagovat"
+          "cz": "reagovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "realize",
-          "cz": "uvědomit si"
+          "cz": "uvědomit si",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "receive",
-          "cz": "obdržet"
+          "cz": "obdržet",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "recognize",
-          "cz": "poznat / uznat"
+          "cz": "poznat / uznat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "recommend",
-          "cz": "doporučit"
+          "cz": "doporučit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "recycle",
-          "cz": "recyklovat"
+          "cz": "recyklovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         }
       ]
     },
@@ -391,51 +727,99 @@
       "items": [
         {
           "en": "reduce",
-          "cz": "snížit"
+          "cz": "snížit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "refer",
-          "cz": "odkazovat"
+          "cz": "odkazovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "refuse",
-          "cz": "odmítnout"
+          "cz": "odmítnout",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "remove",
-          "cz": "odstranit"
+          "cz": "odstranit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "repair",
-          "cz": "opravit"
+          "cz": "opravit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "replace",
-          "cz": "nahradit"
+          "cz": "nahradit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "report",
-          "cz": "nahlásit / reportáž"
+          "cz": "nahlásit / reportáž",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "respond",
-          "cz": "odpovědět"
+          "cz": "odpovědět",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "rise",
-          "cz": "stoupat"
+          "cz": "stoupat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "sail",
-          "cz": "plout"
+          "cz": "plout",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "save",
-          "cz": "ušetřit / zachránit"
+          "cz": "ušetřit / zachránit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "serve",
-          "cz": "podávat / sloužit"
+          "cz": "podávat / sloužit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         }
       ]
     },
@@ -445,67 +829,131 @@
       "items": [
         {
           "en": "shake",
-          "cz": "třást / potřást"
+          "cz": "třást / potřást",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "solve",
-          "cz": "vyřešit"
+          "cz": "vyřešit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "steal",
-          "cz": "krást"
+          "cz": "krást",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "succeed",
-          "cz": "uspět"
+          "cz": "uspět",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "suggest",
-          "cz": "navrhnout"
+          "cz": "navrhnout",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "suppose",
-          "cz": "předpokládat"
+          "cz": "předpokládat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "throw",
-          "cz": "házet"
+          "cz": "házet",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "touch",
-          "cz": "dotknout se"
+          "cz": "dotknout se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "train",
-          "cz": "trénovat"
+          "cz": "trénovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "worry",
-          "cz": "dělat si starosti"
+          "cz": "dělat si starosti",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "wish",
-          "cz": "přát si"
+          "cz": "přát si",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "search",
-          "cz": "hledat"
+          "cz": "hledat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "check",
-          "cz": "zkontrolovat"
+          "cz": "zkontrolovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "increase",
-          "cz": "zvýšit se"
+          "cz": "zvýšit se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "improve",
-          "cz": "zlepšit"
+          "cz": "zlepšit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "seem",
-          "cz": "zdát se"
+          "cz": "zdát se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         }
       ]
     }

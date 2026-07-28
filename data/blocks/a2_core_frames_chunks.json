@@ -17,8 +17,14 @@
           "cz": "Jsi v pořádku?",
           "gap": "Are you ____?",
           "gap_answer": "all right",
-          "gap_accepts": ["alright"],
-          "accepts": ["Are you all right?", "Are you alright?"]
+          "gap_accepts": ["alright", "okay", "ok", "OK"],
+          "accepts": [
+            "Are you all right?",
+            "Are you alright?",
+            "Are you okay?",
+            "Are you OK?",
+            "Are you ok?"
+          ]
         },
         {
           "en": "Of course I can help.",

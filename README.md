@@ -1,34 +1,37 @@
-# RUE3 Grok v0.1
+# RUE3 exp
 
-Vocabulary trainer (Tree Model · trunk + sparse leaves). Sibling of **[RUE2 Grok](https://pernath1200.github.io/rue2-grok/)**.
+Experimental vocabulary trainer (Tree Model · trunk + leaves). Sibling of **[RUE2 Grok](https://pernath1200.github.io/rue2-grok/)**.
+
+**Live (lesson):** [https://pernath1200.github.io/rue3-exp/](https://pernath1200.github.io/rue3-exp/)  
+**Repo:** [Pernath1200/rue3-exp](https://github.com/Pernath1200/rue3-exp)
 
 Read **[CHARTER.md](./CHARTER.md)** and **[PLAN-A1-A2.md](./PLAN-A1-A2.md)** before changing scope.
+
+Stable history / older shell lives in [rue3-grok-v0.1](https://github.com/Pernath1200/rue3-grok-v0.1) (not used for this deploy).
 
 ## Run locally
 
 ```powershell
-cd C:\Users\ADMIN\documents\projects\rue3-grok-v0.1
-py -m http.server 8090
+cd C:\Users\ADMIN\documents\projects\rue3-grok-exp
+py -m http.server 8091
 ```
 
-Open **http://localhost:8090** · hard-refresh **Ctrl+F5** after code changes.
+Open **http://localhost:8091** · hard-refresh **Ctrl+F5** after code changes.
 
 ## GitHub / Pages
 
-Repo: [Pernath1200/rue3-grok-v0.1](https://github.com/Pernath1200/rue3-grok-v0.1) (static shell — `index.html` at root).  
-Legacy experiment (pre-tree): [Pernath1200/rue3-grok](https://github.com/Pernath1200/rue3-grok).  
-Enable **Settings → Pages → Deploy from branch `main` / root** for  
-`https://pernath1200.github.io/rue3-grok-v0.1/` (once Pages is on).
+Deploy from this repo: branch **`main`** · folder **`/` (root)** →  
+`https://pernath1200.github.io/rue3-exp/`
 
 ## What exists now
 
-- Level rail: **A1 open** · **A2 unlocks** after A1 level check (80%) · B1/B2 locked · C1 not yet
-- **Author unlock** (util bar or `?unlock=all`) opens A2–B2 for content writing (local only)
+- Level rail: **A1 open** · **A2** after A1 check (80%) · **B1** after A2 check (90%) · B2 locked · C1 not yet
+- **Author unlock** (util bar or `?unlock=all`) opens A2–B2 for writing (local only; exp defaults author on)
 - **Today** card: due units · recent activity · cover-next suggestion · **Start reviews**
-- Unit-level SRS: finish Sentence → schedule review; pass reviews → Remembered / Mastered meters
+- Unit-level SRS: Sentence **fruit** only when all correct (frame retries until clear) → schedule review
 - Tree board + honest progress (untouched / touched / fruit) via `localStorage`
-- Practice ladder: Match → Quiz → Word · Sentence · thin **A1 level check**
-- Full A1 sapling content (trunk frames + canopy leaves); A2 content next
+- Practice ladder: Match → Quiz → Word → Sentence · **A1 + A2 level checks**
+- A1 sapling + A2 vocab canopy (themed leaves + recycle/lexis/chunks trunk)
 - Author smoke: `?review=due` or **Force due (test)** when author unlock is on
 
 ## Progress

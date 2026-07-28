@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_media_a2",
   "codex_unit": "V_THM-A1B1-09",
-  "note": "Media A2",
+  "note": "Media A2 · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,110 @@
       "items": [
         {
           "en": "author",
-          "cz": "autor"
+          "cz": "autor",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "journalist",
-          "cz": "novinář"
+          "cz": "novinář",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "reporter",
-          "cz": "reportér"
+          "cz": "reportér",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "article",
-          "cz": "článek"
+          "cz": "článek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "magazine",
-          "cz": "časopis"
+          "cz": "časopis",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "newspaper",
-          "cz": "noviny"
+          "cz": "noviny",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "poster",
-          "cz": "plakát"
+          "cz": "plakát",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "review",
-          "cz": "recenze"
+          "cz": "recenze",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "scene",
-          "cz": "scéna"
+          "cz": "scéna",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "ending",
-          "cz": "konec (příběhu)"
+          "cz": "konec (příběhu)",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "comedy",
-          "cz": "komedie"
+          "cz": "komedie",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "drama",
-          "cz": "drama"
+          "cz": "drama",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     },
@@ -67,51 +126,109 @@
       "items": [
         {
           "en": "film",
-          "cz": "film / natáčet"
+          "cz": "film / natáčet",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "photograph",
-          "cz": "fotografie / fotit"
+          "cz": "fotografie / fotit",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "camera",
-          "cz": "fotoaparát"
+          "cz": "fotoaparát",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "speaker",
-          "cz": "mluvčí / reproduktor"
+          "cz": "mluvčí / reproduktor",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "listener",
-          "cz": "posluchač"
+          "cz": "posluchač",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "voice",
-          "cz": "hlas"
+          "cz": "hlas",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "noise",
-          "cz": "hluk"
+          "cz": "hluk",
+          "use": [
+            "this_is_a",
+            "i_like_bare",
+            "is_important"
+          ]
         },
         {
           "en": "smell",
-          "cz": "zápach / čichat"
+          "cz": "zápach / čichat",
+          "use": [
+            "i_like_bare",
+            "this_is_a"
+          ]
         },
         {
           "en": "smile",
-          "cz": "úsměv / usmívat se"
+          "cz": "úsměv / usmívat se",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "shout",
-          "cz": "křičet / výkřik"
+          "cz": "křičet / výkřik",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "chat",
-          "cz": "pokec / chatovat"
+          "cz": "pokec / chatovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "conversation",
-          "cz": "rozhovor"
+          "cz": "rozhovor",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     }

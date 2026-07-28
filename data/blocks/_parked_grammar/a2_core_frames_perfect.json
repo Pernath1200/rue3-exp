@@ -31,9 +31,9 @@
           "gap_answer": "eaten"
         },
         {
-          "en": "She's just arrived.",
-          "cz": "Právě dorazila.",
-          "gap": "She's just ____.",
+          "en": "He's just arrived.",
+          "cz": "Právě dorazil.",
+          "gap": "He's just ____.",
           "gap_answer": "arrived"
         },
         {

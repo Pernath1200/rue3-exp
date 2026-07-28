@@ -72,11 +72,11 @@
           "accepts": ["I do not smoke", "I don't smoke."]
         },
         {
-          "en": "She does not drink coffee.",
+          "en": "He does not drink coffee.",
           "cz": "Nepije kávu.",
-          "gap": "She ____ not drink coffee.",
+          "gap": "He ____ not drink coffee.",
           "gap_answer": "does",
-          "accepts": ["She does not drink coffee", "She doesn't drink coffee."]
+          "accepts": ["He does not drink coffee", "He doesn't drink coffee."]
         },
         {
           "en": "I am not a teacher.",

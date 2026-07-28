@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_feelings_a2",
   "codex_unit": "V_THM-A1B1-09",
-  "note": "Feelings A2",
+  "note": "Feelings A2 · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,99 @@
       "items": [
         {
           "en": "nervous",
-          "cz": "nervózní"
+          "cz": "nervózní",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "surprised",
-          "cz": "překvapený"
+          "cz": "překvapený",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "surprise",
-          "cz": "překvapení"
+          "cz": "překvapení",
+          "use": [
+            "i_have_a",
+            "i_have_bare"
+          ]
         },
         {
           "en": "unhappy",
-          "cz": "nešťastný"
+          "cz": "nešťastný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "afraid",
-          "cz": "vyděšený / bát se"
+          "cz": "vyděšený / bát se",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "angry",
-          "cz": "naštvaný"
+          "cz": "naštvaný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "bored",
-          "cz": "znuděný"
+          "cz": "znuděný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "calm",
-          "cz": "klidný"
+          "cz": "klidný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "confident",
-          "cz": "sebevědomý"
+          "cz": "sebevědomý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "embarrassed",
-          "cz": "v rozpacích"
+          "cz": "v rozpacích",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "excited",
-          "cz": "nadšený"
+          "cz": "nadšený",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "jealous",
-          "cz": "žárlivý"
+          "cz": "žárlivý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         }
       ]
     },
@@ -67,55 +115,107 @@
       "items": [
         {
           "en": "proud",
-          "cz": "pyšný"
+          "cz": "pyšný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "relaxed",
-          "cz": "uvolněný"
+          "cz": "uvolněný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "worried",
-          "cz": "ustaraný"
+          "cz": "ustaraný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "lonely",
-          "cz": "osamělý"
+          "cz": "osamělý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "confused",
-          "cz": "zmatený"
+          "cz": "zmatený",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "cheerful",
-          "cz": "veselý"
+          "cz": "veselý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "serious",
-          "cz": "vážný"
+          "cz": "vážný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "friendly",
-          "cz": "přátelský"
+          "cz": "přátelský",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "kind",
-          "cz": "laskavý"
+          "cz": "laskavý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "polite",
-          "cz": "zdvořilý"
+          "cz": "zdvořilý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "rude",
-          "cz": "nezdvořilý"
+          "cz": "nezdvořilý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "honest",
-          "cz": "upřímný"
+          "cz": "upřímný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "fear",
-          "cz": "strach"
+          "cz": "strach",
+          "use": [
+            "i_have_a",
+            "i_have_bare"
+          ]
         }
       ]
     }

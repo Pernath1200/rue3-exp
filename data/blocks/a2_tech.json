@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_tech_a2",
   "codex_unit": "V_COR-A1B1-01",
-  "note": "Tech A2 · COR",
+  "note": "Tech A2 · COR · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,111 @@
       "items": [
         {
           "en": "app",
-          "cz": "aplikace"
+          "cz": "aplikace",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "digital",
-          "cz": "digitální"
+          "cz": "digitální",
+          "use": []
         },
         {
           "en": "download",
-          "cz": "stáhnout"
+          "cz": "stáhnout",
+          "use": [
+            "i_want_to",
+            "we_need_to",
+            "i_like_to"
+          ]
         },
         {
           "en": "upload",
-          "cz": "nahrát (online)"
+          "cz": "nahrát (online)",
+          "use": [
+            "i_want_to",
+            "we_need_to",
+            "i_like_to"
+          ]
         },
         {
           "en": "laptop",
-          "cz": "notebook"
+          "cz": "notebook",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "smartphone",
-          "cz": "smartphon"
+          "cz": "smartphon",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "tablet",
-          "cz": "tablet"
+          "cz": "tablet",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "password",
-          "cz": "heslo"
+          "cz": "heslo",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "website",
-          "cz": "webová stránka"
+          "cz": "webová stránka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "site",
-          "cz": "stránka / místo"
+          "cz": "stránka / místo",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "network",
-          "cz": "síť"
+          "cz": "síť",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "data",
-          "cz": "data"
+          "cz": "data",
+          "use": [
+            "i_have_bare",
+            "i_need_bare",
+            "is_important"
+          ]
         }
       ]
     },
@@ -67,51 +127,114 @@
       "items": [
         {
           "en": "device",
-          "cz": "zařízení"
+          "cz": "zařízení",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "screen",
-          "cz": "obrazovka"
+          "cz": "obrazovka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "keyboard",
-          "cz": "klávesnice"
+          "cz": "klávesnice",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "mouse",
-          "cz": "myš (počítač)"
+          "cz": "myš (počítač)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "printer",
-          "cz": "tiskárna"
+          "cz": "tiskárna",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "program",
-          "cz": "program"
+          "cz": "program",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "software",
-          "cz": "software"
+          "cz": "software",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
           "en": "technology",
-          "cz": "technologie"
+          "cz": "technologie",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "code",
-          "cz": "kód"
+          "cz": "kód",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "link",
-          "cz": "odkaz / spojení"
+          "cz": "odkaz / spojení",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "profile",
-          "cz": "profil"
+          "cz": "profil",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "media",
-          "cz": "média"
+          "cz": "média",
+          "use": [
+            "i_like_bare",
+            "is_important",
+            "lets_talk_about"
+          ]
         }
       ]
     },
@@ -121,47 +244,103 @@
       "items": [
         {
           "en": "document",
-          "cz": "dokument"
+          "cz": "dokument",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "file",
-          "cz": "soubor"
+          "cz": "soubor",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "copy",
-          "cz": "kopie / kopírovat"
+          "cz": "kopie / kopírovat",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "print",
-          "cz": "tisknout"
+          "cz": "tisknout",
+          "use": [
+            "i_want_to",
+            "we_need_to",
+            "i_like_to"
+          ]
         },
         {
           "en": "text",
-          "cz": "psát SMS / text"
+          "cz": "psát SMS / text",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "mail",
-          "cz": "pošta / e-mail"
+          "cz": "pošta / e-mail",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "blog",
-          "cz": "blog"
+          "cz": "blog",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "image",
-          "cz": "obrázek / snímek"
+          "cz": "obrázek / snímek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "recording",
-          "cz": "nahrávka"
+          "cz": "nahrávka",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "record",
-          "cz": "nahrávka / rekord"
+          "cz": "nahrávka / rekord",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "web",
-          "cz": "web"
+          "cz": "web",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     }

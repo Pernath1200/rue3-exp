@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_society_a2",
   "codex_unit": "V_COR-A1B1-01",
-  "note": "Public life seed A2 · COR",
+  "note": "Public life seed A2 · COR · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,108 @@
       "items": [
         {
           "en": "government",
-          "cz": "vláda"
+          "cz": "vláda",
+          "use": [
+            "this_is_a",
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "president",
-          "cz": "prezident"
+          "cz": "prezident",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "law",
-          "cz": "zákon"
+          "cz": "zákon",
+          "use": [
+            "this_is_a",
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "lawyer",
-          "cz": "právník"
+          "cz": "právník",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "crime",
-          "cz": "zločin"
+          "cz": "zločin",
+          "use": [
+            "this_is_a",
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "criminal",
-          "cz": "zločinec"
+          "cz": "zločinec",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "prison",
-          "cz": "vězení"
+          "cz": "vězení",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "thief",
-          "cz": "zloděj"
+          "cz": "zloděj",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "police",
-          "cz": "policie"
+          "cz": "policie",
+          "use": [
+            "where_is_the"
+          ]
         },
         {
           "en": "soldier",
-          "cz": "voják"
+          "cz": "voják",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "army",
-          "cz": "armáda"
+          "cz": "armáda",
+          "use": [
+            "this_is_a",
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "war",
-          "cz": "válka"
+          "cz": "válka",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         }
       ]
     },
@@ -67,63 +124,127 @@
       "items": [
         {
           "en": "peace",
-          "cz": "mír"
+          "cz": "mír",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "gun",
-          "cz": "zbraň / pistole"
+          "cz": "zbraň / pistole",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "attack",
-          "cz": "útok"
+          "cz": "útok",
+          "use": [
+            "this_is_a",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "fight",
-          "cz": "rvačka / bojovat"
+          "cz": "rvačka / bojovat",
+          "use": [
+            "i_want_to",
+            "we_need_to",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "king",
-          "cz": "král"
+          "cz": "král",
+          "use": []
         },
         {
           "en": "queen",
-          "cz": "královna"
+          "cz": "královna",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "church",
-          "cz": "kostel"
+          "cz": "kostel",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
         },
         {
           "en": "god",
-          "cz": "bůh"
+          "cz": "bůh",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "religion",
-          "cz": "náboženství"
+          "cz": "náboženství",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "tradition",
-          "cz": "tradice"
+          "cz": "tradice",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "culture",
-          "cz": "kultura"
+          "cz": "kultura",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "population",
-          "cz": "obyvatelstvo"
+          "cz": "obyvatelstvo",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "charity",
-          "cz": "charita"
+          "cz": "charita",
+          "use": [
+            "this_is_a",
+            "i_go_to",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "detective",
-          "cz": "detektiv"
+          "cz": "detektiv",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "state",
-          "cz": "stát / stav"
+          "cz": "stát / stav",
+          "use": [
+            "this_is_a",
+            "is_important",
+            "lets_talk_about"
+          ]
         }
       ]
     }

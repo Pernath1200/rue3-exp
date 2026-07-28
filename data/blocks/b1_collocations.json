@@ -1,0 +1,213 @@
+{
+  "id": "b1_collocations",
+  "title": "Collocations & chunks (B1)",
+  "level": "B1",
+  "tree_node": "trunk_chunks_b1",
+  "codex_unit": "V_PHR-B1B2-01",
+  "practice": "frames",
+  "note": "V_PHR-B1B2-01 · make/do/take/have + noun · strong adj–noun pairs · gap on collocation partner · not grammar",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "make", "do", "take", "have", "heavy", "strong", "close", "high", "deep", "clear"
+  ],
+  "blocks": [
+    {
+      "id": "b1_colloc_make_do",
+      "title": "Collocations · make / do / take / have",
+      "items": [
+        {
+          "en": "I need to make a decision.",
+          "cz": "Musím udělat rozhodnutí.",
+          "gap": "I need to ____ a decision.",
+          "gap_answer": "make",
+          "accepts": ["I need to make a decision"]
+        },
+        {
+          "en": "She made a mistake.",
+          "cz": "Udělala chybu.",
+          "gap": "She ____ a mistake.",
+          "gap_answer": "made",
+          "accepts": ["She made a mistake"]
+        },
+        {
+          "en": "We make progress every week.",
+          "cz": "Každý týden děláme pokrok.",
+          "gap": "We ____ progress every week.",
+          "gap_answer": "make",
+          "accepts": ["We make progress every week"]
+        },
+        {
+          "en": "Can you do me a favour?",
+          "cz": "Můžeš mi udělat laskavost?",
+          "gap": "Can you ____ me a favour?",
+          "gap_answer": "do",
+          "gap_accepts": ["do"],
+          "accepts": [
+            "Can you do me a favour?",
+            "Can you do me a favor?"
+          ]
+        },
+        {
+          "en": "I do my homework in the evening.",
+          "cz": "Dělám domácí úkol večer.",
+          "gap": "I ____ my homework in the evening.",
+          "gap_answer": "do",
+          "accepts": ["I do my homework in the evening"]
+        },
+        {
+          "en": "They do business in Asia.",
+          "cz": "Dělají byznys v Asii.",
+          "gap": "They ____ business in Asia.",
+          "gap_answer": "do",
+          "accepts": ["They do business in Asia"]
+        },
+        {
+          "en": "I take a break at ten.",
+          "cz": "V deset si dám pauzu.",
+          "gap": "I ____ a break at ten.",
+          "gap_answer": "take",
+          "accepts": ["I take a break at ten"]
+        },
+        {
+          "en": "Please take a seat.",
+          "cz": "Posaďte se, prosím.",
+          "gap": "Please ____ a seat.",
+          "gap_answer": "take",
+          "accepts": ["Please take a seat"]
+        },
+        {
+          "en": "He takes responsibility for the project.",
+          "cz": "Bere na sebe odpovědnost za projekt.",
+          "gap": "He ____ responsibility for the project.",
+          "gap_answer": "takes",
+          "accepts": ["He takes responsibility for the project"]
+        },
+        {
+          "en": "We have a meeting on Monday.",
+          "cz": "V pondělí máme schůzku.",
+          "gap": "We ____ a meeting on Monday.",
+          "gap_answer": "have",
+          "accepts": ["We have a meeting on Monday"]
+        },
+        {
+          "en": "I have no idea.",
+          "cz": "Nemám tušení. / Netuším.",
+          "gap": "I ____ no idea.",
+          "gap_answer": "have",
+          "accepts": ["I have no idea", "I've no idea."]
+        },
+        {
+          "en": "She has a problem with the wifi.",
+          "cz": "Má problém s wifi.",
+          "gap": "She ____ a problem with the wifi.",
+          "gap_answer": "has",
+          "accepts": [
+            "She has a problem with the wifi",
+            "She has a problem with the Wi-Fi.",
+            "She's got a problem with the wifi."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b1_colloc_adj_noun",
+      "title": "Collocations · adjective + noun",
+      "items": [
+        {
+          "en": "There is heavy rain today.",
+          "cz": "Dnes je silný déšť. / Hustě prší.",
+          "gap": "There is ____ rain today.",
+          "gap_answer": "heavy",
+          "accepts": ["There is heavy rain today", "There's heavy rain today."]
+        },
+        {
+          "en": "She has a strong accent.",
+          "cz": "Má silný přízvuk.",
+          "gap": "She has a ____ accent.",
+          "gap_answer": "strong",
+          "accepts": ["She has a strong accent"]
+        },
+        {
+          "en": "We are close friends.",
+          "cz": "Jsme blízcí přátelé.",
+          "gap": "We are ____ friends.",
+          "gap_answer": "close",
+          "accepts": ["We are close friends", "We're close friends."]
+        },
+        {
+          "en": "This is a high priority.",
+          "cz": "Tohle je vysoká priorita.",
+          "gap": "This is a ____ priority.",
+          "gap_answer": "high",
+          "accepts": ["This is a high priority"]
+        },
+        {
+          "en": "I need a clear answer.",
+          "cz": "Potřebuju jasnou odpověď.",
+          "gap": "I need a ____ answer.",
+          "gap_answer": "clear",
+          "accepts": ["I need a clear answer"]
+        },
+        {
+          "en": "He is under a lot of pressure.",
+          "cz": "Je pod velkým tlakem.",
+          "gap": "He is under a lot of ____.",
+          "gap_answer": "pressure",
+          "accepts": ["He is under a lot of pressure", "He's under a lot of pressure."]
+        },
+        {
+          "en": "We had a serious conversation.",
+          "cz": "Měli jsme vážný rozhovor.",
+          "gap": "We had a ____ conversation.",
+          "gap_answer": "serious",
+          "accepts": ["We had a serious conversation"]
+        },
+        {
+          "en": "That was a hard decision.",
+          "cz": "To bylo těžké rozhodnutí.",
+          "gap": "That was a ____ decision.",
+          "gap_answer": "hard",
+          "gap_accepts": ["difficult", "tough"],
+          "accepts": [
+            "That was a hard decision",
+            "That was a difficult decision.",
+            "That was a tough decision."
+          ]
+        },
+        {
+          "en": "She gave me useful advice.",
+          "cz": "Dal/a mi užitečnou radu.",
+          "gap": "She gave me ____ advice.",
+          "gap_answer": "useful",
+          "gap_accepts": ["good", "helpful"],
+          "accepts": [
+            "She gave me useful advice",
+            "She gave me good advice.",
+            "She gave me helpful advice."
+          ]
+        },
+        {
+          "en": "I have a busy schedule this week.",
+          "cz": "Tenhle týden mám nabitý rozvrh.",
+          "gap": "I have a ____ schedule this week.",
+          "gap_answer": "busy",
+          "accepts": ["I have a busy schedule this week"]
+        },
+        {
+          "en": "We need more free time.",
+          "cz": "Potřebujeme víc volného času.",
+          "gap": "We need more ____ time.",
+          "gap_answer": "free",
+          "accepts": ["We need more free time"]
+        },
+        {
+          "en": "It is common knowledge.",
+          "cz": "Je to všeobecně známá věc.",
+          "gap": "It is ____ knowledge.",
+          "gap_answer": "common",
+          "accepts": ["It is common knowledge", "It's common knowledge."]
+        }
+      ]
+    }
+  ]
+}

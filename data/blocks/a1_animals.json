@@ -3,43 +3,255 @@
   "title": "Animals",
   "level": "A1",
   "tree_node": "leaf_animals_a1",
-  "note": "P2 Oxford A1 animals (+ a few high-freq fillers to make 2×12). Sentence = fruit.",
+  "note": "P2 Oxford A1 animals (+ a few high-freq fillers to make 2×12). Sentence = fruit. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "animals_basic",
       "title": "Animals · basic",
       "items": [
-        { "en": "animal", "cz": "zvíře" },
-        { "en": "dog", "cz": "pes" },
-        { "en": "cat", "cz": "kočka" },
-        { "en": "bird", "cz": "pták" },
-        { "en": "fish", "cz": "ryba" },
-        { "en": "horse", "cz": "kůň" },
-        { "en": "cow", "cz": "kráva" },
-        { "en": "pig", "cz": "prase" },
-        { "en": "sheep", "cz": "ovce" },
-        { "en": "mouse", "cz": "myš" },
-        { "en": "lion", "cz": "lev" },
-        { "en": "elephant", "cz": "slon" }
+        {
+          "en": "animal",
+          "cz": "zvíře",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "dog",
+          "cz": "pes",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "cat",
+          "cz": "kočka",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "bird",
+          "cz": "pták",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "fish",
+          "cz": "ryba",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "horse",
+          "cz": "kůň",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "cow",
+          "cz": "kráva",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "pig",
+          "cz": "prase",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "sheep",
+          "cz": "ovce",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "mouse",
+          "cz": "myš",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "lion",
+          "cz": "lev",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "elephant",
+          "cz": "slon",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        }
       ]
     },
     {
       "id": "animals_more",
       "title": "Animals · more",
       "items": [
-        { "en": "snake", "cz": "had" },
-        { "en": "monkey", "cz": "opice" },
-        { "en": "bear", "cz": "medvěd" },
-        { "en": "rabbit", "cz": "králík" },
-        { "en": "chicken", "cz": "kuře / slepice" },
-        { "en": "duck", "cz": "kachna" },
-        { "en": "frog", "cz": "žába" },
-        { "en": "insect", "cz": "hmyz" },
-        { "en": "pet", "cz": "domácí zvíře" },
-        { "en": "wild", "cz": "divoký" },
-        { "en": "farm", "cz": "farma" },
-        { "en": "zoo", "cz": "zoo" }
+        {
+          "en": "snake",
+          "cz": "had",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "monkey",
+          "cz": "opice",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "bear",
+          "cz": "medvěd",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "rabbit",
+          "cz": "králík",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "chicken",
+          "cz": "kuře / slepice",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "duck",
+          "cz": "kachna",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "frog",
+          "cz": "žába",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "insect",
+          "cz": "hmyz",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "pet",
+          "cz": "domácí zvíře",
+          "use": [
+            "i_have_a_pet",
+            "this_is_a",
+            "i_like_pl"
+          ]
+        },
+        {
+          "en": "wild",
+          "cz": "divoký",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "farm",
+          "cz": "farma",
+          "use": [
+            "i_go_to",
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "zoo",
+          "cz": "zoo",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_need_a",
+            "i_go_to"
+          ]
+        }
       ]
     }
   ]
