@@ -1,15 +1,20 @@
 /**
  * Unit review queue — Quiz + Word sample, scored, feeds SRS schedule.
  * Not the full ladder; first learn still uses practice.js.
+ * After a unit, wrong answers can be retried before the result is committed.
  */
 
-import { isCorrectAnswer } from "./practice.js";
+import { isCorrectAnswer, gapFillInstruction } from "./practice.js";
 import {
   recordReview,
+  getNodeReview,
   REVIEW_PASS_RATIO,
+  REVIEW_INTERVAL_DAYS,
   formatDueLabel,
   MASTERY_REPS,
 } from "./progress.js";
+
+const DAY_MS = 24 * 60 * 60 * 1000;
 
 function shuffle(a) {
   const arr = a.slice();
@@ -45,6 +50,21 @@ function flattenPack(pack) {
   return out;
 }
 
+/** Soft preview of next-due label if this session is recorded as pass/fail now. */
+function previewNextDueLabel(nodeId, passed) {
+  const cur = getNodeReview(nodeId);
+  if (passed) {
+    const maxIdx = REVIEW_INTERVAL_DAYS.length - 1;
+    const idx = Math.min((cur?.intervalIndex || 0) + 1, maxIdx);
+    const days = REVIEW_INTERVAL_DAYS[idx];
+    const iso = new Date(Date.now() + days * DAY_MS).toISOString();
+    return formatDueLabel(iso);
+  }
+  const days = REVIEW_INTERVAL_DAYS[0];
+  const iso = new Date(Date.now() + days * DAY_MS).toISOString();
+  return formatDueLabel(iso);
+}
+
 /**
  * @param {HTMLElement} root
  * @param {{
@@ -59,6 +79,8 @@ export function startReviewQueue(root, opts) {
   const results = [];
   let qi = 0;
   let keyHandler = null;
+  /** Commit pending unit result if user backs out after finishing. */
+  let pendingCommit = null;
 
   function clearKey() {
     if (keyHandler) {
@@ -94,11 +116,19 @@ export function startReviewQueue(root, opts) {
       </div>`;
   }
 
+  function flushPending() {
+    if (!pendingCommit) return;
+    const fn = pendingCommit;
+    pendingCommit = null;
+    fn();
+  }
+
   function wireExit() {
     const btn = root.querySelector("#r-exit");
     if (btn) {
       btn.onclick = () => {
         clearKey();
+        flushPending();
         opts.onExit();
       };
     }
@@ -106,6 +136,7 @@ export function startReviewQueue(root, opts) {
 
   function showSummary() {
     clearKey();
+    pendingCommit = null;
     const passed = results.filter((r) => r.passed).length;
     const failed = results.length - passed;
     root.innerHTML = `
@@ -175,9 +206,14 @@ export function startReviewQueue(root, opts) {
     const wordItems = sample(items, 6);
     const total = quizItems.length + wordItems.length;
     let score = 0;
-    let phase = "quiz"; // quiz | word | result
+    /** @type {Array<{ kind: 'quiz' | 'word', item: object }>} */
+    let wrongs = [];
+    let phase = "quiz"; // quiz | word | retry | result
     let pos = 0;
     let answered = false;
+    /** @type {Array<{ kind: 'quiz' | 'word', item: object }>} */
+    let retryQueue = [];
+    let committed = false;
 
     root.innerHTML = chrome(unit.label, "");
     wireExit();
@@ -185,17 +221,22 @@ export function startReviewQueue(root, opts) {
     const statusEl = root.querySelector("#r-status");
 
     function setStatus() {
-      if (statusEl) {
-        statusEl.textContent =
-          phase === "quiz"
-            ? `Quiz ${pos + 1}/${quizItems.length} · score ${score}`
-            : phase === "word"
-              ? `Word ${pos + 1}/${wordItems.length} · score ${score}`
-              : `Score ${score}/${total}`;
+      if (!statusEl) return;
+      if (phase === "quiz") {
+        statusEl.textContent = `Quiz ${pos + 1}/${quizItems.length} · score ${score}`;
+      } else if (phase === "word") {
+        statusEl.textContent = `Word ${pos + 1}/${wordItems.length} · score ${score}`;
+      } else if (phase === "retry") {
+        statusEl.textContent = `Retry ${pos + 1}/${retryQueue.length} · score ${score}`;
+      } else {
+        statusEl.textContent = `Score ${score}/${total}`;
       }
     }
 
-    function finishUnit() {
+    function commitResult() {
+      if (committed) return null;
+      committed = true;
+      pendingCommit = null;
       const passed = total > 0 && score / total >= REVIEW_PASS_RATIO;
       const rev = recordReview(unit.nodeId, { passed, score, total });
       results.push({
@@ -205,31 +246,237 @@ export function startReviewQueue(root, opts) {
         total,
         passed,
       });
+      return rev;
+    }
+
+    function goNextUnit() {
+      commitResult();
+      qi++;
+      runUnit();
+    }
+
+    function showUnitResult() {
       phase = "result";
       clearKey();
+      const passed = total > 0 && score / total >= REVIEW_PASS_RATIO;
       const need = Math.ceil(REVIEW_PASS_RATIO * total);
-      const reps = rev ? rev.successfulReps : 0;
+      const cur = getNodeReview(unit.nodeId);
+      const wouldReps = (cur?.successfulReps || 0) + (passed ? 1 : 0);
+      const wrongN = wrongs.length;
+      const nextLabel = qi + 1 < queue.length ? "Next unit →" : "See summary";
+      const nextDue = previewNextDueLabel(unit.nodeId, passed);
+
+      // If they leave from this screen, still count the review.
+      pendingCommit = () => commitResult();
+
       stage.innerHTML = `
         <div class="q">
           <div class="prompt">${passed ? "Unit passed" : "Keep this one warm"}</div>
           <div class="scoreline">${score} / ${total}</div>
           <div class="sub">
             Need ${need} to pass ·
-            ${passed ? `successful reviews: ${reps}${reps >= MASTERY_REPS ? " · Mastered" : reps >= 1 ? " · Remembered" : ""}` : "reps unchanged"}
-            · next ${escapeHtml(formatDueLabel(rev && rev.nextDueAt))}
+            ${
+              passed
+                ? `successful reviews: ${wouldReps}${
+                    wouldReps >= MASTERY_REPS
+                      ? " · Mastered"
+                      : wouldReps >= 1
+                        ? " · Remembered"
+                        : ""
+                  }`
+                : "reps unchanged"
+            }
+            · next ${escapeHtml(nextDue)}
+            ${wrongN > 0 ? ` · ${wrongN} to retry` : ""}
           </div>
           <div class="nav">
-            <button type="button" class="btn primary" id="r-next">
-              ${qi + 1 < queue.length ? "Next unit →" : "See summary"}
-            </button>
+            ${
+              wrongN > 0
+                ? `<button type="button" class="btn primary" id="r-retry">Retry wrong (${wrongN})</button>
+                   <button type="button" class="btn" id="r-next">${escapeHtml(nextLabel)}</button>`
+                : `<button type="button" class="btn primary" id="r-next">${escapeHtml(nextLabel)}</button>`
+            }
           </div>
         </div>`;
-      stage.querySelector("#r-next").onclick = () => {
-        qi++;
-        runUnit();
-      };
-      bindEnter(() => stage.querySelector("#r-next")?.click());
+
+      const retryBtn = stage.querySelector("#r-retry");
+      if (retryBtn) {
+        retryBtn.onclick = () => {
+          pendingCommit = null;
+          startRetryPass();
+        };
+      }
+      stage.querySelector("#r-next").onclick = () => goNextUnit();
+      bindEnter(() => {
+        // Prefer continue on Enter so queue keeps moving; retry is a deliberate click.
+        stage.querySelector("#r-next")?.click();
+      });
       setStatus();
+    }
+
+    function startRetryPass() {
+      phase = "retry";
+      retryQueue = shuffle(wrongs.slice());
+      wrongs = [];
+      pos = 0;
+      renderRetry();
+    }
+
+    function renderRetry() {
+      answered = false;
+      if (pos >= retryQueue.length) {
+        showUnitResult();
+        return;
+      }
+      const entry = retryQueue[pos];
+      if (entry.kind === "quiz") {
+        renderRetryQuiz(entry.item);
+      } else {
+        renderRetryWord(entry.item);
+      }
+    }
+
+    function markRetryOutcome(entry, ok) {
+      if (ok) {
+        score++;
+      } else {
+        wrongs.push(entry);
+      }
+    }
+
+    function renderRetryQuiz(it) {
+      const correct = it.en;
+      const others = shuffle(items.filter((x) => x.en !== correct))
+        .slice(0, 3)
+        .map((x) => x.en);
+      const optsQ = shuffle([correct, ...others]);
+      stage.innerHTML = `
+        <div class="q">
+          <div class="prompt">${escapeHtml(it.cz || it.en)}</div>
+          <div class="sub">Retry · choose the English — 1–4 · Enter for next</div>
+          <div class="opts">
+            ${optsQ
+              .map(
+                (o, i) =>
+                  `<button type="button" class="opt" data-i="${i}"><span class="knum">${i + 1}</span>${escapeHtml(o)}</button>`,
+              )
+              .join("")}
+          </div>
+        </div>`;
+      setStatus();
+
+      const goNext = () => {
+        pos++;
+        renderRetry();
+      };
+      const pick = (i) => {
+        if (answered) return;
+        answered = true;
+        const buttons = [...stage.querySelectorAll(".opt")];
+        const ok = optsQ[i] === correct;
+        if (ok) {
+          buttons[i].classList.add("correct");
+        } else {
+          buttons[i].classList.add("wrong");
+          const ci = optsQ.indexOf(correct);
+          if (ci >= 0) buttons[ci].classList.add("correct");
+        }
+        markRetryOutcome({ kind: "quiz", item: it }, ok);
+        setStatus();
+        setTimeout(goNext, 650);
+      };
+      stage.querySelectorAll(".opt").forEach((el) => {
+        el.addEventListener("click", () => pick(+el.dataset.i));
+      });
+      clearKey();
+      keyHandler = (e) => {
+        if (e.target.closest("input, textarea")) return;
+        if (e.key === "Enter" && answered) {
+          e.preventDefault();
+          goNext();
+          return;
+        }
+        if (answered) return;
+        const n = parseInt(e.key, 10);
+        if (n >= 1 && n <= optsQ.length) {
+          e.preventDefault();
+          pick(n - 1);
+        }
+      };
+      document.addEventListener("keydown", keyHandler);
+    }
+
+    function renderRetryWord(it) {
+      const frame = isFrameItem(it);
+      const prompt = frame ? it.gap : it.cz;
+      const answer = frame ? it.gap_answer : it.en;
+      stage.innerHTML = `
+        <div class="q">
+          ${frame ? `<div class="sub" style="margin-bottom:0.35rem">${escapeHtml(it.cz)}</div>` : ""}
+          <div class="prompt prompt-gap">${escapeHtml(prompt)}</div>
+          <div class="sub">${frame ? gapFillInstruction(answer, { lead: "Retry · type the" }) : "Retry · type the English"} · Enter = check / next</div>
+          <input class="type-in" id="r-ti" autocomplete="off" autocapitalize="off" spellcheck="false" />
+          <div class="fb" id="r-fb"></div>
+          <div class="nav"><button type="button" class="btn primary" id="r-chk">Check</button></div>
+        </div>`;
+      setStatus();
+      const inp = stage.querySelector("#r-ti");
+      const chk = stage.querySelector("#r-chk");
+      const fb = stage.querySelector("#r-fb");
+      inp.focus();
+
+      const goNext = () => {
+        pos++;
+        renderRetry();
+      };
+
+      const grade = () => {
+        if (answered) return;
+        answered = true;
+        if (isCorrectAnswer(inp.value, it, answer, { forGap: frame })) {
+          markRetryOutcome({ kind: "word", item: it }, true);
+          fb.textContent = "✓ Correct";
+          fb.className = "fb good";
+        } else {
+          markRetryOutcome({ kind: "word", item: it }, false);
+          fb.innerHTML = `✗ Answer: <span class="reveal">${escapeHtml(answer)}</span>`;
+          fb.className = "fb bad";
+          const s = document.createElement("button");
+          s.type = "button";
+          s.className = "link";
+          s.textContent = "I was right → count it";
+          s.onclick = () => {
+            // Undo the miss: drop from wrongs and award the point.
+            const last = wrongs[wrongs.length - 1];
+            if (last && last.item === it) wrongs.pop();
+            score++;
+            s.textContent = "counted ✓";
+            s.disabled = true;
+            setStatus();
+          };
+          fb.appendChild(document.createElement("br"));
+          fb.appendChild(s);
+        }
+        inp.disabled = true;
+        chk.textContent = "Next";
+        chk.onclick = goNext;
+        chk.focus();
+        setStatus();
+      };
+
+      chk.onclick = () => {
+        if (answered) goNext();
+        else grade();
+      };
+      clearKey();
+      keyHandler = (e) => {
+        if (e.key !== "Enter" || e.shiftKey) return;
+        if (e.target.closest("textarea")) return;
+        e.preventDefault();
+        if (answered) goNext();
+        else grade();
+      };
+      document.addEventListener("keydown", keyHandler);
     }
 
     function renderQuiz() {
@@ -276,6 +523,7 @@ export function startReviewQueue(root, opts) {
           buttons[i].classList.add("wrong");
           const ci = optsQ.indexOf(correct);
           if (ci >= 0) buttons[ci].classList.add("correct");
+          wrongs.push({ kind: "quiz", item: it });
         }
         setStatus();
         setTimeout(goNext, 650);
@@ -304,7 +552,7 @@ export function startReviewQueue(root, opts) {
     function renderWord() {
       answered = false;
       if (pos >= wordItems.length) {
-        finishUnit();
+        showUnitResult();
         return;
       }
       const it = wordItems[pos];
@@ -315,7 +563,7 @@ export function startReviewQueue(root, opts) {
         <div class="q">
           ${frame ? `<div class="sub" style="margin-bottom:0.35rem">${escapeHtml(it.cz)}</div>` : ""}
           <div class="prompt prompt-gap">${escapeHtml(prompt)}</div>
-          <div class="sub">Type the ${frame ? "missing word" : "English"} · Enter = check / next</div>
+          <div class="sub">${frame ? gapFillInstruction(answer) : "Type the English"} · Enter = check / next</div>
           <input class="type-in" id="r-ti" autocomplete="off" autocapitalize="off" spellcheck="false" />
           <div class="fb" id="r-fb"></div>
           <div class="nav"><button type="button" class="btn primary" id="r-chk">Check</button></div>
@@ -339,6 +587,7 @@ export function startReviewQueue(root, opts) {
           fb.textContent = "✓ Correct";
           fb.className = "fb good";
         } else {
+          wrongs.push({ kind: "word", item: it });
           fb.innerHTML = `✗ Answer: <span class="reveal">${escapeHtml(answer)}</span>`;
           fb.className = "fb bad";
           const s = document.createElement("button");
@@ -347,6 +596,8 @@ export function startReviewQueue(root, opts) {
           s.textContent = "I was right → count it";
           s.onclick = () => {
             score++;
+            const last = wrongs[wrongs.length - 1];
+            if (last && last.item === it) wrongs.pop();
             s.textContent = "counted ✓";
             s.disabled = true;
             setStatus();
@@ -377,7 +628,7 @@ export function startReviewQueue(root, opts) {
     }
 
     if (total === 0) {
-      finishUnit();
+      showUnitResult();
     } else if (quizItems.length) {
       renderQuiz();
     } else {
@@ -394,7 +645,7 @@ export function startReviewQueue(root, opts) {
       <div class="practice-stage">
         <div class="q">
           <div class="prompt">Nothing due</div>
-          <div class="sub">Learn a unit (finish Sentence) to schedule reviews.</div>
+          <div class="sub">Learn a unit (Word on leaves · Sentence on trunk) to schedule reviews.</div>
           <div class="nav"><button type="button" class="btn primary" id="r-done">Back to map</button></div>
         </div>
       </div>`;

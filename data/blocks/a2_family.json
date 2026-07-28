@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_family_a2",
   "codex_unit": "V_THM-A1B1-04",
-  "note": "V_THM-A1B1-04 family A2",
+  "note": "V_THM-A1B1-04 family A2 · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,99 @@
       "items": [
         {
           "en": "adult",
-          "cz": "dospělý"
+          "cz": "dospělý",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "single",
-          "cz": "svobodný"
+          "cz": "svobodný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "couple",
-          "cz": "pár"
+          "cz": "pár",
+          "use": [
+            "this_is_a",
+            "i_see_a"
+          ]
         },
         {
           "en": "kid",
-          "cz": "dítě (hovor.)"
+          "cz": "dítě (hovor.)",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "guy",
-          "cz": "chlápek / kluk"
+          "cz": "chlápek / kluk",
+          "use": [
+            "this_is_a",
+            "he_is_a"
+          ]
         },
         {
           "en": "lady",
-          "cz": "dáma"
+          "cz": "dáma",
+          "use": [
+            "this_is_a",
+            "i_am_a"
+          ]
         },
         {
           "en": "sir",
-          "cz": "pane"
+          "cz": "pane",
+          "use": []
         },
         {
           "en": "relationship",
-          "cz": "vztah"
+          "cz": "vztah",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
         },
         {
           "en": "wedding",
-          "cz": "svatba"
+          "cz": "svatba",
+          "use": [
+            "have_a_good",
+            "this_is_a"
+          ]
         },
         {
           "en": "birth",
-          "cz": "narození"
+          "cz": "narození",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "guest",
-          "cz": "host"
+          "cz": "host",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "owner",
-          "cz": "majitel"
+          "cz": "majitel",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         }
       ]
     },
@@ -67,35 +115,67 @@
       "items": [
         {
           "en": "behaviour",
-          "cz": "chování"
+          "cz": "chování",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "character",
-          "cz": "povaha / postava"
+          "cz": "povaha / postava",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
         },
         {
           "en": "personality",
-          "cz": "osobnost"
+          "cz": "osobnost",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
         },
         {
           "en": "background",
-          "cz": "původ / pozadí"
+          "cz": "původ / pozadí",
+          "use": [
+            "i_have_a",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "community",
-          "cz": "komunita / obec"
+          "cz": "komunita / obec",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "society",
-          "cz": "společnost"
+          "cz": "společnost",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "crowd",
-          "cz": "dav"
+          "cz": "dav",
+          "use": [
+            "this_is_a",
+            "i_see_a"
+          ]
         },
         {
           "en": "audience",
-          "cz": "publikum"
+          "cz": "publikum",
+          "use": [
+            "this_is_a",
+            "i_see_a"
+          ]
         }
       ]
     }

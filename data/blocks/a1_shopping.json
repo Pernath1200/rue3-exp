@@ -4,63 +4,342 @@
   "level": "A1",
   "tree_node": "leaf_shopping_a1",
   "codex_unit": "V_THM-A1B1-06",
-  "note": "P3 Oxford A1 shopping/money + exp fill (discount/queue/wallet). Sentence = fruit. Codex V_THM-A1B1-06.",
+  "note": "P3 Oxford A1 shopping/money + exp fill (discount/queue/wallet). Sentence = fruit. Codex V_THM-A1B1-06. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "shop_money",
       "title": "Shopping · money",
       "items": [
-        { "en": "money", "cz": "peníze" },
-        { "en": "price", "cz": "cena" },
-        { "en": "cost", "cz": "stát (o ceně) / cena" },
-        { "en": "cheap", "cz": "levný" },
-        { "en": "expensive", "cz": "drahý" },
-        { "en": "buy", "cz": "koupit" },
-        { "en": "sell", "cz": "prodat" },
-        { "en": "pay", "cz": "platit" },
-        { "en": "pound", "cz": "libra (měna)" },
-        { "en": "euro", "cz": "euro" },
-        { "en": "dollar", "cz": "dolar" },
-        { "en": "cent", "cz": "cent" }
+        {
+          "en": "money",
+          "cz": "peníze",
+          "use": [
+            "i_have_bare",
+            "i_need_bare",
+            "i_want_bare",
+            "i_like_bare"
+          ]
+        },
+        {
+          "en": "price",
+          "cz": "cena",
+          "use": [
+            "this_is_a",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "cost",
+          "cz": "stát (o ceně) / cena",
+          "use": []
+        },
+        {
+          "en": "cheap",
+          "cz": "levný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "expensive",
+          "cz": "drahý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
+        },
+        {
+          "en": "buy",
+          "cz": "koupit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "sell",
+          "cz": "prodat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "pay",
+          "cz": "platit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "pound",
+          "cz": "libra (měna)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_buy_a"
+          ]
+        },
+        {
+          "en": "euro",
+          "cz": "euro",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_buy_a"
+          ]
+        },
+        {
+          "en": "dollar",
+          "cz": "dolar",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_buy_a"
+          ]
+        },
+        {
+          "en": "cent",
+          "cz": "cent",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_buy_a"
+          ]
+        }
       ]
     },
     {
       "id": "shop_doing",
       "title": "Shopping · doing it",
       "items": [
-        { "en": "shopping", "cz": "nakupování" },
-        { "en": "shop (verb)", "cz": "nakupovat" },
-        { "en": "customer", "cz": "zákazník" },
-        { "en": "card", "cz": "karta" },
-        { "en": "cash", "cz": "hotovost" },
-        { "en": "change (money)", "cz": "drobné / zpátky" },
-        { "en": "receipt", "cz": "účtenka" },
-        { "en": "bag", "cz": "taška" },
-        { "en": "size", "cz": "velikost" },
-        { "en": "open", "cz": "otevřený / otevřít" },
-        { "en": "closed", "cz": "zavřeno" },
-        { "en": "free (no cost)", "cz": "zdarma" }
+        {
+          "en": "shopping",
+          "cz": "nakupování",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
+        },
+        {
+          "en": "shop (verb)",
+          "cz": "nakupovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "customer",
+          "cz": "zákazník",
+          "use": [
+            "this_is_a",
+            "i_am_a",
+            "he_is_a"
+          ]
+        },
+        {
+          "en": "card",
+          "cz": "karta",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_buy_a"
+          ]
+        },
+        {
+          "en": "cash",
+          "cz": "hotovost",
+          "use": [
+            "i_have_bare",
+            "i_need_bare",
+            "i_want_bare",
+            "i_like_bare"
+          ]
+        },
+        {
+          "en": "change (money)",
+          "cz": "drobné / zpátky",
+          "use": [
+            "i_have_bare",
+            "i_need_bare"
+          ]
+        },
+        {
+          "en": "receipt",
+          "cz": "účtenka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_buy_a"
+          ]
+        },
+        {
+          "en": "bag",
+          "cz": "taška",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "size",
+          "cz": "velikost",
+          "use": [
+            "this_is_a",
+            "i_need_a",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "open",
+          "cz": "otevřený / otevřít",
+          "use": [
+            "it_is"
+          ]
+        },
+        {
+          "en": "closed",
+          "cz": "zavřeno",
+          "use": [
+            "it_is"
+          ]
+        },
+        {
+          "en": "free (no cost)",
+          "cz": "zdarma",
+          "use": [
+            "it_is"
+          ]
+        }
       ]
     },
     {
       "id": "shop_extra",
       "title": "Shopping · more",
       "items": [
-        { "en": "discount", "cz": "sleva" },
-        { "en": "sale", "cz": "výprodej" },
-        { "en": "offer", "cz": "nabídka" },
-        { "en": "refund", "cz": "vrácení peněz" },
-        { "en": "queue", "cz": "fronta" },
-        { "en": "counter", "cz": "pult (v obchodě)" },
-        { "en": "checkout", "cz": "pokladna" },
-        { "en": "wallet", "cz": "peněženka" },
-        { "en": "purse", "cz": "peněženka (dámská)" },
-        { "en": "try on", "cz": "vyzkoušet si (oblečení)" },
-        { "en": "market", "cz": "trh / tržiště" },
-        { "en": "department store", "cz": "obchodní dům" }
+        {
+          "en": "discount",
+          "cz": "sleva",
+          "use": [
+            "this_is_a",
+            "i_need_a",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "sale",
+          "cz": "výprodej",
+          "use": [
+            "this_is_a",
+            "there_is_a",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "offer",
+          "cz": "nabídka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_buy_a"
+          ]
+        },
+        {
+          "en": "refund",
+          "cz": "vrácení peněz",
+          "use": [
+            "this_is_a",
+            "i_need_a",
+            "i_want_a"
+          ]
+        },
+        {
+          "en": "queue",
+          "cz": "fronta",
+          "use": [
+            "this_is_a",
+            "there_is_a",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "counter",
+          "cz": "pult (v obchodě)",
+          "use": [
+            "this_is_a",
+            "where_is_the",
+            "i_see_a"
+          ]
+        },
+        {
+          "en": "checkout",
+          "cz": "pokladna",
+          "use": [
+            "this_is_a",
+            "where_is_the",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "wallet",
+          "cz": "peněženka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_buy_a"
+          ]
+        },
+        {
+          "en": "purse",
+          "cz": "peněženka (dámská)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_buy_a"
+          ]
+        },
+        {
+          "en": "try on",
+          "cz": "vyzkoušet si (oblečení)",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "market",
+          "cz": "trh / tržiště",
+          "use": [
+            "i_go_to",
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "department store",
+          "cz": "obchodní dům",
+          "use": [
+            "i_go_to",
+            "this_is_a",
+            "where_is_the"
+          ]
+        }
       ]
     }
   ]
 }
-

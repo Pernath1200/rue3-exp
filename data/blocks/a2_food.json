@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_food_a2",
   "codex_unit": "V_THM-A1B1-05",
-  "note": "V_THM-A1B1-05 food A2",
+  "note": "V_THM-A1B1-05 food A2 · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,113 @@
       "items": [
         {
           "en": "recipe",
-          "cz": "recept (kuchařský)"
+          "cz": "recept (kuchařský)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "sauce",
-          "cz": "omáčka"
+          "cz": "omáčka",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
           "en": "oil",
-          "cz": "olej"
+          "cz": "olej",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
           "en": "beef",
-          "cz": "hovězí"
+          "cz": "hovězí",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
-          "en": "bean",
-          "cz": "fazole"
+          "en": "beans",
+          "cz": "fazole",
+          "use": [
+            "i_like_pl",
+            "i_have_bare",
+            "i_need_bare"
+          ]
         },
         {
           "en": "biscuit",
-          "cz": "sušenka / piškot"
+          "cz": "sušenka / piškot",
+          "use": [
+            "i_buy_a",
+            "i_have_a",
+            "i_like_pl",
+            "this_is_a"
+          ]
         },
         {
           "en": "chip",
-          "cz": "hranolka / čips"
+          "cz": "hranolka / čips",
+          "use": [
+            "i_like_pl",
+            "i_have_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "lemon",
-          "cz": "citron"
+          "cz": "citron",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_like_pl"
+          ]
         },
         {
           "en": "nut",
-          "cz": "ořech"
+          "cz": "ořech",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "jam",
-          "cz": "džem"
+          "cz": "džem",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
           "en": "cream",
-          "cz": "smetana / krém"
+          "cz": "smetana / krém",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
           "en": "grill",
-          "cz": "gril / grilovat"
+          "cz": "gril / grilovat",
+          "use": [
+            "i_want_to",
+            "we_need_to",
+            "i_like_to"
+          ]
         }
       ]
     },
@@ -67,43 +129,90 @@
       "items": [
         {
           "en": "boil",
-          "cz": "vařit (ve vodě)"
+          "cz": "vařit (ve vodě)",
+          "use": [
+            "i_want_to",
+            "we_need_to",
+            "i_like_to"
+          ]
         },
         {
           "en": "bake",
-          "cz": "péct"
+          "cz": "péct",
+          "use": [
+            "i_want_to",
+            "we_need_to",
+            "i_like_to"
+          ]
         },
         {
           "en": "fry",
-          "cz": "smažit"
+          "cz": "smažit",
+          "use": [
+            "i_want_to",
+            "we_need_to",
+            "i_like_to"
+          ]
         },
         {
           "en": "chef",
-          "cz": "šéfkuchař"
+          "cz": "šéfkuchař",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "taste",
-          "cz": "chuť / chutnat"
+          "cz": "chuť / chutnat",
+          "use": [
+            "i_like_bare",
+            "is_important",
+            "i_have_bare"
+          ]
         },
         {
           "en": "sweet",
-          "cz": "sladký / bonbon"
+          "cz": "sladký / bonbon",
+          "use": [
+            "it_is",
+            "he_is_adj"
+          ]
         },
         {
           "en": "spicy",
-          "cz": "pálivý / kořeněný"
+          "cz": "pálivý / kořeněný",
+          "use": [
+            "it_is"
+          ]
         },
         {
           "en": "vegetarian",
-          "cz": "vegetarián / vegetariánský"
+          "cz": "vegetarián / vegetariánský",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "pub",
-          "cz": "hospoda"
+          "cz": "hospoda",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "soap",
-          "cz": "mýdlo"
+          "cz": "mýdlo",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         }
       ]
     }

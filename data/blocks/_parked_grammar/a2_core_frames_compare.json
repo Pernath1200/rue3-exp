@@ -19,9 +19,9 @@
           "gap_answer": "better"
         },
         {
-          "en": "She is taller than me.",
+          "en": "He is taller than me.",
           "cz": "Je vyšší než já.",
-          "gap": "She is ____ than me.",
+          "gap": "He is ____ than me.",
           "gap_answer": "taller"
         },
         {
@@ -55,9 +55,9 @@
           "gap_answer": "biggest"
         },
         {
-          "en": "She's the most interesting person.",
+          "en": "He's the most interesting person.",
           "cz": "Je nejzajímavější člověk.",
-          "gap": "She's the ____ interesting person.",
+          "gap": "He's the ____ interesting person.",
           "gap_answer": "most"
         },
         {

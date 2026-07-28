@@ -20,7 +20,14 @@
           "cz": "Je tu stůl. / Tam je stůl.",
           "gap": "There is a ____.",
           "gap_answer": "table",
-          "accepts": ["There's a table.", "There is a table"]
+          "accepts": [
+            "There's a table.",
+            "There is a table",
+            "Here is a table.",
+            "Here is a table",
+            "Here's a table.",
+            "Here's a table"
+          ]
         },
         {
           "en": "There is a café.",
@@ -28,7 +35,15 @@
           "gap": "There is a ____.",
           "gap_answer": "café",
           "gap_accepts": ["cafe"],
-          "accepts": ["There's a café.", "There is a cafe.", "There's a cafe."]
+          "accepts": [
+            "There's a café.",
+            "There is a cafe.",
+            "There's a cafe.",
+            "Here is a café.",
+            "Here is a cafe.",
+            "Here's a café.",
+            "Here's a cafe."
+          ]
         },
         {
           "en": "There are two chairs.",

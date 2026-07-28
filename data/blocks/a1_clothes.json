@@ -3,43 +3,251 @@
   "title": "Clothes",
   "level": "A1",
   "tree_node": "leaf_clothes_a1",
-  "note": "P2 Oxford A1 clothes + wear. British trousers/t-shirt. Sentence = fruit.",
+  "note": "P2 Oxford A1 clothes + wear. British trousers/t-shirt. Sentence = fruit. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "clothes_basic",
       "title": "Clothes · basic",
       "items": [
-        { "en": "clothes", "cz": "oblečení" },
-        { "en": "shirt", "cz": "košile" },
-        { "en": "T-shirt", "cz": "tričko" },
-        { "en": "sweater", "cz": "svetr" },
-        { "en": "jacket", "cz": "bunda / sako" },
-        { "en": "coat", "cz": "kabát" },
-        { "en": "dress", "cz": "šaty" },
-        { "en": "skirt", "cz": "sukně" },
-        { "en": "trousers", "cz": "kalhoty" },
-        { "en": "jeans", "cz": "džíny" },
-        { "en": "hat", "cz": "klobouk / čepice" },
-        { "en": "wear", "cz": "nosit (oblečení)" }
+        {
+          "en": "clothes",
+          "cz": "oblečení",
+          "use": [
+            "i_wear",
+            "i_have_bare",
+            "i_need_bare"
+          ]
+        },
+        {
+          "en": "shirt",
+          "cz": "košile",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "T-shirt",
+          "cz": "tričko",
+          "use": [
+            "i_wear",
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "sweater",
+          "cz": "svetr",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "jacket",
+          "cz": "bunda / sako",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "coat",
+          "cz": "kabát",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "dress",
+          "cz": "šaty",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "skirt",
+          "cz": "sukně",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "trousers",
+          "cz": "kalhoty",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "jeans",
+          "cz": "džíny",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "hat",
+          "cz": "klobouk / čepice",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "wear",
+          "cz": "nosit (oblečení)",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        }
       ]
     },
     {
       "id": "clothes_more",
       "title": "Clothes · more",
       "items": [
-        { "en": "shoe", "cz": "bota (polobotka)" },
-        { "en": "boot", "cz": "bota (vyšší)" },
-        { "en": "sock", "cz": "ponožka" },
-        { "en": "watch (wrist)", "cz": "hodinky" },
-        { "en": "bag", "cz": "taška" },
-        { "en": "glasses", "cz": "brýle" },
-        { "en": "suit", "cz": "oblek" },
-        { "en": "tie", "cz": "kravata" },
-        { "en": "scarf", "cz": "šála" },
-        { "en": "glove", "cz": "rukavice" },
-        { "en": "umbrella", "cz": "deštník" },
-        { "en": "pocket", "cz": "kapsa" }
+        {
+          "en": "shoe",
+          "cz": "bota (polobotka)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "boot",
+          "cz": "bota (vyšší)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "sock",
+          "cz": "ponožka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "watch (wrist)",
+          "cz": "hodinky",
+          "use": [
+            "i_wear",
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "bag",
+          "cz": "taška",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "glasses",
+          "cz": "brýle",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "suit",
+          "cz": "oblek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "tie",
+          "cz": "kravata",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "scarf",
+          "cz": "šála",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "glove",
+          "cz": "rukavice",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "i_wear"
+          ]
+        },
+        {
+          "en": "umbrella",
+          "cz": "deštník",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "pocket",
+          "cz": "kapsa",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        }
       ]
     }
   ]

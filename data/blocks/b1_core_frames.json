@@ -1,0 +1,197 @@
+{
+  "id": "b1_core_frames",
+  "title": "Core · B1 frames",
+  "level": "B1",
+  "tree_node": "trunk_core_b1",
+  "codex_unit": "V_COR-B1B2-01",
+  "practice": "frames",
+  "note": "V_COR-B1B2-01 · B1 high-freq lexis in frames · gap on content word · present simple + present perfect as carrier only (systems stay RUE2)",
+  "default_direction": "cz_to_en",
+  "seed_vocab": [
+    "decide", "suggest", "agree", "disagree", "explain", "describe",
+    "improve", "develop", "manage", "achieve", "consider", "prefer",
+    "already", "yet", "experience", "advice", "opportunity", "progress"
+  ],
+  "blocks": [
+    {
+      "id": "b1_core_verbs",
+      "title": "B1 · thinking & action verbs",
+      "items": [
+        {
+          "en": "I decide the date tomorrow.",
+          "cz": "Zítra rozhodnu o datu.",
+          "gap": "I ____ the date tomorrow.",
+          "gap_answer": "decide",
+          "accepts": ["I decide the date tomorrow", "I'll decide the date tomorrow.", "I will decide the date tomorrow."]
+        },
+        {
+          "en": "She suggests a short break.",
+          "cz": "Navrhuje krátkou pauzu.",
+          "gap": "She ____ a short break.",
+          "gap_answer": "suggests",
+          "accepts": ["She suggests a short break", "She is suggesting a short break."]
+        },
+        {
+          "en": "We agree with the plan.",
+          "cz": "Souhlasíme s plánem.",
+          "gap": "We ____ with the plan.",
+          "gap_answer": "agree",
+          "accepts": ["We agree with the plan", "We agree on the plan."]
+        },
+        {
+          "en": "I disagree with that idea.",
+          "cz": "Nesouhlasím s tím nápadem.",
+          "gap": "I ____ with that idea.",
+          "gap_answer": "disagree",
+          "accepts": ["I disagree with that idea"]
+        },
+        {
+          "en": "Can you explain the problem?",
+          "cz": "Můžeš vysvětlit ten problém?",
+          "gap": "Can you ____ the problem?",
+          "gap_answer": "explain",
+          "accepts": ["Can you explain the problem", "Could you explain the problem?"]
+        },
+        {
+          "en": "Please describe your experience.",
+          "cz": "Prosím popiš svou zkušenost.",
+          "gap": "Please ____ your experience.",
+          "gap_answer": "describe",
+          "accepts": ["Please describe your experience"]
+        },
+        {
+          "en": "We want to improve our English.",
+          "cz": "Chceme zlepšit svou angličtinu.",
+          "gap": "We want to ____ our English.",
+          "gap_answer": "improve",
+          "accepts": ["We want to improve our English"]
+        },
+        {
+          "en": "They develop a new product.",
+          "cz": "Vyvíjejí nový produkt.",
+          "gap": "They ____ a new product.",
+          "gap_answer": "develop",
+          "accepts": ["They develop a new product", "They're developing a new product."]
+        },
+        {
+          "en": "I manage a small team.",
+          "cz": "Řídím / vedu malý tým.",
+          "gap": "I ____ a small team.",
+          "gap_answer": "manage",
+          "accepts": ["I manage a small team"]
+        },
+        {
+          "en": "She achieves good results.",
+          "cz": "Dosahuje dobrých výsledků.",
+          "gap": "She ____ good results.",
+          "gap_answer": "achieves",
+          "accepts": ["She achieves good results"]
+        },
+        {
+          "en": "We consider all options.",
+          "cz": "Zvažujeme všechny možnosti.",
+          "gap": "We ____ all options.",
+          "gap_answer": "consider",
+          "accepts": ["We consider all options"]
+        },
+        {
+          "en": "I prefer a clear plan.",
+          "cz": "Preferuju jasný plán.",
+          "gap": "I ____ a clear plan.",
+          "gap_answer": "prefer",
+          "accepts": ["I prefer a clear plan"]
+        }
+      ]
+    },
+    {
+      "id": "b1_core_perfect_lexis",
+      "title": "B1 · experience & progress (carrier perfect)",
+      "items": [
+        {
+          "en": "I have already decided.",
+          "cz": "Už jsem se rozhodl/a.",
+          "gap": "I have already ____.",
+          "gap_answer": "decided",
+          "accepts": ["I've already decided.", "I have already decided"]
+        },
+        {
+          "en": "Have you finished the report yet?",
+          "cz": "Už jsi dokončil/a tu zprávu?",
+          "gap": "Have you ____ the report yet?",
+          "gap_answer": "finished",
+          "accepts": ["Have you finished the report yet"]
+        },
+        {
+          "en": "She has a lot of experience.",
+          "cz": "Má spoustu zkušeností.",
+          "gap": "She has a lot of ____.",
+          "gap_answer": "experience",
+          "accepts": ["She has a lot of experience", "She's got a lot of experience."]
+        },
+        {
+          "en": "I need your advice.",
+          "cz": "Potřebuju tvoji radu.",
+          "gap": "I need your ____.",
+          "gap_answer": "advice",
+          "accepts": ["I need your advice"]
+        },
+        {
+          "en": "This is a great opportunity.",
+          "cz": "Tohle je skvělá příležitost.",
+          "gap": "This is a great ____.",
+          "gap_answer": "opportunity",
+          "accepts": ["This is a great opportunity"]
+        },
+        {
+          "en": "We have made good progress.",
+          "cz": "Udělali jsme dobrý pokrok.",
+          "gap": "We have made good ____.",
+          "gap_answer": "progress",
+          "accepts": ["We've made good progress.", "We have made good progress"]
+        },
+        {
+          "en": "I have never tried that.",
+          "cz": "Nikdy jsem to nezkusil/a.",
+          "gap": "I have never ____ that.",
+          "gap_answer": "tried",
+          "accepts": ["I've never tried that.", "I have never tried that"]
+        },
+        {
+          "en": "They have just arrived.",
+          "cz": "Právě přijeli.",
+          "gap": "They have just ____.",
+          "gap_answer": "arrived",
+          "accepts": ["They've just arrived.", "They have just arrived"]
+        },
+        {
+          "en": "What is your opinion?",
+          "cz": "Jaký je tvůj názor?",
+          "gap": "What is your ____?",
+          "gap_answer": "opinion",
+          "accepts": ["What is your opinion", "What's your opinion?"]
+        },
+        {
+          "en": "There is a simple solution.",
+          "cz": "Existuje jednoduché řešení.",
+          "gap": "There is a simple ____.",
+          "gap_answer": "solution",
+          "accepts": ["There's a simple solution.", "There is a simple solution"]
+        },
+        {
+          "en": "We face a big problem.",
+          "cz": "Čelíme velkému problému.",
+          "gap": "We face a big ____.",
+          "gap_answer": "problem",
+          "accepts": ["We face a big problem"]
+        },
+        {
+          "en": "I take his advice seriously.",
+          "cz": "Beru jeho radu vážně.",
+          "gap": "I take his ____ seriously.",
+          "gap_answer": "advice",
+          "accepts": ["I take his advice seriously"]
+        }
+      ]
+    }
+  ]
+}

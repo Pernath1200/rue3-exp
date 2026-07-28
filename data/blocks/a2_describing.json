@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_describing_a2",
   "codex_unit": "V_COR-A1B1-01",
-  "note": "A2 adjectives · COR",
+  "note": "A2 adjectives · COR · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,108 @@
       "items": [
         {
           "en": "able",
-          "cz": "schopný"
+          "cz": "schopný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "active",
-          "cz": "aktivní"
+          "cz": "aktivní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "alive",
-          "cz": "živý"
+          "cz": "živý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "alone",
-          "cz": "sám"
+          "cz": "sám",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "ancient",
-          "cz": "starověký / prastarý"
+          "cz": "starověký / prastarý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "asleep",
-          "cz": "spící"
+          "cz": "spící",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "attractive",
-          "cz": "přitažlivý"
+          "cz": "přitažlivý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "available",
-          "cz": "dostupný"
+          "cz": "dostupný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "average",
-          "cz": "průměrný"
+          "cz": "průměrný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "awful",
-          "cz": "příšerný"
+          "cz": "příšerný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "basic",
-          "cz": "základní"
+          "cz": "základní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "beautiful",
-          "cz": "krásný"
+          "cz": "krásný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -67,51 +124,102 @@
       "items": [
         {
           "en": "blind",
-          "cz": "slepý"
+          "cz": "slepý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "bright",
-          "cz": "jasný / bystrý"
+          "cz": "jasný / bystrý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "brilliant",
-          "cz": "skvělý / geniální"
+          "cz": "skvělý / geniální",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "broad",
-          "cz": "široký"
+          "cz": "široký",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "busy",
-          "cz": "zaneprázdněný"
+          "cz": "zaneprázdněný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "careful",
-          "cz": "opatrný"
+          "cz": "opatrný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "certain",
-          "cz": "jistý"
+          "cz": "jistý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "clear",
-          "cz": "jasný / zřejmý"
+          "cz": "jasný / zřejmý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "clever",
-          "cz": "chytrý"
+          "cz": "chytrý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "common",
-          "cz": "běžný / společný"
+          "cz": "běžný / společný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "complete",
-          "cz": "úplný"
+          "cz": "úplný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "complex",
-          "cz": "složitý"
+          "cz": "složitý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -121,51 +229,107 @@
       "items": [
         {
           "en": "cool",
-          "cz": "chladný / super"
+          "cz": "chladný / super",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "correct",
-          "cz": "správný"
+          "cz": "správný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "crazy",
-          "cz": "bláznivý"
+          "cz": "bláznivý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "curious",
-          "cz": "zvědavý"
+          "cz": "zvědavý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "dangerous",
-          "cz": "nebezpečný"
+          "cz": "nebezpečný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "dark",
-          "cz": "tmavý"
+          "cz": "tmavý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "dead",
-          "cz": "mrtvý"
+          "cz": "mrtvý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "deep",
-          "cz": "hluboký"
+          "cz": "hluboký",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "difficult",
-          "cz": "obtížný"
+          "cz": "obtížný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "dirty",
-          "cz": "špinavý"
+          "cz": "špinavý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "double",
-          "cz": "dvojitý"
+          "cz": "dvojitý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "dry",
-          "cz": "suchý"
+          "cz": "suchý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -175,51 +339,106 @@
       "items": [
         {
           "en": "early",
-          "cz": "brzký / brzy"
+          "cz": "brzký / brzy",
+          "use": [
+            "it_is",
+            "i_am_adj"
+          ]
         },
         {
           "en": "eastern",
-          "cz": "východní"
+          "cz": "východní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "economic",
-          "cz": "ekonomický"
+          "cz": "ekonomický",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "educational",
-          "cz": "vzdělávací"
+          "cz": "vzdělávací",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "efficient",
-          "cz": "efektivní"
+          "cz": "efektivní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "electric",
-          "cz": "elektrický"
+          "cz": "elektrický",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "empty",
-          "cz": "prázdný"
+          "cz": "prázdný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "enormous",
-          "cz": "obrovský"
+          "cz": "obrovský",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "entire",
-          "cz": "celý"
+          "cz": "celý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "environmental",
-          "cz": "environmentální"
+          "cz": "environmentální",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "equal",
-          "cz": "rovný / stejný"
+          "cz": "rovný / stejný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "exact",
-          "cz": "přesný"
+          "cz": "přesný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -229,51 +448,102 @@
       "items": [
         {
           "en": "excellent",
-          "cz": "výborný"
+          "cz": "výborný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "existing",
-          "cz": "existující"
+          "cz": "existující",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "expected",
-          "cz": "očekávaný"
+          "cz": "očekávaný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "expert",
-          "cz": "odborný / expert"
+          "cz": "odborný / expert",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "extreme",
-          "cz": "extrémní"
+          "cz": "extrémní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "fair",
-          "cz": "spravedlivý / světlý"
+          "cz": "spravedlivý / světlý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "familiar",
-          "cz": "známý / povědomý"
+          "cz": "známý / povědomý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "famous",
-          "cz": "slavný"
+          "cz": "slavný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "far",
-          "cz": "daleký / daleko"
+          "cz": "daleký / daleko",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "fast",
-          "cz": "rychlý"
+          "cz": "rychlý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "female",
-          "cz": "ženský"
+          "cz": "ženský",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "final",
-          "cz": "konečný / finále"
+          "cz": "konečný / finále",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -283,51 +553,106 @@
       "items": [
         {
           "en": "financial",
-          "cz": "finanční"
+          "cz": "finanční",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "flat",
-          "cz": "byt / plochý"
+          "cz": "byt / plochý",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "foreign",
-          "cz": "zahraniční"
+          "cz": "zahraniční",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "formal",
-          "cz": "formální"
+          "cz": "formální",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "former",
-          "cz": "bývalý"
+          "cz": "bývalý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "free",
-          "cz": "volný / zdarma"
+          "cz": "volný / zdarma",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "frequent",
-          "cz": "častý"
+          "cz": "častý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "fresh",
-          "cz": "čerstvý"
+          "cz": "čerstvý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "friendly",
-          "cz": "přátelský"
+          "cz": "přátelský",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "full",
-          "cz": "plný"
+          "cz": "plný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "general",
-          "cz": "obecný"
+          "cz": "obecný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "glad",
-          "cz": "rád"
+          "cz": "rád",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -337,51 +662,106 @@
       "items": [
         {
           "en": "global",
-          "cz": "globální"
+          "cz": "globální",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "good",
-          "cz": "dobrý"
+          "cz": "dobrý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "great",
-          "cz": "skvělý / velký"
+          "cz": "skvělý / velký",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "growing",
-          "cz": "rostoucí"
+          "cz": "rostoucí",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "healthy",
-          "cz": "zdravý"
+          "cz": "zdravý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "heavy",
-          "cz": "těžký"
+          "cz": "těžký",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "helpful",
-          "cz": "nápomocný"
+          "cz": "nápomocný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "hidden",
-          "cz": "skrytý"
+          "cz": "skrytý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "high",
-          "cz": "vysoký"
+          "cz": "vysoký",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "historical",
-          "cz": "historický"
+          "cz": "historický",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "horrible",
-          "cz": "hrozný"
+          "cz": "hrozný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "huge",
-          "cz": "obrovský"
+          "cz": "obrovský",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -391,51 +771,106 @@
       "items": [
         {
           "en": "human",
-          "cz": "lidský"
+          "cz": "lidský",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "hungry",
-          "cz": "hladový"
+          "cz": "hladový",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "ideal",
-          "cz": "ideální"
+          "cz": "ideální",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "ill",
-          "cz": "nemocný"
+          "cz": "nemocný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "immediate",
-          "cz": "okamžitý"
+          "cz": "okamžitý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "important",
-          "cz": "důležitý"
+          "cz": "důležitý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "impossible",
-          "cz": "nemožný"
+          "cz": "nemožný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "impressive",
-          "cz": "působivý"
+          "cz": "působivý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "independent",
-          "cz": "nezávislý"
+          "cz": "nezávislý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "individual",
-          "cz": "individuální / jedinec"
+          "cz": "individuální / jedinec",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "indoor",
-          "cz": "vnitřní"
+          "cz": "vnitřní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "industrial",
-          "cz": "průmyslový"
+          "cz": "průmyslový",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -445,51 +880,105 @@
       "items": [
         {
           "en": "informal",
-          "cz": "neformální"
+          "cz": "neformální",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "injured",
-          "cz": "zraněný"
+          "cz": "zraněný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "inner",
-          "cz": "vnitřní"
+          "cz": "vnitřní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "innocent",
-          "cz": "nevinný"
+          "cz": "nevinný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "intelligent",
-          "cz": "inteligentní"
+          "cz": "inteligentní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "international",
-          "cz": "mezinárodní"
+          "cz": "mezinárodní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "junior",
-          "cz": "mladší / juniorský"
+          "cz": "mladší / juniorský",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "latest",
-          "cz": "nejnovější"
+          "cz": "nejnovější",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "lazy",
-          "cz": "líný"
+          "cz": "líný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "legal",
-          "cz": "legální / právní"
+          "cz": "legální / právní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "light",
-          "cz": "lehký / světlo"
+          "cz": "lehký / světlo",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "likely",
-          "cz": "pravděpodobný"
+          "cz": "pravděpodobný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -499,51 +988,107 @@
       "items": [
         {
           "en": "limited",
-          "cz": "omezený"
+          "cz": "omezený",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "local",
-          "cz": "místní"
+          "cz": "místní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "lonely",
-          "cz": "osamělý"
+          "cz": "osamělý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "long",
-          "cz": "dlouhý"
+          "cz": "dlouhý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "loose",
-          "cz": "volný (ne těsný)"
+          "cz": "volný (ne těsný)",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "loud",
-          "cz": "hlasitý"
+          "cz": "hlasitý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "lovely",
-          "cz": "krásný / milý"
+          "cz": "krásný / milý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "low",
-          "cz": "nízký"
+          "cz": "nízký",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "lucky",
-          "cz": "šťastný (náhoda)"
+          "cz": "šťastný (náhoda)",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "mad",
-          "cz": "šílený / naštvaný"
+          "cz": "šílený / naštvaný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "magic",
-          "cz": "kouzelný / kouzlo"
+          "cz": "kouzelný / kouzlo",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "male",
-          "cz": "mužský"
+          "cz": "mužský",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -553,51 +1098,110 @@
       "items": [
         {
           "en": "married",
-          "cz": "ženatý / vdaná"
+          "cz": "ženatý / vdaná",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "medical",
-          "cz": "lékařský"
+          "cz": "lékařský",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "mental",
-          "cz": "duševní"
+          "cz": "duševní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "messy",
-          "cz": "nepořádný"
+          "cz": "nepořádný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "military",
-          "cz": "vojenský"
+          "cz": "vojenský",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "modern",
-          "cz": "moderní"
+          "cz": "moderní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "musical",
-          "cz": "hudební"
+          "cz": "hudební",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "narrow",
-          "cz": "úzký"
+          "cz": "úzký",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "national",
-          "cz": "národní"
+          "cz": "národní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "natural",
-          "cz": "přírodní / přirozený"
+          "cz": "přírodní / přirozený",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "necessary",
-          "cz": "nutný"
+          "cz": "nutný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "negative",
-          "cz": "záporný / negativní"
+          "cz": "záporný / negativní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -607,51 +1211,106 @@
       "items": [
         {
           "en": "northern",
-          "cz": "severní"
+          "cz": "severní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "obvious",
-          "cz": "zřejmý"
+          "cz": "zřejmý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "odd",
-          "cz": "zvláštní / lichý"
+          "cz": "zvláštní / lichý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "official",
-          "cz": "oficiální"
+          "cz": "oficiální",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "old-fashioned",
-          "cz": "staromódní"
+          "cz": "staromódní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "only",
-          "cz": "jediný / jen"
+          "cz": "jediný / jen",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "open",
-          "cz": "otevřený"
+          "cz": "otevřený",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "opposite",
-          "cz": "opačný / naproti"
+          "cz": "opačný / naproti",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "ordinary",
-          "cz": "obyčejný"
+          "cz": "obyčejný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "original",
-          "cz": "původní / originální"
+          "cz": "původní / originální",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "outdoor",
-          "cz": "venkovní"
+          "cz": "venkovní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "outer",
-          "cz": "vnější"
+          "cz": "vnější",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -661,51 +1320,106 @@
       "items": [
         {
           "en": "particular",
-          "cz": "konkrétní / zvláštní"
+          "cz": "konkrétní / zvláštní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "past",
-          "cz": "minulý / minulost"
+          "cz": "minulý / minulost",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "patient",
-          "cz": "trpělivý / pacient"
+          "cz": "trpělivý / pacient",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "perfect",
-          "cz": "dokonalý"
+          "cz": "dokonalý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "personal",
-          "cz": "osobní"
+          "cz": "osobní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "physical",
-          "cz": "fyzický"
+          "cz": "fyzický",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "pleasant",
-          "cz": "příjemný"
+          "cz": "příjemný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "political",
-          "cz": "politický"
+          "cz": "politický",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "poor",
-          "cz": "chudý / špatný"
+          "cz": "chudý / špatný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "popular",
-          "cz": "oblíbený"
+          "cz": "oblíbený",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "positive",
-          "cz": "kladný / pozitivní"
+          "cz": "kladný / pozitivní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "possible",
-          "cz": "možný"
+          "cz": "možný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -715,51 +1429,107 @@
       "items": [
         {
           "en": "powerful",
-          "cz": "mocný / silný"
+          "cz": "mocný / silný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "practical",
-          "cz": "praktický"
+          "cz": "praktický",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "present",
-          "cz": "přítomný / dárek"
+          "cz": "přítomný / dárek",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "previous",
-          "cz": "předchozí"
+          "cz": "předchozí",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "private",
-          "cz": "soukromý"
+          "cz": "soukromý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "probable",
-          "cz": "pravděpodobný"
+          "cz": "pravděpodobný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "public",
-          "cz": "veřejný"
+          "cz": "veřejný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "pure",
-          "cz": "čistý"
+          "cz": "čistý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "quick",
-          "cz": "rychlý"
+          "cz": "rychlý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "quiet",
-          "cz": "tichý"
+          "cz": "tichý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "rare",
-          "cz": "vzácný"
+          "cz": "vzácný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "raw",
-          "cz": "syrový"
+          "cz": "syrový",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -769,51 +1539,107 @@
       "items": [
         {
           "en": "ready",
-          "cz": "připravený"
+          "cz": "připravený",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "real",
-          "cz": "skutečný"
+          "cz": "skutečný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "realistic",
-          "cz": "realistický"
+          "cz": "realistický",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "reasonable",
-          "cz": "rozumný"
+          "cz": "rozumný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "recent",
-          "cz": "nedávný"
+          "cz": "nedávný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "regular",
-          "cz": "pravidelný"
+          "cz": "pravidelný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "related",
-          "cz": "související"
+          "cz": "související",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "relative",
-          "cz": "příbuzný / relativní"
+          "cz": "příbuzný / relativní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "relevant",
-          "cz": "relevantní"
+          "cz": "relevantní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "reliable",
-          "cz": "spolehlivý"
+          "cz": "spolehlivý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "religious",
-          "cz": "náboženský"
+          "cz": "náboženský",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "responsible",
-          "cz": "zodpovědný"
+          "cz": "zodpovědný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -823,51 +1649,104 @@
       "items": [
         {
           "en": "rich",
-          "cz": "bohatý"
+          "cz": "bohatý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "right",
-          "cz": "správný / pravý"
+          "cz": "správný / pravý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "rough",
-          "cz": "hrubý / přibližný"
+          "cz": "hrubý / přibližný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "round",
-          "cz": "kulatý"
+          "cz": "kulatý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "safe",
-          "cz": "bezpečný"
+          "cz": "bezpečný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "same",
-          "cz": "stejný"
+          "cz": "stejný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "satisfied",
-          "cz": "spokojený"
+          "cz": "spokojený",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "scared",
-          "cz": "vyděšený"
+          "cz": "vyděšený",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "scientific",
-          "cz": "vědecký"
+          "cz": "vědecký",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "secondary",
-          "cz": "sekundární / střední"
+          "cz": "sekundární / střední",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "secret",
-          "cz": "tajný / tajemství"
+          "cz": "tajný / tajemství",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "senior",
-          "cz": "starší"
+          "cz": "starší",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -877,51 +1756,105 @@
       "items": [
         {
           "en": "separate",
-          "cz": "oddělený"
+          "cz": "oddělený",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "serious",
-          "cz": "vážný"
+          "cz": "vážný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "sharp",
-          "cz": "ostrý"
+          "cz": "ostrý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "shiny",
-          "cz": "lesklý"
+          "cz": "lesklý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "shocked",
-          "cz": "šokovaný"
+          "cz": "šokovaný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "short",
-          "cz": "krátký / malý"
+          "cz": "krátký / malý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "shy",
-          "cz": "stydlivý"
+          "cz": "stydlivý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "sick",
-          "cz": "nemocný"
+          "cz": "nemocný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "silent",
-          "cz": "tichý / mlčenlivý"
+          "cz": "tichý / mlčenlivý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "silly",
-          "cz": "hloupý / směšný"
+          "cz": "hloupý / směšný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "similar",
-          "cz": "podobný"
+          "cz": "podobný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "simple",
-          "cz": "jednoduchý"
+          "cz": "jednoduchý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -931,51 +1864,105 @@
       "items": [
         {
           "en": "single",
-          "cz": "svobodný / jednotlivý"
+          "cz": "svobodný / jednotlivý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "skilled",
-          "cz": "zručný"
+          "cz": "zručný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "slim",
-          "cz": "štíhlý"
+          "cz": "štíhlý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "slow",
-          "cz": "pomalý"
+          "cz": "pomalý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "small",
-          "cz": "malý"
+          "cz": "malý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "smart",
-          "cz": "chytrý / elegantní"
+          "cz": "chytrý / elegantní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "smooth",
-          "cz": "hladký"
+          "cz": "hladký",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "social",
-          "cz": "společenský"
+          "cz": "společenský",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "soft",
-          "cz": "měkký"
+          "cz": "měkký",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "solid",
-          "cz": "pevný"
+          "cz": "pevný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "sorry",
-          "cz": "líto / promiň"
+          "cz": "líto / promiň",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "southern",
-          "cz": "jižní"
+          "cz": "jižní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -985,51 +1972,106 @@
       "items": [
         {
           "en": "special",
-          "cz": "zvláštní"
+          "cz": "zvláštní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "specific",
-          "cz": "konkrétní"
+          "cz": "konkrétní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "spicy",
-          "cz": "pálivý"
+          "cz": "pálivý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "spiritual",
-          "cz": "duchovní"
+          "cz": "duchovní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "square",
-          "cz": "čtvercový / náměstí"
+          "cz": "čtvercový / náměstí",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "standard",
-          "cz": "standardní / norma"
+          "cz": "standardní / norma",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "strange",
-          "cz": "divný"
+          "cz": "divný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "strict",
-          "cz": "přísný"
+          "cz": "přísný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "strong",
-          "cz": "silný"
+          "cz": "silný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "stupid",
-          "cz": "hloupý"
+          "cz": "hloupý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "successful",
-          "cz": "úspěšný"
+          "cz": "úspěšný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "sudden",
-          "cz": "náhlý"
+          "cz": "náhlý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -1039,51 +2081,105 @@
       "items": [
         {
           "en": "suitable",
-          "cz": "vhodný"
+          "cz": "vhodný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "super",
-          "cz": "super"
+          "cz": "super",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "sure",
-          "cz": "jistý"
+          "cz": "jistý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "surprised",
-          "cz": "překvapený"
+          "cz": "překvapený",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "sweet",
-          "cz": "sladký / milý"
+          "cz": "sladký / milý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "tall",
-          "cz": "vysoký"
+          "cz": "vysoký",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "technical",
-          "cz": "technický"
+          "cz": "technický",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "terrible",
-          "cz": "strašný"
+          "cz": "strašný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "thin",
-          "cz": "tenký / hubený"
+          "cz": "tenký / hubený",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "thirsty",
-          "cz": "žíznivý"
+          "cz": "žíznivý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "tight",
-          "cz": "těsný"
+          "cz": "těsný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "tiny",
-          "cz": "malinký"
+          "cz": "malinký",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -1093,51 +2189,107 @@
       "items": [
         {
           "en": "tired",
-          "cz": "unavený"
+          "cz": "unavený",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "top",
-          "cz": "horní / nejlepší"
+          "cz": "horní / nejlepší",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "total",
-          "cz": "celkový"
+          "cz": "celkový",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "traditional",
-          "cz": "tradiční"
+          "cz": "tradiční",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "true",
-          "cz": "pravdivý"
+          "cz": "pravdivý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "typical",
-          "cz": "typický"
+          "cz": "typický",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "ugly",
-          "cz": "ošklivý"
+          "cz": "ošklivý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "unable",
-          "cz": "neschopný"
+          "cz": "neschopný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "unfair",
-          "cz": "nespravedlivý"
+          "cz": "nespravedlivý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "unhappy",
-          "cz": "nešťastný"
+          "cz": "nešťastný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "unique",
-          "cz": "jedinečný"
+          "cz": "jedinečný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "united",
-          "cz": "spojený"
+          "cz": "spojený",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -1147,51 +2299,106 @@
       "items": [
         {
           "en": "unlikely",
-          "cz": "nepravděpodobný"
+          "cz": "nepravděpodobný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "unusual",
-          "cz": "neobvyklý"
+          "cz": "neobvyklý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "upper",
-          "cz": "horní"
+          "cz": "horní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "upset",
-          "cz": "rozrušený"
+          "cz": "rozrušený",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "useful",
-          "cz": "užitečný"
+          "cz": "užitečný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "usual",
-          "cz": "obvyklý"
+          "cz": "obvyklý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "valuable",
-          "cz": "cenný"
+          "cz": "cenný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "various",
-          "cz": "různý"
+          "cz": "různý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "vast",
-          "cz": "rozsáhlý"
+          "cz": "rozsáhlý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "violent",
-          "cz": "násilný"
+          "cz": "násilný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "visible",
-          "cz": "viditelný"
+          "cz": "viditelný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "visual",
-          "cz": "vizuální"
+          "cz": "vizuální",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -1201,51 +2408,105 @@
       "items": [
         {
           "en": "warm",
-          "cz": "teplý"
+          "cz": "teplý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "weak",
-          "cz": "slabý"
+          "cz": "slabý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "wealthy",
-          "cz": "bohatý"
+          "cz": "bohatý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "weekly",
-          "cz": "týdenní"
+          "cz": "týdenní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "welcome",
-          "cz": "vítaný / vítejte"
+          "cz": "vítaný / vítejte",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "western",
-          "cz": "západní"
+          "cz": "západní",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "wet",
-          "cz": "mokrý"
+          "cz": "mokrý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "whole",
-          "cz": "celý"
+          "cz": "celý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "wide",
-          "cz": "široký"
+          "cz": "široký",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "wild",
-          "cz": "divoký"
+          "cz": "divoký",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "willing",
-          "cz": "ochotný"
+          "cz": "ochotný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "wise",
-          "cz": "moudrý"
+          "cz": "moudrý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -1255,51 +2516,103 @@
       "items": [
         {
           "en": "based",
-          "cz": "založený (na)"
+          "cz": "založený (na)",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "blank",
-          "cz": "prázdný (formulář)"
+          "cz": "prázdný (formulář)",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "bottom",
-          "cz": "spodní / dno"
+          "cz": "spodní / dno",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "classical",
-          "cz": "klasický"
+          "cz": "klasický",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "close",
-          "cz": "blízko / zavřít"
+          "cz": "blízko / zavřít",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "comfortable",
-          "cz": "pohodlný"
+          "cz": "pohodlný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "connected",
-          "cz": "propojený"
+          "cz": "propojený",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "creative",
-          "cz": "kreativní"
+          "cz": "kreativní",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "crowded",
-          "cz": "přeplněný"
+          "cz": "přeplněný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "curly",
-          "cz": "kudrnatý"
+          "cz": "kudrnatý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "direct",
-          "cz": "přímý"
+          "cz": "přímý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "divorced",
-          "cz": "rozvedený"
+          "cz": "rozvedený",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         }
       ]
     },
@@ -1309,51 +2622,103 @@
       "items": [
         {
           "en": "electrical",
-          "cz": "elektrický"
+          "cz": "elektrický",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "electronic",
-          "cz": "elektronický"
+          "cz": "elektronický",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "following",
-          "cz": "následující"
+          "cz": "následující",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "further",
-          "cz": "další / dál"
+          "cz": "další / dál",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "gold",
-          "cz": "zlatý / zlato"
+          "cz": "zlatý / zlato",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "included",
-          "cz": "zahrnutý"
+          "cz": "zahrnutý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "incredible",
-          "cz": "neuvěřitelný"
+          "cz": "neuvěřitelný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "major",
-          "cz": "hlavní / velký"
+          "cz": "hlavní / velký",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "missing",
-          "cz": "chybějící"
+          "cz": "chybějící",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "noisy",
-          "cz": "hlučný"
+          "cz": "hlučný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "normal",
-          "cz": "normální"
+          "cz": "normální",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "pleased",
-          "cz": "potěšený"
+          "cz": "potěšený",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     },
@@ -1363,59 +2728,118 @@
       "items": [
         {
           "en": "pop",
-          "cz": "pop (hudba)"
+          "cz": "pop (hudba)",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "scary",
-          "cz": "strašidelný"
+          "cz": "strašidelný",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "shut",
-          "cz": "zavřený / zavřít"
+          "cz": "zavřený / zavřít",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "silver",
-          "cz": "stříbrný / stříbro"
+          "cz": "stříbrný / stříbro",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "surprising",
-          "cz": "překvapivý"
+          "cz": "překvapivý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "teenage",
-          "cz": "teenagerský"
+          "cz": "teenagerský",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "thick",
-          "cz": "tlustý / hustý"
+          "cz": "tlustý / hustý",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "tidy",
-          "cz": "uklizený"
+          "cz": "uklizený",
+          "use": [
+            "it_is",
+            "i_am_adj",
+            "the_bag_is"
+          ]
         },
         {
           "en": "twin",
-          "cz": "dvojče / dvojitý"
+          "cz": "dvojče / dvojitý",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "underground",
-          "cz": "podzemní / metro"
+          "cz": "podzemní / metro",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "worst",
-          "cz": "nejhorší"
+          "cz": "nejhorší",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "fat",
-          "cz": "tlustý / tuk"
+          "cz": "tlustý / tuk",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "wooden",
-          "cz": "dřevěný"
+          "cz": "dřevěný",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         },
         {
           "en": "working",
-          "cz": "pracující / fungující"
+          "cz": "pracující / fungující",
+          "use": [
+            "it_is",
+            "the_bag_is"
+          ]
         }
       ]
     }

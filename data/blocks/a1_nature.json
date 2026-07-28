@@ -3,61 +3,333 @@
   "title": "Nature & weather",
   "level": "A1",
   "tree_node": "leaf_nature_a1",
-  "note": "P3 Oxford A1 nature, weather, seasons. Sentence = fruit.",
+  "note": "P3 Oxford A1 nature, weather, seasons. Sentence = fruit. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "nature_world",
       "title": "Nature · world",
       "items": [
-        { "en": "nature", "cz": "příroda" },
-        { "en": "weather", "cz": "počasí" },
-        { "en": "sun", "cz": "slunce" },
-        { "en": "rain", "cz": "déšť" },
-        { "en": "snow", "cz": "sníh" },
-        { "en": "wind", "cz": "vítr" },
-        { "en": "cloud", "cz": "mrak" },
-        { "en": "sky", "cz": "obloha" },
-        { "en": "air", "cz": "vzduch" },
-        { "en": "tree", "cz": "strom" },
-        { "en": "flower", "cz": "květina" },
-        { "en": "plant", "cz": "rostlina" }
+        {
+          "en": "nature",
+          "cz": "příroda",
+          "use": [
+            "is_important",
+            "lets_talk_about",
+            "i_like_bare"
+          ]
+        },
+        {
+          "en": "weather",
+          "cz": "počasí",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "sun",
+          "cz": "slunce",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "rain",
+          "cz": "déšť",
+          "use": [
+            "i_like_bare",
+            "i_have_bare",
+            "i_need_bare"
+          ]
+        },
+        {
+          "en": "snow",
+          "cz": "sníh",
+          "use": [
+            "i_like_bare",
+            "i_have_bare",
+            "i_need_bare"
+          ]
+        },
+        {
+          "en": "wind",
+          "cz": "vítr",
+          "use": [
+            "i_like_bare",
+            "i_have_bare",
+            "i_need_bare"
+          ]
+        },
+        {
+          "en": "cloud",
+          "cz": "mrak",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "sky",
+          "cz": "obloha",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "air",
+          "cz": "vzduch",
+          "use": [
+            "i_like_bare",
+            "i_have_bare",
+            "i_need_bare"
+          ]
+        },
+        {
+          "en": "tree",
+          "cz": "strom",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "flower",
+          "cz": "květina",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "plant",
+          "cz": "rostlina",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        }
       ]
     },
     {
       "id": "nature_land",
       "title": "Nature · land & water",
       "items": [
-        { "en": "mountain", "cz": "hora" },
-        { "en": "hill", "cz": "kopec" },
-        { "en": "river", "cz": "řeka" },
-        { "en": "sea", "cz": "moře" },
-        { "en": "lake", "cz": "jezero" },
-        { "en": "island", "cz": "ostrov" },
-        { "en": "forest", "cz": "les" },
-        { "en": "field", "cz": "pole" },
-        { "en": "land", "cz": "země / pevnina" },
-        { "en": "world", "cz": "svět" },
-        { "en": "earth", "cz": "Země / země" },
-        { "en": "space", "cz": "vesmír / prostor" }
+        {
+          "en": "mountain",
+          "cz": "hora",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "hill",
+          "cz": "kopec",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "river",
+          "cz": "řeka",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "sea",
+          "cz": "moře",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "lake",
+          "cz": "jezero",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "island",
+          "cz": "ostrov",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "forest",
+          "cz": "les",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "field",
+          "cz": "pole",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "land",
+          "cz": "země / pevnina",
+          "use": [
+            "lets_talk_about",
+            "is_important"
+          ]
+        },
+        {
+          "en": "world",
+          "cz": "svět",
+          "use": [
+            "lets_talk_about",
+            "is_important"
+          ]
+        },
+        {
+          "en": "earth",
+          "cz": "Země / země",
+          "use": [
+            "lets_talk_about",
+            "is_important"
+          ]
+        },
+        {
+          "en": "space",
+          "cz": "vesmír / prostor",
+          "use": [
+            "lets_talk_about",
+            "is_important"
+          ]
+        }
       ]
     },
     {
       "id": "nature_seasons",
       "title": "Nature · seasons & feel",
       "items": [
-        { "en": "spring", "cz": "jaro" },
-        { "en": "summer", "cz": "léto" },
-        { "en": "autumn", "cz": "podzim" },
-        { "en": "winter", "cz": "zima" },
-        { "en": "warm", "cz": "teplý" },
-        { "en": "cool", "cz": "chladný / v pohodě" },
-        { "en": "dry", "cz": "suchý" },
-        { "en": "wet", "cz": "mokrý" },
-        { "en": "dark", "cz": "tmavý" },
-        { "en": "light", "cz": "světlo / světlý" },
-        { "en": "fire", "cz": "oheň" },
-        { "en": "star", "cz": "hvězda" }
+        {
+          "en": "spring",
+          "cz": "jaro",
+          "use": [
+            "i_like_bare",
+            "is_fun",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "summer",
+          "cz": "léto",
+          "use": [
+            "i_like_bare",
+            "is_fun",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "autumn",
+          "cz": "podzim",
+          "use": [
+            "i_like_bare",
+            "is_fun",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "winter",
+          "cz": "zima",
+          "use": [
+            "i_like_bare",
+            "is_fun",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "warm",
+          "cz": "teplý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "cool",
+          "cz": "chladný / v pohodě",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "dry",
+          "cz": "suchý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "wet",
+          "cz": "mokrý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "dark",
+          "cz": "tmavý",
+          "use": [
+            "it_is",
+            "i_am_adj"
+          ]
+        },
+        {
+          "en": "light",
+          "cz": "světlo / světlý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "fire",
+          "cz": "oheň",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "star",
+          "cz": "hvězda",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        }
       ]
     }
   ]

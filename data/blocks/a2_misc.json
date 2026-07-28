@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_misc_a2",
   "codex_unit": "V_COR-A1B1-01",
-  "note": "Overflow A2 · COR",
+  "note": "Overflow A2 · COR · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,94 @@
       "items": [
         {
           "en": "appearance",
-          "cz": "vzhled"
+          "cz": "vzhled",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "architect",
-          "cz": "architekt"
+          "cz": "architekt",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "architecture",
-          "cz": "architektura"
+          "cz": "architektura",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "cigarette",
-          "cz": "cigareta"
+          "cz": "cigareta",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "smoking",
-          "cz": "kouření"
+          "cz": "kouření",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "circle",
-          "cz": "kruh"
+          "cz": "kruh",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "column",
-          "cz": "sloupec / sloupek"
+          "cz": "sloupec / sloupek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "cross",
-          "cz": "kříž / přejít"
+          "cz": "kříž / přejít",
+          "use": []
         },
         {
           "en": "fall",
-          "cz": "podzim / pád"
+          "cz": "podzim / pád",
+          "use": []
         },
         {
           "en": "farming",
-          "cz": "zemědělství"
+          "cz": "zemědělství",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "gap",
-          "cz": "mezera"
+          "cz": "mezera",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "hit",
-          "cz": "zásah / hit"
+          "cz": "zásah / hit",
+          "use": []
         }
       ]
     },
@@ -67,51 +110,102 @@
       "items": [
         {
           "en": "hole",
-          "cz": "díra"
+          "cz": "díra",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "invitation",
-          "cz": "pozvánka"
+          "cz": "pozvánka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "matter",
-          "cz": "záležitost / záležet"
+          "cz": "záležitost / záležet",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "movement",
-          "cz": "pohyb / hnutí"
+          "cz": "pohyb / hnutí",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "parking",
-          "cz": "parkování"
+          "cz": "parkování",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "reception",
-          "cz": "recepce / příjem"
+          "cz": "recepce / příjem",
+          "use": [
+            "this_is_a",
+            "where_is_the",
+            "i_need_a"
+          ]
         },
         {
           "en": "seat",
-          "cz": "sedadlo"
+          "cz": "sedadlo",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "singing",
-          "cz": "zpěv"
+          "cz": "zpěv",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "speed",
-          "cz": "rychlost"
+          "cz": "rychlost",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "step",
-          "cz": "krok"
+          "cz": "krok",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "survey",
-          "cz": "průzkum"
+          "cz": "průzkum",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "trouble",
-          "cz": "potíž"
+          "cz": "potíž",
+          "use": [
+            "is_important"
+          ]
         }
       ]
     },
@@ -121,51 +215,106 @@
       "items": [
         {
           "en": "unit",
-          "cz": "jednotka"
+          "cz": "jednotka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "user",
-          "cz": "uživatel"
+          "cz": "uživatel",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "van",
-          "cz": "dodávka"
+          "cz": "dodávka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "wheel",
-          "cz": "kolo (vozidla)"
+          "cz": "kolo (vozidla)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "wish",
-          "cz": "přání"
+          "cz": "přání",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
         },
         {
           "en": "stamp",
-          "cz": "známka / razítko"
+          "cz": "známka / razítko",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "toy",
-          "cz": "hračka"
+          "cz": "hračka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "model",
-          "cz": "model"
+          "cz": "model",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "pair",
-          "cz": "pár"
+          "cz": "pár",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "piece",
-          "cz": "kousek"
+          "cz": "kousek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "set",
-          "cz": "sada / soubor"
+          "cz": "sada / soubor",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "sort",
-          "cz": "druh / třídit"
+          "cz": "druh / třídit",
+          "use": []
         }
       ]
     },
@@ -175,51 +324,103 @@
       "items": [
         {
           "en": "type",
-          "cz": "typ"
+          "cz": "typ",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
         },
         {
           "en": "way",
-          "cz": "způsob / cesta"
+          "cz": "způsob / cesta",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "end",
-          "cz": "konec"
+          "cz": "konec",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
         },
         {
           "en": "start",
-          "cz": "začátek"
+          "cz": "začátek",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "middle",
-          "cz": "prostředek"
+          "cz": "prostředek",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "side",
-          "cz": "strana"
+          "cz": "strana",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "edge",
-          "cz": "okraj"
+          "cz": "okraj",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "point",
-          "cz": "bod / pointa"
+          "cz": "bod / pointa",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
         },
         {
           "en": "line",
-          "cz": "řada / linka"
+          "cz": "řada / linka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "list",
-          "cz": "seznam"
+          "cz": "seznam",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "page",
-          "cz": "stránka"
+          "cz": "stránka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "chapter",
-          "cz": "kapitola"
+          "cz": "kapitola",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     },
@@ -229,51 +430,111 @@
       "items": [
         {
           "en": "letter",
-          "cz": "dopis / písmeno"
+          "cz": "dopis / písmeno",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "note",
-          "cz": "poznámka"
+          "cz": "poznámka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "card",
-          "cz": "karta"
+          "cz": "karta",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "ticket",
-          "cz": "lístek"
+          "cz": "lístek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "key",
-          "cz": "klíč"
+          "cz": "klíč",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "bag",
-          "cz": "taška"
+          "cz": "taška",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "box",
-          "cz": "krabice"
+          "cz": "krabice",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "bottle",
-          "cz": "láhev"
+          "cz": "láhev",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "cup",
-          "cz": "hrnek"
+          "cz": "hrnek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "glass",
-          "cz": "sklenice"
+          "cz": "sklenice",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
           "en": "plate",
-          "cz": "talíř"
+          "cz": "talíř",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "bowl",
-          "cz": "miska"
+          "cz": "miska",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     },
@@ -283,51 +544,65 @@
       "items": [
         {
           "en": "according to",
-          "cz": "podle"
+          "cz": "podle",
+          "use": []
         },
         {
           "en": "all right",
-          "cz": "v pořádku"
+          "cz": "v pořádku",
+          "use": []
         },
         {
           "en": "any more",
-          "cz": "už ne"
+          "cz": "už ne",
+          "use": []
         },
         {
           "en": "per cent",
-          "cz": "procento"
+          "cz": "procento",
+          "use": []
         },
         {
           "en": "used to",
-          "cz": "býval(a) / dřív"
+          "cz": "býval(a) / dřív",
+          "use": []
         },
         {
           "en": "ah",
-          "cz": "ach"
+          "cz": "ach",
+          "use": []
         },
         {
           "en": "billion",
-          "cz": "miliarda"
+          "cz": "miliarda",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "dear",
-          "cz": "drahý / milý"
+          "cz": "drahý / milý",
+          "use": []
         },
         {
           "en": "herself",
-          "cz": "sebe (ona)"
+          "cz": "sebe (ona)",
+          "use": []
         },
         {
           "en": "himself",
-          "cz": "sebe (on)"
+          "cz": "sebe (on)",
+          "use": []
         },
         {
           "en": "including",
-          "cz": "včetně"
+          "cz": "včetně",
+          "use": []
         },
         {
           "en": "itself",
-          "cz": "sám / samo"
+          "cz": "sám / samo",
+          "use": []
         }
       ]
     },
@@ -337,59 +612,79 @@
       "items": [
         {
           "en": "might",
-          "cz": "možná (modal)"
+          "cz": "možná (modal)",
+          "use": []
         },
         {
           "en": "myself",
-          "cz": "sebe (já)"
+          "cz": "sebe (já)",
+          "use": []
         },
         {
           "en": "neither",
-          "cz": "ani jeden"
+          "cz": "ani jeden",
+          "use": []
         },
         {
           "en": "none",
-          "cz": "žádný"
+          "cz": "žádný",
+          "use": []
         },
         {
           "en": "ourselves",
-          "cz": "sebe (my)"
+          "cz": "sebe (my)",
+          "use": []
         },
         {
           "en": "several",
-          "cz": "několik"
+          "cz": "několik",
+          "use": []
         },
         {
           "en": "shall",
-          "cz": "budu / mám (modal)"
+          "cz": "budu / mám (modal)",
+          "use": []
         },
         {
           "en": "such",
-          "cz": "takový"
+          "cz": "takový",
+          "use": []
         },
         {
           "en": "themselves",
-          "cz": "sebe (oni)"
+          "cz": "sebe (oni)",
+          "use": []
         },
         {
           "en": "while",
-          "cz": "zatímco"
+          "cz": "zatímco",
+          "use": []
         },
         {
           "en": "whose",
-          "cz": "čí"
+          "cz": "čí",
+          "use": []
         },
         {
           "en": "wow",
-          "cz": "páni"
+          "cz": "páni",
+          "use": []
         },
         {
           "en": "zero",
-          "cz": "nula"
+          "cz": "nula",
+          "use": [
+            "is_important"
+          ]
         },
         {
           "en": "view",
-          "cz": "výhled / názor"
+          "cz": "výhled / názor",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "where_is_the"
+          ]
         }
       ]
     }

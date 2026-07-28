@@ -1,0 +1,198 @@
+{
+  "id": "b1_abstract",
+  "title": "Abstraction starters (B1)",
+  "level": "B1",
+  "tree_node": "trunk_abstract_b1",
+  "codex_unit": "V_THM-A1B1-10",
+  "note": "V_THM-A1B1-10 · first abstract trunk layer · syllabus seeds (decision, problem, reason, opinion, experience, advice) + close B1 set · Sentence = fruit · carriers via use[]",
+  "default_direction": "cz_to_en",
+  "blocks": [
+    {
+      "id": "b1_abstract_seed",
+      "title": "Abstract · seeds",
+      "items": [
+        {
+          "en": "decision",
+          "cz": "rozhodnutí",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "problem",
+          "cz": "problém",
+          "use": [
+            "i_have_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "reason",
+          "cz": "důvod",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "opinion",
+          "cz": "názor",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "experience",
+          "cz": "zkušenost / zážitek",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "advice",
+          "cz": "rada",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "solution",
+          "cz": "řešení",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "choice",
+          "cz": "volba / výběr",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "suggestion",
+          "cz": "návrh / doporučení",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "agreement",
+          "cz": "souhlas / dohoda",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "argument",
+          "cz": "argument / hádka",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "purpose",
+          "cz": "účel / smysl",
+          "use": [
+            "is_important"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b1_abstract_more",
+      "title": "Abstract · more",
+      "items": [
+        {
+          "en": "advantage",
+          "cz": "výhoda",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "disadvantage",
+          "cz": "nevýhoda",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "opportunity",
+          "cz": "příležitost",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "risk",
+          "cz": "riziko",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "goal",
+          "cz": "cíl",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "progress",
+          "cz": "pokrok",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "effort",
+          "cz": "úsilí / snaha",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "ability",
+          "cz": "schopnost",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "knowledge",
+          "cz": "znalosti / vědomosti",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "relationship",
+          "cz": "vztah",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "difference",
+          "cz": "rozdíl",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "development",
+          "cz": "vývoj / rozvoj",
+          "use": [
+            "is_important"
+          ]
+        }
+      ]
+    }
+  ]
+}

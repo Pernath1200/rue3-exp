@@ -69,11 +69,11 @@
           "accepts": ["Do you like tea"]
         },
         {
-          "en": "She likes music.",
-          "cz": "Má ráda hudbu.",
-          "gap": "She likes ____.",
+          "en": "He likes music.",
+          "cz": "Má rád hudbu.",
+          "gap": "He likes ____.",
           "gap_answer": "music",
-          "accepts": ["She likes music", "She loves music."]
+          "accepts": ["He likes music", "He loves music."]
         },
         {
           "en": "I want a ticket.",

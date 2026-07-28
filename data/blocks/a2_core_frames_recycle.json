@@ -20,12 +20,20 @@
           "accepts": ["I'm a manager.", "I am a manager"]
         },
         {
-          "en": "She is my neighbour.",
-          "cz": "Je moje sousedka. / Je můj soused.",
-          "gap": "She is my ____.",
+          "en": "He is my neighbour.",
+          "cz": "Je můj soused. / Je moje sousedka.",
+          "gap": "He is my ____.",
           "gap_answer": "neighbour",
           "gap_accepts": ["neighbor"],
-          "accepts": ["She's my neighbour.", "She's my neighbor."]
+          "accepts": [
+            "He's my neighbour.",
+            "He is my neighbor.",
+            "He's my neighbor.",
+            "She is my neighbour.",
+            "She's my neighbour.",
+            "She is my neighbor.",
+            "She's my neighbor."
+          ]
         },
         {
           "en": "They are students.",
@@ -67,7 +75,15 @@
           "cz": "Je tu blízko lékárna.",
           "gap": "There is a ____ nearby.",
           "gap_answer": "pharmacy",
-          "accepts": ["There's a pharmacy nearby."]
+          "accepts": [
+            "There's a pharmacy nearby.",
+            "There is a pharmacy near.",
+            "There's a pharmacy near.",
+            "There is a pharmacy near here.",
+            "There's a pharmacy near here.",
+            "There is a pharmacy close by.",
+            "There's a pharmacy close by."
+          ]
         },
         {
           "en": "There are many tourists here.",
@@ -81,7 +97,7 @@
           "cz": "Umím anglicky. / Mluvím anglicky.",
           "gap": "I can speak ____.",
           "gap_answer": "English",
-          "accepts": ["I can speak English"]
+          "accepts": ["I can speak English", "I speak English."]
         },
         {
           "en": "I like classical music.",
@@ -140,11 +156,11 @@
           "accepts": ["I go to the gym every week"]
         },
         {
-          "en": "She needs help.",
+          "en": "He needs help.",
           "cz": "Potřebuje pomoc.",
-          "gap": "She needs ____.",
+          "gap": "He needs ____.",
           "gap_answer": "help",
-          "accepts": ["She needs help"]
+          "accepts": ["He needs help"]
         },
         {
           "en": "We meet at the station.",

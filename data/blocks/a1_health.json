@@ -4,43 +4,208 @@
   "level": "A1",
   "tree_node": "leaf_health_a1",
   "codex_unit": "V_THM-A1B1-07",
-  "note": "A1 Health theme · V_THM-A1B1-07 · illness + care (Body stays parts-only). Sentence = fruit.",
+  "note": "A1 Health · V_THM-A1B1-07 · carriers on use[] · fruit = Word",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "health_feeling",
       "title": "Health · how I feel",
       "items": [
-        { "en": "health", "cz": "zdraví" },
-        { "en": "healthy", "cz": "zdravý" },
-        { "en": "ill", "cz": "nemocný" },
-        { "en": "sick", "cz": "nemocný / špatně (mi je)" },
-        { "en": "pain", "cz": "bolest" },
-        { "en": "hurt", "cz": "bolet / bolet se" },
-        { "en": "headache", "cz": "bolest hlavy" },
-        { "en": "stomach", "cz": "žaludek / břicho" },
-        { "en": "fever", "cz": "horečka" },
-        { "en": "cough", "cz": "kašel / kašlat" },
-        { "en": "cold (illness)", "cz": "nachlazení" },
-        { "en": "flu", "cz": "chřipka" }
+        {
+          "en": "health",
+          "cz": "zdraví",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "healthy",
+          "cz": "zdravý",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "ill",
+          "cz": "nemocný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "sick",
+          "cz": "nemocný / špatně (mi je)",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
+        },
+        {
+          "en": "pain",
+          "cz": "bolest",
+          "use": [
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "hurt",
+          "cz": "bolet / bolet se",
+          "use": []
+        },
+        {
+          "en": "headache",
+          "cz": "bolest hlavy",
+          "use": [
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "stomach",
+          "cz": "žaludek / břicho",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "fever",
+          "cz": "horečka",
+          "use": [
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "cough",
+          "cz": "kašel / kašlat",
+          "use": [
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "cold (illness)",
+          "cz": "nachlazení",
+          "use": [
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "flu",
+          "cz": "chřipka",
+          "use": [
+            "i_have_bare"
+          ]
+        }
       ]
     },
     {
       "id": "health_care",
       "title": "Health · care",
       "items": [
-        { "en": "doctor", "cz": "doktor / lékař" },
-        { "en": "nurse", "cz": "sestra (zdravotní)" },
-        { "en": "patient", "cz": "pacient" },
-        { "en": "hospital", "cz": "nemocnice" },
-        { "en": "pharmacy", "cz": "lékárna" },
-        { "en": "medicine", "cz": "lék / léky" },
-        { "en": "pill", "cz": "tableta / prášek" },
-        { "en": "appointment", "cz": "termín (u lékaře)" },
-        { "en": "ambulance", "cz": "sanitka" },
-        { "en": "temperature", "cz": "teplota (tělesná)" },
-        { "en": "rest (verb)", "cz": "odpočívat" },
-        { "en": "dentist", "cz": "zubař" }
+        {
+          "en": "doctor",
+          "cz": "doktor / lékař",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a",
+            "he_is_my"
+          ]
+        },
+        {
+          "en": "nurse",
+          "cz": "sestra (zdravotní)",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a",
+            "he_is_my"
+          ]
+        },
+        {
+          "en": "patient",
+          "cz": "pacient",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "hospital",
+          "cz": "nemocnice",
+          "use": [
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "pharmacy",
+          "cz": "lékárna",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "medicine",
+          "cz": "lék / léky",
+          "use": [
+            "i_need_bare",
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "pill",
+          "cz": "tableta / prášek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "appointment",
+          "cz": "termín (u lékaře)",
+          "use": [
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "ambulance",
+          "cz": "sanitka",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "temperature",
+          "cz": "teplota (tělesná)",
+          "use": [
+            "i_have_a"
+          ]
+        },
+        {
+          "en": "rest (verb)",
+          "cz": "odpočívat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "dentist",
+          "cz": "zubař",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        }
       ]
     }
   ]

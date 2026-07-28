@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_home_a2",
   "codex_unit": "V_THM-A1B1-01",
-  "note": "V_THM-A1B1-01 home / housing A2",
+  "note": "V_THM-A1B1-01 home / housing A2 · carriers curated (no I-need-a-basement / I-enjoy-ceiling)",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,104 @@
       "items": [
         {
           "en": "apartment",
-          "cz": "byt (amer.)"
+          "cz": "byt (amer.)",
+          "use": [
+            "this_is_a",
+            "where_is_the",
+            "i_have_a",
+            "i_go_to"
+          ]
         },
         {
           "en": "balcony",
-          "cz": "balkon"
+          "cz": "balkon",
+          "use": [
+            "this_is_a",
+            "where_is_the",
+            "i_have_a"
+          ]
         },
         {
           "en": "basement",
-          "cz": "suterén / sklep"
+          "cz": "suterén / sklep",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "carpet",
-          "cz": "koberec"
+          "cz": "koberec",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "ceiling",
-          "cz": "strop"
+          "cz": "strop",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "central heating",
-          "cz": "ústřední topení"
+          "cz": "ústřední topení",
+          "use": [
+            "i_have_bare",
+            "i_need_bare"
+          ]
         },
         {
           "en": "cupboard",
-          "cz": "skříň / kredenc"
+          "cz": "skříň / kredenc",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "curtain",
-          "cz": "závěs / záclona"
+          "cz": "závěs / záclona",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "dishwasher",
-          "cz": "myčka nádobí"
+          "cz": "myčka nádobí",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "downstairs",
-          "cz": "dole / dolejší patro"
+          "cz": "dole / dolejší patro",
+          "use": []
         },
         {
           "en": "furniture",
-          "cz": "nábytek"
+          "cz": "nábytek",
+          "use": [
+            "i_have_bare",
+            "i_need_bare"
+          ]
         },
         {
           "en": "garage",
-          "cz": "garáž"
+          "cz": "garáž",
+          "use": [
+            "this_is_a",
+            "where_is_the",
+            "i_have_a"
+          ]
         }
       ]
     },
@@ -67,51 +120,105 @@
       "items": [
         {
           "en": "gate",
-          "cz": "brána / vrata"
+          "cz": "brána / vrata",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "heating",
-          "cz": "topení"
+          "cz": "topení",
+          "use": [
+            "i_have_bare",
+            "i_need_bare"
+          ]
         },
         {
           "en": "housework",
-          "cz": "domácí práce"
+          "cz": "domácí práce",
+          "use": [
+            "i_have_bare",
+            "i_need_bare"
+          ]
         },
         {
           "en": "landlord",
-          "cz": "majitel bytu / domácí"
+          "cz": "majitel bytu / domácí",
+          "use": [
+            "he_is_my",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "lift",
-          "cz": "výtah"
+          "cz": "výtah",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "neighbour",
-          "cz": "soused"
+          "cz": "soused",
+          "use": [
+            "he_is_my",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "pillow",
-          "cz": "polštář"
+          "cz": "polštář",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "rent",
-          "cz": "nájem"
+          "cz": "nájem",
+          "use": [
+            "i_have_bare",
+            "i_need_bare"
+          ]
         },
         {
           "en": "roof",
-          "cz": "střecha"
+          "cz": "střecha",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "shelf",
-          "cz": "police"
+          "cz": "police",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "sink",
-          "cz": "dřez / umyvadlo"
+          "cz": "dřez / umyvadlo",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "sofa",
-          "cz": "pohovka"
+          "cz": "pohovka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     },
@@ -121,63 +228,126 @@
       "items": [
         {
           "en": "stairs",
-          "cz": "schody"
+          "cz": "schody",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "upstairs",
-          "cz": "nahoře / horní patro"
+          "cz": "nahoře / horní patro",
+          "use": []
         },
         {
           "en": "washing machine",
-          "cz": "pračka"
+          "cz": "pračka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "mirror",
-          "cz": "zrcadlo"
+          "cz": "zrcadlo",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "towel",
-          "cz": "ručník"
+          "cz": "ručník",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "brush",
-          "cz": "kartáč"
+          "cz": "kartáč",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "lock",
-          "cz": "zámek / zamknout"
+          "cz": "zámek / zamknout",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "board",
-          "cz": "prkno / tabule"
+          "cz": "prkno / tabule",
+          "use": [
+            "this_is_a",
+            "i_have_a"
+          ]
         },
         {
           "en": "hall",
-          "cz": "hala / předsíň"
+          "cz": "hala / předsíň",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "sheet",
-          "cz": "prostěradlo / list papíru"
+          "cz": "prostěradlo / list papíru",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "rubbish",
-          "cz": "odpadky"
+          "cz": "odpadky",
+          "use": [
+            "i_have_bare",
+            "i_need_bare"
+          ]
         },
         {
           "en": "bin",
-          "cz": "koš (na odpad)"
+          "cz": "koš (na odpad)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "heat",
-          "cz": "teplo / vytápět"
+          "cz": "teplo / vytápět",
+          "use": [
+            "i_have_bare",
+            "i_need_bare"
+          ]
         },
         {
           "en": "stair",
-          "cz": "schod"
+          "cz": "schod",
+          "use": [
+            "this_is_a"
+          ]
         },
         {
           "en": "washing",
-          "cz": "praní / prádlo"
+          "cz": "praní / prádlo",
+          "use": [
+            "i_have_bare",
+            "i_need_bare"
+          ]
         }
       ]
     }

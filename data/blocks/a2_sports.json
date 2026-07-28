@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_sports_a2",
   "codex_unit": "V_THM-A1B1-09",
-  "note": "V_THM-A1B1-09 sport slice",
+  "note": "V_THM-A1B1-09 sport slice · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,108 @@
       "items": [
         {
           "en": "athlete",
-          "cz": "atlet / sportovec"
+          "cz": "atlet / sportovec",
+          "use": [
+            "this_is_a",
+            "he_is_a",
+            "i_am_a"
+          ]
         },
         {
           "en": "baseball",
-          "cz": "baseball"
+          "cz": "baseball",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "basketball",
-          "cz": "basketbal"
+          "cz": "basketbal",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "football",
-          "cz": "fotbal"
+          "cz": "fotbal",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "soccer",
-          "cz": "fotbal (amer.)"
+          "cz": "fotbal (amer.)",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "golf",
-          "cz": "golf"
+          "cz": "golf",
+          "use": [
+            "i_like_bare"
+          ]
         },
         {
           "en": "hockey",
-          "cz": "hokej"
+          "cz": "hokej",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "skiing",
-          "cz": "lyžování"
+          "cz": "lyžování",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "sailing",
-          "cz": "plachtění"
+          "cz": "plachtění",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "fishing",
-          "cz": "rybaření"
+          "cz": "rybaření",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "cycling",
-          "cz": "cyklistika"
+          "cz": "cyklistika",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "cycle",
-          "cz": "kolo / jet na kole"
+          "cz": "kolo / jet na kole",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         }
       ]
     },
@@ -67,43 +124,90 @@
       "items": [
         {
           "en": "runner",
-          "cz": "běžec"
+          "cz": "běžec",
+          "use": [
+            "this_is_a",
+            "he_is_a",
+            "i_am_a"
+          ]
         },
         {
           "en": "trainer",
-          "cz": "trenér / tenisky"
+          "cz": "trenér / tenisky",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "stadium",
-          "cz": "stadion"
+          "cz": "stadion",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
         },
         {
           "en": "match",
-          "cz": "zápas"
+          "cz": "zápas",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
         },
         {
           "en": "team",
-          "cz": "tým"
+          "cz": "tým",
+          "use": [
+            "i_work_in",
+            "i_have_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "swim",
-          "cz": "plavat"
+          "cz": "plavat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "ride",
-          "cz": "jet (na) / jízda"
+          "cz": "jet (na) / jízda",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "track",
-          "cz": "dráha / stopa"
+          "cz": "dráha / stopa",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "jump",
-          "cz": "skok / skákat"
+          "cz": "skok / skákat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "ski",
-          "cz": "lyže / lyžovat"
+          "cz": "lyže / lyžovat",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     }

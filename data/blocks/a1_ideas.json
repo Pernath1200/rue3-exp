@@ -3,79 +3,410 @@
   "title": "Ideas & things",
   "level": "A1",
   "tree_node": "leaf_ideas_a1",
-  "note": "P7 Oxford leftovers — abstract / general core nouns that do not fit a domain leaf cleanly. Sentence = fruit.",
+  "note": "P7 Oxford leftovers — abstract / general core nouns that do not fit a domain leaf cleanly. Sentence = fruit. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "ideas_basic",
       "title": "Ideas · basic",
       "items": [
-        { "en": "thing", "cz": "věc" },
-        { "en": "part", "cz": "část" },
-        { "en": "place", "cz": "místo" },
-        { "en": "person", "cz": "osoba" },
-        { "en": "life", "cz": "život" },
-        { "en": "group", "cz": "skupina" },
-        { "en": "member", "cz": "člen" },
-        { "en": "plan", "cz": "plán" },
-        { "en": "point", "cz": "bod / pointa" },
-        { "en": "fact", "cz": "fakt" },
-        { "en": "reason", "cz": "důvod" },
-        { "en": "result", "cz": "výsledek" }
+        {
+          "en": "thing",
+          "cz": "věc",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "part",
+          "cz": "část",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "place",
+          "cz": "místo",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "person",
+          "cz": "osoba",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "life",
+          "cz": "život",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "group",
+          "cz": "skupina",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "member",
+          "cz": "člen",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "plan",
+          "cz": "plán",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "point",
+          "cz": "bod / pointa",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "fact",
+          "cz": "fakt",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "reason",
+          "cz": "důvod",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "result",
+          "cz": "výsledek",
+          "use": [
+            "is_important"
+          ]
+        }
       ]
     },
     {
       "id": "ideas_more",
       "title": "Ideas · more",
       "items": [
-        { "en": "action", "cz": "čin / akce" },
-        { "en": "advice", "cz": "rada" },
-        { "en": "area", "cz": "oblast" },
-        { "en": "beginning", "cz": "začátek" },
-        { "en": "end", "cz": "konec" },
-        { "en": "event", "cz": "událost" },
-        { "en": "form", "cz": "formulář / forma" },
-        { "en": "line", "cz": "linka / řádek" },
-        { "en": "piece", "cz": "kousek / díl" },
-        { "en": "pair", "cz": "pár" },
-        { "en": "object", "cz": "předmět" },
-        { "en": "machine", "cz": "stroj" }
+        {
+          "en": "action",
+          "cz": "čin / akce",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "advice",
+          "cz": "rada",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "area",
+          "cz": "oblast",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "beginning",
+          "cz": "začátek",
+          "use": [
+            "lets_talk_about",
+            "is_important"
+          ]
+        },
+        {
+          "en": "end",
+          "cz": "konec",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "event",
+          "cz": "událost",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "form",
+          "cz": "formulář / forma",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "line",
+          "cz": "linka / řádek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "piece",
+          "cz": "kousek / díl",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "pair",
+          "cz": "pár",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "object",
+          "cz": "předmět",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "machine",
+          "cz": "stroj",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        }
       ]
     },
     {
       "id": "ideas_workish",
       "title": "Ideas · projects & style",
       "items": [
-        { "en": "product", "cz": "produkt / výrobek" },
-        { "en": "programme", "cz": "program" },
-        { "en": "project", "cz": "projekt" },
-        { "en": "routine", "cz": "rutina" },
-        { "en": "rule", "cz": "pravidlo" },
-        { "en": "section", "cz": "část / sekce" },
-        { "en": "situation", "cz": "situace" },
-        { "en": "skill", "cz": "dovednost" },
-        { "en": "sound", "cz": "zvuk" },
-        { "en": "style", "cz": "styl" },
-        { "en": "success", "cz": "úspěch" },
-        { "en": "topic", "cz": "téma" }
+        {
+          "en": "product",
+          "cz": "produkt / výrobek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "programme",
+          "cz": "program",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "project",
+          "cz": "projekt",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "routine",
+          "cz": "rutina",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "rule",
+          "cz": "pravidlo",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "section",
+          "cz": "část / sekce",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "situation",
+          "cz": "situace",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "skill",
+          "cz": "dovednost",
+          "use": [
+            "i_have_a",
+            "i_need_a",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "sound",
+          "cz": "zvuk",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "style",
+          "cz": "styl",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "success",
+          "cz": "úspěch",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "topic",
+          "cz": "téma",
+          "use": [
+            "is_important"
+          ]
+        }
       ]
     },
     {
       "id": "ideas_time_space",
       "title": "Ideas · time & world",
       "items": [
-        { "en": "moment", "cz": "okamžik" },
-        { "en": "period", "cz": "období" },
-        { "en": "past", "cz": "minulost" },
-        { "en": "future", "cz": "budoucnost" },
-        { "en": "century", "cz": "století" },
-        { "en": "date", "cz": "datum" },
-        { "en": "midnight", "cz": "půlnoc" },
-        { "en": "culture", "cz": "kultura" },
-        { "en": "health", "cz": "zdraví" },
-        { "en": "interest", "cz": "zájem" },
-        { "en": "capital", "cz": "hlavní město" },
-        { "en": "visitor", "cz": "návštěvník" }
+        {
+          "en": "moment",
+          "cz": "okamžik",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "period",
+          "cz": "období",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "past",
+          "cz": "minulost",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "future",
+          "cz": "budoucnost",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "century",
+          "cz": "století",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "date",
+          "cz": "datum",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "midnight",
+          "cz": "půlnoc",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "culture",
+          "cz": "kultura",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "health",
+          "cz": "zdraví",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "interest",
+          "cz": "zájem",
+          "use": [
+            "is_important"
+          ]
+        },
+        {
+          "en": "capital",
+          "cz": "hlavní město",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "visitor",
+          "cz": "návštěvník",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        }
       ]
     }
   ]

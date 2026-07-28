@@ -1,0 +1,6066 @@
+{
+  "version": 1,
+  "note": "A1 Word roots. Learner-friendly PIE. Czech cousins only when useful: surface lookalikes OR English bridge relatives (donate→dát, vision→vidět). Opaque historical links without a bridge are path/PIE only.",
+  "entries": {
+    "mother": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English mōdor"
+      },
+      "pie": {
+        "root": "*mater",
+        "meaning": "mother"
+      },
+      "czech_cognate": {
+        "word": "matka",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "father": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English fæder"
+      },
+      "pie": {
+        "root": "*pater",
+        "meaning": "father"
+      }
+    },
+    "brother": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English brōþor"
+      },
+      "pie": {
+        "root": "*bhrater",
+        "meaning": "brother"
+      },
+      "czech_cognate": {
+        "word": "bratr",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "sister": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sweostor"
+      },
+      "pie": {
+        "root": "*swesor",
+        "meaning": "sister"
+      },
+      "czech_cognate": {
+        "word": "sestra",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "son": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sunu"
+      },
+      "pie": {
+        "root": "*sunus",
+        "meaning": "son"
+      },
+      "czech_cognate": {
+        "word": "syn",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "daughter": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English dohtor"
+      },
+      "pie": {
+        "root": "*dhugater",
+        "meaning": "daughter"
+      },
+      "czech_cognate": {
+        "word": "dcera",
+        "bridge": "daughter (English kept more of the shape)",
+        "note": "True cousin; Czech lost the middle of the old form"
+      }
+    },
+    "name": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English nama"
+      },
+      "pie": {
+        "root": "*nomen",
+        "meaning": "name"
+      },
+      "czech_cognate": {
+        "word": "jméno",
+        "bridge": "nominate, noun, renown",
+        "note": "Same root as nominate/noun — Czech jméno is the cousin"
+      }
+    },
+    "family": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin familia via French"
+      }
+    },
+    "one": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ān"
+      },
+      "pie": {
+        "root": "*oinos",
+        "meaning": "one, single"
+      },
+      "czech_cognate": {
+        "word": "jeden",
+        "note": "Related — true cousin"
+      }
+    },
+    "two": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English twā"
+      },
+      "pie": {
+        "root": "*dwo",
+        "meaning": "two"
+      },
+      "czech_cognate": {
+        "word": "dva",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "three": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English þrīe"
+      },
+      "pie": {
+        "root": "*treyes",
+        "meaning": "three"
+      },
+      "czech_cognate": {
+        "word": "tři",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "four": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English fēower"
+      },
+      "pie": {
+        "root": "*kwetwores",
+        "meaning": "four"
+      },
+      "czech_cognate": {
+        "word": "čtyři",
+        "bridge": "quarter, quad, quadruple",
+        "note": "Same root as quarter/quad — Czech čtyři is the cousin"
+      }
+    },
+    "five": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English fīf"
+      },
+      "pie": {
+        "root": "*penkwe",
+        "meaning": "five"
+      },
+      "czech_cognate": {
+        "word": "pět",
+        "bridge": "pentagon, quintet",
+        "note": "Same root family as pent-/quint- — Czech pět is the cousin"
+      }
+    },
+    "six": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English siex"
+      },
+      "pie": {
+        "root": "*sweks",
+        "meaning": "six"
+      },
+      "czech_cognate": {
+        "word": "šest",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "seven": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English seofon"
+      },
+      "pie": {
+        "root": "*septem",
+        "meaning": "seven"
+      },
+      "czech_cognate": {
+        "word": "sedm",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "eight": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English eahta"
+      },
+      "pie": {
+        "root": "*okto",
+        "meaning": "eight"
+      },
+      "czech_cognate": {
+        "word": "osm",
+        "note": "Related — true cousin"
+      }
+    },
+    "nine": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English nigon"
+      },
+      "pie": {
+        "root": "*newen",
+        "meaning": "nine"
+      },
+      "czech_cognate": {
+        "word": "devět",
+        "bridge": "November (ninth month in the old calendar)",
+        "note": "Same root family; Slavic form reshaped"
+      }
+    },
+    "ten": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English tīen"
+      },
+      "pie": {
+        "root": "*dekem",
+        "meaning": "ten"
+      },
+      "czech_cognate": {
+        "word": "deset",
+        "note": "Related — true cousin"
+      }
+    },
+    "eye": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ēage"
+      },
+      "pie": {
+        "root": "*okw-",
+        "meaning": "see; eye"
+      },
+      "czech_cognate": {
+        "word": "oko",
+        "note": "Related — true cousin"
+      }
+    },
+    "ear": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ēare"
+      },
+      "pie": {
+        "root": "*ous",
+        "meaning": "ear"
+      },
+      "czech_cognate": {
+        "word": "ucho",
+        "note": "Related — true cousin"
+      }
+    },
+    "nose": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English nosu"
+      },
+      "pie": {
+        "root": "*nas-",
+        "meaning": "nose"
+      },
+      "czech_cognate": {
+        "word": "nos",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "tooth": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English tōþ"
+      },
+      "pie": {
+        "root": "*dont-",
+        "meaning": "tooth"
+      },
+      "czech_cognate": {
+        "word": "zub",
+        "bridge": "dental, dentist",
+        "note": "Same root as dental — Czech zub is the cousin"
+      }
+    },
+    "heart": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English heorte"
+      },
+      "pie": {
+        "root": "*kerd",
+        "meaning": "heart"
+      },
+      "czech_cognate": {
+        "word": "srdce",
+        "bridge": "cardiac, cordial",
+        "note": "Same root as cardiac — Czech srdce is the cousin"
+      }
+    },
+    "foot": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English fōt"
+      },
+      "pie": {
+        "root": "*pods",
+        "meaning": "foot"
+      },
+      "notes": "Czech everyday noha is a different root; compare Latin pes / English pedal."
+    },
+    "hand": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hand"
+      },
+      "notes": "Czech ruka is a different root — not a cognate pair."
+    },
+    "blood": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English blōd"
+      },
+      "notes": "Germanic word; Czech krev is a different (clearer PIE) line."
+    },
+    "water": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wæter"
+      },
+      "pie": {
+        "root": "*wodr",
+        "meaning": "water"
+      },
+      "czech_cognate": {
+        "word": "voda",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "sun": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sunne"
+      },
+      "pie": {
+        "root": "*sawel",
+        "meaning": "sun"
+      },
+      "czech_cognate": {
+        "word": "slunce",
+        "note": "Related — true cousin"
+      }
+    },
+    "day": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English dæg"
+      },
+      "pie": {
+        "root": "*dhegh-",
+        "meaning": "day; hot period"
+      },
+      "czech_cognate": {
+        "word": "den",
+        "note": "Related — true cousin"
+      }
+    },
+    "night": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English niht"
+      },
+      "pie": {
+        "root": "*nokwt",
+        "meaning": "night"
+      },
+      "czech_cognate": {
+        "word": "noc",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "fire": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English fȳr"
+      },
+      "pie": {
+        "root": "*pawr",
+        "meaning": "fire"
+      },
+      "notes": "Czech oheň is a different PIE line (like Latin ignis)."
+    },
+    "snow": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English snāw"
+      },
+      "pie": {
+        "root": "*sneigwh-",
+        "meaning": "snow"
+      },
+      "czech_cognate": {
+        "word": "sníh",
+        "note": "Related — true cousin"
+      }
+    },
+    "wind": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wind"
+      },
+      "pie": {
+        "root": "*wents",
+        "meaning": "blowing; wind"
+      },
+      "czech_cognate": {
+        "word": "vítr",
+        "bridge": "vent, ventilate, window (wind-eye)",
+        "note": "Same root as vent — Czech vítr is the cousin"
+      }
+    },
+    "star": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English steorra"
+      },
+      "pie": {
+        "root": "*ster",
+        "meaning": "star"
+      },
+      "notes": "Czech hvězda is a different root."
+    },
+    "earth": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English eorþe"
+      },
+      "notes": "Czech země is a different PIE line (compare Latin humus)."
+    },
+    "eat": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English etan"
+      },
+      "pie": {
+        "root": "*ed-",
+        "meaning": "eat"
+      },
+      "czech_cognate": {
+        "word": "jíst",
+        "bridge": "edible, eatable",
+        "note": "Same root as edible — Czech jíst is the cousin"
+      }
+    },
+    "come": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cuman"
+      },
+      "pie": {
+        "root": "*gwem-",
+        "meaning": "go, come"
+      }
+    },
+    "go": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English gān"
+      },
+      "notes": "Everyday Czech jít is a different root (*ei-)."
+    },
+    "school": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin schola (from Greek) via French / church Latin"
+      }
+    },
+    "animal": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin animal via French"
+      }
+    },
+    "colour": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin color via French"
+      }
+    },
+    "music": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin musica (from Greek) via French"
+      }
+    },
+    "problem": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin problema (from Greek)"
+      }
+    },
+    "address": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin via French (ad + directus)"
+      }
+    },
+    "adult": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin adultus \"grown up\""
+      }
+    },
+    "age": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin aetas via French"
+      }
+    },
+    "apartment": {
+      "immediate": {
+        "path": "latin",
+        "note": "Italian/French from Latin part \"share\""
+      }
+    },
+    "aunt": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin amita via French"
+      }
+    },
+    "baby": {
+      "immediate": {
+        "path": "other",
+        "note": "Later nursery word (baby-talk)"
+      }
+    },
+    "bag": {
+      "immediate": {
+        "path": "other",
+        "note": "Old Norse / uncertain; everyday loan into English"
+      }
+    },
+    "bath": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bæth"
+      },
+      "pie": {
+        "root": "*bhe-",
+        "meaning": "warm, heat"
+      }
+    },
+    "bathroom": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: bath + room"
+      }
+    },
+    "bed": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bedd"
+      },
+      "pie": {
+        "root": "*bhedh-",
+        "meaning": "dig; a dug place to sleep"
+      }
+    },
+    "bedroom": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: bed + room"
+      }
+    },
+    "birthday": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: birth + day"
+      }
+    },
+    "book": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bōc (related to beech wood tablets)"
+      }
+    },
+    "boy": {
+      "immediate": {
+        "path": "other",
+        "note": "Middle English; deeper origin unclear"
+      }
+    },
+    "boyfriend": {
+      "immediate": {
+        "path": "other",
+        "note": "Modern compound: boy + friend"
+      }
+    },
+    "chair": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin cathedra via French"
+      }
+    },
+    "child": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cild"
+      }
+    },
+    "children": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Plural of child (old plural shape)"
+      }
+    },
+    "clock": {
+      "immediate": {
+        "path": "latin",
+        "note": "Medieval Latin clocca \"bell\" via Dutch/French"
+      }
+    },
+    "cousin": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin consobrinus via French"
+      }
+    },
+    "cup": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin cuppa via Germanic/French lines"
+      }
+    },
+    "dad": {
+      "immediate": {
+        "path": "other",
+        "note": "Nursery word (like many languages' \"dad/tata\" forms)"
+      }
+    },
+    "desk": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin desca / Italian desco via French"
+      }
+    },
+    "door": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English duru"
+      },
+      "pie": {
+        "root": "*dhwer-",
+        "meaning": "door, gateway"
+      },
+      "czech_cognate": {
+        "word": "dveře",
+        "note": "Related — true cousin"
+      }
+    },
+    "downstairs": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: down + stairs"
+      }
+    },
+    "flat": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse flatr \"level\"; apartment sense later British English"
+      }
+    },
+    "floor": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English flōr"
+      }
+    },
+    "fridge": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for refrigerator (Latin frigus \"cold\")"
+      }
+    },
+    "friend": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English frēond (from \"to love\")"
+      },
+      "pie": {
+        "root": "*pri-",
+        "meaning": "love, free"
+      }
+    },
+    "garden": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Frankish/Germanic via French jardin"
+      }
+    },
+    "girl": {
+      "immediate": {
+        "path": "other",
+        "note": "Middle English; deeper origin unclear"
+      }
+    },
+    "girlfriend": {
+      "immediate": {
+        "path": "other",
+        "note": "Modern compound: girl + friend"
+      }
+    },
+    "grandfather": {
+      "immediate": {
+        "path": "latin",
+        "note": "grand (French/Latin \"great\") + father (Germanic)"
+      }
+    },
+    "grandmother": {
+      "immediate": {
+        "path": "latin",
+        "note": "grand (French/Latin) + mother (Germanic)"
+      }
+    },
+    "grandparent": {
+      "immediate": {
+        "path": "latin",
+        "note": "grand + parent (Latin parentes)"
+      }
+    },
+    "home": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hām"
+      },
+      "pie": {
+        "root": "*koy-",
+        "meaning": "lie; settle; village"
+      }
+    },
+    "house": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hūs"
+      }
+    },
+    "husband": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse húsbóndi \"master of the house\""
+      }
+    },
+    "job": {
+      "immediate": {
+        "path": "other",
+        "note": "Later English; origin uncertain"
+      }
+    },
+    "key": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cǣg"
+      }
+    },
+    "kitchen": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin coquina via French"
+      }
+    },
+    "lamp": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek lampas via Latin"
+      }
+    },
+    "living room": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Modern compound: living + room (room is Germanic)"
+      }
+    },
+    "man": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English mann \"person\""
+      },
+      "pie": {
+        "root": "*man-",
+        "meaning": "person, man"
+      },
+      "notes": "Related historically to muž, but the link is not obvious — path/PIE only."
+    },
+    "mum": {
+      "immediate": {
+        "path": "other",
+        "note": "Nursery word (like máma)"
+      }
+    },
+    "neighbour": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English nēahgebūr \"near-dweller\""
+      }
+    },
+    "parent": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin parens \"begetter\""
+      }
+    },
+    "parents": {
+      "immediate": {
+        "path": "latin",
+        "note": "Plural of parent (Latin)"
+      }
+    },
+    "people": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin populus via French"
+      }
+    },
+    "phone": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for telephone (Greek tele \"far\" + phone \"sound\")"
+      }
+    },
+    "plate": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin via French (flat metal)"
+      }
+    },
+    "room": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English rūm \"space\""
+      }
+    },
+    "shower": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English scūr \"rain shower\""
+      }
+    },
+    "sofa": {
+      "immediate": {
+        "path": "other",
+        "note": "Arabic via Turkish/French"
+      }
+    },
+    "stairs": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English stǣger"
+      }
+    },
+    "table": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin tabula via French"
+      }
+    },
+    "teacher": {
+      "immediate": {
+        "path": "germanic",
+        "note": "teach (Old English tǣcan) + -er"
+      }
+    },
+    "toilet": {
+      "immediate": {
+        "path": "latin",
+        "note": "French toilette (cloth; later the room)"
+      }
+    },
+    "uncle": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin avunculus via French"
+      }
+    },
+    "upstairs": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: up + stairs"
+      }
+    },
+    "wall": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English weall (early Latin wall loan into Germanic)"
+      }
+    },
+    "wife": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wīf \"woman\""
+      }
+    },
+    "window": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse vindauga \"wind-eye\""
+      }
+    },
+    "woman": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wīfmann \"wife-person\" (not the same root as Czech žena)"
+      }
+    },
+    "arm": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English earm"
+      },
+      "pie": {
+        "root": "*ar-",
+        "meaning": "fit, join"
+      },
+      "notes": "Czech paže / ruka are different roots."
+    },
+    "back": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bæc"
+      }
+    },
+    "blonde": {
+      "immediate": {
+        "path": "latin",
+        "note": "French blond (Germanic into French, then English)"
+      }
+    },
+    "body": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bodig"
+      }
+    },
+    "face": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin facies via French"
+      }
+    },
+    "finger": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English finger"
+      },
+      "pie": {
+        "root": "*penkwe",
+        "meaning": "five (the five digits)"
+      },
+      "notes": "Czech prst is a different root."
+    },
+    "hair": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hǣr"
+      }
+    },
+    "head": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hēafod"
+      },
+      "pie": {
+        "root": "*kaput-",
+        "meaning": "head"
+      },
+      "notes": "Latin caput is the clear cousin; Czech hlava is a different line."
+    },
+    "knee": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cnēo"
+      },
+      "pie": {
+        "root": "*genu-",
+        "meaning": "knee"
+      },
+      "czech_cognate": {
+        "word": "koleno",
+        "bridge": "genuflect, genuflection (knee-bend)",
+        "note": "Same root as genuflect — Czech koleno is the cousin"
+      }
+    },
+    "leg": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse leggr into English"
+      },
+      "notes": "Czech noha is a different root."
+    },
+    "mouth": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English mūth"
+      },
+      "notes": "Czech ústa is a different root."
+    },
+    "neck": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hnecca"
+      }
+    },
+    "short": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English scort"
+      }
+    },
+    "shoulder": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sculdor"
+      }
+    },
+    "skin": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse skinn into English"
+      }
+    },
+    "tall": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English getæl / later \"tall\" sense from \"swift, prompt\""
+      }
+    },
+    "afternoon": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: after + noon (noon from Latin nona)"
+      }
+    },
+    "ago": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From older \"agone\" = gone by"
+      }
+    },
+    "always": {
+      "immediate": {
+        "path": "germanic",
+        "note": "all + way(s) \"every way / every time\""
+      }
+    },
+    "april": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin Aprilis"
+      }
+    },
+    "august": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin Augustus (emperor name)"
+      }
+    },
+    "december": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin december \"tenth month\" (old calendar)"
+      }
+    },
+    "early": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ǣrlīce"
+      }
+    },
+    "eighteen": {
+      "immediate": {
+        "path": "germanic",
+        "note": "eight + teen (\"ten more\")"
+      }
+    },
+    "eighty": {
+      "immediate": {
+        "path": "germanic",
+        "note": "eight + -ty (\"tens\")"
+      }
+    },
+    "eleven": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English endleofan \"one left (after ten)\""
+      }
+    },
+    "evening": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ǣfnung"
+      }
+    },
+    "february": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin Februarius"
+      }
+    },
+    "fifteen": {
+      "immediate": {
+        "path": "germanic",
+        "note": "five + teen"
+      }
+    },
+    "fifth": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Ordinal of five"
+      }
+    },
+    "fifty": {
+      "immediate": {
+        "path": "germanic",
+        "note": "five + -ty"
+      }
+    },
+    "first": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English fyrst (from \"fore\")"
+      },
+      "pie": {
+        "root": "*per-",
+        "meaning": "forward, through, first"
+      }
+    },
+    "forty": {
+      "immediate": {
+        "path": "germanic",
+        "note": "four + -ty"
+      }
+    },
+    "fourteen": {
+      "immediate": {
+        "path": "germanic",
+        "note": "four + teen"
+      }
+    },
+    "fourth": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Ordinal of four"
+      }
+    },
+    "friday": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Frigg's day (Germanic goddess; calque of Latin Veneris dies)"
+      }
+    },
+    "half": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English healf"
+      },
+      "pie": {
+        "root": "*skelh-",
+        "meaning": "cut; half"
+      }
+    },
+    "hour": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin hora via French"
+      }
+    },
+    "hundred": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hundred"
+      },
+      "pie": {
+        "root": "*kmtom",
+        "meaning": "hundred"
+      },
+      "czech_cognate": {
+        "word": "sto",
+        "bridge": "century, cent, percent",
+        "note": "Same root as century/cent — Czech sto is the cousin"
+      }
+    },
+    "january": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin Januarius (god Janus)"
+      }
+    },
+    "july": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin Julius (Julius Caesar)"
+      }
+    },
+    "june": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin Junius"
+      }
+    },
+    "late": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English læt \"slow, late\""
+      }
+    },
+    "march": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin Martius (god Mars)"
+      }
+    },
+    "may": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin Maius"
+      }
+    },
+    "million": {
+      "immediate": {
+        "path": "latin",
+        "note": "Italian milione from Latin mille \"thousand\""
+      }
+    },
+    "minute": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin minuta \"small part\" via French"
+      }
+    },
+    "monday": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Moon's day (calque of Latin dies Lunae)"
+      }
+    },
+    "month": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English mōnath (from moon)"
+      },
+      "pie": {
+        "root": "*menot-",
+        "meaning": "moon; month"
+      },
+      "czech_cognate": {
+        "word": "měsíc",
+        "bridge": "moon, month",
+        "note": "Month is from moon; Czech měsíc is the moon/month cousin"
+      }
+    },
+    "morning": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From morn (Old English morgen)"
+      }
+    },
+    "never": {
+      "immediate": {
+        "path": "germanic",
+        "note": "ne + ever \"not ever\""
+      }
+    },
+    "nineteen": {
+      "immediate": {
+        "path": "germanic",
+        "note": "nine + teen"
+      }
+    },
+    "ninety": {
+      "immediate": {
+        "path": "germanic",
+        "note": "nine + -ty"
+      }
+    },
+    "november": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin november \"ninth month\" (old calendar)"
+      }
+    },
+    "now": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English nū"
+      },
+      "pie": {
+        "root": "*nu-",
+        "meaning": "now"
+      }
+    },
+    "number": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin numerus via French"
+      }
+    },
+    "october": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin october \"eighth month\" (old calendar)"
+      }
+    },
+    "often": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English oft + -en"
+      }
+    },
+    "once": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From one + adverb ending"
+      }
+    },
+    "quarter": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin quartarius \"fourth part\" via French"
+      }
+    },
+    "saturday": {
+      "immediate": {
+        "path": "latin",
+        "note": "Saturn's day (Latin dies Saturni kept in English)"
+      }
+    },
+    "second": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin secundus \"following\" via French"
+      }
+    },
+    "september": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin september \"seventh month\" (old calendar)"
+      }
+    },
+    "seventeen": {
+      "immediate": {
+        "path": "germanic",
+        "note": "seven + teen"
+      }
+    },
+    "seventy": {
+      "immediate": {
+        "path": "germanic",
+        "note": "seven + -ty"
+      }
+    },
+    "sixteen": {
+      "immediate": {
+        "path": "germanic",
+        "note": "six + teen"
+      }
+    },
+    "sixty": {
+      "immediate": {
+        "path": "germanic",
+        "note": "six + -ty"
+      }
+    },
+    "sometimes": {
+      "immediate": {
+        "path": "germanic",
+        "note": "some + times"
+      }
+    },
+    "soon": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sōna \"immediately\""
+      }
+    },
+    "sunday": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Sun's day (calque of Latin dies Solis)"
+      }
+    },
+    "third": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Ordinal of three"
+      },
+      "pie": {
+        "root": "*treyes",
+        "meaning": "three"
+      },
+      "czech_cognate": {
+        "word": "třetí",
+        "note": "Built on three / tři"
+      }
+    },
+    "thirteen": {
+      "immediate": {
+        "path": "germanic",
+        "note": "three + teen"
+      }
+    },
+    "thirty": {
+      "immediate": {
+        "path": "germanic",
+        "note": "three + -ty"
+      }
+    },
+    "thousand": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English thūsend"
+      }
+    },
+    "thursday": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Thor's day (calque of Latin dies Iovis)"
+      }
+    },
+    "time": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English tīma"
+      },
+      "pie": {
+        "root": "*di-",
+        "meaning": "divide; stretch of time"
+      }
+    },
+    "today": {
+      "immediate": {
+        "path": "germanic",
+        "note": "to + day"
+      }
+    },
+    "tomorrow": {
+      "immediate": {
+        "path": "germanic",
+        "note": "to + morrow (morning)"
+      }
+    },
+    "tonight": {
+      "immediate": {
+        "path": "germanic",
+        "note": "to + night"
+      }
+    },
+    "tuesday": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Tiw's day (Germanic god; calque of Latin dies Martis)"
+      }
+    },
+    "twelve": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English twelf \"two left (after ten)\""
+      }
+    },
+    "twenty": {
+      "immediate": {
+        "path": "germanic",
+        "note": "two + -ty"
+      }
+    },
+    "twice": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From two + adverb ending"
+      }
+    },
+    "wednesday": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Woden's day (calque of Latin dies Mercurii)"
+      }
+    },
+    "week": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wice"
+      }
+    },
+    "weekend": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Modern compound: week + end"
+      }
+    },
+    "year": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English gēar"
+      },
+      "pie": {
+        "root": "*yer-",
+        "meaning": "year, season"
+      }
+    },
+    "yesterday": {
+      "immediate": {
+        "path": "germanic",
+        "note": "yester + day (yester = previous)"
+      },
+      "pie": {
+        "root": "*dhghes-",
+        "meaning": "yesterday"
+      }
+    },
+    "air": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin aer via French"
+      }
+    },
+    "autumn": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin autumnus"
+      }
+    },
+    "cloud": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English clūd \"rock, mass\" → sky mass"
+      }
+    },
+    "cool": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cōl"
+      }
+    },
+    "dark": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English deorc"
+      }
+    },
+    "dry": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English drȳge"
+      }
+    },
+    "field": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English feld"
+      }
+    },
+    "flower": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin flos via French fleur"
+      }
+    },
+    "forest": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin forestis via French"
+      }
+    },
+    "hill": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hyll"
+      }
+    },
+    "island": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English īegland \"water-land\" (s later added by mix-up with isle)"
+      }
+    },
+    "lake": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin lacus via French (and related Germanic forms)"
+      }
+    },
+    "land": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English land"
+      },
+      "pie": {
+        "root": "*lendh-",
+        "meaning": "land, open ground"
+      }
+    },
+    "light": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English lēoht"
+      },
+      "pie": {
+        "root": "*leuk-",
+        "meaning": "light, bright"
+      },
+      "notes": "Same ancient bright/light family as Latin lux; Czech světlo is a different everyday word."
+    },
+    "mountain": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin mons via French"
+      }
+    },
+    "nature": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin natura via French"
+      }
+    },
+    "plant": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin planta via French"
+      }
+    },
+    "rain": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English regn"
+      }
+    },
+    "river": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin riparia via French rivière"
+      }
+    },
+    "sea": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sǣ"
+      }
+    },
+    "sky": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse ský \"cloud\" into English"
+      }
+    },
+    "space": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin spatium via French"
+      }
+    },
+    "spring": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English springan \"to leap\" → season when plants leap up"
+      }
+    },
+    "summer": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sumor"
+      }
+    },
+    "tree": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English trēow"
+      },
+      "pie": {
+        "root": "*drew-",
+        "meaning": "wood, tree"
+      },
+      "notes": "Same wood root as dřevo historically; everyday strom is different — skipped as cousin highlight."
+    },
+    "warm": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wearm"
+      },
+      "pie": {
+        "root": "*gwher-",
+        "meaning": "warm, hot"
+      }
+    },
+    "weather": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English weder"
+      }
+    },
+    "wet": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wǣt"
+      }
+    },
+    "winter": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English winter"
+      }
+    },
+    "world": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English weorold \"age of man\" (wer \"man\" + old \"age\")"
+      }
+    },
+    "apple": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English aeppel"
+      },
+      "pie": {
+        "root": "*abel-",
+        "meaning": "apple"
+      },
+      "czech_cognate": {
+        "word": "jablko",
+        "note": "Related — true cousin"
+      }
+    },
+    "banana": {
+      "immediate": {
+        "path": "other",
+        "note": "West African via Portuguese/Spanish"
+      }
+    },
+    "beer": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English beor (and related Germanic forms)"
+      }
+    },
+    "bill": {
+      "immediate": {
+        "path": "latin",
+        "note": "Medieval Latin bulla 'seal, document' → account to pay"
+      }
+    },
+    "bottle": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin buttis via French bouteille"
+      }
+    },
+    "bowl": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bolla"
+      }
+    },
+    "bread": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bread 'piece, morsel'"
+      }
+    },
+    "breakfast": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: break + fast (break the night's fasting)"
+      }
+    },
+    "butter": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin butyrum via Germanic"
+      }
+    },
+    "cake": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse kaka into English"
+      }
+    },
+    "carrot": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin via French carotte"
+      }
+    },
+    "cheese": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin caseus into West Germanic"
+      }
+    },
+    "chicken": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cicen (young bird)"
+      }
+    },
+    "chocolate": {
+      "immediate": {
+        "path": "other",
+        "note": "Nahuatl via Spanish chocolate"
+      }
+    },
+    "coffee": {
+      "immediate": {
+        "path": "other",
+        "note": "Arabic qahwa via Turkish/European languages"
+      }
+    },
+    "cooker": {
+      "immediate": {
+        "path": "latin",
+        "note": "cook (Latin coquere via French) + -er"
+      }
+    },
+    "cooking": {
+      "immediate": {
+        "path": "latin",
+        "note": "From cook (Latin coquere via French)"
+      }
+    },
+    "delicious": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin deliciosus via French"
+      }
+    },
+    "diet": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin diaeta 'way of life / food'"
+      }
+    },
+    "dinner": {
+      "immediate": {
+        "path": "latin",
+        "note": "French disner from Latin (break the fast)"
+      }
+    },
+    "dish": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin discus via Germanic/French lines"
+      }
+    },
+    "drink": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English drincan"
+      },
+      "pie": {
+        "root": "*dhreg-",
+        "meaning": "draw, sip"
+      }
+    },
+    "egg": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse egg into English"
+      },
+      "pie": {
+        "root": "*owyo-",
+        "meaning": "egg"
+      },
+      "czech_cognate": {
+        "word": "vejce",
+        "bridge": "oval, ovary (Latin egg line)",
+        "note": "Same ancient egg root; English egg is the Norse form"
+      }
+    },
+    "fish": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English fisc"
+      },
+      "pie": {
+        "root": "*pisk-",
+        "meaning": "fish"
+      },
+      "notes": "Czech ryba is a different root."
+    },
+    "food": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English foda"
+      },
+      "pie": {
+        "root": "*pa-",
+        "meaning": "feed, protect"
+      }
+    },
+    "fork": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin furca via French"
+      }
+    },
+    "fruit": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin fructus via French"
+      }
+    },
+    "glass": {
+      "immediate": {
+        "path": "germanic",
+        "note": "West Germanic; related to shine/glow words"
+      }
+    },
+    "hungry": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hungrig (from hunger)"
+      }
+    },
+    "ice cream": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: ice (Germanic) + cream (Latin/French)"
+      }
+    },
+    "juice": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin jus 'broth, sauce' via French"
+      }
+    },
+    "knife": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cnif (from Old Norse)"
+      }
+    },
+    "lunch": {
+      "immediate": {
+        "path": "other",
+        "note": "Later English short meal name; origin debated"
+      }
+    },
+    "meal": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English mael 'measure, fixed time, meal'"
+      }
+    },
+    "meat": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English mete 'food' → flesh food"
+      }
+    },
+    "menu": {
+      "immediate": {
+        "path": "latin",
+        "note": "French menu 'detailed list' from Latin minutus"
+      }
+    },
+    "milk": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English meolc"
+      },
+      "pie": {
+        "root": "*melg-",
+        "meaning": "to milk; milk"
+      },
+      "czech_cognate": {
+        "word": "mléko",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "onion": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin unio via French oignon"
+      }
+    },
+    "orange": {
+      "immediate": {
+        "path": "other",
+        "note": "Sanskrit via Arabic/Spanish into French (fruit, then colour)"
+      }
+    },
+    "order": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin ordo via French (command / sequence / restaurant order)"
+      }
+    },
+    "oven": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ofen"
+      }
+    },
+    "pepper": {
+      "immediate": {
+        "path": "latin",
+        "note": "Sanskrit via Greek/Latin piper"
+      }
+    },
+    "potato": {
+      "immediate": {
+        "path": "other",
+        "note": "Taino batata via Spanish patata"
+      }
+    },
+    "rice": {
+      "immediate": {
+        "path": "other",
+        "note": "Greek/Latin via French; ultimate South Asian source"
+      }
+    },
+    "salad": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin sal 'salt' via Italian/French salade"
+      }
+    },
+    "salt": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sealt"
+      },
+      "pie": {
+        "root": "*sal-",
+        "meaning": "salt"
+      },
+      "czech_cognate": {
+        "word": "sůl",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "sandwich": {
+      "immediate": {
+        "path": "other",
+        "note": "From the Earl of Sandwich (18th c. English name)"
+      }
+    },
+    "snack": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Middle Dutch/Low German 'snap, bite' into English"
+      }
+    },
+    "soup": {
+      "immediate": {
+        "path": "latin",
+        "note": "French soupe (Germanic into French, then English)"
+      }
+    },
+    "spoon": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English spon 'chip of wood'"
+      }
+    },
+    "sugar": {
+      "immediate": {
+        "path": "other",
+        "note": "Sanskrit via Arabic/Medieval Latin into French"
+      }
+    },
+    "tea": {
+      "immediate": {
+        "path": "other",
+        "note": "Chinese via Malay/Dutch (tea) or Portuguese (cha)"
+      }
+    },
+    "thirsty": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English thyrstig (from thirst)"
+      }
+    },
+    "tomato": {
+      "immediate": {
+        "path": "other",
+        "note": "Nahuatl via Spanish tomate"
+      }
+    },
+    "vegetable": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin vegetabilis 'animating, growing' via French"
+      }
+    },
+    "wine": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin vinum into Germanic; Czech víno is the same Latin loan line"
+      }
+    },
+    "wine glass": {
+      "immediate": {
+        "path": "other",
+        "note": "wine (Latin loan) + glass (Germanic)"
+      }
+    },
+    "boot": {
+      "immediate": {
+        "path": "latin",
+        "note": "Old French bote; footwear sense via French"
+      }
+    },
+    "clothes": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English clathas (plural of cloth)"
+      }
+    },
+    "coat": {
+      "immediate": {
+        "path": "latin",
+        "note": "Frankish/Germanic via French cote"
+      }
+    },
+    "dress": {
+      "immediate": {
+        "path": "latin",
+        "note": "French dresser 'arrange' from Latin directus"
+      }
+    },
+    "glasses": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Plural of glass (spectacles sense)"
+      }
+    },
+    "glove": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English glof"
+      }
+    },
+    "hat": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English haet"
+      }
+    },
+    "jacket": {
+      "immediate": {
+        "path": "latin",
+        "note": "French jaquette (diminutive of jaque)"
+      }
+    },
+    "jeans": {
+      "immediate": {
+        "path": "other",
+        "note": "From Genoa cloth name (modern trousers sense)"
+      }
+    },
+    "pocket": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old North French / Germanic 'bag, pouch'"
+      }
+    },
+    "scarf": {
+      "immediate": {
+        "path": "other",
+        "note": "Old North French escarpe; deeper origin debated"
+      }
+    },
+    "shirt": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English scyrte"
+      },
+      "pie": {
+        "root": "*sker-",
+        "meaning": "cut"
+      },
+      "notes": "Related to skirt/short (cut garment); Czech kosile is a different loan line."
+    },
+    "shoe": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English scoh"
+      }
+    },
+    "skirt": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse skyrta into English"
+      }
+    },
+    "sock": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin soccus 'light shoe' via Greek"
+      }
+    },
+    "suit": {
+      "immediate": {
+        "path": "latin",
+        "note": "French suite / Latin sequi 'follow' → matching set"
+      }
+    },
+    "sweater": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Modern: sweat (Germanic) + -er"
+      }
+    },
+    "t-shirt": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Modern: T-shaped shirt (shirt is Germanic)"
+      }
+    },
+    "tie": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From tie 'to bind'; necktie sense later"
+      }
+    },
+    "trousers": {
+      "immediate": {
+        "path": "other",
+        "note": "Gaelic/Irish triubhas via Scots into English"
+      }
+    },
+    "umbrella": {
+      "immediate": {
+        "path": "latin",
+        "note": "Italian ombrello from Latin umbra 'shade'"
+      }
+    },
+    "watch": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English waecce 'wakefulness'; timepiece sense later"
+      }
+    },
+    "wear": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English werian 'carry, wear clothes'"
+      }
+    },
+    "black": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English blaec"
+      }
+    },
+    "blue": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old French bleu from Germanic; English reshaped the form"
+      }
+    },
+    "brown": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English brun"
+      },
+      "pie": {
+        "root": "*bher-",
+        "meaning": "bright, brown"
+      }
+    },
+    "green": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English grene"
+      },
+      "pie": {
+        "root": "*ghre-",
+        "meaning": "grow; green plants"
+      }
+    },
+    "grey": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English graeg"
+      }
+    },
+    "pink": {
+      "immediate": {
+        "path": "other",
+        "note": "From the flower name pink; colour sense later English"
+      }
+    },
+    "purple": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin purpura via French"
+      }
+    },
+    "red": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English read"
+      },
+      "pie": {
+        "root": "*reudh-",
+        "meaning": "red"
+      },
+      "czech_cognate": {
+        "word": "rudý",
+        "bridge": "ruby, robust (red/ruddy line)",
+        "note": "Same root as ruddy/ruby — everyday Czech červený is different"
+      }
+    },
+    "white": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hwit"
+      },
+      "pie": {
+        "root": "*kweit-",
+        "meaning": "white, bright"
+      }
+    },
+    "yellow": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English geolu"
+      },
+      "pie": {
+        "root": "*ghel-",
+        "meaning": "shine; yellow, green"
+      }
+    },
+    "bear": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bera (often linked to brown)"
+      }
+    },
+    "bird": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English brid 'young bird'"
+      }
+    },
+    "cat": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin cattus (earlier Mediterranean source)"
+      }
+    },
+    "cow": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cu"
+      },
+      "pie": {
+        "root": "*gwou-",
+        "meaning": "cow, cattle"
+      },
+      "notes": "Czech krava is usually treated as a different line."
+    },
+    "dog": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English docga; deeper origin unclear"
+      }
+    },
+    "duck": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English duce 'diver'"
+      }
+    },
+    "elephant": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin elephas"
+      }
+    },
+    "farm": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin firmare via French ferme 'fixed rent / farm'"
+      }
+    },
+    "frog": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English frogga"
+      }
+    },
+    "horse": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hors"
+      }
+    },
+    "insect": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin insectum 'cut into' (segmented body)"
+      }
+    },
+    "lion": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin leo via French"
+      }
+    },
+    "monkey": {
+      "immediate": {
+        "path": "other",
+        "note": "Later European; origin uncertain"
+      }
+    },
+    "mouse": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English mus"
+      },
+      "pie": {
+        "root": "*mus-",
+        "meaning": "mouse"
+      },
+      "czech_cognate": {
+        "word": "myš",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "pet": {
+      "immediate": {
+        "path": "other",
+        "note": "Later English kept animal; origin debated"
+      }
+    },
+    "pig": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English picg / pig"
+      }
+    },
+    "rabbit": {
+      "immediate": {
+        "path": "other",
+        "note": "Middle English; deeper origin uncertain"
+      }
+    },
+    "sheep": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sceap"
+      }
+    },
+    "snake": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English snaca"
+      },
+      "pie": {
+        "root": "*sneg-",
+        "meaning": "crawl, snake"
+      }
+    },
+    "wild": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wilde"
+      }
+    },
+    "zoo": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for zoological garden (Greek zoion 'animal')"
+      }
+    },
+    "ambulance": {
+      "immediate": {
+        "path": "latin",
+        "note": "French ambulance from Latin ambulare 'walk' (moving hospital)"
+      }
+    },
+    "appointment": {
+      "immediate": {
+        "path": "latin",
+        "note": "French from Latin ad + punctum 'fixed time'"
+      }
+    },
+    "cold": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cald (temperature); illness sense later"
+      },
+      "pie": {
+        "root": "*gel-",
+        "meaning": "cold, freeze"
+      }
+    },
+    "cough": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Middle English; imitative Germanic origin"
+      }
+    },
+    "dentist": {
+      "immediate": {
+        "path": "latin",
+        "note": "French dentiste from Latin dens 'tooth'"
+      }
+    },
+    "doctor": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin doctor 'teacher'; medical sense later"
+      }
+    },
+    "fever": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin febris via French"
+      }
+    },
+    "flu": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for influenza (Italian, from Latin influentia)"
+      }
+    },
+    "headache": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: head + ache (both Germanic)"
+      }
+    },
+    "health": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English haelth (from whole / hale)"
+      }
+    },
+    "healthy": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From health / whole (Germanic)"
+      }
+    },
+    "hospital": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin hospitalis 'of a guest' via French"
+      }
+    },
+    "hurt": {
+      "immediate": {
+        "path": "latin",
+        "note": "Old French hurter 'strike' (Frankish into French)"
+      }
+    },
+    "ill": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse illr 'bad' into English"
+      }
+    },
+    "medicine": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin medicina via French"
+      }
+    },
+    "nurse": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin nutrire 'nourish' via French"
+      }
+    },
+    "pain": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin poena 'penalty' via French"
+      }
+    },
+    "patient": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin patiens 'suffering / enduring'"
+      }
+    },
+    "pharmacy": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek pharmakon 'drug' via Latin/French"
+      }
+    },
+    "pill": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin pilula 'little ball'"
+      }
+    },
+    "rest": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English raest 'rest, bed'"
+      }
+    },
+    "sick": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English seoc"
+      }
+    },
+    "stomach": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin stomachus via French"
+      }
+    },
+    "temperature": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin temperatura via French"
+      }
+    },
+    "airport": {
+      "immediate": {
+        "path": "latin",
+        "note": "Modern compound: air (Latin/Greek) + port (Latin portus)"
+      }
+    },
+    "arrive": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin ad + ripa 'shore' via French arriver"
+      }
+    },
+    "bank": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Italian/Germanic banca 'bench' (money table) via French/Italian"
+      }
+    },
+    "beach": {
+      "immediate": {
+        "path": "other",
+        "note": "Old English / dialect; deeper origin uncertain"
+      }
+    },
+    "behind": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English behindan"
+      }
+    },
+    "between": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English betweonum"
+      }
+    },
+    "bicycle": {
+      "immediate": {
+        "path": "latin",
+        "note": "Modern: Greek bi- 'two' + cycle (Greek kyklos 'wheel')"
+      }
+    },
+    "bike": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for bicycle"
+      }
+    },
+    "boat": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bat"
+      }
+    },
+    "building": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From build (Old English byldan) + -ing"
+      }
+    },
+    "bus": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for omnibus (Latin 'for all')"
+      }
+    },
+    "cafe": {
+      "immediate": {
+        "path": "other",
+        "note": "French cafe from Arabic/Turkish coffeehouse line"
+      }
+    },
+    "car": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin carrus 'wheeled vehicle' via French"
+      }
+    },
+    "centre": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin centrum via French"
+      }
+    },
+    "cinema": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for cinematograph (Greek kinema 'movement')"
+      }
+    },
+    "city": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin civitas via French cite"
+      }
+    },
+    "corner": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin cornu 'horn, tip' via French"
+      }
+    },
+    "country": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin contra 'opposite' via French contree"
+      }
+    },
+    "flight": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English flyht (from fly)"
+      }
+    },
+    "here": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English her"
+      },
+      "pie": {
+        "root": "*ki-",
+        "meaning": "this, here"
+      }
+    },
+    "hotel": {
+      "immediate": {
+        "path": "latin",
+        "note": "French hotel from Latin hospitalis (guest house line)"
+      }
+    },
+    "in front of": {
+      "immediate": {
+        "path": "latin",
+        "note": "front from Latin frons 'forehead, front' via French"
+      }
+    },
+    "journey": {
+      "immediate": {
+        "path": "latin",
+        "note": "French journee 'day's travel' from Latin diurnum"
+      }
+    },
+    "leave": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English laefan 'remain / leave'"
+      }
+    },
+    "left": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English lyft 'weak' (left hand); side sense later"
+      }
+    },
+    "library": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin librarium from liber 'book'"
+      }
+    },
+    "map": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin mappa 'cloth, napkin' → map"
+      }
+    },
+    "market": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin mercatus via French"
+      }
+    },
+    "metro": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for metropolitan (Greek meter 'mother' + polis 'city')"
+      }
+    },
+    "museum": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin mouseion 'seat of the Muses'"
+      }
+    },
+    "near": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English near 'nearer'"
+      }
+    },
+    "next to": {
+      "immediate": {
+        "path": "germanic",
+        "note": "next (Germanic) + to"
+      }
+    },
+    "office": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin officium via French"
+      }
+    },
+    "opposite": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin oppositus via French"
+      }
+    },
+    "park": {
+      "immediate": {
+        "path": "latin",
+        "note": "Medieval Latin parricus via French"
+      }
+    },
+    "passport": {
+      "immediate": {
+        "path": "latin",
+        "note": "French passeport: pass + port (harbour / passage)"
+      }
+    },
+    "plane": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for aeroplane (Greek aer + Latin planus 'flat')"
+      }
+    },
+    "police": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin politia 'citizenship, state' via French"
+      }
+    },
+    "policeman": {
+      "immediate": {
+        "path": "latin",
+        "note": "police (Latin/Greek) + man (Germanic)"
+      }
+    },
+    "pool": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English pol 'pond'; swimming sense later"
+      }
+    },
+    "post office": {
+      "immediate": {
+        "path": "latin",
+        "note": "post (Latin positum 'placed' mail system) + office"
+      }
+    },
+    "restaurant": {
+      "immediate": {
+        "path": "latin",
+        "note": "French restaurant from Latin restaurare 'restore'"
+      }
+    },
+    "right": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English riht 'straight, just'; also the right side"
+      },
+      "pie": {
+        "root": "*reg-",
+        "meaning": "straight, rule"
+      }
+    },
+    "road": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English rad 'riding, road'"
+      }
+    },
+    "shop": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sceoppa 'booth'; also verb 'to shop'"
+      }
+    },
+    "square": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin exquadra via French (four-sided place)"
+      }
+    },
+    "station": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin statio 'standing place' via French"
+      }
+    },
+    "stop": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English stoppian (block, stop)"
+      }
+    },
+    "straight": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English streht (from stretch)"
+      }
+    },
+    "street": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin strata (via) 'paved road' into Germanic"
+      }
+    },
+    "supermarket": {
+      "immediate": {
+        "path": "latin",
+        "note": "Modern: super (Latin) + market (Latin mercatus)"
+      }
+    },
+    "take": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse taka into English"
+      }
+    },
+    "taxi": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for taximeter cab (Latin taxa 'charge')"
+      }
+    },
+    "theatre": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek theatron via Latin/French"
+      }
+    },
+    "there": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English thaer"
+      }
+    },
+    "tourist": {
+      "immediate": {
+        "path": "latin",
+        "note": "French from tour (Latin tornus 'lathe, turn')"
+      }
+    },
+    "town": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English tun 'enclosure, settlement'"
+      }
+    },
+    "traffic": {
+      "immediate": {
+        "path": "latin",
+        "note": "Italian traffico via French"
+      }
+    },
+    "train": {
+      "immediate": {
+        "path": "latin",
+        "note": "French trainer 'drag'; railway sense later"
+      }
+    },
+    "tram": {
+      "immediate": {
+        "path": "other",
+        "note": "Dialect/low German 'beam, shaft'; streetcar sense later"
+      }
+    },
+    "trip": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Dutch/Low German trippen 'skip'; journey sense later"
+      }
+    },
+    "university": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin universitas via French"
+      }
+    },
+    "vacation": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin vacatio 'freedom, empty time'"
+      }
+    },
+    "village": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin villa via French"
+      }
+    },
+    "walk": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wealcan 'roll, go'"
+      }
+    },
+    "way": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English weg"
+      },
+      "pie": {
+        "root": "*wegh-",
+        "meaning": "go, transport"
+      },
+      "notes": "Same ancient go/carry family as Latin vehere; Czech cesta is a different everyday word."
+    },
+    "activity": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin activitas via French"
+      }
+    },
+    "answer": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English andswaru 'swear against / reply'"
+      }
+    },
+    "art": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin ars via French"
+      }
+    },
+    "article": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin articulus 'small joint / item'"
+      }
+    },
+    "artist": {
+      "immediate": {
+        "path": "latin",
+        "note": "French artiste from Latin ars"
+      }
+    },
+    "class": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin classis via French"
+      }
+    },
+    "classroom": {
+      "immediate": {
+        "path": "latin",
+        "note": "class (Latin) + room (Germanic)"
+      }
+    },
+    "college": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin collegium via French"
+      }
+    },
+    "course": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin cursus 'running, path' via French"
+      }
+    },
+    "dictionary": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin dictionarium from dicere 'say'"
+      }
+    },
+    "exam": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for examination (Latin examinare)"
+      }
+    },
+    "example": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin exemplum via French"
+      }
+    },
+    "geography": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek ge 'earth' + graphein 'write' via Latin/French"
+      }
+    },
+    "history": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin historia via French"
+      }
+    },
+    "homework": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: home + work (both Germanic)"
+      }
+    },
+    "idea": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek idea via Latin"
+      }
+    },
+    "information": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin informatio via French"
+      }
+    },
+    "language": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin lingua 'tongue' via French"
+      }
+    },
+    "learn": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English leornian"
+      }
+    },
+    "lesson": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin lectio 'reading' via French"
+      }
+    },
+    "letter": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin littera via French"
+      }
+    },
+    "list": {
+      "immediate": {
+        "path": "latin",
+        "note": "Italian/French lista from Germanic 'border, strip'"
+      }
+    },
+    "meaning": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From mean (Old English maenan 'intend, mean')"
+      }
+    },
+    "note": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin nota via French"
+      }
+    },
+    "opinion": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin opinio via French"
+      }
+    },
+    "page": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin pagina via French"
+      }
+    },
+    "paper": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin papyrus via French"
+      }
+    },
+    "paragraph": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek paragraphos via Latin/French"
+      }
+    },
+    "pen": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin penna 'feather' via French"
+      }
+    },
+    "pencil": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin penicillus 'little tail / brush'"
+      }
+    },
+    "phrase": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek phrasis via Latin/French"
+      }
+    },
+    "practice": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin practica via French"
+      }
+    },
+    "question": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin quaestio via French"
+      }
+    },
+    "reading": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From read (Old English raedan)"
+      }
+    },
+    "science": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin scientia 'knowledge' via French"
+      }
+    },
+    "scientist": {
+      "immediate": {
+        "path": "latin",
+        "note": "Modern formation from science (Latin)"
+      }
+    },
+    "sentence": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin sententia via French"
+      }
+    },
+    "spelling": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From spell (Old French espeller, Frankish origin)"
+      }
+    },
+    "story": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin historia shortened via French/English"
+      }
+    },
+    "study": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin studium via French"
+      }
+    },
+    "subject": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin subjectum via French"
+      }
+    },
+    "test": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin testum / testari 'prove' via French"
+      }
+    },
+    "text": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin textus 'woven' via French"
+      }
+    },
+    "title": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin titulus via French"
+      }
+    },
+    "word": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English word"
+      },
+      "pie": {
+        "root": "*wer-",
+        "meaning": "speak, word"
+      },
+      "notes": "Ancient speak/word family; Czech slovo is a different everyday root."
+    },
+    "writing": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From write (Old English writan)"
+      }
+    },
+    "actor": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin actor from agere 'do, drive'"
+      }
+    },
+    "actress": {
+      "immediate": {
+        "path": "latin",
+        "note": "actor + feminine -ess (French/Latin)"
+      }
+    },
+    "boss": {
+      "immediate": {
+        "path": "other",
+        "note": "Dutch baas into American English"
+      }
+    },
+    "break": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English brecan; rest-from-work sense later"
+      }
+    },
+    "business": {
+      "immediate": {
+        "path": "germanic",
+        "note": "busy + -ness (Germanic); commerce sense later"
+      }
+    },
+    "career": {
+      "immediate": {
+        "path": "latin",
+        "note": "French carriere from Latin carrus 'cart, road'"
+      }
+    },
+    "colleague": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin collega via French"
+      }
+    },
+    "company": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin companio 'bread-sharer' via French"
+      }
+    },
+    "computer": {
+      "immediate": {
+        "path": "latin",
+        "note": "From compute (Latin computare 'reckon') + -er"
+      }
+    },
+    "dancer": {
+      "immediate": {
+        "path": "latin",
+        "note": "dance (French/Germanic) + -er"
+      }
+    },
+    "driver": {
+      "immediate": {
+        "path": "germanic",
+        "note": "drive (Old English drifan) + -er"
+      }
+    },
+    "email": {
+      "immediate": {
+        "path": "latin",
+        "note": "Modern: electronic + mail (mail from French/Germanic bag line)"
+      }
+    },
+    "engineer": {
+      "immediate": {
+        "path": "latin",
+        "note": "French ingenieur from Latin ingenium 'skill'"
+      }
+    },
+    "farmer": {
+      "immediate": {
+        "path": "latin",
+        "note": "farm (Latin/French) + -er"
+      }
+    },
+    "finish": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin finire via French"
+      }
+    },
+    "interview": {
+      "immediate": {
+        "path": "latin",
+        "note": "French entrevue from Latin inter + videre 'see'"
+      }
+    },
+    "manager": {
+      "immediate": {
+        "path": "latin",
+        "note": "Italian/French from Latin manus 'hand' (handle)"
+      }
+    },
+    "meeting": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From meet (Old English metan)"
+      }
+    },
+    "money": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin moneta via French"
+      }
+    },
+    "partner": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin partitionarius via French"
+      }
+    },
+    "player": {
+      "immediate": {
+        "path": "germanic",
+        "note": "play (Old English plegian) + -er"
+      }
+    },
+    "salary": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin salarium (originally salt allowance) via French"
+      }
+    },
+    "singer": {
+      "immediate": {
+        "path": "germanic",
+        "note": "sing (Old English singan) + -er"
+      }
+    },
+    "start": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English styrtan 'leap up'"
+      }
+    },
+    "student": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin studens from studere 'be eager'"
+      }
+    },
+    "waiter": {
+      "immediate": {
+        "path": "germanic",
+        "note": "wait (French/Germanic) + -er; restaurant sense later"
+      }
+    },
+    "work": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English weorc"
+      },
+      "pie": {
+        "root": "*werg-",
+        "meaning": "do, work"
+      },
+      "notes": "Same ancient do/work line as Greek ergon; Czech prace is a different everyday word."
+    },
+    "worker": {
+      "immediate": {
+        "path": "germanic",
+        "note": "work + -er"
+      }
+    },
+    "writer": {
+      "immediate": {
+        "path": "germanic",
+        "note": "write (Old English writan) + -er"
+      }
+    },
+    "buy": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bycgan"
+      }
+    },
+    "card": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin charta via French"
+      }
+    },
+    "cash": {
+      "immediate": {
+        "path": "latin",
+        "note": "French casse / Italian cassa from Latin capsa 'box'"
+      }
+    },
+    "cent": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin centum 'hundred' (1/100 of a unit)"
+      }
+    },
+    "change": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin cambiare via French (money back / alter)"
+      }
+    },
+    "cheap": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ceap 'bargain, price'; low-cost sense later"
+      }
+    },
+    "checkout": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Modern compound: check + out (desk where you pay)"
+      }
+    },
+    "closed": {
+      "immediate": {
+        "path": "latin",
+        "note": "From close (Latin clausus via French)"
+      }
+    },
+    "cost": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin constare via French"
+      }
+    },
+    "counter": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin computare via French (counting table)"
+      }
+    },
+    "customer": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin consuetudinarius via French costume/custom"
+      }
+    },
+    "department store": {
+      "immediate": {
+        "path": "latin",
+        "note": "department (French/Latin) + store (Latin instaurare line)"
+      }
+    },
+    "discount": {
+      "immediate": {
+        "path": "latin",
+        "note": "French descompte from Latin dis + computare"
+      }
+    },
+    "dollar": {
+      "immediate": {
+        "path": "other",
+        "note": "From German Taler (Joachimsthal coin) via Dutch/English"
+      }
+    },
+    "euro": {
+      "immediate": {
+        "path": "latin",
+        "note": "Modern from Europe (Greek Europa)"
+      }
+    },
+    "expensive": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin expensivus from expendere 'pay out'"
+      }
+    },
+    "free": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English freo 'not in bondage'; also 'without charge'"
+      },
+      "pie": {
+        "root": "*pri-",
+        "meaning": "love, free"
+      }
+    },
+    "offer": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin offerre via French"
+      }
+    },
+    "open": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English open"
+      }
+    },
+    "pay": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin pacare 'pacify, settle' via French payer"
+      }
+    },
+    "pound": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin pondo 'by weight' (currency and weight unit)"
+      }
+    },
+    "price": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin pretium via French"
+      }
+    },
+    "purse": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin bursa via French"
+      }
+    },
+    "queue": {
+      "immediate": {
+        "path": "latin",
+        "note": "French queue 'tail' from Latin cauda"
+      }
+    },
+    "receipt": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin recepta via French"
+      }
+    },
+    "refund": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin refundere 'pour back' via French"
+      }
+    },
+    "sale": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sala (from sell)"
+      }
+    },
+    "sell": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sellan 'give, sell'"
+      }
+    },
+    "shopping": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From shop + -ing"
+      }
+    },
+    "size": {
+      "immediate": {
+        "path": "latin",
+        "note": "Old French sise from assise 'settled amount'"
+      }
+    },
+    "try on": {
+      "immediate": {
+        "path": "germanic",
+        "note": "try (French trier / Latin) + on (Germanic particle)"
+      }
+    },
+    "wallet": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Germanic 'knapsack, bag'; money-case sense later"
+      }
+    },
+    "blog": {
+      "immediate": {
+        "path": "other",
+        "note": "Modern short for weblog (web + log)"
+      }
+    },
+    "camera": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin camera 'vaulted room' (camera obscura → camera)"
+      }
+    },
+    "cd": {
+      "immediate": {
+        "path": "latin",
+        "note": "Initialism: compact disc (Latin compactus + discus)"
+      }
+    },
+    "dvd": {
+      "immediate": {
+        "path": "other",
+        "note": "Initialism: digital versatile/video disc (modern trademark term)"
+      }
+    },
+    "internet": {
+      "immediate": {
+        "path": "latin",
+        "note": "Modern: inter (Latin) + network (Germanic net + work)"
+      }
+    },
+    "magazine": {
+      "immediate": {
+        "path": "other",
+        "note": "Arabic makhzan 'storehouse' via Italian/French"
+      }
+    },
+    "message": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin missus via French"
+      }
+    },
+    "mobile": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin mobilis 'movable' via French"
+      }
+    },
+    "news": {
+      "immediate": {
+        "path": "latin",
+        "note": "Plural of new (Germanic); 'tidings' sense later"
+      }
+    },
+    "newspaper": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: news + paper (paper is Latin/Greek)"
+      }
+    },
+    "online": {
+      "immediate": {
+        "path": "latin",
+        "note": "Modern: on + line (Latin linea)"
+      }
+    },
+    "photo": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for photograph (Greek phos 'light' + graphein 'write')"
+      }
+    },
+    "photograph": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek phos 'light' + graphein 'write'"
+      }
+    },
+    "picture": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin pictura from pingere 'paint'"
+      }
+    },
+    "radio": {
+      "immediate": {
+        "path": "latin",
+        "note": "From radiotelegraphy (Latin radius 'ray')"
+      }
+    },
+    "screen": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old French escren from Germanic; display sense later"
+      }
+    },
+    "telephone": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek tele 'far' + phone 'sound'"
+      }
+    },
+    "television": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek tele 'far' + Latin visio 'sight'"
+      }
+    },
+    "tv": {
+      "immediate": {
+        "path": "latin",
+        "note": "Initialism for television"
+      }
+    },
+    "video": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin video 'I see'"
+      }
+    },
+    "website": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Modern: web (Germanic) + site (Latin situs)"
+      }
+    },
+    "afraid": {
+      "immediate": {
+        "path": "latin",
+        "note": "Old French afrayer 'disturb' (Frankish into French)"
+      }
+    },
+    "amazing": {
+      "immediate": {
+        "path": "latin",
+        "note": "From amaze (Old English amasian)"
+      }
+    },
+    "angry": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse angr 'grief' into English"
+      }
+    },
+    "band": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Germanic 'bond, strip'; music-group sense later"
+      }
+    },
+    "bored": {
+      "immediate": {
+        "path": "latin",
+        "note": "From bore (18th c. English; origin debated)"
+      }
+    },
+    "boring": {
+      "immediate": {
+        "path": "latin",
+        "note": "From bore (tedious); origin debated"
+      }
+    },
+    "busy": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bisig"
+      }
+    },
+    "common": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin communis via French"
+      }
+    },
+    "complete": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin completus via French"
+      }
+    },
+    "concert": {
+      "immediate": {
+        "path": "latin",
+        "note": "Italian concerto via French"
+      }
+    },
+    "cook": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin coquus / coquere via French"
+      }
+    },
+    "correct": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin correctus via French"
+      }
+    },
+    "dance": {
+      "immediate": {
+        "path": "latin",
+        "note": "Old French dancer (Frankish origin into French)"
+      }
+    },
+    "dancing": {
+      "immediate": {
+        "path": "latin",
+        "note": "From dance + -ing"
+      }
+    },
+    "dangerous": {
+      "immediate": {
+        "path": "latin",
+        "note": "French dangerous from Latin dominium line"
+      }
+    },
+    "draw": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English dragan 'pull'; sketch sense later"
+      }
+    },
+    "excited": {
+      "immediate": {
+        "path": "latin",
+        "note": "From excite (Latin excitare)"
+      }
+    },
+    "exercise": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin exercitium via French"
+      }
+    },
+    "fantastic": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin phantasticus via French"
+      }
+    },
+    "favourite": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin favor via French favorite"
+      }
+    },
+    "film": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English filmen 'membrane'; cinema sense later"
+      }
+    },
+    "fine": {
+      "immediate": {
+        "path": "latin",
+        "note": "French fin from Latin finis 'end' → refined, OK"
+      }
+    },
+    "football": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: foot + ball (both Germanic)"
+      }
+    },
+    "fun": {
+      "immediate": {
+        "path": "other",
+        "note": "Later English; origin uncertain"
+      }
+    },
+    "funny": {
+      "immediate": {
+        "path": "other",
+        "note": "From fun + -y"
+      }
+    },
+    "game": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English gamen 'sport, joy'"
+      }
+    },
+    "great": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English great 'big, coarse'"
+      }
+    },
+    "guitar": {
+      "immediate": {
+        "path": "other",
+        "note": "Greek kithara via Arabic/Spanish guitarra"
+      }
+    },
+    "gym": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for gymnasium (Greek gymnasion)"
+      }
+    },
+    "happy": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From hap 'chance, luck' (Old Norse) + -y"
+      }
+    },
+    "hobby": {
+      "immediate": {
+        "path": "other",
+        "note": "From hobby-horse (toy); pastime sense later"
+      }
+    },
+    "holiday": {
+      "immediate": {
+        "path": "germanic",
+        "note": "holy + day (religious day off → vacation)"
+      }
+    },
+    "hot": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hat"
+      }
+    },
+    "interested": {
+      "immediate": {
+        "path": "latin",
+        "note": "From interest (Latin interest 'it matters')"
+      }
+    },
+    "interesting": {
+      "immediate": {
+        "path": "latin",
+        "note": "From interest (Latin)"
+      }
+    },
+    "listen": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hlysnan"
+      }
+    },
+    "match": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English gemaecca 'mate'; contest sense later"
+      }
+    },
+    "modern": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin modernus via French"
+      }
+    },
+    "movie": {
+      "immediate": {
+        "path": "latin",
+        "note": "Short for moving picture (move from Latin movere)"
+      }
+    },
+    "paint": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin pingere via French peint"
+      }
+    },
+    "party": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin partire 'divide' via French partie"
+      }
+    },
+    "perfect": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin perfectus via French"
+      }
+    },
+    "play": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English plegian"
+      }
+    },
+    "popular": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin popularis from populus 'people'"
+      }
+    },
+    "pretty": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English praettig 'clever'; attractive sense later"
+      }
+    },
+    "quick": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cwic 'alive, lively'"
+      },
+      "pie": {
+        "root": "*gwei-",
+        "meaning": "live"
+      }
+    },
+    "quiet": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin quietus via French"
+      }
+    },
+    "read": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English raedan 'advise, read'"
+      }
+    },
+    "relax": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin relaxare via French"
+      }
+    },
+    "running": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From run (Old English rinnan)"
+      }
+    },
+    "sad": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English saed 'sated, weary'; unhappy sense later"
+      }
+    },
+    "similar": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin similaris via French"
+      }
+    },
+    "sing": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English singan"
+      },
+      "pie": {
+        "root": "*sengwh-",
+        "meaning": "sing"
+      }
+    },
+    "song": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sang"
+      },
+      "pie": {
+        "root": "*sengwh-",
+        "meaning": "sing"
+      }
+    },
+    "sorry": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sarig 'sore, distressed'"
+      }
+    },
+    "sport": {
+      "immediate": {
+        "path": "latin",
+        "note": "French desport 'leisure' from Latin portare 'carry'"
+      }
+    },
+    "sure": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin securus via French sur"
+      }
+    },
+    "swimming": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From swim (Old English swimman)"
+      }
+    },
+    "team": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English team 'set of draught animals'; group sense later"
+      }
+    },
+    "tennis": {
+      "immediate": {
+        "path": "latin",
+        "note": "Probably from French tenez 'take!' (call in jeu de paume)"
+      }
+    },
+    "travel": {
+      "immediate": {
+        "path": "latin",
+        "note": "French travailler 'work hard' (journey was hard work)"
+      }
+    },
+    "visit": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin visitare via French"
+      }
+    },
+    "well": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wel 'in a good way'; also healthy"
+      }
+    },
+    "wonderful": {
+      "immediate": {
+        "path": "germanic",
+        "note": "wonder (Germanic) + -ful"
+      }
+    },
+    "worried": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From worry (Old English wyrgan 'strangle' → harass → anxious)"
+      }
+    },
+    "write": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English writan 'score, write'"
+      }
+    },
+    "café": {
+      "immediate": {
+        "path": "other",
+        "note": "French cafe from Arabic/Turkish coffeehouse line"
+      }
+    },
+    "action": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin actio from agere 'do' via French"
+      }
+    },
+    "advice": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin advisum via French avis"
+      }
+    },
+    "area": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin area 'open space'"
+      }
+    },
+    "beginning": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From begin (Old English beginnan) + -ing"
+      }
+    },
+    "capital": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin capitalis 'of the head' (chief city / money)"
+      }
+    },
+    "century": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin centuria from centum 'hundred'"
+      }
+    },
+    "culture": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin cultura 'tilling, cultivation' via French"
+      }
+    },
+    "date": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin data (as in data Romae) via French"
+      }
+    },
+    "end": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ende"
+      },
+      "pie": {
+        "root": "*ant-",
+        "meaning": "front, end"
+      }
+    },
+    "event": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin eventus from evenire 'come out'"
+      }
+    },
+    "fact": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin factum 'thing done'"
+      }
+    },
+    "form": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin forma via French"
+      }
+    },
+    "future": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin futurus 'about to be' via French"
+      }
+    },
+    "group": {
+      "immediate": {
+        "path": "latin",
+        "note": "Italian gruppo via French (Germanic into Romance)"
+      }
+    },
+    "interest": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin interest 'it matters'; also money interest"
+      }
+    },
+    "life": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English lif"
+      },
+      "pie": {
+        "root": "*leip-",
+        "meaning": "remain, live"
+      }
+    },
+    "line": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin linea 'linen thread, line' via French"
+      }
+    },
+    "machine": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin machina via French"
+      }
+    },
+    "member": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin membrum 'limb, part' via French"
+      }
+    },
+    "midnight": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: mid + night (both Germanic)"
+      }
+    },
+    "moment": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin momentum via French"
+      }
+    },
+    "object": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin objectum 'thing thrown before' via French"
+      }
+    },
+    "pair": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin paria via French"
+      }
+    },
+    "part": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin partem via French"
+      }
+    },
+    "past": {
+      "immediate": {
+        "path": "latin",
+        "note": "From pass (Latin passare); past tense/time sense"
+      }
+    },
+    "period": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek/Latin periodus via French"
+      }
+    },
+    "person": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin persona via French"
+      }
+    },
+    "piece": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin pettia / Gaulish via French piece"
+      }
+    },
+    "place": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin platea via French"
+      }
+    },
+    "plan": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin planus 'flat' via French (drawing / scheme)"
+      }
+    },
+    "point": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin punctum via French"
+      }
+    },
+    "product": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin productum from producere 'bring forth'"
+      }
+    },
+    "programme": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek programma via Latin/French (British spelling)"
+      }
+    },
+    "project": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin projectum 'thrown forward'"
+      }
+    },
+    "reason": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin ratio via French raison"
+      }
+    },
+    "result": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin resultare via French"
+      }
+    },
+    "routine": {
+      "immediate": {
+        "path": "latin",
+        "note": "French routine from route 'road, way'"
+      }
+    },
+    "rule": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin regula via French"
+      }
+    },
+    "section": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin sectio from secare 'cut'"
+      }
+    },
+    "situation": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin situatio from situs 'site'"
+      }
+    },
+    "skill": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse skil 'distinction, knowledge'"
+      }
+    },
+    "sound": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin sonus via French; also Germanic 'healthy' is a different sound"
+      }
+    },
+    "style": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin stilus 'writing tool' via French"
+      }
+    },
+    "success": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin successus via French"
+      }
+    },
+    "thing": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English thing 'assembly, matter, object'"
+      }
+    },
+    "topic": {
+      "immediate": {
+        "path": "latin",
+        "note": "Greek topos 'place' via Latin topica"
+      }
+    },
+    "visitor": {
+      "immediate": {
+        "path": "latin",
+        "note": "From visit (Latin visitare) + -or"
+      }
+    },
+    "give": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English giefan"
+      },
+      "pie": {
+        "root": "*do-",
+        "meaning": "give"
+      },
+      "czech_cognate": {
+        "word": "dát",
+        "bridge": "donate, donation, data",
+        "note": "Same root as donate — Czech dát is the cousin (give itself changed shape)"
+      }
+    },
+    "see": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English seon"
+      },
+      "pie": {
+        "root": "*weid-",
+        "meaning": "see, know"
+      },
+      "czech_cognate": {
+        "word": "vidět",
+        "bridge": "vision, video, view",
+        "note": "Same root as vision/video — Czech vidět is the cousin"
+      }
+    },
+    "know": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cnawan"
+      },
+      "pie": {
+        "root": "*gno-",
+        "meaning": "know"
+      },
+      "czech_cognate": {
+        "word": "znát",
+        "bridge": "ignore, recognise, cognition",
+        "note": "Same know-root family (gno-); ignore = not-know"
+      }
+    },
+    "hear": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hieran"
+      },
+      "pie": {
+        "root": "*keu-",
+        "meaning": "notice, hear"
+      },
+      "notes": "Related to the ear family; Czech slyset is a different root."
+    },
+    "sleep": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English slæpan"
+      },
+      "pie": {
+        "root": "*swep-",
+        "meaning": "sleep"
+      },
+      "czech_cognate": {
+        "word": "spát",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "live": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English lifian / libban"
+      },
+      "pie": {
+        "root": "*gwei-",
+        "meaning": "live"
+      },
+      "czech_cognate": {
+        "word": "žít",
+        "bridge": "quick (old sense alive), vivid, vital",
+        "note": "Same live-root family; English live changed shape"
+      }
+    },
+    "do": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English don"
+      },
+      "pie": {
+        "root": "*dhe-",
+        "meaning": "put, do"
+      }
+    },
+    "does": {
+      "immediate": {
+        "path": "germanic",
+        "note": "3rd person of do (Germanic)"
+      }
+    },
+    "make": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English macian"
+      }
+    },
+    "get": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse geta into English"
+      }
+    },
+    "get up": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Phrasal: get (Norse) + up (Germanic)"
+      }
+    },
+    "put": {
+      "immediate": {
+        "path": "other",
+        "note": "Late Old English; origin uncertain"
+      }
+    },
+    "find": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English findan"
+      }
+    },
+    "look": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English locian"
+      }
+    },
+    "help": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English helpan"
+      }
+    },
+    "need": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English neodian (from neod need)"
+      }
+    },
+    "want": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse vanta into English"
+      }
+    },
+    "like": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English lician 'please'; modern like sense later"
+      }
+    },
+    "love": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English lufu / lufian"
+      },
+      "pie": {
+        "root": "*leubh-",
+        "meaning": "care, love"
+      }
+    },
+    "ask": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ascian"
+      }
+    },
+    "say": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English secgan"
+      }
+    },
+    "tell": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English tellan 'count, tell'"
+      }
+    },
+    "speak": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English specan / sprecan"
+      }
+    },
+    "talk": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Middle English; related to tale/tell"
+      }
+    },
+    "call": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse kalla into English"
+      }
+    },
+    "think": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English thencan"
+      }
+    },
+    "remember": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin rememorari via French"
+      }
+    },
+    "forget": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English forgietan"
+      }
+    },
+    "understand": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Compound: under + stand (stand among / grasp)"
+      }
+    },
+    "meet": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English metan"
+      }
+    },
+    "wait": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old French waitier from Frankish/Germanic"
+      }
+    },
+    "try": {
+      "immediate": {
+        "path": "latin",
+        "note": "Old French trier 'sift, pick' "
+      }
+    },
+    "use": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin usare / usus via French"
+      }
+    },
+    "swim": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English swimman"
+      }
+    },
+    "begin": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English beginnan"
+      }
+    },
+    "become": {
+      "immediate": {
+        "path": "germanic",
+        "note": "be- + come (Germanic)"
+      }
+    },
+    "bring": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bringan"
+      }
+    },
+    "sit": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sittan"
+      },
+      "pie": {
+        "root": "*sed-",
+        "meaning": "sit"
+      },
+      "czech_cognate": {
+        "word": "sedět",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "stand": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English standan"
+      },
+      "pie": {
+        "root": "*sta-",
+        "meaning": "stand"
+      },
+      "czech_cognate": {
+        "word": "stát",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "run": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English rinnan"
+      }
+    },
+    "fly": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English fleogan"
+      }
+    },
+    "fall": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English feallan"
+      }
+    },
+    "hold": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English healdan"
+      }
+    },
+    "keep": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cepan"
+      }
+    },
+    "let": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English lætan"
+      }
+    },
+    "send": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sendan"
+      }
+    },
+    "show": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sceawian"
+      }
+    },
+    "feel": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English felan"
+      }
+    },
+    "seem": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse sœma into English"
+      }
+    },
+    "stay": {
+      "immediate": {
+        "path": "latin",
+        "note": "Old French estai from Latin stare 'stand'"
+      }
+    },
+    "return": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin returnare via French"
+      }
+    },
+    "move": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin movere via French"
+      }
+    },
+    "close": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin clausus via French"
+      }
+    },
+    "clean": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English clæne"
+      }
+    },
+    "dirty": {
+      "immediate": {
+        "path": "other",
+        "note": "From dirt (origin uncertain) + -y"
+      }
+    },
+    "can": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English cunnan 'know how'"
+      }
+    },
+    "cannot": {
+      "immediate": {
+        "path": "germanic",
+        "note": "can + not (Germanic)"
+      }
+    },
+    "don t": {
+      "immediate": {
+        "path": "germanic",
+        "note": "do + not (Germanic contraction)"
+      }
+    },
+    "must": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English moste (from motan)"
+      }
+    },
+    "should": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Past of shall (Old English sculan)"
+      }
+    },
+    "will": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English willan 'want'; future auxiliary later"
+      }
+    },
+    "would": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Past of will (Germanic)"
+      }
+    },
+    "am": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English eom (be paradigm)"
+      },
+      "pie": {
+        "root": "*es-",
+        "meaning": "be"
+      }
+    },
+    "is": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English is (be paradigm)"
+      },
+      "pie": {
+        "root": "*es-",
+        "meaning": "be"
+      },
+      "czech_cognate": {
+        "word": "je",
+        "bridge": "is, am, are (be)",
+        "note": "Same ancient be-root; short forms look different"
+      }
+    },
+    "are": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English earun (be paradigm)"
+      }
+    },
+    "be": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English beon"
+      },
+      "pie": {
+        "root": "*bheu-",
+        "meaning": "be, become"
+      }
+    },
+    "have": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English habban"
+      }
+    },
+    "has": {
+      "immediate": {
+        "path": "germanic",
+        "note": "3rd person of have"
+      }
+    },
+    "new": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English niwe"
+      },
+      "pie": {
+        "root": "*newo-",
+        "meaning": "new"
+      },
+      "czech_cognate": {
+        "word": "nový",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "old": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English eald"
+      },
+      "pie": {
+        "root": "*al-",
+        "meaning": "grow, nourish"
+      }
+    },
+    "young": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English geong"
+      },
+      "pie": {
+        "root": "*yeu-",
+        "meaning": "vital force, young"
+      }
+    },
+    "big": {
+      "immediate": {
+        "path": "other",
+        "note": "Middle English; origin uncertain"
+      }
+    },
+    "small": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English smæl"
+      }
+    },
+    "long": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English lang"
+      },
+      "pie": {
+        "root": "*del-",
+        "meaning": "long"
+      },
+      "czech_cognate": {
+        "word": "dlouhý",
+        "bridge": "longitude, elongate",
+        "note": "Same root as longitude — Czech dlouhý is the cousin"
+      }
+    },
+    "good": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English god"
+      }
+    },
+    "bad": {
+      "immediate": {
+        "path": "other",
+        "note": "Middle English; origin uncertain"
+      }
+    },
+    "nice": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin nescius 'ignorant' via French; sense shifted to pleasant"
+      }
+    },
+    "easy": {
+      "immediate": {
+        "path": "latin",
+        "note": "Old French aisie from Latin adiacens line"
+      }
+    },
+    "difficult": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin difficilis via French"
+      }
+    },
+    "important": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin importantem via French"
+      }
+    },
+    "famous": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin famosus via French"
+      }
+    },
+    "full": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English full"
+      },
+      "pie": {
+        "root": "*pel-",
+        "meaning": "fill"
+      },
+      "czech_cognate": {
+        "word": "plný",
+        "note": "Related — true cousin"
+      }
+    },
+    "tired": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From tire (Old English teorian 'fail, tire')"
+      }
+    },
+    "friendly": {
+      "immediate": {
+        "path": "germanic",
+        "note": "friend + -ly (Germanic)"
+      }
+    },
+    "handsome": {
+      "immediate": {
+        "path": "germanic",
+        "note": "hand + -some 'easy to handle' → good-looking"
+      }
+    },
+    "kind": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English gecynde 'natural'; generous sense later"
+      }
+    },
+    "wrong": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse rangr into English"
+      }
+    },
+    "i": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ic"
+      },
+      "pie": {
+        "root": "*eg-",
+        "meaning": "I"
+      },
+      "czech_cognate": {
+        "word": "já",
+        "bridge": "I, me, ego",
+        "note": "Same I-root; ego is the Latin shape"
+      }
+    },
+    "you": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English eow (plural/object form)"
+      },
+      "pie": {
+        "root": "*yu-",
+        "meaning": "you (plural)"
+      }
+    },
+    "he": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English he"
+      }
+    },
+    "she": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English heo / sie line"
+      }
+    },
+    "it": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hit"
+      }
+    },
+    "we": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English we"
+      },
+      "pie": {
+        "root": "*wei-",
+        "meaning": "we"
+      }
+    },
+    "they": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse their into English"
+      }
+    },
+    "my": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English min"
+      }
+    },
+    "mine": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English min (possessive)"
+      }
+    },
+    "your": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English eower"
+      }
+    },
+    "his": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English his"
+      }
+    },
+    "her": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hire"
+      }
+    },
+    "our": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ure"
+      }
+    },
+    "their": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse theirra into English"
+      }
+    },
+    "me": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English me"
+      }
+    },
+    "him": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English him"
+      }
+    },
+    "us": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English us"
+      }
+    },
+    "them": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse theim into English"
+      }
+    },
+    "this": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English this"
+      }
+    },
+    "that": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English thæt"
+      }
+    },
+    "these": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Plural of this"
+      }
+    },
+    "those": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Plural of that"
+      }
+    },
+    "the": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English the / se demonstrative line"
+      }
+    },
+    "a": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Weak form of an 'one' (Old English an)"
+      }
+    },
+    "an": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English an 'one'"
+      }
+    },
+    "some": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English sum"
+      }
+    },
+    "someone": {
+      "immediate": {
+        "path": "germanic",
+        "note": "some + one"
+      }
+    },
+    "something": {
+      "immediate": {
+        "path": "germanic",
+        "note": "some + thing"
+      }
+    },
+    "any": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ænig (from an 'one')"
+      }
+    },
+    "another": {
+      "immediate": {
+        "path": "germanic",
+        "note": "an + other"
+      }
+    },
+    "other": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English other"
+      }
+    },
+    "both": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse bathir into English"
+      }
+    },
+    "all": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English eall"
+      }
+    },
+    "every": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English æfre ælc 'ever each'"
+      }
+    },
+    "everybody": {
+      "immediate": {
+        "path": "germanic",
+        "note": "every + body"
+      }
+    },
+    "everything": {
+      "immediate": {
+        "path": "germanic",
+        "note": "every + thing"
+      }
+    },
+    "many": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English manig"
+      }
+    },
+    "much": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English mycel / muchel line"
+      }
+    },
+    "more": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English mara"
+      }
+    },
+    "most": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English mæst"
+      }
+    },
+    "no": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English na / no"
+      }
+    },
+    "not": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English nawiht 'nothing' shortened"
+      }
+    },
+    "yes": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English gese / yes"
+      }
+    },
+    "please": {
+      "immediate": {
+        "path": "latin",
+        "note": "French plaisir / Latin placere 'please'"
+      }
+    },
+    "thanks": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From thank (Old English thancian)"
+      }
+    },
+    "thank": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English thancian"
+      }
+    },
+    "hello": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Related to hallo / whole; greeting form later"
+      }
+    },
+    "hi": {
+      "immediate": {
+        "path": "other",
+        "note": "Modern informal greeting"
+      }
+    },
+    "bye": {
+      "immediate": {
+        "path": "other",
+        "note": "Short for goodbye (God be with ye)"
+      }
+    },
+    "goodbye": {
+      "immediate": {
+        "path": "other",
+        "note": "Contraction of 'God be with ye'"
+      }
+    },
+    "welcome": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wilcuma 'desired guest'"
+      }
+    },
+    "excuse": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin excusare via French"
+      }
+    },
+    "what": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hwæt"
+      },
+      "pie": {
+        "root": "*kwod-",
+        "meaning": "what"
+      },
+      "czech_cognate": {
+        "word": "co",
+        "bridge": "what / who (same old question stem)",
+        "note": "Same question stem as who; forms diverged a lot"
+      }
+    },
+    "who": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hwa"
+      },
+      "pie": {
+        "root": "*kwo-",
+        "meaning": "who"
+      },
+      "czech_cognate": {
+        "word": "kdo",
+        "note": "Looks related — true cousin"
+      }
+    },
+    "where": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hwær"
+      },
+      "pie": {
+        "root": "*kwo-",
+        "meaning": "who/where question stem"
+      }
+    },
+    "when": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hwanne"
+      }
+    },
+    "why": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hwi"
+      }
+    },
+    "which": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hwilc"
+      }
+    },
+    "how": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hu"
+      }
+    },
+    "in": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English in"
+      },
+      "pie": {
+        "root": "*en",
+        "meaning": "in"
+      }
+    },
+    "on": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English on"
+      }
+    },
+    "at": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English æt"
+      }
+    },
+    "to": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English to"
+      }
+    },
+    "for": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English for"
+      }
+    },
+    "of": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English of"
+      }
+    },
+    "with": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English with 'against, with'"
+      }
+    },
+    "from": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English from"
+      }
+    },
+    "by": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English bi"
+      }
+    },
+    "about": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English onbutan 'on the outside'"
+      }
+    },
+    "above": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English abufan"
+      }
+    },
+    "under": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English under"
+      },
+      "pie": {
+        "root": "*ndher-",
+        "meaning": "under"
+      }
+    },
+    "over": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ofer"
+      }
+    },
+    "into": {
+      "immediate": {
+        "path": "germanic",
+        "note": "in + to"
+      }
+    },
+    "after": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English æfter"
+      }
+    },
+    "before": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English beforan"
+      }
+    },
+    "because": {
+      "immediate": {
+        "path": "latin",
+        "note": "by + cause (Latin causa via French)"
+      }
+    },
+    "and": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English and"
+      }
+    },
+    "or": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English oththe / or line"
+      }
+    },
+    "but": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English butan 'outside, except'"
+      }
+    },
+    "so": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English swa"
+      }
+    },
+    "if": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English gif"
+      }
+    },
+    "than": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English thanne"
+      }
+    },
+    "as": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ealswa / as"
+      }
+    },
+    "ball": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old Norse böllr / Old English beall line"
+      }
+    },
+    "box": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin buxis via Greek (boxwood container)"
+      }
+    },
+    "boxes": {
+      "immediate": {
+        "path": "latin",
+        "note": "Plural of box"
+      }
+    },
+    "chairs": {
+      "immediate": {
+        "path": "latin",
+        "note": "Plural of chair (Latin cathedra via French)"
+      }
+    },
+    "shops": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Plural of shop"
+      }
+    },
+    "ticket": {
+      "immediate": {
+        "path": "latin",
+        "note": "Old French etiquet 'label, note'"
+      }
+    },
+    "english": {
+      "immediate": {
+        "path": "germanic",
+        "note": "From the Angles (Germanic tribe) + -ish"
+      }
+    },
+    "o clock": {
+      "immediate": {
+        "path": "latin",
+        "note": "of the clock (clock from Medieval Latin clocca)"
+      }
+    },
+    "anna": {
+      "immediate": {
+        "path": "other",
+        "note": "Personal name used in practice frames (not general vocab)"
+      }
+    },
+    "across from": {
+      "immediate": {
+        "path": "latin",
+        "note": "across (Latin via French) + from (Germanic)"
+      }
+    },
+    "agree": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin ad + gratus via French agreer"
+      }
+    },
+    "believe": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English belyfan / belief line"
+      }
+    },
+    "beside": {
+      "immediate": {
+        "path": "germanic",
+        "note": "be- + side (Germanic)"
+      }
+    },
+    "best": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English betst (superlative of good)"
+      }
+    },
+    "better": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English betera (comparative of good)"
+      }
+    },
+    "build": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English byldan"
+      }
+    },
+    "can t": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Contraction of cannot (Germanic)"
+      }
+    },
+    "choose": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ceosan"
+      }
+    },
+    "close to": {
+      "immediate": {
+        "path": "latin",
+        "note": "close (Latin clausus via French) + to"
+      }
+    },
+    "decide": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin decidere via French"
+      }
+    },
+    "different": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin differentem via French"
+      }
+    },
+    "drive": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English drifan"
+      }
+    },
+    "enjoy": {
+      "immediate": {
+        "path": "latin",
+        "note": "Old French enjoir from Latin gaudere line"
+      }
+    },
+    "everyone": {
+      "immediate": {
+        "path": "germanic",
+        "note": "every + one"
+      }
+    },
+    "exciting": {
+      "immediate": {
+        "path": "latin",
+        "note": "From excite (Latin excitare)"
+      }
+    },
+    "explain": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin explanare via French"
+      }
+    },
+    "fast": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English fæst 'firm'; quick sense later"
+      }
+    },
+    "follow": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English folgian"
+      }
+    },
+    "happens": {
+      "immediate": {
+        "path": "other",
+        "note": "From happen (hap 'chance' + -en); 3rd person form"
+      }
+    },
+    "happen": {
+      "immediate": {
+        "path": "other",
+        "note": "hap 'chance' (Old Norse) + -en"
+      }
+    },
+    "hard": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English heard"
+      }
+    },
+    "hope": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hopian"
+      }
+    },
+    "join": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin iungere via French joindre"
+      }
+    },
+    "large": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin largus via French"
+      }
+    },
+    "little": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English lytel"
+      }
+    },
+    "lose": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English losian"
+      }
+    },
+    "lot": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English hlot 'share, lot'; a lot of later"
+      }
+    },
+    "mean": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English mænan 'intend, mean'"
+      }
+    },
+    "miss": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English missan 'fail to hit / go wrong'"
+      }
+    },
+    "oclock": {
+      "immediate": {
+        "path": "latin",
+        "note": "Variant key for o'clock (of the clock)"
+      }
+    },
+    "prefer": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin praeferre via French"
+      }
+    },
+    "prepare": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin praeparare via French"
+      }
+    },
+    "ready": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English ræde"
+      }
+    },
+    "real": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin realis via French"
+      }
+    },
+    "share": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English scearu 'division, share'"
+      }
+    },
+    "somebody": {
+      "immediate": {
+        "path": "germanic",
+        "note": "some + body"
+      }
+    },
+    "spend": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin expendere via French (money / time)"
+      }
+    },
+    "strong": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English strang"
+      }
+    },
+    "teach": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English tæcan"
+      }
+    },
+    "thank you": {
+      "immediate": {
+        "path": "germanic",
+        "note": "thank (Germanic) + you (Germanic)"
+      }
+    },
+    "useful": {
+      "immediate": {
+        "path": "latin",
+        "note": "Latin utilis via French"
+      }
+    },
+    "underneath": {
+      "immediate": {
+        "path": "germanic",
+        "note": "under + neath (Germanic)"
+      }
+    },
+    "yeah": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Informal yes (Germanic yes line)"
+      }
+    },
+    "wake": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wacan"
+      }
+    },
+    "wash": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English wascan"
+      }
+    },
+    "win": {
+      "immediate": {
+        "path": "germanic",
+        "note": "Old English winnan"
+      }
+    }
+  }
+}

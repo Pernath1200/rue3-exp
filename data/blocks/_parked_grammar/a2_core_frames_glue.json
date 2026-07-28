@@ -25,9 +25,9 @@
           "gap_answer": "against"
         },
         {
-          "en": "She sat among her friends.",
-          "cz": "Seděla mezi přáteli.",
-          "gap": "She sat ____ her friends.",
+          "en": "He sat among his friends.",
+          "cz": "Seděl mezi přáteli.",
+          "gap": "He sat ____ his friends.",
           "gap_answer": "among"
         },
         {

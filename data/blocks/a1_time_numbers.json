@@ -3,133 +3,503 @@
   "title": "Time & numbers",
   "level": "A1",
   "tree_node": "leaf_time_a1",
-  "note": "Time & numbers leaf. P1 Oxford fill: teens/tens, ordinals, frequency. Clock phrases also on There/time frames. Sentence = fruit.",
+  "note": "Time & numbers leaf. P1 Oxford fill: teens/tens, ordinals, frequency. Clock phrases also on There/time frames. Sentence = fruit. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "time_numbers",
       "title": "Time · numbers",
       "items": [
-        { "en": "one", "cz": "jedna" },
-        { "en": "two", "cz": "dva" },
-        { "en": "three", "cz": "tři" },
-        { "en": "four", "cz": "čtyři" },
-        { "en": "five", "cz": "pět" },
-        { "en": "six", "cz": "šest" },
-        { "en": "seven", "cz": "sedm" },
-        { "en": "eight", "cz": "osm" },
-        { "en": "nine", "cz": "devět" },
-        { "en": "ten", "cz": "deset" },
-        { "en": "twenty", "cz": "dvacet" },
-        { "en": "hundred", "cz": "sto" }
+        {
+          "en": "one",
+          "cz": "jedna",
+          "use": []
+        },
+        {
+          "en": "two",
+          "cz": "dva",
+          "use": []
+        },
+        {
+          "en": "three",
+          "cz": "tři",
+          "use": []
+        },
+        {
+          "en": "four",
+          "cz": "čtyři",
+          "use": []
+        },
+        {
+          "en": "five",
+          "cz": "pět",
+          "use": []
+        },
+        {
+          "en": "six",
+          "cz": "šest",
+          "use": []
+        },
+        {
+          "en": "seven",
+          "cz": "sedm",
+          "use": []
+        },
+        {
+          "en": "eight",
+          "cz": "osm",
+          "use": []
+        },
+        {
+          "en": "nine",
+          "cz": "devět",
+          "use": []
+        },
+        {
+          "en": "ten",
+          "cz": "deset",
+          "use": []
+        },
+        {
+          "en": "twenty",
+          "cz": "dvacet",
+          "use": []
+        },
+        {
+          "en": "hundred",
+          "cz": "sto",
+          "use": []
+        }
       ]
     },
     {
       "id": "time_days",
       "title": "Time · days",
       "items": [
-        { "en": "Monday", "cz": "pondělí" },
-        { "en": "Tuesday", "cz": "úterý" },
-        { "en": "Wednesday", "cz": "středa" },
-        { "en": "Thursday", "cz": "čtvrtek" },
-        { "en": "Friday", "cz": "pátek" },
-        { "en": "Saturday", "cz": "sobota" },
-        { "en": "Sunday", "cz": "neděle" },
-        { "en": "day", "cz": "den" },
-        { "en": "week", "cz": "týden" },
-        { "en": "weekend", "cz": "víkend" },
-        { "en": "today", "cz": "dnes" },
-        { "en": "tomorrow", "cz": "zítra" }
+        {
+          "en": "Monday",
+          "cz": "pondělí",
+          "use": []
+        },
+        {
+          "en": "Tuesday",
+          "cz": "úterý",
+          "use": []
+        },
+        {
+          "en": "Wednesday",
+          "cz": "středa",
+          "use": []
+        },
+        {
+          "en": "Thursday",
+          "cz": "čtvrtek",
+          "use": []
+        },
+        {
+          "en": "Friday",
+          "cz": "pátek",
+          "use": []
+        },
+        {
+          "en": "Saturday",
+          "cz": "sobota",
+          "use": []
+        },
+        {
+          "en": "Sunday",
+          "cz": "neděle",
+          "use": []
+        },
+        {
+          "en": "day",
+          "cz": "den",
+          "use": [
+            "this_is_a",
+            "have_a_good"
+          ]
+        },
+        {
+          "en": "week",
+          "cz": "týden",
+          "use": [
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "weekend",
+          "cz": "víkend",
+          "use": [
+            "have_a_good"
+          ]
+        },
+        {
+          "en": "today",
+          "cz": "dnes",
+          "use": []
+        },
+        {
+          "en": "tomorrow",
+          "cz": "zítra",
+          "use": []
+        }
       ]
     },
     {
       "id": "time_parts",
       "title": "Time · parts of the day",
       "items": [
-        { "en": "yesterday", "cz": "včera" },
-        { "en": "morning", "cz": "ráno / dopoledne" },
-        { "en": "afternoon", "cz": "odpoledne" },
-        { "en": "evening", "cz": "večer" },
-        { "en": "night", "cz": "noc" },
-        { "en": "time", "cz": "čas" },
-        { "en": "hour", "cz": "hodina" },
-        { "en": "minute", "cz": "minuta" },
-        { "en": "early", "cz": "brzy / časně" },
-        { "en": "late", "cz": "pozdě" },
-        { "en": "now", "cz": "teď" },
-        { "en": "always", "cz": "vždy" }
+        {
+          "en": "yesterday",
+          "cz": "včera",
+          "use": []
+        },
+        {
+          "en": "morning",
+          "cz": "ráno / dopoledne",
+          "use": [
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "afternoon",
+          "cz": "odpoledne",
+          "use": [
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "evening",
+          "cz": "večer",
+          "use": [
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "night",
+          "cz": "noc",
+          "use": [
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "time",
+          "cz": "čas",
+          "use": [
+            "i_have_bare",
+            "i_need_bare"
+          ]
+        },
+        {
+          "en": "hour",
+          "cz": "hodina",
+          "use": [
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "minute",
+          "cz": "minuta",
+          "use": [
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "early",
+          "cz": "brzy / časně",
+          "use": [
+            "it_is",
+            "i_am_adj"
+          ]
+        },
+        {
+          "en": "late",
+          "cz": "pozdě",
+          "use": [
+            "it_is",
+            "i_am_adj"
+          ]
+        },
+        {
+          "en": "now",
+          "cz": "teď",
+          "use": []
+        },
+        {
+          "en": "always",
+          "cz": "vždy",
+          "use": []
+        }
       ]
     },
     {
       "id": "time_months",
       "title": "Time · months",
       "items": [
-        { "en": "January", "cz": "leden" },
-        { "en": "February", "cz": "únor" },
-        { "en": "March", "cz": "březen" },
-        { "en": "April", "cz": "duben" },
-        { "en": "May", "cz": "květen" },
-        { "en": "June", "cz": "červen" },
-        { "en": "July", "cz": "červenec" },
-        { "en": "August", "cz": "srpen" },
-        { "en": "September", "cz": "září" },
-        { "en": "October", "cz": "říjen" },
-        { "en": "November", "cz": "listopad" },
-        { "en": "December", "cz": "prosinec" }
+        {
+          "en": "January",
+          "cz": "leden",
+          "use": []
+        },
+        {
+          "en": "February",
+          "cz": "únor",
+          "use": []
+        },
+        {
+          "en": "March",
+          "cz": "březen",
+          "use": []
+        },
+        {
+          "en": "April",
+          "cz": "duben",
+          "use": []
+        },
+        {
+          "en": "May",
+          "cz": "květen",
+          "use": []
+        },
+        {
+          "en": "June",
+          "cz": "červen",
+          "use": []
+        },
+        {
+          "en": "July",
+          "cz": "červenec",
+          "use": []
+        },
+        {
+          "en": "August",
+          "cz": "srpen",
+          "use": []
+        },
+        {
+          "en": "September",
+          "cz": "září",
+          "use": []
+        },
+        {
+          "en": "October",
+          "cz": "říjen",
+          "use": []
+        },
+        {
+          "en": "November",
+          "cz": "listopad",
+          "use": []
+        },
+        {
+          "en": "December",
+          "cz": "prosinec",
+          "use": []
+        }
       ]
     },
     {
       "id": "time_numbers_teens",
       "title": "Time · teens & big numbers",
       "items": [
-        { "en": "eleven", "cz": "jedenáct" },
-        { "en": "twelve", "cz": "dvanáct" },
-        { "en": "thirteen", "cz": "třináct" },
-        { "en": "fourteen", "cz": "čtrnáct" },
-        { "en": "fifteen", "cz": "patnáct" },
-        { "en": "sixteen", "cz": "šestnáct" },
-        { "en": "seventeen", "cz": "sedmnáct" },
-        { "en": "eighteen", "cz": "osmnáct" },
-        { "en": "nineteen", "cz": "devatenáct" },
-        { "en": "thirty", "cz": "třicet" },
-        { "en": "thousand", "cz": "tisíc" },
-        { "en": "million", "cz": "milion" }
+        {
+          "en": "eleven",
+          "cz": "jedenáct",
+          "use": []
+        },
+        {
+          "en": "twelve",
+          "cz": "dvanáct",
+          "use": []
+        },
+        {
+          "en": "thirteen",
+          "cz": "třináct",
+          "use": []
+        },
+        {
+          "en": "fourteen",
+          "cz": "čtrnáct",
+          "use": []
+        },
+        {
+          "en": "fifteen",
+          "cz": "patnáct",
+          "use": []
+        },
+        {
+          "en": "sixteen",
+          "cz": "šestnáct",
+          "use": []
+        },
+        {
+          "en": "seventeen",
+          "cz": "sedmnáct",
+          "use": []
+        },
+        {
+          "en": "eighteen",
+          "cz": "osmnáct",
+          "use": []
+        },
+        {
+          "en": "nineteen",
+          "cz": "devatenáct",
+          "use": []
+        },
+        {
+          "en": "thirty",
+          "cz": "třicet",
+          "use": []
+        },
+        {
+          "en": "thousand",
+          "cz": "tisíc",
+          "use": []
+        },
+        {
+          "en": "million",
+          "cz": "milion",
+          "use": []
+        }
       ]
     },
     {
       "id": "time_numbers_tens",
       "title": "Time · tens & ordinals",
       "items": [
-        { "en": "forty", "cz": "čtyřicet" },
-        { "en": "fifty", "cz": "padesát" },
-        { "en": "sixty", "cz": "šedesát" },
-        { "en": "seventy", "cz": "sedmdesát" },
-        { "en": "eighty", "cz": "osmdesát" },
-        { "en": "ninety", "cz": "devadesát" },
-        { "en": "first", "cz": "první" },
-        { "en": "second (ordinal)", "cz": "druhý" },
-        { "en": "third", "cz": "třetí" },
-        { "en": "fourth", "cz": "čtvrtý" },
-        { "en": "fifth", "cz": "pátý" },
-        { "en": "number", "cz": "číslo" }
+        {
+          "en": "forty",
+          "cz": "čtyřicet",
+          "use": []
+        },
+        {
+          "en": "fifty",
+          "cz": "padesát",
+          "use": []
+        },
+        {
+          "en": "sixty",
+          "cz": "šedesát",
+          "use": []
+        },
+        {
+          "en": "seventy",
+          "cz": "sedmdesát",
+          "use": []
+        },
+        {
+          "en": "eighty",
+          "cz": "osmdesát",
+          "use": []
+        },
+        {
+          "en": "ninety",
+          "cz": "devadesát",
+          "use": []
+        },
+        {
+          "en": "first",
+          "cz": "první",
+          "use": []
+        },
+        {
+          "en": "second (ordinal)",
+          "cz": "druhý",
+          "use": []
+        },
+        {
+          "en": "third",
+          "cz": "třetí",
+          "use": []
+        },
+        {
+          "en": "fourth",
+          "cz": "čtvrtý",
+          "use": []
+        },
+        {
+          "en": "fifth",
+          "cz": "pátý",
+          "use": []
+        },
+        {
+          "en": "number",
+          "cz": "číslo",
+          "use": [
+            "this_is_a"
+          ]
+        }
       ]
     },
     {
       "id": "time_frequency",
       "title": "Time · frequency & more",
       "items": [
-        { "en": "never", "cz": "nikdy" },
-        { "en": "often", "cz": "často" },
-        { "en": "sometimes", "cz": "někdy" },
-        { "en": "soon", "cz": "brzy" },
-        { "en": "ago", "cz": "před (časem)" },
-        { "en": "tonight", "cz": "dnes večer" },
-        { "en": "month", "cz": "měsíc" },
-        { "en": "year", "cz": "rok" },
-        { "en": "once", "cz": "jednou" },
-        { "en": "twice", "cz": "dvakrát" },
-        { "en": "half", "cz": "půl / polovina" },
-        { "en": "quarter", "cz": "čtvrt / čtvrtina" }
+        {
+          "en": "never",
+          "cz": "nikdy",
+          "use": []
+        },
+        {
+          "en": "often",
+          "cz": "často",
+          "use": []
+        },
+        {
+          "en": "sometimes",
+          "cz": "někdy",
+          "use": []
+        },
+        {
+          "en": "soon",
+          "cz": "brzy",
+          "use": []
+        },
+        {
+          "en": "ago",
+          "cz": "před (časem)",
+          "use": []
+        },
+        {
+          "en": "tonight",
+          "cz": "dnes večer",
+          "use": []
+        },
+        {
+          "en": "month",
+          "cz": "měsíc",
+          "use": [
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "year",
+          "cz": "rok",
+          "use": [
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "once",
+          "cz": "jednou",
+          "use": []
+        },
+        {
+          "en": "twice",
+          "cz": "dvakrát",
+          "use": []
+        },
+        {
+          "en": "half",
+          "cz": "půl / polovina",
+          "use": []
+        },
+        {
+          "en": "quarter",
+          "cz": "čtvrt / čtvrtina",
+          "use": []
+        }
       ]
     }
   ]

@@ -3,63 +3,349 @@
   "title": "Work",
   "level": "A1",
   "tree_node": "leaf_work_a1",
-  "note": "Small A1 work slice — jobs + workplace words. Not full professional lexis. Sentence = fruit.",
+  "note": "A1 work · jobs + workplace · richer carriers · fruit = Word",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "work_jobs",
       "title": "Work · jobs",
       "items": [
-        { "en": "job", "cz": "práce / povolání" },
-        { "en": "work (noun)", "cz": "práce" },
-        { "en": "teacher", "cz": "učitel" },
-        { "en": "doctor", "cz": "doktor / lékař" },
-        { "en": "student", "cz": "student" },
-        { "en": "nurse", "cz": "zdravotní sestra / ošetřovatel" },
-        { "en": "waiter", "cz": "číšník" },
-        { "en": "engineer", "cz": "inženýr" },
-        { "en": "driver", "cz": "řidič" },
-        { "en": "manager", "cz": "manažer / vedoucí" },
-        { "en": "boss", "cz": "šéf" },
-        { "en": "colleague", "cz": "kolega" }
+        {
+          "en": "job",
+          "cz": "práce / povolání",
+          "use": [
+            "i_look_for",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "work (noun)",
+          "cz": "práce",
+          "use": [
+            "i_have_bare",
+            "i_need_bare",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "teacher",
+          "cz": "učitel",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "he_is_my",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "doctor",
+          "cz": "doktor / lékař",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "he_is_my",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "student",
+          "cz": "student",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a",
+            "he_is_my"
+          ]
+        },
+        {
+          "en": "nurse",
+          "cz": "zdravotní sestra / ošetřovatel",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "he_is_my",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "waiter",
+          "cz": "číšník",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "engineer",
+          "cz": "inženýr",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "driver",
+          "cz": "řidič",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "manager",
+          "cz": "manažer / vedoucí",
+          "use": [
+            "he_is_my",
+            "i_am_a",
+            "he_is_a"
+          ]
+        },
+        {
+          "en": "boss",
+          "cz": "šéf",
+          "use": [
+            "he_is_my",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "colleague",
+          "cz": "kolega",
+          "use": [
+            "he_is_my",
+            "he_is_a",
+            "this_is_a"
+          ]
+        }
       ]
     },
     {
       "id": "work_place",
       "title": "Work · workplace",
       "items": [
-        { "en": "office", "cz": "kancelář" },
-        { "en": "company", "cz": "firma / společnost" },
-        { "en": "meeting", "cz": "schůzka / porada" },
-        { "en": "email", "cz": "e-mail" },
-        { "en": "computer", "cz": "počítač" },
-        { "en": "phone", "cz": "telefon" },
-        { "en": "money", "cz": "peníze" },
-        { "en": "salary", "cz": "plat" },
-        { "en": "work (verb)", "cz": "pracovat" },
-        { "en": "start (work)", "cz": "začít (práci)" },
-        { "en": "finish (work)", "cz": "skončit (práci)" },
-        { "en": "break (rest)", "cz": "přestávka" }
+        {
+          "en": "office",
+          "cz": "kancelář",
+          "use": [
+            "i_work_in",
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "company",
+          "cz": "firma / společnost",
+          "use": [
+            "i_work_for",
+            "i_work_in",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "meeting",
+          "cz": "schůzka / porada",
+          "use": [
+            "i_have_a_meeting",
+            "i_have_a",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "email",
+          "cz": "e-mail",
+          "use": [
+            "i_send_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "computer",
+          "cz": "počítač",
+          "use": [
+            "i_have_a",
+            "i_need_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "phone",
+          "cz": "telefon",
+          "use": [
+            "i_have_a",
+            "i_need_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "money",
+          "cz": "peníze",
+          "use": [
+            "i_have_bare",
+            "i_need_bare",
+            "i_get_a"
+          ]
+        },
+        {
+          "en": "salary",
+          "cz": "plat",
+          "use": [
+            "i_get_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "work (verb)",
+          "cz": "pracovat",
+          "use": []
+        },
+        {
+          "en": "start (work)",
+          "cz": "začít (práci)",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "finish (work)",
+          "cz": "skončit (práci)",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        },
+        {
+          "en": "break (rest)",
+          "cz": "přestávka",
+          "use": [
+            "i_have_a",
+            "i_need_a",
+            "this_is_a"
+          ]
+        }
       ]
     },
     {
       "id": "work_people",
       "title": "Work · people & roles",
       "items": [
-        { "en": "actor", "cz": "herec" },
-        { "en": "actress", "cz": "herečka" },
-        { "en": "dancer", "cz": "tanečník / tanečnice" },
-        { "en": "singer", "cz": "zpěvák / zpěvačka" },
-        { "en": "player", "cz": "hráč" },
-        { "en": "farmer", "cz": "farmář" },
-        { "en": "worker", "cz": "dělník / pracovník" },
-        { "en": "writer", "cz": "spisovatel / autor" },
-        { "en": "partner", "cz": "partner" },
-        { "en": "career", "cz": "kariéra" },
-        { "en": "business", "cz": "byznys / podnikání" },
-        { "en": "interview", "cz": "pohovor / rozhovor" }
+        {
+          "en": "actor",
+          "cz": "herec",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "actress",
+          "cz": "herečka",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "dancer",
+          "cz": "tanečník / tanečnice",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "singer",
+          "cz": "zpěvák / zpěvačka",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "player",
+          "cz": "hráč",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "farmer",
+          "cz": "farmář",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "worker",
+          "cz": "dělník / pracovník",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "writer",
+          "cz": "spisovatel / autor",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "partner",
+          "cz": "partner",
+          "use": [
+            "he_is_my",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "career",
+          "cz": "kariéra",
+          "use": [
+            "i_look_for",
+            "i_have_a",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "business",
+          "cz": "byznys / podnikání",
+          "use": [
+            "lets_talk_about",
+            "i_have_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "interview",
+          "cz": "pohovor / rozhovor",
+          "use": [
+            "i_have_a_meeting",
+            "i_have_a",
+            "i_need_a"
+          ]
+        }
       ]
     }
   ]
 }
-

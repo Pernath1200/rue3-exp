@@ -4,7 +4,7 @@
  */
 
 import { startPractice } from "./practice.js";
-import { startA1Gate } from "./gate.js";
+import { startA1Gate, startA2Gate } from "./gate.js";
 import { startReviewQueue } from "./review.js";
 import {
   loadProgress,
@@ -30,18 +30,60 @@ import {
   getUnlockedList,
   getGate,
   hasPassedGate,
+  setLastView,
+  getLastView,
+  getStorageStatus,
+  countTouchedBlocks,
 } from "./progress.js";
+import {
+  deriveStudentTreeState,
+  getHouse,
+  nodesForHouse,
+  trunkNodesForLevel,
+  primaryNodeForHouse,
+  A1_NEAR_STEM,
+} from "./treeState.js";
+import { renderTreeSvg } from "./treeView.js";
+import {
+  getInsightsToggles,
+  setInsightToggle,
+  loadEtymology,
+  etymologyRowsForItems,
+  renderEtymologyPanelHtml,
+} from "./insights.js";
 
 const STATE = {
   level: "A1",
   tree: null,
   selectedId: null,
+  /** @type {string|null} 12-house selection */
+  selectedHouseId: null,
+  /** Trunk (core frames) selected on tree */
+  selectedTrunk: false,
   view: "map", // map | practice
   pack: null,
 };
 
+/** Persist map place so refresh does not look like a wipe (especially A2 → A1 default). */
+function rememberView() {
+  setLastView(STATE.level, STATE.selectedId);
+}
+
+function storageWarningHtml() {
+  const st = getStorageStatus();
+  if (st.ok) return "";
+  return (
+    `<strong>Progress not saving.</strong> This browser blocked localStorage (${escapeXml(st.error || "unknown")}). ` +
+    `Use a normal (non-private) window at one fixed URL — e.g. always <code>http://localhost:8091/</code>, not file:// or 127.0.0.1 mixed with localhost.`
+  );
+}
+
+/** Bump when content/grading changes so smoke reloads are not stuck on stale JSON. */
+const DATA_CACHE_BUST = "20260720j";
+
 async function loadJson(path) {
-  const res = await fetch(path);
+  const join = path.includes("?") ? "&" : "?";
+  const res = await fetch(`${path}${join}v=${DATA_CACHE_BUST}`, { cache: "no-cache" });
   if (!res.ok) throw new Error(`Could not load ${path}`);
   return res.json();
 }
@@ -64,13 +106,13 @@ function showPractice() {
 }
 
 function lockTag(level) {
-  if (level === "C1") return "not yet";
+  if (level === "C1" || level === "C2") return "preview";
   return "locked";
 }
 
 function renderRail() {
   const rail = document.getElementById("level-rail");
-  const levels = STATE.tree?.levels || ["A1", "A2", "B1", "B2", "C1"];
+  const levels = STATE.tree?.levels || ["A1", "A2", "B1", "B2", "C1", "C2"];
 
   // If current level became locked, snap back to A1
   if (!isLevelUnlocked(STATE.level)) {
@@ -85,15 +127,14 @@ function renderRail() {
     const locked = !isLevelUnlocked(lv);
     if (locked) {
       btn.classList.add("is-locked");
-      // Keep clickable for C1 message / author-unlock path (disabled buttons swallow clicks)
+      // Keep clickable — author unlock opens level (C1/C2 = tree-size preview)
       btn.innerHTML = `${lv}<span class="tag">${lockTag(lv)}</span>`;
-      if (lv === "C1") {
-        btn.disabled = true;
-        btn.title = "Not yet";
-      } else {
-        btn.disabled = false;
-        btn.title = "Click to open author unlock (or pass the previous level check)";
-        btn.addEventListener("click", () => {
+      btn.disabled = false;
+      btn.title =
+        lv === "C1" || lv === "C2"
+          ? "Tree preview (author unlock) — little content yet"
+          : "Click to open author unlock (or pass the previous level check)";
+      btn.addEventListener("click", () => {
           setAuthorUnlock(true);
           const au = document.getElementById("btn-author-unlock");
           if (au) {
@@ -102,22 +143,31 @@ function renderRail() {
           }
           STATE.level = lv;
           STATE.selectedId = null;
+          STATE.selectedHouseId = null;
+          STATE.selectedTrunk = true;
+          const trunks = trunkNodesForLevel(STATE.tree?.nodes || [], lv);
+          STATE.selectedId = trunks[0]?.id || null;
+          rememberView();
           renderRail();
           renderTree();
           renderTodayCard();
-          renderDetail(null);
+          renderSelectionDetail();
         });
-      }
     } else {
       btn.setAttribute("aria-pressed", lv === STATE.level ? "true" : "false");
       btn.textContent = lv;
       btn.addEventListener("click", () => {
         STATE.level = lv;
         STATE.selectedId = null;
+        STATE.selectedHouseId = null;
+        STATE.selectedTrunk = true;
+        const trunks = trunkNodesForLevel(STATE.tree?.nodes || [], lv);
+        STATE.selectedId = trunks[0]?.id || null;
+        rememberView();
         renderRail();
         renderTree();
         renderTodayCard();
-        renderDetail(null);
+        renderSelectionDetail();
       });
     }
     rail.appendChild(btn);
@@ -149,7 +199,7 @@ function renderTodayCard() {
 
   const dueList =
     due.length === 0
-      ? `<p class="today-empty">Nothing due — nice. Learn something new on the tree, or finish Sentence on a unit to schedule reviews.</p>`
+      ? `<p class="today-empty">Nothing due — nice. Learn something new on the tree (Word on leaves · Sentence on trunk) to schedule reviews.</p>`
       : `<ul class="today-list">
           ${due
             .slice(0, 5)
@@ -218,8 +268,6 @@ function renderTodayCard() {
       const id = btn.getAttribute("data-select");
       const node = STATE.tree.nodes.find((n) => n.id === id);
       if (!node) return;
-      STATE.selectedId = id;
-      renderTree();
       renderDetail(node);
       document.getElementById("node-detail")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
     });
@@ -233,8 +281,6 @@ function renderTodayCard() {
     coverBtn.addEventListener("click", () => {
       const node = STATE.tree.nodes.find((n) => n.id === next.nodeId);
       if (!node) return;
-      STATE.selectedId = next.nodeId;
-      renderTree();
       renderDetail(node);
       document.getElementById("node-detail")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
     });
@@ -260,130 +306,78 @@ function renderTodayCard() {
 function renderGateCard() {
   const el = document.getElementById("gate-card");
   if (!el) return;
-  // Gate is for unlocking the next band from A1
-  if (STATE.level !== "A1") {
+  // Gate unlocks the next band from the current level (A1→A2, A2→B1)
+  if (STATE.level !== "A1" && STATE.level !== "A2") {
     el.hidden = true;
     return;
   }
   el.hidden = false;
-  const g = getGate("A1");
-  const passed = hasPassedGate("A1") || isLevelUnlocked("A2");
+  const from = STATE.level;
+  const next = from === "A1" ? "A2" : "B1";
+  const passPct = from === "A1" ? 80 : 90;
+  const g = getGate(from);
+  const passed = hasPassedGate(from) || isLevelUnlocked(next);
   const status = passed
     ? g && g.score != null
       ? `Passed · last score ${g.score}/${g.total}`
-      : "A2 unlocked"
+      : `${next} unlocked`
     : g
       ? `Not passed yet · last ${g.score}/${g.total} · tries ${g.attempts || 0}`
-      : "Not attempted yet · pass unlocks A2";
+      : `Not attempted yet · pass unlocks ${next}`;
+
+  const poolNote =
+    from === "A2"
+      ? " · themed A2 + 3 trunk (Codex-tagged; bulk dumps out)"
+      : "";
 
   el.innerHTML = `
-    <h2>A1 level check</h2>
-    <p class="tree-legend">Thin gate: 12 Quiz · 12 Word · 6 frame sentences · 80% to pass · unlimited retries</p>
+    <h2>${from} level check</h2>
+    <p class="tree-legend">Thin gate: 12 Quiz · 12 Word · 6 frame sentences · ${passPct}% to pass · unlimited retries${poolNote}</p>
     <p class="gate-status">${escapeXml(status)}</p>
-    <button type="button" class="block-btn" id="btn-a1-gate">
-      <span class="block-btn-title">${passed ? "Retake A1 check" : "Start A1 check →"}</span>
-      <span class="block-btn-n">${passed ? "optional" : "unlock A2"}</span>
+    <button type="button" class="block-btn" id="btn-level-gate">
+      <span class="block-btn-title">${passed ? `Retake ${from} check` : `Start ${from} check →`}</span>
+      <span class="block-btn-n">${passed ? "optional" : `unlock ${next}`}</span>
     </button>
   `;
-  const btn = el.querySelector("#btn-a1-gate");
-  if (btn) btn.addEventListener("click", openA1Gate);
+  const btn = el.querySelector("#btn-level-gate");
+  if (btn) {
+    btn.addEventListener("click", () =>
+      from === "A1" ? openA1Gate() : openA2Gate(),
+    );
+  }
 }
 
 function renderAuthorHint() {
   const el = document.getElementById("author-hint");
   if (!el) return;
+  const bits = [];
   if (isAuthorUnlock()) {
-    el.hidden = false;
-    el.textContent =
-      "Author unlock on · A2–B2 open for writing · ?unlock=all sticky in this browser";
-  } else {
+    bits.push(
+      "Author unlock on · A2–B2 open for writing · ?unlock=all sticky in this browser",
+    );
+  }
+  const storageWarn = storageWarningHtml();
+  if (storageWarn) bits.push(storageWarn);
+  if (!bits.length) {
     el.hidden = true;
     el.textContent = "";
+    return;
   }
+  el.hidden = false;
+  el.innerHTML = bits.join("<br>");
 }
 
-/**
- * Sapling layout — attempt 2: fixed silhouette regions.
- * Trunk packs = stacked wood bands · Leaves = canopy leaf shapes · Labels quiet.
- */
-function layoutNodes(nodes) {
-  const W = 720;
-  const H = 600;
-  const cx = W / 2;
-  const positions = new Map();
-
-  const groundY = 520;
-  const trunkBotY = 500;
-  const trunkTopY = 200;
-  const hub = { x: cx, y: (trunkBotY + trunkTopY) / 2 };
-  positions.set("trunk", hub);
-
-  const trunkKids = nodes.filter((n) => n.parent === "trunk" && n.kind === "trunk");
-  const leafKids = nodes.filter((n) => n.parent === "trunk" && n.kind === "leaf");
-  const craft = nodes.filter((n) => n.kind === "craft");
-
-  // Trunk bands: bottom → top (foundation first), centred on shaft
-  const nT = Math.max(1, trunkKids.length);
-  const bandH = Math.min(22, (trunkBotY - trunkTopY - 8) / nT);
-  trunkKids.forEach((n, i) => {
-    const yBot = trunkBotY - i * bandH;
-    const yTop = yBot - bandH + 1;
-    const yMid = (yTop + yBot) / 2;
-    const side = i % 2 === 0 ? -1 : 1;
-    positions.set(n.id, {
-      x: cx,
-      y: yMid,
-      yTop,
-      yBot,
-      role: "shaft",
-      labelSide: side,
-      bandH,
-    });
-  });
-
-  // Canopy leaf slots — dome fan above trunk top
-  const nL = Math.max(1, leafKids.length);
-  leafKids.forEach((n, i) => {
-    const t = nL <= 1 ? 0.5 : i / (nL - 1);
-    const span = Math.min(520, 300 + nL * 14);
-    const x = cx + (t - 0.5) * span;
-    const y = 70 + Math.pow(t - 0.5, 2) * 95;
-    // angle for leaf tip: point outward from crown
-    const ang = Math.atan2(y - (trunkTopY - 10), x - cx);
-    positions.set(n.id, {
-      x,
-      y,
-      role: "canopy",
-      ang,
-      size: 26,
-    });
-  });
-
-  craft.forEach((n, i) => {
-    positions.set(n.id, { x: cx + 220, y: groundY - 20 + i * 28, role: "craft", size: 14 });
-  });
-
-  nodes.forEach((n, i) => {
-    if (!positions.has(n.id)) {
-      positions.set(n.id, {
-        x: 80 + (i % 4) * 90,
-        y: groundY - 40 + Math.floor(i / 4) * 24,
-        role: "other",
-        size: 14,
-      });
-    }
-  });
-
-  return {
-    positions,
-    W,
-    H,
-    meta: { cx, groundY, trunkTopY, trunkBotY, hub, bandH },
-  };
+function escapeXml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
-/** Short labels (muted in SVG; full name in detail panel). */
+/** Short labels for lists / today card. */
 function treeLabel(node) {
+  if (!node) return "";
   const short = {
     trunk_frames_a1: "Be / Have",
     trunk_prepositions_a1: "Preps",
@@ -408,16 +402,9 @@ function treeLabel(node) {
     leaf_time_a1: "Time",
     leaf_freetime_a1: "Free time",
     leaf_work_a1: "Work",
-    leaf_colours_a1: "Colours",
-    leaf_clothes_a1: "Clothes",
     leaf_body_a1: "Body",
     leaf_health_a1: "Health",
-    leaf_animals_a1: "Animals",
-    leaf_school_a1: "School",
-    leaf_tech_a1: "Tech",
-    leaf_nature_a1: "Nature",
-    leaf_shopping_a1: "Shopping",
-    leaf_ideas_a1: "Ideas",
+    leaf_clothes_a1: "Clothes",
     trunk_recycle_a2: "Recycle",
     trunk_lexis_a2: "A2 lexis",
     trunk_chunks_a2: "Chunks",
@@ -443,59 +430,17 @@ function treeLabel(node) {
     leaf_adverbs_a2: "Adverbs",
     leaf_verbs_a2: "List · verbs",
     leaf_misc_a2: "List · general",
+    trunk_core_b1: "B1 frames",
+    trunk_chunks_b1: "Collocations",
+    trunk_abstract_b1: "Abstract",
+    leaf_work_b1: "Work",
+    leaf_money_b1: "Money",
+    leaf_communication_b1: "Talk",
+    leaf_knowledge_b1: "Travel",
+    leaf_self_b1: "Self",
+    leaf_home_b1: "Home",
   };
   return short[node.id] || node.label;
-}
-
-function branchPath(from, to, sway = 0) {
-  const mx = (from.x + to.x) / 2 + sway;
-  const my = Math.min(from.y, to.y) - 12 - Math.abs(to.x - from.x) * 0.06;
-  return `M ${from.x.toFixed(1)} ${from.y.toFixed(1)} Q ${mx.toFixed(1)} ${my.toFixed(1)} ${to.x.toFixed(1)} ${to.y.toFixed(1)}`;
-}
-
-/** Leaf silhouette path centred at (x,y), rotated toward ang (radians). */
-function leafShapePath(x, y, size, ang) {
-  const s = size;
-  // local leaf: tip at +y, base at -y
-  const pts = [
-    [0, -s * 0.55],
-    [s * 0.38, -s * 0.1],
-    [s * 0.42, s * 0.35],
-    [0, s * 0.6],
-    [-s * 0.42, s * 0.35],
-    [-s * 0.38, -s * 0.1],
-  ];
-  const cos = Math.cos(ang);
-  const sin = Math.sin(ang);
-  const map = ([px, py]) => {
-    const rx = px * cos - py * sin;
-    const ry = px * sin + py * cos;
-    return `${(x + rx).toFixed(1)},${(y + ry).toFixed(1)}`;
-  };
-  return `M ${map(pts[0])} L ${pts.slice(1).map(map).join(" L ")} Z`;
-}
-
-/** Progress → fill strength for region paint (tree body, not badge colour). */
-function regionPaint(prog, isLive) {
-  if (!isLive) {
-    return { fillOp: 0.03, strokeOp: 0.2, branchOp: 0.12, state: "empty" };
-  }
-  if (prog === "fruit") {
-    return { fillOp: 0.78, strokeOp: 0.85, branchOp: 0.75, state: "fruit" };
-  }
-  if (prog === "partial") {
-    return { fillOp: 0.38, strokeOp: 0.55, branchOp: 0.45, state: "partial" };
-  }
-  // live but untouched — ghost slot
-  return { fillOp: 0.06, strokeOp: 0.28, branchOp: 0.18, state: "slot" };
-}
-
-function escapeXml(s) {
-  return String(s)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
 }
 
 /**
@@ -528,158 +473,234 @@ function renderLevelMeters(level, nodes) {
     ${bar(s.remembered, "remembered")}
     ${bar(s.mastered, "mastered")}
     <p class="meters-hint">
-      <strong>Learned</strong> = finished Sentence on that unit.
+      <strong>Learned</strong> = fruit (Word on leaves · Sentence on trunk).
       <strong>Remembered</strong> = at least one spaced review.
       <strong>Mastered</strong> = ${MASTERY_REPS} successful reviews.
       Use <strong>Today</strong> above for due topics.
     </p>`;
 }
 
+function currentTreeState() {
+  return deriveStudentTreeState(
+    STATE.tree?.nodes || [],
+    STATE.level,
+    nodeProgressState,
+  );
+}
+
+function selectHouse(houseId) {
+  STATE.selectedHouseId = houseId;
+  STATE.selectedTrunk = false;
+  const primary = primaryNodeForHouse(
+    houseId,
+    STATE.tree.nodes,
+    STATE.level,
+    nodeProgressState,
+  );
+  STATE.selectedId = primary ? primary.id : null;
+  rememberView();
+  renderTree();
+  renderSelectionDetail();
+}
+
+function selectTrunk() {
+  STATE.selectedTrunk = true;
+  STATE.selectedHouseId = null;
+  const trunks = trunkNodesForLevel(STATE.tree.nodes, STATE.level);
+  const open = trunks.find(
+    (n) => nodeProgressState(n.id, { isLive: true }) !== "fruit",
+  );
+  STATE.selectedId = (open || trunks[0] || {}).id || null;
+  rememberView();
+  renderTree();
+  renderSelectionDetail();
+}
+
 function renderTree() {
   const nodes = nodesForLevel(STATE.level);
   const svg = document.getElementById("tree-svg");
   const caption = document.getElementById("tree-caption");
-  const live = nodes.filter((n) => n.status === "live").length;
-  const unlocked = getUnlockedList().join(" · ");
-  const stage =
-    STATE.level === "A1"
-      ? "sapling"
-      : STATE.level === "A2"
-        ? "thickening trunk · growing canopy"
-        : "tree";
-
-  const { positions, W, H, meta } = layoutNodes(nodes);
-  const { cx, groundY, trunkTopY, trunkBotY } = meta;
-
-  const liveNodes = nodes.filter((n) => n.status === "live" && n.id !== "trunk");
-  let fruitN = 0;
-  let partialN = 0;
-  for (const n of liveNodes) {
-    const st = nodeProgressState(n.id, { isLive: true });
-    if (st === "fruit") fruitN++;
-    else if (st === "partial") partialN++;
-  }
+  const treeState = currentTreeState();
   const dueN = getDueUnits(STATE.tree?.nodes || [], { level: STATE.level }).length;
-  const trunkN = liveNodes.filter((n) => n.kind === "trunk").length;
-  const leafN = liveNodes.filter((n) => n.kind === "leaf").length;
-  const shapeBit =
-    STATE.level === "A2" ? ` · trunk ${trunkN} · leaves ${leafN}` : "";
-  caption.textContent = `${STATE.level} ${stage}${shapeBit} · fruit ${fruitN}/${liveNodes.length}${dueN ? ` · due ${dueN}` : ""} · unlock: ${unlocked}`;
-  renderLevelMeters(STATE.level, nodes);
+  const unlocked = getUnlockedList().join(" · ");
 
-  // --- Fixed skeleton (always visible, quiet) ---
-  let scenery = "";
-  // Soft crown guide (empty canopy outline)
-  scenery += `<ellipse class="tree-skeleton-crown" cx="${cx}" cy="95" rx="240" ry="88" />`;
-  // Ghost trunk shaft
-  scenery += `<path class="tree-skeleton-trunk" d="
-    M ${cx - 16} ${trunkBotY}
-    Q ${cx - 11} ${(trunkBotY + trunkTopY) / 2} ${cx - 9} ${trunkTopY}
-    L ${cx + 9} ${trunkTopY}
-    Q ${cx + 11} ${(trunkBotY + trunkTopY) / 2} ${cx + 16} ${trunkBotY}
-    Z" />`;
-  scenery += `<ellipse class="tree-ground" cx="${cx}" cy="${groundY}" rx="130" ry="18" />`;
-  scenery += `<text class="tree-ground-label" x="${cx}" y="${groundY + 28}" text-anchor="middle">Tree fills as you complete units</text>`;
-
-  // --- Branches (leaf units): strength from progress ---
-  let regions = "";
-  const leafKids = nodes.filter((n) => n.parent === "trunk" && n.kind === "leaf");
-  const trunkKids = nodes.filter((n) => n.parent === "trunk" && n.kind === "trunk");
-
-  for (const n of leafKids) {
-    const p = positions.get(n.id);
-    if (!p) continue;
-    const prog = nodeProgressState(n.id, { isLive: n.status === "live" });
-    const paint = regionPaint(prog, n.status === "live");
-    const from = { x: cx, y: trunkTopY + 4 };
-    const sway = (p.x - cx) * 0.12;
-    const sel = STATE.selectedId === n.id ? " is-selected" : "";
-    regions += `<path class="tree-branch fill-${paint.state}${sel}" d="${branchPath(from, p, sway)}" style="opacity:${paint.branchOp}" />`;
-  }
-
-  // --- Trunk bands (frame units) ---
-  for (const n of trunkKids) {
-    const p = positions.get(n.id);
-    if (!p) continue;
-    const prog = nodeProgressState(n.id, { isLive: n.status === "live" });
-    const paint = regionPaint(prog, n.status === "live");
-    const sel = STATE.selectedId === n.id ? " is-selected" : "";
-    const halfW = 15;
-    const y1 = p.yTop;
-    const y2 = p.yBot;
-    // Slight taper: wider at bottom of whole tree
-    const taper = 1 + ((p.y - trunkTopY) / (trunkBotY - trunkTopY)) * 0.15;
-    const w = halfW * taper;
-    regions += `
-      <g class="node-hit" data-id="${n.id}">
-        <rect class="tree-band fill-${paint.state}${sel}"
-          x="${(cx - w).toFixed(1)}" y="${y1.toFixed(1)}"
-          width="${(w * 2).toFixed(1)}" height="${Math.max(2, y2 - y1).toFixed(1)}"
-          rx="3" style="opacity:${paint.fillOp}" />
-        <rect class="tree-band-stroke fill-${paint.state}${sel}"
-          x="${(cx - w).toFixed(1)}" y="${y1.toFixed(1)}"
-          width="${(w * 2).toFixed(1)}" height="${Math.max(2, y2 - y1).toFixed(1)}"
-          rx="3" style="opacity:${paint.strokeOp}" />
-        <text class="tree-label-quiet" x="${(cx + p.labelSide * (w + 8)).toFixed(1)}" y="${(p.y + 3).toFixed(1)}"
-          text-anchor="${p.labelSide < 0 ? "end" : "start"}">${escapeXml(treeLabel(n))}</text>
-      </g>`;
-  }
-
-  // --- Canopy leaf shapes ---
-  for (const n of leafKids) {
-    const p = positions.get(n.id);
-    if (!p) continue;
-    const prog = nodeProgressState(n.id, { isLive: n.status === "live" });
-    const paint = regionPaint(prog, n.status === "live");
-    const sel = STATE.selectedId === n.id ? " is-selected" : "";
-    // Word-list nodes (bulk fill, not themed leaves) render dashed/quieter
-    const listCls = n.list ? " is-list" : "";
-    // Leaf points outward from crown centre
-    const ang = Math.atan2(p.y - 90, p.x - cx) + Math.PI / 2;
-    const d = leafShapePath(p.x, p.y, p.size || 26, ang);
-    const labelY = p.y + (p.size || 26) * 0.75 + 10;
-    regions += `
-      <g class="node-hit" data-id="${n.id}">
-        <path class="tree-leaf fill-${paint.state}${sel}${listCls}" d="${d}" style="opacity:${paint.fillOp}" />
-        <path class="tree-leaf-stroke fill-${paint.state}${sel}${listCls}" d="${d}" style="opacity:${paint.strokeOp}" />
-        <text class="tree-label-quiet" x="${p.x.toFixed(1)}" y="${labelY.toFixed(1)}" text-anchor="middle">${escapeXml(treeLabel(n))}</text>
-      </g>`;
-  }
-
-  // Craft — quiet side mark only
-  const craft = nodes.filter((n) => n.kind === "craft");
-  for (const n of craft) {
-    const p = positions.get(n.id);
-    if (!p) continue;
-    const sel = STATE.selectedId === n.id ? " is-selected" : "";
-    regions += `
-      <g class="node-hit" data-id="${n.id}">
-        <circle class="tree-craft${sel}" cx="${p.x}" cy="${p.y}" r="8" />
-        <text class="tree-label-quiet" x="${p.x}" y="${p.y + 20}" text-anchor="middle">${escapeXml(treeLabel(n))}</text>
-      </g>`;
-  }
-
-  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-  svg.innerHTML = scenery + regions;
-
-  svg.querySelectorAll(".node-hit").forEach((g) => {
-    g.addEventListener("click", () => {
-      const id = g.getAttribute("data-id");
-      STATE.selectedId = id;
-      renderTree();
-      const node = nodes.find((n) => n.id === id) || STATE.tree.nodes.find((n) => n.id === id);
-      renderDetail(node || null);
-    });
+  const built = renderTreeSvg(svg, treeState, {
+    selectedHouseId: STATE.selectedHouseId,
+    selectedTrunk: STATE.selectedTrunk,
+    onSelectHouse: (id) => selectHouse(id),
+    onSelectTrunk: () => selectTrunk(),
   });
+
+  if (caption && built) {
+    caption.textContent = `${built.caption}${dueN ? ` · due ${dueN}` : ""} · unlock: ${unlocked}`;
+  }
+  renderLevelMeters(STATE.level, nodes);
+}
+
+/** Detail panel: trunk list, house multi-pack, or single node. */
+function renderSelectionDetail() {
+  const el = document.getElementById("node-detail");
+  if (!el) return;
+
+  if (STATE.selectedTrunk) {
+    renderTrunkDetail(el);
+    return;
+  }
+  if (STATE.selectedHouseId) {
+    renderHouseDetail(el, STATE.selectedHouseId);
+    return;
+  }
+  if (STATE.selectedId) {
+    const node = STATE.tree.nodes.find((n) => n.id === STATE.selectedId);
+    renderNodeDetail(el, node || null);
+    return;
+  }
+  el.innerHTML = `<p class="detail-empty">Click the <strong>trunk</strong> for core frames, or a <strong>house</strong> branch for domain leaves. Near-stem houses grow first; dim stubs open later.</p>`;
 }
 
 function renderDetail(node) {
-  const el = document.getElementById("node-detail");
-  if (!node) {
-    el.innerHTML = `<p class="detail-empty">Click a <strong>trunk band</strong> or <strong>canopy leaf</strong> on the tree. Filled regions = progress; labels are names only.</p>`;
+  // Back-compat for callers that pass a node (today card, etc.)
+  if (node && node.kind === "trunk") {
+    STATE.selectedTrunk = true;
+    STATE.selectedHouseId = null;
+    STATE.selectedId = node.id;
+  } else if (node && node.kind === "leaf") {
+    STATE.selectedTrunk = false;
+    STATE.selectedId = node.id;
+    const ts = currentTreeState();
+    const b = ts.branches.find((br) => br.mappedNodeIds.includes(node.id));
+    STATE.selectedHouseId = b ? b.id : null;
+  } else if (!node) {
+    STATE.selectedId = null;
+    STATE.selectedHouseId = null;
+    STATE.selectedTrunk = false;
+  }
+  renderTree();
+  renderSelectionDetail();
+}
+
+function unitRowHtml(node) {
+  const live = node.status === "live";
+  const prog = nodeProgressState(node.id, { isLive: live });
+  const progText = live
+    ? progressLabel(prog) || "not started"
+    : node.status === "planned"
+      ? "planned · no pack yet"
+      : node.status || "—";
+  return `
+    <button type="button" class="block-btn unit-pick" data-node="${escapeXml(node.id)}">
+      <span class="block-btn-title">${escapeXml(node.label)}</span>
+      <span class="block-btn-n">${escapeXml(treeLabel(node))} · ${escapeXml(progText)}</span>
+    </button>`;
+}
+
+function renderTrunkDetail(el) {
+  const trunks = trunkNodesForLevel(STATE.tree.nodes, STATE.level);
+  const ts = currentTreeState();
+  const liveN = trunks.filter((n) => n.status === "live").length;
+  const planN = trunks.filter((n) => n.status === "planned").length;
+  el.innerHTML = `
+    <div style="margin-bottom:0.65rem">
+      <strong style="font-size:1.05rem">Trunk · core frames</strong>
+      <span class="badge live" style="margin-left:0.5rem">${liveN ? "live" : "scaffold"}</span>
+    </div>
+    <p class="detail-schedule">Trunk width <strong>${ts.trunkWidth}</strong> · fruit ${ts.trunkFruitN}/${ts.trunkTotal} live frame units${
+      planN ? ` · <strong>${planN}</strong> planned` : ""
+    }</p>
+    <p class="detail-hint">High-frequency frames &amp; glue — Match → Quiz → Word → Sentence</p>
+    <div class="rail-label" style="margin-top:0.85rem">Frame units (${STATE.level})</div>
+    <div class="block-btns" id="trunk-unit-list">
+      ${trunks.map(unitRowHtml).join("") || `<p class="detail-empty">No trunk units at ${escapeXml(STATE.level)}</p>`}
+    </div>
+    <div class="block-list" id="block-list"></div>
+  `;
+  el.querySelectorAll(".unit-pick").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-node");
+      const node = STATE.tree.nodes.find((n) => n.id === id);
+      if (!node) return;
+      STATE.selectedId = id;
+      loadAndShowBlocks(node);
+    });
+  });
+  if (STATE.selectedId) {
+    const node = trunks.find((n) => n.id === STATE.selectedId) || trunks[0];
+    if (node) loadAndShowBlocks(node);
+  } else if (trunks[0]) {
+    STATE.selectedId = trunks[0].id;
+    loadAndShowBlocks(trunks[0]);
+  }
+}
+
+function renderHouseDetail(el, houseId) {
+  const house = getHouse(houseId);
+  const leaves = nodesForHouse(houseId, STATE.tree.nodes, STATE.level);
+  const ts = currentTreeState();
+  const br = ts.branches.find((b) => b.id === houseId);
+  const unlocked = br ? br.unlocked : A1_NEAR_STEM.has(houseId);
+  const author = isAuthorUnlock();
+
+  if (!unlocked && !author) {
+    el.innerHTML = `
+      <div style="margin-bottom:0.65rem">
+        <strong style="font-size:1.05rem">${escapeXml(house?.name || houseId)}</strong>
+        <span class="badge" style="margin-left:0.5rem">stub</span>
+      </div>
+      <p class="detail-empty">This house is a short stub at ${escapeXml(STATE.level)}. Near-stem houses grow first; this branch opens as your level and trunk thicken.</p>
+      <p class="detail-hint">Author unlock can open all packs for writing.</p>
+    `;
     return;
   }
 
+  const stubNote =
+    !unlocked && author
+      ? `<p class="detail-schedule">Stub house · <strong>author</strong> can still open packs</p>`
+      : `<p class="detail-schedule">Length ${br?.length ?? "—"} · leaf density ${br?.leafDensity ?? 0} · fruit ${br?.fruitN ?? 0}/${br?.unitCount ?? 0}</p>`;
+
+  el.innerHTML = `
+    <div style="margin-bottom:0.65rem">
+      <strong style="font-size:1.05rem">${escapeXml(house?.name || houseId)}</strong>
+      <span class="badge live" style="margin-left:0.5rem">${unlocked ? "near-stem" : "author"}</span>
+    </div>
+    ${stubNote}
+    <div class="rail-label" style="margin-top:0.85rem">Domain units</div>
+    <div class="block-btns" id="house-unit-list">
+      ${
+        leaves.length
+          ? leaves.map(unitRowHtml).join("")
+          : `<p class="detail-empty">No live leaf packs mapped here at ${escapeXml(STATE.level)}.</p>`
+      }
+    </div>
+    <div class="block-list" id="block-list"></div>
+  `;
+  el.querySelectorAll(".unit-pick").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-node");
+      const node = STATE.tree.nodes.find((n) => n.id === id);
+      if (!node) return;
+      STATE.selectedId = id;
+      loadAndShowBlocks(node).then(() => maybeRenderInsightsForHouse(houseId));
+    });
+  });
+  // Always reserve insights slot at house level; fill from ALL units in house
+  const ensureSlot = async () => {
+    if (STATE.selectedId && leaves.some((n) => n.id === STATE.selectedId)) {
+      await loadAndShowBlocks(leaves.find((n) => n.id === STATE.selectedId));
+    } else if (leaves[0]) {
+      STATE.selectedId = leaves[0].id;
+      await loadAndShowBlocks(leaves[0]);
+    }
+    // Re-scan whole house so insights are not empty when first unit is Clothes etc.
+    await maybeRenderInsightsForHouse(houseId);
+  };
+  ensureSlot();
+}
+
+function renderNodeDetail(el, node) {
+  if (!node) {
+    el.innerHTML = `<p class="detail-empty">Click the <strong>trunk</strong> or a <strong>house</strong> on the tree.</p>`;
+    return;
+  }
   const badge = node.status || "planned";
   const listBadge = node.list
     ? `<span class="badge list" style="margin-left:0.35rem">word list</span>`
@@ -699,15 +720,6 @@ function renderDetail(node) {
     if (rev.nextDueAt) bits.push(formatDueLabel(rev.nextDueAt));
     scheduleLine = `<p class="detail-schedule">${escapeXml(bits.join(" · "))}</p>`;
   }
-
-  let actions = "";
-  if (node.status === "live" && node.content) {
-    actions = `
-      <div class="block-list" id="block-list">
-        <p class="detail-loading">Loading blocks…</p>
-      </div>`;
-  }
-
   el.innerHTML = `
     <div style="margin-bottom:0.65rem">
       <strong style="font-size:1.05rem">${escapeXml(node.label)}</strong>
@@ -721,12 +733,11 @@ function renderDetail(node) {
       <dt>kind</dt><dd>${escapeXml(node.kind)}</dd>
       <dt>note</dt><dd>${escapeXml(node.note || "—")}</dd>
     </dl>
-    ${actions}
+    <div class="block-list" id="block-list">
+      ${node.status === "live" && node.content ? `<p class="detail-loading">Loading blocks…</p>` : ""}
+    </div>
   `;
-
-  if (node.status === "live" && node.content) {
-    loadAndShowBlocks(node);
-  }
+  if (node.status === "live" && node.content) loadAndShowBlocks(node);
 }
 
 function blockStatusLine(blockId) {
@@ -734,7 +745,7 @@ function blockStatusLine(blockId) {
   if (!p || !p.touchedAt) return "not started";
   const modes = p.modes || {};
   const done = ["match", "quiz", "type", "sentence"].filter((m) => modes[m]);
-  if (p.sentenceDone || modes.sentence) return `fruit · ${done.join(" · ") || "sentence"}`;
+  if (p.sentenceDone) return `fruit · ${done.join(" · ") || "sentence"}`;
   if (done.length) return `touched · ${done.join(" · ")}`;
   return "touched";
 }
@@ -742,6 +753,25 @@ function blockStatusLine(blockId) {
 async function loadAndShowBlocks(node) {
   const listEl = document.getElementById("block-list");
   if (!listEl) return;
+  if (!node || node.status !== "live" || !node.content) {
+    STATE.pack = null;
+    const codex = node?.codex_unit
+      ? `<code>${escapeXml(node.codex_unit)}</code>`
+      : "—";
+    listEl.innerHTML = `
+      <div class="rail-label" style="margin-top:0.85rem">Scaffold</div>
+      <p class="detail-empty">
+        <strong>${escapeXml(node?.label || "Unit")}</strong> is
+        <span class="badge">${escapeXml(node?.status || "planned")}</span>
+        — no practice pack yet.
+      </p>
+      <p class="detail-hint">Codex ${codex}. Author content next; then set status to <code>live</code> and add <code>content</code>.</p>
+      ${node?.note ? `<p class="detail-schedule">${escapeXml(node.note)}</p>` : ""}
+    `;
+    const slot = document.getElementById("insights-slot");
+    if (slot) slot.innerHTML = "";
+    return;
+  }
   try {
     const pack = await loadJson(`./data/${node.content}`);
     STATE.pack = pack;
@@ -758,17 +788,90 @@ async function loadAndShowBlocks(node) {
           })
           .join("")}
       </div>
-      <p class="detail-hint">Ladder: Match → Quiz → Word → <strong>Sentence</strong> (production / fruit) · CZ → EN · progress stays on this browser</p>
+      <p class="detail-hint">Ladder: Match → Quiz → Word → Sentence · <strong>fruit</strong> = Word on leaves, Sentence on trunk · carriers only for leaf Sentence · CZ → EN · progress stays on this browser</p>
+      <div id="insights-slot"></div>
     `;
     listEl.querySelectorAll(".block-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
         const block = pack.blocks.find((b) => b.id === btn.dataset.block);
-        if (block) openPractice({ ...block, practice: pack.practice }, pack);
+        if (block)
+          openPractice(
+            { ...block, practice: pack.practice, level: pack.level || block.level },
+            pack,
+          );
       });
     });
+    await maybeRenderInsightsForPack(pack);
   } catch (e) {
     listEl.innerHTML = `<p class="detail-empty" style="color:var(--wrong)">${escapeXml(e.message)}</p>`;
   }
+}
+
+/**
+ * Lemmas for insights: leaf items + trunk seed_vocab + frame gap_answer
+ * (frame en fields are full sentences, so seeds/gaps carry the word list).
+ */
+function collectInsightItems(pack) {
+  const items = [];
+  if (!pack) return items;
+  if (Array.isArray(pack.seed_vocab)) {
+    for (const s of pack.seed_vocab) items.push({ en: s });
+  }
+  for (const b of pack.blocks || []) {
+    if (!Array.isArray(b.items)) continue;
+    for (const it of b.items) {
+      items.push(it);
+      if (it && it.gap_answer) items.push({ en: it.gap_answer });
+      if (it && Array.isArray(it.gap_accepts)) {
+        for (const g of it.gap_accepts) items.push({ en: g });
+      }
+    }
+  }
+  return items;
+}
+
+/** Author + insight toggle: Word roots for lemmas. */
+async function maybeRenderInsightsForPack(pack) {
+  await renderInsightsFromItems(collectInsightItems(pack));
+}
+
+/**
+ * Scan every live leaf pack in a house (Self & body = Body + Health + Clothes).
+ * Fixes empty panel when the auto-opened unit has no curated lemmas.
+ */
+async function maybeRenderInsightsForHouse(houseId) {
+  const leaves = nodesForHouse(houseId, STATE.tree?.nodes || [], STATE.level);
+  const items = [];
+  for (const node of leaves) {
+    if (!node.content) continue;
+    try {
+      const pack = await loadJson(`./data/${node.content}`);
+      items.push(...collectInsightItems(pack));
+    } catch {
+      /* skip missing pack */
+    }
+  }
+  await renderInsightsFromItems(items);
+}
+
+async function renderInsightsFromItems(items) {
+  const slot = document.getElementById("insights-slot");
+  if (!slot) return;
+  slot.innerHTML = "";
+  if (!isAuthorUnlock()) return;
+  const toggles = getInsightsToggles();
+  const parts = [];
+  if (toggles.pie) {
+    const data = await loadEtymology(loadJson);
+    const rows = etymologyRowsForItems(items, data);
+    parts.push(renderEtymologyPanelHtml(rows, { escapeHtml: escapeXml }));
+  }
+  slot.innerHTML = parts.join("");
+}
+
+function refreshInsightsPanel() {
+  if (STATE.selectedHouseId) maybeRenderInsightsForHouse(STATE.selectedHouseId);
+  else if (STATE.pack) maybeRenderInsightsForPack(STATE.pack);
 }
 
 function refreshMap() {
@@ -777,8 +880,7 @@ function refreshMap() {
   renderTodayCard();
   renderTree();
   renderGateCard();
-  const node = STATE.tree.nodes.find((n) => n.id === STATE.selectedId);
-  renderDetail(node || null);
+  renderSelectionDetail();
 }
 
 function openPractice(block, pack) {
@@ -786,6 +888,10 @@ function openPractice(block, pack) {
   const root = document.getElementById("practice-root");
   const blockId = block.id;
   const nodeId = pack?.tree_node || STATE.selectedId;
+  if (nodeId) {
+    STATE.selectedId = nodeId;
+    rememberView();
+  }
   startPractice(root, block, {
     practice: pack?.practice,
     onTouch: () => {
@@ -796,7 +902,10 @@ function openPractice(block, pack) {
         nodeId,
         score: meta.score,
         total: meta.total,
+        perfect: meta.perfect,
+        awardFruit: meta.awardFruit,
       });
+      rememberView();
     },
     onExit: () => refreshMap(),
   });
@@ -836,6 +945,29 @@ function openA1Gate() {
       if (opts && opts.goLevel === "A2" && isLevelUnlocked("A2")) {
         STATE.level = "A2";
         STATE.selectedId = null;
+        rememberView();
+      }
+      refreshMap();
+    },
+  });
+}
+
+function openA2Gate() {
+  showPractice();
+  const root = document.getElementById("practice-root");
+  // Word-list nodes excluded — the level check samples themed leaves + trunk only
+  const a2Live = STATE.tree.nodes.filter(
+    (n) => n.status === "live" && n.content && n.levels.includes("A2") && !n.list,
+  );
+  startA2Gate(root, {
+    loadJson,
+    a2LiveNodes: a2Live,
+    onExit: () => refreshMap(),
+    onDone: (opts) => {
+      if (opts && opts.goLevel === "B1" && isLevelUnlocked("B1")) {
+        STATE.level = "B1";
+        STATE.selectedId = null;
+        rememberView();
       }
       refreshMap();
     },
@@ -844,20 +976,48 @@ function openA1Gate() {
 
 function wireUtilBar() {
   const btn = document.getElementById("btn-author-unlock");
-  if (!btn) return;
-  btn.addEventListener("click", () => {
-    const next = !isAuthorUnlock();
-    setAuthorUnlock(next);
-    renderRail();
-    renderTodayCard();
-    renderTree();
-    btn.textContent = next ? "Author unlock: on" : "Author unlock";
-    btn.setAttribute("aria-pressed", next ? "true" : "false");
-  });
-  if (isAuthorUnlock()) {
-    btn.textContent = "Author unlock: on";
-    btn.setAttribute("aria-pressed", "true");
+  if (btn) {
+    btn.addEventListener("click", () => {
+      const next = !isAuthorUnlock();
+      setAuthorUnlock(next);
+      renderRail();
+      renderTodayCard();
+      renderTree();
+      btn.textContent = next ? "Author unlock: on" : "Author unlock";
+      btn.setAttribute("aria-pressed", next ? "true" : "false");
+      syncInsightsToggleVisibility();
+      refreshInsightsPanel();
+    });
+    if (isAuthorUnlock()) {
+      btn.textContent = "Author unlock: on";
+      btn.setAttribute("aria-pressed", "true");
+    }
   }
+  wireInsightsToggles();
+  syncInsightsToggleVisibility();
+}
+
+function wireInsightsToggles() {
+  const btnR = document.getElementById("btn-word-roots");
+  if (btnR && !btnR.dataset.wired) {
+    btnR.dataset.wired = "1";
+    const t = getInsightsToggles();
+    btnR.setAttribute("aria-pressed", t.pie ? "true" : "false");
+    btnR.textContent = t.pie ? "Word roots: on" : "Word roots";
+    btnR.addEventListener("click", () => {
+      const cur = getInsightsToggles().pie;
+      const next = setInsightToggle("pie", !cur);
+      btnR.setAttribute("aria-pressed", next.pie ? "true" : "false");
+      btnR.textContent = next.pie ? "Word roots: on" : "Word roots";
+      refreshInsightsPanel();
+    });
+  }
+}
+
+function syncInsightsToggleVisibility() {
+  const author = isAuthorUnlock();
+  const btn = document.getElementById("btn-word-roots");
+  if (btn) btn.hidden = !author;
 }
 
 async function init() {
@@ -887,17 +1047,48 @@ async function init() {
     } catch {
       /* ignore */
     }
+
+    // Restore last map place (level + unit). Old bug: always landed on A1, so A2 work looked wiped.
+    const last = getLastView();
+    if (last.level && isLevelUnlocked(last.level)) {
+      STATE.level = last.level;
+    }
+    if (last.nodeId) {
+      const node = STATE.tree.nodes.find((n) => n.id === last.nodeId);
+      if (node && Array.isArray(node.levels) && node.levels.includes(STATE.level)) {
+        STATE.selectedId = node.id;
+        if (node.kind === "trunk") {
+          STATE.selectedTrunk = true;
+          STATE.selectedHouseId = null;
+        } else if (node.kind === "leaf") {
+          STATE.selectedTrunk = false;
+          const ts = deriveStudentTreeState(STATE.tree.nodes, STATE.level, nodeProgressState);
+          const b = ts.branches.find((br) => br.mappedNodeIds.includes(node.id));
+          STATE.selectedHouseId = b ? b.id : null;
+        }
+      }
+    }
+    if (!STATE.selectedId && !STATE.selectedTrunk && !STATE.selectedHouseId) {
+      // Default: open trunk so frames are one click away
+      STATE.selectedTrunk = true;
+      const trunks = trunkNodesForLevel(STATE.tree.nodes, STATE.level);
+      STATE.selectedId = trunks[0]?.id || null;
+    }
+
     wireUtilBar();
     renderRail();
     renderTodayCard();
     renderTree();
-    const live = STATE.tree.nodes.find((n) => n.status === "live");
-    if (live) {
-      STATE.selectedId = live.id;
-      renderTree();
-      renderDetail(live);
-    } else {
-      renderDetail(null);
+    renderSelectionDetail();
+
+    // Smoke aid: confirm storage still has practice records after load
+    try {
+      const n = countTouchedBlocks();
+      if (n > 0) {
+        console.info(`[rue3 progress] restored ${n} touched block(s) · level ${STATE.level}`);
+      }
+    } catch {
+      /* ignore */
     }
   } catch (e) {
     err.hidden = false;

@@ -51,11 +51,11 @@
           "accepts": ["He's a doctor."]
         },
         {
-          "en": "She is a teacher.",
-          "cz": "Ona je učitelka.",
-          "gap": "She is a ____.",
+          "en": "He is a teacher.",
+          "cz": "On je učitel.",
+          "gap": "He is a ____.",
           "gap_answer": "teacher",
-          "accepts": ["She's a teacher."]
+          "accepts": ["He's a teacher."]
         },
         {
           "en": "My name is Anna.",

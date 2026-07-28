@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_travel_a2",
   "codex_unit": "V_THM-A1B1-03",
-  "note": "V_THM-A1B1-03 travel A2 full",
+  "note": "V_THM-A1B1-03 travel A2 · leaf Sentence via carriers (use tags) · fruit = Word",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,113 @@
       "items": [
         {
           "en": "holiday",
-          "cz": "dovolená"
+          "cz": "dovolená",
+          "use": [
+            "have_a_good",
+            "i_like_pl",
+            "the_is_long"
+          ]
         },
         {
           "en": "trip",
-          "cz": "výlet / cesta"
+          "cz": "výlet / cesta",
+          "use": [
+            "have_a_good",
+            "i_like_pl",
+            "the_is_long",
+            "this_is_a"
+          ]
         },
         {
           "en": "journey",
-          "cz": "cesta (delší)"
+          "cz": "cesta (delší)",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "i_like_pl"
+          ]
         },
         {
           "en": "tourist",
-          "cz": "turista"
+          "cz": "turista",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "sightseeing",
-          "cz": "prohlídka památek"
+          "cz": "prohlídka památek",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "luggage",
-          "cz": "zavazadla"
+          "cz": "zavazadla",
+          "use": [
+            "i_have_bare",
+            "i_need_bare"
+          ]
         },
         {
           "en": "suitcase",
-          "cz": "kufr"
+          "cz": "kufr",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "passport",
-          "cz": "pas"
+          "cz": "pas",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "ticket",
-          "cz": "lístek / jízdenka"
+          "cz": "lístek / jízdenka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "booking",
-          "cz": "rezervace"
+          "cz": "rezervace",
+          "use": [
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "guide",
-          "cz": "průvodce"
+          "cz": "průvodce",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "map",
-          "cz": "mapa"
+          "cz": "mapa",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     },
@@ -67,51 +129,102 @@
       "items": [
         {
           "en": "airport",
-          "cz": "letiště"
+          "cz": "letiště",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
         },
         {
           "en": "station",
-          "cz": "nádraží"
+          "cz": "nádraží",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
         },
         {
           "en": "platform",
-          "cz": "nástupiště"
+          "cz": "nástupiště",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "hotel",
-          "cz": "hotel"
+          "cz": "hotel",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_have_a",
+            "i_go_to"
+          ]
         },
         {
           "en": "hostel",
-          "cz": "hostel"
+          "cz": "hostel",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "beach",
-          "cz": "pláž"
+          "cz": "pláž",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_like_pl",
+            "i_go_to"
+          ]
         },
         {
           "en": "resort",
-          "cz": "letovisko"
+          "cz": "letovisko",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "border",
-          "cz": "hranice"
+          "cz": "hranice",
+          "use": [
+            "where_is_the"
+          ]
         },
         {
           "en": "countryside",
-          "cz": "venkov"
+          "cz": "venkov",
+          "use": [
+            "where_is_the"
+          ]
         },
         {
           "en": "capital",
-          "cz": "hlavní město"
+          "cz": "hlavní město",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "abroad",
-          "cz": "v zahraničí"
+          "cz": "v zahraničí",
+          "use": []
         },
         {
           "en": "flight",
-          "cz": "let (letadlem)"
+          "cz": "let (letadlem)",
+          "use": [
+            "the_is_long",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     },
@@ -121,51 +234,99 @@
       "items": [
         {
           "en": "travel (verb)",
-          "cz": "cestovat"
+          "cz": "cestovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "fly",
-          "cz": "letět"
+          "cz": "letět",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "arrive",
-          "cz": "přijet / dorazit"
+          "cz": "přijet / dorazit",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "leave (depart)",
-          "cz": "odjet / odletět"
+          "cz": "odjet / odletět",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "book (verb)",
-          "cz": "rezervovat"
+          "cz": "rezervovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "pack",
-          "cz": "zabalit (si)"
+          "cz": "zabalit (si)",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "check in",
-          "cz": "odbavit se / zaregistrovat se"
+          "cz": "odbavit se / zaregistrovat se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "delay",
-          "cz": "zpoždění"
+          "cz": "zpoždění",
+          "use": [
+            "the_is_long",
+            "this_is_a"
+          ]
         },
         {
           "en": "delayed",
-          "cz": "zpožděný"
+          "cz": "zpožděný",
+          "use": []
         },
         {
           "en": "return ticket",
-          "cz": "zpáteční jízdenka"
+          "cz": "zpáteční jízdenka",
+          "use": [
+            "i_have_a",
+            "i_need_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "single ticket",
-          "cz": "jednosměrná jízdenka"
+          "cz": "jednosměrná jízdenka",
+          "use": [
+            "i_have_a",
+            "i_need_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "souvenir",
-          "cz": "suvenýr"
+          "cz": "suvenýr",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     },
@@ -175,51 +336,104 @@
       "items": [
         {
           "en": "airline",
-          "cz": "letecká společnost"
+          "cz": "letecká společnost",
+          "use": [
+            "this_is_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "backpack",
-          "cz": "batoh"
+          "cz": "batoh",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "cabin",
-          "cz": "kabina"
+          "cz": "kabina",
+          "use": [
+            "this_is_a",
+            "where_is_the",
+            "i_have_a"
+          ]
         },
         {
           "en": "camp",
-          "cz": "tábor / kempovat"
+          "cz": "tábor / kempovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "camping",
-          "cz": "kempování"
+          "cz": "kempování",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "coach",
-          "cz": "autobus (dálkový) / trenér"
+          "cz": "autobus (dálkový) / trenér",
+          "use": [
+            "this_is_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "destination",
-          "cz": "cíl cesty"
+          "cz": "cíl cesty",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "ferry",
-          "cz": "trajekt"
+          "cz": "trajekt",
+          "use": [
+            "this_is_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "foreign",
-          "cz": "zahraniční / cizí"
+          "cz": "zahraniční / cizí",
+          "use": []
         },
         {
           "en": "passenger",
-          "cz": "cestující"
+          "cz": "cestující",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "voyage",
-          "cz": "plavba / cesta (loď)"
+          "cz": "plavba / cesta (loď)",
+          "use": [
+            "the_is_long",
+            "have_a_good",
+            "i_like_pl"
+          ]
         },
         {
           "en": "railway",
-          "cz": "železnice"
+          "cz": "železnice",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         }
       ]
     },
@@ -229,51 +443,109 @@
       "items": [
         {
           "en": "route",
-          "cz": "trasa"
+          "cz": "trasa",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "ship",
-          "cz": "loď"
+          "cz": "loď",
+          "use": [
+            "this_is_a",
+            "where_is_the",
+            "i_need_a"
+          ]
         },
         {
           "en": "tourism",
-          "cz": "cestovní ruch"
+          "cz": "cestovní ruch",
+          "use": [
+            "lets_talk_about",
+            "is_important",
+            "i_like_bare"
+          ]
         },
         {
           "en": "traveller",
-          "cz": "cestovatel"
+          "cz": "cestovatel",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "vehicle",
-          "cz": "vozidlo"
+          "cz": "vozidlo",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "lorry",
-          "cz": "nákladní auto"
+          "cz": "nákladní auto",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "truck",
-          "cz": "náklaďák"
+          "cz": "náklaďák",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "motorcycle",
-          "cz": "motocykl"
+          "cz": "motocykl",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "parking",
-          "cz": "parkování"
+          "cz": "parkování",
+          "use": [
+            "i_need_bare",
+            "where_is_the"
+          ]
         },
         {
           "en": "petrol",
-          "cz": "benzín"
+          "cz": "benzín",
+          "use": [
+            "i_need_bare",
+            "i_have_bare"
+          ]
         },
         {
           "en": "pilot",
-          "cz": "pilot"
+          "cz": "pilot",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "coast",
-          "cz": "pobřeží"
+          "cz": "pobřeží",
+          "use": [
+            "where_is_the",
+            "i_like_pl"
+          ]
         }
       ]
     },
@@ -283,51 +555,99 @@
       "items": [
         {
           "en": "bridge",
-          "cz": "most"
+          "cz": "most",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "tower",
-          "cz": "věž"
+          "cz": "věž",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "castle",
-          "cz": "hrad / zámek"
+          "cz": "hrad / zámek",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "palace",
-          "cz": "palác"
+          "cz": "palác",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "region",
-          "cz": "region / oblast"
+          "cz": "region / oblast",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "continent",
-          "cz": "kontinent"
+          "cz": "kontinent",
+          "use": [
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "distance",
-          "cz": "vzdálenost"
+          "cz": "vzdálenost",
+          "use": [
+            "the_is_long"
+          ]
         },
         {
           "en": "direction",
-          "cz": "směr"
+          "cz": "směr",
+          "use": []
         },
         {
           "en": "case",
-          "cz": "kufr / případ"
+          "cz": "kufr / případ",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
         },
         {
           "en": "transport",
-          "cz": "doprava"
+          "cz": "doprava",
+          "use": [
+            "i_need_bare",
+            "i_like_bare"
+          ]
         },
         {
           "en": "driving",
-          "cz": "řízení"
+          "cz": "řízení",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
         },
         {
           "en": "tour",
-          "cz": "prohlídka / turné"
+          "cz": "prohlídka / turné",
+          "use": [
+            "have_a_good",
+            "i_like_pl",
+            "this_is_a"
+          ]
         }
       ]
     }

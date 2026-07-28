@@ -3,43 +3,243 @@
   "title": "Tech & media",
   "level": "A1",
   "tree_node": "leaf_tech_a1",
-  "note": "P3 Oxford A1 tech/media. Phone/computer also appear in Work/Home — OK for domain practice. Sentence = fruit.",
+  "note": "P3 Oxford A1 tech/media. Phone/computer also appear in Work/Home — OK for domain practice. Sentence = fruit. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "tech_devices",
       "title": "Tech · devices",
       "items": [
-        { "en": "computer", "cz": "počítač" },
-        { "en": "phone", "cz": "telefon" },
-        { "en": "telephone", "cz": "telefon (formálnější)" },
-        { "en": "mobile", "cz": "mobil" },
-        { "en": "camera", "cz": "fotoaparát / kamera" },
-        { "en": "television", "cz": "televize" },
-        { "en": "TV", "cz": "televize (TV)" },
-        { "en": "radio", "cz": "rádio" },
-        { "en": "video", "cz": "video" },
-        { "en": "DVD", "cz": "DVD" },
-        { "en": "CD", "cz": "CD" },
-        { "en": "screen", "cz": "obrazovka / displej" }
+        {
+          "en": "computer",
+          "cz": "počítač",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "phone",
+          "cz": "telefon",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "telephone",
+          "cz": "telefon (formálnější)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "mobile",
+          "cz": "mobil",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "camera",
+          "cz": "fotoaparát / kamera",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "television",
+          "cz": "televize",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "TV",
+          "cz": "televize (TV)",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "radio",
+          "cz": "rádio",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "video",
+          "cz": "video",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "DVD",
+          "cz": "DVD",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "CD",
+          "cz": "CD",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "screen",
+          "cz": "obrazovka / displej",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
+        }
       ]
     },
     {
       "id": "tech_online",
       "title": "Tech · online & media",
       "items": [
-        { "en": "internet", "cz": "internet" },
-        { "en": "online", "cz": "online / na internetu" },
-        { "en": "website", "cz": "webová stránka" },
-        { "en": "email", "cz": "e-mail" },
-        { "en": "blog", "cz": "blog" },
-        { "en": "photo", "cz": "fotka" },
-        { "en": "photograph", "cz": "fotografie" },
-        { "en": "picture", "cz": "obrázek / obraz" },
-        { "en": "message", "cz": "zpráva" },
-        { "en": "news", "cz": "zprávy" },
-        { "en": "newspaper", "cz": "noviny" },
-        { "en": "magazine", "cz": "časopis" }
+        {
+          "en": "internet",
+          "cz": "internet",
+          "use": [
+            "i_need_bare",
+            "i_have_bare",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "online",
+          "cz": "online / na internetu",
+          "use": [
+            "it_is"
+          ]
+        },
+        {
+          "en": "website",
+          "cz": "webová stránka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "email",
+          "cz": "e-mail",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "blog",
+          "cz": "blog",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "photo",
+          "cz": "fotka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "photograph",
+          "cz": "fotografie",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "picture",
+          "cz": "obrázek / obraz",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "message",
+          "cz": "zpráva",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "news",
+          "cz": "zprávy",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "newspaper",
+          "cz": "noviny",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "magazine",
+          "cz": "časopis",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        }
       ]
     }
   ]

@@ -20,11 +20,11 @@
           "accepts": ["I was at home", "I was home."]
         },
         {
-          "en": "She was tired.",
-          "cz": "Byla unavená.",
-          "gap": "She ____ tired.",
+          "en": "He was tired.",
+          "cz": "Byl unavený.",
+          "gap": "He ____ tired.",
           "gap_answer": "was",
-          "accepts": ["She was tired", "She was tired."]
+          "accepts": ["He was tired", "He was tired."]
         },
         {
           "en": "They were happy.",
@@ -62,11 +62,11 @@
           "accepts": ["I lived in Brno", "I lived in Brno."]
         },
         {
-          "en": "She called me.",
-          "cz": "Zavolala mi.",
-          "gap": "She ____ me.",
+          "en": "He called me.",
+          "cz": "Zavolal mi.",
+          "gap": "He ____ me.",
           "gap_answer": "called",
-          "accepts": ["She called me", "She called me."]
+          "accepts": ["He called me", "He called me."]
         },
         {
           "en": "We played football.",

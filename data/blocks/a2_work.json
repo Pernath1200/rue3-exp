@@ -4,7 +4,7 @@
   "level": "A2",
   "tree_node": "leaf_work_a2",
   "codex_unit": "V_THM-A1B1-02",
-  "note": "V_THM-A1B1-02 work A2",
+  "note": "V_THM-A1B1-02 work A2 · rich carriers (work in/for, look for, sign, send…)",
   "default_direction": "cz_to_en",
   "blocks": [
     {
@@ -13,51 +13,110 @@
       "items": [
         {
           "en": "apply",
-          "cz": "požádat (o práci) / přihlásit se"
+          "cz": "požádat (o práci) / přihlásit se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "application",
-          "cz": "žádost / přihláška"
+          "cz": "žádost / přihláška",
+          "use": [
+            "i_send_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "boss",
-          "cz": "šéf"
+          "cz": "šéf",
+          "use": [
+            "he_is_my",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "businessman",
-          "cz": "obchodník / podnikatel"
+          "cz": "obchodník / podnikatel",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "career",
-          "cz": "kariéra"
+          "cz": "kariéra",
+          "use": [
+            "i_look_for",
+            "i_have_a",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "colleague",
-          "cz": "kolega"
+          "cz": "kolega",
+          "use": [
+            "he_is_my",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "company",
-          "cz": "firma / společnost"
+          "cz": "firma / společnost",
+          "use": [
+            "i_work_for",
+            "i_work_in",
+            "this_is_a"
+          ]
         },
         {
           "en": "contract",
-          "cz": "smlouva"
+          "cz": "smlouva",
+          "use": [
+            "i_sign_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "department",
-          "cz": "oddělení"
+          "cz": "oddělení",
+          "use": [
+            "i_work_in",
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "employee",
-          "cz": "zaměstnanec"
+          "cz": "zaměstnanec",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "employer",
-          "cz": "zaměstnavatel"
+          "cz": "zaměstnavatel",
+          "use": [
+            "i_work_for",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "interview",
-          "cz": "pohovor"
+          "cz": "pohovor",
+          "use": [
+            "i_have_a_meeting",
+            "i_have_a",
+            "i_need_a"
+          ]
         }
       ]
     },
@@ -67,51 +126,106 @@
       "items": [
         {
           "en": "manager",
-          "cz": "manažer / vedoucí"
+          "cz": "manažer / vedoucí",
+          "use": [
+            "he_is_my",
+            "i_am_a",
+            "he_is_a"
+          ]
         },
         {
           "en": "meeting",
-          "cz": "schůzka / porada"
+          "cz": "schůzka / porada",
+          "use": [
+            "i_have_a_meeting",
+            "i_have_a",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "profession",
-          "cz": "povolání / profese"
+          "cz": "povolání / profese",
+          "use": [
+            "lets_talk_about",
+            "this_is_a"
+          ]
         },
         {
           "en": "professional",
-          "cz": "profesionál / odborný"
+          "cz": "profesionál / odborný",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "i_am_adj"
+          ]
         },
         {
           "en": "salary",
-          "cz": "plat"
+          "cz": "plat",
+          "use": [
+            "i_get_a",
+            "i_have_a",
+            "i_need_a"
+          ]
         },
         {
           "en": "skill",
-          "cz": "dovednost"
+          "cz": "dovednost",
+          "use": [
+            "i_have_a",
+            "i_need_a",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "staff",
-          "cz": "personál / zaměstnanci"
+          "cz": "personál / zaměstnanci",
+          "use": [
+            "i_have_bare",
+            "this_is_a"
+          ]
         },
         {
           "en": "team",
-          "cz": "tým"
+          "cz": "tým",
+          "use": [
+            "i_work_in",
+            "i_have_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "training",
-          "cz": "školení / výcvik"
+          "cz": "školení / výcvik",
+          "use": [
+            "i_have_a",
+            "i_need_a",
+            "i_look_for"
+          ]
         },
         {
           "en": "unemployed",
-          "cz": "nezaměstnaný"
+          "cz": "nezaměstnaný",
+          "use": [
+            "i_am_adj",
+            "he_is_adj"
+          ]
         },
         {
           "en": "unemployment",
-          "cz": "nezaměstnanost"
+          "cz": "nezaměstnanost",
+          "use": [
+            "lets_talk_about",
+            "is_important"
+          ]
         },
         {
           "en": "wage",
-          "cz": "mzda"
+          "cz": "mzda",
+          "use": [
+            "i_get_a",
+            "i_have_a"
+          ]
         }
       ]
     },
@@ -121,71 +235,85 @@
       "items": [
         {
           "en": "workplace",
-          "cz": "pracoviště"
+          "cz": "pracoviště",
+          "use": [
+            "i_work_in",
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "earn",
-          "cz": "vydělávat"
+          "cz": "vydělávat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "employ",
-          "cz": "zaměstnávat"
+          "cz": "zaměstnávat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
         },
         {
           "en": "factory",
-          "cz": "továrna"
+          "cz": "továrna",
+          "use": [
+            "i_work_in",
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
         },
         {
           "en": "industry",
-          "cz": "průmysl / odvětví"
+          "cz": "průmysl / odvětví",
+          "use": [
+            "i_work_in",
+            "lets_talk_about"
+          ]
         },
         {
           "en": "secretary",
-          "cz": "sekretářka / tajemník"
+          "cz": "sekretářka / tajemník",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "he_is_my",
+            "this_is_a"
+          ]
         },
         {
           "en": "officer",
-          "cz": "úředník / důstojník"
+          "cz": "úředník / důstojník",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "leader",
-          "cz": "vůdce / vedoucí"
+          "cz": "vůdce / vedoucí",
+          "use": [
+            "he_is_my",
+            "he_is_a",
+            "i_am_a",
+            "this_is_a"
+          ]
         },
         {
           "en": "conference",
-          "cz": "konference"
-        },
-        {
-          "en": "task",
-          "cz": "úkol"
-        },
-        {
-          "en": "organization",
-          "cz": "organizace"
-        },
-        {
-          "en": "assistant",
-          "cz": "asistent"
-        },
-        {
-          "en": "designer",
-          "cz": "designér / návrhář"
-        },
-        {
-          "en": "director",
-          "cz": "ředitel / režisér"
-        },
-        {
-          "en": "instructor",
-          "cz": "instruktor"
-        },
-        {
-          "en": "care",
-          "cz": "péče / starat se"
-        },
-        {
-          "en": "experience",
-          "cz": "zkušenost"
+          "cz": "konference",
+          "use": [
+            "i_have_a_meeting",
+            "i_have_a",
+            "lets_talk_about"
+          ]
         }
       ]
     }

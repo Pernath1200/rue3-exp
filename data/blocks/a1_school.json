@@ -3,81 +3,465 @@
   "title": "School & study",
   "level": "A1",
   "tree_node": "leaf_school_a1",
-  "note": "P3 Oxford A1 school/study. Overlap with Work (teacher/student) kept light. Sentence = fruit.",
+  "note": "P3 Oxford A1 school/study. Overlap with Work (teacher/student) kept light. Sentence = fruit. · carriers via use[]",
   "default_direction": "cz_to_en",
   "blocks": [
     {
       "id": "school_place",
       "title": "School · place",
       "items": [
-        { "en": "class", "cz": "třída / hodina" },
-        { "en": "classroom", "cz": "učebna" },
-        { "en": "lesson", "cz": "hodina / lekce" },
-        { "en": "course", "cz": "kurz" },
-        { "en": "college", "cz": "vysoká škola / kolej" },
-        { "en": "subject", "cz": "předmět" },
-        { "en": "homework", "cz": "domácí úkol" },
-        { "en": "exam", "cz": "zkouška / test" },
-        { "en": "test", "cz": "test" },
-        { "en": "dictionary", "cz": "slovník" },
-        { "en": "language", "cz": "jazyk" },
-        { "en": "learn", "cz": "učit se" }
+        {
+          "en": "class",
+          "cz": "třída / hodina",
+          "use": [
+            "i_have_a",
+            "i_go_to",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "classroom",
+          "cz": "učebna",
+          "use": [
+            "where_is_the",
+            "this_is_a",
+            "i_go_to"
+          ]
+        },
+        {
+          "en": "lesson",
+          "cz": "hodina / lekce",
+          "use": [
+            "i_have_a",
+            "i_need_a",
+            "lets_talk_about",
+            "have_a_good"
+          ]
+        },
+        {
+          "en": "course",
+          "cz": "kurz",
+          "use": [
+            "i_have_a",
+            "i_need_a",
+            "lets_talk_about"
+          ]
+        },
+        {
+          "en": "college",
+          "cz": "vysoká škola / kolej",
+          "use": [
+            "i_go_to",
+            "where_is_the",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "subject",
+          "cz": "předmět",
+          "use": [
+            "i_have_a",
+            "lets_talk_about",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "homework",
+          "cz": "domácí úkol",
+          "use": [
+            "i_have_bare",
+            "i_need_bare",
+            "lets_talk_about",
+            "i_like_bare"
+          ]
+        },
+        {
+          "en": "exam",
+          "cz": "zkouška / test",
+          "use": [
+            "i_have_a",
+            "i_need_a",
+            "lets_talk_about",
+            "have_a_good"
+          ]
+        },
+        {
+          "en": "test",
+          "cz": "test",
+          "use": [
+            "i_have_a",
+            "i_need_a",
+            "lets_talk_about",
+            "have_a_good"
+          ]
+        },
+        {
+          "en": "dictionary",
+          "cz": "slovník",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "language",
+          "cz": "jazyk",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "learn",
+          "cz": "učit se",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        }
       ]
     },
     {
       "id": "school_tools",
       "title": "School · tools & text",
       "items": [
-        { "en": "pen", "cz": "pero" },
-        { "en": "pencil", "cz": "tužka" },
-        { "en": "paper", "cz": "papír" },
-        { "en": "page", "cz": "stránka" },
-        { "en": "word", "cz": "slovo" },
-        { "en": "sentence", "cz": "věta" },
-        { "en": "story", "cz": "příběh" },
-        { "en": "question", "cz": "otázka" },
-        { "en": "answer", "cz": "odpověď" },
-        { "en": "example", "cz": "příklad" },
-        { "en": "spelling", "cz": "pravopis" },
-        { "en": "study", "cz": "studovat" }
+        {
+          "en": "pen",
+          "cz": "pero",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "pencil",
+          "cz": "tužka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "paper",
+          "cz": "papír",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "page",
+          "cz": "stránka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "word",
+          "cz": "slovo",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "sentence",
+          "cz": "věta",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "story",
+          "cz": "příběh",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "question",
+          "cz": "otázka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "answer",
+          "cz": "odpověď",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "example",
+          "cz": "příklad",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "spelling",
+          "cz": "pravopis",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
+        },
+        {
+          "en": "study",
+          "cz": "studovat",
+          "use": [
+            "i_want_to",
+            "we_need_to"
+          ]
+        }
       ]
     },
     {
       "id": "school_subjects",
       "title": "School · subjects & ideas",
       "items": [
-        { "en": "history", "cz": "dějepis / historie" },
-        { "en": "geography", "cz": "zeměpis" },
-        { "en": "science", "cz": "přírodní vědy" },
-        { "en": "scientist", "cz": "vědec" },
-        { "en": "art", "cz": "umění / výtvarka" },
-        { "en": "artist", "cz": "umělec" },
-        { "en": "music", "cz": "hudba" },
-        { "en": "idea", "cz": "nápad / myšlenka" },
-        { "en": "problem", "cz": "problém" },
-        { "en": "information", "cz": "informace" },
-        { "en": "opinion", "cz": "názor" },
-        { "en": "meaning", "cz": "význam / smysl" }
+        {
+          "en": "history",
+          "cz": "dějepis / historie",
+          "use": [
+            "i_like_bare",
+            "lets_talk_about",
+            "is_important"
+          ]
+        },
+        {
+          "en": "geography",
+          "cz": "zeměpis",
+          "use": [
+            "i_like_bare",
+            "lets_talk_about",
+            "is_important"
+          ]
+        },
+        {
+          "en": "science",
+          "cz": "přírodní vědy",
+          "use": [
+            "i_like_bare",
+            "lets_talk_about",
+            "is_important"
+          ]
+        },
+        {
+          "en": "scientist",
+          "cz": "vědec",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "art",
+          "cz": "umění / výtvarka",
+          "use": [
+            "i_like_bare",
+            "lets_talk_about",
+            "is_important"
+          ]
+        },
+        {
+          "en": "artist",
+          "cz": "umělec",
+          "use": [
+            "i_am_a",
+            "he_is_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "music",
+          "cz": "hudba",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "idea",
+          "cz": "nápad / myšlenka",
+          "use": [
+            "have_a_good",
+            "the_is_long",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "problem",
+          "cz": "problém",
+          "use": [
+            "i_have_a",
+            "this_is_a"
+          ]
+        },
+        {
+          "en": "information",
+          "cz": "informace",
+          "use": [
+            "i_like_bare",
+            "i_need_bare",
+            "i_have_bare"
+          ]
+        },
+        {
+          "en": "opinion",
+          "cz": "názor",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "meaning",
+          "cz": "význam / smysl",
+          "use": [
+            "is_important",
+            "lets_talk_about"
+          ]
+        }
       ]
     },
     {
       "id": "school_more",
       "title": "School · more text",
       "items": [
-        { "en": "letter", "cz": "dopis" },
-        { "en": "note", "cz": "poznámka" },
-        { "en": "list", "cz": "seznam" },
-        { "en": "text", "cz": "text" },
-        { "en": "title", "cz": "název / titul" },
-        { "en": "article", "cz": "článek" },
-        { "en": "paragraph", "cz": "odstavec" },
-        { "en": "phrase", "cz": "fráze / sousloví" },
-        { "en": "reading", "cz": "čtení" },
-        { "en": "writing", "cz": "psaní" },
-        { "en": "practice", "cz": "praxe / procvičování" },
-        { "en": "activity", "cz": "činnost / aktivita" }
+        {
+          "en": "letter",
+          "cz": "dopis",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "note",
+          "cz": "poznámka",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "list",
+          "cz": "seznam",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "text",
+          "cz": "text",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a",
+            "where_is_the"
+          ]
+        },
+        {
+          "en": "title",
+          "cz": "název / titul",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "article",
+          "cz": "článek",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "paragraph",
+          "cz": "odstavec",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "phrase",
+          "cz": "fráze / sousloví",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "reading",
+          "cz": "čtení",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
+        },
+        {
+          "en": "writing",
+          "cz": "psaní",
+          "use": [
+            "i_like_bare",
+            "i_enjoy",
+            "is_fun"
+          ]
+        },
+        {
+          "en": "practice",
+          "cz": "praxe / procvičování",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        },
+        {
+          "en": "activity",
+          "cz": "činnost / aktivita",
+          "use": [
+            "this_is_a",
+            "i_have_a",
+            "i_need_a"
+          ]
+        }
       ]
     }
   ]
 }
-
