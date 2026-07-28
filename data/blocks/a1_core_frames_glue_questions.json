@@ -19,7 +19,12 @@
           "cz": "Jak se jmenuješ?",
           "gap": "____ is your name?",
           "gap_answer": "What",
-          "accepts": ["What is your name", "What's your name?"]
+          "accepts": [
+            "What is your name",
+            "What's your name?",
+            "What are you called?",
+            "What are you called"
+          ]
         },
         {
           "en": "Where are you from?",
@@ -40,7 +45,14 @@
           "cz": "Kdo je ten muž?",
           "gap": "____ is that man?",
           "gap_answer": "Who",
-          "accepts": ["Who is that man", "Who is that man?"]
+          "accepts": [
+            "Who is that man",
+            "Who is that man?",
+            "Who is this man?",
+            "Who is this man",
+            "Who is the man?",
+            "Who is the man"
+          ]
         },
         {
           "en": "Why are you late?",

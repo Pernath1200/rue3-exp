@@ -10,7 +10,7 @@
  */
 
 import { buildLeafSentenceItems } from "./carriers.js";
-import { flagItem, flagCount } from "./progress.js";
+import { getSmokeApi, countFlags } from "./smoke-flags.js";
 
 function shuffle(a) {
   const arr = a.slice();
@@ -379,6 +379,78 @@ export function startPractice(root, block, opts) {
     return state.sentenceList;
   }
 
+  /** Live item context for smoke Flag (always-visible toolbar). */
+  const flagContext = {
+    stage: "match",
+    itemIndex: null,
+    en: "",
+    cz: "",
+    gap: "",
+    gap_answer: "",
+    prompt: "",
+    answer: "",
+    typed: "",
+  };
+
+  function setFlagContext(partial) {
+    Object.assign(flagContext, partial);
+  }
+
+  function contextFromItem(it, itemIndex, stageExtra = {}) {
+    if (!it) {
+      setFlagContext({
+        itemIndex: itemIndex ?? null,
+        en: "",
+        cz: "",
+        gap: "",
+        gap_answer: "",
+        prompt: "",
+        answer: "",
+        ...stageExtra,
+      });
+      return;
+    }
+    setFlagContext({
+      itemIndex: typeof itemIndex === "number" ? itemIndex : null,
+      en: it.en || "",
+      cz: it.cz || "",
+      gap: it.gap || "",
+      gap_answer: it.gap_answer || "",
+      prompt: "",
+      answer: "",
+      ...stageExtra,
+    });
+  }
+
+  function openSmokeFlag() {
+    const api = getSmokeApi();
+    if (!api) return;
+    const ti = root.querySelector("#ti, #si, textarea.type-area, input.type-in");
+    if (ti && "value" in ti) {
+      setFlagContext({ typed: String(ti.value || "") });
+    }
+    api.openForm({
+      packId: opts.treeNode || opts.packId || block.tree_node || block.id || "",
+      packTitle: opts.packTitle || block.title || "",
+      blockId: block.id || "",
+      level: block.level || opts.level || "",
+      stage: flagContext.stage || state.mode || "",
+      mode: state.mode || "",
+      itemIndex: flagContext.itemIndex,
+      en: flagContext.en || "",
+      cz: flagContext.cz || "",
+      gap: flagContext.gap || "",
+      gap_answer: flagContext.gap_answer || "",
+      prompt: flagContext.prompt || "",
+      answer: flagContext.answer || "",
+      typed: flagContext.typed || "",
+    });
+  }
+
+  function openSmokeList() {
+    getSmokeApi()?.openList();
+  }
+
   function renderChrome(statusText) {
     const modes = [
       ["match", "1 · Match"],
@@ -387,6 +459,7 @@ export function startPractice(root, block, opts) {
       ["sentence", "4 · Sentence"],
     ];
     const showDir = state.mode !== "sentence";
+    const nFlags = countFlags();
     return `
       <div class="practice-head">
         <div class="practice-title">${escapeHtml(block.title)}</div>
@@ -402,12 +475,18 @@ export function startPractice(root, block, opts) {
       </div>
       <div class="bar">
         <span id="p-status">${escapeHtml(statusText || "")}</span>
-        <button type="button" class="flag-btn" id="p-flag" title="Flag this item as a dud (F) — logs prompt + answer for later fixing">⚑ Flag</button>
-        ${
-          showDir
-            ? `<button type="button" class="dir" id="p-dir">${state.czToEn ? "CZ → EN" : "EN → CZ"}</button>`
-            : `<span class="dir-static">Write in English</span>`
-        }
+        <span class="bar-tools">
+          ${
+            showDir
+              ? `<button type="button" class="dir" id="p-dir">${state.czToEn ? "CZ → EN" : "EN → CZ"}</button>`
+              : `<span class="dir-static">Write in English</span>`
+          }
+        </span>
+      </div>
+      <div class="smoke-toolbar" role="toolbar" aria-label="Smoke flags">
+        <button type="button" class="btn smoke-flag-btn" id="p-flag" title="Flag this item for smoke review (F)">⚑ Flag item</button>
+        <button type="button" class="btn smoke-flag-list" id="p-flag-list" data-smoke-badge title="View flagged items · copy for agent">${nFlags > 0 ? `Flagged (${nFlags})` : "Flagged list"}</button>
+        <span class="smoke-toolbar-hint">Smoke · local notes for the agent</span>
       </div>
       <div id="p-stage" class="stage"></div>
       <div class="practice-exit">
@@ -435,52 +514,8 @@ export function startPractice(root, block, opts) {
       clearKey();
       opts.onExit();
     });
-    const flagBtn = root.querySelector("#p-flag");
-    if (flagBtn) flagBtn.addEventListener("click", () => doFlag(flagBtn));
-  }
-
-  /** Capture whatever is on screen right now — mode-agnostic dud logging. */
-  function captureFlagContext() {
-    const stage = root.querySelector("#p-stage");
-    const text = (sel) => {
-      const el = stage && stage.querySelector(sel);
-      return el ? el.textContent.trim() : null;
-    };
-    // Prompt: quiz/word/sentence use .prompt; match shows pairs (grab the board)
-    let prompt = text(".prompt");
-    if (!prompt && stage) {
-      const first = stage.querySelector(".m");
-      prompt = first ? `match set (e.g. ${first.textContent.trim()})` : null;
-    }
-    // Answer if revealed (word/sentence feedback), else the correct quiz option
-    let answer = null;
-    const reveal = stage && stage.querySelector(".reveal");
-    if (reveal) answer = reveal.textContent.trim();
-    if (!answer) {
-      const correct = stage && stage.querySelector(".opt.correct");
-      if (correct) answer = correct.textContent.replace(/^\d+/, "").trim();
-    }
-    return {
-      block: block.id,
-      blockTitle: block.title,
-      mode: state.mode,
-      prompt,
-      answer,
-    };
-  }
-
-  function doFlag(btn) {
-    const n = flagItem(captureFlagContext());
-    if (n == null) {
-      btn.textContent = "⚑ storage blocked";
-      return;
-    }
-    btn.textContent = `⚑ flagged (${n})`;
-    btn.classList.add("flagged");
-    setTimeout(() => {
-      btn.textContent = "⚑ Flag";
-      btn.classList.remove("flagged");
-    }, 1400);
+    root.querySelector("#p-flag")?.addEventListener("click", () => openSmokeFlag());
+    root.querySelector("#p-flag-list")?.addEventListener("click", () => openSmokeList());
   }
 
   function newMatch() {
@@ -502,6 +537,17 @@ export function startPractice(root, block, opts) {
     if (!state.match) newMatch();
     const m = state.match;
     const doneCount = m.doneIds.size;
+    setFlagContext({
+      stage: "match",
+      itemIndex: null,
+      en: "",
+      cz: "",
+      gap: "",
+      gap_answer: "",
+      prompt: "match board",
+      answer: "",
+      typed: "",
+    });
 
     if (doneCount === m.total) {
       reportMode("match");
@@ -654,6 +700,12 @@ export function startPractice(root, block, opts) {
 
     const itemIndex = q.order[q.pos];
     const it = list[itemIndex];
+    contextFromItem(it, itemIndex, {
+      stage: "quiz",
+      prompt: promptOf(it, state.czToEn),
+      answer: answerOf(it, state.czToEn),
+      typed: "",
+    });
     const correct = answerOf(it, state.czToEn);
     const others = shuffle(
       list.filter((x) => answerOf(x, state.czToEn) !== correct),
@@ -827,13 +879,20 @@ export function startPractice(root, block, opts) {
         : `Finished · ${t.score}/${passLen}`;
     }
 
-    const it = list[t.order[t.pos]];
+    const itemIndex = t.order[t.pos];
+    const it = list[itemIndex];
     const frame = isFrameItem(it);
     // Frames: always gap-fill in English (seed production). Leaves: CZ↔EN word.
     const prompt = frame
       ? it.gap
       : promptOf(it, state.czToEn);
     const answer = frame ? it.gap_answer : answerOf(it, state.czToEn);
+    contextFromItem(it, itemIndex, {
+      stage: "type",
+      prompt,
+      answer,
+      typed: "",
+    });
     const sub = frame
       ? `${gapFillInstruction(answer)} · Enter = check / next`
       : `Type the ${state.czToEn ? "English" : "Czech"} · Enter = check / next`;
@@ -854,6 +913,7 @@ export function startPractice(root, block, opts) {
     const chk = stage.querySelector("#chk");
     const fb = stage.querySelector("#tfb");
     const skip = stage.querySelector("#skip");
+    inp.addEventListener("input", () => setFlagContext({ typed: inp.value }));
     inp.focus();
 
     function goNext() {
@@ -1027,7 +1087,14 @@ export function startPractice(root, block, opts) {
         : `Complete · ${t.score}/${passLen}`;
     }
 
-    const it = list[t.order[t.pos]];
+    const itemIndex = t.order[t.pos];
+    const it = list[itemIndex];
+    contextFromItem(it, itemIndex, {
+      stage: "sentence",
+      prompt: it.cz || "",
+      answer: it.en || "",
+      typed: "",
+    });
     stage.innerHTML = `
       <div class="q">
         <div class="sub">Sentence <strong>${t.pos + 1}</strong> of <strong>${passLen}</strong>${t.retryPass ? " (retry)" : ""} · type the English</div>
@@ -1044,6 +1111,7 @@ export function startPractice(root, block, opts) {
     const chk = stage.querySelector("#chk");
     const fb = stage.querySelector("#tfb");
     const skip = stage.querySelector("#skip");
+    inp.addEventListener("input", () => setFlagContext({ typed: inp.value }));
     inp.focus();
 
     function goNext() {
@@ -1138,14 +1206,13 @@ export function startPractice(root, block, opts) {
     if (st) st.textContent = status || "";
   }
 
-  // Persistent 'F' shortcut for flagging — ignores typing fields; torn down on exit
+  // Persistent 'F' shortcut for flag form — ignores typing fields; torn down on exit
   const flagKeyHandler = (e) => {
     if (e.key !== "f" && e.key !== "F") return;
-    if (e.target.closest("input, textarea")) return;
+    if (e.target.closest("input, textarea, select")) return;
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     e.preventDefault();
-    const btn = root.querySelector("#p-flag");
-    if (btn) doFlag(btn);
+    openSmokeFlag();
   };
   document.addEventListener("keydown", flagKeyHandler);
   const origExit = opts.onExit;

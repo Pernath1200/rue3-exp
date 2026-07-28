@@ -6,8 +6,6 @@
 
 const KEY = "rue3-v0.1-progress";
 const AUTHOR_KEY = "rue3-v0.1-author-unlock";
-/** Smoke-flag log — separate key so it survives progress resets / student view. */
-const FLAGS_KEY = "rue3-v0.1-flags";
 /** C1/C2 stay locked for students; author unlock can open them for tree-size comparison. */
 const FOREVER_LOCKED = new Set(["C1", "C2"]);
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
@@ -169,50 +167,6 @@ export function setAuthorUnlock(on) {
   } catch {
     /* ignore */
   }
-}
-
-/* --- Smoke flags: one-click "this is a dud" log during hand-smoke --- */
-
-export function getFlags() {
-  try {
-    const raw = localStorage.getItem(FLAGS_KEY);
-    const arr = raw ? JSON.parse(raw) : [];
-    return Array.isArray(arr) ? arr : [];
-  } catch {
-    return [];
-  }
-}
-
-/** Append a flag entry; returns the new total count (or null if storage failed). */
-export function flagItem(entry) {
-  try {
-    const flags = getFlags();
-    flags.push({
-      at: new Date().toISOString(),
-      block: entry.block || null,
-      blockTitle: entry.blockTitle || null,
-      mode: entry.mode || null,
-      prompt: entry.prompt || null,
-      answer: entry.answer || null,
-      note: entry.note || null,
-    });
-    localStorage.setItem(FLAGS_KEY, JSON.stringify(flags));
-    return flags.length;
-  } catch {
-    return null;
-  }
-}
-
-export function clearFlags() {
-  try {
-    localStorage.removeItem(FLAGS_KEY);
-  } catch {
-    /* ignore */
-  }
-}
-
-export function flagCount() {
-  return getFlags().length;
 }
 
 export function isLevelUnlocked(level) {

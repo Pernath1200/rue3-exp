@@ -1,100 +1,195 @@
 /* RUE3 v0.1 — sibling of RUE2 Grok (https://pernath1200.github.io/rue2-grok/)
    Same dark underground base; accent one shade off RUE2 cyan #569cd6 → #4db6c7 */
 
-/* --- Smoke flag button (practice bar) + flags viewer --- */
-.flag-btn {
-  font-family: inherit;
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 0.2rem 0.5rem;
-  margin-left: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid rgba(239, 68, 68, 0.5);
-  background: transparent;
-  color: #ef8a8a;
-  cursor: pointer;
-}
-.flag-btn:hover {
-  border-color: #ef4444;
-  color: #ef4444;
-}
-.flag-btn.flagged {
-  background: rgba(239, 68, 68, 0.18);
-  border-color: #ef4444;
-  color: #fff;
+/* --- Smoke flags (rue2-exp port): toolbar + overlay form/list --- */
+.bar-tools {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: auto;
 }
 
-.flags-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  background: rgba(0, 0, 0, 0.72);
+.smoke-toolbar {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 3rem 1rem;
-  overflow: auto;
-}
-.flags-panel {
-  background: #141414;
-  border: 1px solid var(--accent-border);
-  border-radius: var(--radius);
-  padding: 1rem 1.1rem;
-  max-width: 40rem;
-  width: 100%;
-}
-.flags-head {
-  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.75rem;
-}
-.flags-list {
-  white-space: pre-wrap;
-  word-break: break-word;
-  font-size: 0.82rem;
-  line-height: 1.5;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(160, 160, 160, 0.15);
-  border-radius: 6px;
-  padding: 0.75rem;
-  max-height: 55vh;
-  overflow: auto;
-  margin: 0 0 0.75rem;
-}
-.flags-empty {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin: 0 0 0.75rem;
-}
-.flags-actions {
-  display: flex;
   gap: 0.5rem;
-}
-.flags-actions .btn {
-  font-family: inherit;
-  font-size: 0.84rem;
-  font-weight: 600;
-  padding: 0.4rem 0.8rem;
+  margin: 0 0 0.85rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px dashed var(--accent-border);
   border-radius: var(--radius);
-  border: 1px solid var(--accent-border);
-  background: transparent;
-  color: var(--text);
+  background: var(--accent-dim);
+}
+
+.smoke-toolbar .smoke-flag-btn,
+.smoke-toolbar .smoke-flag-list {
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  background: var(--bg, #0d0d0d);
+  color: var(--accent);
   cursor: pointer;
 }
-.flags-actions .btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
+
+.smoke-toolbar .smoke-flag-btn:hover,
+.smoke-toolbar .smoke-flag-list:hover {
+  background: var(--accent);
+  color: var(--bg, #0d0d0d);
 }
-.flags-actions .btn:hover:not(:disabled) {
+
+.smoke-toolbar-hint {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-left: 0.15rem;
+}
+
+.smoke-flag-list.has-flags,
+[data-smoke-badge].has-flags {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
+.util-btn.has-flags {
   border-color: var(--accent);
   color: var(--accent);
 }
-.flags-msg {
+
+.smoke-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.25rem 0.75rem;
+  overflow: auto;
+}
+
+.smoke-overlay[hidden] {
+  display: none !important;
+}
+
+.smoke-panel {
+  width: min(32rem, 100%);
+  margin-top: 1.5rem;
+  background: var(--surface, #141414);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem 1.15rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.smoke-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.smoke-panel-head h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.smoke-hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+
+.smoke-meta {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.45;
+}
+
+.smoke-line {
+  margin-top: 0.25rem;
+  color: var(--text, #fff);
+  word-break: break-word;
+}
+
+.smoke-label {
+  display: block;
   font-size: 0.78rem;
-  color: var(--accent);
+  color: var(--muted);
+  margin-bottom: 0.65rem;
+}
+
+.smoke-label select,
+.smoke-label .type-in {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--accent-border);
+  background: var(--bg, #0d0d0d);
+  color: var(--text, #fff);
+}
+
+.smoke-actions {
   margin-top: 0.5rem;
-  min-height: 1rem;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.smoke-status {
+  font-size: 0.8rem;
+  margin: 0.65rem 0 0;
+}
+
+.smoke-status.ok {
+  color: var(--correct, #22c55e);
+}
+
+.smoke-status.bad {
+  color: var(--wrong);
+}
+
+.smoke-list {
+  max-height: min(50vh, 22rem);
+  overflow: auto;
+  margin-bottom: 0.75rem;
+  border-top: 1px solid var(--accent-border);
+}
+
+.smoke-row {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--accent-border);
+  font-size: 0.82rem;
+}
+
+.smoke-row-head {
+  font-weight: 600;
+  color: var(--text, #fff);
+}
+
+.smoke-row-snip,
+.smoke-row-typed,
+.smoke-row-note {
+  color: var(--muted);
+  margin-top: 0.15rem;
+  word-break: break-word;
+}
+
+.smoke-fallback-ta {
+  width: 100%;
+  min-height: 6rem;
+  margin-top: 0.5rem;
+  font-family: ui-monospace, monospace;
+  font-size: 0.75rem;
 }
 
 :root {
@@ -454,7 +549,7 @@ h1 {
 
 .meter-row {
   display: grid;
-  grid-template-columns: 5.6rem 1fr 2.4rem;
+  grid-template-columns: 5.6rem 1fr 4.6rem;
   align-items: center;
   gap: 0.45rem 0.55rem;
   margin-bottom: 0.35rem;
@@ -496,6 +591,33 @@ h1 {
   font-variant-numeric: tabular-nums;
   color: var(--muted);
   text-align: right;
+}
+
+/* Today CTA: unit + next exercise highlighted after scroll */
+.unit-pick-active {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.block-btn-suggest {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 1px rgba(77, 182, 199, 0.55);
+}
+
+.block-btn-pulse {
+  animation: block-btn-pulse 0.9s ease-out 1;
+}
+
+@keyframes block-btn-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(77, 182, 199, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(77, 182, 199, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 1px rgba(77, 182, 199, 0.55);
+  }
 }
 
 .meters-hint {

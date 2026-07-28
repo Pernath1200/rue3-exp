@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vocab · RUE3 v0.1</title>
-  <link rel="stylesheet" href="./css/app.css?v=20260727a" />
+  <link rel="stylesheet" href="./css/app.css?v=20260728scroll" />
 </head>
 <body>
   <div class="container">
@@ -15,10 +15,11 @@
       <span class="sep">·</span>
       <span>local shell</span>
       <span class="sep">·</span>
-      <button type="button" class="util-btn" id="btn-flags" title="View / copy / clear flagged duds from smoke testing">⚑ Flags</button>
+      <button type="button" class="util-btn" id="btn-smoke-flags" data-smoke-badge title="Smoke flags · copy for agent">Flagged list</button>
       <button type="button" class="util-btn" id="btn-author-unlock" aria-pressed="false" title="Unlock A2–B2 for authoring (local only). Also ?unlock=all. Exp auto-opens author mode.">Author unlock</button>
       <button type="button" class="util-btn" id="btn-word-roots" aria-pressed="false" hidden title="Author experiment: word roots / etymology (Germanic·Latin·PIE + Czech cognates). Off by default.">Word roots</button>
     </div>
+    <div id="smoke-flags-host"></div>
 
     <h1>Vocabulary · Practice map</h1>
     <p class="sub">
@@ -63,6 +64,6 @@
       Server: <code>py -m http.server 8090</code> → <code>http://localhost:8090</code>
     </p>
   </div>
-  <script type="module" src="./js/app.js?v=20260728b"></script>
+  <script type="module" src="./js/app.js?v=20260728scroll"></script>
 </body>
 </html>
