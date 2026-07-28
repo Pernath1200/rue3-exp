@@ -70,9 +70,24 @@ function save() {
   }
 }
 
-/** URL ?unlock=all or sticky local author flag (local shell only). */
+/** URL ?unlock=all or sticky local author flag (local shell only).
+ *  ?student=1 forces the student view: clears the sticky flag and ignores
+ *  tree.json author_open, so lock/gate flows can be smoke-tested. */
+export function isStudentView() {
+  try {
+    if (typeof location === "undefined") return false;
+    return new URLSearchParams(location.search).get("student") === "1";
+  } catch {
+    return false;
+  }
+}
+
 export function isAuthorUnlock() {
   try {
+    if (isStudentView()) {
+      localStorage.removeItem(AUTHOR_KEY);
+      return false;
+    }
     if (typeof location !== "undefined") {
       const q = new URLSearchParams(location.search);
       if (q.get("unlock") === "all") {

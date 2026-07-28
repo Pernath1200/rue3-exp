@@ -25,6 +25,7 @@ import {
   forceAllDue,
   isLevelUnlocked,
   isAuthorUnlock,
+  isStudentView,
   setAuthorUnlock,
   getUnlockedList,
   getGate,
@@ -873,7 +874,8 @@ async function init() {
     isAuthorUnlock();
     STATE.tree = await loadJson("./data/tree.json");
     // Exp / content-writing trees open A2–B2 without gate (student story still uses gate on stable)
-    if (STATE.tree.author_open && !isAuthorUnlock()) {
+    // ?student=1 suppresses this so the locked-level + gate path stays testable
+    if (STATE.tree.author_open && !isAuthorUnlock() && !isStudentView()) {
       setAuthorUnlock(true);
     }
     // Fruit units from older sessions get staggered first-review dates
