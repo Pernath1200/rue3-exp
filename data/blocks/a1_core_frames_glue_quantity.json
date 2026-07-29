@@ -53,7 +53,16 @@
           "cz": "Všechno je v pořádku.",
           "gap": "____ is OK.",
           "gap_answer": "Everything",
-          "accepts": ["Everything is OK", "Everything is okay.", "Everything is fine."]
+          "accepts": [
+            "Everything is OK",
+            "Everything is okay.",
+            "Everything is fine.",
+            "Everything is fine",
+            "Everything is alright.",
+            "Everything is alright",
+            "Everything is all right.",
+            "Everything is all right"
+          ]
         },
         {
           "en": "Something is wrong.",

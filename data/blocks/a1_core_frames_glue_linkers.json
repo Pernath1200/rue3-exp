@@ -42,7 +42,11 @@
           "gap_answer": "because",
           "accepts": [
             "I stay home because I am tired",
-            "I stay home because I'm tired."
+            "I stay home because I'm tired.",
+            "I stay at home because I am tired.",
+            "I stay at home because I am tired",
+            "I stay at home because I'm tired.",
+            "I stay at home because I'm tired"
           ]
         },
         {
@@ -98,14 +102,28 @@
           "cz": "Po obědě odpočívám.",
           "gap": "____ lunch I rest.",
           "gap_answer": "After",
-          "accepts": ["After lunch I rest", "After lunch I rest."]
+          "accepts": [
+            "After lunch I rest",
+            "After lunch I rest.",
+            "I rest after lunch.",
+            "I rest after lunch"
+          ]
         },
         {
           "en": "Before work I have coffee.",
           "cz": "Před prací si dám kávu.",
           "gap": "____ work I have coffee.",
           "gap_answer": "Before",
-          "accepts": ["Before work I have coffee", "Before work I have coffee."]
+          "accepts": [
+            "Before work I have coffee",
+            "Before work I have coffee.",
+            "I have coffee before work.",
+            "I have coffee before work",
+            "I have a coffee before work.",
+            "I have a coffee before work",
+            "Before work I have a coffee.",
+            "Before work I have a coffee"
+          ]
         }
       ]
     }
