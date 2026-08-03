@@ -1,5 +1,5 @@
 /**
- * RUE3 Grok v0.1 — level rail + tree + practice + honest progress
+ * RUE3 Vocab v0.2 — level rail + tree + practice + honest progress
  * Visual sibling of https://pernath1200.github.io/rue2-grok/
  */
 
