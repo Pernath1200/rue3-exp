@@ -1,8 +1,10 @@
-# RUE3 Grok v0.1 — Charter
+# RUE3 Vocab · Charter **v0.2**
 
-**Status:** locked 2026-07-16 · careful mode · shell only (no student deploy yet)  
-**Sibling:** [RUE2 Grok (live)](https://pernath1200.github.io/rue2-grok/) — visual/layout source of truth  
-**This folder:** greenfield rebuild. Legacy `projects/rue3`, `rue3-grok`, forks = archive/reference only.
+**Status:** active product line · public Pages  
+**Live:** https://pernath1200.github.io/rue3-exp/  
+**Sibling:** [RUE2 Grammar v1.1](https://pernath1200.github.io/rue2-grok-v1.0/) — visual/layout reference  
+**Fallback:** tag `v0.1` / `fallback/v0.1` — [FALLBACK.md](./FALLBACK.md)  
+**This folder:** `projects/rue3-exp`. Legacy `projects/rue3`, `rue3-grok`, forks = archive only.
 
 ---
 

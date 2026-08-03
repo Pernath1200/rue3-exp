@@ -1,13 +1,22 @@
-# RUE3 exp
+# RUE3 Vocab · **v0.2**
 
-Experimental vocabulary trainer (Tree Model · trunk + leaves). Sibling of **[RUE2 Grok](https://pernath1200.github.io/rue2-grok/)**.
+Vocabulary trainer (Tree Model · trunk + leaves). Sibling of **[RUE2 Grammar v1.1](https://pernath1200.github.io/rue2-grok-v1.0/)**.
 
-**Live (lesson):** [https://pernath1200.github.io/rue3-exp/](https://pernath1200.github.io/rue3-exp/)  
-**Repo:** [Pernath1200/rue3-exp](https://github.com/Pernath1200/rue3-exp)
+**Live:** [https://pernath1200.github.io/rue3-exp/](https://pernath1200.github.io/rue3-exp/)  
+**Repo (Pages):** [Pernath1200/rue3-exp](https://github.com/Pernath1200/rue3-exp)
+
+| | |
+|--|--|
+| **Product version** | **v0.2** (active) |
+| **Fallback** | tag **`v0.1`** · branch **`fallback/v0.1`** — [FALLBACK.md](./FALLBACK.md) |
+| **Progress key** | `rue3-v0.1-progress` (do not rename) |
+| **Agents** | [AGENTS.md](./AGENTS.md) |
 
 Read **[CHARTER.md](./CHARTER.md)** and **[PLAN-A1-A2.md](./PLAN-A1-A2.md)** before changing scope.
 
-Stable history / older shell lives in [rue3-grok-v0.1](https://github.com/Pernath1200/rue3-grok-v0.1) (not used for this deploy).
+```powershell
+py scripts\smoke.py
+```
 
 ## Run locally
 
@@ -47,4 +56,4 @@ Stored in this browser only (`rue3-v0.1-progress`). Clear site data resets unloc
 
 ## Version
 
-v0.1 — shell + practice + progress (A0). No student deploy until amber.
+**v0.2** — active line (shell + practice + progress). Fallback save is **v0.1**.
