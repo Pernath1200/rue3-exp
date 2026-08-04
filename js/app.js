@@ -67,6 +67,7 @@ const STATE = {
   selectedTrunk: false,
   view: "map", // map | practice
   pack: null,
+  homePanel: null, // null | "topics" | "review"
 };
 
 /** Persist map place so refresh does not look like a wipe (especially A2 → A1 default). */
@@ -155,7 +156,7 @@ function renderRail() {
           rememberView();
           renderRail();
           renderTree();
-          renderTodayCard();
+          renderHomeChrome();
           renderSelectionDetail();
         });
     } else {
@@ -171,7 +172,7 @@ function renderRail() {
         rememberView();
         renderRail();
         renderTree();
-        renderTodayCard();
+        renderHomeChrome();
         renderSelectionDetail();
       });
     }
@@ -881,7 +882,8 @@ function refreshInsightsPanel() {
 function refreshMap() {
   showMap();
   renderRail();
-  renderTodayCard();
+  renderHomeChrome();
+  if (STATE.homePanel === "review") renderHomeReviewBody();
   renderTree();
   renderGateCard();
   renderSelectionDetail();
@@ -1079,6 +1081,161 @@ function syncInsightsToggleVisibility() {
   if (btn) btn.hidden = !author;
 }
 
+/* —— Home chrome (Do next · Review · Topics · How to use) —— */
+const HOWTO_KEY = "rue3-howto-seen";
+
+function renderHomeChrome() {
+  const line = document.getElementById("home-next-line");
+  const utilLv = document.getElementById("util-level-label");
+  if (utilLv) utilLv.textContent = STATE.level;
+  if (!STATE.tree) return;
+
+  const due = getDueUnits(STATE.tree.nodes, { level: STATE.level, limit: 20 });
+  const next = suggestNextUnit(STATE.tree.nodes, STATE.level);
+  const live = liveUnitsForLevel(STATE.level);
+  const learned = live.filter(
+    (n) => nodeProgressState(n.id, { isLive: true }) === "fruit",
+  ).length;
+
+  if (line) {
+    if (due.length) {
+      line.innerHTML = `Next: <strong>Review</strong> · ${due.length} due · or learn something new`;
+    } else if (next) {
+      const verb = next.state === "partial" ? "Continue" : "Start";
+      line.innerHTML = `Next: <strong>${escapeXml(next.label)}</strong> · ${escapeXml(verb)}`;
+    } else {
+      line.textContent = "Path busy — pick Topics or Review.";
+    }
+  }
+
+  const revHint = document.getElementById("home-review-hint");
+  if (revHint) {
+    revHint.hidden = false;
+    revHint.textContent = due.length
+      ? `${due.length} topic${due.length === 1 ? "" : "s"} due for review.`
+      : "Nothing due for review right now.";
+  }
+
+  const progMeta = document.getElementById("progress-summary-meta");
+  if (progMeta && live.length) {
+    const pct = Math.round((100 * learned) / live.length);
+    progMeta.textContent = `· ${pct}% learned on ${STATE.level}`;
+  }
+
+  const topics = document.getElementById("panel-topics");
+  const review = document.getElementById("review-card");
+  if (topics) topics.hidden = STATE.homePanel !== "topics";
+  if (review) review.hidden = STATE.homePanel !== "review";
+}
+
+function renderHomeReviewBody() {
+  const body = document.getElementById("review-body");
+  if (!body || !STATE.tree) return;
+  const due = getDueUnits(STATE.tree.nodes, { level: STATE.level, limit: 12 });
+  if (!due.length) {
+    body.innerHTML = `<p class="home-hint">Nothing due today. Press Do next, or Topics.</p>`;
+    return;
+  }
+  body.innerHTML = `
+    <p class="home-hint"><strong>${due.length}</strong> due · open one or start the queue</p>
+    <div class="today-actions" style="margin-bottom:0.65rem">
+      <button type="button" class="home-btn home-btn-primary" id="btn-start-reviews-home">Start reviews</button>
+    </div>
+    <ul class="today-list">
+      ${due
+        .slice(0, 8)
+        .map(
+          (u) =>
+            `<li><button type="button" class="today-link" data-select="${escapeXml(u.nodeId)}">${escapeXml(u.label)}</button></li>`,
+        )
+        .join("")}
+    </ul>`;
+  body.querySelector("#btn-start-reviews-home")?.addEventListener("click", () =>
+    openReviewQueue(due),
+  );
+  body.querySelectorAll("[data-select]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-select");
+      if (id) openUnitIntoPractice(id);
+    });
+  });
+}
+
+function showHowto() {
+  const overlay = document.getElementById("howto-overlay");
+  if (!overlay) return;
+  overlay.hidden = false;
+  const finish = (runNext) => {
+    try {
+      localStorage.setItem(HOWTO_KEY, "1");
+    } catch {
+      /* ignore */
+    }
+    overlay.hidden = true;
+    if (runNext) void startDoNext();
+  };
+  const startBtn = document.getElementById("howto-start");
+  const dismissBtn = document.getElementById("howto-dismiss");
+  if (startBtn) startBtn.onclick = () => finish(true);
+  if (dismissBtn) dismissBtn.onclick = () => finish(false);
+}
+
+async function startDoNext() {
+  STATE.homePanel = null;
+  renderHomeChrome();
+  if (!STATE.tree) return;
+  const due = getDueUnits(STATE.tree.nodes, { level: STATE.level, limit: 8 });
+  // Prefer learning new if nothing due; if due, still Do next = cover next unit
+  const next = suggestNextUnit(STATE.tree.nodes, STATE.level);
+  if (next?.nodeId) {
+    await openUnitIntoPractice(next.nodeId);
+    return;
+  }
+  if (due.length) {
+    openReviewQueue(due);
+  }
+}
+
+function wireHomeActions() {
+  const doNext = document.getElementById("btn-do-next");
+  const btnReview = document.getElementById("btn-home-review");
+  const btnTopics = document.getElementById("btn-home-topics");
+  const btnHowto = document.getElementById("btn-how-to-use");
+  if (doNext && !doNext.dataset.wired) {
+    doNext.dataset.wired = "1";
+    doNext.addEventListener("click", () => void startDoNext());
+  }
+  if (btnHowto && !btnHowto.dataset.wired) {
+    btnHowto.dataset.wired = "1";
+    btnHowto.addEventListener("click", () => showHowto());
+  }
+  if (btnReview && !btnReview.dataset.wired) {
+    btnReview.dataset.wired = "1";
+    btnReview.addEventListener("click", () => {
+      STATE.homePanel = STATE.homePanel === "review" ? null : "review";
+      renderHomeChrome();
+      renderHomeReviewBody();
+      document.getElementById("review-card")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+  if (btnTopics && !btnTopics.dataset.wired) {
+    btnTopics.dataset.wired = "1";
+    btnTopics.addEventListener("click", () => {
+      STATE.homePanel = STATE.homePanel === "topics" ? null : "topics";
+      renderHomeChrome();
+      const det = document.getElementById("tree-details");
+      if (det) det.open = true;
+      document.getElementById("tree-details")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+}
+
 async function init() {
   const err = document.getElementById("boot-error");
   try {
@@ -1135,8 +1292,9 @@ async function init() {
     }
 
     wireUtilBar();
+    wireHomeActions();
     renderRail();
-    renderTodayCard();
+    renderHomeChrome();
     renderTree();
     renderSelectionDetail();
 
