@@ -21,7 +21,7 @@ py scripts\smoke.py
 ## Run locally
 
 ```powershell
-cd C:\Users\ADMIN\documents\projects\rue3-grok-exp
+cd C:\Users\ADMIN\documents\projects\rue3-exp
 py -m http.server 8091
 ```
 

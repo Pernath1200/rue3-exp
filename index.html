@@ -1,69 +1,138 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vocab · RUE3 v0.2</title>
-  <link rel="stylesheet" href="./css/app.css?v=20260728scroll" />
+  <title>Vocab · RUE3</title>
+  <link rel="stylesheet" href="./css/app.css?v=2026-08-04-home" />
 </head>
 <body>
   <div class="container">
     <div class="util-bar">
       <span class="brand">RUE3</span>
       <span class="sep">·</span>
-      <span>Vocab · Tree · <strong>v0.2</strong></span>
+      <span>Vocabulary</span>
       <span class="sep">·</span>
-      <span>Pages + local</span>
-      <span class="sep">·</span>
-      <button type="button" class="util-btn" id="btn-smoke-flags" data-smoke-badge title="Smoke flags · copy for agent">Flagged list</button>
-      <button type="button" class="util-btn" id="btn-author-unlock" aria-pressed="false" title="Unlock A2–B2 for authoring (local only). Also ?unlock=all. Exp auto-opens author mode.">Author unlock</button>
-      <button type="button" class="util-btn" id="btn-word-roots" aria-pressed="false" hidden title="Author experiment: word roots / etymology (Germanic·Latin·PIE + Czech cognates). Off by default.">Word roots</button>
+      <span id="util-level-label">A1</span>
+      <button type="button" class="util-btn" id="btn-smoke-flags" data-smoke-badge title="Smoke flags">Flagged</button>
+      <button type="button" class="util-btn" id="btn-author-unlock" aria-pressed="false" title="Author unlock">Author</button>
+      <button type="button" class="util-btn" id="btn-word-roots" aria-pressed="false" hidden title="Word roots">Word roots</button>
     </div>
     <div id="smoke-flags-host"></div>
 
-    <h1>Vocabulary · Practice map</h1>
-    <p class="sub">
-      Sibling of
-      <a href="https://pernath1200.github.io/rue2-grok/" target="_blank" rel="noopener">RUE2 Grok</a>
-      (grammar). <strong>Exp:</strong> A2–B2 open for writing.
-      <strong>A2 = vocab:</strong> thicken A1 words/phrases + grow topic leaves — grammar tenses live in RUE2, not here.
+    <div id="howto-overlay" class="howto-overlay" hidden>
+      <div class="howto-panel" role="dialog" aria-modal="true" aria-labelledby="howto-title">
+        <h2 id="howto-title">How to use this site</h2>
+        <p class="howto-cz" lang="cs">Jak na to — krátce</p>
+        <ol class="howto-steps">
+          <li>
+            <strong>Your level</strong> — pick A1, A2, or B1.
+            <span class="howto-cz" lang="cs">Vyber úroveň.</span>
+          </li>
+          <li>
+            <strong>Do next</strong> — your next vocab topic.
+            <span class="howto-cz" lang="cs">Další téma.</span>
+          </li>
+          <li>
+            <strong>Practice ladder</strong> — Match → Quiz → Word → Sentence.
+            <span class="howto-cz" lang="cs">Od snadného k těžšímu.</span>
+          </li>
+          <li>
+            <strong>Review</strong> — old topics due today.
+            <span class="howto-cz" lang="cs">Opakování dnes.</span>
+          </li>
+          <li>
+            <strong>Topics</strong> — pick any unit on the tree.
+            <span class="howto-cz" lang="cs">Libovolné téma.</span>
+          </li>
+          <li>
+            <strong>This computer only</strong> — progress stays in this browser.
+            <span class="howto-cz" lang="cs">Postup jen v tomto prohlížeči.</span>
+          </li>
+        </ol>
+        <details class="howto-more">
+          <summary>More · map &amp; progress</summary>
+          <ul class="howto-more-list">
+            <li><strong>Tree</strong> — trunk = frames, branches = topic houses. Optional; use Do next if easier.</li>
+            <li><strong>Progress</strong> — optional meters. Open only if you want.</li>
+            <li class="howto-cz" lang="cs">Strom a progress jsou navíc.</li>
+          </ul>
+        </details>
+        <div class="howto-actions">
+          <button type="button" class="home-btn home-btn-primary" id="howto-start">Got it · Do next</button>
+          <button type="button" class="home-btn" id="howto-dismiss">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="home-title">English vocabulary</h1>
+    <p class="home-intro">
+      Learn words and phrases one topic at a time.
+      New here? Open <strong>How to use</strong>.
+      Then press <strong>Do next</strong>.
     </p>
     <p id="author-hint" class="author-hint" hidden></p>
-
     <div id="boot-error" class="card" hidden style="border-color: var(--wrong); color: var(--wrong)"></div>
 
     <div id="view-map">
-      <div class="rail-label">Level</div>
-      <div id="level-rail" class="level-rail" role="toolbar" aria-label="CEFR level"></div>
+      <div class="rail-label">Your level</div>
+      <div id="level-rail" class="level-rail" role="toolbar" aria-label="Level"></div>
 
-      <div class="card" id="today-card" aria-live="polite"></div>
+      <div class="card home-actions-card" id="home-actions-card">
+        <p class="home-next-line" id="home-next-line">Loading…</p>
+        <div class="home-actions" role="group" aria-label="Main actions">
+          <button type="button" class="home-btn home-btn-primary" id="btn-do-next">Do next</button>
+          <button type="button" class="home-btn" id="btn-home-review">Review</button>
+          <button type="button" class="home-btn" id="btn-home-topics">Topics</button>
+          <button type="button" class="home-btn" id="btn-how-to-use">How to use</button>
+        </div>
+        <p class="home-hint" id="home-review-hint" hidden></p>
+      </div>
+
+      <div class="card home-panel" id="panel-topics" hidden>
+        <h2>Topics</h2>
+        <p class="home-hint">Use the tree below, or pick a unit when a house is open.</p>
+      </div>
+
+      <div class="card home-panel" id="review-card" hidden>
+        <h2>Review</h2>
+        <div id="review-body"></div>
+      </div>
+
+      <!-- Keep today-card for author/compat but hidden; home uses review-body -->
+      <div class="card" id="today-card" hidden aria-hidden="true"></div>
 
       <div class="card" id="gate-card"></div>
 
-      <div class="card">
-        <h2>Tree · <span id="tree-caption">…</span></h2>
-        <div id="level-meters" class="level-meters" aria-live="polite"></div>
-        <p class="tree-legend">Trunk = core frames · branches = topic houses (click for all units in that house) · line-art growth · fruit = Sentence complete</p>
-        <div class="tree-wrap">
-          <svg id="tree-svg" class="tree-svg" role="img" aria-label="Vocabulary tree for selected level"></svg>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2>Practice</h2>
+      <div class="card" id="practice-detail-card">
+        <h2>This topic</h2>
         <div id="node-detail"></div>
       </div>
+
+      <details class="card quiet-details" id="progress-details">
+        <summary>Progress <span class="quiet-summary-meta" id="progress-summary-meta"></span></summary>
+        <div id="level-meters" class="level-meters" aria-live="polite"></div>
+      </details>
+
+      <details class="card quiet-details" id="tree-details">
+        <summary>Map of topics</summary>
+        <p class="home-hint">
+          Trunk = core frames. Branches = topic houses.
+          Click a house or the trunk. You can ignore the map and use <strong>Do next</strong>.
+        </p>
+        <p class="tree-legend"><span id="tree-caption">…</span></p>
+        <div class="tree-wrap">
+          <svg id="tree-svg" class="tree-svg" role="img" aria-label="Vocabulary tree"></svg>
+        </div>
+      </details>
     </div>
 
     <div id="view-practice" class="card" hidden>
       <div id="practice-root"></div>
     </div>
 
-    <p class="foot">
-      Smoke path: open a block → Match → Quiz → Word → Sentence.
-      Server: <code>py -m http.server 8090</code> → <code>http://localhost:8090</code>
-    </p>
+    <p class="foot">Progress stays in this browser · Flag for notes</p>
   </div>
-  <script type="module" src="./js/app.js?v=20260728scroll"></script>
+  <script type="module" src="./js/app.js?v=2026-08-04-home"></script>
 </body>
 </html>
