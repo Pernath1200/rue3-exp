@@ -92,11 +92,11 @@
           ]
         },
         {
-          "en": "There is a table.",
-          "cz": "Je tu stůl. / Tam je stůl.",
-          "gap": "There is a ____.",
-          "gap_answer": "table",
-          "accepts": ["There's a table."]
+          "en": "I have a bag.",
+          "cz": "Mám tašku.",
+          "gap": "I have a ____.",
+          "gap_answer": "bag",
+          "accepts": ["I've got a bag.", "I have got a bag."]
         },
         {
           "en": "It's mine.",

@@ -106,11 +106,11 @@
           "accepts": ["I get up early", "I get up early."]
         },
         {
-          "en": "Can you help me?",
-          "cz": "Můžeš mi pomoct?",
-          "gap": "Can you ____ me?",
+          "en": "I help my friend.",
+          "cz": "Pomáhám kamarádovi. / Pomáhám kamarádce.",
+          "gap": "I ____ my friend.",
           "gap_answer": "help",
-          "accepts": ["Can you help me", "Can you help me?", "Could you help me?"]
+          "accepts": ["I help my friend", "I help my friend."]
         }
       ]
     }
