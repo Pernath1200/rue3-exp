@@ -11,6 +11,7 @@
 
 import { buildLeafSentenceItems } from "./carriers.js";
 import { getSmokeApi, countFlags } from "./smoke-flags.js";
+import { isStarred, toggleStar, starItemKey } from "./progress.js";
 
 function shuffle(a) {
   const arr = a.slice();
@@ -296,6 +297,57 @@ function sentenceItemsFor(block, isFrames) {
 }
 
 /**
+ * End-of-mode review list HTML (EN · CZ · missed? + star toggle).
+ * Fruit payoff stays deferred until Continue (app onContinue gate).
+ * @param {object[]} rows { item, missed }
+ * @param {{ blockId: string, level?: string, nodeId?: string }} meta
+ */
+function modeReviewListHtml(rows, meta) {
+  if (!rows || !rows.length) return "";
+  const body = rows
+    .map((row, i) => {
+      const it = row.item || {};
+      const en = it.en || it.gap_answer || "—";
+      const cz = it.cz || "—";
+      const key = starItemKey(meta.blockId, it);
+      const on = isStarred(key);
+      const missed = row.missed
+        ? `<span class="mode-review-missed">missed</span>`
+        : "";
+      return `<li class="mode-review-row${row.missed ? " is-missed" : ""}" role="listitem" data-i="${i}">
+        <button type="button" class="mode-review-star${on ? " is-on" : ""}"
+          data-key="${escapeHtml(key)}" data-i="${i}"
+          aria-pressed="${on ? "true" : "false"}"
+          aria-label="${on ? "Unstar" : "Star"} ${escapeHtml(en)}">${on ? "★" : "☆"}</button>
+        <span class="mode-review-en">${escapeHtml(en)}</span>
+        <span class="mode-review-sep" aria-hidden="true">·</span>
+        <span class="mode-review-cz">${escapeHtml(cz)}</span>
+        ${missed}
+      </li>`;
+    })
+    .join("");
+  return `<div class="mode-review">
+    <div class="mode-review-label">This pass · ${rows.length}</div>
+    <ul class="mode-review-list" role="list">${body}</ul>
+  </div>`;
+}
+
+/** Build review rows from practiced indices into a source list. */
+function reviewRowsFromIndices(sourceItems, practicedIndices, wrongIndices) {
+  const wrong = new Set(wrongIndices || []);
+  const seen = new Set();
+  const rows = [];
+  for (const idx of practicedIndices || []) {
+    if (seen.has(idx)) continue;
+    seen.add(idx);
+    const item = sourceItems[idx];
+    if (!item) continue;
+    rows.push({ item, missed: wrong.has(idx) });
+  }
+  return rows;
+}
+
+/**
  * @param {HTMLElement} root
  * @param {{ title: string, items: object[], practice?: string }} block
  * @param {{ onExit: () => void, practice?: string }} opts
@@ -315,6 +367,12 @@ export function startPractice(root, block, opts) {
   };
   /** One complete report per mode per practice session (finish screens re-render). */
   const reported = { match: false, quiz: false, type: false, sentence: false };
+  const blockId = block.id || opts.packId || "block";
+  const starMeta = {
+    blockId,
+    level: opts.level || block.level || null,
+    nodeId: opts.treeNode || null,
+  };
 
   function reportMode(mode, meta) {
     if (!mode || reported[mode]) return;
@@ -322,6 +380,52 @@ export function startPractice(root, block, opts) {
     if (typeof opts.onModeComplete === "function") {
       opts.onModeComplete(mode, meta || {});
     }
+  }
+
+  /**
+   * If fruit just landed, app shows payoff first (list already visible).
+   * onContinue returns true when fruit UI took over.
+   */
+  function afterReviewContinue(fn) {
+    if (typeof opts.onContinue === "function") {
+      try {
+        if (opts.onContinue() === true) return;
+      } catch {
+        /* fall through */
+      }
+    }
+    fn();
+  }
+
+  /** Wire star toggles; persist immediately into rue3-v0.1-progress.stars */
+  function wireModeReview(stage, rows) {
+    if (!stage || !rows) return;
+    stage.querySelectorAll(".mode-review-star").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const i = +btn.dataset.i;
+        const row = rows[i];
+        if (!row?.item) return;
+        const key = btn.dataset.key || starItemKey(blockId, row.item);
+        const now = toggleStar(key, {
+          en: row.item.en ?? null,
+          cz: row.item.cz ?? null,
+          gap: row.item.gap ?? null,
+          gap_answer: row.item.gap_answer ?? null,
+          level: starMeta.level,
+          nodeId: starMeta.nodeId,
+          blockId,
+        });
+        btn.textContent = now ? "★" : "☆";
+        btn.setAttribute("aria-pressed", now ? "true" : "false");
+        btn.setAttribute(
+          "aria-label",
+          `${now ? "Unstar" : "Star"} ${row.item.en || row.item.gap_answer || ""}`,
+        );
+        btn.classList.toggle("is-on", now);
+      });
+    });
   }
 
   if (typeof opts.onTouch === "function") opts.onTouch();
@@ -525,6 +629,7 @@ export function startPractice(root, block, opts) {
       pool.map((it, i) => ({ t: answerOf(it, state.czToEn), id: i })),
     );
     state.match = {
+      pool,
       left,
       right,
       sel: null,
@@ -551,20 +656,24 @@ export function startPractice(root, block, opts) {
 
     if (doneCount === m.total) {
       reportMode("match");
+      const rows = (m.pool || []).map((item) => ({ item, missed: false }));
       stage.innerHTML = `
         <div class="q">
           <div class="prompt">All matched</div>
           <div class="sub">Next: Quiz → Word → Sentence · Enter continues</div>
+          ${modeReviewListHtml(rows, starMeta)}
           <div class="nav">
             <button type="button" class="btn" id="m-again">New set</button>
             <button type="button" class="btn primary" id="m-quiz">2 · Quiz →</button>
           </div>
         </div>`;
+      wireModeReview(stage, rows);
       stage.querySelector("#m-again").onclick = () => {
         newMatch();
         render();
       };
-      stage.querySelector("#m-quiz").onclick = () => setMode("quiz");
+      stage.querySelector("#m-quiz").onclick = () =>
+        afterReviewContinue(() => setMode("quiz"));
       bindEnterPrimary(stage);
       return `Matched ${doneCount} of ${m.total}`;
     }
@@ -657,11 +766,13 @@ export function startPractice(root, block, opts) {
         wrongN > 0
           ? `${wrongN} to retry · or continue to Word`
           : "All correct · next: Word";
+      const rows = reviewRowsFromIndices(list, q.order, q.wrong);
       stage.innerHTML = `
         <div class="q">
           <div class="prompt">Quiz done</div>
           <div class="scoreline">${q.score} / ${passLen}</div>
           <div class="sub">${sub}${q.retryPass ? " (retry pass)" : ""}</div>
+          ${modeReviewListHtml(rows, starMeta)}
           <div class="nav">
             ${
               wrongN > 0
@@ -677,6 +788,7 @@ export function startPractice(root, block, opts) {
               : ""
           }
         </div>`;
+      wireModeReview(stage, rows);
       const retryBtn = stage.querySelector("#q-retry");
       if (retryBtn) {
         retryBtn.onclick = () => {
@@ -684,7 +796,8 @@ export function startPractice(root, block, opts) {
           render();
         };
       }
-      stage.querySelector("#q-type").onclick = () => setMode("type");
+      stage.querySelector("#q-type").onclick = () =>
+        afterReviewContinue(() => setMode("type"));
       const again = stage.querySelector("#q-again");
       if (again) {
         again.onclick = () => {
@@ -843,11 +956,13 @@ export function startPractice(root, block, opts) {
                <button type="button" class="btn primary" id="t-sent">4 · Sentence →</button>`
             : `<button type="button" class="btn primary" id="t-again">Try full set</button>
                <button type="button" class="btn" id="t-match">1 · Match</button>`;
+      const rows = reviewRowsFromIndices(list, t.order, t.wrong);
       stage.innerHTML = `
         <div class="q">
           <div class="prompt">Type-in done</div>
           <div class="scoreline">${t.score} / ${passLen}</div>
           <div class="sub">${sub}${t.retryPass ? " (retry pass)" : ""}</div>
+          ${modeReviewListHtml(rows, starMeta)}
           <div class="nav">${primaryAfter}</div>
           ${
             wrongN > 0
@@ -855,6 +970,7 @@ export function startPractice(root, block, opts) {
               : ""
           }
         </div>`;
+      wireModeReview(stage, rows);
       const retryBtn = stage.querySelector("#t-retry");
       if (retryBtn) {
         retryBtn.onclick = () => {
@@ -863,9 +979,13 @@ export function startPractice(root, block, opts) {
         };
       }
       const sent = stage.querySelector("#t-sent");
-      if (sent) sent.onclick = () => setMode("sentence");
+      if (sent) {
+        sent.onclick = () => afterReviewContinue(() => setMode("sentence"));
+      }
       const matchBtn = stage.querySelector("#t-match");
-      if (matchBtn) matchBtn.onclick = () => setMode("match");
+      if (matchBtn) {
+        matchBtn.onclick = () => afterReviewContinue(() => setMode("match"));
+      }
       const again = stage.querySelector("#t-again");
       if (again) {
         again.onclick = () => {
@@ -1040,6 +1160,7 @@ export function startPractice(root, block, opts) {
           awardFruit: isFrames,
         });
       }
+      const rows = reviewRowsFromIndices(list, t.order, t.wrong);
       stage.innerHTML = `
         <div class="q">
           <div class="prompt">${wrongN > 0 ? "Not complete yet" : "Section complete"}</div>
@@ -1051,6 +1172,7 @@ export function startPractice(root, block, opts) {
                 ? "Full sentences from Czech — all correct · fruit on the trunk."
                 : "Carrier sentences complete · fruit already from Word on leaves."
           }${t.retryPass ? " (retry pass)" : ""}</div>
+          ${modeReviewListHtml(rows, starMeta)}
           <div class="nav">
             ${
               wrongN > 0
@@ -1066,6 +1188,7 @@ export function startPractice(root, block, opts) {
               : ""
           }
         </div>`;
+      wireModeReview(stage, rows);
       const retryBtn = stage.querySelector("#fs-retry");
       if (retryBtn) {
         retryBtn.onclick = () => {
@@ -1073,7 +1196,8 @@ export function startPractice(root, block, opts) {
           render();
         };
       }
-      stage.querySelector("#fs-match").onclick = () => setMode("match");
+      stage.querySelector("#fs-match").onclick = () =>
+        afterReviewContinue(() => setMode("match"));
       const again = stage.querySelector("#fs-again");
       if (again) {
         again.onclick = () => {

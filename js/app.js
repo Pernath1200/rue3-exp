@@ -1114,6 +1114,7 @@ function openPractice(block, pack) {
       rememberView();
       const nowFruit =
         nodeId && nodeProgressState(nodeId, { isLive: true }) === "fruit";
+      // Defer fruit UI until after post-mode item list (Continue / exit).
       if (!wasFruit && nowFruit) {
         const statsAfter = levelUnitStats(STATE.level, nodes);
         STATE.pendingFruitPayoff = {
@@ -1121,11 +1122,10 @@ function openPractice(block, pack) {
           after: statsAfter,
           nodeId,
         };
-        queueMicrotask(() => {
-          maybeShowFruitPayoff();
-        });
       }
     },
+    /** true → fruit payoff took over; practice should not navigate further */
+    onContinue: () => maybeShowFruitPayoff(),
     onExit: () => {
       if (maybeShowFruitPayoff()) return;
       refreshMap();

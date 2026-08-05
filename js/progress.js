@@ -30,6 +30,12 @@ function defaultData() {
     gates: {},
     /** Per tree-node review state (Phase 2 SRS). Optional on older saves. */
     nodes: {},
+    /**
+     * Starred items (thin end of My words bank).
+     * Key → { en, cz, gap, gap_answer, level, nodeId, blockId, at }
+     * Progress key stays rue3-v0.1-progress — never rename.
+     */
+    stars: {},
     /** Last map position so refresh does not dump you on A1 empty meters. */
     lastLevel: null,
     lastNodeId: null,
@@ -46,6 +52,7 @@ function safeParse(raw) {
     if (!d.blocks || typeof d.blocks !== "object") d.blocks = {};
     if (!d.gates || typeof d.gates !== "object") d.gates = {};
     if (!d.nodes || typeof d.nodes !== "object") d.nodes = {};
+    if (!d.stars || typeof d.stars !== "object") d.stars = {};
     if (!d.unlocked.includes("A1")) d.unlocked = ["A1", ...d.unlocked];
     if (d.lastLevel != null && typeof d.lastLevel !== "string") d.lastLevel = null;
     if (d.lastNodeId != null && typeof d.lastNodeId !== "string") d.lastNodeId = null;
@@ -654,4 +661,71 @@ export function getGate(level) {
 export function hasPassedGate(level) {
   const g = getGate(level);
   return Boolean(g && g.passed);
+}
+
+// ── Stars (end-of-mode list → future My words) ─────────────────────────────
+
+/** Normalize lemma / sentence for stable star keys. */
+function normStarPart(s) {
+  return String(s || "")
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ");
+}
+
+/**
+ * Stable star key for an item within a block.
+ * Leaves: blockId + en lemma. Frames: blockId + en + gap_answer (sentence identity).
+ * @param {string} blockId
+ * @param {{ en?: string, gap?: string, gap_answer?: string }} item
+ */
+export function starItemKey(blockId, item) {
+  const bid = String(blockId || "unknown");
+  const en = normStarPart(item?.en);
+  const gapA = normStarPart(item?.gap_answer);
+  if (item?.gap && gapA) return `${bid}|f:${en}|${gapA}`;
+  return `${bid}|e:${en || normStarPart(item?.cz) || "?"}`;
+}
+
+/** @returns {Record<string, object>} */
+export function getStars() {
+  const data = loadProgress();
+  if (!data.stars || typeof data.stars !== "object") data.stars = {};
+  return data.stars;
+}
+
+export function isStarred(itemKey) {
+  if (!itemKey) return false;
+  return Boolean(getStars()[itemKey]);
+}
+
+/**
+ * Toggle star. When starring, payload is stored; when unstarring, entry removed.
+ * @param {string} itemKey
+ * @param {{ en?: string, cz?: string, gap?: string, gap_answer?: string, level?: string, nodeId?: string, blockId?: string }} [payload]
+ * @returns {boolean} true if now starred
+ */
+export function toggleStar(itemKey, payload = {}) {
+  if (!itemKey) return false;
+  const data = loadProgress();
+  if (!data.stars || typeof data.stars !== "object") data.stars = {};
+  if (data.stars[itemKey]) {
+    delete data.stars[itemKey];
+    save();
+    return false;
+  }
+  data.stars[itemKey] = {
+    en: payload.en ?? null,
+    cz: payload.cz ?? null,
+    gap: payload.gap ?? null,
+    gap_answer: payload.gap_answer ?? null,
+    level: payload.level ?? null,
+    nodeId: payload.nodeId ?? null,
+    blockId: payload.blockId ?? null,
+    at: new Date().toISOString(),
+  };
+  save();
+  return true;
 }
