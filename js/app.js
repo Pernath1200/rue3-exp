@@ -65,9 +65,11 @@ const STATE = {
   selectedHouseId: null,
   /** Trunk (core frames) selected on tree */
   selectedTrunk: false,
-  view: "map", // map | practice
+  view: "map", // map | practice | payoff
   pack: null,
   homePanel: null, // null | "topics" | "review"
+  /** First-fruit meter beat: { before, after } from levelUnitStats, or null */
+  pendingFruitPayoff: null,
 };
 
 /** Persist map place so refresh does not look like a wipe (especially A2 → A1 default). */
@@ -101,6 +103,7 @@ function nodesForLevel(level) {
 
 function showMap() {
   STATE.view = "map";
+  clearFruitPayoffKeys();
   document.getElementById("view-map").hidden = false;
   document.getElementById("view-practice").hidden = true;
 }
@@ -109,6 +112,178 @@ function showPractice() {
   STATE.view = "practice";
   document.getElementById("view-map").hidden = true;
   document.getElementById("view-practice").hidden = false;
+}
+
+/** Drop Enter handler from first-fruit payoff screen. */
+function clearFruitPayoffKeys() {
+  const root = document.getElementById("practice-root");
+  if (root && root.__ruePayoffKey) {
+    document.removeEventListener("keydown", root.__ruePayoffKey, true);
+    root.__ruePayoffKey = null;
+  }
+}
+
+/**
+ * First fruit only (RUE3 fruit = sentenceDone / Word perfect).
+ * Tick + level chip + n/total · % count-up + bar + home nav.
+ * Port of RUE2 payoff — product language only; RUE3 fruit rules unchanged.
+ */
+function showFruitPayoff({ before, after }) {
+  const root = document.getElementById("practice-root");
+  if (!root) return;
+  if (typeof root.__rueTeardown === "function") {
+    try {
+      root.__rueTeardown();
+    } catch {
+      /* ignore */
+    }
+  }
+  clearFruitPayoffKeys();
+  STATE.view = "payoff";
+  STATE.pendingFruitPayoff = null;
+  document.getElementById("view-map").hidden = true;
+  document.getElementById("view-practice").hidden = false;
+
+  const level = STATE.level || "A1";
+  const total = after?.total > 0 ? after.total : 1;
+  const pctOf = (n) => Math.round((100 * (n || 0)) / total);
+  const fromP = pctOf(before?.learned);
+  const toP = pctOf(after?.learned);
+  const fromN = before?.learned ?? 0;
+  const toN = after?.learned ?? 0;
+  const reduce =
+    typeof matchMedia === "function" &&
+    matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const DURATION_MS = 1250;
+
+  const paintStats = (n, p) => {
+    const fracEl = root.querySelector("#payoff-frac");
+    const pctEl = root.querySelector("#payoff-pct");
+    const track = root.querySelector(".meter-track");
+    if (fracEl) fracEl.textContent = `${n}/${total}`;
+    if (pctEl) pctEl.textContent = `${p}%`;
+    if (track) track.setAttribute("aria-valuenow", String(p));
+  };
+
+  root.innerHTML = `
+    <div class="fruit-payoff" role="status" aria-live="polite"
+      aria-label="${escapeXml(level)} learned ${toN} of ${total}, ${toP} percent">
+      <div class="fruit-payoff-tick${reduce ? " is-drawn" : ""}" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="56" height="56" focusable="false">
+          <circle cx="24" cy="24" r="20" />
+          <path d="M14 24.5 L21 31.5 L34 16.5" />
+        </svg>
+      </div>
+      <div class="fruit-payoff-head">
+        <span class="fruit-payoff-level" aria-hidden="true">${escapeXml(level)}</span>
+        <span class="fruit-payoff-stats">
+          <span id="payoff-frac">${reduce ? toN : fromN}/${total}</span>
+          <span class="fruit-payoff-dot" aria-hidden="true">·</span>
+          <span id="payoff-pct">${reduce ? toP : fromP}%</span>
+        </span>
+      </div>
+      <div class="meter-row meter-learned fruit-payoff-meter">
+        <div class="meter-track" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+          aria-valuenow="${reduce ? toP : fromP}"
+          aria-label="${escapeXml(level)} learned ${toN} of ${total}">
+          <div class="meter-fill" id="payoff-fill" style="width:${reduce ? toP : fromP}%"></div>
+        </div>
+      </div>
+      <div class="home-actions fruit-payoff-nav" role="group" aria-label="Main actions">
+        <button type="button" class="home-btn home-btn-primary" id="payoff-next">Do next</button>
+        <button type="button" class="home-btn" id="payoff-home">Home</button>
+        <button type="button" class="home-btn" id="payoff-review">Review</button>
+        <button type="button" class="home-btn" id="payoff-topics">Topics</button>
+        <button type="button" class="home-btn" id="payoff-howto">How to use</button>
+      </div>
+    </div>`;
+
+  const fill = root.querySelector("#payoff-fill");
+  const tick = root.querySelector(".fruit-payoff-tick");
+
+  if (reduce) {
+    paintStats(toN, toP);
+  } else {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (tick) tick.classList.add("is-drawn");
+        if (fill) fill.style.width = `${toP}%`;
+        const t0 = performance.now();
+        const step = (now) => {
+          const t = Math.min(1, (now - t0) / DURATION_MS);
+          const e = 1 - (1 - t) ** 3;
+          const n = Math.round(fromN + (toN - fromN) * e);
+          const p = Math.round(fromP + (toP - fromP) * e);
+          paintStats(n, p);
+          if (t < 1) requestAnimationFrame(step);
+          else paintStats(toN, toP);
+        };
+        requestAnimationFrame(step);
+      });
+    });
+  }
+
+  const leaveToMap = () => {
+    clearFruitPayoffKeys();
+    refreshMap();
+  };
+
+  root.querySelector("#payoff-next")?.addEventListener("click", () => {
+    leaveToMap();
+    void startDoNext();
+  });
+  root.querySelector("#payoff-home")?.addEventListener("click", () => {
+    leaveToMap();
+    STATE.homePanel = null;
+    renderHomeChrome();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  root.querySelector("#payoff-review")?.addEventListener("click", () => {
+    leaveToMap();
+    STATE.homePanel = "review";
+    renderHomeChrome();
+    renderHomeReviewBody();
+    document.getElementById("review-card")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+  root.querySelector("#payoff-topics")?.addEventListener("click", () => {
+    leaveToMap();
+    STATE.homePanel = "topics";
+    renderHomeChrome();
+    const det = document.getElementById("tree-details");
+    if (det) det.open = true;
+    document.getElementById("tree-details")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+  root.querySelector("#payoff-howto")?.addEventListener("click", () => {
+    leaveToMap();
+    showHowto();
+  });
+
+  const onKey = (e) => {
+    if (e.key !== "Enter") return;
+    e.preventDefault();
+    e.stopPropagation();
+    clearFruitPayoffKeys();
+    leaveToMap();
+    void startDoNext();
+  };
+  root.__ruePayoffKey = onKey;
+  document.addEventListener("keydown", onKey, true);
+  root.querySelector("#payoff-next")?.focus();
+}
+
+/** If first fruit just landed, show payoff. Returns true if shown. */
+function maybeShowFruitPayoff() {
+  if (!STATE.pendingFruitPayoff) return false;
+  const payload = STATE.pendingFruitPayoff;
+  STATE.pendingFruitPayoff = null;
+  showFruitPayoff(payload);
+  return true;
 }
 
 function lockTag(level) {
@@ -908,7 +1083,11 @@ function openPractice(block, pack) {
     onTouch: () => {
       touchBlock(blockId, nodeId);
     },
-    onModeComplete: (mode, meta) => {
+    onModeComplete: (mode, meta = {}) => {
+      const nodes = nodesForLevel(STATE.level);
+      const statsBefore = levelUnitStats(STATE.level, nodes);
+      const wasFruit =
+        nodeId && nodeProgressState(nodeId, { isLive: true }) === "fruit";
       completeMode(blockId, mode, {
         nodeId,
         score: meta.score,
@@ -917,8 +1096,24 @@ function openPractice(block, pack) {
         awardFruit: meta.awardFruit,
       });
       rememberView();
+      const nowFruit =
+        nodeId && nodeProgressState(nodeId, { isLive: true }) === "fruit";
+      if (!wasFruit && nowFruit) {
+        const statsAfter = levelUnitStats(STATE.level, nodes);
+        STATE.pendingFruitPayoff = {
+          before: statsBefore,
+          after: statsAfter,
+          nodeId,
+        };
+        queueMicrotask(() => {
+          maybeShowFruitPayoff();
+        });
+      }
     },
-    onExit: () => refreshMap(),
+    onExit: () => {
+      if (maybeShowFruitPayoff()) return;
+      refreshMap();
+    },
   });
 }
 

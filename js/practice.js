@@ -1221,5 +1221,12 @@ export function startPractice(root, block, opts) {
     if (typeof origExit === "function") origExit();
   };
 
+  // App can abort keys when replacing practice with first-fruit payoff
+  root.__rueTeardown = () => {
+    clearKey();
+    document.removeEventListener("keydown", flagKeyHandler);
+    root.__rueTeardown = null;
+  };
+
   render();
 }
