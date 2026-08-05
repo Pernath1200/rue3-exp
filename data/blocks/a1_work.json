@@ -39,16 +39,6 @@
           ]
         },
         {
-          "en": "doctor",
-          "cz": "doktor / lékař",
-          "use": [
-            "i_am_a",
-            "he_is_a",
-            "he_is_my",
-            "this_is_a"
-          ]
-        },
-        {
           "en": "student",
           "cz": "student",
           "use": [
@@ -56,16 +46,6 @@
             "he_is_a",
             "this_is_a",
             "he_is_my"
-          ]
-        },
-        {
-          "en": "nurse",
-          "cz": "zdravotní sestra / ošetřovatel",
-          "use": [
-            "i_am_a",
-            "he_is_a",
-            "he_is_my",
-            "this_is_a"
           ]
         },
         {
@@ -154,42 +134,6 @@
             "i_have_a_meeting",
             "i_have_a",
             "lets_talk_about"
-          ]
-        },
-        {
-          "en": "email",
-          "cz": "e-mail",
-          "use": [
-            "i_send_a",
-            "i_have_a",
-            "i_need_a"
-          ]
-        },
-        {
-          "en": "computer",
-          "cz": "počítač",
-          "use": [
-            "i_have_a",
-            "i_need_a",
-            "this_is_a"
-          ]
-        },
-        {
-          "en": "phone",
-          "cz": "telefon",
-          "use": [
-            "i_have_a",
-            "i_need_a",
-            "this_is_a"
-          ]
-        },
-        {
-          "en": "money",
-          "cz": "peníze",
-          "use": [
-            "i_have_bare",
-            "i_need_bare",
-            "i_get_a"
           ]
         },
         {

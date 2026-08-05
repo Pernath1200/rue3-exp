@@ -51,16 +51,6 @@
           ]
         },
         {
-          "en": "fish",
-          "cz": "ryba",
-          "use": [
-            "i_have_a_pet",
-            "this_is_a",
-            "i_like_pl",
-            "i_see_a"
-          ]
-        },
-        {
           "en": "horse",
           "cz": "kůň",
           "use": [
@@ -177,16 +167,6 @@
           ]
         },
         {
-          "en": "chicken",
-          "cz": "kuře / slepice",
-          "use": [
-            "i_have_a_pet",
-            "this_is_a",
-            "i_like_pl",
-            "i_see_a"
-          ]
-        },
-        {
           "en": "duck",
           "cz": "kachna",
           "use": [
@@ -231,15 +211,6 @@
           "use": [
             "it_is",
             "the_bag_is"
-          ]
-        },
-        {
-          "en": "farm",
-          "cz": "farma",
-          "use": [
-            "i_go_to",
-            "this_is_a",
-            "where_is_the"
           ]
         },
         {

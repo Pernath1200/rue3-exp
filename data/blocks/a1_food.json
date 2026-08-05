@@ -281,16 +281,6 @@
           ]
         },
         {
-          "en": "orange",
-          "cz": "pomeranč",
-          "use": [
-            "i_buy_a",
-            "i_have_a",
-            "i_like_pl",
-            "this_is_a"
-          ]
-        },
-        {
           "en": "tomato",
           "cz": "rajče",
           "use": [
@@ -449,16 +439,6 @@
         {
           "en": "glass",
           "cz": "sklenice",
-          "use": [
-            "this_is_a",
-            "i_have_a",
-            "i_like_pl",
-            "i_need_a"
-          ]
-        },
-        {
-          "en": "cup",
-          "cz": "hrnek / šálek",
           "use": [
             "this_is_a",
             "i_have_a",

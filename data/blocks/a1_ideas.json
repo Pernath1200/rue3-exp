@@ -375,15 +375,6 @@
           ]
         },
         {
-          "en": "health",
-          "cz": "zdraví",
-          "use": [
-            "i_like_bare",
-            "i_need_bare",
-            "i_have_bare"
-          ]
-        },
-        {
           "en": "interest",
           "cz": "zájem",
           "use": [

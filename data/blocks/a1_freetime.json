@@ -173,14 +173,6 @@
           ]
         },
         {
-          "en": "shop (verb)",
-          "cz": "nakupovat",
-          "use": [
-            "i_want_to",
-            "we_need_to"
-          ]
-        },
-        {
           "en": "travel",
           "cz": "cestovat",
           "use": [
@@ -270,14 +262,6 @@
           "en": "well",
           "cz": "dobře (zdravý)",
           "use": []
-        },
-        {
-          "en": "ill",
-          "cz": "nemocný",
-          "use": [
-            "i_am_adj",
-            "he_is_adj"
-          ]
         },
         {
           "en": "fine",
@@ -388,14 +372,6 @@
           "use": [
             "it_is",
             "i_am_adj"
-          ]
-        },
-        {
-          "en": "sick",
-          "cz": "nemocný (nevolno)",
-          "use": [
-            "i_am_adj",
-            "he_is_adj"
           ]
         },
         {

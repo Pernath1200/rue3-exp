@@ -198,25 +198,6 @@
           "en": "age",
           "cz": "věk",
           "use": []
-        },
-        {
-          "en": "job",
-          "cz": "práce / povolání",
-          "use": [
-            "i_look_for",
-            "i_have_a",
-            "i_need_a"
-          ]
-        },
-        {
-          "en": "teacher",
-          "cz": "učitel",
-          "use": [
-            "i_am_a",
-            "he_is_a",
-            "this_is_a",
-            "he_is_my"
-          ]
         }
       ]
     },
@@ -390,16 +371,6 @@
             "this_is_a",
             "i_have_a",
             "i_need_a"
-          ]
-        },
-        {
-          "en": "phone",
-          "cz": "telefon",
-          "use": [
-            "this_is_a",
-            "i_have_a",
-            "i_need_a",
-            "where_is_the"
           ]
         },
         {

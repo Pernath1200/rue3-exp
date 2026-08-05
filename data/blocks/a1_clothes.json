@@ -173,15 +173,6 @@
           ]
         },
         {
-          "en": "bag",
-          "cz": "taška",
-          "use": [
-            "this_is_a",
-            "i_have_a",
-            "i_need_a"
-          ]
-        },
-        {
           "en": "glasses",
           "cz": "brýle",
           "use": [

@@ -185,15 +185,6 @@
           ]
         },
         {
-          "en": "bag",
-          "cz": "taška",
-          "use": [
-            "this_is_a",
-            "i_have_a",
-            "i_need_a"
-          ]
-        },
-        {
           "en": "size",
           "cz": "velikost",
           "use": [
@@ -319,15 +310,6 @@
           "use": [
             "i_want_to",
             "we_need_to"
-          ]
-        },
-        {
-          "en": "market",
-          "cz": "trh / tržiště",
-          "use": [
-            "i_go_to",
-            "this_is_a",
-            "where_is_the"
           ]
         },
         {

@@ -295,15 +295,6 @@
           ]
         },
         {
-          "en": "music",
-          "cz": "hudba",
-          "use": [
-            "i_like_bare",
-            "i_need_bare",
-            "i_have_bare"
-          ]
-        },
-        {
           "en": "idea",
           "cz": "nápad / myšlenka",
           "use": [

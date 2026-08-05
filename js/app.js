@@ -923,9 +923,13 @@ function blockStatusLine(blockId) {
   return "touched";
 }
 
+/**
+ * Load pack UI into #block-list.
+ * @returns {Promise<{ pack: object, suggestBlock: object|null }|null>}
+ */
 async function loadAndShowBlocks(node) {
   const listEl = document.getElementById("block-list");
-  if (!listEl) return;
+  if (!listEl) return null;
   if (!node || node.status !== "live" || !node.content) {
     STATE.pack = null;
     const codex = node?.codex_unit
@@ -943,17 +947,18 @@ async function loadAndShowBlocks(node) {
     `;
     const slot = document.getElementById("insights-slot");
     if (slot) slot.innerHTML = "";
-    return;
+    return null;
   }
   try {
     const pack = await loadJson(`./data/${node.content}`);
     STATE.pack = pack;
-    // First block without fruit = the one Today wants you to open next
-    const suggestId =
+    // First block without fruit = the one Today / Do next wants next
+    const suggestBlock =
       (pack.blocks || []).find((b) => {
         const p = getBlockProgress(b.id);
         return !p || !p.sentenceDone;
-      })?.id || pack.blocks?.[0]?.id;
+      }) || pack.blocks?.[0] || null;
+    const suggestId = suggestBlock?.id;
     listEl.innerHTML = `
       <div class="rail-label" style="margin-top:0.85rem">Practice blocks (small sets)</div>
       <div class="block-btns">
@@ -982,8 +987,10 @@ async function loadAndShowBlocks(node) {
       });
     });
     await maybeRenderInsightsForPack(pack);
+    return { pack, suggestBlock };
   } catch (e) {
     listEl.innerHTML = `<p class="detail-empty" style="color:var(--wrong)">${escapeXml(e.message)}</p>`;
+    return null;
   }
 }
 
@@ -1118,18 +1125,23 @@ function openPractice(block, pack) {
 }
 
 /**
- * Today primary CTA (rue2-style): select unit → load practice blocks → scroll
- * down to the exercise row. User clicks the block to open (not auto-start).
+ * Open a unit on the map. Do next (autoStart) jumps straight into the next
+ * incomplete block — RUE2 product feel. Topics can pass autoStart:false to
+ * land on the block list only.
+ * @param {string} nodeId
+ * @param {{ autoStart?: boolean }} [opts]
  */
-async function openUnitIntoPractice(nodeId) {
+async function openUnitIntoPractice(nodeId, opts = {}) {
+  const autoStart = opts.autoStart !== false; // default true (Do next path)
   const node = (STATE.tree?.nodes || []).find((n) => n.id === nodeId);
   if (!node) return;
   renderDetail(node);
   rememberView();
 
+  let loaded = null;
   if (node.status === "live" && node.content) {
     try {
-      await loadAndShowBlocks(node);
+      loaded = await loadAndShowBlocks(node);
     } catch (e) {
       console.warn("[rue3] openUnitIntoPractice load", e);
     }
@@ -1143,7 +1155,17 @@ async function openUnitIntoPractice(nodeId) {
     else btn.removeAttribute("aria-current");
   });
 
-  // Prefer the practice-block row; fall back to whole Practice card
+  if (autoStart && loaded?.suggestBlock && loaded.pack) {
+    const b = loaded.suggestBlock;
+    const pack = loaded.pack;
+    openPractice(
+      { ...b, practice: pack.practice, level: pack.level || b.level },
+      pack,
+    );
+    return;
+  }
+
+  // No auto-start: pulse suggested block and scroll to list
   const blockList = document.getElementById("block-list");
   const suggested =
     blockList?.querySelector(".block-btn.block-btn-suggest") ||
@@ -1151,7 +1173,6 @@ async function openUnitIntoPractice(nodeId) {
   const target = suggested || blockList || document.getElementById("node-detail");
   if (suggested) {
     suggested.classList.add("block-btn-pulse");
-    // brief pulse then leave the steady "suggest" ring
     setTimeout(() => suggested.classList.remove("block-btn-pulse"), 1200);
   }
   target?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -1383,7 +1404,8 @@ async function startDoNext() {
   // Prefer learning new if nothing due; if due, still Do next = cover next unit
   const next = suggestNextUnit(STATE.tree.nodes, STATE.level);
   if (next?.nodeId) {
-    await openUnitIntoPractice(next.nodeId);
+    // RUE2 parity: Do next opens practice immediately (next incomplete block)
+    await openUnitIntoPractice(next.nodeId, { autoStart: true });
     return;
   }
   if (due.length) {

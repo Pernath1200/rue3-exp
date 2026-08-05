@@ -145,15 +145,6 @@
           ]
         },
         {
-          "en": "hospital",
-          "cz": "nemocnice",
-          "use": [
-            "i_go_to",
-            "where_is_the",
-            "this_is_a"
-          ]
-        },
-        {
           "en": "bank",
           "cz": "banka",
           "use": [
@@ -192,25 +183,6 @@
         {
           "en": "hotel",
           "cz": "hotel",
-          "use": [
-            "where_is_the",
-            "this_is_a",
-            "i_go_to"
-          ]
-        },
-        {
-          "en": "office",
-          "cz": "kancelář",
-          "use": [
-            "i_work_in",
-            "i_go_to",
-            "where_is_the",
-            "this_is_a"
-          ]
-        },
-        {
-          "en": "pharmacy",
-          "cz": "lékárna",
           "use": [
             "where_is_the",
             "this_is_a",
