@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vocab Â· RUE3</title>
+  <title>Vocab · RUE3</title>
   <link rel="stylesheet" href="./css/app.css?v=2026-08-04-home" />
 </head>
 <body>
   <div class="container">
     <div class="util-bar">
       <span class="brand">RUE3</span>
-      <span class="sep">Â·</span>
+      <span class="sep">·</span>
       <span>Vocabulary</span>
-      <span class="sep">Â·</span>
+      <span class="sep">·</span>
       <span id="util-level-label">A1</span>
       <button type="button" class="util-btn" id="btn-smoke-flags" data-smoke-badge title="Smoke flags">Flagged</button>
       <button type="button" class="util-btn" id="btn-author-unlock" aria-pressed="false" title="Author unlock">Author</button>
@@ -34,7 +34,7 @@
             <span class="howto-cz" lang="cs">DalÅ¡Ã­ tÃ©ma.</span>
           </li>
           <li>
-            <strong>Practice ladder</strong> â€” Match â†’ Quiz â†’ Word â†’ Sentence.
+            <strong>Practice ladder</strong> â€” Match → Quiz → Word → Sentence.
             <span class="howto-cz" lang="cs">Od snadnÃ©ho k tÄ›Å¾Å¡Ã­mu.</span>
           </li>
           <li>
@@ -51,7 +51,7 @@
           </li>
         </ol>
         <details class="howto-more">
-          <summary>More Â· map &amp; progress</summary>
+          <summary>More · map &amp; progress</summary>
           <ul class="howto-more-list">
             <li><strong>Tree</strong> â€” trunk = frames, branches = topic houses. Optional; use Do next if easier.</li>
             <li><strong>Progress</strong> â€” optional meters. Open only if you want.</li>
@@ -59,81 +59,86 @@
           </ul>
         </details>
         <div class="howto-actions">
-          <button type="button" class="home-btn home-btn-primary" id="howto-start">Got it Â· Do next</button>
+          <button type="button" class="home-btn home-btn-primary" id="howto-start">Got it · Do next</button>
           <button type="button" class="home-btn" id="howto-dismiss">Close</button>
         </div>
       </div>
     </div>
 
-    <h1 class="home-title">English vocabulary</h1>
-    <p class="home-intro">
-      Learn words and phrases one topic at a time.
-      New here? Open <strong>How to use</strong>.
-      Then press <strong>Do next</strong>.
-    </p>
+        <h1 class="home-title">English vocabulary</h1>
+    <p class="home-intro">Press <strong>Do next</strong> to learn.</p>
     <p id="author-hint" class="author-hint" hidden></p>
     <div id="boot-error" class="card" hidden style="border-color: var(--wrong); color: var(--wrong)"></div>
 
-    <div id="view-map">
+    <div id="view-map" class="home-minimal">
       <div class="rail-label">Your level</div>
       <div id="level-rail" class="level-rail" role="toolbar" aria-label="Level"></div>
 
       <div class="card home-actions-card" id="home-actions-card">
-        <p class="home-next-line" id="home-next-line">Loadingâ€¦</p>
+        <p class="home-next-line" id="home-next-line">Loading…</p>
         <div class="home-actions" role="group" aria-label="Main actions">
           <button type="button" class="home-btn home-btn-primary" id="btn-do-next">Do next</button>
           <button type="button" class="home-btn" id="btn-home-review">Review</button>
           <button type="button" class="home-btn" id="btn-home-topics">Topics</button>
           <button type="button" class="home-btn" id="btn-how-to-use">How to use</button>
+          <button type="button" class="home-btn" id="btn-home-more" aria-expanded="false">More</button>
         </div>
         <p class="home-hint" id="home-review-hint" hidden></p>
       </div>
 
       <div class="card home-panel" id="panel-topics" hidden>
         <h2>Topics</h2>
-        <p class="home-hint">Pick any unit on this level. Fruit = learned (Word on leaves · Sentence on trunk).</p>
-        <div id="topics-path-list" class="topics-path-list"></div>
+        <p class="home-hint">Pick any unit on this level.</p>
+        <div id="topics-path-list" class="topics-path-list home-panel-scroll"></div>
       </div>
 
       <div class="card home-panel" id="review-card" hidden>
         <h2>Review</h2>
-        <div id="review-body"></div>
+        <div id="review-body" class="home-panel-scroll"></div>
       </div>
 
-      <!-- Keep today-card for author/compat but hidden; home uses review-body -->
       <div class="card" id="today-card" hidden aria-hidden="true"></div>
 
-      <div class="card" id="gate-card"></div>
-
-      <div class="card" id="practice-detail-card">
+      <div class="card" id="practice-detail-card" hidden>
         <h2>This topic</h2>
         <div id="node-detail"></div>
       </div>
 
-      <details class="card quiet-details" id="progress-details">
-        <summary>Progress <span class="quiet-summary-meta" id="progress-summary-meta"></span></summary>
-        <div id="level-meters" class="level-meters" aria-live="polite"></div>
-      </details>
-
-      <details class="card quiet-details" id="tree-details">
-        <summary>Map of topics</summary>
-        <p class="home-hint">
-          Trunk = core frames. Branches = topic houses.
-          Click a house or the trunk. You can ignore the map and use <strong>Do next</strong>.
-        </p>
-        <p class="tree-legend"><span id="tree-caption">â€¦</span></p>
-        <div class="tree-wrap">
-          <svg id="tree-svg" class="tree-svg" role="img" aria-label="Vocabulary tree"></svg>
-        </div>
-      </details>
+      <div class="card home-panel" id="panel-more" hidden>
+        <h2>More</h2>
+        <details class="quiet-details home-more-block" id="progress-details" open>
+          <summary>Progress <span class="quiet-summary-meta" id="progress-summary-meta"></span></summary>
+          <div id="level-meters" class="level-meters" aria-live="polite"></div>
+        </details>
+        <div class="home-more-block" id="gate-card" hidden></div>
+        <details class="quiet-details home-more-block" id="tree-details" open>
+          <summary class="tree-map-summary">
+            <span class="tree-map-summary-label">Map of topics</span>
+            <span class="map-help-wrap">
+              <button type="button" class="map-help-btn" id="btn-map-help"
+                aria-label="What do the roots mean?" aria-expanded="false" aria-controls="map-help-tip">?</button>
+              <span class="map-help-tip" id="map-help-tip" role="tooltip" hidden>
+                The <strong>trunk and roots</strong> are core English frames; <strong>houses</strong> hold topic words.
+                Grow one unit at a time — you can ignore the map and use <strong>Do next</strong>.
+              </span>
+            </span>
+          </summary>
+          <p class="home-hint">Optional map. Prefer <strong>Do next</strong> or <strong>Topics</strong>.</p>
+          <p class="tree-legend"><span id="tree-caption">…</span></p>
+          <div class="tree-wrap">
+            <svg id="tree-svg" class="tree-svg" role="img" aria-label="Vocabulary tree"></svg>
+          </div>
+        </details>
+      </div>
     </div>
 
     <div id="view-practice" class="card" hidden>
       <div id="practice-root"></div>
     </div>
 
-    <p class="foot">Progress stays in this browser Â· Flag for notes</p>
+    <p class="foot">Progress stays in this browser · Flag for notes</p>
   </div>
-  <script type="module" src="./js/app.js?v=2026-08-06-class"></script>
+  <script type="module" src="./js/app.js?v=2026-08-06-home-min"></script>
+<script type="module" src="./js/app.js?v=2026-08-06-home-min"></script>
 </body>
 </html>
