@@ -1906,5 +1906,82 @@ h1 {
   margin-top: 0.5rem;
 }
 
+/* Topics list (RUE2 product feel) */
+.path-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
 
+.path-item,
+.path-list li {
+  margin: 0.35rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.55rem;
+}
 
+.path-item.is-next .path-link {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.path-item.is-done .path-link {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-color: rgba(160, 160, 160, 0.45);
+  font-weight: 600;
+}
+
+.path-link {
+  font: inherit;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+}
+
+.path-link:hover {
+  text-decoration-color: var(--accent);
+  color: var(--accent);
+}
+
+.path-topic,
+.path-link.path-topic {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.path-status {
+  font-weight: 400;
+  font-size: 0.82em;
+  color: var(--muted);
+  opacity: 0.8;
+  letter-spacing: 0.01em;
+}
+
+.path-item.is-done .path-status {
+  opacity: 0.65;
+}
+
+.path-item.is-coming {
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.path-topic-static {
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.path-kind {
+  font-weight: 400;
+  font-size: 0.75em;
+  color: var(--muted);
+  opacity: 0.7;
+  text-transform: lowercase;
+}

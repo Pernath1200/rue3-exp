@@ -252,9 +252,8 @@ function showFruitPayoff({ before, after }) {
     leaveToMap();
     STATE.homePanel = "topics";
     renderHomeChrome();
-    const det = document.getElementById("tree-details");
-    if (det) det.open = true;
-    document.getElementById("tree-details")?.scrollIntoView({
+    renderTopicsPathList();
+    document.getElementById("panel-topics")?.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
@@ -1342,6 +1341,118 @@ function renderHomeChrome() {
   const review = document.getElementById("review-card");
   if (topics) topics.hidden = STATE.homePanel !== "topics";
   if (review) review.hidden = STATE.homePanel !== "review";
+  if (STATE.homePanel === "topics") renderTopicsPathList();
+}
+
+function renderHomeReviewBody() {
+  const body = document.getElementById("review-body");
+  if (!body || !STATE.tree) return;
+  const due = getDueUnits(STATE.tree.nodes, { level: STATE.level, limit: 12 });
+  if (!due.length) {
+    body.innerHTML = `<p class="home-hint">Nothing due today. Press Do next, or Topics.</p>`;
+    return;
+  }
+  body.innerHTML = `
+    <p class="home-hint"><strong>${due.length}</strong> due · open one or start the queue</p>
+    <div class="today-actions" style="margin-bottom:0.65rem">
+      <button type="button" class="home-btn home-btn-primary" id="btn-start-reviews-home">Start reviews</button>
+    </div>
+    <ul class="today-list">
+      ${due
+        .slice(0, 8)
+        .map(
+          (u) =>
+            `<li><button type="button" class="today-link" data-select="${escapeXml(u.nodeId)}">${escapeXml(u.label)}</button></li>`,
+        )
+        .join("")}
+    </ul>`;
+  body.querySelector("#btn-start-reviews-home")?.addEventListener("click", () =>
+    openReviewQueue(due),
+  );
+  body.querySelectorAll("[data-select]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-select");
+      if (id) openUnitIntoPractice(id);
+    });
+  });
+}
+
+/**
+ * Home Topics list — RUE2 product feel.
+ * Live units for the selected level, status + open into practice.
+ */
+function renderTopicsPathList() {
+  const el = document.getElementById("topics-path-list");
+  if (!el || !STATE.tree) return;
+
+  const level = STATE.level;
+  const nodes = (STATE.tree.nodes || []).filter(
+    (n) =>
+      n &&
+      n.id &&
+      n.id !== "trunk" &&
+      Array.isArray(n.levels) &&
+      n.levels.includes(level) &&
+      (n.kind === "trunk" || n.kind === "leaf" || n.content),
+  );
+  // Live first (trunk then leaf), then non-live shells
+  const live = [];
+  const coming = [];
+  for (const n of nodes) {
+    if (n.status === "live" && n.content) live.push(n);
+    else coming.push(n);
+  }
+  const ordered = [...live, ...coming];
+  const next = suggestNextUnit(STATE.tree.nodes, level);
+
+  if (!ordered.length) {
+    el.innerHTML = `<p class="home-hint">No topics on this level yet.</p>`;
+    return;
+  }
+
+  el.innerHTML = `
+    <ol class="path-list home-topic-list">
+      ${ordered
+        .map((n) => {
+          const open = n.status === "live" && !!n.content;
+          const st = open ? nodeProgressState(n.id, { isLive: true }) : "";
+          const pl = open
+            ? progressLabel(st) || "not started"
+            : n.status === "draft" || n.status === "coming"
+              ? "in progress"
+              : n.status || "not open";
+          const cur = open && next && next.nodeId === n.id ? " is-next" : "";
+          const done = st === "fruit" ? " is-done" : "";
+          const kind =
+            n.kind === "trunk" ? "frame" : n.kind === "leaf" ? "words" : "";
+          const kindBit = kind
+            ? `<span class="path-kind">${escapeXml(kind)}</span>`
+            : "";
+          if (!open) {
+            return `<li class="path-item is-coming" aria-disabled="true">
+              <span class="path-topic path-topic-static">${escapeXml(n.label || n.id)}</span>
+              ${kindBit}
+              <span class="path-status">${escapeXml(pl)}</span>
+            </li>`;
+          }
+          return `<li class="path-item${cur}${done}">
+            <button type="button" class="path-link path-topic" data-id="${escapeXml(n.id)}">${escapeXml(n.label || n.id)}</button>
+            ${kindBit}
+            <span class="path-status">${escapeXml(pl)}</span>
+          </li>`;
+        })
+        .join("")}
+    </ol>`;
+
+  el.querySelectorAll(".path-link").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-id");
+      if (!id) return;
+      STATE.homePanel = null;
+      renderHomeChrome();
+      void openUnitIntoPractice(id);
+    });
+  });
 }
 
 function renderHomeReviewBody() {
@@ -1443,12 +1554,13 @@ function wireHomeActions() {
     btnTopics.addEventListener("click", () => {
       STATE.homePanel = STATE.homePanel === "topics" ? null : "topics";
       renderHomeChrome();
-      const det = document.getElementById("tree-details");
-      if (det) det.open = true;
-      document.getElementById("tree-details")?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      if (STATE.homePanel === "topics") {
+        renderTopicsPathList();
+        document.getElementById("panel-topics")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
     });
   }
 }
