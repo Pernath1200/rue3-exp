@@ -67,7 +67,7 @@ const STATE = {
   selectedTrunk: false,
   view: "map", // map | practice | payoff
   pack: null,
-  homePanel: null, // null | "topics" | "review"
+  homePanel: null, // null | "topics" | "review" | "more"
   /** First-fruit meter beat: { before, after } from levelUnitStats, or null */
   pendingFruitPayoff: null,
 };
@@ -478,6 +478,10 @@ function renderTodayCard() {
 function renderGateCard() {
   const el = document.getElementById("gate-card");
   if (!el) return;
+  if (STATE.homePanel !== "more") {
+    el.hidden = true;
+    return;
+  }
   // Gate unlocks the next band from the current level (A1→A2, A2→B1)
   if (STATE.level !== "A1" && STATE.level !== "A2") {
     el.hidden = true;
@@ -663,6 +667,7 @@ function currentTreeState() {
 function selectHouse(houseId) {
   STATE.selectedHouseId = houseId;
   STATE.selectedTrunk = false;
+  STATE.homePanel = null;
   const primary = primaryNodeForHouse(
     houseId,
     STATE.tree.nodes,
@@ -673,11 +678,14 @@ function selectHouse(houseId) {
   rememberView();
   renderTree();
   renderSelectionDetail();
+  renderHomeChrome();
+  syncPracticeDetailVisibility();
 }
 
 function selectTrunk() {
   STATE.selectedTrunk = true;
   STATE.selectedHouseId = null;
+  STATE.homePanel = null;
   const trunks = trunkNodesForLevel(STATE.tree.nodes, STATE.level);
   const open = trunks.find(
     (n) => nodeProgressState(n.id, { isLive: true }) !== "fruit",
@@ -686,6 +694,8 @@ function selectTrunk() {
   rememberView();
   renderTree();
   renderSelectionDetail();
+  renderHomeChrome();
+  syncPracticeDetailVisibility();
 }
 
 function renderTree() {
@@ -1325,10 +1335,13 @@ function renderHomeChrome() {
 
   const revHint = document.getElementById("home-review-hint");
   if (revHint) {
-    revHint.hidden = false;
-    revHint.textContent = due.length
-      ? `${due.length} topic${due.length === 1 ? "" : "s"} due for review.`
-      : "Nothing due for review right now.";
+    if (due.length) {
+      revHint.hidden = false;
+      revHint.textContent = `${due.length} topic${due.length === 1 ? "" : "s"} due for review.`;
+    } else {
+      revHint.hidden = true;
+      revHint.textContent = "";
+    }
   }
 
   const progMeta = document.getElementById("progress-summary-meta");
@@ -1339,9 +1352,31 @@ function renderHomeChrome() {
 
   const topics = document.getElementById("panel-topics");
   const review = document.getElementById("review-card");
+  const more = document.getElementById("panel-more");
   if (topics) topics.hidden = STATE.homePanel !== "topics";
   if (review) review.hidden = STATE.homePanel !== "review";
+  if (more) more.hidden = STATE.homePanel !== "more";
+  const moreBtn = document.getElementById("btn-home-more");
+  if (moreBtn) {
+    moreBtn.setAttribute(
+      "aria-expanded",
+      STATE.homePanel === "more" ? "true" : "false",
+    );
+  }
   if (STATE.homePanel === "topics") renderTopicsPathList();
+  syncPracticeDetailVisibility();
+}
+
+function syncPracticeDetailVisibility() {
+  const card = document.getElementById("practice-detail-card");
+  if (!card) return;
+  const hasSel =
+    STATE.selectedTrunk || STATE.selectedHouseId || STATE.selectedId;
+  card.hidden = !(
+    hasSel &&
+    STATE.homePanel == null &&
+    STATE.view === "map"
+  );
 }
 
 function renderHomeReviewBody() {
@@ -1524,7 +1559,31 @@ async function startDoNext() {
   }
 }
 
+function wireMapHelp() {
+  const btn = document.getElementById("btn-map-help");
+  const tip = document.getElementById("map-help-tip");
+  if (!btn || !tip || btn.dataset.wired) return;
+  btn.dataset.wired = "1";
+  const setOpen = (open) => {
+    tip.hidden = !open;
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+  btn.addEventListener("mouseenter", () => setOpen(true));
+  btn.addEventListener("mouseleave", () => {
+    if (document.activeElement !== btn) setOpen(false);
+  });
+  btn.addEventListener("focus", () => setOpen(true));
+  btn.addEventListener("blur", () => setOpen(false));
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setOpen(tip.hidden);
+  });
+  btn.addEventListener("pointerdown", (e) => e.stopPropagation());
+}
+
 function wireHomeActions() {
+  wireMapHelp();
   const doNext = document.getElementById("btn-do-next");
   const btnReview = document.getElementById("btn-home-review");
   const btnTopics = document.getElementById("btn-home-topics");
@@ -1613,12 +1672,11 @@ async function init() {
         }
       }
     }
-    if (!STATE.selectedId && !STATE.selectedTrunk && !STATE.selectedHouseId) {
-      // Default: open trunk so frames are one click away
-      STATE.selectedTrunk = true;
-      const trunks = trunkNodesForLevel(STATE.tree.nodes, STATE.level);
-      STATE.selectedId = trunks[0]?.id || null;
-    }
+    // Minimal home: no This topic until user picks
+    STATE.selectedId = null;
+    STATE.selectedTrunk = false;
+    STATE.selectedHouseId = null;
+    STATE.homePanel = null;
 
     wireUtilBar();
     wireHomeActions();
@@ -1626,6 +1684,7 @@ async function init() {
     renderHomeChrome();
     renderTree();
     renderSelectionDetail();
+    syncPracticeDetailVisibility();
 
     // Smoke aid: confirm storage still has practice records after load
     try {
